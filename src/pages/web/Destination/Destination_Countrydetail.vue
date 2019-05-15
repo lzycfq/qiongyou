@@ -328,8 +328,8 @@
 		<div class="tjluxianbg">
 			<div class="tjluxian">
 				<h2 class="plcRouteTitle bigTitle">推荐行程</h2>
-				<a v-for="(item,index) in tjluxianbase" id="tjid" :class="index === base_indexz?'active':''" v-on:click="changeBaseIndexz(index)">{{item.tjname}}</a>
-				<span>{{index}}</span>
+				<a v-for="(item,index) in tjluxianbase" id="tjid" :class="index === base_indexz?'active':''" v-on:click="changeBaseIndexz(index)">{{item.tjname}} <span>{{index}}</span></a>
+				
 				<div class="tjcontent" v-for="(item,index) in tjcontent" :class="index === base_indexz?'active':''" :key="index">
 					<div class="tjcontent_left">
 						<router-link to="">
