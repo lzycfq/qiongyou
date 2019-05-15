@@ -4377,147 +4377,1034 @@ const buildqyWrap = Mock.mock(
 			message: '查询成功'
 		}
 	})
-		
-	const buildzl = Mock.mock(
-		'/api/buildzl', 'get', (req, res) => {
+
+const buildzl = Mock.mock(
+	'/api/buildzl', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+				zlcity: "东京",
+				luvxing: [{
+						lvxingdi: '全部',
+						lvxingnumber: '58523'
+					},
+					{
+						lvxingdi: '景点',
+						lvxingnumber: '3523'
+					},
+					{
+						lvxingdi: '美食',
+						lvxingnumber: '8563'
+					},
+					{
+						lvxingdi: '购物',
+						lvxingnumber: '2596'
+					},
+					{
+						lvxingdi: '活动',
+						lvxingnumber: '3578'
+					}
+				],
+				zhuti: [{
+						zhitiname: "人文"
+					},
+					{
+						zhitiname: "历史"
+					},
+					{
+						zhitiname: "观光"
+					},
+					{
+						zhitiname: "娱乐休闲"
+					},
+					{
+						zhitiname: "趣味活动"
+					},
+					{
+						zhitiname: "自然风光"
+					},
+					{
+						zhitiname: "古屋"
+					},
+					{
+						zhitiname: "游乐场"
+					},
+					{
+						zhitiname: "博物馆"
+					}
+				]
+			}],
+			message: '查询成功'
+		}
+	})
+const buildplcPoiList = Mock.mock(
+	'/api/buildplcPoiList', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					plcPoiListid: 1,
+					plcPoiListidimg: "//pics.lvjs.com.cn//uploads/pc/place2/2016-01-06/43fcb163-e1a9-4a68-9b4b-afacd7b1d315_300_200.jpg",
+					plcPoiListidjianxie: "Tokyo Disney Resort",
+					plcPoiListtitle: "东京迪士尼度假区",
+					plcPoiListfirat: "1",
+					plcPoiListavter: "//pics.lvjs.com.cn//uploads/pc/place2/2017-11-07/ae34cfaf-8443-4c64-bba5-54d167a0ad27_300_200.jpg",
+					plcPoiListjn: "1",
+					plcPoiListyouhui: "打卡必玩 日本东京迪斯尼乐园/迪士尼海洋1日实体票/电子票",
+					plcPoiListxt: "“暑期预售”日本东京 - 富士山 - 京都 - 大阪 - 名古屋6日5晚半自助跟团游(东京一日自由，山中湖花之都赏花，含5顿正餐尽享美食，一晚温泉酒店日式泡汤，"
+				}
+
+			],
+			message: '查询成功'
+		}
+	})
+const buildCountry_breadcrumb = Mock.mock(
+	'/api/buildCountry_breadcrumb', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					Country: '日本',
+					Countryname: '目的地',
+					Country_list: [{
+						Country_listname: "日本",
+						Country_lists: [{
+								Country_listid: 1,
+								Country_listnames: "日本景点"
+							},
+							{
+								Country_listid: 2,
+								Country_listnames: "日本交通"
+							},
+							{
+								Country_listid: 3,
+								Country_listnames: "日本体验"
+							},
+							{
+								Country_listid: 4,
+								Country_listnames: "日本购物"
+							},
+							{
+								Country_listid: 5,
+								Country_listnames: "日本美食"
+							}
+						]
+					}],
+
+				}
+
+			],
+			message: '查询成功'
+		}
+	})
+const buildCountryplcTopBar = Mock.mock(
+	'/api/buildCountryplcTopBar', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+				plcTopBarjianxie: "Tokyo",
+				plcTopBarcity: "日本",
+				CountryidBargo: "25263",
+				Countryidpinlun: "25236",
+				Countryid: 1
+			}],
+			message: '查询成功'
+		}
+	})
+const buildplcMenuBarHolder = Mock.mock(
+	'/api/buildplcMenuBarHolder', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+				hotcity: [{
+						hotcityid: 1,
+						hotcityimg: "//pics.lvjs.com.cn//uploads/pc/place2/2018-07-05/8cfc754f-0333-4f38-a5c3-4f89dc27a665_300_200.jpg",
+						hotcityname: "东京",
+						hotcityjx: 'Tokyo'
+					},
+					{
+						hotcityid: 2,
+						hotcityimg: "//pics.lvjs.com.cn//uploads/pc/place2/2016-01-18/f2e28f6e-6082-4262-8293-ca478d589b52_300_200.jpg",
+						hotcityname: "大阪",
+						hotcityjx: 'OSAKA'
+					},
+					{
+						hotcityid: 3,
+						hotcityimg: "//pics.lvjs.com.cn//uploads/pc/place2/2018-03-27/512ee636-16df-4b7b-a6ed-c5ce669d34a1_300_200.jpg",
+						hotcityname: "名古屋",
+						hotcityjx: 'Nagoya'
+					}
+				],
+				navbarmudi: [{
+						mudi: "目的速写"
+					},
+					{
+						mudi: "当地人生"
+					},
+					{
+						mudi: "历史"
+					},
+					{
+						mudi: "文化"
+					}
+				],
+				navbarchengji: [{
+						chengji: "飞机"
+					},
+					{
+						chengji: "高铁"
+					},
+					{
+						chengji: "城轨"
+					},
+					{
+						chengji: "汽车"
+					},
+					{
+						chengji: "水运"
+					}
+				],
+				navbarshinei: [{
+						shinei: "地铁"
+					},
+					{
+						shinei: "巴士"
+					},
+					{
+						shinei: "地铁"
+					},
+					{
+						shinei: "滴滴"
+					}
+				],
+				navbarrili: [{
+						rili: "旅行季节"
+					},
+					{
+						rili: "当地节日"
+					}
+				],
+				navbarxiaofei: [{
+						xiaofei: "银联"
+					},
+					{
+						xiaofei: "货币兑换"
+					}
+				],
+				navbarxinxi: [{
+						xinxi: "网络"
+					},
+					{
+						xinxi: "电话"
+					},
+					{
+						xinxi: "信息中心"
+					}
+				],
+				navbargonggao: [{
+						gonggao: "负责任旅行"
+					},
+					{
+						gonggao: "安全"
+					},
+					{
+						gonggao: "医疗"
+					}
+				],
+				navbarluxian: [{
+						luxian: "一日游"
+					},
+					{
+						luxian: "两日游"
+					},
+					{
+						luxian: "三日游"
+					}
+				],
+				hotwan: [{
+						hotwanid: 1,
+						hotwanname: '景点观光',
+						hotwannumber: "2533"
+					},
+					{
+						hotwanid: 2,
+						hotwanname: '休闲娱乐',
+						hotwannumber: "8563"
+					},
+					{
+						hotwanid: 3,
+						hotwanname: '购物',
+						hotwannumber: "85236"
+					},
+					{
+						hotwanid: 4,
+						hotwanname: '特色主题',
+						hotwannumber: "7433"
+					},
+					{
+						hotwanid: 5,
+						hotwanname: '一日游',
+						hotwannumber: "789"
+					}
+
+				],
+				lvxingwan: [{
+						lvxingwanid: 1,
+						lvxingwanname: '自由行',
+						lvxingwannumber: "1253"
+					},
+					{
+						lvxingwanid: 2,
+						lvxingwanname: '飞机',
+						lvxingwannumber: "745"
+					},
+					{
+						lvxingwanid: 3,
+						lvxingwanname: '签证服务',
+						lvxingwannumber: "859"
+					},
+					{
+						lvxingwanid: 4,
+						lvxingwanname: '交通票',
+						lvxingwannumber: "789"
+					},
+					{
+						lvxingwanid: 5,
+						lvxingwanname: '城市玩乐',
+						lvxingwannumber: "4569"
+					}
+				],
+				xingcheng: [{
+						xingchengid: 1,
+						xingchengname: '私人订制'
+					},
+					{
+						xingchengid: 2,
+						xingchengname: '推荐路线'
+					}
+				],
+				shequ: [{
+						shequid: 1,
+						shequname: '日本结伴',
+
+					},
+					{
+						shequid: 2,
+						shequname: '旅行问答',
+
+					},
+					{
+						shequid: 3,
+						shequname: '日本相片',
+
+					}
+				]
+			}],
+			message: '查询成功'
+		}
+	})
+const buildplcFocus = Mock.mock(
+	'/api/buildplcFocus', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					plcFocusPhoto:[
+						{
+							plcimg:'http://s3.lvjs.com.cn//uploads/pc/place2/2018-07-05/8cfc754f-0333-4f38-a5c3-4f89dc27a665.jpg'
+						},
+						{
+							plcimg:'http://s1.lvjs.com.cn//uploads/pc/place2/2018-08-07/6279be70-daab-4563-b420-62c8d1dc9d02.jpg'
+						},
+						{
+							plcimg:'http://s2.lvjs.com.cn//uploads/pc/place2/2018-07-05/f7150935-ebf0-4e9b-8de0-3070bd4d1569.jpg'
+						},
+						{
+							plcimg:'http://s3.lvjs.com.cn//uploads/pc/place2/2018-07-05/dcc3bee4-2b72-43e7-8bfe-390985346655.jpg'
+						}
+					],
+					plcnumber:"89657"
+				}
+			],
+			message: '查询成功'
+		}
+	})
+	const buildhotcity = Mock.mock(
+		'/api/buildhotcity', 'get', (req, res) => {
 			return {
 				code: 200,
 				data: [
 					{
-						zlcity:"东京",
-						luvxing:[
+						hotname:"东京",
+						morecitynumber:"2563",
+						hotcitybanner:[
 							{
-								lvxingdi:'全部',
-								lvxingnumber:'58523'
+								hotcitybannercontent:[
+									{
+										Citylistid:1,
+										citylistimg:'//pics.lvjs.com.cn//uploads/pc/place2/2019-04-11/c30a366c-2e6b-4971-9b4e-5d55f032eb21_300_200.jpg',
+										citylistname:"东京",
+										Landscape:[
+											{
+												Landscapeid:1,
+												Landscapename:'浅草寺'
+											},
+											{
+												Landscapeid:2,
+												Landscapename:'东京塔'
+											},
+											{
+												Landscapeid:3,
+												Landscapename:'涩谷区'
+											},
+											{
+												Landscapeid:4,
+												Landscapename:'皇居'
+											},
+											{
+												Landscapeid:5,
+												Landscapename:'台场'
+											},
+											{
+												Landscapeid:6,
+												Landscapename:'上野公园'
+											},
+											{
+												Landscapeid:7,
+												Landscapename:' 新宿三丁目歌舞伎町'
+											},
+											{
+												Landscapeid:8,
+												Landscapename:' 明治神宫'
+											},
+										],
+									},
+									{
+										Citylistid:2,
+										citylistimg:'//pics.lvjs.com.cn//uploads/pc/place2/2018-06-11/19019a65-f7d5-433c-b7e6-d4d457990740_300_200.jpg',
+										citylistname:"大阪",
+										Landscape:[
+											{
+												Landscapeid:1,
+												Landscapename:'大阪城天守阁'
+											},
+											{
+												Landscapeid:2,
+												Landscapename:'大阪城公园'
+											},
+											{
+												Landscapeid:3,
+												Landscapename:'环球影视'
+											},
+											{
+												Landscapeid:4,
+												Landscapename:'皇居'
+											},
+											{
+												Landscapeid:5,
+												Landscapename:'台场'
+											},
+											{
+												Landscapeid:6,
+												Landscapename:'上野公园'
+											},
+										
+										],
+									},
+									
+									{
+										Citylistid:3,
+										citylistimg:'//pics.lvjs.com.cn//uploads/pc/place2/2016-05-30/3ffa527e-ac92-4e7f-98cd-41b02102aa85_300_200.jpg',
+										citylistname:"京都",
+										Landscape:[
+											{
+												Landscapeid:1,
+												Landscapename:'清水寺'
+											},
+											{
+												Landscapeid:2,
+												Landscapename:'二条城'
+											},
+											{
+												Landscapeid:3,
+												Landscapename:'环球影视'
+											},
+											{
+												Landscapeid:4,
+												Landscapename:'皇居'
+											},
+											{
+												Landscapeid:5,
+												Landscapename:'花见小路'
+											},
+											{
+												Landscapeid:6,
+												Landscapename:'八坂神社'
+											},
+											{
+												Landscapeid:7,
+												Landscapename:' 新宿三丁目歌舞伎町'
+											},
+											{
+												Landscapeid:8,
+												Landscapename:' 明治神宫'
+											},
+										],
+									},
+									{
+										Citylistid:4,
+										citylistimg:'//pics.lvjs.com.cn//uploads/pc/place2/2017-10-12/82737c6d-420d-47f0-a0cd-4815dfe82bb5_300_200.jpg',
+										citylistname:"札幌",
+										Landscape:[
+											{
+												Landscapeid:1,
+												Landscapename:'大通公园'
+											},
+											{
+												Landscapeid:2,
+												Landscapename:'白色恋人公园'
+											},
+											{
+												Landscapeid:3,
+												Landscapename:'札幌电视塔'
+											},
+											{
+												Landscapeid:4,
+												Landscapename:'皇居'
+											},
+											{
+												Landscapeid:5,
+												Landscapename:'花见小路'
+											},
+											{
+												Landscapeid:6,
+												Landscapename:'八坂神社'
+											},
+											{
+												Landscapeid:7,
+												Landscapename:' 新宿三丁目歌舞伎町'
+											},
+											{
+												Landscapeid:8,
+												Landscapename:' 明治神宫'
+											},
+										],
+									},
+									{
+										Citylistid:5,
+										citylistimg:'//pics.lvjs.com.cn/pics//uploads/pc/place_vst/hotels/1246/12466/_i_Mobile640_960_0000im0U_300_200.jpg',
+										citylistname:"箱根",
+								
+										Landscape:[
+											{
+												Landscapeid:1,
+												Landscapename:'箱根'
+											},
+											{
+												Landscapeid:2,
+												Landscapename:'大涌谷'
+											},
+											{
+												Landscapeid:3,
+												Landscapename:'芦之湖'
+											},
+											{
+												Landscapeid:4,
+												Landscapename:'箱根神社'
+											},
+											{
+												Landscapeid:5,
+												Landscapename:'箱根强罗公园'
+											},
+											{
+												Landscapeid:6,
+												Landscapename:'箱根海贼船'
+											},
+											{
+												Landscapeid:7,
+												Landscapename:' 新宿三丁目歌舞伎町'
+											},
+											{
+												Landscapeid:8,
+												Landscapename:' 明治神宫'
+											},
+										],
+									},
+									{
+										Citylistid:6,
+										citylistimg:'//pics.lvjs.com.cn/pics//uploads/pc/place2/2016-06-20/0f09f0f2-629d-4b64-a711-2d43509484a5_300_200.jpg',
+										citylistname:"箱根",				
+										Landscape:[
+											{
+												Landscapeid:1,
+												Landscapename:'富士山地区'
+											},
+											{
+												Landscapeid:2,
+												Landscapename:'河口湖'
+											},
+											{
+												Landscapeid:3,
+												Landscapename:'忍野八海'
+											},
+											{
+												Landscapeid:4,
+												Landscapename:'河口湖站'
+											},
+											{
+												Landscapeid:5,
+												Landscapename:'天上山公园'
+											},
+											{
+												Landscapeid:6,
+												Landscapename:'箱根海贼船'
+											},
+											{
+												Landscapeid:7,
+												Landscapename:' 新宿三丁目歌舞伎町'
+											},
+											{
+												Landscapeid:8,
+												Landscapename:' 明治神宫'
+											},
+										],
+									},
+								]
 							},
 							{
-								lvxingdi:'景点',
-								lvxingnumber:'3523'
+								hotcitybannercontent:[
+									{
+										Citylistid:1,
+										citylistimg:'//pics.lvjs.com.cn//uploads/pc/place2/2019-04-11/c30a366c-2e6b-4971-9b4e-5d55f032eb21_300_200.jpg',
+										citylistname:"东京",
+										Landscape:[
+											{
+												Landscapeid:1,
+												Landscapename:'浅草寺'
+											},
+											{
+												Landscapeid:2,
+												Landscapename:'东京塔'
+											},
+											{
+												Landscapeid:3,
+												Landscapename:'涩谷区'
+											},
+											{
+												Landscapeid:4,
+												Landscapename:'皇居'
+											},
+											{
+												Landscapeid:5,
+												Landscapename:'台场'
+											},
+											{
+												Landscapeid:6,
+												Landscapename:'上野公园'
+											},
+											{
+												Landscapeid:7,
+												Landscapename:' 新宿三丁目歌舞伎町'
+											},
+											{
+												Landscapeid:8,
+												Landscapename:' 明治神宫'
+											},
+										],
+									},
+									{
+										Citylistid:2,
+										citylistimg:'//pics.lvjs.com.cn//uploads/pc/place2/2018-06-11/19019a65-f7d5-433c-b7e6-d4d457990740_300_200.jpg',
+										citylistname:"大阪",
+										Landscape:[
+											{
+												Landscapeid:1,
+												Landscapename:'大阪城天守阁'
+											},
+											{
+												Landscapeid:2,
+												Landscapename:'大阪城公园'
+											},
+											{
+												Landscapeid:3,
+												Landscapename:'环球影视'
+											},
+											{
+												Landscapeid:4,
+												Landscapename:'皇居'
+											},
+											{
+												Landscapeid:5,
+												Landscapename:'台场'
+											},
+											{
+												Landscapeid:6,
+												Landscapename:'上野公园'
+											},
+										
+										],
+									},
+									
+									{
+										Citylistid:3,
+										citylistimg:'//pics.lvjs.com.cn//uploads/pc/place2/2016-05-30/3ffa527e-ac92-4e7f-98cd-41b02102aa85_300_200.jpg',
+										citylistname:"京都",
+										Landscape:[
+											{
+												Landscapeid:1,
+												Landscapename:'清水寺'
+											},
+											{
+												Landscapeid:2,
+												Landscapename:'二条城'
+											},
+											{
+												Landscapeid:3,
+												Landscapename:'环球影视'
+											},
+											{
+												Landscapeid:4,
+												Landscapename:'皇居'
+											},
+											{
+												Landscapeid:5,
+												Landscapename:'花见小路'
+											},
+											{
+												Landscapeid:6,
+												Landscapename:'八坂神社'
+											},
+											{
+												Landscapeid:7,
+												Landscapename:' 新宿三丁目歌舞伎町'
+											},
+											{
+												Landscapeid:8,
+												Landscapename:' 明治神宫'
+											},
+										],
+									},
+									{
+										Citylistid:4,
+										citylistimg:'//pics.lvjs.com.cn//uploads/pc/place2/2017-10-12/82737c6d-420d-47f0-a0cd-4815dfe82bb5_300_200.jpg',
+										citylistname:"札幌",
+										Landscape:[
+											{
+												Landscapeid:1,
+												Landscapename:'大通公园'
+											},
+											{
+												Landscapeid:2,
+												Landscapename:'白色恋人公园'
+											},
+											{
+												Landscapeid:3,
+												Landscapename:'札幌电视塔'
+											},
+											{
+												Landscapeid:4,
+												Landscapename:'皇居'
+											},
+											{
+												Landscapeid:5,
+												Landscapename:'花见小路'
+											},
+											{
+												Landscapeid:6,
+												Landscapename:'八坂神社'
+											},
+											{
+												Landscapeid:7,
+												Landscapename:' 新宿三丁目歌舞伎町'
+											},
+											{
+												Landscapeid:8,
+												Landscapename:' 明治神宫'
+											},
+										],
+									},
+									{
+										Citylistid:5,
+										citylistimg:'//pics.lvjs.com.cn/pics//uploads/pc/place_vst/hotels/1246/12466/_i_Mobile640_960_0000im0U_300_200.jpg',
+										citylistname:"箱根",
+								
+										Landscape:[
+											{
+												Landscapeid:1,
+												Landscapename:'箱根'
+											},
+											{
+												Landscapeid:2,
+												Landscapename:'大涌谷'
+											},
+											{
+												Landscapeid:3,
+												Landscapename:'芦之湖'
+											},
+											{
+												Landscapeid:4,
+												Landscapename:'箱根神社'
+											},
+											{
+												Landscapeid:5,
+												Landscapename:'箱根强罗公园'
+											},
+											{
+												Landscapeid:6,
+												Landscapename:'箱根海贼船'
+											},
+											{
+												Landscapeid:7,
+												Landscapename:' 新宿三丁目歌舞伎町'
+											},
+											{
+												Landscapeid:8,
+												Landscapename:' 明治神宫'
+											},
+										],
+									},
+									{
+										Citylistid:6,
+										citylistimg:'//pics.lvjs.com.cn/pics//uploads/pc/place2/2016-06-20/0f09f0f2-629d-4b64-a711-2d43509484a5_300_200.jpg',
+										citylistname:"箱根",				
+										Landscape:[
+											{
+												Landscapeid:1,
+												Landscapename:'富士山地区'
+											},
+											{
+												Landscapeid:2,
+												Landscapename:'河口湖'
+											},
+											{
+												Landscapeid:3,
+												Landscapename:'忍野八海'
+											},
+											{
+												Landscapeid:4,
+												Landscapename:'河口湖站'
+											},
+											{
+												Landscapeid:5,
+												Landscapename:'天上山公园'
+											},
+											{
+												Landscapeid:6,
+												Landscapename:'箱根海贼船'
+											},
+											{
+												Landscapeid:7,
+												Landscapename:' 新宿三丁目歌舞伎町'
+											},
+											{
+												Landscapeid:8,
+												Landscapename:' 明治神宫'
+											},
+										],
+									},
+								]
+							},
+							
+						],
+					}
+						
+				],
+				message: '查询成功'
+			}
+		})
+	const buildweijing = Mock.mock(
+		'/api/buildweijing', 'get', (req, res) => {
+			return {
+				code: 200,
+				data: [{
+						
+								wjcountry:"日本",
+								moreweijinnumber:'5232',
+								weijnbanner:[
+									{
+										weijnbannercontent:[
+											{
+												mguidedetailid:1,
+												wjtitle:"北海道温泉大比拼",
+												pois:10,
+												wjimg:'//pics.lvjs.com.cn//uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_300_200.jpg',
+												wjavter:"//pics.lvjs.com.cn//uploads/pc/place2/2017-11-07/ae34cfaf-8443-4c64-bba5-54d167a0ad27_300_200.jpg",
+												wjusername:"nice pert",
+												wjtext:"京都美食不仅在日本有很高评价，也闻名世界。在米其林集团于日本出版的5本红色指南中，京都星级餐厅数仅次于东京。结合京都的人文传统，其收入的餐厅大多为京料理、怀石料理等传统日本料理（若非美食专业研究者可将怀石料理与会席料理同一认识），这些餐厅在时令、料理、器皿、环境乃至文化方面具有相当高的水准，非常值得一试。对于游客来说，如何在预算有限的情况下品尝到地道的京都美食，不仅是满足口腹之欲，更是感受日本传统食文化的现实需求。现将位于京都，每餐最低消费人均在8000日元以下，入选米其林指南并获得星级评价，。"
+												
+											},
+											{
+												mguidedetailid:2,
+												wjtitle:"大阪美食惠",
+												pois:7,
+												wjimg:'//pics.lvjs.com.cn//uploads/pc/place2/2016-02-03/75ce7865-be3d-4d5f-b938-8f9cf19516b9_300_200.jpg',
+												wjavter:"//pics.lvjs.com.cn//uploads/pc/place2/2019-03-21/3b21de5f-2cce-46a2-b48f-0b5815eaca02_300_200.jpg",
+												wjusername:"shenqu love",
+												wjtext:"筑地是距离银座不远，是东京湾中一小块江户时代填海造出的土地，因为东京最重要的鲜鱼交易市场在这里而闻名海外。自然，许多以鱼生、海鲜为主打的餐厅也在筑地周边落户，筑地市场在吃货界可谓有着极高的知名度。但是，想吃到名店是有代价的，很多旅行者都受不了人气店从早到晚漫长的排队人流。那么在这里，有没有物美价廉又可以无需排队等位拿着就吃的美味？筑地市场同样没有让我们失望。下面推荐的都是相当于人民币30块钱以下又可以边走边吃的超级性价比美食！"
+												
+											},
+											{
+												mguidedetailid:2,
+												wjtitle:"京都豆腐节",
+												pois:8,
+												wjimg:'//pics.lvjs.com.cn//uploads/pc/place2/2019-02-12/ab6de12c-dfcc-4419-ba1b-84adb17bf9f3_300_200.jpg',
+												wjavter:"//pics.lvjs.com.cn//uploads/pc/place2/2018-09-27/278b49d3-62de-4579-98bb-5836dcf1681a_300_200.jpg",
+												wjusername:"乡村豆腐",
+												wjtext:"除了春天的樱花和深秋的红叶，京都也是一个以美食著称的城市。若你以为这里只有高冷的怀石料理那简直错得离谱。涮涮锅、烤肉、意大利菜、拉面、鳗鱼饭、深夜食堂、怀旧咖啡店……统统一网打尽！！"
+												
+											}
+										],								
+									},
+										{
+										weijnbannercontent:[
+											{
+												mguidedetailid:1,
+												wjtitle:"北海道温泉大比拼",
+												pois:10,
+												wjimg:'//pics.lvjs.com.cn//uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_300_200.jpg',
+												wjavter:"//pics.lvjs.com.cn//uploads/pc/place2/2017-11-07/ae34cfaf-8443-4c64-bba5-54d167a0ad27_300_200.jpg",
+												wjusername:"nice pert",
+												wjtext:"京都美食不仅在日本有很高评价，也闻名世界。在米其林集团于日本出版的5本红色指南中，京都星级餐厅数仅次于东京。结合京都的人文传统，其收入的餐厅大多为京料理、怀石料理等传统日本料理（若非美食专业研究者可将怀石料理与会席料理同一认识），这些餐厅在时令、料理、器皿、环境乃至文化方面具有相当高的水准，非常值得一试。对于游客来说，如何在预算有限的情况下品尝到地道的京都美食，不仅是满足口腹之欲，更是感受日本传统食文化的现实需求。现将位于京都，每餐最低消费人均在8000日元以下，入选米其林指南并获得星级评价，。"
+												
+											},
+											{
+												mguidedetailid:2,
+												wjtitle:"大阪美食惠",
+												pois:7,
+												wjimg:'//pics.lvjs.com.cn//uploads/pc/place2/2016-02-03/75ce7865-be3d-4d5f-b938-8f9cf19516b9_300_200.jpg',
+												wjavter:"//pics.lvjs.com.cn//uploads/pc/place2/2019-03-21/3b21de5f-2cce-46a2-b48f-0b5815eaca02_300_200.jpg",
+												wjusername:"shenqu love",
+												wjtext:"筑地是距离银座不远，是东京湾中一小块江户时代填海造出的土地，因为东京最重要的鲜鱼交易市场在这里而闻名海外。自然，许多以鱼生、海鲜为主打的餐厅也在筑地周边落户，筑地市场在吃货界可谓有着极高的知名度。但是，想吃到名店是有代价的，很多旅行者都受不了人气店从早到晚漫长的排队人流。那么在这里，有没有物美价廉又可以无需排队等位拿着就吃的美味？筑地市场同样没有让我们失望。下面推荐的都是相当于人民币30块钱以下又可以边走边吃的超级性价比美食！"
+												
+											},
+											{
+												mguidedetailid:2,
+												wjtitle:"京都豆腐节",
+												pois:8,
+												wjimg:'//pics.lvjs.com.cn//uploads/pc/place2/2019-02-12/ab6de12c-dfcc-4419-ba1b-84adb17bf9f3_300_200.jpg',
+												wjavter:"//pics.lvjs.com.cn//uploads/pc/place2/2018-09-27/278b49d3-62de-4579-98bb-5836dcf1681a_300_200.jpg",
+												wjusername:"乡村豆腐",
+												wjtext:"除了春天的樱花和深秋的红叶，京都也是一个以美食著称的城市。若你以为这里只有高冷的怀石料理那简直错得离谱。涮涮锅、烤肉、意大利菜、拉面、鳗鱼饭、深夜食堂、怀旧咖啡店……统统一网打尽！！"
+												
+											}
+										],								
+									},
+										{
+										weijnbannercontent:[
+											{
+												mguidedetailid:1,
+												wjtitle:"北海道温泉大比拼",
+												pois:10,
+												wjimg:'//pics.lvjs.com.cn//uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_300_200.jpg',
+												wjavter:"//pics.lvjs.com.cn//uploads/pc/place2/2017-11-07/ae34cfaf-8443-4c64-bba5-54d167a0ad27_300_200.jpg",
+												wjusername:"nice pert",
+												wjtext:"京都美食不仅在日本有很高评价，也闻名世界。在米其林集团于日本出版的5本红色指南中，京都星级餐厅数仅次于东京。结合京都的人文传统，其收入的餐厅大多为京料理、怀石料理等传统日本料理（若非美食专业研究者可将怀石料理与会席料理同一认识），这些餐厅在时令、料理、器皿、环境乃至文化方面具有相当高的水准，非常值得一试。对于游客来说，如何在预算有限的情况下品尝到地道的京都美食，不仅是满足口腹之欲，更是感受日本传统食文化的现实需求。现将位于京都，每餐最低消费人均在8000日元以下，入选米其林指南并获得星级评价，。"
+												
+											},
+											{
+												mguidedetailid:2,
+												wjtitle:"大阪美食惠",
+												pois:7,
+												wjimg:'//pics.lvjs.com.cn//uploads/pc/place2/2016-02-03/75ce7865-be3d-4d5f-b938-8f9cf19516b9_300_200.jpg',
+												wjavter:"//pics.lvjs.com.cn//uploads/pc/place2/2019-03-21/3b21de5f-2cce-46a2-b48f-0b5815eaca02_300_200.jpg",
+												wjusername:"shenqu love",
+												wjtext:"筑地是距离银座不远，是东京湾中一小块江户时代填海造出的土地，因为东京最重要的鲜鱼交易市场在这里而闻名海外。自然，许多以鱼生、海鲜为主打的餐厅也在筑地周边落户，筑地市场在吃货界可谓有着极高的知名度。但是，想吃到名店是有代价的，很多旅行者都受不了人气店从早到晚漫长的排队人流。那么在这里，有没有物美价廉又可以无需排队等位拿着就吃的美味？筑地市场同样没有让我们失望。下面推荐的都是相当于人民币30块钱以下又可以边走边吃的超级性价比美食！"
+												
+											},
+											{
+												mguidedetailid:2,
+												wjtitle:"京都豆腐节",
+												pois:8,
+												wjimg:'//pics.lvjs.com.cn//uploads/pc/place2/2019-02-12/ab6de12c-dfcc-4419-ba1b-84adb17bf9f3_300_200.jpg',
+												wjavter:"//pics.lvjs.com.cn//uploads/pc/place2/2018-09-27/278b49d3-62de-4579-98bb-5836dcf1681a_300_200.jpg",
+												wjusername:"乡村豆腐",
+												wjtext:"除了春天的樱花和深秋的红叶，京都也是一个以美食著称的城市。若你以为这里只有高冷的怀石料理那简直错得离谱。涮涮锅、烤肉、意大利菜、拉面、鳗鱼饭、深夜食堂、怀旧咖啡店……统统一网打尽！！"
+												
+											}
+										],								
+									}
+									
+									
+										
+							
+								
+							]
+						
+						
+					}
+				],
+				message: '查询成功'
+			}
+		})
+		const buildtjluxianbase = Mock.mock(
+			'/api/buildtjluxianbase', 'get', (req, res) => {
+				return {
+					code: 200,
+					data: [
+						{
+							tjname:"8日东京箱根游"
+							
+						},
+						{
+							tjname:"夏日北海道之旅"
+							
+						},
+						{
+							tjname:"11日关西行"
+							
+						}
+					],
+					message: '查询成功'
+				}
+			})
+			const buildtjcontent = Mock.mock(
+				'/api/buildtjcontent', 'get', (req, res) => {
+					return {
+						code: 200,
+						data: [
+							{
+								tjimg:"//pics.lvjs.com.cn//uploads/pc/place2/2018-10-24/8af2205c-8f86-4049-845a-19b617b2b4a3_300_200.jpg",
+								tjday:"9",
+								tjtitle:"迪士尼，滋贺大自然农庄，奈良小鹿，相扑表演",
+								tjliyou:"强势酒店攻势，保证入住2晚地道日式温泉酒店，日式美食吃不停（任食日本螃蟹、和牛黑䐁一品海鲜锅、Maihama自助餐任吃到饱）",
+								tjcontentc:[
+									{
+										tjcontentdsc:'自选东京迪士尼乐园，安排不少于4小时游玩，让您和心爱的卡通人物如共渡暑假'
+									},
+									{
+										tjcontentdsc:'滋贺大自然农庄，在一片缤纷绽放的花海中,亲近可爱小动物。'
+									}
+								]
 							},
 							{
-								lvxingdi:'美食',
-								lvxingnumber:'8563'
+								tjimg:"//pics.lvjs.com.cn//uploads/pc/place2/2017-11-17/29995311-5698-4c8c-b946-08d28eb0d97d_300_200.jpg",
+								tjday:"5",
+								tjtitle:"一次走遍东京、大阪、京都、箱根主要城市，网络经典景点! ",
+								tjliyou:"山中湖花之都公园赏花，在面积30万平方公尺的花海田里，有春天的郁金香、夏天的波斯菊、向日葵和百日草。美丽的花海，日式和欧风的各类庭园搭配的巧思设计，富士山美景的衬托之下更显得绚烂缤纷。",
+								tjcontentc:[
+									{
+										tjcontentdsc:'千年古都-京都，完整地保留了它千余年的历史文化遗产。'
+									},
+									{
+										tjcontentdsc:'东京安排一整日的自由活动，行程自己做主，多种选择随心所欲！'
+									}
+								]
 							},
 							{
-								lvxingdi:'购物',
-								lvxingnumber:'2596'
-							},
-							{
-								lvxingdi:'活动',
-								lvxingnumber:'3578'
+								tjimg:"//pics.lvjs.com.cn//uploads/pc/place2/2017-02-23/1dcbe67f-f58b-4ebd-9b62-689d8d5e50e0_300_200.jpg",
+								tjday:"8",
+								tjtitle:"日本冲绳5日自由行",
+								tjliyou:"冲绳曾是一个古国，名为琉球王国。如今，这里不但有着闪着蓝宝石光芒的海洋、白沙滩、美丽的珊瑚礁、各种亚热带植物和亚热带风光，还有古老的文化传统和文化遗产。 ",
+								tjcontentc:[
+									{
+										tjcontentdsc:' 冲绳气候温暖宜人，岛内四处郁郁葱葱，不仅是一个度假疗养的胜地，也是人人皆知的海上运动的麦加地'
+									},
+									{
+										tjcontentdsc:'冲绳除了具有东南亚、中国、日本的民俗风情建筑外，较日本本土更具有独特的美式风情，值得一游。'
+									}
+								]
 							}
 						],
-						zhuti:[
-							{
-								zhitiname:"人文"
-							},
-							{
-								zhitiname:"历史"
-							},
-							{
-								zhitiname:"观光"
-							},
-							{
-								zhitiname:"娱乐休闲"
-							},
-							{
-								zhitiname:"趣味活动"
-							},
-							{
-								zhitiname:"自然风光"
-							},
-							{
-								zhitiname:"古屋"
-							},
-							{
-								zhitiname:"游乐场"
-							},
-							{
-								zhitiname:"博物馆"
-							}
-						]
-					       }
-						   ],
-							message: '查询成功'
-						}
-					})
-					const buildplcPoiList = Mock.mock(
-						'/api/buildplcPoiList', 'get', (req, res) => {
-							return {
-								code: 200,
-								data: [
-									{
-										plcPoiListid:1,
-										plcPoiListidimg:"//pics.lvjs.com.cn//uploads/pc/place2/2016-01-06/43fcb163-e1a9-4a68-9b4b-afacd7b1d315_300_200.jpg",
-										plcPoiListidjianxie:"Tokyo Disney Resort",
-										plcPoiListtitle:"东京迪士尼度假区",
-										plcPoiListfirat:"1",
-										plcPoiListavter:"//pics.lvjs.com.cn//uploads/pc/place2/2017-11-07/ae34cfaf-8443-4c64-bba5-54d167a0ad27_300_200.jpg",
-										plcPoiListjn:"1",
-										plcPoiListyouhui:"打卡必玩 日本东京迪斯尼乐园/迪士尼海洋1日实体票/电子票",
-										plcPoiListxt:"“暑期预售”日本东京 - 富士山 - 京都 - 大阪 - 名古屋6日5晚半自助跟团游(东京一日自由，山中湖花之都赏花，含5顿正餐尽享美食，一晚温泉酒店日式泡汤，"
-									}
-									
-								],
-								message: '查询成功'
-							}
-						})
-						const buildCountry_breadcrumb = Mock.mock(
-							'/api/buildCountry_breadcrumb', 'get', (req, res) => {
-								return {
-									code: 200,
-									data: [
-										{
-										Country:'日本',
-										Countryname:'目的地',
-										Country_list:[
-											{
-												Country_listname:"日本",
-												Country_lists:[
-													{
-														Country_listid:1,
-														Country_listnames:"日本景点"
-													},
-													{
-														Country_listid:2,
-														Country_listnames:"日本交通"
-													},
-													{
-														Country_listid:3,
-														Country_listnames:"日本体验"
-													},
-													{
-														Country_listid:4,
-														Country_listnames:"日本购物"
-													},
-													{
-														Country_listid:5,
-														Country_listnames:"日本美食"
-													}
-												]
-											}
-										],
-									
-										}
-										
-									],
-									message: '查询成功'
-								}
-							})
-							const buildCountryplcTopBar = Mock.mock(
-								'/api/buildCountryplcTopBar', 'get', (req, res) => {
-									return {
-										code: 200,
-										data: [{
-											plcTopBarjianxie: "Tokyo",
-											plcTopBarcity: "日本",
-											CountryidBargo: "25263",
-											Countryidpinlun: "25236",
-											Countryid: 1
-										}],
-										message: '查询成功'
-									}
-								})
+						message: '查询成功'
+					}
+				})
 export default {
 	buildwebswiper,
 	buildpopoverdiv,
@@ -4552,5 +5439,8 @@ export default {
 	buildzl,
 	buildplcPoiList,
 	buildCountry_breadcrumb,
-	buildCountryplcTopBar
+	buildCountryplcTopBar,
+	buildplcMenuBarHolder,
+	buildhotcity,
+	buildweijing
 }

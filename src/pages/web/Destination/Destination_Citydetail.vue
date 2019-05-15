@@ -1,5 +1,4 @@
 <template>
-	
 	<el-col :span="24">
 		<headers></headers>
 		<div style="clear: both;"></div>
