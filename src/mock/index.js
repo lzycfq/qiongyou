@@ -5339,14 +5339,17 @@ const buildplcFocus = Mock.mock(
 					code: 200,
 					data: [
 						{
+							index:1,
 							tjname:"8日东京箱根游"
 							
 						},
 						{
+							index:2,
 							tjname:"夏日北海道之旅"
 							
 						},
 						{
+							index:3,
 							tjname:"11日关西行"
 							
 						}
@@ -5405,6 +5408,75 @@ const buildplcFocus = Mock.mock(
 						message: '查询成功'
 					}
 				})
+				const buildgo = Mock.mock(
+					'/api/buildgo', 'get', (req, res) => {
+						return {
+							code: 200,
+							data: [
+								{
+									gocountry:'日本',
+									Countryqianzhengid:1,
+									Country_baoxianid:1.,
+									Country_phoneid:1,
+									gofly:[
+										{
+											goflyrexiaoid:1,
+											goflytxt:"[预售至19年底|端午|中秋|枫叶季|拒签全退]北京/天津直飞日本东京/大阪/名古屋/札幌/冲绳3-30天机票(1人/2人起订,赠1晚酒店+全程WiFi/可升级公务舱)",
+											goflyzhe:8,
+											goflyjiage:859
+										},
+										{
+											goflyrexiaoid:2,
+											goflytxt:"上海直飞台北/高雄单程含税机票(可自由搭配回程票/可订购台北101观景台/野柳地质公园/台北101观景台+猫空缆车+双层观光巴士双人套票)",
+											goflyzhe:7,
+											goflyjiage:3659
+										}
+									],
+									goflyimg:"//pics.lvjs.com.cn/pics//uploads/pc/place2/2019-03-29/fe4fb464-0fc6-4100-b415-8e7318dbeb2b_300_200.jpg",
+									goziyouxing:[
+										{
+											goziyouxingimg:"//pics.lvjs.com.cn/pics//uploads/pc/place2/2017-12-29/21415a82-3831-4983-b26c-62f16ff857ee_300_200.jpg",
+											goziyouxingtxt:' [端午/暑假/国庆]上海直飞大阪5-7天自由行(体验当地日式亲子民宿+两套航班可选+多类型酒店可选+全程自由安排+随时出发+可加购当地热门景点门票）',
+										number:"14",
+										goziyouxingzhe:"9",
+										goziyouxingjiage:"52"
+										},
+										{
+											goziyouxingimg:"//pics.lvjs.com.cn//uploads/pc/place2/2017-11-07/ae34cfaf-8443-4c64-bba5-54d167a0ad27_300_200.jpg",
+											goziyouxingtxt:' [端午/暑假/国庆]上海直飞大阪5-7天自由行(体验当地日式亲子民宿+两套航班可选+多类型酒店可选+全程自由安排+随时出发+可加购当地热门景点门票）',
+										number:"14",
+										goziyouxingzhe:"9",
+										goziyouxingjiage:"52"
+										}
+									]
+								}
+							],
+							message: '查询成功'
+						}
+					})
+					const buildplcFocusOperate = Mock.mock(
+						'/api/buildplcFocusOperate', 'get', (req, res) => {
+							return {
+								code: 200,
+								data: [
+									{
+									plcFocusOperates:[
+										{
+											plcFOcontent:"来到泰国，不去吃遍当地的美食就太遗憾了！这个拥有狭长海岸线的热带国家，出产了丰富的海鲜、蔬菜及"
+										},
+										{
+											plcFOcontent:"曼谷，这座旧日风情与时尚气息互相交融的大都市，每次造访可能都会给你新的惊喜与收获。这座城市有着数"
+										}
+									],
+									pictitle:"东京",
+									picimg:"//pics.lvjs.com.cn//uploads/pc/place2/2017-04-25/e7d8111d-f443-478f-be10-3486ec1ac8db_300_200.jpg",
+									piczuozhe:"Love YOU",
+									piccishu:"25236"
+									}
+								],
+								message: '查询成功'
+							}
+						})
 export default {
 	buildwebswiper,
 	buildpopoverdiv,
@@ -5442,5 +5514,7 @@ export default {
 	buildCountryplcTopBar,
 	buildplcMenuBarHolder,
 	buildhotcity,
-	buildweijing
+	buildweijing,
+	buildgo,
+	buildplcFocusOperate
 }
