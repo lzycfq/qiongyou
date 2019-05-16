@@ -4443,7 +4443,7 @@ const buildplcPoiList = Mock.mock(
 			code: 200,
 			data: [{
 					plcPoiListid: 1,
-					ratevalue:8,
+					ratevalue: 8,
 					plcPoiListidimg: "//pics.lvjs.com.cn//uploads/pc/place2/2016-01-06/43fcb163-e1a9-4a68-9b4b-afacd7b1d315_300_200.jpg",
 					plcPoiListidjianxie: "Tokyo Disney Resort",
 					plcPoiListtitle: "东京迪士尼度假区",
@@ -4454,31 +4454,31 @@ const buildplcPoiList = Mock.mock(
 					plcPoiListxt: "“暑期预售”日本东京 - 富士山 - 京都 - 大阪 - 名古屋6日5晚半自助跟团游(东京一日自由，山中湖花之都赏花，含5顿正餐尽享美食，一晚温泉酒店日式泡汤，"
 				},
 				{
-						plcPoiListid: 1,
-						ratevalue:9.5,
-						plcPoiListidimg: "//pics.lvjs.com.cn//uploads/pc/place2/2016-01-06/43fcb163-e1a9-4a68-9b4b-afacd7b1d315_300_200.jpg",
-						plcPoiListidjianxie: "Tokyo Disney Resort",
-						plcPoiListtitle: "东京迪士尼度假区",
-						plcPoiListfirat: "1",
-						plcPoiListavter: "//pics.lvjs.com.cn//uploads/pc/place2/2017-11-07/ae34cfaf-8443-4c64-bba5-54d167a0ad27_300_200.jpg",
-						plcPoiListjn: "1",
-						plcPoiListyouhui: "打卡必玩 日本东京迪斯尼乐园/迪士尼海洋1日实体票/电子票",
-						plcPoiListxt: "“暑期预售”日本东京 - 富士山 - 京都 - 大阪 - 名古屋6日5晚半自助跟团游(东京一日自由，山中湖花之都赏花，含5顿正餐尽享美食，一晚温泉酒店日式泡汤，"
-					},
-					{
-							plcPoiListid: 1,
-							ratevalue:9.8,
-							plcPoiListidimg: "//pics.lvjs.com.cn//uploads/pc/place2/2016-01-06/43fcb163-e1a9-4a68-9b4b-afacd7b1d315_300_200.jpg",
-							plcPoiListidjianxie: "Tokyo Disney Resort",
-							plcPoiListtitle: "东京迪士尼度假区",
-							plcPoiListfirat: "1",
-							plcPoiListavter: "//pics.lvjs.com.cn//uploads/pc/place2/2017-11-07/ae34cfaf-8443-4c64-bba5-54d167a0ad27_300_200.jpg",
-							plcPoiListjn: "1",
-							plcPoiListyouhui: "打卡必玩 日本东京迪斯尼乐园/迪士尼海洋1日实体票/电子票",
-							plcPoiListxt: "“暑期预售”日本东京 - 富士山 - 京都 - 大阪 - 名古屋6日5晚半自助跟团游(东京一日自由，山中湖花之都赏花，含5顿正餐尽享美食，一晚温泉酒店日式泡汤，"
-						}
-					
-				
+					plcPoiListid: 1,
+					ratevalue: 9.5,
+					plcPoiListidimg: "//pics.lvjs.com.cn//uploads/pc/place2/2016-01-06/43fcb163-e1a9-4a68-9b4b-afacd7b1d315_300_200.jpg",
+					plcPoiListidjianxie: "Tokyo Disney Resort",
+					plcPoiListtitle: "东京迪士尼度假区",
+					plcPoiListfirat: "1",
+					plcPoiListavter: "//pics.lvjs.com.cn//uploads/pc/place2/2017-11-07/ae34cfaf-8443-4c64-bba5-54d167a0ad27_300_200.jpg",
+					plcPoiListjn: "1",
+					plcPoiListyouhui: "打卡必玩 日本东京迪斯尼乐园/迪士尼海洋1日实体票/电子票",
+					plcPoiListxt: "“暑期预售”日本东京 - 富士山 - 京都 - 大阪 - 名古屋6日5晚半自助跟团游(东京一日自由，山中湖花之都赏花，含5顿正餐尽享美食，一晚温泉酒店日式泡汤，"
+				},
+				{
+					plcPoiListid: 1,
+					ratevalue: 9.8,
+					plcPoiListidimg: "//pics.lvjs.com.cn//uploads/pc/place2/2016-01-06/43fcb163-e1a9-4a68-9b4b-afacd7b1d315_300_200.jpg",
+					plcPoiListidjianxie: "Tokyo Disney Resort",
+					plcPoiListtitle: "东京迪士尼度假区",
+					plcPoiListfirat: "1",
+					plcPoiListavter: "//pics.lvjs.com.cn//uploads/pc/place2/2017-11-07/ae34cfaf-8443-4c64-bba5-54d167a0ad27_300_200.jpg",
+					plcPoiListjn: "1",
+					plcPoiListyouhui: "打卡必玩 日本东京迪斯尼乐园/迪士尼海洋1日实体票/电子票",
+					plcPoiListxt: "“暑期预售”日本东京 - 富士山 - 京都 - 大阪 - 名古屋6日5晚半自助跟团游(东京一日自由，山中湖花之都赏花，含5顿正餐尽享美食，一晚温泉酒店日式泡汤，"
+				}
+
+
 
 			],
 			message: '查询成功'
@@ -5686,14 +5686,14 @@ const buildplcCitylist = Mock.mock(
 						},
 					]
 				},
-					{
+				{
 					citydetailid: 6,
 					plcCitylistimg: "//pics.lvjs.com.cn//uploads/pc/place2/2017-11-30/09b3f8a6-427d-4e40-819c-c5430edfd5d1_300_200.jpg",
 					plcCitylistname: "名古屋",
 					plcCitylistjx: "Nagoya",
 					plcCitylistnumber: "14563",
 					cityLandscape: [
-						
+
 						{
 							Landscapeid: 1,
 							cityLandscapecontent: '名古屋城'
@@ -5728,25 +5728,115 @@ const buildplcCitylist = Mock.mock(
 						},
 					]
 				},
-				
+
 			],
 			message: '查询成功'
 		}
 	})
-	const buildstrategy_jieshao = Mock.mock(
-		'/api/buildstrategy_jieshao', 'get', (req, res) => {
-			return {
-				code: 200,
-				data: [
+const buildstrategy_jieshao = Mock.mock(
+	'/api/buildstrategy_jieshao', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+				strategy_jieshao_didian: "东京",
+				strategy_jieshao_text: "东京，作为日本的窗口，在紧随国际潮流趋势的同时，也从来未曾放弃过自己的传统文化。日本动漫、日本茶道、节日祭典、宅文化以及各... ",
+				strategy_jieshao_img: "//pics.lvjs.com.cn//uploads/pc/place2/2017-03-14/64fe3c91-f69c-4e53-a254-30a640dc3325_300_200.jpg"
+			}],
+			message: '查询成功'
+		}
+	})
+const buildmguide = Mock.mock(
+	'/api/buildmguide', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+				mguidename: "庶民价格品米其林餐厅京都篇",
+				mguideimg: "//pics.lvjs.com.cn//uploads/pc/place2/2018-12-03/766b7462-bbcc-4462-86c0-1e35d1fb2469_300_200.jpg",
+				mguideavter: "//pics.lvjs.com.cn//uploads/pc/place2/2018-07-20/d62027c5-3d25-44d5-933d-81babdb4a15a_300_200.jpg",
+				mguidetime: "晚上八点",
+				mguidepinglun: "14552",
+				mguidetxt: '京都美食不仅在日本有很高评价，也闻名世界。在米其林集团于日本出版的5本红色指南中，京都星级餐厅数仅次于东京。结合京都的人文传统，其收入的餐厅大多为京料理、怀石料理等传统日本料理（若非美食专业研究者可将怀石料理与会席料理同一认识），这些餐厅在时令、料理、器皿、环境乃至文化方面具有相当高的水准，非常值得一试。对于游客来说，如何在预算有限的情况下品尝到地道的京都美食，不仅是满足口腹之欲，更是感受日本传统食文化的现实需求。现将位于京都，每餐最低消费人均在8000日元以下，入选米其林指南并获得星级评价，且在日本食评网站tabelog上也有较好排名，适合游客前往的代表餐厅收入于此微锦囊，供各位穷游er参考。当然，这里也给出一些提示：光顾锦囊里的餐厅，除特别注明外请提前预约；绝大部分怀石料理、割烹料理是由店家根据当季食材搭配不同价位套餐，无单点菜单。价位越高的套餐包含的料理道数更多，食材更高级，所谓“一分价钱一分货”；一些怀石料理、割烹料理店会在中午时段供应便当或“简化”的套餐，在保障餐厅水准的前提下，给出了很有性价比的套餐价格；不少餐厅在菜单定价之外有10%左右的服务费。',
+				mguidelist: [{
+						mguidedianming: "菊乃井(总店)",
+						mguidedidian: "京都",
+						mguidebanner: [{
+								mguidebannerimg: "http://pic.lvmama.com/uploads/pc/place2/2017-12-29/b7ae573f-8a64-4aad-833b-eabe35917f22_480_320.jpg",
+							},
+							{
+								mguidebannerimg: "http://pic.lvmama.com/uploads/pc/place2/2017-12-05/60075c3b-ef6a-450e-9000-4cfe4e42ab48_480_320.jpg",
+							},
+							{
+								mguidebannerimg: "http://pic.lvmama.com/uploads/pc/place2/2017-11-17/29995311-5698-4c8c-b946-08d28eb0d97d_480_320.jpg",
+							},
+							{
+								mguidebannerimg: "http://pic.lvmama.com/uploads/pc/place2/2017-04-20/c9c9ba90-7dab-4044-8a7c-7c49e4d552e8_480_320.jpg",
+							}
+						],
+						mguiderate: "9.8",
+						mguidedianping: "58963",
+						mguidedetailc: "自关西米其林指南诞生以来，菊乃井本店就一直是三星评价，在tabelog上也是绝对高分店。这里的料理中规中矩，恪守怀石料理传统。并且，店里充满禅意的氛围和店员举手投足间高贵的气质，无可挑剔、一丝不苟的服务给我留下极为深刻的印象。",
+						mguideyouyong: "253"
+
+					},
 					{
-						strategy_jieshao_didian:"东京",
-						strategy_jieshao_text:"东京，作为日本的窗口，在紧随国际潮流趋势的同时，也从来未曾放弃过自己的传统文化。日本动漫、日本茶道、节日祭典、宅文化以及各... ",
-						strategy_jieshao_img:"//pics.lvjs.com.cn//uploads/pc/place2/2017-03-14/64fe3c91-f69c-4e53-a254-30a640dc3325_300_200.jpg"
+						mguidedianming: "鳗鱼屋 广川",
+						mguidedidian: "京都",
+						mguidebanner: [{
+								mguidebannerimg: "http://s1.lvjs.com.cn/uploads/pc/place2/2018-12-03/766b7462-bbcc-4462-86c0-1e35d1fb2469_480_320.jpg",
+							},
+							{
+								mguidebannerimg: "http://s2.lvjs.com.cn/uploads/pc/place2/2018-12-03/e83aaf6e-ea02-4c39-bf2b-62ace97bc660_480_320.jpg",
+							},
+							{
+								mguidebannerimg: "http://s1.lvjs.com.cn/uploads/pc/place2/2018-12-03/9d38412a-03e4-4634-b9a8-6c426b2e3afd_480_320.jpg",
+							},
+							{
+								mguidebannerimg: "http://s3.lvjs.com.cn/uploads/pc/place2/2018-12-03/98b4b7b6-ca6f-44ad-be33-417b01beb5ce_480_320.jpg",
+							},
+
+						],
+						mguiderate: "8.8",
+						mguidedianping: "58963",
+						mguidedetailc: "考究的鳗鱼料理店全部是活杀活料理的形式，因此需要在店内“饲养”鳗鱼。广川“饲养”鳗鱼的水全部是来自岚山嵯峨野的地下水，每日更换，狠扣每个细节。店主认为，河鳗料理贵在新鲜，直接烤无法体现新鲜鳗鱼的口感，他们历代坚持先蒸后烤的做法。顾客点单才开始杀鳗鱼，处理鳗鱼，蒸再烤，从点餐到上菜至少要半个小时。与以前其他店吃的相比，该店的鳗鱼饭甜味不突出，更多的是清香。同时，或许是很少不需要预约的米其林料理店，但请在每日开店时及早前往，否则一会儿就需要长时间排队了。",
+						mguideyouyong: "353",
 					}
 				],
-				message: '查询成功'
-			}
-		})
+				mguideinvolve: [{
+						mguideinvolveimg: '//pics.lvjs.com.cn//uploads/pc/place2/2018-01-05/e8cc1cf6-2ead-42cf-b04b-c5c70da094e0_300_200.jpg',
+						mguideinvolvetitle: "吃在京都 | 资深吃货的美食推荐",
+						mguideinvolveavter: 'http://s1.lvjs.com.cn/uploads/pc/place2/2017-05-16/05a38163-448b-4f4f-9704-36b7ce67cb83_480_320.jpg',
+						mguideinvolvename: "biubiu 肥"
+					},
+					{
+						mguideinvolveimg: '//pics.lvjs.com.cn//uploads/pc/place2/2018-01-05/e8cc1cf6-2ead-42cf-b04b-c5c70da094e0_300_200.jpg',
+						mguideinvolvetitle: "京都最值得一去的10间抹茶甜品店",
+						mguideinvolveavter: 'http://s1.lvjs.com.cn/uploads/pc/place2/2017-05-16/05a38163-448b-4f4f-9704-36b7ce67cb83_480_320.jpg',
+						mguideinvolvename: "咯v热"
+					},
+					{
+						mguideinvolveimg: 'http://s3.lvjs.com.cn/uploads/pc/place2/2017-05-16/d92ec767-57fd-4be6-98b6-c91605b4d351_480_320.jpg',
+						mguideinvolvetitle: "来自樱和茶的甘味——京都的和果子和茶房们",
+						mguideinvolveavter: 'http://s1.lvjs.com.cn//uploads/pc/place2/2018-08-16/656e2c0b-db13-48fd-947d-51e235e50b12.jpg',
+						mguideinvolvename: "LOVE APPLE"
+					},
+					{
+						mguideinvolveimg: 'http://s2.lvjs.com.cn//uploads/pc/place2/2018-08-16/6fe7fb3f-5cb7-4898-9a93-7da80d1f905c.jpg',
+						mguideinvolvetitle: "京都不可错过的5大和食老铺",
+						mguideinvolveavter: 'http://s1.lvjs.com.cn/uploads/pc/place2/2017-05-16/05a38163-448b-4f4f-9704-36b7ce67cb83_480_320.jpg',
+						mguideinvolvename: "TWEEN"
+					},
+					{
+						mguideinvolveimg: 'http://s3.lvjs.com.cn//uploads/pc/place2/2018-08-16/3c78644f-e8fb-4924-8cf7-26306c4c8413.jpg',
+						mguideinvolvetitle: "京都咖啡店之小搜查",
+						mguideinvolveavter: 'http://s3.lvjs.com.cn//uploads/pc/place2/2018-08-16/26d26e4d-3bbb-4e88-8971-ecd4aecd3533.jpg',
+						mguideinvolvename: "hot 热"
+					}
+				]
+
+			}, ],
+			message: '查询成功'
+		}
+	})
 export default {
 	buildwebswiper,
 	buildpopoverdiv,
@@ -5787,5 +5877,6 @@ export default {
 	buildweijing,
 	buildgo,
 	buildplcFocusOperate,
-	buildplcCitylist
+	buildplcCitylist,
+	buildmguide
 }

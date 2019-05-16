@@ -11,14 +11,16 @@ export default new Router({
 			y: 0
 		}
 	},
-routes: [{
-			path: '/',
-			name: 'Index',
-			component(resolve) {
-				require(['../pages/mobile/Index.vue'], resolve)
-			}
-
-		},
+ routes: [
+	 
+	// {
+// 			path: '/',
+// 			name: 'Index',
+// 			component(resolve) {
+// 				require(['../pages/mobile/Index.vue'], resolve)
+// 			}
+// 
+// 		},
 // 
 // 		{
 // 			path: '/Serve_gonggao',

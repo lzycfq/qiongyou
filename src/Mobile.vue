@@ -8,8 +8,8 @@
 	</div>
 </template>
 <script>
-	import Footer from './pages/mobile/components/footer.vue';
-	import Header from './pages/mobile/components/header.vue';
+	// import Footer from './pages/mobile/components/footer.vue';
+	// import Header from './pages/mobile/components/header.vue';
 
 
 	export default {
@@ -40,7 +40,7 @@
 	
 	 
 
-	    'app-footer':Footer
+	    // 'app-footer':Footer
 	},
 	}
 </script>

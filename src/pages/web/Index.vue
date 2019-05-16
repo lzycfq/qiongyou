@@ -2,7 +2,7 @@
 	<el-col :span="24">
 		<headers></headers>
 		<div class="q-banner">
-			<swiper :options="sb" ref="mySwiper" v-if="webswiper.length>0">
+		<!-- 	<swiper :options="sb" ref="mySwiper" v-if="webswiper.length>0">
 				<swiper-slide v-for="(item,index) in webswiper" class="webswiper" :key="index" style="max-height: 640px;">
 					<img :src="item.tweenimg" width="100%" height="100%" />
 					<div class="swipertext">
@@ -11,7 +11,7 @@
 
 					</div>
 				</swiper-slide>
-			</swiper>
+			</swiper> -->
 			<div class="swiper-pagination sbpagination" slot="pagination"></div>
 			<div class="swiper-button-prev swiper-button-white" slot="button-prev" style="left: 50px;"></div>
 			<div class="swiper-button-next swiper-button-white" slot="button-next" style="right: 50px;"></div>

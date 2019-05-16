@@ -48,11 +48,18 @@ export default new Router({
 		// 		require(['../pages/web/Destination/Destination_Citylist'], resolve)
 		// 	}
 		// },
-			{
+		// 	{
+		// 	path: '/',
+		// 	name: 'Destination_mguide',//:id
+		// 	component(resolve) {
+		// 		require(['../pages/web/Destination/Destination_mguide'], resolve)
+		// 	}
+		// },
+		{
 			path: '/',
-			name: 'Destination_mguide',//:id
+			name: 'Destination_Landscape_introduction',//:id
 			component(resolve) {
-				require(['../pages/web/Destination/Destination_mguide'], resolve)
+				require(['../pages/web/Destination/Destination_Landscape_introduction'], resolve)
 			}
 		},
 	],

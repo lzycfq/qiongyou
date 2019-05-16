@@ -335,7 +335,7 @@
 					<dl class="destination-content" v-for="(item,key) in destinationcontent" :class="key === base_indexh?'active':''"
 					 :key="key">
 						<li v-for="(item,key) in item.destinationcontents">
-							<router-link to="{ name:'Destination_Detail_hotdetail', params: { id: item.id}}">
+							<router-link to="{ name:'Destination_Landscape_introduction', params: { id: item.id}}">
 								<div class="easing-container"><img :src="item.desimg" width="275" height="185"></div>
 								<h4 class="card-name">{{item.destitle}}</h4>
 								<div class="rank-info">

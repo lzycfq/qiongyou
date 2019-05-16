@@ -2,45 +2,46 @@
 	<el-col :span="24">
 		<headers></headers>
 		<div style="clear: both;"></div>
+		<div v-for="(item,index) in mguide" :key='index'>
 		<div class="mguide_breadcrumb">
 			<el-breadcrumb separator-class="el-icon-arrow-right">
-				<el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-				<el-breadcrumb-item>庶民价格品米其林餐厅京都篇</el-breadcrumb-item>
+				<el-breadcrumb-item :to="{ path: '/' }">目的地</el-breadcrumb-item>
+				<el-breadcrumb-item>{{item.mguidename}}</el-breadcrumb-item>
 			</el-breadcrumb>
 		</div>
 		<!-- mguide-wrap -->
 		<div class="mguide-wrap">
 			<div class="mguide-wrap-left">
 				<div class="detail-imgWrap">
-					<img src="http://s2.lvjs.com.cn/uploads/pc/place2/2017-12-05/dea1b6c2-2e4b-4065-8e7a-72381fe7badc.jpg" />
+					<img :src="item.mguideimg"  width="100%" />
 					<img src="//static.qyer.com/models/project/mguide/images/mguideDetail/watermark.png" class="imgWrap">
 				</div>
 				<div class="mguide-avatar">
-					<img src="//pics.lvjs.com.cn//uploads/pc/place2/2017-01-18/e2b8fa16-2259-4006-8e59-b351225dce0f_300_200.jpg" width="120px" height="120px" />
-					<p align="center" class="mguide-time">中午十二点</p>
+					<img :src="item.mguideavter" width="120px"
+					 height="120px" />
+					<p align="center" class="mguide-time">{{item.mguidetime}}</p>
 				</div>
 				<div class="detail-wrap">
-					<h1 class="detail-h1">庶民价格品米其林餐厅京都篇</h1>
+					<h1 class="detail-h1">{{item.mguidename}}</h1>
 					<div class="mguide-like">
 						<a><img src="../../../assets/images/qiongyou/love-2.png" style="float: left;margin-left: 15px;"><span style="float: right;color: #333333;font-size: 16px;margin-right: 15px;">喜欢
-								1639</span></a>
+								{{item.mguidepinglun}}</span></a>
 					</div>
 					<div class="detail-content">
-						京都美食不仅在日本有很高评价，也闻名世界。在米其林集团于日本出版的5本红色指南中，京都星级餐厅数仅次于东京。结合京都的人文传统，其收入的餐厅大多为京料理、怀石料理等传统日本料理（若非美食专业研究者可将怀石料理与会席料理同一认识），这些餐厅在时令、料理、器皿、环境乃至文化方面具有相当高的水准，非常值得一试。对于游客来说，如何在预算有限的情况下品尝到地道的京都美食，不仅是满足口腹之欲，更是感受日本传统食文化的现实需求。现将位于京都，每餐最低消费人均在8000日元以下，入选米其林指南并获得星级评价，且在日本食评网站tabelog上也有较好排名，适合游客前往的代表餐厅收入于此微锦囊，供各位穷游er参考。当然，这里也给出一些提示：光顾锦囊里的餐厅，除特别注明外请提前预约；绝大部分怀石料理、割烹料理是由店家根据当季食材搭配不同价位套餐，无单点菜单。价位越高的套餐包含的料理道数更多，食材更高级，所谓“一分价钱一分货”；一些怀石料理、割烹料理店会在中午时段供应便当或“简化”的套餐，在保障餐厅水准的前提下，给出了很有性价比的套餐价格；不少餐厅在菜单定价之外有10%左右的服务费。
-					</div>
+                     {{item.mguidetxt}}
 					<br />
 					<br />
 				</div>
 				<ul class="poiList">
-					<li class="mguide-list">
+					<li class="mguide-list" v-for="(item,index) in item.mguidelist" :key="index">
 						<div class="list-title">
 							<div class="title-left">
 								<h2 class="title-detail">
-									<span class="title-icon">1</span>
-									<router-link to='/'>菊乃井(总店)</router-link>
+									<span class="title-icon">{{index+1}}</span>
+									<router-link to='/'>{{item.mguidedianming}}</router-link>
 								</h2>
 								<p class="title-tag">
-									<router-link to='/' class="title">日本京都</router-link>
+									<router-link to='/' class="title">{{item.mguidedidian}}</router-link>
 									<router-link to='/' class="mguideDetail">
 										查看目的地详情 <i class="el-icon-arrow-right"></i>
 									</router-link>
@@ -53,90 +54,264 @@
 						</div>
 						<div class="swiper-container gallery-top">
 							<div class="swiper-wrapper">
-								<div class="swiper-slide"><img src="../../../assets/images/LP.jpg" width="100%"></div>
-								<div class="swiper-slide"><img src="../../../assets/images/LP.jpg" width="100%"></div>
-
-							</div>
-							<!-- Add Arrows -->
-							<div class="swiper-button-next swiper-button-white"></div>
-							<div class="swiper-button-prev swiper-button-white"></div>
+							<div class="swiper-slide" v-for="(item,index) in item.mguidebanner"><img :src="item.mguidebannerimg" width="100%"></div>
+							
 						</div>
+
 						<div class="swiper-container gallery-thumbs">
 							<div class="swiper-wrapper">
-								<div class="swiper-slide"><img src="../../../assets/images/LP.jpg" width="100%"></div>
-								<div class="swiper-slide"><img src="../../../assets/images/LP.jpg" width="100%"></div>
-							</div>
-						</div>
+								<div class="swiper-slide" v-for="(item,index) in item.mguidebanner"><img :src="item.mguidebannerimg" width="100%"></div>
 
+							</div>
+							</div>
+
+						</div>
+						<div style="clear: both;"></div>
+						<div class="slider-intro">
+						<p class="stars">
+							<em>推荐星级：</em>
+							<el-rate v-model="item.mguiderate" disabled show-score score-template="{value}"></el-rate>
+							<router-link to="" style="color: #0073b6;float: left;margin-top: 2px;">{{item.mguidedianping}}条点评</router-link>
+						</p>
+						<div class="detailc">
+                         {{item.mguidedetailc}}
+						</div>
+						<div class="handler">
+							<a  class="praise jspoicommentuseful">有用{{item.mguideyouyong}}</a>
+							<a  id="getComment" class="comment js_commentreply commentDisabled">回复</a>
+						</div>
+						<br />
+                        </div>			
 					</li>
 				</ul>
 			</div>
+		
+		</div>
+			<div class="mguide-involve">
+			<h2 class="xianguang">
+				相关微锦囊
+			</h2>
+			<li v-for="(item,index) in item.mguideinvolve">
+					<router-link to="">
+						<img :src="item.mguideinvolveimg" class="themeImg">
+						<span class="title2">{{item.mguideinvolvetitle}}</span>
+						<em class="avatar">
+							<img :src="item.mguideinvolveavter">
+		                  {{item.mguideinvolvename}}
+						</em>
+		            </router-link>
+		        </li>
+		</div>
+		</div>
 		</div>
 	</el-col>
 </template>
 <style lang="scss">
-	 .swiper-container {
-      width: 100%;
-      height: 300px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .swiper-slide {
-      background-size: cover;
-      background-position: center;
-    }
-    .gallery-top {
-      height: 80%;
-      width: 100%;
-    }
-    .gallery-thumbs {
-      height: 20%;
-      box-sizing: border-box;
-      padding: 10px 0;
-    }
-    .gallery-thumbs .swiper-slide {
-      height: 100%;
-      opacity: 0.4;
-    }
-    .gallery-thumbs .swiper-slide-thumb-active {
-      opacity: 1;
-    }
+	.mguide-involve{
+		width: 245px;
+		float: right;
+		.xianguang{
+	font-size: 18px;
+    color: #636363;
+    height: 35px;
+	font-weight: 500;}
+	 li {
+    margin-bottom: 30px;
+	list-style: none;
+	a {
+    display: block;
+    height: 80px;
+    overflow: hidden;
+    position: relative;
+	.themeImg {
+    float: left;
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+ .title2 {
+    display: block;
+    min-height: 27px;
+    max-height: 38px;
+    line-height: 20px;
+    color: #323232;
+    font-size: 14px;
+    margin-top: -3px;
+    margin-left: 100px;
+    overflow: hidden;
+}
+ .avatar {
+    height: 32px;
+    display: block;
+    line-height: 32px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #636363;
+    margin-top: 10px;
+	 img {
+    float: left;
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    border-radius: 50%;
 
+}
+}
+
+}
+		}
+	}
+	.swiper-slide {
+		background-size: cover;
+		background-position: center;
+	}
+
+	.gallery-top {
+		height: 360px;
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.gallery-thumbs {
+		height: 60px;
+
+padding:10px 20px 0px 20px;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		background: black;
+		opacity: 0.6;
+
+	}
+
+	.gallery-thumbs .swiper-slide {
+
+		opacity: 0.4;
+	}
+
+	.gallery-thumbs .swiper-slide-thumb-active {
+		opacity: 1;
+		border: box-sizing;
+
+
+	}
+	.slider-intro{
+		    padding: 22px 29px 20px 29px;
+    border: solid 1px #ececec;
+    border-top: none;
 	
+	.stars{
+		color: #959595;
+    font-size: 12px;
+    height: 26px;
+    overflow: hidden;
+    vertical-align: top;
+    margin-top: 10px;
+	}
+.stars .el-rate{
+	margin-top: 2px;
+	width: 150px;float: left;
+}
+	.stars .el-icon-star-on {
+		color: #28b76c !important;
+	}
+
+	.stars em {
+		float: left;
+		height: 26px;
+		line-height: 24px;
+		margin-right: 15px;
+	}
+	.detailc{
+		font-size: 18px;
+    color: #636363;
+    line-height: 30px;
+    margin-top: 10px;
+	}
+	}
+	.slider-intro .praise {
+    float: right;
+    padding: 0 10px 0 24px;
+    color: #147850;
+    font-size: 12px;
+    background-color: #e0f1df;
+    background-image: url(https://mguide.qyerstatic.com/project/images/mguideDetail/icons.png);
+    background-repeat: no-repeat;
+    background-position: -280px -207px;
+    margin: 0 0 0 20px;
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 3px;
+}
+.slider-intro .commentDisabled {
+    padding-left: 19px;
+    float: right;
+    font-size: 12px;
+    background: url(https://mguide.qyerstatic.com/project/images/mguideDetail/icons.png) no-repeat -286px -170px;
+    margin: 4px 0 0 20px;
+    display: inline-block;
+    color: #959595;
+    text-decoration: none;
+}
 </style>
 <script>
 	import 'swiper/dist/css/swiper.css';
-    import swiper from "swiper"
-	
+	import swiper from "swiper"
+
 	import headers from '../../../pages/web/Destination/header.vue'
 	export default {
 		name: 'Destination_strategy',
 		data() {
-			return {}
+			return {
+				value: "3.5",
+				mguide:[],
+				
+			}
 		},
+			
+		created(){
+			this.buildmguide();
+		},
+		
 		mounted() {
 			var galleryThumbs = new swiper('.gallery-thumbs', {
 				spaceBetween: 10,
-				slidesPerView: 4,
+				slidesPerView: 10,
+				freeMode: true,
 				watchSlidesVisibility: true,
 				watchSlidesProgress: true,
+
 			});
 			var galleryTop = new swiper('.gallery-top', {
 				spaceBetween: 10,
-				
 				navigation: {
 					nextEl: '.swiper-button-next',
 					prevEl: '.swiper-button-prev',
 				},
-				thumbs: galleryThumbs,
-			
+				thumbs: {
+					swiper: galleryThumbs
+				}
+
 			});
 
 		},
+		methods: {
+			buildmguide() {
+				this.axios.get('/api/buildmguide').then(res => {
+					this.mguide = res.data.data
+				}).catch(function(error) {
+					console.log(error);
+				})
+			}
+		},
 		components: {
 			headers,
-				swiper,
-			
+			swiper,
+
 		},
 	}
 </script>
@@ -145,7 +320,8 @@
 	.mguide-wrap {
 		width: 980px;
 		margin: 0 auto;
-        height: auto;
+		height: auto;
+
 		.mguide-wrap-left {
 			width: 680px;
 			float: left;
@@ -259,23 +435,24 @@
 				margin-top: 25px;
 				list-style: none;
 			}
+
 			.mguide-list {
 				overflow: hidden;
 				margin-bottom: 10px;
 				background: #fff;
-			
+
 				.list-title {
 					height: 89px;
 					overflow: hidden;
 					border: solid 1px #ececec;
 					border-bottom: none;
-			
+
 					.title-left {
 						float: left;
 						width: 450px;
 						padding-left: 29px;
 						height: 89px;
-			
+
 						.title-detail {
 							font-size: 30px;
 							color: #3f9f5f;
@@ -283,7 +460,7 @@
 							line-height: 31px;
 							margin-top: 18px;
 							position: relative;
-			
+
 							span {
 								font-size: 24px;
 								color: #71b087;
@@ -293,7 +470,7 @@
 								height: 32px;
 								margin-right: 10px;
 							}
-			
+
 							a {
 								color: #3f9f5f;
 								overflow: hidden;
@@ -304,16 +481,16 @@
 								font-size: 30px;
 								font-weight: 500;
 							}
-			
+
 						}
-			
+
 						.title-tag {
 							height: 20px;
 							line-height: 20px;
 							overflow: hidden;
 							font-size: 12px;
 							margin-top: 10px;
-			
+
 							.title {
 								color: #959595;
 								padding-left: 0px;
@@ -322,22 +499,22 @@
 								text-decoration: none;
 								cursor: text;
 							}
-			
+
 							a {
 								color: #0073b6;
 								padding-left: 20px;
 							}
 						}
-			
-			
+
+
 					}
-			
+
 					.title-right {
 						float: right;
 						width: 150px;
 						padding-right: 0px;
 						height: 89px;
-			
+
 						a {
 							float: left;
 							width: 60px;
@@ -345,9 +522,9 @@
 							text-align: center;
 						}
 					}
-			
+
 				}
-			
+
 			}
 		}
 	}
