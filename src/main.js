@@ -16,12 +16,10 @@ import VueAxios from 'vue-axios'
 // import 'vue-photo-preview/dist/skin.css'
 // import CryptoJS from 'crypto-js/crypto-js'
 // import waterfall from 'vue-waterfall2'
-import VueAwesomeSwiper from 'vue-awesome-swiper'
-
-import 'swiper/dist/css/swiper.css'
 
 
-Vue.use(VueAwesomeSwiper, /* { default global options } */)
+
+
 // Vue.use(waterfall)
 //判断PC或mobile
 let role = /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i;

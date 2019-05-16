@@ -1,5 +1,5 @@
 {
-  "name": "aimeite",
+  "name": "qiongyou",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "john <liangjianji@anjiazhixun.com>",
@@ -20,7 +20,7 @@
     "v-distpicker": "^1.2.1",
     "v-gallery": "^1.2.4",
     "vue": "^2.5.2",
-    "vue-awesome-swiper": "^2.6.7",
+
     "vue-axios": "^2.1.4",
     "vue-photo-preview": "^1.1.2",
     "vue-qriously": "^1.1.1",

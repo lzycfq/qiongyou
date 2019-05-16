@@ -34,11 +34,25 @@ export default new Router({
 		// 		require(['../pages/web/Destination/Destination_list_Strategy'], resolve)
 		// 	}
 		// },
-		{
+		// {
+		// 	path: '/',
+		// 	name: 'Destination_Countrydetail',//:id
+		// 	component(resolve) {
+		// 		require(['../pages/web/Destination/Destination_Countrydetail'], resolve)
+		// 	}
+		// },
+		// {
+		// 	path: '/',
+		// 	name: 'Destination_Citylist',//:id
+		// 	component(resolve) {
+		// 		require(['../pages/web/Destination/Destination_Citylist'], resolve)
+		// 	}
+		// },
+			{
 			path: '/',
-			name: 'Destination_Countrydetail',//:id
+			name: 'Destination_mguide',//:id
 			component(resolve) {
-				require(['../pages/web/Destination/Destination_Countrydetail'], resolve)
+				require(['../pages/web/Destination/Destination_mguide'], resolve)
 			}
 		},
 	],

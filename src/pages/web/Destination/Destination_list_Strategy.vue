@@ -156,37 +156,41 @@
 		</div>
 
 		<div class="plcListMgContainer">
-			<div class="qyWrap" v-for="(item,index) in qyWrap" :key="index">
-				<div class="plcListMgTitles">
-					<h2 class="title fontYaHei">{{item.mguidedidian}}美食微锦囊</h2>
-					<p class="more">
-						<router-link :to="{ name:'Destination_mguide ', params: { mguideid: item.mguideid}}">更多微锦囊({{item.mguidenumber}})
-							<i class="el-icon-arrow-right" style="vertical-align: middle;"></i></router-link>
-					</p>
+			<div class="qyWrapsbanner" v-for="(item,index) in qyWrap" :key="index">
+				<div style="width: 980px; margin: 0 auto;">
+					<div class="plcListMgTitles">
+						<h2 class="title fontYaHei">{{item.mguidedidian}}美食微锦囊</h2>
+						<p class="more">
+							<router-link :to="{ name:'Destination_mguide ', params: { mguideid: item.mguideid}}">更多微锦囊({{item.mguidenumber}})
+								<i class="el-icon-arrow-right" style="vertical-align: middle;"></i></router-link>
+						</p>
+					</div>
 				</div>
-				<el-carousel class="qyWrapsbanner" height="250px">
+				<el-carousel class="qyWrapsbanner" height="250px" arrow="always">
 					<el-carousel-item v-for="(item,index) in item.qyWraps" :key="index">
-						<li class="qyWrapslist" v-for="(item,index) in item.qyWrapc" :key="index">
-							<router-link :to="{ name:'Destination_mguidedetail ', params: { Destination_mguidedetailid: item.Destination_mguidedetailid}}"
-							 title="item.mguidedetailtitle">
-								<p class="photo"><img :src="item.mguidedetailimg " width="227" height="auto" alt="item.mguidedetailtitle"></p>
-								<p class="photoMask"></p>
-								<div class="content">
-									<p class="face"><img :src="item.mguidedetailavter" width="60" height="60" alt="堂本琥珀"></p>
-									<h3 class="title fontYaHei">{{item.mguidedetailtitle}}</h3>
-									<blockquote class="text">{{item.mguidedetaildsc}}</blockquote>
-									<p class="tags">
-										{{item.mguidedetailtags}}
-									</p>
-								</div>
-								<div class="bottom"></div>
-							</router-link>
-						</li>
+						<div style="width: 980px; margin: 0 auto;">
+							<li class="qyWrapslist" v-for="(item,index) in item.qyWrapc" :key="index">
+								<router-link :to="{ name:'Destination_mguidedetail ', params: { Destination_mguidedetailid: item.Destination_mguidedetailid}}"
+								 title="item.mguidedetailtitle">
+									<p class="photo"><img :src="item.mguidedetailimg " width="227" height="auto" alt="item.mguidedetailtitle"></p>
+									<p class="photoMask"></p>
+									<div class="content">
+										<p class="face"><img :src="item.mguidedetailavter" width="60" height="60" alt="堂本琥珀"></p>
+										<h3 class="title fontYaHei">{{item.mguidedetailtitle}}</h3>
+										<blockquote class="text">{{item.mguidedetaildsc}}</blockquote>
+										<p class="tags">
+											{{item.mguidedetailtags}}
+										</p>
+									</div>
+									<div class="bottom"></div>
+								</router-link>
+							</li>
+						</div>
 					</el-carousel-item>
 				</el-carousel>
 			</div>
 		</div>
-		<div class="qyWrap qyWraplist">
+		<div class="qyWraplist">
 			<!-- 游记攻略 before -->
 			<div class="qyMain" v-for="(item,index) in zl" :key="index">
 				<h3 class="subTitle">{{item.zlcity}}旅行地</h3>
@@ -194,59 +198,90 @@
 					<li>
 						<p class="tit">旅行地：</p>
 						<p class="labels">
-							<a v-for="(item,index) in item.luvxing" :class="type_indexl===index?'current':''" @click="clickIndexl(index)"
+							<a v-for="(item,index) in item.search_luvxing" :class="type_indexl===index?'current':''" @click="clickIndexl(index)"
 							 :key="index">{{item.lvxingdi}} ({{item.lvxingnumber}})</a>
 						</p>
 					</li>
 					<li>
 						<p class="tit">主题：</p>
 						<p class="labels">
-							<a v-for="(item,index) in item.zhuti" :class="type_indexz===index?'current':''" @click="clickIndexz(index)" :key="index">{{item.zhitiname}}</a>
+							<a v-for="(item,index) in item.search_zhuti" :class="type_indexz===index?'current':''" @click="clickIndexz(index)"
+							 :key="index">{{item.zhitiname}}</a>
 						</p>
 					</li>
 				</ul>
-					<div style="clear: both;"></div>
+				<div style="clear: both;"></div>
 				<div class="plcPoiSift">
 					<p class="shaix" style="position: relative;">
-						<label><input class="shaixinput" type="radio" name="poi" value="1"><span>微锦囊推荐</span></label>
-						<label><input class="shaixinput" type="radio" name="poi" value="2"><span>有折扣</span></label>
+						<label><input class="shaixinput" type="radio" name="poi" value="1" rel="poi" @click="search_clickradio"><span>微锦囊推荐</span></label>
+						<label><input class="shaixinput" type="radio" name="poi" value="2" rel="poi" @click="search_clickradio"><span>有折扣</span></label>
 					</p>
 					<div class="qui-select">
 						<el-select v-model="value" clearable placeholder="请选择" class="elselect">
-							<el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value">
+							<el-option v-for="item in search_options" @click="searchselect(index)" :key="item.value" :label="item.label"
+							 :value="item.value">
 							</el-option>
 						</el-select>
 					</div>
-			</div>
-					<div class="plcPoiList showed">
-						<li v-for="(item,index) in plcPoiList" :key="index">
-							<div class="cntBox clearfix">
-								<p class="pics"><router-link :to="{ name:'Destination_mguidedetail ', params: { plcPoiListid: item.plcPoiListid}}">
-								<img :src="item.plcPoiListidimg" width="227" height="150"><span class="label">用户热推</span></router-link></p>
-								<h3 class="title fontYaHei"><router-link :to="{ name:'Destination_mguidedetail ', params: { plcPoiListid: item.plcPoiListid}}">{{item.plcPoiListtitle}}&nbsp;&nbsp;<span>Tokyo
-											{{item.plcPoiListidjianxie}}</span></router-link></h3>
-								<div class="info">
-									<p class="stars"></p> <span class="dping"><router-link :to="{ name:'Destination_mguidedetail ', params: { plcPoiListid: item.plcPoiListid}}">{{item.plcPoiListpinglun}}人点评</router-link></span>
-									<span class="zhe">折</span> <span class="infoSide"> 景点观光排名 <em class="rank orange">第{{item.plcPoiListfirat}}位</em> </span>
-								</div>
-								<div class="comment clearfix">
-									<p class="user"><router-link to=''><img :src="item.plcPoiListavter"
-											 width="32" height="32" alt="item.plcPoiListtitle"></router-link></p>
-									<p class="txt">{{item.plcPoiListxt}}</p>
-									<p class="mguideNumber"><router-link to='' style="color: #777777;">{{item.plcPoiListjn}}个微锦囊推荐了这里</router-link></p>
-								</div>
-								<br />
-						
-								 <dt class="orange">优选折扣:
-								<router-link  :to="{ name:'Destination_mguidedetail ', params: { plcPoiListid: item.plcPoiListid}}"  style="color: #777777;">
-									{{item.plcPoiListyouhui}}</router-link></dt>
-							
-							</div>
-						</li>
-					
 				</div>
+				<div class="plcPoiListStrategy showed">
+					<li v-for="(item,index) in plcPoiList" :key="index">
+						<div class="cntBox clearfix">
+							<p class="pics">
+								<router-link :to="{ name:'Destination_mguidedetail ', params: { plcPoiListid: item.plcPoiListid}}">
+									<img :src="item.plcPoiListidimg" width="227" height="150"><span class="label">用户热推</span></router-link>
+							</p>
+							<h3 class="title fontYaHei">
+								<router-link :to="{ name:'Destination_mguidedetail ', params: { plcPoiListid: item.plcPoiListid}}">{{item.plcPoiListtitle}}&nbsp;&nbsp;<span>Tokyo
+										{{item.plcPoiListidjianxie}}</span></router-link>
+							</h3>
+							<div class="info">
+								<p class="stars">
+									<el-rate v-model="item.ratevalue" disabled show-score text-color="#3f9f5f" score-template="{value}">
+									</el-rate>
+									<span class="dping">
+										<router-link :to="{ name:'Destination_mguidedetail ', params: { plcPoiListid: item.plcPoiListid}}">{{item.plcPoiListpinglun}}人点评</router-link>
+									</span>
+									<span class="zhe">折</span> <span class="infoSide"> 景点观光排名 <em class="rank orange">第{{item.plcPoiListfirat}}位</em>
+									</span>
+								</p> 
+							</div>
+							<div class="comment clearfix">
+								<p class="user">
+									<router-link to=''><img :src="item.plcPoiListavter" width="32" height="32" alt="item.plcPoiListtitle"></router-link>
+								</p>
+								<p class="txt">{{item.plcPoiListxt}}</p>
+								<p class="mguideNumber">
+									<router-link to='' style="color: #777777;">{{item.plcPoiListjn}}个微锦囊推荐了这里</router-link>
+								</p>
+							</div>
+							<br />
+							<dt class="orange bordert">优选折扣:
+								<router-link :to="{ name:'Destination_mguidedetail ', params: { plcPoiListid: item.plcPoiListid}}" style="color: #777777;">
+									{{item.plcPoiListyouhui}}</router-link></dt>
+
+						</div>
+					</li>
+
+				</div>
+
 			</div>
-			<!-- 游记攻略 end -->
+			<div class="plcPoiLis_jieshao" v-for="(item,index) in strategy_jieshao" :key="index">
+				<h3 class="subTitle">{{item.strategy_jieshao_didian}}活动攻略</h3>
+				<p class="text">{{item.strategy_jieshao_text}}</p>
+				<p align="right">
+					<router-link to="/" style="color: #0073b6;">阅读全文<i class="el-icon-arrow-right"></i></router-link>
+				</p>
+				<p class="plaBorderGap" style="width: 100%;
+    height: 1px;
+    overflow: hidden;
+    background-color: #ececec;
+    margin: 30px 0;"></p>
+				<h3 class="subTitle">{{item.strategy_jieshao_didian}}活动地图</h3>
+				<br />
+				<img :src="item.strategy_jieshao_img" width="100%" />
+			</div>
+
 		</div>
 	</el-col>
 </template>
@@ -260,12 +295,30 @@
 				id: this.$route.query.id,
 				type_indexl: 0,
 				type_indexz: 0,
-
+				value: '按综合',
+				search_options: [{
+						value: 1,
+						label: '按综合'
+					},
+					{
+						value: 2,
+						label: '按过去数'
+					},
+					{
+						value: 3,
+						label: '按评分'
+					},
+					{
+						value: 4,
+						label: '按点评数'
+					}
+				],
 				strategy_breadcrumb: [],
 				plcTopBar: [],
 				qyWrap: [],
 				zl: [],
-				plcPoiList:[]
+				plcPoiList: [],
+				strategy_jieshao: []
 			}
 		},
 		created() {
@@ -274,7 +327,8 @@
 			this.buildstrategy_list();
 			this.buildqyWrap();
 			this.buildzl();
-			this.buildplcPoiList()
+			this.buildplcPoiList();
+			this.buildstrategy_jieshao();
 		},
 		methods: {
 			buildstrategy_breadcrumb() {
@@ -312,8 +366,20 @@
 					console.log(error);
 				})
 			},
-			buildplcPoiList(){
-					this.axios.get('/api/buildplcPoiList').then(res => { //+this.id
+			buildstrategy_jieshao() {
+				this.axios.get('/api/buildstrategy_jieshao').then(res => { //+this.id
+					this.strategy_jieshao = res.data.data
+				}).catch(function(error) {
+					console.log(error);
+				})
+			},
+			buildplcPoiList() {
+				this.axios.get('/api/buildplcPoiList'
+					// ,{
+					//         params:this.search_params,
+					//         radio:this.$refs.poi.value,
+					// }
+				).then(res => { //+this.id
 					this.plcPoiList = res.data.data
 				}).catch(function(error) {
 					console.log(error);
@@ -321,10 +387,24 @@
 			},
 			clickIndexl(index) {
 				this.type_indexl = index
+				this.search_params['type'] = this.search_luvxing[index];
+				this.buildplcPoiList();
+
 			},
 			clickIndexz(index) {
 				this.type_indexz = index
+				this.search_params['type'] = this.search_zhuti[index];
+				this.buildplcPoiList();
+			},
+			// inputradio点击筛选数据
+			search_clickradio() {
+				this.buildplcPoiList();
+			},
+			searchselect(index) {
+				this.search_params['type'] = this.search_options[index];
+				this.buildplcCitylist();
 			}
+
 		},
 
 		components: {
@@ -334,6 +414,26 @@
 </script>
 
 <style lang="scss">
+	.plcPoiLis_jieshao {
+		float: right;
+		width: 270px;
+
+		.subTitle {
+			font-size: 16px;
+			line-height: 18px;
+			color: #636363;
+			font-weight: 500;
+
+		}
+
+		.text {
+			margin-top: 15px;
+			line-height: 20px;
+			color: #636363;
+
+		}
+	}
+
 	.qyWraplist {
 		width: 980px;
 		padding: 40px 0;
@@ -418,8 +518,8 @@
 		border-bottom: 1px solid #ececec;
 		background-color: #f5f5f5;
 
-		.qyWrap {
-			width: 980px;
+		.qyWrapsbanner {
+			width: 1130px;
 
 			margin-left: auto;
 			margin-right: auto;
@@ -482,145 +582,184 @@
 		}
 	}
 
+	.plcPoiListStrategy {
+		width: 680px;
+		float: left;
+	}
 
-.plcPoiList li {
-    border-bottom: 1px solid #ececec;
-    padding: 30px 0 20px;
-	list-style: none;
-}
-.plcPoiList .cntBox {
-    position: relative;
-    padding-left: 247px;
-}
-.plcPoiList .pics {
-    position: relative;
-    float: left;
-    margin-left: -247px;
-}
-.plcPoiList .pics .label {
-    position: absolute;
-    left: 15px;
-    top: 15px;
-    width: 70px;
-    height: 20px;
-    line-height: 22px;
-    overflow: hidden;
-    color: #fff;
-    font-size: 12px;
-    background-color: #3f9f5f;
-    opacity: .75;
-    text-align: center;
-    border-radius: 10px;
-}
-.plcPoiList .title {
-    width: 380px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-size: 16px;
-    line-height: 18px;
-    color: #959595;
-}
-.plcPoiList .title a {
-    color: #323232;
-    font-weight: 700;
-}
-.plcPoiList .title a span {
-    color: #959595;
-	font-weight: 700;
+	.plcPoiListStrategy li {
+		border-bottom: 1px solid #ececec;
+		padding: 30px 0 20px;
+		list-style: none;
+	}
 
-}
-.plcPoiList .info {
-    width: 100%;
-    overflow: hidden;
-    padding: 10px 0;
-    color: #959595;
-    position: relative;
-    height: 18px;
-}
-.plcPoiList .dping {
-    float: left;
-    margin-left: 20px;
-a {
-    color: #959595;
-}
-}
+	.plcPoiListStrategy .cntBox {
+		position: relative;
+		padding-left: 247px;
+	}
+
+	.plcPoiListStrategy .pics {
+		position: relative;
+		float: left;
+		margin-left: -247px;
+	}
+
+	.plcPoiListStrategy .pics .label {
+		position: absolute;
+		left: 15px;
+		top: 15px;
+		width: 70px;
+		height: 20px;
+		line-height: 22px;
+		overflow: hidden;
+		color: #fff;
+		font-size: 12px;
+		background-color: #3f9f5f;
+		opacity: .75;
+		text-align: center;
+		border-radius: 10px;
+	}
+
+	.plcPoiListStrategy .title {
+		width: 380px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		font-size: 16px;
+		line-height: 18px;
+		color: #959595;
+	}
+
+	.plcPoiListStrategy .title a {
+		color: #323232;
+		font-weight: 700;
+	}
+
+	.plcPoiListStrategy .title a span {
+		color: #959595;
+		font-weight: 700;
+
+	}
+
+	.plcPoiListStrategy .info {
+		width: 100%;
+		overflow: hidden;
+		padding: 10px 0;
+		color: #959595;
+		position: relative;
+		height: 18px;
+	}
+	.plcPoiListStrategy .info .stars{
+		/deep/ .el-rate{
+		float: left;
+	}
+	}
+	.plcPoiListStrategy .info .stars .el-icon-star-on {
+		color: #28b76c !important;
+	}
+		.plcPoiListStrategy .info .stars .el-rate__text{
+			font-size: 15px;
+		}
+	.plcPoiListStrategy .dping {
+		float: left;
+		margin-left: 20px;
+
+		a {
+			color: #959595;
+		}
+	}
 
 
-.plcPoiList .zhe {
-    float: left;
-    margin-left: 10px;
-    margin-top: 1px;
-    width: 16px;
-    height: 16px;
-    overflow: hidden;
-    background: url(//common2.qyerstatic.com/place/project/images/icon-sprites.png) no-repeat -40px -120px;
-    line-height: 160px;
-}
-.plcPoiList .infoSide {
-    position: absolute;
-    right: 0;
-    top: 11px;
-}
-.plcPoiList .cntBox .orange {
-    color: #f26622;
-	font-style: normal;
-	 overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-}
-.plcPoiList .rank {
-    padding-left: 5px;
-}
-.plcPoiList .comment {
-    height: 70px;
-    overflow: hidden;
-    line-height: 20px;
-    position: relative;
-    margin-top: 15px;
-}
-.plcPoiList .comment .user {
-    float: left;
-    padding-right: 10px;
-    padding-top: 4px;
-img {
-    display: block;
-    border-radius: 50%;
-}
-}
-.plcPoiList .comment .txt {
-    height: 40px;
-    color: #636363;
-    overflow: hidden;
-}
-.plcPoiList .mguideNumber {
-    margin: 10px 0 0;
-}
-.clearfix:after {
-    display: block;
-    font-size: 0;
-    height: 0;
-}
-.plcPoiList .discount {
-       overflow: hidden;
-     white-space: nowrap;
-     text-overflow: ellipsis;
-    border-top: 1px dashed #ececec;
-    margin-top: 8px;
-    padding-top: 20px;
-    position: relative;
-	.orange {
-    color: #ff7466;
-	
-}
-	
+	.plcPoiListStrategy .zhe {
+		float: left;
+		margin-left: 10px;
+		margin-top: 1px;
+		width: 16px;
+		height: 16px;
+		overflow: hidden;
+		background: url(//common2.qyerstatic.com/place/project/images/icon-sprites.png) no-repeat -40px -120px;
+		line-height: 160px;
+	}
 
-.list {
-    margin-left: 55px;
-    margin-right: 20px;
-    height: 20px;
-}
-}
+	.plcPoiListStrategy .infoSide {
+		position: absolute;
+		right: 0;
+		top: 11px;
+	}
+
+	.plcPoiListStrategy .cntBox .orange {
+		color: #f26622;
+		font-style: normal;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+	.plcPoiListStrategy .cntBox .bordert {
+		padding: 20px 0;
+		border-top: 1px dashed #ececec;
+	}
+
+	.plcPoiListStrategy .rank {
+		padding-left: 5px;
+	}
+
+	.plcPoiListStrategy .comment {
+		height: 70px;
+		overflow: hidden;
+		line-height: 20px;
+		position: relative;
+		margin-top: 15px;
+	}
+
+	.plcPoiListStrategy .comment .user {
+		float: left;
+		padding-right: 10px;
+		padding-top: 4px;
+
+		img {
+			display: block;
+			border-radius: 50%;
+		}
+	}
+
+	.plcPoiListStrategy .comment .txt {
+		height: 40px;
+		color: #636363;
+		overflow: hidden;
+	}
+
+	.plcPoiListStrategy .mguideNumber {
+		margin: 10px 0 0;
+	}
+
+	.clearfix:after {
+		display: block;
+		font-size: 0;
+		height: 0;
+	}
+
+	.plcPoiListStrategy .discount {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		border-top: 1px dashed #ececec;
+		margin-top: 8px;
+		padding-top: 20px;
+		position: relative;
+
+		.orange {
+			color: #ff7466;
+
+		}
+
+
+		.list {
+			margin-left: 55px;
+			margin-right: 20px;
+			height: 20px;
+		}
+	}
 
 
 	.qyWrapsbanner .qyWrapslist {

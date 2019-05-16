@@ -251,54 +251,54 @@
 					</el-carousel>
 				</div>
 				<div class="plcFocusOperate" v-for="(item,index) in plcFocusOperate" :key="index">
-				<ul class="place-userbehavior">
-					<li><img src="../../../assets/images/qiongyou/go_2 (3).png" width="43px" height="40px"/>
-					<span>想去</span>
-					</li>
-					<li><img src="../../../assets/images/qiongyou/go_2 (2).png"/>
-					<span>去过</span>
-</li>
-					<li><img src="../../../assets/images/qiongyou/go_2 (1).png"/>
-					<span>生活过</span>
-</li>
-				</ul>	
-				<h3 class="plcShareExpTitle">国家经验</h3>
-				 <el-carousel  height="100px" indicator-position="none" arrow="hover">
-    <el-carousel-item v-for="(item,index) in item.plcFocusOperates" :key="index">
-     {{item.plcFOcontent}}
-    </el-carousel-item>
-  </el-carousel>
-  <p align="right">
-            <router-link to="" style="color: #0073b6;">
-                + 分享我的国家经验
-            </router-link>
-        </p>
-		<p class="plcQYGuideTitle">穷游锦囊</p>
-		<br/>
-		<ul class="plcQYGuideContent">
-			<li  style="position: absolute; left: 0px;">
-            <p class="cover">
-                <router-link to="" title="item.pictitle" >
-                    <img :src="item.picimg" width="60" height="90" alt="">
-                </router-link to="">
-            </p>
-			
-            <p class="title fontYaHei">
-                <router-link to="">
-                    {{item.pictitle}}
-                </router-link to="">
-            </p>
-            <p class="info">
-                <span class="author">作者：{{item.piczuozhe}}</span>
-                <span>下载次数：{{item.piccishu}}</span>
-            </p>
-            <p class="download">
-                <router-link to="" class="ui_buttonA">
-                    免费下载
-                </router-link>
-            </p>
-        </li>
-		</ul>
+					<ul class="place-userbehavior">
+						<li><img src="../../../assets/images/qiongyou/go_2 (3).png" width="43px" height="40px" />
+							<span>想去</span>
+						</li>
+						<li><img src="../../../assets/images/qiongyou/go_2 (2).png" />
+							<span>去过</span>
+						</li>
+						<li><img src="../../../assets/images/qiongyou/go_2 (1).png" />
+							<span>生活过</span>
+						</li>
+					</ul>
+					<h3 class="plcShareExpTitle">国家经验</h3>
+					<el-carousel height="100px" indicator-position="none" arrow="hover">
+						<el-carousel-item v-for="(item,index) in item.plcFocusOperates" :key="index">
+							{{item.plcFOcontent}}
+						</el-carousel-item>
+					</el-carousel>
+					<p align="right">
+						<router-link to="" style="color: #0073b6;">
+							+ 分享我的国家经验
+						</router-link>
+					</p>
+					<p class="plcQYGuideTitle">穷游锦囊</p>
+					<br />
+					<ul class="plcQYGuideContent">
+						<li style="position: absolute; left: 0px;">
+							<p class="cover">
+								<router-link to="" title="item.pictitle">
+									<img :src="item.picimg" width="60" height="90" alt="">
+								</router-link to="">
+							</p>
+
+							<p class="title fontYaHei">
+								<router-link to="">
+									{{item.pictitle}}
+								</router-link to="">
+							</p>
+							<p class="info">
+								<span class="author">作者：{{item.piczuozhe}}</span>
+								<span>下载次数：{{item.piccishu}}</span>
+							</p>
+							<p class="download">
+								<router-link to="" class="ui_buttonA">
+									免费下载
+								</router-link>
+							</p>
+						</li>
+					</ul>
 				</div>
 			</div><!-- plcFirstModuleWrap -->
 		</div><!-- plcFirstModule -->
@@ -451,7 +451,8 @@
 
 									<li>
 										<span class="icon insurance"></span>
-										<router-link to='/' style="color: #222222;"> <!-- :to="{name:"/",params: { Country_baoxianid: item.Country_baoxianid }}" -->
+										<router-link to='/' style="color: #222222;">
+											<!-- :to="{name:"/",params: { Country_baoxianid: item.Country_baoxianid }}" -->
 											出境保险
 										</router-link>
 										<span class="tag">
@@ -475,7 +476,7 @@
 						<!--国家页穷游折扣优选 特价机票-->
 						<li class="fsBox">
 							<h3 class="fsTitle">
-								<router-link to=''  class="normalText fontYaHei">
+								<router-link to='' class="normalText fontYaHei">
 									特价机票
 								</router-link>
 							</h3>
@@ -484,14 +485,14 @@
 									<span class="fontYaHei">低价机票</span>
 								</h4>
 								<ul class="fsListBox_1">
-									<li class="itemNormal"  v-for="(item,index) in item.gofly" :key="index">
+									<li class="itemNormal" v-for="(item,index) in item.gofly" :key="index">
 										<router-link to="" class="fsListType2">
 											<div class="fsTitle1">
 												<span class="tag" style="color: #5cad77;">
 													最热销
 												</span>
 												<span class="text fontYaHei">
-											{{item.goflytxt}}
+													{{item.goflytxt}}
 												</span>
 											</div>
 											<div class="fsInfo1">
@@ -508,8 +509,9 @@
 										</router-link>
 									</li>
 								</ul>
-								
-								<router-link to="" class="fsAdvertise"><!-- {name:"/",params: { goflyid: item.goflyid }} -->
+
+								<router-link to="" class="fsAdvertise">
+									<!-- {name:"/",params: { goflyid: item.goflyid }} -->
 									<img :src="item.goflyimg" alt="item.goflytxt}}">
 								</router-link>
 							</div>
@@ -518,7 +520,7 @@
 						<!--国家页穷游折扣优选自由行必备-->
 						<li class="fsBox">
 							<h3 class="fsTitle">
-								<router-link to=""  class="normalText fontYaHei">
+								<router-link to="" class="normalText fontYaHei">
 									自由行必备
 								</router-link>
 							</h3>
@@ -536,7 +538,7 @@
 											<div class="fsTitle1 fontYaHei">
 												{{item.goziyouxingtxt}}
 											</div>
-											
+
 											<div class="fsInfo1">
 												<span class="discount fontYaHei">
 													<em>
@@ -549,7 +551,7 @@
 											</div>
 										</router-link>
 									</li>
-								
+
 								</ul>
 							</div>
 						</li>
@@ -557,10 +559,10 @@
 					</ul>
 				</div>
 				<p class="plcHotCityAll">
-            <router-link to="" class="bigBtnViewAll fontYaHei">
-                查看更多日本穷游优选
-            </router-link>
-        </p>
+					<router-link to="" class="bigBtnViewAll fontYaHei">
+						查看更多日本穷游优选
+					</router-link>
+				</p>
 			</div>
 		</div>
 	</el-col>
@@ -580,8 +582,8 @@
 				weijing: [],
 				tjluxianbase: [],
 				tjcontent: [],
-				go:[],
-				plcFocusOperate:[],
+				go: [],
+				plcFocusOperate: [],
 				base_indexz: 0,
 				ruleForm: {
 					countryname: '',
@@ -660,14 +662,14 @@
 					console.log(error);
 				})
 			},
-			buildgo(){
+			buildgo() {
 				this.axios.get('/api/buildgo').then(res => { //+this.id
 					this.go = res.data.data
 				}).catch(function(error) {
 					console.log(error);
 				})
 			},
-			buildplcFocusOperate(){
+			buildplcFocusOperate() {
 				this.axios.get('/api/buildplcFocusOperate').then(res => { //+this.id
 					this.plcFocusOperate = res.data.data
 				}).catch(function(error) {
@@ -712,61 +714,72 @@
 
 <style lang="scss">
 	.plcFocusOperate {
-	position: relative;
-    margin: 0 19px 0 20px;
-    border-top: 1px solid #f5f5f5;
-	.plcShareExpTitle {
-    padding: 5px 0 2px;
-    font-size: 14px;
-    line-height: 34px;
-    color: #959595;
-}
-.plcQYGuideContent {
-    position: relative;
-    width: 100%;
-    height: 98px;
-    overflow: hidden;
-	 li {
-    float: left;
-    width: 172px;
-    height: 100%;
-    padding-left: 88px;
-	.cover {
-    float: left;
-    margin-left: -88px;
-}
- .title {
-    font-size: 16px;
-    line-height: 1.125;
-	 a {
-    color: #323232;
-}
-}
- .info {
-    margin-top: 10px;
-    color: #636363;
-	.author {
-    color: #636363;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-}
+		position: relative;
+		margin: 0 19px 0 20px;
+		border-top: 1px solid #f5f5f5;
 
-}
-}
-}
-.plcQYGuideContent .info>span {
-    display: block;
-}
-.plcQYGuideContent .download {
-    margin-top: 6px;
-}
-.plcQYGuideContent .download a {
-    width: 100%;
-    padding: 0;
-	 background-color: #1995dd;
-}
+		.plcShareExpTitle {
+			padding: 5px 0 2px;
+			font-size: 14px;
+			line-height: 34px;
+			color: #959595;
+		}
+
+		.plcQYGuideContent {
+			position: relative;
+			width: 100%;
+			height: 98px;
+			overflow: hidden;
+
+			li {
+				float: left;
+				width: 172px;
+				height: 100%;
+				padding-left: 88px;
+
+				.cover {
+					float: left;
+					margin-left: -88px;
+				}
+
+				.title {
+					font-size: 16px;
+					line-height: 1.125;
+
+					a {
+						color: #323232;
+					}
+				}
+
+				.info {
+					margin-top: 10px;
+					color: #636363;
+
+					.author {
+						color: #636363;
+						overflow: hidden;
+						white-space: nowrap;
+						text-overflow: ellipsis;
+					}
+				}
+
+			}
+		}
+	}
+
+	.plcQYGuideContent .info>span {
+		display: block;
+	}
+
+	.plcQYGuideContent .download {
+		margin-top: 6px;
+	}
+
+	.plcQYGuideContent .download a {
+		width: 100%;
+		padding: 0;
+		background-color: #1995dd;
+	}
 
 	.gobg {
 		border-top: 1px solid #ececec;
@@ -788,344 +801,405 @@
 				color: #636363;
 				margin-bottom: 20px
 			}
-.flightServiceV2-wrap {
-    overflow: hidden;
-    height: 370px;
-    width: 980px;
-    position: relative;
-	.flightServiceV2-ul {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 1010px;
-    height: 370px;
-}
-}
+
+			.flightServiceV2-wrap {
+				overflow: hidden;
+				height: 370px;
+				width: 980px;
+				position: relative;
+
+				.flightServiceV2-ul {
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 1010px;
+					height: 370px;
+				}
+			}
 		}
 	}
-.flightServiceV2-ul li.fs-prepare {
-    border: none;
-}
-.flightServiceV2-ul .fsBox {
-    background-color: #fff;
-    float: left;
-    width: 308px;
-    height: 368px;
-    margin-right: 25px;
-    border: solid 1px #ececec;
-	list-style: none;
-    position: relative;
-}
-.flightServiceV2-ul .fs-prepare .fsTitle {
-    border: 1px solid #ececec;
-}
-.flightServiceV2 .fsTitle {
-    height: 40px;
-    position: relative;
-    border-bottom: solid 1px #ececec;
-}
-.flightServiceV2 .fsTitle .normalText, .flightServiceV2 .fsTitle .hoverText {
-    display: block;
-    height: 40px;
-    line-height: 40px;
-    text-indent: 19px;
-    color: #636363;
-    background-color: #f5f5f5;
-    text-decoration: none;
-    font-size: 20px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-.flightServiceV2 .listBox:last-child {
-    background-color: #fff;
-}
-.flightServiceV2-ul .fs-prepare .list {
-    border: 1px solid #ececec;
-    border-top: none;
-}
-.flightServiceV2 .listBox .list {
-    background-color: #fff;
-    border-bottom: 1px solid #ececec;
-}
-.listBox .list {
-    padding: 0 20px;
-}
-.flightServiceV2 .listBox .list li {
-    height: 63px;
-    line-height: 64px;
-	list-style: none;
-}
-.listBox li {
-    height: 50px;
-    line-height: 50px;
-    border-bottom: 1px solid #ececec;
-    position: relative;
-}
-.listBox .visa {
-    background-position: -40px -51px;
-}
-.listBox .icon {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    background-image: url(//common2.qyerstatic.com/place/project/images/hotel/icon_hotel.png);
-    background-repeat: no-repeat;
-}
-.flightServiceV2 .listBox .tag {
-    border: none;
-}
-.listBox .tag {
-    color: silver;
-    font-size: 14px;
-    font-family: Hiragino Sans GB,Microsoft YaHei,\9ED1\4F53,\5b8b\4f53,sans-serif;
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-.listBox .insurance {
-    background-position: -83px -55px;
-    position: relative;
-    top: 1px;
-}
-.listBox .wifi {
-    background-position: -125px -50px;
-}
-.flightServiceV2 .fsList {
-    padding: 19px 19px 0 19px;
-}
-.flightServiceV2 .fsList2 .fsTitle2 {
-    margin: 0 0 5px;
-}
-.flightServiceV2 .fsList .fsTitle2 {
-    color: #959595;
-    font-size: 16px;
-    position: relative;
-    height: 18px;
-    line-height: 18px;
-}
-.flightServiceV2 .fsList .fsTitle2 {
-    color: #959595;
-    font-size: 16px;
-    position: relative;
-    height: 18px;
-    line-height: 18px;
-}
-.flightServiceV2 .fsList2 .itemNormal:last-child {
-    border-bottom: solid 1px #ececec;
-}
-.flightServiceV2 .itemNormal:last-child {
-    border: none;
-}
-.flightServiceV2 .fsListBox_1 .itemNormal {
-    margin-bottom: 16px;
-	list-style: none;
-}
-.flightServiceV2 .fsList2 .fsListType2 {
-    height: 42px;
-    padding-bottom: 35px;
-}
-.flightServiceV2 .fsListType2 {
-    display: block;
-    padding-bottom: 16px;
-    text-decoration: none;
-    overflow: hidden;
-}
-.flightServiceV2 .fsList2 .fsListType2 .fsTitle1 {
-    height: 43px;
-}
-.flightServiceV2 .fsListType2 .fsTitle1 {
-    height: 50px;
-}
-.flightServiceV2 .fsTitle1 {
-    height: 18px;
-    line-height: 18px;
-    overflow: hidden;
-	
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    color: #323232;
-    font-size: 14px;
-}
-.flightServiceV2 .fsList .tag {
-    display: inline-block;
-    padding: 0 6px;
-    border: solid 1px #5cad77;
-    height: 16px;
-    border-radius: 2px;
-  
-    margin-right: 4px;
-    font-size: 12px;
-    font-weight: normal;
-}
-.flightServiceV2 .fsListType2 .fsTitle1 .text {
-    height: auto;
-    white-space: normal;
-    line-height: 24px;
-}
-.flightServiceV2 .fsListType2 .fsInfo1 {
-    margin: 5px 0 0 0;
-}
-.flightServiceV2 .fsInfo1 {
-    height: 20px;
-    line-height: 20px;
-    position: relative;
-    margin: 14px 0 0 0;
-}
-.flightServiceV2 .fsInfo1 .discount {
-    float: left;
-    font-size: 14px;
-    color: #959595;
-}
-.flightServiceV2 .fsInfo1 .discount em {
-    font-size: 16px;
-    color: #ff7466;
-}
-.flightServiceV2 .price {
-    position: absolute;
-    right: 0;
-    top: 0px;
-    font-size: 12px;
-    color: #959595;
-}
-.flightServiceV2 .price em {
-    font-size: 18px;
-    color: #ff7466;
-    padding-right: 5px;
-    font-family: "HelveticaNeue-Light","Helvetica","Avenir-light","Avenir Next","Arial";
-}
-.flightServiceV2 .fsAdvertise {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 90px;
-    text-align: center;
-    overflow: hidden;
- img {
-    width: 308px;
-    height: 90px;
-}
-}
-.flightServiceV2 .fsList {
-    padding: 19px 19px 0 19px;
-}
-.flightServiceV2 .fsListBox_4 .itemNormal {
-    margin: 0 0 19px;
-    padding: 2px 0 0;
-	list-style: none;
-}
-.flightServiceV2 .itemNormal {
-    padding: 0;
-    border-bottom: solid 1px #ececec;
-}
-.flightServiceV2 .fsListBox_4 .fsListType1 {
-    height: 141px;
-	list-style: none;
-}
-.flightServiceV2 .fsListType1 {
-    display: block;
-    height: 85px;
-    text-decoration: none;
-    overflow: hidden;
-}
-.flightServiceV2 .fsListBox_4 .fsCover1 {
-    float: left;
-    width: 120px;
-    height: 120px;
-    margin-right: 10px;
-}
-.flightServiceV2 .fsCover1 {
-    height: 125px;
-    position: relative;
-    overflow: hidden;
 
-}
-.flightServiceV2 .fsListBox_4 .fsCover1 img {
-    height: 120px;
-}
-.flightServiceV2 .fsCover1 img {
-    width: 100%;
-    text-align: center;
-}
-.flightServiceV2 .fsCover1 .tag {
-    position: absolute;
-    left: 5px;
-    bottom: 5px;
-    background-color: rgba(61,176,65,0.75);
-    border: none;
-    color: #fff;
-    height: 18px;
-    line-height: 20px;
-    border-radius: 2px;
-}
-.flightServiceV2 .fsList .tag {
-    display: inline-block;
-    padding: 0 6px;
-    border: solid 1px #5cad77;
-    height: 16px;
-    border-radius: 2px;
-   
-    margin-right: 4px;
-    font-size: 12px;
-    font-weight: normal;
-}
-.flightServiceV2 .fsListBox_4 .fsTitle1 {
-    margin: 0;
-    color: #323232;
-    font-size: 14px;
-    white-space: normal;
-    height: 83px;
-}
+	.flightServiceV2-ul li.fs-prepare {
+		border: none;
+	}
 
-.flightServiceV2 .fsTitle1 {
-    height: 18px;
-    line-height: 18px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    color: #323232;
-    font-size: 14px;
-}
-.flightServiceV2 .fsListBox_4 .selled {
-    color: #959595;
-    font-family: "HelveticaNeue-Light","Helvetica","Avenir-light","Avenir Next","Arial";
-    height: 14px;
-    line-height: 12px;
-    margin-bottom: 5px;
-}
-.flightServiceV2 .fsListBox_4 .fsInfo1 {
-    margin: 7px 0 0 0;
-}
-.flightServiceV2 .fsInfo1 {
-    height: 20px;
-    line-height: 20px;
-    position: relative;
-    margin: 14px 0 0 0;
-}
-.flightServiceV2 .fsInfo1 .discount {
-    float: left;
-    font-size: 14px;
-    color: #959595;
-}
-.flightServiceV2 .fsInfo1 .discount em {
-    font-size: 16px;
-    color: #ff7466;
-}
-.flightServiceV2 .price {
-    position: absolute;
-    right: 0;
-    top: 0px;
-    font-size: 12px;
-    color: #959595;
-}
-.flightServiceV2 .price em {
-    font-size: 18px;
-    color: #ff7466;
-    padding-right: 5px;
-    font-family: "HelveticaNeue-Light","Helvetica","Avenir-light","Avenir Next","Arial";
-}
+	.flightServiceV2-ul .fsBox {
+		background-color: #fff;
+		float: left;
+		width: 308px;
+		height: 368px;
+		margin-right: 25px;
+		border: solid 1px #ececec;
+		list-style: none;
+		position: relative;
+	}
+
+	.flightServiceV2-ul .fs-prepare .fsTitle {
+		border: 1px solid #ececec;
+	}
+
+	.flightServiceV2 .fsTitle {
+		height: 40px;
+		position: relative;
+		border-bottom: solid 1px #ececec;
+	}
+
+	.flightServiceV2 .fsTitle .normalText,
+	.flightServiceV2 .fsTitle .hoverText {
+		display: block;
+		height: 40px;
+		line-height: 40px;
+		text-indent: 19px;
+		color: #636363;
+		background-color: #f5f5f5;
+		text-decoration: none;
+		font-size: 20px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.flightServiceV2 .listBox:last-child {
+		background-color: #fff;
+	}
+
+	.flightServiceV2-ul .fs-prepare .list {
+		border: 1px solid #ececec;
+		border-top: none;
+	}
+
+	.flightServiceV2 .listBox .list {
+		background-color: #fff;
+		border-bottom: 1px solid #ececec;
+	}
+
+	.listBox .list {
+		padding: 0 20px;
+	}
+
+	.flightServiceV2 .listBox .list li {
+		height: 63px;
+		line-height: 64px;
+		list-style: none;
+	}
+
+	.listBox li {
+		height: 50px;
+		line-height: 50px;
+		border-bottom: 1px solid #ececec;
+		position: relative;
+	}
+
+	.listBox .visa {
+		background-position: -40px -51px;
+	}
+
+	.listBox .icon {
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		background-image: url(//common2.qyerstatic.com/place/project/images/hotel/icon_hotel.png);
+		background-repeat: no-repeat;
+	}
+
+	.flightServiceV2 .listBox .tag {
+		border: none;
+	}
+
+	.listBox .tag {
+		color: silver;
+		font-size: 14px;
+		font-family: Hiragino Sans GB, Microsoft YaHei, \9ED1\4F53, \5b8b\4f53, sans-serif;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	.listBox .insurance {
+		background-position: -83px -55px;
+		position: relative;
+		top: 1px;
+	}
+
+	.listBox .wifi {
+		background-position: -125px -50px;
+	}
+
+	.flightServiceV2 .fsList {
+		padding: 19px 19px 0 19px;
+	}
+
+	.flightServiceV2 .fsList2 .fsTitle2 {
+		margin: 0 0 5px;
+	}
+
+	.flightServiceV2 .fsList .fsTitle2 {
+		color: #959595;
+		font-size: 16px;
+		position: relative;
+		height: 18px;
+		line-height: 18px;
+	}
+
+	.flightServiceV2 .fsList .fsTitle2 {
+		color: #959595;
+		font-size: 16px;
+		position: relative;
+		height: 18px;
+		line-height: 18px;
+	}
+
+	.flightServiceV2 .fsList2 .itemNormal:last-child {
+		border-bottom: solid 1px #ececec;
+	}
+
+	.flightServiceV2 .itemNormal:last-child {
+		border: none;
+	}
+
+	.flightServiceV2 .fsListBox_1 .itemNormal {
+		margin-bottom: 16px;
+		list-style: none;
+	}
+
+	.flightServiceV2 .fsList2 .fsListType2 {
+		height: 42px;
+		padding-bottom: 35px;
+	}
+
+	.flightServiceV2 .fsListType2 {
+		display: block;
+		padding-bottom: 16px;
+		text-decoration: none;
+		overflow: hidden;
+	}
+
+	.flightServiceV2 .fsList2 .fsListType2 .fsTitle1 {
+		height: 43px;
+	}
+
+	.flightServiceV2 .fsListType2 .fsTitle1 {
+		height: 50px;
+	}
+
+	.flightServiceV2 .fsTitle1 {
+		height: 18px;
+		line-height: 18px;
+		overflow: hidden;
+
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		color: #323232;
+		font-size: 14px;
+	}
+
+	.flightServiceV2 .fsList .tag {
+		display: inline-block;
+		padding: 0 6px;
+		border: solid 1px #5cad77;
+		height: 16px;
+		border-radius: 2px;
+
+		margin-right: 4px;
+		font-size: 12px;
+		font-weight: normal;
+	}
+
+	.flightServiceV2 .fsListType2 .fsTitle1 .text {
+		height: auto;
+		white-space: normal;
+		line-height: 24px;
+	}
+
+	.flightServiceV2 .fsListType2 .fsInfo1 {
+		margin: 5px 0 0 0;
+	}
+
+	.flightServiceV2 .fsInfo1 {
+		height: 20px;
+		line-height: 20px;
+		position: relative;
+		margin: 14px 0 0 0;
+	}
+
+	.flightServiceV2 .fsInfo1 .discount {
+		float: left;
+		font-size: 14px;
+		color: #959595;
+	}
+
+	.flightServiceV2 .fsInfo1 .discount em {
+		font-size: 16px;
+		color: #ff7466;
+	}
+
+	.flightServiceV2 .price {
+		position: absolute;
+		right: 0;
+		top: 0px;
+		font-size: 12px;
+		color: #959595;
+	}
+
+	.flightServiceV2 .price em {
+		font-size: 18px;
+		color: #ff7466;
+		padding-right: 5px;
+		font-family: "HelveticaNeue-Light", "Helvetica", "Avenir-light", "Avenir Next", "Arial";
+	}
+
+	.flightServiceV2 .fsAdvertise {
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 90px;
+		text-align: center;
+		overflow: hidden;
+
+		img {
+			width: 308px;
+			height: 90px;
+		}
+	}
+
+	.flightServiceV2 .fsList {
+		padding: 19px 19px 0 19px;
+	}
+
+	.flightServiceV2 .fsListBox_4 .itemNormal {
+		margin: 0 0 19px;
+		padding: 2px 0 0;
+		list-style: none;
+	}
+
+	.flightServiceV2 .itemNormal {
+		padding: 0;
+		border-bottom: solid 1px #ececec;
+	}
+
+	.flightServiceV2 .fsListBox_4 .fsListType1 {
+		height: 141px;
+		list-style: none;
+	}
+
+	.flightServiceV2 .fsListType1 {
+		display: block;
+		height: 85px;
+		text-decoration: none;
+		overflow: hidden;
+	}
+
+	.flightServiceV2 .fsListBox_4 .fsCover1 {
+		float: left;
+		width: 120px;
+		height: 120px;
+		margin-right: 10px;
+	}
+
+	.flightServiceV2 .fsCover1 {
+		height: 125px;
+		position: relative;
+		overflow: hidden;
+
+	}
+
+	.flightServiceV2 .fsListBox_4 .fsCover1 img {
+		height: 120px;
+	}
+
+	.flightServiceV2 .fsCover1 img {
+		width: 100%;
+		text-align: center;
+	}
+
+	.flightServiceV2 .fsCover1 .tag {
+		position: absolute;
+		left: 5px;
+		bottom: 5px;
+		background-color: rgba(61, 176, 65, 0.75);
+		border: none;
+		color: #fff;
+		height: 18px;
+		line-height: 20px;
+		border-radius: 2px;
+	}
+
+	.flightServiceV2 .fsList .tag {
+		display: inline-block;
+		padding: 0 6px;
+		border: solid 1px #5cad77;
+		height: 16px;
+		border-radius: 2px;
+
+		margin-right: 4px;
+		font-size: 12px;
+		font-weight: normal;
+	}
+
+	.flightServiceV2 .fsListBox_4 .fsTitle1 {
+		margin: 0;
+		color: #323232;
+		font-size: 14px;
+		white-space: normal;
+		height: 83px;
+	}
+
+	.flightServiceV2 .fsTitle1 {
+		height: 18px;
+		line-height: 18px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		color: #323232;
+		font-size: 14px;
+	}
+
+	.flightServiceV2 .fsListBox_4 .selled {
+		color: #959595;
+		font-family: "HelveticaNeue-Light", "Helvetica", "Avenir-light", "Avenir Next", "Arial";
+		height: 14px;
+		line-height: 12px;
+		margin-bottom: 5px;
+	}
+
+	.flightServiceV2 .fsListBox_4 .fsInfo1 {
+		margin: 7px 0 0 0;
+	}
+
+	.flightServiceV2 .fsInfo1 {
+		height: 20px;
+		line-height: 20px;
+		position: relative;
+		margin: 14px 0 0 0;
+	}
+
+	.flightServiceV2 .fsInfo1 .discount {
+		float: left;
+		font-size: 14px;
+		color: #959595;
+	}
+
+	.flightServiceV2 .fsInfo1 .discount em {
+		font-size: 16px;
+		color: #ff7466;
+	}
+
+	.flightServiceV2 .price {
+		position: absolute;
+		right: 0;
+		top: 0px;
+		font-size: 12px;
+		color: #959595;
+	}
+
+	.flightServiceV2 .price em {
+		font-size: 18px;
+		color: #ff7466;
+		padding-right: 5px;
+		font-family: "HelveticaNeue-Light", "Helvetica", "Avenir-light", "Avenir Next", "Arial";
+	}
 
 	.tjluxian .tjcontent.active {
 		display: block;
@@ -1695,32 +1769,37 @@
 			}
 
 		}
-		
-		.place-userbehavior{
-			height: 84px;
-    display: table;
-    width: 100%;
-    box-sizing: border-box;
+
+		.place-userbehavior {
+			height: 70px;
+			margin-top: 5px;
+			display: table;
+			width: 100%;
+			box-sizing: border-box;
 		}
 	}
-.plcFocusOperate {
-    float: right;
-    width: 260px;
-    height: 398px;
-    border: 1px solid #ececec;
-    border-left: none;
-}
-.place-userbehavior > li {
-    cursor: pointer;
-    display: table-cell;
-    position: relative;
-    text-align: center;
-    height: 84px;
-    z-index: 1;
-	span{
-		display: block;
+
+	.plcFocusOperate {
+		float: right;
+		width: 260px;
+		height: 398px;
+
+		border-left: none;
 	}
-}
+
+	.place-userbehavior>li {
+		cursor: pointer;
+		display: table-cell;
+		position: relative;
+		text-align: center;
+		height: 70px;
+		margin-top: 10px;
+		z-index: 1;
+
+		span {
+			display: block;
+		}
+	}
 
 	// 热门城市
 	.hotcitybg {
