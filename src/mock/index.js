@@ -5837,6 +5837,287 @@ const buildmguide = Mock.mock(
 			message: '查询成功'
 		}
 	})
+	const buildsearch_chose = Mock.mock(
+		'/api/buildsearch_chose', 'get', (req, res) => {
+			return {
+				code: 200,
+				data: [
+					{
+						search_chosename:"全部",
+						search_chosenumber:'2536'
+					},
+					{
+						search_chosename:"五星",
+						search_chosenumber:'286'
+					},
+					{
+						search_chosename:"四星",
+						search_chosenumber:'236'
+					},
+					{
+						search_chosename:"三星",
+						search_chosenumber:'896'
+					},
+					{
+						search_chosename:"二星",
+						search_chosenumber:'786'
+					},
+					{
+						search_chosename:"一星",
+						search_chosenumber:'586'
+					}
+				],
+				message: '查询成功'
+			}
+		})
+		const buildLandscape = Mock.mock(
+			'/api/buildLandscape', 'get', (req, res) => {
+				return {
+					code: 200,
+					data: [
+						{
+							country:"日本",
+							Landscapecity:[
+								{
+									cityid:1,
+									Landscapecityname:"东京"
+								},
+								{
+									cityid:2,
+									Landscapecityname:"大阪"
+								},
+								{
+									cityid:3,
+									Landscapecityname:"名古屋"
+								},
+								{
+									cityid:4,
+									Landscapecityname:"北海道"
+								},
+								{
+									cityid:5,
+									Landscapecityname:"冲绳岛"
+								}
+							],
+							strategycity:"东京",
+							strategycitys:[
+								{
+									Strategyid:1,
+									strategycityname:"东京美食"
+								},
+								{
+									Strategyid:2,
+									strategycityname:"东京体验"
+								},
+								{
+									Strategyid:3,
+									strategycityname:"东京交通"
+								},
+								{
+									Strategyid:4,
+									strategycityname:"东京活动"
+								},
+								{
+									Strategyid:5,
+									strategycityname:"东京购物"
+								},
+								{
+									Strategyid:6,
+									strategycityname:"东京住宿"
+								}
+							],
+							Landscapec:[
+								{
+									Landscapeid:1,
+									Landscapecname:"浅草寺"
+								},
+								{
+									Landscapeid:2,
+									Landscapecname:"皇居"
+								},
+								{
+									Landscapeid:3,
+									Landscapecname:"台场"
+								},
+								{
+									Landscapeid:4,
+									Landscapecname:"东京迪士尼"
+								},
+								{
+									Landscapeid:5,
+									Landscapecname:"彩虹大桥"
+								},
+								{
+									Landscapeid:6,
+									Landscapecname:"东京塔"
+								},
+								{
+									Landscapeid:7,
+									Landscapecname:"明治神像"
+								}
+							],
+							Landname:"明治神宫",
+							jianxie:"Meiji Jingu",
+							Landscapezhongwen:"明治神宫"
+						}
+					],
+					message: '查询成功'
+				}
+			})
+			const buildLandscpaemain = Mock.mock(
+				'/api/buildLandscpaemain', 'get', (req, res) => {
+					return {
+						code: 200,
+						data: [
+							{
+								photoid:1,
+								photo:"//pics.lvjs.com.cn//uploads/pc/place2/2018-03-27/512ee636-16df-4b7b-a6ed-c5ce669d34a1_300_200.jpg",
+								photonumber:"23563",
+								Landscpaefen:'9.5',
+								Landscpaerate:"5",
+								Landscpaedianping:"5963",
+								Landscpaeming:'7',
+								Landscpaetxt:"供奉明治天皇和昭宪皇太后灵位，是日本神道教最重要的神社，有着东京都内最大的一片绿地。明治神宫由入口处耸立的日本最大的鸟居、“升”字型大参道、大殿、宝物殿构成，大殿由神社名匠大江新一郎提案建造，全部铺设除邪之用的鹅卵石。明治神宫内苑的植物根据四季更迭呈现出不同景致，但因最初的造林计划中规定不种植华丽花木，因此神宫内少有日本代表性的樱花。因昭宪皇太后生前酷爱睡莲，睡莲反而成了神宫内最为重要的植物，在9月盛开。到了秋日的银杏时节，神宫代代木入口处的银杏大道上金灿灿的，非常美丽。10月明治天皇生日大祭时会在神宫内举办各种传统艺能演出，尤以流镝马这一传承了1500年的古典祭神仪式最为特殊，有机会的话不妨前去一睹为快。",
+								Landscpaetip:"毎年的新年参拜，明治神宫都迎来日本最多的参拜客，新年祈愿也是一个很重要很有特色的仪式。有机会的话可以在新年第一天前去。",
+								Landscpaetime:"2019-5-28",
+								Landscpaeenjoy:"apple",
+								Landscpaebianji:"500",
+								Landscpaexiangce:[
+									{
+										Landscpaeimg:"//pics.lvjs.com.cn//uploads/pc/place2/2019-04-19/cabef5b4-19e6-4f4e-bd24-3bbffa55d962_300_200.jpg",
+										Landscpaename:"浅草寺",
+										Landscapeid:1,
+										Landscpaexiangcerate:"9.8"
+										
+									},
+									{
+										Landscpaeimg:"//pics.lvjs.com.cn//uploads/pc/place2/2019-03-30/f73b4e92-e3b9-4c7c-9577-067a969e856f_300_200.jpg",
+										Landscpaename:"东京塔",
+										Landscapeid:2,
+										Landscpaexiangcerate:"8.8"
+										
+									},
+									{
+										Landscpaeimg:"//pics.lvjs.com.cn//uploads/pc/place2/2019-03-27/b910bcce-93c8-48c1-9fb4-c169a49a5245_300_200.jpg",
+										Landscpaename:"台场",
+										Landscapeid:3,
+										Landscpaexiangcerate:"8.8"
+										
+									},
+									{
+										Landscpaeimg:"//pics.lvjs.com.cn//uploads/pc/place2/2019-03-24/e086b2bd-f11f-4456-aa1c-2b43a5fbf06b_300_200.jpg",
+										Landscpaename:"彩虹大桥",
+										Landscapeid:4,
+										Landscpaexiangcerate:"8.8"
+										
+									}
+								],
+								
+							}
+						],
+						message: '查询成功'
+					}
+				})
+					const buildcommentlist = Mock.mock(
+					'/api/buildcommentlist', 'get', (req, res) => {
+						return {
+							code: 200,
+							data: [
+								{
+									avterimg:"//pics.lvjs.com.cn//uploads/pc/place2/2019-02-02/81aa2dee-4372-4743-acd9-a2d5a397e5d0_300_200.jpg",
+									commentlistname:"biubiu",
+									commentlistrate:"7.8",
+									commentlisttime:"2019-5-30",
+									commentlisttxt:"今年要改元了，如果有收集朱印的朋友还是应该去一次，拿一个平成的朱印，五一的时候有明治神宫春日祭，很多表演、巫女神乐，每年都有，可以提前查好了去看，领略日本文化",
+										type:1,
+									commentlisttype:[
+										{
+									commentlistimg:"//pics.lvjs.com.cn//uploads/pc/place2/2018-03-27/512ee636-16df-4b7b-a6ed-c5ce669d34a1_300_200.jpg"
+										}
+									],
+									commentlisthuifu:'1452',
+									commentlistyouyong:"369"
+								
+									
+									
+								},
+								{
+									avterimg:"//pics.lvjs.com.cn//uploads/pc/place2/2018-10-19/a80e98d1-b3ef-4a1c-8b5c-bce73e910a52_300_200.jpg",
+									commentlistname:"love",
+									commentlistrate:"9.5",
+									commentlisttime:"2019-6-30",
+									commentlisttxt:"在临走前的最后一早上打卡了东京的绿地~ 和小卉卉一起。快步走汗基本已经出透，清新自然，虔诚地许下愿望，是非常值得去的地方。",
+										type:1,
+									commentlisttype:[
+										{
+									commentlistimg:"//pics.lvjs.com.cn//uploads/pc/place2/2018-03-27/512ee636-16df-4b7b-a6ed-c5ce669d34a1_300_200.jpg"
+										}
+									],
+									commentlisthuifu:'1452',
+									commentlistyouyong:"369"
+								
+									
+									
+								}
+							],
+							message: '查询成功'
+						}
+					})
+					const buildcomwenda = Mock.mock(
+					'/api/buildcomwenda', 'get', (req, res) => {
+						return {
+							code: 200,
+							data: [
+								{
+									comwendatitle:"东京二日游，住在新宿华盛顿酒店，想去银座、皇居、明治神宫、浅草寺等景点",
+									comwendahuida:'4'
+								},
+								{
+									comwendatitle:"住在东京茅场町附近，有三天，想去浅草寺，上野公园，秋叶原，东京塔，皇居，银座，明治神宫，原宿，涉谷，新宿。怎样安排比较妥当",
+									comwendahuida:'8'
+								},
+								{
+									comwendatitle:"皇居和明治神宫那个好玩更值得去",
+									comwendahuida:'3'
+								},
+								
+							],
+							message: '查询成功'
+						}
+					})
+						const buildzlist = Mock.mock(
+					'/api/buildzlist', 'get', (req, res) => {
+						return {
+							code: 200,
+							data: [
+								{
+									zlistimg:"//pics.lvjs.com.cn//uploads/pc/place2/2018-05-07/e38aab64-6cfa-42d8-b27f-8088c8b807dd_300_200.jpg",
+									zlistname:"东京塔",
+									zlistprice:"150",
+									zlistposition:1.3
+								},
+								{
+									zlistimg:"//pics.lvjs.com.cn//uploads/pc/place2/2017-11-08/638142c1-fd69-4755-8ff5-112c2fed229c_300_200.jpg",
+									zlistname:"浅草寺",
+									zlistprice:"90",
+									zlistposition:2.3
+								},
+								{
+									zlistimg:"//pics.lvjs.com.cn//uploads/pc/place2/2016-08-19/47b1c9c6-2877-4c48-9a46-1f2ce0f102b6_300_200.jpg",
+									zlistname:"彩虹桥",
+									zlistprice:"140",
+									zlistposition:0.3
+								},
+								{
+									zlistimg:"//pics.lvjs.com.cn//uploads/pc/place2/2017-12-04/4acbc8c5-d93f-4b86-9c4c-f827b4590c42_300_200.jpg",
+									zlistname:"台场",
+									zlistprice:"170",
+									zlistposition:1.34
+								}
+							],
+							message: '查询成功'
+						}
+					})
 export default {
 	buildwebswiper,
 	buildpopoverdiv,
@@ -5878,5 +6159,10 @@ export default {
 	buildgo,
 	buildplcFocusOperate,
 	buildplcCitylist,
-	buildmguide
+	buildmguide,
+	buildsearch_chose,
+	buildLandscape,
+	buildLandscpaemain,
+	buildcommentlist,
+	buildcomwenda
 }

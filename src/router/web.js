@@ -55,11 +55,18 @@ export default new Router({
 		// 		require(['../pages/web/Destination/Destination_mguide'], resolve)
 		// 	}
 		// },
+		// {
+		// 	path: '/',
+		// 	name: 'Destination_Landscape_introduction',//:id
+		// 	component(resolve) {
+		// 		require(['../pages/web/Destination/Destination_Landscape_introduction'], resolve)
+		// 	}
+		// },
 		{
 			path: '/',
-			name: 'Destination_Landscape_introduction',//:id
+			name: 'Destination_Continent',//:id
 			component(resolve) {
-				require(['../pages/web/Destination/Destination_Landscape_introduction'], resolve)
+				require(['../pages/web/Destination/Destination_Continent'], resolve)
 			}
 		},
 	],
