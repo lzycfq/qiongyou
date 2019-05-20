@@ -62,11 +62,18 @@ export default new Router({
 		// 		require(['../pages/web/Destination/Destination_Landscape_introduction'], resolve)
 		// 	}
 		// },
-		{
+		// {
+		// 	path: '/',
+		// 	name: 'Destination_Continent',//:id
+		// 	component(resolve) {
+		// 		require(['../pages/web/Destination/Destination_Continent'], resolve)
+		// 	}
+		// },
+			{
 			path: '/',
-			name: 'Destination_Continent',//:id
+			name: 'Thread',//:id
 			component(resolve) {
-				require(['../pages/web/Destination/Destination_Continent'], resolve)
+				require(['../pages/web/Thread/Thread'], resolve)
 			}
 		},
 	],
