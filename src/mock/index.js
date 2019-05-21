@@ -6890,6 +6890,45 @@ const buildthreadbanner = Mock.mock(
 				message: '查询成功'
 			}
 		})
+		const buildcon = Mock.mock(
+			'/api/buildcon', 'get', (req, res) => {
+				return {
+					code: 200,
+					data: [
+						{
+							conavter:"//pics.lvjs.com.cn/pics//uploads/pc/place2/2019-05-20/a8f9e58e-6637-4eac-956b-19a13c00ffbe_300_200.jpg",
+							conname:"biu biu",
+							condiqu:"日本",
+							condianzan:'4856',
+							conhour:'3小时',
+							condsc:'迪士尼乐园门票是不便宜！但是人家不但绿化很漂亮！那些演出比如：杰克船长风暴来临好看也很幽默！加勒比海盗沉落宝臧画面很壮丽！人猿泰山的表演是杂技表演！我不由自主的给了好多',
+							contxt:'迪士尼朋友化身成可爱的彩蛋藏在花海中，迎接春天的到来。圆滚滚的造型、缤纷靓丽的色彩加上调皮有趣的表情，给游客带来焕然一新和青春洋溢的欢乐气息。',
+						    conpic:"http://pic.lvmama.com//uploads/pc/place2/2019-03-01/2366a456-4121-4f54-b06c-8f63e960db53_480_320.jpg"
+						},
+						{
+							conavter:"//pics.lvjs.com.cn/pics//uploads/pc/place2/2017-12-29/21415a82-3831-4983-b26c-62f16ff857ee_300_200.jpg",
+							conname:"biu love",
+							condiqu:"泰国",
+							condianzan:'8966',
+							conhour:'1小时',
+							condsc:'吉祥航空787梦幻宽体客机，往返直飞，给您舒适体验,升级住宿4+峡湾特色酒店全程含餐！5菜一汤+特别安排峡湾特色餐+北欧肉丸餐双峡湾+岩石教堂斯德市政厅入内+皇后岛+菲耶巴卡赫尔辛基半天自由活动',
+							contxt:'哈当厄尔峡湾游船：乘船遨游峡湾，两岸奇峰怪石、农田果树令人心神荡漾，忘却尘嚣；沃尔令斯大瀑布：挪威很火瀑布，水幕层层叠叠，声势浩大图尔库：芬兰的古老城市，漫步其中，感受中世纪情怀。',
+						    conpic:"http://pic.lvmama.com/uploads/pc/place2/2017-12-29/796fbe4f-d4ec-4c4b-9f60-80cae821a3eb_480_320.jpg"
+						},
+						{
+							conavter:"http://pic.lvmama.com/uploads/pc/place2/2017-12-29/d18e46d7-219d-4856-bcbc-3c81562fcbb9_480_320.jpg",
+							conname:"肥四 biu",
+							condiqu:"迪拜",
+							condianzan:'356',
+							conhour:'5小时',
+							condsc:'皇后岛：瑞典世界文化遗产，素有“瑞典的凡尔赛”之称；维纳恩湖：带着宁静质朴、不加修饰的美；菲耶巴卡小镇：世界十大优美渔村之一，依山傍海的度假胜地；',
+							contxt:'维格朗雕塑主题公园：由生命之桥、生命之源、生命之柱、生命之环组成了雕塑之城；阿克胡斯城堡：中世纪具有代表性的建筑之一，可俯瞰市政厅和奥斯陆市中心的全貌；',
+						    conpic:"http://pic.lvmama.com/uploads/pc/place2/2014-12-10/750f86e6-8eb3-4d3e-8f14-5410a8d92eb3_480_320.jpg"
+						}
+					],
+					message: '查询成功'
+				}
+			})
 export default {
 	buildwebswiper,
 	buildpopoverdiv,

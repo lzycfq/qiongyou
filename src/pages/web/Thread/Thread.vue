@@ -139,13 +139,29 @@
 			<div class="thread_questionlist">
 				<el-tabs style="height: auto;">
 					<el-tab-pane label="游记策略">
-						<div style="height: 300px;">
-							<el-steps direction="vertical">
-								<el-step title="步骤 1" icon="el-icon-edit"></el-step>
-								<el-step title="步骤 2" icon="el-icon-upload"></el-step>
-								<el-step title="步骤 3" icon="el-icon-picture"></el-step>
-							</el-steps>
+						<div class="yl-con" v-for="(item,index) in con" :key='index'>
+							<i class="ylc-line ylcl"></i>
+							<div class="con-inner xfix">
+								<router-link to="" class="anchtoup">
+								<img class="con-pic" :src="item.conavter"></router-link>
+								<dl class="con-detail">
+									<dt class="dl-title">
+										<router-link to="" class="dl-name xc32 aptle">{{item.conname}}</router-link>
+										<img src="//common1.qyerstatic.com/bbs/old/images/index/at_member.png" class="indexauthen"></dt>
+									<dd class="dl-des">
+									<span class="dd-inw">在<strong><router-link to="">{{item.condiqu}}</router-link></strong>发布的游记<i
+											 class="bicf praise"></i><em class="xnum xc32">{{item.condianzan}}</em>人赞</span><span class="con-time"><i class="inbg zhhf"></i>最后回复于<b
+											 class="xnum">{{item.conhour}}前</b></span></dd>
+									<dd class="xcfb">
+										<div class="tle-con">
+											<p><router-link to="" class="tc-title aptle">{{item.condsc}}</router-link></p>
+											<p class="tc-desc">{{item.contxt}}</p>
+										</div><router-link to="" class="tc-awrap anchtoup"><img class="tc-rimg" :src="item.conpic"></router-link>
+									</dd>
+								</dl>
+							</div>
 						</div>
+						<a class="tab-load" >加载更多</a>
 					</el-tab-pane>
 					<el-tab-pane label="结伴同游">配置管理</el-tab-pane>
 					<el-tab-pane label="版面列表">角色管理</el-tab-pane>
@@ -169,6 +185,7 @@
 			return {
 				threadbanner: [],
 				cnpopover: [],
+				con:[],
 			}
 		},
 		mounted() {
@@ -221,6 +238,7 @@
 		created() {
 			this.buildthreadbanner();
 			this.buildcnpopover();
+			this.buildcon();
 		},
 		methods: {
 			buildthreadbanner() {
@@ -234,6 +252,14 @@
 			buildcnpopover() {
 				this.axios.get('/api/buildcnpopover').then(res => {
 					this.cnpopover = res.data.data
+					console.log(res)
+				}).catch(function(error) {
+					console.log(error)
+				})
+			},
+			buildcon(){
+				this.axios.get('/api/buildcon').then(res => {
+					this.con = res.data.data
 					console.log(res)
 				}).catch(function(error) {
 					console.log(error)
@@ -256,9 +282,181 @@
 			width: 680px;
 			height: auto;
 			float: left;
+
+			.yl-con {
+				position: relative;
+				padding: 17px 0 20px;
+			}
 		}
 	}
+.yl-con .ylc-line {
+    position: absolute;
+    left: 23px;
+    top: 30px;
+    height: 100%;
+    border-left: 1px solid #ececec;
+}
+.yl-con .xfix:after,.yl-con .xfix:before {
+    content: "";
+    display: table;
+}
 
+.index-tooltip {
+    cursor: pointer;
+}
+
+.yl-close {
+    position: absolute;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background-position: 0 -59px;
+    cursor: pointer;
+}
+.inbg {
+    display: inline-block;
+    background: url(//common1.qyerstatic.com/bbs/old/images/index/indexs.png) no-repeat;
+}
+.con-time{
+	position: relative;
+	top: 2px;
+	}
+.con-pic {
+    position: relative;
+    float: left;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    z-index: 200;
+}
+.con-detail {
+    float: left;
+    margin: 14px 0 0 9px;
+    width: 623px;
+	.dl-title {
+    float: left;
+    margin: 0 9px 4px 0;
+    font-size: 12px;
+	.xc32 {
+    color: #323232;
+}
+.index-tooltip {
+    cursor: pointer;
+}
+.indexauthen {
+    margin-left: 2px;
+    width: 16px;
+    height: 16px;
+    vertical-align: -3px;
+}
+
+}
+
+.dl-des {
+    float: left;
+    color: #959595;
+line-height: 20px;
+	.dd-inw {
+    float: left;
+	font-size: 12px;
+	font-weight: 500;
+	em{
+		font-size: 12px;
+	}
+}
+.dl-des strong {
+    margin: 0 7px;
+	font-size: 12px;
+	font-weight: 500;
+	
+}
+
+.dd-inw a {
+    color: #959595;
+	font-weight: 500;
+	font-size: 12px;
+	margin-right: 5px;
+    text-decoration: underline;
+}
+.bicf.praise {
+    position: relative;
+    margin-left: 16px;
+    top: -2px;
+    color: #ececec;
+    font-size: 22px;
+    line-height: 22px;
+    vertical-align: -8px;
+    display: inline-block;
+}
+}
+.con-time, .tle-con {
+    float: left;
+	font-size: 12px;
+	b{
+		font-size: 12px;
+	}
+}
+.tle-con {
+    margin-top: 22px;
+    width: 415px;
+    color: #323232;
+	.tc-title {
+    display: block;
+    margin-right: 15px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #323232;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.tc-desc {
+    margin-top: 15px;
+    width: 400px;
+    line-height: 20px;
+    color: #959595;
+}
+
+}
+.tc-rimg {
+    margin: 45px 0 0 9px;
+    width: 161px;
+    height: 107px;
+}
+}
+.xfix:after {
+    clear: both;
+}
+
+.xfix:after, .xfix:before {
+    content: "";
+    display: table;
+}
+.zhhf {
+    width: 14px;
+    height: 14px;
+    margin: 0 5px 0 20px;
+    background-position: -28px -263px;
+    vertical-align: -2px;
+}
+.tab-load {
+	width: 80%;
+
+    display: block;
+    cursor: pointer;
+	 margin: 50px auto;
+	line-height: 38px;
+	border: 1px solid #ececec;
+	font-size: 14px;
+	text-align: center;
+	color: #d7d7d7;
+}
+.tab-load:hover{
+	color: #10b041;
+	border: #10b041 1px solid;
+}
+// .yl-con .ylc-line:last-child{
+// 	display: none;
+// }
 	.thread_questionlist {
 		/deep/ .el-tabs__item {
 			padding: 0 !important;
