@@ -5837,784 +5837,1059 @@ const buildmguide = Mock.mock(
 			message: '查询成功'
 		}
 	})
-	const buildsearch_chose = Mock.mock(
-		'/api/buildsearch_chose', 'get', (req, res) => {
+const buildsearch_chose = Mock.mock(
+	'/api/buildsearch_chose', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					search_chosename: "全部",
+					search_chosenumber: '2536'
+				},
+				{
+					search_chosename: "五星",
+					search_chosenumber: '286'
+				},
+				{
+					search_chosename: "四星",
+					search_chosenumber: '236'
+				},
+				{
+					search_chosename: "三星",
+					search_chosenumber: '896'
+				},
+				{
+					search_chosename: "二星",
+					search_chosenumber: '786'
+				},
+				{
+					search_chosename: "一星",
+					search_chosenumber: '586'
+				}
+			],
+			message: '查询成功'
+		}
+	})
+const buildLandscape = Mock.mock(
+	'/api/buildLandscape', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+				country: "日本",
+				Landscapecity: [{
+						cityid: 1,
+						Landscapecityname: "东京"
+					},
+					{
+						cityid: 2,
+						Landscapecityname: "大阪"
+					},
+					{
+						cityid: 3,
+						Landscapecityname: "名古屋"
+					},
+					{
+						cityid: 4,
+						Landscapecityname: "北海道"
+					},
+					{
+						cityid: 5,
+						Landscapecityname: "冲绳岛"
+					}
+				],
+				strategycity: "东京",
+				strategycitys: [{
+						Strategyid: 1,
+						strategycityname: "东京美食"
+					},
+					{
+						Strategyid: 2,
+						strategycityname: "东京体验"
+					},
+					{
+						Strategyid: 3,
+						strategycityname: "东京交通"
+					},
+					{
+						Strategyid: 4,
+						strategycityname: "东京活动"
+					},
+					{
+						Strategyid: 5,
+						strategycityname: "东京购物"
+					},
+					{
+						Strategyid: 6,
+						strategycityname: "东京住宿"
+					}
+				],
+				Landscapec: [{
+						Landscapeid: 1,
+						Landscapecname: "浅草寺"
+					},
+					{
+						Landscapeid: 2,
+						Landscapecname: "皇居"
+					},
+					{
+						Landscapeid: 3,
+						Landscapecname: "台场"
+					},
+					{
+						Landscapeid: 4,
+						Landscapecname: "东京迪士尼"
+					},
+					{
+						Landscapeid: 5,
+						Landscapecname: "彩虹大桥"
+					},
+					{
+						Landscapeid: 6,
+						Landscapecname: "东京塔"
+					},
+					{
+						Landscapeid: 7,
+						Landscapecname: "明治神像"
+					}
+				],
+				Landname: "明治神宫",
+				jianxie: "Meiji Jingu",
+				Landscapezhongwen: "明治神宫"
+			}],
+			message: '查询成功'
+		}
+	})
+const buildLandscpaemain = Mock.mock(
+	'/api/buildLandscpaemain', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+				photoid: 1,
+				photo: "//pics.lvjs.com.cn//uploads/pc/place2/2018-03-27/512ee636-16df-4b7b-a6ed-c5ce669d34a1_300_200.jpg",
+				photonumber: "23563",
+				Landscpaefen: '9.5',
+				Landscpaerate: "5",
+				Landscpaedianping: "5963",
+				Landscpaeming: '7',
+				Landscpaetxt: "供奉明治天皇和昭宪皇太后灵位，是日本神道教最重要的神社，有着东京都内最大的一片绿地。明治神宫由入口处耸立的日本最大的鸟居、“升”字型大参道、大殿、宝物殿构成，大殿由神社名匠大江新一郎提案建造，全部铺设除邪之用的鹅卵石。明治神宫内苑的植物根据四季更迭呈现出不同景致，但因最初的造林计划中规定不种植华丽花木，因此神宫内少有日本代表性的樱花。因昭宪皇太后生前酷爱睡莲，睡莲反而成了神宫内最为重要的植物，在9月盛开。到了秋日的银杏时节，神宫代代木入口处的银杏大道上金灿灿的，非常美丽。10月明治天皇生日大祭时会在神宫内举办各种传统艺能演出，尤以流镝马这一传承了1500年的古典祭神仪式最为特殊，有机会的话不妨前去一睹为快。",
+				Landscpaetip: "毎年的新年参拜，明治神宫都迎来日本最多的参拜客，新年祈愿也是一个很重要很有特色的仪式。有机会的话可以在新年第一天前去。",
+				Landscpaetime: "2019-5-28",
+				Landscpaeenjoy: "apple",
+				Landscpaebianji: "500",
+				Landscpaexiangce: [{
+						Landscpaeimg: "//pics.lvjs.com.cn//uploads/pc/place2/2019-04-19/cabef5b4-19e6-4f4e-bd24-3bbffa55d962_300_200.jpg",
+						Landscpaename: "浅草寺",
+						Landscapeid: 1,
+						Landscpaexiangcerate: "9.8"
+
+					},
+					{
+						Landscpaeimg: "//pics.lvjs.com.cn//uploads/pc/place2/2019-03-30/f73b4e92-e3b9-4c7c-9577-067a969e856f_300_200.jpg",
+						Landscpaename: "东京塔",
+						Landscapeid: 2,
+						Landscpaexiangcerate: "8.8"
+
+					},
+					{
+						Landscpaeimg: "//pics.lvjs.com.cn//uploads/pc/place2/2019-03-27/b910bcce-93c8-48c1-9fb4-c169a49a5245_300_200.jpg",
+						Landscpaename: "台场",
+						Landscapeid: 3,
+						Landscpaexiangcerate: "8.8"
+
+					},
+					{
+						Landscpaeimg: "//pics.lvjs.com.cn//uploads/pc/place2/2019-03-24/e086b2bd-f11f-4456-aa1c-2b43a5fbf06b_300_200.jpg",
+						Landscpaename: "彩虹大桥",
+						Landscapeid: 4,
+						Landscpaexiangcerate: "8.8"
+
+					}
+				],
+
+			}],
+			message: '查询成功'
+		}
+	})
+const buildcommentlist = Mock.mock(
+	'/api/buildcommentlist', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					avterimg: "//pics.lvjs.com.cn//uploads/pc/place2/2019-02-02/81aa2dee-4372-4743-acd9-a2d5a397e5d0_300_200.jpg",
+					commentlistname: "biubiu",
+					commentlistrate: "7.8",
+					commentlisttime: "2019-5-30",
+					commentlisttxt: "今年要改元了，如果有收集朱印的朋友还是应该去一次，拿一个平成的朱印，五一的时候有明治神宫春日祭，很多表演、巫女神乐，每年都有，可以提前查好了去看，领略日本文化",
+					type: 1,
+					commentlisttype: [{
+						commentlistimg: "//pics.lvjs.com.cn//uploads/pc/place2/2018-03-27/512ee636-16df-4b7b-a6ed-c5ce669d34a1_300_200.jpg"
+					}],
+					commentlisthuifu: '1452',
+					commentlistyouyong: "369"
+
+
+
+				},
+				{
+					avterimg: "//pics.lvjs.com.cn//uploads/pc/place2/2018-10-19/a80e98d1-b3ef-4a1c-8b5c-bce73e910a52_300_200.jpg",
+					commentlistname: "love",
+					commentlistrate: "9.5",
+					commentlisttime: "2019-6-30",
+					commentlisttxt: "在临走前的最后一早上打卡了东京的绿地~ 和小卉卉一起。快步走汗基本已经出透，清新自然，虔诚地许下愿望，是非常值得去的地方。",
+					type: 1,
+					commentlisttype: [{
+						commentlistimg: "//pics.lvjs.com.cn//uploads/pc/place2/2018-03-27/512ee636-16df-4b7b-a6ed-c5ce669d34a1_300_200.jpg"
+					}],
+					commentlisthuifu: '1452',
+					commentlistyouyong: "369"
+
+
+
+				}
+			],
+			message: '查询成功'
+		}
+	})
+const buildcomwenda = Mock.mock(
+	'/api/buildcomwenda', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					comwendatitle: "东京二日游，住在新宿华盛顿酒店，想去银座、皇居、明治神宫、浅草寺等景点",
+					comwendahuida: '4'
+				},
+				{
+					comwendatitle: "住在东京茅场町附近，有三天，想去浅草寺，上野公园，秋叶原，东京塔，皇居，银座，明治神宫，原宿，涉谷，新宿。怎样安排比较妥当",
+					comwendahuida: '8'
+				},
+				{
+					comwendatitle: "皇居和明治神宫那个好玩更值得去",
+					comwendahuida: '3'
+				},
+
+			],
+			message: '查询成功'
+		}
+	})
+const buildzlist = Mock.mock(
+	'/api/buildzlist', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					zlistimg: "//pics.lvjs.com.cn//uploads/pc/place2/2018-05-07/e38aab64-6cfa-42d8-b27f-8088c8b807dd_300_200.jpg",
+					zlistname: "东京塔",
+					zlistprice: "150",
+					zlistposition: 1.3
+				},
+				{
+					zlistimg: "//pics.lvjs.com.cn//uploads/pc/place2/2017-11-08/638142c1-fd69-4755-8ff5-112c2fed229c_300_200.jpg",
+					zlistname: "浅草寺",
+					zlistprice: "90",
+					zlistposition: 2.3
+				},
+				{
+					zlistimg: "//pics.lvjs.com.cn//uploads/pc/place2/2016-08-19/47b1c9c6-2877-4c48-9a46-1f2ce0f102b6_300_200.jpg",
+					zlistname: "彩虹桥",
+					zlistprice: "140",
+					zlistposition: 0.3
+				},
+				{
+					zlistimg: "//pics.lvjs.com.cn//uploads/pc/place2/2017-12-04/4acbc8c5-d93f-4b86-9c4c-f827b4590c42_300_200.jpg",
+					zlistname: "台场",
+					zlistprice: "170",
+					zlistposition: 1.34
+				}
+			],
+			message: '查询成功'
+		}
+	})
+const buildContinentbramd = Mock.mock(
+	'/api/buildContinentbramd', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+				Continentid: 1,
+				country: [{
+						countryid: 1,
+						country: "中国"
+					},
+					{
+						countryid: 2,
+						country: "日本"
+					},
+					{
+						countryid: 1,
+						country: "韩国"
+					},
+					{
+						countryid: 1,
+						country: "蒙古"
+					},
+					{
+						countryid: 1,
+						country: "印度"
+					},
+					{
+						countryid: 1,
+						country: "新加坡"
+					},
+					{
+						countryid: 1,
+						country: "印度尼西亚"
+					},
+					{
+						countryid: 1,
+						country: "哈萨克斯坦"
+					},
+					{
+						countryid: 1,
+						country: "尼泊尔"
+					},
+					{
+						countryid: 1,
+						country: "泰国"
+					}
+				],
+				Continent: '亚洲',
+				Landscapecity: [{
+						countryid: "1",
+						Landscapecityname: "中国"
+					},
+					{
+						countryid: "1",
+						Landscapecityname: "泰国"
+					},
+					{
+						countryid: "1",
+						Landscapecityname: "印度"
+					},
+					{
+						countryid: "1",
+						Landscapecityname: "越南"
+					},
+					{
+						countryid: "1",
+						Landscapecityname: "缅甸"
+					},
+					{
+						countryid: "1",
+						Landscapecityname: "印度尼西亚"
+					},
+					{
+						countryid: "1",
+						Landscapecityname: "新加坡"
+					},
+					{
+						countryid: "1",
+						Landscapecityname: "台湾"
+					},
+					{
+						countryid: "1",
+						Landscapecityname: "日本"
+					},
+					{
+						countryid: "1",
+						Landscapecityname: "韩国"
+					},
+					{
+						countryid: "1",
+						Landscapecityname: "朝鲜"
+					},
+					{
+						countryid: "1",
+						Landscapecityname: "中东"
+					}
+				]
+
+			}],
+			message: '查询成功'
+		}
+	})
+const buildplatopbar = Mock.mock(
+	'/api/buildplatopbar', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+				english: "Asia",
+				chinses: "亚洲",
+				gonumber: "256693",
+				wentnumber: '25896',
+				livednumber: "589663",
+				goed: '25896'
+			}],
+			message: '查询成功'
+		}
+	})
+const buildcontryul = Mock.mock(
+	'/api/buildcontryul', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					Countryid: 1,
+					countryimg: "//pics.lvjs.com.cn/pics//uploads/pc/place2/2018-09-10/97ce749c-379c-48ef-a7fb-529b5f548806_300_200.jpg",
+					countryname: "中国",
+					contrycity: [{
+							Cityid: 1,
+							contrycityname: "广州"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "上海"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "深圳"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "厦门"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "大理"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "昆明"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "拉萨"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "澳门"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "福州"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "长沙"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "福州"
+						},
+					],
+				},
+				{
+					Countryid: 2,
+					countryimg: "//pics.lvjs.com.cn/pics//uploads/pc/place2/2017-11-06/4a249f92-7865-4907-95bc-4eabd1b4a82e_300_200.jpg",
+					countryname: "日本",
+					contrycity: [{
+							Cityid: 1,
+							contrycityname: "东京"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "名古屋"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "大阪"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "北海道"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "箱根"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "京都"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "拉萨"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "横滨"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "札幌"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "神户"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "福冈"
+						},
+					],
+				},
+				{
+					Countryid: 3,
+					countryimg: "//pics.lvjs.com.cn//uploads/pc/place2/2017-07-14/5cdbb665-eda5-47fe-a963-8e9ea3479beb_300_200.jpg",
+					countryname: "泰国",
+					contrycity: [{
+							Cityid: 1,
+							contrycityname: "曼谷"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "普吉岛"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "芭堤雅"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "清迈"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "清莱"
+						},
+
+					],
+				},
+				{
+					Countryid: 4,
+					countryimg: "//pics.lvjs.com.cn//uploads/pc/place2/2016-02-03/75ce7865-be3d-4d5f-b938-8f9cf19516b9_300_200.jpg",
+					countryname: "韩国",
+					contrycity: [{
+							Cityid: 1,
+							contrycityname: "首尔"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "斐济岛"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "釜山"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "仁川"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "庆州"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "大邱"
+						},
+					],
+				},
+				{
+					Countryid: 5,
+					countryimg: "//pics.lvjs.com.cn//uploads/pc/place2/2019-05-15/fe7a3ee2-26af-4899-a4f0-dafd77d9c280_300_200.jpg",
+					countryname: "马来西亚",
+					contrycity: [
+
+						{
+							Cityid: 1,
+							contrycityname: "吉隆坡"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "马六甲"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "亚庇"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "沙巴"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "槟城"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "兰卡威"
+						},
+					],
+				},
+				{
+					Countryid: 6,
+					countryimg: "//pics.lvjs.com.cn//uploads/pc/place2/2019-02-12/ab6de12c-dfcc-4419-ba1b-84adb17bf9f3_300_200.jpg",
+					countryname: "新加坡",
+					contrycity: [
+
+						{
+							Cityid: 1,
+							contrycityname: "新加坡"
+						},
+
+					],
+				},
+				{
+					Countryid: 3,
+					countryimg: "//pics.lvjs.com.cn//uploads/pc/place2/2017-07-14/5cdbb665-eda5-47fe-a963-8e9ea3479beb_300_200.jpg",
+					countryname: "泰国",
+					contrycity: [{
+							Cityid: 1,
+							contrycityname: "曼谷"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "普吉岛"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "芭堤雅"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "清迈"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "清莱"
+						},
+
+					],
+				},
+				{
+					Countryid: 4,
+					countryimg: "//pics.lvjs.com.cn//uploads/pc/place2/2016-02-03/75ce7865-be3d-4d5f-b938-8f9cf19516b9_300_200.jpg",
+					countryname: "韩国",
+					contrycity: [{
+							Cityid: 1,
+							contrycityname: "首尔"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "斐济岛"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "釜山"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "仁川"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "庆州"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "大邱"
+						},
+					],
+				},
+				{
+					Countryid: 5,
+					countryimg: "//pics.lvjs.com.cn//uploads/pc/place2/2019-05-15/fe7a3ee2-26af-4899-a4f0-dafd77d9c280_300_200.jpg",
+					countryname: "马来西亚",
+					contrycity: [
+
+						{
+							Cityid: 1,
+							contrycityname: "吉隆坡"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "马六甲"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "亚庇"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "沙巴"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "槟城"
+						},
+						{
+							Cityid: 1,
+							contrycityname: "兰卡威"
+						},
+					],
+				},
+			],
+			message: '查询成功'
+		}
+	})
+const buildcountrylist = Mock.mock(
+	'/api/buildcountrylist', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					type: 1,
+					Countryid: 1,
+					coutryname: "阿富汗",
+					countryenglish: 'Afghanistan'
+				},
+				{
+					type: 1,
+					Countryid: 1,
+					coutryname: "阿富汗",
+					countryenglish: 'Afghanistan'
+				},
+				{
+					type: 1,
+					Countryid: 1,
+					coutryname: "阿富汗",
+					countryenglish: 'Afghanistan'
+				}
+			],
+			message: '查询成功'
+		}
+	})
+const buildyoujilists = Mock.mock(
+	'/api/buildyoujilists', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					ThreadDetailid: 1,
+					thraedimg: "//pics.lvjs.com.cn//uploads/pc/place2/2018-03-29/4783eb8b-d603-4fc7-98d0-55f0aac4ee50_300_200.jpg",
+					threadtitle: '丽江、香格里拉、梅里雪山双飞6日',
+					threadavter: "http://s3.lvjs.com.cn/uploads/pc/place2/2018-03-29/903bfaf9-a91d-4340-8597-233c818bc03a.jpg",
+					threadtime: '2019-6-5',
+					threadliulan: '256',
+					threadlike: '1458',
+					threadzuozhe: 'biu biu',
+					threadtxt: '摄影全线，拍摄梅里雪山不同的瞬间，拍摄经典“日照金顶”景观；尝美食：尼西土鸡+风味藏餐+牦牛肉小火锅+马帮菜+三文鱼宴；品质宿：全程高标酒店+1晚德钦飞来寺观景天堂酒店景观房；赏美景：虎跳峡、松赞林寺、普达措天堂、飞来寺观景梅里雪山。'
+				},
+				{
+					ThreadDetailid: 2,
+					thraedimg: "//pics.lvjs.com.cn//uploads/pc/place2/2019-05-10/84c4023b-01c5-47aa-b3ff-23a927cf68ef_300_200.jpg",
+					threadtitle: '新加坡航空，脏鸭餐，情人崖下午茶，玻璃底船，花漾双岛之旅',
+					threadavter: "http://pic.lvmama.com/uploads/pc/place2/2019-05-10/2bb768d8-f938-445e-9e47-0ae37848a6b1_480_320.jpg",
+					threadtime: '2019-8-3',
+					threadliulan: '456',
+					threadlike: '17458',
+					threadzuozhe: 'biu love',
+					threadtxt: '当地美食： 生猛脏鸭餐、情人崖下午茶、金巴兰 BBQ,睡得好香： 新加坡当地 ★★★，巴厘岛升级国际连锁 ★★★★,畅玩： 乌布皇宫、乌布传统市场、海神庙、小婆罗浮屠、小印度，'
+				},
+				{
+					ThreadDetailid: 3,
+					thraedimg: "//pics.lvjs.com.cn//uploads/pc/place2/2019-01-02/0ba188f5-8d02-4447-8f53-10b8b35f2294_300_200.jpg",
+					threadtitle: '五星温泉酒店、敞篷JEEP车环海旅拍、VIP私人游艇、玉龙雪山大索道',
+					threadavter: "http://pic.lvmama.com/uploads/pc/place2/2018-03-23/bd28cb75-8a9a-4b7c-80d2-8c4a6bb9f57e_480_320.jpg",
+					threadtime: '2019-4-13',
+					threadliulan: '756',
+					threadlike: '7758',
+					threadzuozhe: '波波肥仔',
+					threadtxt: '管家式一对一客服，含往返机票，舒适住宿,全程无忧 ,实力商家，专业接送机，金牌导游,微信管1对1服务 ,赠丽水金沙，渔鹰表演，当地特色餐,赠一晚温泉酒店，石林风景区，雪山大索道，洱海游船，敞篷吉普车环海'
+				}
+			],
+			message: '查询成功'
+		}
+	})
+const buildthreadbanner = Mock.mock(
+	'/api/buildthreadbanner', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					threadbannerimg:"http://pic.lvmama.com/uploads/pc/place2/2017-12-05/60075c3b-ef6a-450e-9000-4cfe4e42ab48_480_320.jpg",
+					threadbannerdsc:"体验正宗日式泡汤之乐,日式烤肉、温泉料理、日式火锅大饱口福,夏日浪漫赏花- 山中湖花之都公园",
+					threadbannerzuozhe:"chui qiu",
+					threadbanneravter:"//pics.lvjs.com.cn//uploads/pc/place2/2017-02-23/1dcbe67f-f58b-4ebd-9b62-689d8d5e50e0_300_200.jpg",
+				},
+				{
+					threadbannerimg:"http://pic.lvmama.com/uploads/pc/place2/2017-03-23/ee690612-66f9-4ff2-a3ec-26c547aa2ec2_480_320.jpg",
+					threadbannerdsc:"东急酒店，对面即是大街道和三越百货，代购圣地，放心买买买",
+					threadbannerzuozhe:"国爱媛",
+					threadbanneravter:"http://pic.lvmama.com/uploads/pc/place2/2017-03-23/f9f1c526-1732-4536-8720-d9fa8cbd5fa3_480_320.jpg",
+				},
+				{
+					threadbannerimg:"//pics.lvjs.com.cn//uploads/pc/place2/2018-10-24/8af2205c-8f86-4049-845a-19b617b2b4a3_300_200.jpg",
+					threadbannerdsc:"畅游城市: 大阪/奈良/富士山/东京环球影城 (已含门票)，自由畅玩不少于6小时寿司DIY",
+
+					threadbannerzuozhe:"瘪子三强",
+					threadbanneravter:"http://pic.lvmama.com/uploads/pc/place2/2018-10-24/02a20c99-9477-480c-9faa-84c63a4774c0_480_320.jpg",
+				}
+			],
+			message: '查询成功'
+		}
+	})
+	
+	const buildcnpopover = Mock.mock(
+		'/api/buildcnpopover', 'get', (req, res) => {
 			return {
 				code: 200,
 				data: [
 					{
-						search_chosename:"全部",
-						search_chosenumber:'2536'
-					},
-					{
-						search_chosename:"五星",
-						search_chosenumber:'286'
-					},
-					{
-						search_chosename:"四星",
-						search_chosenumber:'236'
-					},
-					{
-						search_chosename:"三星",
-						search_chosenumber:'896'
-					},
-					{
-						search_chosename:"二星",
-						search_chosenumber:'786'
-					},
-					{
-						search_chosename:"一星",
-						search_chosenumber:'586'
+			
+						cnpopovertd:[
+							{
+								cnxingqus:'结伴同游',
+								cnxingqu:'旅行视频',
+							},
+							{
+								cnxingqus:'签证',
+								cnxingqu:'旅行摄影',
+							
+							},
+							{
+								cnxingqus:'保险',
+								cnxingqu:'户外运动',
+							
+							},
+							{
+								cnxingqus:'旅行购物',
+								cnxingqu:'潜水俱乐部',
+							
+							},
+							{
+								cnxingqus:'穷游折扣',
+								cnxingqu:'带孩子旅行',
+							
+							},
+							{
+								cnxingqus:'睡遍全球',
+								cnxingqu:'带父母旅行',
+							
+							},
+							{
+								cnxingqus:'邮轮',
+								cnxingqus:'明信片',
+							
+							},
+							{
+								cnxingqus:'航空',
+								cnxingqu:'路刻社',
+							
+							},
+							{
+								cnxingqus:'自驾',
+								cnxingqu:'Discovery探索频道',
+							
+							}
+						],
+						cnpopoverli:[
+							{
+								cnpopoverliname:"穷游活动"
+							},
+							{
+								cnpopoverliname:"穷游er访谈"
+							},
+							{
+								cnpopoverliname:"穷游沙龙"
+							},
+							{
+								cnpopoverliname:"轻年计划"
+							},
+							{
+								cnpopoverliname:"城市漫步"
+							}
+						],
+
+						cnpopoverouzhou:[
+							{
+								cnxingquouzhous:'环游欧洲',
+								cnxingquouzhou:'法国/摩纳哥',
+							
+							},
+							{
+								cnxingquouzhous:'德国',
+								cnxingquouzhou:'瑞士/列支敦士登',
+							
+							},
+							{
+								cnxingquouzhous:'奥地利/捷克',
+								cnxingquouzhou:'斯洛伐克/匈牙利',
+							
+							},
+							{
+								cnxingquouzhous:'西班牙/葡萄牙',
+								cnxingquouzhou:'安道尔/希腊',
+							
+							},
+							{
+								cnxingquouzhous:'塞浦路斯/意大利',
+								cnxingquouzhou:'梵蒂冈/圣马力诺',
+							
+							},
+							{
+								cnxingquouzhous:'比利时/卢森堡',
+								cnxingquouzhou:'波兰/立陶宛',
+							
+							},
+							{
+								cnxingquouzhous:'挪威/瑞典',
+								cnxingquouzhou:'芬兰/丹麦',
+							
+							},
+							{
+								cnxingquouzhous:'拉脱维亚/爱沙尼亚',
+								cnxingquouzhou:'爱尔兰/荷兰',
+							
+							},
+							{
+								cnxingquouzhous:'马耳他/英国',
+								cnxingquouzhou:'俄罗斯/乌克兰',
+							
+							},
+							{
+								cnxingquouzhous:'马耳他/英国',
+								cnxingquouzhou:'白俄罗斯',
+							
+							},
+							{
+								cnxingquouzhous:'欧洲交通',
+								cnxingquouzhou:'土耳其',
+							
+							},
+							{
+								cnxingquouzhous:'东欧平原',
+								cnxingquouzhou:'土耳其海峡',
+							
+							},
+							{
+								cnxingquouzhous:'地中海',
+								cnxingquouzhou:'爱琴海',
+							
+							}
+						],
+						cnpopoveryazhou:[
+							{
+								cnxingquyazhous:"环游亚洲",
+								cnxingquyazhou:"中国",
+								
+							},
+							{
+								cnxingquyazhous:"韩国/朝鲜",
+								cnxingquyazhou:"台湾",
+								
+							},
+							{
+								cnxingquyazhous:"香港/澳门",
+								cnxingquyazhou:"泰国",
+								
+							},
+							{
+								cnxingquyazhous:"越南",
+								cnxingquyazhou:"缅甸",
+								
+							},
+							{
+								cnxingquyazhous:"马来西亚/文莱",
+								cnxingquyazhou:"新加坡",
+								
+							},
+							{
+								cnxingquyazhous:"柬埔寨/印度",
+								cnxingquyazhou:"哈萨克斯坦",
+								
+							},
+							{
+								cnxingquyazhous:"韩国/朝鲜",
+								cnxingquyazhou:"蒙古",
+								
+							},
+							{
+								cnxingquyazhous:"吉尔杰斯坦/伊朗",
+								cnxingquyazhou:"迪拜",
+								
+							},
+							{
+								cnxingquyazhous:"新几内亚/马尔代夫",
+								cnxingquyazhou:"孟加拉/阿联酋",
+								
+							},
+							{
+								cnxingquyazhous:"以色列/东坟帝",
+								cnxingquyazhou:"斐济岛",
+								
+							},
+							{
+								cnxingquyazhous:"阿富汗/乌兹别克斯坦",
+								cnxingquyazhou:"越南",
+								
+							},
+							{
+								cnxingquyazhous:"不丹",
+								cnxingquyazhou:"阿塞拜疆",
+								
+							},
+							{
+								cnxingquyazhous:"科威特",
+								cnxingquyazhou:"叙利亚",
+								
+							},
+							{
+								cnxingquyazhous:"亚美尼亚",
+								cnxingquyazhou:"巴基斯坦",
+								
+							},
+							{
+								cnxingquyazhous:"也门",
+								cnxingquyazhou:"约旦/沙特阿拉伯",
+								
+							},
+							{
+								cnxingquyazhous:"卡塔尔/马来西亚",
+								cnxingquyazhou:"吉尔吉斯斯坦",
+								
+							},
+							{
+								cnxingquyazhous:"土库曼斯坦",
+								cnxingquyazhou:"巴勒斯坦/格鲁吉亚",
+								
+							},
+						],
+						cnpopovermeizhou:[
+							{
+								cnpopovermeizhouname:"美国"
+							},
+							{
+								cnpopovermeizhouname:"加拿大"
+							},
+							{
+								cnpopovermeizhouname:"墨西哥"
+							},
+							{
+								cnpopovermeizhouname:"古巴"
+							}
+						],
+						cnpopoverfeizhou:[
+							{
+								cnpopoverfeizhouname:"北非地区"
+							},
+							{
+								cnpopoverfeizhouname:"东非地区"
+							},
+							{
+								cnpopoverfeizhouname:"非洲海岛"
+							},
+							{
+								cnpopoverfeizhouname:"非洲及其国家"
+							}
+						],
+						cnpopoverdayangzhou:[
+							{
+								cnpopoverdayangzhouname:'澳大利亚'
+							},
+							{
+								cnpopoverdayangzhouname:'新西兰'
+							},
+							{
+								cnpopoverdayangzhouname:'所罗门群岛'
+							},
+							{
+								cnpopoverdayangzhouname:'帕劳'
+							},
+							{
+								cnpopoverdayangzhouname:'太平洋岛国'
+							}
+							
+						]
+
 					}
 				],
 				message: '查询成功'
 			}
 		})
-		const buildLandscape = Mock.mock(
-			'/api/buildLandscape', 'get', (req, res) => {
-				return {
-					code: 200,
-					data: [
-						{
-							country:"日本",
-							Landscapecity:[
-								{
-									cityid:1,
-									Landscapecityname:"东京"
-								},
-								{
-									cityid:2,
-									Landscapecityname:"大阪"
-								},
-								{
-									cityid:3,
-									Landscapecityname:"名古屋"
-								},
-								{
-									cityid:4,
-									Landscapecityname:"北海道"
-								},
-								{
-									cityid:5,
-									Landscapecityname:"冲绳岛"
-								}
-							],
-							strategycity:"东京",
-							strategycitys:[
-								{
-									Strategyid:1,
-									strategycityname:"东京美食"
-								},
-								{
-									Strategyid:2,
-									strategycityname:"东京体验"
-								},
-								{
-									Strategyid:3,
-									strategycityname:"东京交通"
-								},
-								{
-									Strategyid:4,
-									strategycityname:"东京活动"
-								},
-								{
-									Strategyid:5,
-									strategycityname:"东京购物"
-								},
-								{
-									Strategyid:6,
-									strategycityname:"东京住宿"
-								}
-							],
-							Landscapec:[
-								{
-									Landscapeid:1,
-									Landscapecname:"浅草寺"
-								},
-								{
-									Landscapeid:2,
-									Landscapecname:"皇居"
-								},
-								{
-									Landscapeid:3,
-									Landscapecname:"台场"
-								},
-								{
-									Landscapeid:4,
-									Landscapecname:"东京迪士尼"
-								},
-								{
-									Landscapeid:5,
-									Landscapecname:"彩虹大桥"
-								},
-								{
-									Landscapeid:6,
-									Landscapecname:"东京塔"
-								},
-								{
-									Landscapeid:7,
-									Landscapecname:"明治神像"
-								}
-							],
-							Landname:"明治神宫",
-							jianxie:"Meiji Jingu",
-							Landscapezhongwen:"明治神宫"
-						}
-					],
-					message: '查询成功'
-				}
-			})
-			const buildLandscpaemain = Mock.mock(
-				'/api/buildLandscpaemain', 'get', (req, res) => {
-					return {
-						code: 200,
-						data: [
-							{
-								photoid:1,
-								photo:"//pics.lvjs.com.cn//uploads/pc/place2/2018-03-27/512ee636-16df-4b7b-a6ed-c5ce669d34a1_300_200.jpg",
-								photonumber:"23563",
-								Landscpaefen:'9.5',
-								Landscpaerate:"5",
-								Landscpaedianping:"5963",
-								Landscpaeming:'7',
-								Landscpaetxt:"供奉明治天皇和昭宪皇太后灵位，是日本神道教最重要的神社，有着东京都内最大的一片绿地。明治神宫由入口处耸立的日本最大的鸟居、“升”字型大参道、大殿、宝物殿构成，大殿由神社名匠大江新一郎提案建造，全部铺设除邪之用的鹅卵石。明治神宫内苑的植物根据四季更迭呈现出不同景致，但因最初的造林计划中规定不种植华丽花木，因此神宫内少有日本代表性的樱花。因昭宪皇太后生前酷爱睡莲，睡莲反而成了神宫内最为重要的植物，在9月盛开。到了秋日的银杏时节，神宫代代木入口处的银杏大道上金灿灿的，非常美丽。10月明治天皇生日大祭时会在神宫内举办各种传统艺能演出，尤以流镝马这一传承了1500年的古典祭神仪式最为特殊，有机会的话不妨前去一睹为快。",
-								Landscpaetip:"毎年的新年参拜，明治神宫都迎来日本最多的参拜客，新年祈愿也是一个很重要很有特色的仪式。有机会的话可以在新年第一天前去。",
-								Landscpaetime:"2019-5-28",
-								Landscpaeenjoy:"apple",
-								Landscpaebianji:"500",
-								Landscpaexiangce:[
-									{
-										Landscpaeimg:"//pics.lvjs.com.cn//uploads/pc/place2/2019-04-19/cabef5b4-19e6-4f4e-bd24-3bbffa55d962_300_200.jpg",
-										Landscpaename:"浅草寺",
-										Landscapeid:1,
-										Landscpaexiangcerate:"9.8"
-										
-									},
-									{
-										Landscpaeimg:"//pics.lvjs.com.cn//uploads/pc/place2/2019-03-30/f73b4e92-e3b9-4c7c-9577-067a969e856f_300_200.jpg",
-										Landscpaename:"东京塔",
-										Landscapeid:2,
-										Landscpaexiangcerate:"8.8"
-										
-									},
-									{
-										Landscpaeimg:"//pics.lvjs.com.cn//uploads/pc/place2/2019-03-27/b910bcce-93c8-48c1-9fb4-c169a49a5245_300_200.jpg",
-										Landscpaename:"台场",
-										Landscapeid:3,
-										Landscpaexiangcerate:"8.8"
-										
-									},
-									{
-										Landscpaeimg:"//pics.lvjs.com.cn//uploads/pc/place2/2019-03-24/e086b2bd-f11f-4456-aa1c-2b43a5fbf06b_300_200.jpg",
-										Landscpaename:"彩虹大桥",
-										Landscapeid:4,
-										Landscpaexiangcerate:"8.8"
-										
-									}
-								],
-								
-							}
-						],
-						message: '查询成功'
-					}
-				})
-					const buildcommentlist = Mock.mock(
-					'/api/buildcommentlist', 'get', (req, res) => {
-						return {
-							code: 200,
-							data: [
-								{
-									avterimg:"//pics.lvjs.com.cn//uploads/pc/place2/2019-02-02/81aa2dee-4372-4743-acd9-a2d5a397e5d0_300_200.jpg",
-									commentlistname:"biubiu",
-									commentlistrate:"7.8",
-									commentlisttime:"2019-5-30",
-									commentlisttxt:"今年要改元了，如果有收集朱印的朋友还是应该去一次，拿一个平成的朱印，五一的时候有明治神宫春日祭，很多表演、巫女神乐，每年都有，可以提前查好了去看，领略日本文化",
-										type:1,
-									commentlisttype:[
-										{
-									commentlistimg:"//pics.lvjs.com.cn//uploads/pc/place2/2018-03-27/512ee636-16df-4b7b-a6ed-c5ce669d34a1_300_200.jpg"
-										}
-									],
-									commentlisthuifu:'1452',
-									commentlistyouyong:"369"
-								
-									
-									
-								},
-								{
-									avterimg:"//pics.lvjs.com.cn//uploads/pc/place2/2018-10-19/a80e98d1-b3ef-4a1c-8b5c-bce73e910a52_300_200.jpg",
-									commentlistname:"love",
-									commentlistrate:"9.5",
-									commentlisttime:"2019-6-30",
-									commentlisttxt:"在临走前的最后一早上打卡了东京的绿地~ 和小卉卉一起。快步走汗基本已经出透，清新自然，虔诚地许下愿望，是非常值得去的地方。",
-										type:1,
-									commentlisttype:[
-										{
-									commentlistimg:"//pics.lvjs.com.cn//uploads/pc/place2/2018-03-27/512ee636-16df-4b7b-a6ed-c5ce669d34a1_300_200.jpg"
-										}
-									],
-									commentlisthuifu:'1452',
-									commentlistyouyong:"369"
-								
-									
-									
-								}
-							],
-							message: '查询成功'
-						}
-					})
-					const buildcomwenda = Mock.mock(
-					'/api/buildcomwenda', 'get', (req, res) => {
-						return {
-							code: 200,
-							data: [
-								{
-									comwendatitle:"东京二日游，住在新宿华盛顿酒店，想去银座、皇居、明治神宫、浅草寺等景点",
-									comwendahuida:'4'
-								},
-								{
-									comwendatitle:"住在东京茅场町附近，有三天，想去浅草寺，上野公园，秋叶原，东京塔，皇居，银座，明治神宫，原宿，涉谷，新宿。怎样安排比较妥当",
-									comwendahuida:'8'
-								},
-								{
-									comwendatitle:"皇居和明治神宫那个好玩更值得去",
-									comwendahuida:'3'
-								},
-								
-							],
-							message: '查询成功'
-						}
-					})
-						const buildzlist = Mock.mock(
-					'/api/buildzlist', 'get', (req, res) => {
-						return {
-							code: 200,
-							data: [
-								{
-									zlistimg:"//pics.lvjs.com.cn//uploads/pc/place2/2018-05-07/e38aab64-6cfa-42d8-b27f-8088c8b807dd_300_200.jpg",
-									zlistname:"东京塔",
-									zlistprice:"150",
-									zlistposition:1.3
-								},
-								{
-									zlistimg:"//pics.lvjs.com.cn//uploads/pc/place2/2017-11-08/638142c1-fd69-4755-8ff5-112c2fed229c_300_200.jpg",
-									zlistname:"浅草寺",
-									zlistprice:"90",
-									zlistposition:2.3
-								},
-								{
-									zlistimg:"//pics.lvjs.com.cn//uploads/pc/place2/2016-08-19/47b1c9c6-2877-4c48-9a46-1f2ce0f102b6_300_200.jpg",
-									zlistname:"彩虹桥",
-									zlistprice:"140",
-									zlistposition:0.3
-								},
-								{
-									zlistimg:"//pics.lvjs.com.cn//uploads/pc/place2/2017-12-04/4acbc8c5-d93f-4b86-9c4c-f827b4590c42_300_200.jpg",
-									zlistname:"台场",
-									zlistprice:"170",
-									zlistposition:1.34
-								}
-							],
-							message: '查询成功'
-						}
-					})
-					const buildContinentbramd = Mock.mock(
-						'/api/buildContinentbramd', 'get', (req, res) => {
-							return {
-								code: 200,
-								data: [
-									{
-									Continentid:1,
-										country:[
-											{
-												countryid:1,
-												country:"中国"
-											},
-											{
-												countryid:2,
-												country:"日本"
-											},
-											{
-												countryid:1,
-												country:"韩国"
-											},
-											{
-												countryid:1,
-												country:"蒙古"
-											},
-											{
-												countryid:1,
-												country:"印度"
-											},
-											{
-												countryid:1,
-												country:"新加坡"
-											},
-											{
-												countryid:1,
-												country:"印度尼西亚"
-											},
-											{
-												countryid:1,
-												country:"哈萨克斯坦"
-											},
-											{
-												countryid:1,
-												country:"尼泊尔"
-											},
-											{
-												countryid:1,
-												country:"泰国"
-											}],
-											Continent:'亚洲',
-											Landscapecity:[
-												{
-													countryid:"1",
-													Landscapecityname:"中国"
-												},
-												{
-													countryid:"1",
-													Landscapecityname:"泰国"
-												},
-												{
-													countryid:"1",
-													Landscapecityname:"印度"
-												},
-												{
-													countryid:"1",
-													Landscapecityname:"越南"
-												},
-												{
-													countryid:"1",
-													Landscapecityname:"缅甸"
-												},
-												{
-													countryid:"1",
-													Landscapecityname:"印度尼西亚"
-												},
-												{
-													countryid:"1",
-													Landscapecityname:"新加坡"
-												},
-												{
-													countryid:"1",
-													Landscapecityname:"台湾"
-												},
-												{
-													countryid:"1",
-													Landscapecityname:"日本"
-												},
-												{
-													countryid:"1",
-													Landscapecityname:"韩国"
-												},
-												{
-													countryid:"1",
-													Landscapecityname:"朝鲜"
-												},
-												{
-													countryid:"1",
-													Landscapecityname:"中东"
-												}
-											]
-										
-									}
-								],
-								message: '查询成功'
-							}
-			})
-							const buildplatopbar = Mock.mock(
-							'/api/buildplatopbar', 'get', (req, res) => {
-								return {
-									code: 200,
-									data: [
-										{
-										english:"Asia",
-										chinses:"亚洲",
-										gonumber:"256693",
-										wentnumber:'25896',
-										livednumber:"589663",
-										goed:'25896'
-										}
-									],
-									message: '查询成功'
-								}
-							})
-							const buildcontryul = Mock.mock(
-							'/api/buildcontryul', 'get', (req, res) => {
-								return {
-									code: 200,
-									data: [
-										{
-										Countryid:1,
-										countryimg:"//pics.lvjs.com.cn/pics//uploads/pc/place2/2018-09-10/97ce749c-379c-48ef-a7fb-529b5f548806_300_200.jpg",
-										countryname:"中国",
-										contrycity:[
-											{
-												Cityid:1,
-												contrycityname:"广州"
-											},
-											{
-												Cityid:1,
-												contrycityname:"上海"
-											},
-											{
-												Cityid:1,
-												contrycityname:"深圳"
-											},
-											{
-												Cityid:1,
-												contrycityname:"厦门"
-											},
-											{
-												Cityid:1,
-												contrycityname:"大理"
-											},
-											{
-												Cityid:1,
-												contrycityname:"昆明"
-											},
-											{
-												Cityid:1,
-												contrycityname:"拉萨"
-											},
-											{
-												Cityid:1,
-												contrycityname:"澳门"
-											},
-											{
-												Cityid:1,
-												contrycityname:"福州"
-											},
-											{
-												Cityid:1,
-												contrycityname:"长沙"
-											},
-											{
-												Cityid:1,
-												contrycityname:"福州"
-											},
-											],
-										},
-											{
-										Countryid:2,
-										countryimg:"//pics.lvjs.com.cn/pics//uploads/pc/place2/2017-11-06/4a249f92-7865-4907-95bc-4eabd1b4a82e_300_200.jpg",
-										countryname:"日本",
-										contrycity:[
-											{
-												Cityid:1,
-												contrycityname:"东京"
-											},
-											{
-												Cityid:1,
-												contrycityname:"名古屋"
-											},
-											{
-												Cityid:1,
-												contrycityname:"大阪"
-											},
-											{
-												Cityid:1,
-												contrycityname:"北海道"
-											},
-											{
-												Cityid:1,
-												contrycityname:"箱根"
-											},
-											{
-												Cityid:1,
-												contrycityname:"京都"
-											},
-											{
-												Cityid:1,
-												contrycityname:"拉萨"
-											},
-											{
-												Cityid:1,
-												contrycityname:"横滨"
-											},
-											{
-												Cityid:1,
-												contrycityname:"札幌"
-											},
-											{
-												Cityid:1,
-												contrycityname:"神户"
-											},
-											{
-												Cityid:1,
-												contrycityname:"福冈"
-											},
-											],
-										},
-										{
-										Countryid:3,
-										countryimg:"//pics.lvjs.com.cn//uploads/pc/place2/2017-07-14/5cdbb665-eda5-47fe-a963-8e9ea3479beb_300_200.jpg",
-										countryname:"泰国",
-										contrycity:[
-											{
-												Cityid:1,
-												contrycityname:"曼谷"
-											},
-											{
-												Cityid:1,
-												contrycityname:"普吉岛"
-											},
-											{
-												Cityid:1,
-												contrycityname:"芭堤雅"
-											},
-											{
-												Cityid:1,
-												contrycityname:"清迈"
-											},
-											{
-												Cityid:1,
-												contrycityname:"清莱"
-											},
-											
-											],
-										},
-										{
-										Countryid:4,
-										countryimg:"//pics.lvjs.com.cn//uploads/pc/place2/2016-02-03/75ce7865-be3d-4d5f-b938-8f9cf19516b9_300_200.jpg",
-										countryname:"韩国",
-										contrycity:[
-											{
-												Cityid:1,
-												contrycityname:"首尔"
-											},
-											{
-												Cityid:1,
-												contrycityname:"斐济岛"
-											},
-											{
-												Cityid:1,
-												contrycityname:"釜山"
-											},
-											{
-												Cityid:1,
-												contrycityname:"仁川"
-											},
-											{
-												Cityid:1,
-												contrycityname:"庆州"
-											},
-											{
-												Cityid:1,
-												contrycityname:"大邱"
-											},
-											],
-										},
-										{
-										Countryid:5,
-										countryimg:"//pics.lvjs.com.cn//uploads/pc/place2/2019-05-15/fe7a3ee2-26af-4899-a4f0-dafd77d9c280_300_200.jpg",
-										countryname:"马来西亚",
-										contrycity:[
-											
-											{
-												Cityid:1,
-												contrycityname:"吉隆坡"
-											},
-											{
-												Cityid:1,
-												contrycityname:"马六甲"
-											},
-											{
-												Cityid:1,
-												contrycityname:"亚庇"
-											},
-											{
-												Cityid:1,
-												contrycityname:"沙巴"
-											},
-											{
-												Cityid:1,
-												contrycityname:"槟城"
-											},
-											{
-												Cityid:1,
-												contrycityname:"兰卡威"
-											},
-											],
-										},
-										{
-										Countryid:6,
-										countryimg:"//pics.lvjs.com.cn//uploads/pc/place2/2019-02-12/ab6de12c-dfcc-4419-ba1b-84adb17bf9f3_300_200.jpg",
-										countryname:"新加坡",
-										contrycity:[
-											
-											{
-												Cityid:1,
-												contrycityname:"新加坡"
-											},
-											
-											],
-										},
-										{
-										Countryid:3,
-										countryimg:"//pics.lvjs.com.cn//uploads/pc/place2/2017-07-14/5cdbb665-eda5-47fe-a963-8e9ea3479beb_300_200.jpg",
-										countryname:"泰国",
-										contrycity:[
-											{
-												Cityid:1,
-												contrycityname:"曼谷"
-											},
-											{
-												Cityid:1,
-												contrycityname:"普吉岛"
-											},
-											{
-												Cityid:1,
-												contrycityname:"芭堤雅"
-											},
-											{
-												Cityid:1,
-												contrycityname:"清迈"
-											},
-											{
-												Cityid:1,
-												contrycityname:"清莱"
-											},
-											
-											],
-										},
-										{
-										Countryid:4,
-										countryimg:"//pics.lvjs.com.cn//uploads/pc/place2/2016-02-03/75ce7865-be3d-4d5f-b938-8f9cf19516b9_300_200.jpg",
-										countryname:"韩国",
-										contrycity:[
-											{
-												Cityid:1,
-												contrycityname:"首尔"
-											},
-											{
-												Cityid:1,
-												contrycityname:"斐济岛"
-											},
-											{
-												Cityid:1,
-												contrycityname:"釜山"
-											},
-											{
-												Cityid:1,
-												contrycityname:"仁川"
-											},
-											{
-												Cityid:1,
-												contrycityname:"庆州"
-											},
-											{
-												Cityid:1,
-												contrycityname:"大邱"
-											},
-											],
-										},
-										{
-										Countryid:5,
-										countryimg:"//pics.lvjs.com.cn//uploads/pc/place2/2019-05-15/fe7a3ee2-26af-4899-a4f0-dafd77d9c280_300_200.jpg",
-										countryname:"马来西亚",
-										contrycity:[
-											
-											{
-												Cityid:1,
-												contrycityname:"吉隆坡"
-											},
-											{
-												Cityid:1,
-												contrycityname:"马六甲"
-											},
-											{
-												Cityid:1,
-												contrycityname:"亚庇"
-											},
-											{
-												Cityid:1,
-												contrycityname:"沙巴"
-											},
-											{
-												Cityid:1,
-												contrycityname:"槟城"
-											},
-											{
-												Cityid:1,
-												contrycityname:"兰卡威"
-											},
-											],
-										},
-									],
-									message: '查询成功'
-								}
-							})
-							const buildcountrylist = Mock.mock(
-							'/api/buildcountrylist', 'get', (req, res) => {
-								return {
-									code: 200,
-									data: [
-										{
-											type:1,
-											Countryid:1,
-											coutryname:"阿富汗",
-											countryenglish:'Afghanistan'
-										},
-										{
-											type:1,
-											Countryid:1,
-											coutryname:"阿富汗",
-											countryenglish:'Afghanistan'
-										},
-										{
-											type:1,
-											Countryid:1,
-											coutryname:"阿富汗",
-											countryenglish:'Afghanistan'
-										}
-									],
-									message: '查询成功'
-								}
-							})
-							const buildyoujilists = Mock.mock(
-							'/api/buildyoujilists', 'get', (req, res) => {
-								return {
-									code: 200,
-									data: [
-										{
-											ThreadDetailid:1,
-											thraedimg:"//pics.lvjs.com.cn//uploads/pc/place2/2018-03-29/4783eb8b-d603-4fc7-98d0-55f0aac4ee50_300_200.jpg",
-											threadtitle:'丽江、香格里拉、梅里雪山双飞6日',
-											threadavter:"http://s3.lvjs.com.cn/uploads/pc/place2/2018-03-29/903bfaf9-a91d-4340-8597-233c818bc03a.jpg",
-											threadtime:'2019-6-5',
-											threadliulan:'256',
-											threadlike:'1458',
-											threadzuozhe:'biu biu',
-											threadtxt:'摄影全线，拍摄梅里雪山不同的瞬间，拍摄经典“日照金顶”景观；尝美食：尼西土鸡+风味藏餐+牦牛肉小火锅+马帮菜+三文鱼宴；品质宿：全程高标酒店+1晚德钦飞来寺观景天堂酒店景观房；赏美景：虎跳峡、松赞林寺、普达措天堂、飞来寺观景梅里雪山。'
-										},
-										{
-											ThreadDetailid:2,
-											thraedimg:"//pics.lvjs.com.cn//uploads/pc/place2/2019-05-10/84c4023b-01c5-47aa-b3ff-23a927cf68ef_300_200.jpg",
-											threadtitle:'新加坡航空，脏鸭餐，情人崖下午茶，玻璃底船，花漾双岛之旅',
-											threadavter:"http://pic.lvmama.com/uploads/pc/place2/2019-05-10/2bb768d8-f938-445e-9e47-0ae37848a6b1_480_320.jpg",
-											threadtime:'2019-8-3',
-											threadliulan:'456',
-											threadlike:'17458',
-											threadzuozhe:'biu love',
-											threadtxt:'当地美食： 生猛脏鸭餐、情人崖下午茶、金巴兰 BBQ,睡得好香： 新加坡当地 ★★★，巴厘岛升级国际连锁 ★★★★,畅玩： 乌布皇宫、乌布传统市场、海神庙、小婆罗浮屠、小印度，'
-										},
-										{
-											ThreadDetailid:3,
-											thraedimg:"//pics.lvjs.com.cn//uploads/pc/place2/2019-01-02/0ba188f5-8d02-4447-8f53-10b8b35f2294_300_200.jpg",
-											threadtitle:'五星温泉酒店、敞篷JEEP车环海旅拍、VIP私人游艇、玉龙雪山大索道',
-											threadavter:"http://pic.lvmama.com/uploads/pc/place2/2018-03-23/bd28cb75-8a9a-4b7c-80d2-8c4a6bb9f57e_480_320.jpg",
-											threadtime:'2019-4-13',
-											threadliulan:'756',
-											threadlike:'7758',
-											threadzuozhe:'波波肥仔',
-											threadtxt:'管家式一对一客服，含往返机票，舒适住宿,全程无忧 ,实力商家，专业接送机，金牌导游,微信管1对1服务 ,赠丽水金沙，渔鹰表演，当地特色餐,赠一晚温泉酒店，石林风景区，雪山大索道，洱海游船，敞篷吉普车环海'
-										}
-									],
-									message: '查询成功'
-								}
-							})
 export default {
 	buildwebswiper,
 	buildpopoverdiv,
@@ -6667,5 +6942,7 @@ export default {
 	buildcontryul,
 	buildcountrylist,
 	buildyoujilists,
+	buildthreadbanner,
+	buildcnpopover
 
 }
