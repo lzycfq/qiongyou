@@ -6916,19 +6916,92 @@ const buildthreadbanner = Mock.mock(
 						    conpic:"http://pic.lvmama.com/uploads/pc/place2/2017-12-29/796fbe4f-d4ec-4c4b-9f60-80cae821a3eb_480_320.jpg"
 						},
 						{
-							conavter:"http://pic.lvmama.com/uploads/pc/place2/2017-12-29/d18e46d7-219d-4856-bcbc-3c81562fcbb9_480_320.jpg",
-							conname:"肥四 biu",
-							condiqu:"迪拜",
-							condianzan:'356',
-							conhour:'5小时',
-							condsc:'皇后岛：瑞典世界文化遗产，素有“瑞典的凡尔赛”之称；维纳恩湖：带着宁静质朴、不加修饰的美；菲耶巴卡小镇：世界十大优美渔村之一，依山傍海的度假胜地；',
-							contxt:'维格朗雕塑主题公园：由生命之桥、生命之源、生命之柱、生命之环组成了雕塑之城；阿克胡斯城堡：中世纪具有代表性的建筑之一，可俯瞰市政厅和奥斯陆市中心的全貌；',
-						    conpic:"http://pic.lvmama.com/uploads/pc/place2/2014-12-10/750f86e6-8eb3-4d3e-8f14-5410a8d92eb3_480_320.jpg"
-						}
+							conavter:"//pics.lvjs.com.cn/pics//uploads/pc/place2/2017-12-29/21415a82-3831-4983-b26c-62f16ff857ee_300_200.jpg",
+							conname:"biu love",
+							condiqu:"泰国",
+							condianzan:'8966',
+							conhour:'1小时',
+							condsc:'吉祥航空787梦幻宽体客机，往返直飞，给您舒适体验,升级住宿4+峡湾特色酒店全程含餐！5菜一汤+特别安排峡湾特色餐+北欧肉丸餐双峡湾+岩石教堂斯德市政厅入内+皇后岛+菲耶巴卡赫尔辛基半天自由活动',
+							contxt:'哈当厄尔峡湾游船：乘船遨游峡湾，两岸奇峰怪石、农田果树令人心神荡漾，忘却尘嚣；沃尔令斯大瀑布：挪威很火瀑布，水幕层层叠叠，声势浩大图尔库：芬兰的古老城市，漫步其中，感受中世纪情怀。',
+						    conpic:"http://pic.lvmama.com/uploads/pc/place2/2017-12-29/796fbe4f-d4ec-4c4b-9f60-80cae821a3eb_480_320.jpg"
+						},
+						{
+							conavter:"//pics.lvjs.com.cn/pics//uploads/pc/place2/2017-12-29/21415a82-3831-4983-b26c-62f16ff857ee_300_200.jpg",
+							conname:"biu love",
+							condiqu:"泰国",
+							condianzan:'8966',
+							conhour:'1小时',
+							condsc:'吉祥航空787梦幻宽体客机，往返直飞，给您舒适体验,升级住宿4+峡湾特色酒店全程含餐！5菜一汤+特别安排峡湾特色餐+北欧肉丸餐双峡湾+岩石教堂斯德市政厅入内+皇后岛+菲耶巴卡赫尔辛基半天自由活动',
+							contxt:'哈当厄尔峡湾游船：乘船遨游峡湾，两岸奇峰怪石、农田果树令人心神荡漾，忘却尘嚣；沃尔令斯大瀑布：挪威很火瀑布，水幕层层叠叠，声势浩大图尔库：芬兰的古老城市，漫步其中，感受中世纪情怀。',
+						    conpic:"http://pic.lvmama.com/uploads/pc/place2/2017-12-29/796fbe4f-d4ec-4c4b-9f60-80cae821a3eb_480_320.jpg"
+						},
+						{
+							conavter:"//pics.lvjs.com.cn/pics//uploads/pc/place2/2017-12-29/21415a82-3831-4983-b26c-62f16ff857ee_300_200.jpg",
+							conname:"biu love",
+							condiqu:"泰国",
+							condianzan:'8966',
+							conhour:'1小时',
+							condsc:'吉祥航空787梦幻宽体客机，往返直飞，给您舒适体验,升级住宿4+峡湾特色酒店全程含餐！5菜一汤+特别安排峡湾特色餐+北欧肉丸餐双峡湾+岩石教堂斯德市政厅入内+皇后岛+菲耶巴卡赫尔辛基半天自由活动',
+							contxt:'哈当厄尔峡湾游船：乘船遨游峡湾，两岸奇峰怪石、农田果树令人心神荡漾，忘却尘嚣；沃尔令斯大瀑布：挪威很火瀑布，水幕层层叠叠，声势浩大图尔库：芬兰的古老城市，漫步其中，感受中世纪情怀。',
+						    conpic:"http://pic.lvmama.com/uploads/pc/place2/2017-12-29/796fbe4f-d4ec-4c4b-9f60-80cae821a3eb_480_320.jpg"
+						},
 					],
 					message: '查询成功'
 				}
 			})
+			const buildjieban = Mock.mock(
+				'/api/buildjieban', 'get', (req, res) => {
+					return {
+						code: 200,
+						data: [
+						    {
+							jiebanavter:"//pic.lvmama.com/uploads/pc/place2/2019-03-24/e086b2bd-f11f-4456-aa1c-2b43a5fbf06b_480_320.jpg",
+							jiebanname:"情怀 love",
+							jiebanliulan:'12536',
+							jiebanhuifu:'2563',
+							jiebantime:'15分钟',
+							jiebantxt:'旅游攻略论坛：结伴同游6月法国1女求捡或被捡！ 觅靠谱小伙伴拼吃拼玩拼车拼住宿。自由行经验丰富',
+							jiebanchufa:'2019-6-1',
+							jiebanfancheng:'2019-6-9',
+							jiebanmudi:'卢瓦尔河谷、巴黎'
+						    },
+							 {
+							jiebanavter:"//pic.lvmama.com/uploads/pc/place2/2019-03-24/e086b2bd-f11f-4456-aa1c-2b43a5fbf06b_480_320.jpg",
+							jiebanname:"情怀 love",
+							jiebanliulan:'12536',
+							jiebanhuifu:'2563',
+							jiebantime:'15分钟',
+							jiebantxt:'旅游攻略论坛：结伴同游6月法国1女求捡或被捡！ 觅靠谱小伙伴拼吃拼玩拼车拼住宿。自由行经验丰富',
+							jiebanchufa:'2019-6-1',
+							jiebanfancheng:'2019-6-9',
+							jiebanmudi:'卢瓦尔河谷、巴黎'
+							},
+							 {
+							jiebanavter:"//pic.lvmama.com/uploads/pc/place2/2019-03-24/e086b2bd-f11f-4456-aa1c-2b43a5fbf06b_480_320.jpg",
+							jiebanname:"情怀 love",
+							jiebanliulan:'12536',
+							jiebanhuifu:'2563',
+							jiebantime:'15分钟',
+							jiebantxt:'旅游攻略论坛：结伴同游6月法国1女求捡或被捡！ 觅靠谱小伙伴拼吃拼玩拼车拼住宿。自由行经验丰富',
+							jiebanchufa:'2019-6-1',
+							jiebanfancheng:'2019-6-9',
+							jiebanmudi:'卢瓦尔河谷、巴黎'
+							},
+							 {
+							jiebanavter:"//pic.lvmama.com/uploads/pc/place2/2019-03-24/e086b2bd-f11f-4456-aa1c-2b43a5fbf06b_480_320.jpg",
+							jiebanname:"情怀 love",
+							jiebanliulan:'12536',
+							jiebanhuifu:'2563',
+							jiebantime:'15分钟',
+							jiebantxt:'旅游攻略论坛：结伴同游6月法国1女求捡或被捡！ 觅靠谱小伙伴拼吃拼玩拼车拼住宿。自由行经验丰富',
+							jiebanchufa:'2019-6-1',
+							jiebanfancheng:'2019-6-9',
+							jiebanmudi:'卢瓦尔河谷、巴黎'
+							}
+						],
+						message: '查询成功'
+					}
+				})
 export default {
 	buildwebswiper,
 	buildpopoverdiv,
@@ -6982,6 +7055,7 @@ export default {
 	buildcountrylist,
 	buildyoujilists,
 	buildthreadbanner,
-	buildcnpopover
+	buildcnpopover,
+	buildjieban
 
 }
