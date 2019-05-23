@@ -139,7 +139,7 @@
 			<div class="thread_questionlist">
 				<el-tabs style="height: auto;">
 					<el-tab-pane label="游记策略">
-						<div class="yl-con yls" v-for="(item,index) in con" :key='index'>
+						<div class="yl-con yls" :class="index===con.length-1?'last-yl-cons':''" v-for="(item,index) in con" :key='index'>
 							<i class="ylc-line ylcl"></i>
 							<div class="con-inner xfix">
 								<router-link to="" class="anchtoup">
@@ -172,12 +172,13 @@
 						<a class="tab-load" v-if="page<page_count" @click='loadMore'>点击加载更多</a>
 						<a class="tab-load" v-else>没有更多了</a>
 					</el-tab-pane>
-					<el-tab-pane label="结伴同游" ref="testH" >
+					<el-tab-pane label="结伴同游"  >
 						<p class="jy-tips">
 							<i class="inbg jyts"></i>我想约上你，一起看世界<span class="ytsplit">|</span>
 							<router-link to='' class="yt-a" target="_blank">更多待约穷游er<i class="inbg lfci"></i></router-link>
 						</p>
-						<div class="yl-con" v-for="(item,index) in jieban" id="testH" :key="index" :style="domheight()" :class="index===jieban.length-1?'last-yl-con':''" >
+						<div class="yl-con" v-for="(item,index) in jieban" ref="testH" :key="index"
+						:class="index===jieban.length-1?'last-yl-con':''"> <!-- :style="domheight()" -->
 							<i class="ylc-line ylcl"></i>
 							<div class="con-inner xfix">
 								<router-link to='' class="anchtoup"><img class="con-pic" :src="item.jiebanavter" /></router-link>
@@ -299,7 +300,7 @@
 			buildthreadbanner() {
 				this.axios.get('/api/buildthreadbanner').then(res => {
 					this.threadbanner = res.data.data
-					console.log(res)
+					
 				}).catch(function(error) {
 					console.log(error)
 				})
@@ -307,7 +308,7 @@
 			buildcnpopover() {
 				this.axios.get('/api/buildcnpopover').then(res => {
 					this.cnpopover = res.data.data
-					console.log(res)
+				
 				}).catch(function(error) {
 					console.log(error)
 				})
@@ -315,7 +316,7 @@
 			buildcon() {
 				this.axios.get('/api/buildcon').then(res => {
 					this.con = res.data.data
-					console.log(res)
+					
 				}).catch(function(error) {
 					console.log(error)
 				})
@@ -324,7 +325,7 @@
 			buildjieban() {
 				this.axios.get('/api/buildjieban').then(res => {
 					this.jieban = res.data.data
-					console.log(res)
+				
 				}).catch(function(error) {
 					console.log(error)
 				})
@@ -336,22 +337,29 @@
 						'current_page': this.page, //请求页面					
 					},
 				}).then(res => {
-					console.log(res)
+					
 					this.con = this.con.concat(res.data.con); //将请求回来的数据和上一次进行组合
 				}).catch(err => {
 					this.$toast.fail("系统开小差,请重试");
 				});
 
 			},
-			domheight() {
-				let lastheight = this.$refs.jieban.$refs.textH.offsetHeight;
-				//let lastlength = this.jieban.length - 1;
-				// let o = document.getElementsById("last-yl-con");
-				// let o = document.getElementById("testH");
-				console.log(lastheight);
+
+
+			getHeightList(){
+			 var o = document.getElementsByClassName("last-yl-con");
+			// //var h = o.offsetHeight;
+			 console.log(o);
+
 			
 			}
 		},
+		mounted(){
+			  this.$nextTick(() => {
+			
+			 this.getHeightList();
+			  });
+			},
 		components: {
 			headers,
 			Swiper
@@ -409,6 +417,7 @@
 			.yl-con {
 				position: relative;
 				padding: 17px 0 20px;
+			
 
 				.xcfb {
 					clear: both;
@@ -491,7 +500,16 @@
 		height: 100%;
 		border-left: 1px solid #ececec;
 	}
-
+// .last-yl-con .ylc-line {
+// 		position: absolute;
+// 		left: 23px;
+// 		top: 30px;
+// 		height: 76.5%;
+// 		border-left: 1px solid black;
+// 	}
+.last-yl-cons .ylc-line {
+	display: none;
+}
 	.yl-con .xfix:after,
 	.yl-con .xfix:before {
 		content: "";
@@ -701,13 +719,7 @@
 		border: #10b041 1px solid;
 	}
 
-	.yls:nth-last-child(1) .ylc-line {
-		display: none;
-	}
-
-	.yly:last-child .ylc-line {
-		height: 162px;
-	}
+	
 
 	// .yl-con .ylc-line:last-child{
 	// 	display: none;
