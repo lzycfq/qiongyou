@@ -172,13 +172,13 @@
 						<a class="tab-load" v-if="page<page_count" @click='loadMore'>点击加载更多</a>
 						<a class="tab-load" v-else>没有更多了</a>
 					</el-tab-pane>
-					<el-tab-pane label="结伴同游"  >
+					<el-tab-pane label="结伴同游">
 						<p class="jy-tips">
 							<i class="inbg jyts"></i>我想约上你，一起看世界<span class="ytsplit">|</span>
 							<router-link to='' class="yt-a" target="_blank">更多待约穷游er<i class="inbg lfci"></i></router-link>
 						</p>
-						<div class="yl-con" v-for="(item,index) in jieban" ref="testH" :key="index"
-						:class="index===jieban.length-1?'last-yl-con':''"> <!-- :style="domheight()" -->
+						<div class="yl-con" v-for="(item,index) in jieban" ref="testH" :key="index" :class="index===jieban.length-1?'last-yl-con':''">
+							<!-- :style="domheight()" -->
 							<i class="ylc-line ylcl"></i>
 							<div class="con-inner xfix">
 								<router-link to='' class="anchtoup"><img class="con-pic" :src="item.jiebanavter" /></router-link>
@@ -215,14 +215,120 @@
 							</div>
 						</div>
 					</el-tab-pane>
-					<el-tab-pane label="版面列表">角色管理</el-tab-pane>
-
+					<el-tab-pane label="版面列表">
+						<div class="yl-con" v-for="(item,index) in zlcli" :key="index" :data-index='index'>
+							<!-- 返回一个字符判断检测 -->
+							<h3 class="zlc-tle" :data-index='index'>{{item.zlctitle}}</h3>
+							<li class="zlcli" v-for="(item,index) in item.zlclicontent" :key="index">
+								<router-link to=' ' class="zlc-pic"><img :src="item.zlcpic" width="48" height="48" alt="item.zlcname"></router-link>
+								<div class="zlc-dest">
+									<router-link to=' ' class="zlc-name">{{item.zlcname}}</router-link>
+									<p>{{item.zlctxt}}</p>
+								</div>
+							</li>
+						</div>
+					</el-tab-pane>
 				</el-tabs>
 			</div>
+			<div class="lc-fr">
+				<div class="fr-login">
+					<!-- v-if="isLogin()" -->
+					<!-- 判断是否登录显示不同div -->
+					<div class="reg-fir">
+						<p class="rf-des">加入穷游社区<br>和80,000,000穷游er在一起<br>发现最世界</p>
+						<router-link to="" class="rf-reg">注册穷游</router-link>
+						<p class="rf-login">已有账号？立即<router-link to="" class="rfl-lg">登录</router-link>
+						</p>
+						<p class="rf-oth">或通过第三方登录<img class="rf-icon" src="../../../assets/images/qiongyou/weibo.png"> <img class="rf-icon"
+							 src="../../../assets/images/qiongyou/qq.png"> <img class="rf-icon" src="../../../assets/images/qiongyou/weixin.png"></p>
+					</div><!-- reg-fir -->
+					<div style="clear: both;"></div>
+					<div class="reg-sec">
+						<img src="../../../assets/images/qiongyou/d1.png" width="44px" height="44px" class="reg-sec-img" />
+						<div class="rs-co">
+							<p>在手机上看帖结伴</p>
+							<p class="rc-an">
+								<router-link to=''>iPhone</router-link><span class="rca-line">|</span>
+								<router-link to=''>Android</router-link>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="fr-userinfo">
+					<!-- v-else -->
+					<div class="fr-user">
+						<div class="ui-des">
+							<router-link to=''><img class="ud-pic" src="http://pic.qyer.com/avatar/6.png?v=0"></router-link>
+							<div class="ud-con">
+								<router-link to=''>sbapple</router-link>
+								<p class="udc-bs">
+									<span class="index-tooltip"><img width="13px" height="13px" src="../../../assets/images/qiongyou/dianzan.png" /><strong
+										 class="xnum">0</strong></span>
+									<span class="index-tooltip"><img width="14px" height="14px" src="../../../assets/images/qiongyou/lovewhite.png" /><strong
+										 class="xnum">0</strong></span>
+								</p>
+								<p class="udc-sf">新进弟子</p>
+							</div>
+							<div style="clear: both;"></div>
+						</div><!-- ui-des -->
+						<div class="infotab">
+							<el-tabs>
+								<el-tab-pane label="我的社区">
+									<ul class="ut-fir">
+										<li>
+											<router-link to="">我的收藏<b class="xnum">0</b></router-link>
+										</li>
+										<li>
+											<router-link to="">我的草稿<b class="xnum">0</b></router-link>
+										</li>
+										<li>
+											<router-link to="">我的全部帖子<b class="xnum">0</b></router-link>
+										</li>
+										<li>
+											<router-link to="">我的回复<b class="xnum">0</b></router-link>
+										</li>
+									</ul>
+								</el-tab-pane>
+								<el-tab-pane label="浏览历史">
+									<ul class="ut-sec">
+										<li>
+											<router-link to=''>葡萄夫妇游日本【南北九州枫叶季超强实用攻略】福冈|佐贺|鹿儿岛|指宿|熊本|由布院|别府，附大久野岛详细攻略，客路体验</router-link>
+										</li>
+									</ul>
+								</el-tab-pane>
+							</el-tabs>
+						</div><!-- infotab -->
+					</div>
+				</div>
+				<div class="huodong">
+					<p class="huodong-title">活动社区
+						<span class="morehuodong">更多<i class="el-icon-d-arrow-right"></i></span></p>
+					<router-link to="" class="huodongtu"><img src="https://pic.qyer.com/album/user/3249/66/QktRSxwBYk0/index/270x125"
+						 alt="" /></router-link>
+					<router-link to="" class="huodongtu"><img src="https://pic.qyer.com/album/user/3249/66/QktRSxwBYk0/index/270x125"
+						 alt="" /></router-link>
+
+				</div>
+				<div class="huodongs">
+					<p class="huodong-title">可能感兴趣的人
+						<span class="morehuodong">换一换<i class="el-icon-refresh"></i></span></p>
+					<ul>
+						<li class="huodong-intersting">
+							<img src="https://pic.qyer.com/avatar/003/39/23/14/200?v=0" class="inimg" />
+							<div class="huodong-dsc">
+								<p class="miic-nm">奶油红烧肉<img src="//common1.qyerstatic.com/bbs/old/images/index/at_member.png" width="13px"
+									 height="13px" /><span>+关注</span></p>
+								<p class="ielli">穷游精华作者</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div><!-- lc-fr -->
 		</div>
-
-
+		<div style="clear: both;"></div>
+		<p>打印:{{token }}</p>
 	</el-col>
+
 </template>
 
 <script>
@@ -232,13 +338,13 @@
 	export default {
 		name: 'Thread',
 		data() {
-
 			return {
 				threadbanner: [],
 				cnpopover: [],
 				con: [],
 				jieban: [],
-				page: 1,
+				zlcli: [],
+				page: 1,				
 				page_count: '',
 
 			}
@@ -295,12 +401,21 @@
 			this.buildcnpopover();
 			this.buildcon();
 			this.buildjieban();
+			this.buildzlcli();
+			
+		},
+		computed: {
+			buildcount() {
+				alert(this.$store.state.token)
+				return this.$store.state.token ||'2016-01-04'
+
+			}
 		},
 		methods: {
 			buildthreadbanner() {
 				this.axios.get('/api/buildthreadbanner').then(res => {
 					this.threadbanner = res.data.data
-					
+
 				}).catch(function(error) {
 					console.log(error)
 				})
@@ -308,7 +423,7 @@
 			buildcnpopover() {
 				this.axios.get('/api/buildcnpopover').then(res => {
 					this.cnpopover = res.data.data
-				
+
 				}).catch(function(error) {
 					console.log(error)
 				})
@@ -316,7 +431,7 @@
 			buildcon() {
 				this.axios.get('/api/buildcon').then(res => {
 					this.con = res.data.data
-					
+
 				}).catch(function(error) {
 					console.log(error)
 				})
@@ -325,7 +440,14 @@
 			buildjieban() {
 				this.axios.get('/api/buildjieban').then(res => {
 					this.jieban = res.data.data
-				
+
+				}).catch(function(error) {
+					console.log(error)
+				})
+			},
+			buildzlcli() {
+				this.axios.get('/api/buildzlcli').then(res => {
+					this.zlcli = res.data.data
 				}).catch(function(error) {
 					console.log(error)
 				})
@@ -337,72 +459,378 @@
 						'current_page': this.page, //请求页面					
 					},
 				}).then(res => {
-					
+
 					this.con = this.con.concat(res.data.con); //将请求回来的数据和上一次进行组合
 				}).catch(err => {
 					this.$toast.fail("系统开小差,请重试");
 				});
 
 			},
-
-
-			getHeightList(){
-			 var o = document.getElementsByClassName("last-yl-con");
-			// //var h = o.offsetHeight;
-			 console.log(o);
-
-			
+			getHeightList() {
+				var o = document.getElementsByClassName("last-yl-con").offsetHeight;
+				console.log(o);
 			}
 		},
-		mounted(){
-			  this.$nextTick(() => {
-			
-			 this.getHeightList();
-			  });
-			},
+		mounted() {
+			this.$nextTick(() => {
+
+				this.getHeightList();
+			});
+		},
 		components: {
 			headers,
-			Swiper
+			Swiper,
+
 		},
 	}
 </script>
 
 <style lang="scss">
-	.jy-tips {
-		margin-bottom: 8px;
-		font-size: 14px;
-		color: #636363;
+	.huodongs {
+		margin-top: 30px;
 
-		.jyts {
-			width: 16px;
-			height: 12px;
-			margin-right: 8px;
-			background-position: -53px -271px;
+
+		.huodong-title {
+			margin-bottom: 20px;
+			font-size: 20px;
+			color: #323232;
+
+			.morehuodong {
+				float: right;
+				color: #10b041;
+				margin-top: 6px;
+			}
 		}
 
-		.ytsplit {
-			color: #ececec;
-			margin: 0 8px;
+		.huodong-intersting {
+			position: relative;
+			padding-bottom: 16px;
+			margin-bottom: 10px;
+			list-style: none;
+			border: 1px solid #ececec;
+
+			.inimg {
+				display: inline-block;
+				width: 48px;
+				height: 48px;
+				position: relative;
+				top: 10px;
+				margin-left: 15px;
+				border: 3px solid #f5f5f5;
+				border-radius: 50%;
+			}
+
+			.huodong-dsc {
+				width: 160px;
+				display: inline-block;
+				margin-left: 5px;
+
+				.miic-nm {
+					color: #959595;
+					margin-bottom: 5px;
+
+					span {
+						float: right;
+						color: #10b041;
+					}
+				}
+
+				.ielli {
+					color: #323232;
+				}
+			}
+		}
+	}
+
+	.thread_question .lc-fr {
+		float: right;
+		margin: 0px 0 0 22px;
+		width: 260px;
+
+		.fr-login {
+			border: 1px solid #ececec;
+			border-radius: 2px;
+			overflow: hidden;
+
+			.reg-fir {
+				overflow: hidden;
+				width: 268px;
+				height: 260px;
+				background-size: cover;
+				background: url(//common1.qyerstatic.com/bbs/old/images/index/regbg.png) no-repeat 50%;
+
+				.rf-des {
+					padding: 25px 0 0px 25px;
+					color: white;
+					line-height: 26px;
+					font-size: 16px;
+				}
+
+				.rf-reg {
+					display: block;
+					margin: 16px 0 0 22px;
+					width: 104px;
+					line-height: 34px;
+					border: 1px solid #fff;
+					border-radius: 3px;
+					text-align: center;
+					font-size: 16px;
+					color: #fff;
+					text-decoration: none;
+				}
+
+				//rf-reg
+				.rf-login {
+					font-size: 12px;
+					margin: 35px 0 0 22px;
+					color: #f5f5f5;
+
+					.rfl-lg {
+						color: #10b041;
+						font-weight: 500;
+						margin-left: 5px;
+						font-size: 12px;
+
+					}
+				}
+
+				//rf-login
+				.rf-oth {
+					color: #f5f5f5;
+					font-size: 12px;
+					margin: 5px 0 0 22px;
+
+					.rf-icon {
+						vertical-align: middle;
+						margin-left: 10px;
+
+						border: #f5f5f5 1px solid;
+						border-radius: 50px;
+					}
+				}
+			}
+
+			.reg-sec {
+				padding: 22px 0 21px 23px;
+				margin-bottom: 43px;
+
+
+
+				.reg-sec-img {
+					float: left;
+
+				}
+
+				.rs-co {
+					float: left;
+					margin-left: 10px;
+
+					p {
+						margin-top: 2px;
+						font-size: 12px;
+					}
+
+					.rc-an {
+						margin-top: 5px;
+						color: #d7d7d7;
+						font-size: 12px;
+
+						a {
+							font-size: 12px;
+							color: #10b041;
+						}
+
+						.rca-line {
+							margin: 0 7px;
+						}
+					}
+
+				}
+			}
+
+			//.reg-sec
+
 		}
 
-		.yt-a {
+		.fr-userinfo {
+			border: 1px solid #ececec;
+			border-radius: 2px;
+			overflow: hidden;
+
+			.ui-des {
+				margin: 22px 0 15px 22px;
+				clear: both;
+
+				.ud-pic {
+					width: 80px;
+					height: 80px;
+					float: left;
+					border-radius: 50%;
+
+				}
+
+				//ui-des
+				.ud-con {
+					margin-left: 5px;
+					width: 90px;
+					float: left;
+
+					a {
+						color: #10b041;
+					}
+
+					.index-tooltip {
+						display: inline-block;
+						margin: 5px 7px 7px 0;
+						min-width: 36px;
+						color: white;
+						background-color: #10b041;
+						line-height: 16px;
+						border-radius: 8px;
+
+						img {
+							vertical-align: text-top;
+							margin-left: 5px;
+							margin-right: 2px;
+						}
+					}
+				}
+			}
+		}
+
+		.ut-fir {
+			margin: 15px 0 0 26px;
+			padding-bottom: 20px;
+			font-size: 14px;
+			line-height: 36px;
+			list-style: none;
+
+			a {
+
+				color: #959595;
+				text-decoration: none;
+
+			}
+
+			.xnum {
+				display: inline-block;
+				background-color: #f5f5f5;
+				padding: 0 10px;
+				border-radius: 10px;
+				font-weight: 400;
+				line-height: 20px;
+				vertical-align: 1px;
+				margin-left: 10px;
+				color: #323232;
+			}
+		}
+
+		.ut-sec {
+			padding: 14px 0 15px 32px;
+			line-height: 26px;
+			list-style-type: disc;
+			color: #959595;
+
+			a {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				display: block;
+				color: #959595;
+			}
+		}
+
+		.huodong {
+			margin-top: 30px;
+			border-bottom: 1px solid #ececec;
+
+			.huodong-title {
+				margin-bottom: 20px;
+				font-size: 20px;
+				color: #323232;
+
+				.morehuodong {
+					float: right;
+					color: #10b041;
+					margin-top: 6px;
+				}
+			}
+
+			.huodongtu img {
+
+				margin-bottom: 39px;
+				width: 260px;
+
+			}
+		}
+
+		//huodong
+	}
+
+	.fr-userinfo .infotab {
+		/deep/ .el-tabs__item {
+			padding: 0 !important;
+			width: 129px;
+			text-align: center;
+			border-right: 1px solid #ececec;
+		}
+	}
+
+	.fr-userinfo .infotab {
+		/deep/ .el-tabs__item.is-active {
 			color: #10b041;
 		}
-
 	}
 
-	.clearfix:after {
-		display: block;
-		font-size: 0;
-		height: 0;
+	.fr-userinfo .infotab {
+		/deep/ .el-tabs__item:hover {
+			color: #10b041;
+		}
 	}
 
-	.clearfix:after,
-	.q-layer-header:after,
-	.q-layer-message .layer-msg-tab ul:after {
-		visibility: hidden;
-		content: " ";
-		clear: both;
+	.fr-userinfo .infotab {
+		/deep/ .el-tabs__active-bar {
+			background-color: #10b041;
+			width: 129px !important;
+
+		}
+	}
+
+	.yl-con .zlc-tle {
+		padding: 0 10px;
+		border-left: 2px #10b041 solid;
+		font-weight: 500;
+		font-size: 20px;
+		color: #323232;
+		margin: 0px 0 20px;
+	}
+
+	.yl-con .zlcli {
+		list-style: none;
+		float: left;
+		width: 226px;
+		padding-bottom: 35px;
+
+		.zlc-pic {
+			float: left;
+			margin-right: 6px;
+		}
+
+		.zlc-dest {
+			float: left;
+
+			a {
+				font-size: 14px;
+				color: #323232;
+				line-height: 16px;
+			}
+
+			p {
+				margin-top: 5px;
+				width: 130px;
+				line-height: 14px;
+			}
+		}
 	}
 
 	.thread_question {
@@ -417,7 +845,7 @@
 			.yl-con {
 				position: relative;
 				padding: 17px 0 20px;
-			
+				clear: both;
 
 				.xcfb {
 					clear: both;
@@ -500,16 +928,19 @@
 		height: 100%;
 		border-left: 1px solid #ececec;
 	}
-// .last-yl-con .ylc-line {
-// 		position: absolute;
-// 		left: 23px;
-// 		top: 30px;
-// 		height: 76.5%;
-// 		border-left: 1px solid black;
-// 	}
-.last-yl-cons .ylc-line {
-	display: none;
-}
+
+	.last-yl-con .ylc-line {
+		display: none;
+	}
+
+	.last-yl-con .tlec-cd {
+		border-left: 1px #ececec solid !important;
+	}
+
+	.last-yl-cons .ylc-line {
+		display: none;
+	}
+
 	.yl-con .xfix:after,
 	.yl-con .xfix:before {
 		content: "";
@@ -719,7 +1150,42 @@
 		border: #10b041 1px solid;
 	}
 
-	
+	.jy-tips {
+		margin-bottom: 8px;
+		font-size: 14px;
+		color: #636363;
+
+		.jyts {
+			width: 16px;
+			height: 12px;
+			margin-right: 8px;
+			background-position: -53px -271px;
+		}
+
+		.ytsplit {
+			color: #ececec;
+			margin: 0 8px;
+		}
+
+		.yt-a {
+			color: #10b041;
+		}
+
+	}
+
+	.clearfix:after {
+		display: block;
+		font-size: 0;
+		height: 0;
+	}
+
+	.clearfix:after,
+	.q-layer-header:after,
+	.q-layer-message .layer-msg-tab ul:after {
+		visibility: hidden;
+		content: " ";
+		clear: both;
+	}
 
 	// .yl-con .ylc-line:last-child{
 	// 	display: none;

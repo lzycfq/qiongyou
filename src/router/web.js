@@ -74,8 +74,14 @@ export default new Router({
 			name: 'Thread',//:id
 			component(resolve) {
 				require(['../pages/web/Thread/Thread'], resolve)
-			}
-		},
+			},
+		// 	 meta: {
+  //       requireAuth: true,  // 添加该字段，表示进入这个路由是需要登录的
+  //     },
+  //   },
+  //   { path: '*', component: P404 }  //这里是保证错误地址会跳转到404界面进行提示
+		// },
+		}
 	],
 
 	scrollBehavior(to, from, savedPosition) {

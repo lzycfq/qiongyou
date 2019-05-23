@@ -6590,422 +6590,660 @@ const buildthreadbanner = Mock.mock(
 		return {
 			code: 200,
 			data: [{
-					threadbannerimg:"http://pic.lvmama.com/uploads/pc/place2/2017-12-05/60075c3b-ef6a-450e-9000-4cfe4e42ab48_480_320.jpg",
-					threadbannerdsc:"体验正宗日式泡汤之乐,日式烤肉、温泉料理、日式火锅大饱口福,夏日浪漫赏花- 山中湖花之都公园",
-					threadbannerzuozhe:"chui qiu",
-					threadbanneravter:"//pics.lvjs.com.cn//uploads/pc/place2/2017-02-23/1dcbe67f-f58b-4ebd-9b62-689d8d5e50e0_300_200.jpg",
+					threadbannerimg: "http://pic.lvmama.com/uploads/pc/place2/2017-12-05/60075c3b-ef6a-450e-9000-4cfe4e42ab48_480_320.jpg",
+					threadbannerdsc: "体验正宗日式泡汤之乐,日式烤肉、温泉料理、日式火锅大饱口福,夏日浪漫赏花- 山中湖花之都公园",
+					threadbannerzuozhe: "chui qiu",
+					threadbanneravter: "//pics.lvjs.com.cn//uploads/pc/place2/2017-02-23/1dcbe67f-f58b-4ebd-9b62-689d8d5e50e0_300_200.jpg",
 				},
 				{
-					threadbannerimg:"http://pic.lvmama.com/uploads/pc/place2/2017-03-23/ee690612-66f9-4ff2-a3ec-26c547aa2ec2_480_320.jpg",
-					threadbannerdsc:"东急酒店，对面即是大街道和三越百货，代购圣地，放心买买买",
-					threadbannerzuozhe:"国爱媛",
-					threadbanneravter:"http://pic.lvmama.com/uploads/pc/place2/2017-03-23/f9f1c526-1732-4536-8720-d9fa8cbd5fa3_480_320.jpg",
+					threadbannerimg: "http://pic.lvmama.com/uploads/pc/place2/2017-03-23/ee690612-66f9-4ff2-a3ec-26c547aa2ec2_480_320.jpg",
+					threadbannerdsc: "东急酒店，对面即是大街道和三越百货，代购圣地，放心买买买",
+					threadbannerzuozhe: "国爱媛",
+					threadbanneravter: "http://pic.lvmama.com/uploads/pc/place2/2017-03-23/f9f1c526-1732-4536-8720-d9fa8cbd5fa3_480_320.jpg",
 				},
 				{
-					threadbannerimg:"//pics.lvjs.com.cn//uploads/pc/place2/2018-10-24/8af2205c-8f86-4049-845a-19b617b2b4a3_300_200.jpg",
-					threadbannerdsc:"畅游城市: 大阪/奈良/富士山/东京环球影城 (已含门票)，自由畅玩不少于6小时寿司DIY",
+					threadbannerimg: "//pics.lvjs.com.cn//uploads/pc/place2/2018-10-24/8af2205c-8f86-4049-845a-19b617b2b4a3_300_200.jpg",
+					threadbannerdsc: "畅游城市: 大阪/奈良/富士山/东京环球影城 (已含门票)，自由畅玩不少于6小时寿司DIY",
 
-					threadbannerzuozhe:"瘪子三强",
-					threadbanneravter:"http://pic.lvmama.com/uploads/pc/place2/2018-10-24/02a20c99-9477-480c-9faa-84c63a4774c0_480_320.jpg",
+					threadbannerzuozhe: "瘪子三强",
+					threadbanneravter: "http://pic.lvmama.com/uploads/pc/place2/2018-10-24/02a20c99-9477-480c-9faa-84c63a4774c0_480_320.jpg",
 				}
 			],
 			message: '查询成功'
 		}
 	})
-	
-	const buildcnpopover = Mock.mock(
-		'/api/buildcnpopover', 'get', (req, res) => {
-			return {
-				code: 200,
-				data: [
-					{
-			
-						cnpopovertd:[
-							{
-								cnxingqus:'结伴同游',
-								cnxingqu:'旅行视频',
-							},
-							{
-								cnxingqus:'签证',
-								cnxingqu:'旅行摄影',
-							
-							},
-							{
-								cnxingqus:'保险',
-								cnxingqu:'户外运动',
-							
-							},
-							{
-								cnxingqus:'旅行购物',
-								cnxingqu:'潜水俱乐部',
-							
-							},
-							{
-								cnxingqus:'穷游折扣',
-								cnxingqu:'带孩子旅行',
-							
-							},
-							{
-								cnxingqus:'睡遍全球',
-								cnxingqu:'带父母旅行',
-							
-							},
-							{
-								cnxingqus:'邮轮',
-								cnxingqus:'明信片',
-							
-							},
-							{
-								cnxingqus:'航空',
-								cnxingqu:'路刻社',
-							
-							},
-							{
-								cnxingqus:'自驾',
-								cnxingqu:'Discovery探索频道',
-							
-							}
-						],
-						cnpopoverli:[
-							{
-								cnpopoverliname:"穷游活动"
-							},
-							{
-								cnpopoverliname:"穷游er访谈"
-							},
-							{
-								cnpopoverliname:"穷游沙龙"
-							},
-							{
-								cnpopoverliname:"轻年计划"
-							},
-							{
-								cnpopoverliname:"城市漫步"
-							}
-						],
 
-						cnpopoverouzhou:[
-							{
-								cnxingquouzhous:'环游欧洲',
-								cnxingquouzhou:'法国/摩纳哥',
-							
-							},
-							{
-								cnxingquouzhous:'德国',
-								cnxingquouzhou:'瑞士/列支敦士登',
-							
-							},
-							{
-								cnxingquouzhous:'奥地利/捷克',
-								cnxingquouzhou:'斯洛伐克/匈牙利',
-							
-							},
-							{
-								cnxingquouzhous:'西班牙/葡萄牙',
-								cnxingquouzhou:'安道尔/希腊',
-							
-							},
-							{
-								cnxingquouzhous:'塞浦路斯/意大利',
-								cnxingquouzhou:'梵蒂冈/圣马力诺',
-							
-							},
-							{
-								cnxingquouzhous:'比利时/卢森堡',
-								cnxingquouzhou:'波兰/立陶宛',
-							
-							},
-							{
-								cnxingquouzhous:'挪威/瑞典',
-								cnxingquouzhou:'芬兰/丹麦',
-							
-							},
-							{
-								cnxingquouzhous:'拉脱维亚/爱沙尼亚',
-								cnxingquouzhou:'爱尔兰/荷兰',
-							
-							},
-							{
-								cnxingquouzhous:'马耳他/英国',
-								cnxingquouzhou:'俄罗斯/乌克兰',
-							
-							},
-							{
-								cnxingquouzhous:'马耳他/英国',
-								cnxingquouzhou:'白俄罗斯',
-							
-							},
-							{
-								cnxingquouzhous:'欧洲交通',
-								cnxingquouzhou:'土耳其',
-							
-							},
-							{
-								cnxingquouzhous:'东欧平原',
-								cnxingquouzhou:'土耳其海峡',
-							
-							},
-							{
-								cnxingquouzhous:'地中海',
-								cnxingquouzhou:'爱琴海',
-							
-							}
-						],
-						cnpopoveryazhou:[
-							{
-								cnxingquyazhous:"环游亚洲",
-								cnxingquyazhou:"中国",
-								
-							},
-							{
-								cnxingquyazhous:"韩国/朝鲜",
-								cnxingquyazhou:"台湾",
-								
-							},
-							{
-								cnxingquyazhous:"香港/澳门",
-								cnxingquyazhou:"泰国",
-								
-							},
-							{
-								cnxingquyazhous:"越南",
-								cnxingquyazhou:"缅甸",
-								
-							},
-							{
-								cnxingquyazhous:"马来西亚/文莱",
-								cnxingquyazhou:"新加坡",
-								
-							},
-							{
-								cnxingquyazhous:"柬埔寨/印度",
-								cnxingquyazhou:"哈萨克斯坦",
-								
-							},
-							{
-								cnxingquyazhous:"韩国/朝鲜",
-								cnxingquyazhou:"蒙古",
-								
-							},
-							{
-								cnxingquyazhous:"吉尔杰斯坦/伊朗",
-								cnxingquyazhou:"迪拜",
-								
-							},
-							{
-								cnxingquyazhous:"新几内亚/马尔代夫",
-								cnxingquyazhou:"孟加拉/阿联酋",
-								
-							},
-							{
-								cnxingquyazhous:"以色列/东坟帝",
-								cnxingquyazhou:"斐济岛",
-								
-							},
-							{
-								cnxingquyazhous:"阿富汗/乌兹别克斯坦",
-								cnxingquyazhou:"越南",
-								
-							},
-							{
-								cnxingquyazhous:"不丹",
-								cnxingquyazhou:"阿塞拜疆",
-								
-							},
-							{
-								cnxingquyazhous:"科威特",
-								cnxingquyazhou:"叙利亚",
-								
-							},
-							{
-								cnxingquyazhous:"亚美尼亚",
-								cnxingquyazhou:"巴基斯坦",
-								
-							},
-							{
-								cnxingquyazhous:"也门",
-								cnxingquyazhou:"约旦/沙特阿拉伯",
-								
-							},
-							{
-								cnxingquyazhous:"卡塔尔/马来西亚",
-								cnxingquyazhou:"吉尔吉斯斯坦",
-								
-							},
-							{
-								cnxingquyazhous:"土库曼斯坦",
-								cnxingquyazhou:"巴勒斯坦/格鲁吉亚",
-								
-							},
-						],
-						cnpopovermeizhou:[
-							{
-								cnpopovermeizhouname:"美国"
-							},
-							{
-								cnpopovermeizhouname:"加拿大"
-							},
-							{
-								cnpopovermeizhouname:"墨西哥"
-							},
-							{
-								cnpopovermeizhouname:"古巴"
-							}
-						],
-						cnpopoverfeizhou:[
-							{
-								cnpopoverfeizhouname:"北非地区"
-							},
-							{
-								cnpopoverfeizhouname:"东非地区"
-							},
-							{
-								cnpopoverfeizhouname:"非洲海岛"
-							},
-							{
-								cnpopoverfeizhouname:"非洲及其国家"
-							}
-						],
-						cnpopoverdayangzhou:[
-							{
-								cnpopoverdayangzhouname:'澳大利亚'
-							},
-							{
-								cnpopoverdayangzhouname:'新西兰'
-							},
-							{
-								cnpopoverdayangzhouname:'所罗门群岛'
-							},
-							{
-								cnpopoverdayangzhouname:'帕劳'
-							},
-							{
-								cnpopoverdayangzhouname:'太平洋岛国'
-							}
-							
-						]
+const buildcnpopover = Mock.mock(
+	'/api/buildcnpopover', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+
+				cnpopovertd: [{
+						cnxingqus: '结伴同游',
+						cnxingqu: '旅行视频',
+					},
+					{
+						cnxingqus: '签证',
+						cnxingqu: '旅行摄影',
+
+					},
+					{
+						cnxingqus: '保险',
+						cnxingqu: '户外运动',
+
+					},
+					{
+						cnxingqus: '旅行购物',
+						cnxingqu: '潜水俱乐部',
+
+					},
+					{
+						cnxingqus: '穷游折扣',
+						cnxingqu: '带孩子旅行',
+
+					},
+					{
+						cnxingqus: '睡遍全球',
+						cnxingqu: '带父母旅行',
+
+					},
+					{
+						cnxingqus: '邮轮',
+						cnxingqus: '明信片',
+
+					},
+					{
+						cnxingqus: '航空',
+						cnxingqu: '路刻社',
+
+					},
+					{
+						cnxingqus: '自驾',
+						cnxingqu: 'Discovery探索频道',
 
 					}
 				],
-				message: '查询成功'
-			}
-		})
-		const buildcon = Mock.mock(
-			'/api/buildcon', 'get', (req, res) => {
-				return {
-					code: 200,
-					data: [
-						{
-							conavter:"//pics.lvjs.com.cn/pics//uploads/pc/place2/2019-05-20/a8f9e58e-6637-4eac-956b-19a13c00ffbe_300_200.jpg",
-							conname:"biu biu",
-							condiqu:"日本",
-							condianzan:'4856',
-							conhour:'3小时',
-							condsc:'迪士尼乐园门票是不便宜！但是人家不但绿化很漂亮！那些演出比如：杰克船长风暴来临好看也很幽默！加勒比海盗沉落宝臧画面很壮丽！人猿泰山的表演是杂技表演！我不由自主的给了好多',
-							contxt:'迪士尼朋友化身成可爱的彩蛋藏在花海中，迎接春天的到来。圆滚滚的造型、缤纷靓丽的色彩加上调皮有趣的表情，给游客带来焕然一新和青春洋溢的欢乐气息。',
-						    conpic:"http://pic.lvmama.com//uploads/pc/place2/2019-03-01/2366a456-4121-4f54-b06c-8f63e960db53_480_320.jpg"
-						},
-						{
-							conavter:"//pics.lvjs.com.cn/pics//uploads/pc/place2/2017-12-29/21415a82-3831-4983-b26c-62f16ff857ee_300_200.jpg",
-							conname:"biu love",
-							condiqu:"泰国",
-							condianzan:'8966',
-							conhour:'1小时',
-							condsc:'吉祥航空787梦幻宽体客机，往返直飞，给您舒适体验,升级住宿4+峡湾特色酒店全程含餐！5菜一汤+特别安排峡湾特色餐+北欧肉丸餐双峡湾+岩石教堂斯德市政厅入内+皇后岛+菲耶巴卡赫尔辛基半天自由活动',
-							contxt:'哈当厄尔峡湾游船：乘船遨游峡湾，两岸奇峰怪石、农田果树令人心神荡漾，忘却尘嚣；沃尔令斯大瀑布：挪威很火瀑布，水幕层层叠叠，声势浩大图尔库：芬兰的古老城市，漫步其中，感受中世纪情怀。',
-						    conpic:"http://pic.lvmama.com/uploads/pc/place2/2017-12-29/796fbe4f-d4ec-4c4b-9f60-80cae821a3eb_480_320.jpg"
-						},
-						{
-							conavter:"//pics.lvjs.com.cn/pics//uploads/pc/place2/2017-12-29/21415a82-3831-4983-b26c-62f16ff857ee_300_200.jpg",
-							conname:"biu love",
-							condiqu:"泰国",
-							condianzan:'8966',
-							conhour:'1小时',
-							condsc:'吉祥航空787梦幻宽体客机，往返直飞，给您舒适体验,升级住宿4+峡湾特色酒店全程含餐！5菜一汤+特别安排峡湾特色餐+北欧肉丸餐双峡湾+岩石教堂斯德市政厅入内+皇后岛+菲耶巴卡赫尔辛基半天自由活动',
-							contxt:'哈当厄尔峡湾游船：乘船遨游峡湾，两岸奇峰怪石、农田果树令人心神荡漾，忘却尘嚣；沃尔令斯大瀑布：挪威很火瀑布，水幕层层叠叠，声势浩大图尔库：芬兰的古老城市，漫步其中，感受中世纪情怀。',
-						    conpic:"http://pic.lvmama.com/uploads/pc/place2/2017-12-29/796fbe4f-d4ec-4c4b-9f60-80cae821a3eb_480_320.jpg"
-						},
-						{
-							conavter:"//pics.lvjs.com.cn/pics//uploads/pc/place2/2017-12-29/21415a82-3831-4983-b26c-62f16ff857ee_300_200.jpg",
-							conname:"biu love",
-							condiqu:"泰国",
-							condianzan:'8966',
-							conhour:'1小时',
-							condsc:'吉祥航空787梦幻宽体客机，往返直飞，给您舒适体验,升级住宿4+峡湾特色酒店全程含餐！5菜一汤+特别安排峡湾特色餐+北欧肉丸餐双峡湾+岩石教堂斯德市政厅入内+皇后岛+菲耶巴卡赫尔辛基半天自由活动',
-							contxt:'哈当厄尔峡湾游船：乘船遨游峡湾，两岸奇峰怪石、农田果树令人心神荡漾，忘却尘嚣；沃尔令斯大瀑布：挪威很火瀑布，水幕层层叠叠，声势浩大图尔库：芬兰的古老城市，漫步其中，感受中世纪情怀。',
-						    conpic:"http://pic.lvmama.com/uploads/pc/place2/2017-12-29/796fbe4f-d4ec-4c4b-9f60-80cae821a3eb_480_320.jpg"
-						},
-						{
-							conavter:"//pics.lvjs.com.cn/pics//uploads/pc/place2/2017-12-29/21415a82-3831-4983-b26c-62f16ff857ee_300_200.jpg",
-							conname:"biu love",
-							condiqu:"泰国",
-							condianzan:'8966',
-							conhour:'1小时',
-							condsc:'吉祥航空787梦幻宽体客机，往返直飞，给您舒适体验,升级住宿4+峡湾特色酒店全程含餐！5菜一汤+特别安排峡湾特色餐+北欧肉丸餐双峡湾+岩石教堂斯德市政厅入内+皇后岛+菲耶巴卡赫尔辛基半天自由活动',
-							contxt:'哈当厄尔峡湾游船：乘船遨游峡湾，两岸奇峰怪石、农田果树令人心神荡漾，忘却尘嚣；沃尔令斯大瀑布：挪威很火瀑布，水幕层层叠叠，声势浩大图尔库：芬兰的古老城市，漫步其中，感受中世纪情怀。',
-						    conpic:"http://pic.lvmama.com/uploads/pc/place2/2017-12-29/796fbe4f-d4ec-4c4b-9f60-80cae821a3eb_480_320.jpg"
-						},
-					],
-					message: '查询成功'
-				}
-			})
-			const buildjieban = Mock.mock(
-				'/api/buildjieban', 'get', (req, res) => {
-					return {
-						code: 200,
-						data: [
-						   
-							 
-								    {
-								   jiebanavter:"//pic.lvmama.com/uploads/pc/place2/2019-03-24/e086b2bd-f11f-4456-aa1c-2b43a5fbf06b_480_320.jpg",
-								   jiebanname:"情怀 love",
-								   jiebanliulan:'12536',
-								   jiebanhuifu:'2563',
-								   jiebantime:'15分钟',
-								   jiebantxt:'旅游攻略论坛：结伴同游6月法国1女求捡或被捡！ 觅靠谱小伙伴拼吃拼玩拼车拼住宿。自由行经验丰富',
-								   jiebanchufa:'2019-6-1',
-								   jiebanfancheng:'2019-6-9',
-								   jiebanmudi:'卢瓦尔河谷、巴黎'
-								   },
-								    {
-								   jiebanavter:"//pic.lvmama.com/uploads/pc/place2/2019-03-24/e086b2bd-f11f-4456-aa1c-2b43a5fbf06b_480_320.jpg",
-								   jiebanname:"情怀 love",
-								   jiebanliulan:'12536',
-								   jiebanhuifu:'2563',
-								   jiebantime:'15分钟',
-								   jiebantxt:'旅游攻略论坛：结伴同游6月法国1女求捡或被捡！ 觅靠谱小伙伴拼吃拼玩拼车拼住宿。自由行经验丰富',
-								   jiebanchufa:'2019-6-1',
-								   jiebanfancheng:'2019-6-9',
-								   jiebanmudi:'卢瓦尔河谷、巴黎'
-								   },
-								    {
-								   jiebanavter:"//pic.lvmama.com/uploads/pc/place2/2019-03-24/e086b2bd-f11f-4456-aa1c-2b43a5fbf06b_480_320.jpg",
-								   jiebanname:"情怀 love",
-								   jiebanliulan:'12536',
-								   jiebanhuifu:'2563',
-								   jiebantime:'15分钟',
-								   jiebantxt:'旅游攻略论坛：结伴同游6月法国1女求捡或被捡！ 觅靠谱小伙伴拼吃拼玩拼车拼住宿。自由行经验丰富',
-								   jiebanchufa:'2019-6-1',
-								   jiebanfancheng:'2019-6-9',
-								   jiebanmudi:'卢瓦尔河谷、巴黎'
-								   },
-								    {
-								   jiebanavter:"//pic.lvmama.com/uploads/pc/place2/2019-03-24/e086b2bd-f11f-4456-aa1c-2b43a5fbf06b_480_320.jpg",
-								   jiebanname:"情怀 love",
-								   jiebanliulan:'12536',
-								   jiebanhuifu:'2563',
-								   jiebantime:'15分钟',
-								   jiebantxt:'旅游攻略论坛：结伴同游6月法国1女求捡或被捡！旅游攻略论坛：结伴同游6月法国1女求捡或被捡！ 觅靠谱小伙伴拼吃拼玩拼车拼住宿。自由行经验丰富 觅靠谱小伙伴拼吃拼玩拼车拼住宿。自由行经验丰富',
-								   jiebanchufa:'2019-6-1',
-								   jiebanfancheng:'2019-6-9',
-								   jiebanmudi:'卢瓦尔河谷、巴黎'
-								   }
-							 
-						   
-						],
-						message: '查询成功'
+				cnpopoverli: [{
+						cnpopoverliname: "穷游活动"
+					},
+					{
+						cnpopoverliname: "穷游er访谈"
+					},
+					{
+						cnpopoverliname: "穷游沙龙"
+					},
+					{
+						cnpopoverliname: "轻年计划"
+					},
+					{
+						cnpopoverliname: "城市漫步"
 					}
-				})
+				],
+
+				cnpopoverouzhou: [{
+						cnxingquouzhous: '环游欧洲',
+						cnxingquouzhou: '法国/摩纳哥',
+
+					},
+					{
+						cnxingquouzhous: '德国',
+						cnxingquouzhou: '瑞士/列支敦士登',
+
+					},
+					{
+						cnxingquouzhous: '奥地利/捷克',
+						cnxingquouzhou: '斯洛伐克/匈牙利',
+
+					},
+					{
+						cnxingquouzhous: '西班牙/葡萄牙',
+						cnxingquouzhou: '安道尔/希腊',
+
+					},
+					{
+						cnxingquouzhous: '塞浦路斯/意大利',
+						cnxingquouzhou: '梵蒂冈/圣马力诺',
+
+					},
+					{
+						cnxingquouzhous: '比利时/卢森堡',
+						cnxingquouzhou: '波兰/立陶宛',
+
+					},
+					{
+						cnxingquouzhous: '挪威/瑞典',
+						cnxingquouzhou: '芬兰/丹麦',
+
+					},
+					{
+						cnxingquouzhous: '拉脱维亚/爱沙尼亚',
+						cnxingquouzhou: '爱尔兰/荷兰',
+
+					},
+					{
+						cnxingquouzhous: '马耳他/英国',
+						cnxingquouzhou: '俄罗斯/乌克兰',
+
+					},
+					{
+						cnxingquouzhous: '马耳他/英国',
+						cnxingquouzhou: '白俄罗斯',
+
+					},
+					{
+						cnxingquouzhous: '欧洲交通',
+						cnxingquouzhou: '土耳其',
+
+					},
+					{
+						cnxingquouzhous: '东欧平原',
+						cnxingquouzhou: '土耳其海峡',
+
+					},
+					{
+						cnxingquouzhous: '地中海',
+						cnxingquouzhou: '爱琴海',
+
+					}
+				],
+				cnpopoveryazhou: [{
+						cnxingquyazhous: "环游亚洲",
+						cnxingquyazhou: "中国",
+
+					},
+					{
+						cnxingquyazhous: "韩国/朝鲜",
+						cnxingquyazhou: "台湾",
+
+					},
+					{
+						cnxingquyazhous: "香港/澳门",
+						cnxingquyazhou: "泰国",
+
+					},
+					{
+						cnxingquyazhous: "越南",
+						cnxingquyazhou: "缅甸",
+
+					},
+					{
+						cnxingquyazhous: "马来西亚/文莱",
+						cnxingquyazhou: "新加坡",
+
+					},
+					{
+						cnxingquyazhous: "柬埔寨/印度",
+						cnxingquyazhou: "哈萨克斯坦",
+
+					},
+					{
+						cnxingquyazhous: "韩国/朝鲜",
+						cnxingquyazhou: "蒙古",
+
+					},
+					{
+						cnxingquyazhous: "吉尔杰斯坦/伊朗",
+						cnxingquyazhou: "迪拜",
+
+					},
+					{
+						cnxingquyazhous: "新几内亚/马尔代夫",
+						cnxingquyazhou: "孟加拉/阿联酋",
+
+					},
+					{
+						cnxingquyazhous: "以色列/东坟帝",
+						cnxingquyazhou: "斐济岛",
+
+					},
+					{
+						cnxingquyazhous: "阿富汗/乌兹别克斯坦",
+						cnxingquyazhou: "越南",
+
+					},
+					{
+						cnxingquyazhous: "不丹",
+						cnxingquyazhou: "阿塞拜疆",
+
+					},
+					{
+						cnxingquyazhous: "科威特",
+						cnxingquyazhou: "叙利亚",
+
+					},
+					{
+						cnxingquyazhous: "亚美尼亚",
+						cnxingquyazhou: "巴基斯坦",
+
+					},
+					{
+						cnxingquyazhous: "也门",
+						cnxingquyazhou: "约旦/沙特阿拉伯",
+
+					},
+					{
+						cnxingquyazhous: "卡塔尔/马来西亚",
+						cnxingquyazhou: "吉尔吉斯斯坦",
+
+					},
+					{
+						cnxingquyazhous: "土库曼斯坦",
+						cnxingquyazhou: "巴勒斯坦/格鲁吉亚",
+
+					},
+				],
+				cnpopovermeizhou: [{
+						cnpopovermeizhouname: "美国"
+					},
+					{
+						cnpopovermeizhouname: "加拿大"
+					},
+					{
+						cnpopovermeizhouname: "墨西哥"
+					},
+					{
+						cnpopovermeizhouname: "古巴"
+					}
+				],
+				cnpopoverfeizhou: [{
+						cnpopoverfeizhouname: "北非地区"
+					},
+					{
+						cnpopoverfeizhouname: "东非地区"
+					},
+					{
+						cnpopoverfeizhouname: "非洲海岛"
+					},
+					{
+						cnpopoverfeizhouname: "非洲及其国家"
+					}
+				],
+				cnpopoverdayangzhou: [{
+						cnpopoverdayangzhouname: '澳大利亚'
+					},
+					{
+						cnpopoverdayangzhouname: '新西兰'
+					},
+					{
+						cnpopoverdayangzhouname: '所罗门群岛'
+					},
+					{
+						cnpopoverdayangzhouname: '帕劳'
+					},
+					{
+						cnpopoverdayangzhouname: '太平洋岛国'
+					}
+
+				]
+
+			}],
+			message: '查询成功'
+		}
+	})
+const buildcon = Mock.mock(
+	'/api/buildcon', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					conavter: "//pics.lvjs.com.cn/pics//uploads/pc/place2/2019-05-20/a8f9e58e-6637-4eac-956b-19a13c00ffbe_300_200.jpg",
+					conname: "biu biu",
+					condiqu: "日本",
+					condianzan: '4856',
+					conhour: '3小时',
+					condsc: '迪士尼乐园门票是不便宜！但是人家不但绿化很漂亮！那些演出比如：杰克船长风暴来临好看也很幽默！加勒比海盗沉落宝臧画面很壮丽！人猿泰山的表演是杂技表演！我不由自主的给了好多',
+					contxt: '迪士尼朋友化身成可爱的彩蛋藏在花海中，迎接春天的到来。圆滚滚的造型、缤纷靓丽的色彩加上调皮有趣的表情，给游客带来焕然一新和青春洋溢的欢乐气息。',
+					conpic: "http://pic.lvmama.com//uploads/pc/place2/2019-03-01/2366a456-4121-4f54-b06c-8f63e960db53_480_320.jpg"
+				},
+				{
+					conavter: "//pics.lvjs.com.cn/pics//uploads/pc/place2/2017-12-29/21415a82-3831-4983-b26c-62f16ff857ee_300_200.jpg",
+					conname: "biu love",
+					condiqu: "泰国",
+					condianzan: '8966',
+					conhour: '1小时',
+					condsc: '吉祥航空787梦幻宽体客机，往返直飞，给您舒适体验,升级住宿4+峡湾特色酒店全程含餐！5菜一汤+特别安排峡湾特色餐+北欧肉丸餐双峡湾+岩石教堂斯德市政厅入内+皇后岛+菲耶巴卡赫尔辛基半天自由活动',
+					contxt: '哈当厄尔峡湾游船：乘船遨游峡湾，两岸奇峰怪石、农田果树令人心神荡漾，忘却尘嚣；沃尔令斯大瀑布：挪威很火瀑布，水幕层层叠叠，声势浩大图尔库：芬兰的古老城市，漫步其中，感受中世纪情怀。',
+					conpic: "http://pic.lvmama.com/uploads/pc/place2/2017-12-29/796fbe4f-d4ec-4c4b-9f60-80cae821a3eb_480_320.jpg"
+				},
+				{
+					conavter: "//pics.lvjs.com.cn/pics//uploads/pc/place2/2017-12-29/21415a82-3831-4983-b26c-62f16ff857ee_300_200.jpg",
+					conname: "biu love",
+					condiqu: "泰国",
+					condianzan: '8966',
+					conhour: '1小时',
+					condsc: '吉祥航空787梦幻宽体客机，往返直飞，给您舒适体验,升级住宿4+峡湾特色酒店全程含餐！5菜一汤+特别安排峡湾特色餐+北欧肉丸餐双峡湾+岩石教堂斯德市政厅入内+皇后岛+菲耶巴卡赫尔辛基半天自由活动',
+					contxt: '哈当厄尔峡湾游船：乘船遨游峡湾，两岸奇峰怪石、农田果树令人心神荡漾，忘却尘嚣；沃尔令斯大瀑布：挪威很火瀑布，水幕层层叠叠，声势浩大图尔库：芬兰的古老城市，漫步其中，感受中世纪情怀。',
+					conpic: "http://pic.lvmama.com/uploads/pc/place2/2017-12-29/796fbe4f-d4ec-4c4b-9f60-80cae821a3eb_480_320.jpg"
+				},
+				{
+					conavter: "//pics.lvjs.com.cn/pics//uploads/pc/place2/2017-12-29/21415a82-3831-4983-b26c-62f16ff857ee_300_200.jpg",
+					conname: "biu love",
+					condiqu: "泰国",
+					condianzan: '8966',
+					conhour: '1小时',
+					condsc: '吉祥航空787梦幻宽体客机，往返直飞，给您舒适体验,升级住宿4+峡湾特色酒店全程含餐！5菜一汤+特别安排峡湾特色餐+北欧肉丸餐双峡湾+岩石教堂斯德市政厅入内+皇后岛+菲耶巴卡赫尔辛基半天自由活动',
+					contxt: '哈当厄尔峡湾游船：乘船遨游峡湾，两岸奇峰怪石、农田果树令人心神荡漾，忘却尘嚣；沃尔令斯大瀑布：挪威很火瀑布，水幕层层叠叠，声势浩大图尔库：芬兰的古老城市，漫步其中，感受中世纪情怀。',
+					conpic: "http://pic.lvmama.com/uploads/pc/place2/2017-12-29/796fbe4f-d4ec-4c4b-9f60-80cae821a3eb_480_320.jpg"
+				},
+				{
+					conavter: "//pics.lvjs.com.cn/pics//uploads/pc/place2/2017-12-29/21415a82-3831-4983-b26c-62f16ff857ee_300_200.jpg",
+					conname: "biu love",
+					condiqu: "泰国",
+					condianzan: '8966',
+					conhour: '1小时',
+					condsc: '吉祥航空787梦幻宽体客机，往返直飞，给您舒适体验,升级住宿4+峡湾特色酒店全程含餐！5菜一汤+特别安排峡湾特色餐+北欧肉丸餐双峡湾+岩石教堂斯德市政厅入内+皇后岛+菲耶巴卡赫尔辛基半天自由活动',
+					contxt: '哈当厄尔峡湾游船：乘船遨游峡湾，两岸奇峰怪石、农田果树令人心神荡漾，忘却尘嚣；沃尔令斯大瀑布：挪威很火瀑布，水幕层层叠叠，声势浩大图尔库：芬兰的古老城市，漫步其中，感受中世纪情怀。',
+					conpic: "http://pic.lvmama.com/uploads/pc/place2/2017-12-29/796fbe4f-d4ec-4c4b-9f60-80cae821a3eb_480_320.jpg"
+				},
+			],
+			message: '查询成功'
+		}
+	})
+const buildjieban = Mock.mock(
+	'/api/buildjieban', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [
+
+
+				{
+					jiebanavter: "//pic.lvmama.com/uploads/pc/place2/2019-03-24/e086b2bd-f11f-4456-aa1c-2b43a5fbf06b_480_320.jpg",
+					jiebanname: "情怀 love",
+					jiebanliulan: '12536',
+					jiebanhuifu: '2563',
+					jiebantime: '15分钟',
+					jiebantxt: '旅游攻略论坛：结伴同游6月法国1女求捡或被捡！ 觅靠谱小伙伴拼吃拼玩拼车拼住宿。自由行经验丰富',
+					jiebanchufa: '2019-6-1',
+					jiebanfancheng: '2019-6-9',
+					jiebanmudi: '卢瓦尔河谷、巴黎'
+				},
+				{
+					jiebanavter: "//pic.lvmama.com/uploads/pc/place2/2019-03-24/e086b2bd-f11f-4456-aa1c-2b43a5fbf06b_480_320.jpg",
+					jiebanname: "情怀 love",
+					jiebanliulan: '12536',
+					jiebanhuifu: '2563',
+					jiebantime: '15分钟',
+					jiebantxt: '旅游攻略论坛：结伴同游6月法国1女求捡或被捡！ 觅靠谱小伙伴拼吃拼玩拼车拼住宿。自由行经验丰富',
+					jiebanchufa: '2019-6-1',
+					jiebanfancheng: '2019-6-9',
+					jiebanmudi: '卢瓦尔河谷、巴黎'
+				},
+				{
+					jiebanavter: "//pic.lvmama.com/uploads/pc/place2/2019-03-24/e086b2bd-f11f-4456-aa1c-2b43a5fbf06b_480_320.jpg",
+					jiebanname: "情怀 love",
+					jiebanliulan: '12536',
+					jiebanhuifu: '2563',
+					jiebantime: '15分钟',
+					jiebantxt: '旅游攻略论坛：结伴同游6月法国1女求捡或被捡！ 觅靠谱小伙伴拼吃拼玩拼车拼住宿。自由行经验丰富',
+					jiebanchufa: '2019-6-1',
+					jiebanfancheng: '2019-6-9',
+					jiebanmudi: '卢瓦尔河谷、巴黎'
+				},
+				{
+					jiebanavter: "//pic.lvmama.com/uploads/pc/place2/2019-03-24/e086b2bd-f11f-4456-aa1c-2b43a5fbf06b_480_320.jpg",
+					jiebanname: "情怀 love",
+					jiebanliulan: '12536',
+					jiebanhuifu: '2563',
+					jiebantime: '15分钟',
+					jiebantxt: '旅游攻略论坛：结伴同游6月法国1女求捡或被捡！旅游攻略论坛：结伴同游6月法国1女求捡或被捡！ 觅靠谱小伙伴拼吃拼玩拼车拼住宿。自由行经验丰富 觅靠谱小伙伴拼吃拼玩拼车拼住宿。自由行经验丰富',
+					jiebanchufa: '2019-6-1',
+					jiebanfancheng: '2019-6-9',
+					jiebanmudi: '卢瓦尔河谷、巴黎'
+				}
+
+
+			],
+			message: '查询成功'
+		}
+	})
+const buildzlcli = Mock.mock(
+	'/api/buildzlcli', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [
+
+				{
+					zlctitle: "穷游兴趣小组",
+					
+						
+						zlclicontent: [{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+							{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+							{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+							{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+						],
+				
+				},
+{
+	zlctitle: "穷游欧洲",
+				
+						
+						zlclicontent: [{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+							{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+							{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+							{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+						],
+					
+				},
+				{
+					
+						zlctitle: "穷游亚洲",
+						zlclicontent: [{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+							{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+							{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+							{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+						],
+					
+				},
+				{
+				
+						zlctitle: "穷游北美洲",
+						zlclicontent: [{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+							{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+							{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+							{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+						],
+				
+				},
+				{
+					
+						zlctitle: "穷游大洋洲",
+						zlclicontent: [{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+							{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+							{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+							{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+						],
+			
+				},
+				{
+					
+						zlctitle: "穷游非洲",
+						zlclicontent: [{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+							{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+							{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+							{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+						],
+					
+				},
+				{
+					
+						zlctitle: "穷游南美洲",
+						zlclicontent: [{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+							{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+							{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+							{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+						],
+					
+				},
+				{
+				
+						zlctitle: "线上线下",
+						zlclicontent: [{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+							{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+							{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+							{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+						],
+				
+				},
+				{
+				
+						zlctitle: "后院",
+						zlclicontent: [{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+							{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+							{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+							{
+								zlcpic: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+								zlcname: '直飞日本',
+								zlctxt: '2小时即可开启完美旅程'
+							},
+						],
+					
+				}
+
+
+			],
+			message: '查询成功'
+		}
+	})
 export default {
 	buildwebswiper,
 	buildpopoverdiv,
@@ -7060,6 +7298,6 @@ export default {
 	buildyoujilists,
 	buildthreadbanner,
 	buildcnpopover,
-	buildjieban
-
+	buildjieban,
+	buildzlcli
 }

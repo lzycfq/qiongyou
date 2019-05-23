@@ -293,27 +293,17 @@
 						message: '请输入搜索内容',
 						trigger: 'blur'
 					}]
-
 				},
 				index: 0,
 				seen: false,
 				current: 0,
 				seens: false,
 				currents: 0,
-
 			}
 		},
 		created() {
-
-
-
 		},
-
 		methods: {
-
-
-
-
 			enter(index) {
 				this.seen = true;
 				this.current = index;
@@ -349,7 +339,9 @@
 							params: {
 								'content': this.$rels.content.value
 							},
-						}).then(res => {}).catch(function(error) {
+						}).then(res => {
+							
+						}).catch(function(error) {
 							console.log(error);
 						});
 						// 表单提交
