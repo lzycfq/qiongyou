@@ -344,7 +344,7 @@
 
 			},
 			domheight() {
-				let lastheight = this.$refs.testH.offsetHeight;
+				let lastheight = this.$refs.jieban.$refs.textH.offsetHeight;
 				//let lastlength = this.jieban.length - 1;
 				// let o = document.getElementsById("last-yl-con");
 				// let o = document.getElementById("testH");
