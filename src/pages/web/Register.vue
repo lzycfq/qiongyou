@@ -3,112 +3,74 @@
 		<div class="login-container">
 			<div class="login-wrapper">
 				<div class="login-logo"><img src="//fes.qyerstatic.com/fe_ssr_passport/static/login_logo2.41bd0a52.png" alt="穷游">
-					<span class="titlelogin">登录</span></div><!-- login-logo -->
+					<span class="titlelogin">注册</span></div><!-- login-logo -->
 				<div class="login-section">
-
 					<div class="q-login-layout">
-						<el-tabs v-model="activeName">
-							<el-tab-pane label="账号登录" name="first">
-								<div class="q-login-tip">关于穷游网将实行<router-link to=''>手机绑定实名制的说明</router-link>
-								</div>
-								<div class="q-login-form">
-									<el-form :model="ruleForm" :rules="rules" ref="ruleForm" class="demo-ruleForm">
-										<el-form-item prop="qzhangname">
-											<el-input type="password" placeholder="请输入手机/账号/又想" v-model="ruleForm.qzhangname" autocomplete="off" rel="qzhangname"></el-input>
-										</el-form-item>
-										<el-form-item prop="pass">
-											<el-input type="password" placeholder="请输入密码" v-model="ruleForm.pass" autocomplete="off" rel='pass'></el-input>
-										</el-form-item>
-										<div class="input-tip">
-											<router-link to='' class="remember-link fr">忘记密码</router-link>
+						<div class="q-login-layout">
+							<br />
+							<br />
+							<div class="q-login-form q-login-formphone">
+								<el-form :model="ruleForms" :rules="duanxinrules" ref="ruleForms" class="demo-ruleForm">
+									<div>
+										<div class="login-select">
+											<el-select v-model="countryvalue" placeholder="请选择" rel="countryvalue">
+												<el-option v-for="item in country" :key="item.value" :label="item.label" :value="item.value">
+													<span style="float: left">{{ item.label }}</span>
+													<span style="float: right; color: #8492a6; font-size: 13px">({{ item.value }})</span>
+												</el-option>
+											</el-select>
 										</div>
-										<el-button class="haobtn" @click="submitForm('ruleForm')">登录</el-button>
-									</el-form>
-									<div class="q-login-auth">
-										<router-link to="" class="auth-qq"></router-link>
-										<router-link to="" class="auth-weibo"></router-link>
-										<router-link to="" class="auth-taobao"></router-link>
-										<router-link to="" class="auth-weixin"></router-link>
-									</div>
-									<div class="q-login-bottom">
-										<span class="fl"><span>没有穷游帐号？</span>
-											<router-link to="register">立即注册</router-link>
-										</span>
-										<span class="fr">
-											<router-link to="" class="gray">境外手机号登录</router-link>
-										</span>
-									</div>
-								</div>
-							</el-tab-pane>
-							<el-tab-pane label="短信快捷登录" name="second">
-								<div class="q-login-layout">
-									<div class="q-login-tip">关于穷游网将实行<router-link to=''>手机绑定实名制的说明</router-link>
-									</div>
-									<div class="q-login-form q-login-formphone">
-										<el-form :model="ruleForms" :rules="duanxinrules" ref="ruleForms" class="demo-ruleForm">
-											<div>
-												<div class="login-select">
-													<el-select v-model="countryvalue" placeholder="请选择" rel="countryvalue">
-														<el-option v-for="item in country" :key="item.value" :label="item.label" :value="item.value">
-															<span style="float: left">{{ item.label }}</span>
-															<span style="float: right; color: #8492a6; font-size: 13px">({{ item.value }})</span>
-														</el-option>
-													</el-select>
-												</div>
-												<el-form-item prop="phone">
-													<div class="login-phone">
-														<el-input type="password" placeholder="请输入手机号码" v-model.number="ruleForms.phone" autocomplete="off" rel="phone"></el-input>
-													</div>
-												</el-form-item>
+										<el-form-item prop="phone">
+											<div class="login-phone">
+												<el-input type="password" placeholder="请输入手机号码" v-model.number="ruleForms.phone" autocomplete="off" rel="phone"></el-input>
 											</div>
-											<div class="verifycode">
-												<div class="yanzhengma">
-													<el-form-item prop="verifycode">
-														<!-- 注意：prop与input绑定的值一定要一致，否则验证规则中的value会报undefined，因为value即为绑定的input输入值 -->
-														<el-input v-model="ruleForms.verifycode" placeholder="请输入验证码" class="identifyinput" rel="verifycode"></el-input>
-													</el-form-item>
-												</div>
-												<div class="identify">
-													<div @click="refreshCode">
-														<SIdentify :identifyCode="identifyCode"></SIdentify>
-													</div>
-												</div>
-												<div style="clear: both;"></div>
-												<p @click="refreshCode" class="loginrefresh">看不清，换一张 <i class="el-icon-refresh"></i></p>
+										</el-form-item>
+									</div>
+									<div class="verifycode">
+										<div class="yanzhengma">
+											<el-form-item prop="verifycode">
+												<!-- 注意：prop与input绑定的值一定要一致，否则验证规则中的value会报undefined，因为value即为绑定的input输入值 -->
+												<el-input v-model="ruleForms.verifycode" placeholder="请输入验证码" class="identifyinput" rel="verifycode"></el-input>
+											</el-form-item>
+										</div>
+										<div class="identify">
+											<div @click="refreshCode">
+												<SIdentify :identifyCode="identifyCode"></SIdentify>
 											</div>
-											<div class="verifycode">
-												<div class="yanzhengma">
-													<el-form-item prop="phonecode">
+										</div>
+										<div style="clear: both;"></div>
+										<p @click="refreshCode" class="loginrefresh">看不清，换一张 <i class="el-icon-refresh"></i></p>
+									</div>
+									<div class="verifycode">
+										<div class="yanzhengma">
+											<el-form-item prop="phonecode">
 
-														<el-input v-model="ruleForms.phonecode" placeholder="请输入短信验证码" class="identifyinput" rel="phonecode"></el-input>
-													</el-form-item>
-												</div>
-												<div class="identify">
-													<el-button @click="send" style="width:100%;position: relative;top:-16px;" type="success" :disabled="disabled=!show">
-														<span v-show="show">获取验证码</span>
-														<span v-show="!show" class="count">{{count}} s</span>
-													</el-button>
-												</div>
-											</div>
-											<div style="clear: both;"></div>
+												<el-input v-model="ruleForms.phonecode" placeholder="请输入短信验证码" class="identifyinput" rel="phonecode"></el-input>
+											</el-form-item>
+										</div>
+										<div class="identify">
+											<el-button @click="send" style="width:100%;position: relative;top:-16px;" type="success" :disabled="disabled=!show">
+												<span v-show="show">获取验证码</span>
+												<span v-show="!show" class="count">{{count}} s</span>
+											</el-button>
+										</div>
+									</div>
+									<div style="clear: both;"></div>
+									<el-form-item prop="name" class="namepass">
+										<el-input v-model="ruleForms.name" placeholder="输入一个极具辨识度名字" rel="name"></el-input>
+									</el-form-item>
+									<el-form-item prop="pass" class="namepass">
+										<el-input v-model="ruleForms.pass" placeholder="输入8-16位数的密码" rel="pass"></el-input>
+									</el-form-item>
+									<el-button class="haobtn" @click="submitsForm('ruleForms')">登录</el-button>
+								</el-form>
+								<div class="q-login-bottom"><span class="fl">
+										已有穷游帐号？<router-link to="/Login">登录</router-link></span><span class="fr">
+										同意<router-link to="">会员条款</router-link>和<router-link to="">免责声明</router-link></span></div>
+							</div><!-- q-login-form -->
 
-											<el-button class="haobtn" @click="submitsForm('ruleForms')">登录</el-button>
-										</el-form>
-									</div><!-- q-login-form -->
-									<div class="q-login-auth">
-										<router-link to="" class="auth-qq"></router-link>
-										<router-link to="" class="auth-weibo"></router-link>
-										<router-link to="" class="auth-taobao"></router-link>
-										<router-link to="" class="auth-weixin"></router-link>
-									</div>
-									<div class="q-login-bottom">
-										<span class="fl"><span>没有穷游帐号？</span>
-											<router-link to="register">立即注册</router-link>
-										</span>
-										
-									</div>
-								</div>
-							</el-tab-pane>
+						</div>
+						</el-tab-pane>
 
 						</el-tabs>
 					</div><!-- q-login-layout -->
@@ -161,6 +123,12 @@
 		/deep/ .el-form-item__content {
 			width: 70%;
 			float: right;
+		}
+	}
+
+	.namepass {
+		/deep/ .el-form-item__content {
+			width: 100% !important;
 		}
 	}
 
@@ -300,32 +268,7 @@
 		margin-bottom: 5px;
 	}
 
-	.q-login-layout {
-		/deep/ .el-tabs__item {
-			width: 165px;
-			text-align: center;
-			height: 48px;
-		}
-	}
 
-	.q-login-layout {
-		/deep/ .el-tabs__item:hover {
-			color: #10b041;
-			cursor: pointer;
-		}
-	}
-
-	.q-login-layout {
-		/deep/ .el-tabs__item.is-active {
-			color: #10b041;
-		}
-	}
-
-	.q-login-layout {
-		/deep/ .el-tabs__active-bar {
-			background-color: #10b041;
-		}
-	}
 
 	.login-container {
 
@@ -407,39 +350,19 @@
 				}
 
 			}
+
 			return {
-				activeName: 'second',
-				ruleForm: {
-					qzhangname: '',
-					pass: '',
-					phone: '',
-					verifycode: '',
-					phonecode: '',
-				},
+
+
 				ruleForms: {
-					
 					phone: '',
 					verifycode: '',
 					phonecode: '',
+					name: '',
+					pass: ''
 				},
-				rules: {
-					qzhangname: [{
-							required: true,
-							message: '请输入账户/邮箱',
-							trigger: 'blur'
-						},
-						{
-							min: 3,
-							max: 15,
-							message: '请输入正确账户',
-							trigger: 'blur'
-						}
-					],
-					pass: [{
-						validator: validatePass,
-						trigger: 'blur',
-						required: true,
-					}],
+
+				duanxinrules: {
 					phone: [{
 						required: true,
 						trigger: 'blur',
@@ -457,25 +380,22 @@
 							trigger: 'blur',
 							validator: validatephonecode
 						}
-					]
-				},
-				duanxinrules: {									
-					phone: [{
-						required: true,
+					],
+					pass: [{
+						validator: validatePass,
 						trigger: 'blur',
-						validator: validPhone
-					}],
-					verifycode: [{
 						required: true,
-						trigger: 'blur',
-						validator: validateVerifycode
 					}],
-					phonecode: [
-				
-						{
+					name: [{
 							required: true,
-							trigger: 'blur',
-							validator: validatephonecode
+							message: '请输入用户名',
+							trigger: 'blur'
+						},
+						{
+							min: 3,
+							max: 5,
+							message: '长度在 8 到 16 个包含大小写字母',
+							trigger: 'blur'
 						}
 					]
 				},
@@ -513,42 +433,15 @@
 		},
 
 		methods: {
-			submitForm(formName) {
-				this.$refs[formName].validate((valid) => {
-					if (valid) {
-						this.axios.get('/api/buildlogin', {
-							params: {
-								'qzhangname': this.$refs.qzhangname.value,
-								'pass': this.$refs.pass.value,
-							}
-						}).then(res => {
-							var json = res.data
-							console.log(json.data);
-							this.$Message.success('success!');
-							this.$store.commit('ADD_COUNT', json.data.token);
-							let clock = window.setInterval(() => {
-								this.totalTime--;
-								if (this.totalTime < 0) {
-									window.clearInterval(clock);
-									this.$Loading.finish();
-									this.$router.push('/');
-								}
-							}, 1000)
-						})
-					} else {
-						console.log('error submit!!');
-						return false;
-					}
-				});
-			},
-				submitsForm(formName) {
+
+			submitsForm(formName) {
 				this.$refs[formName].validate((valid) => {
 					if (valid) {
 						this.axios.get('/api/buildlogin', {
 							params: {
 								'phone': this.$refs.phone.value,
-								'verifycode ': this.$refs.verifycode .value,
-								'phonecode ': this.$refs.phonecode .value,
+								'verifycode ': this.$refs.verifycode.value,
+								'phonecode ': this.$refs.phonecode.value,
 
 							}
 						}).then(res => {

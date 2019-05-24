@@ -6,10 +6,10 @@
 					 height="36"></a>
 				<ul class="q-header-nav">
 					<li class="nav-list nav-list-dandu">
-						
+
 						<router-link to="/Destination" class="sba"><span>
-							目的地
-						</span></router-link>
+								目的地
+							</span></router-link>
 					</li>
 					<li class="nav-list nav-list-dandu">
 						<span>
@@ -22,7 +22,11 @@
 								社区<i class="el-icon-arrow-down el-icon--right"></i>
 							</span>
 							<el-dropdown-menu slot="dropdown">
-								<el-dropdown-item> <i class="el-icon-tickets"></i> 旅行论坛</el-dropdown-item>
+								<el-dropdown-item>
+									<router-link v-popover:popover4 to="/thread" style="color: #606266;"><i class="el-icon-tickets"></i> 旅行论坛</router-link>
+
+
+								</el-dropdown-item>
 								<el-dropdown-item>旅行专题</el-dropdown-item>
 								<el-dropdown-item>旅行问答</el-dropdown-item>
 								<el-dropdown-item>JNE旅行生活美学</el-dropdown-item>
@@ -115,10 +119,87 @@
 				</div>
 			</div>
 		</div>
-
+		<el-popover ref="popover4" placement="right-start" width="614px" trigger="hover">
+			<div class="q-header-layer">
+				<div class="q-layers">
+					<div class="section-title">
+						<router-link class="allsection" to='/Thread'>全部版块 <i class="el-icon-arrow-right"></i></router-link>
+						<span>热门版块</span>
+					</div>
+					<div style="clear: both;"></div>
+					<dl class="section-item" v-for="(item,index) in dtdl" :key="index">
+						<dt>{{item.dtname}}</dt>
+						<dd>
+							<router-link v-for="(item,index) in item.dl" :key="index" class="dda" :to="{ name:item.link, params: { linkid: item.linkid}}">{{item.dlname}}</router-link>
+						</dd>
+					</dl><!-- section-item -->
+				</div><!-- q-layers -->
+			</div>
+		</el-popover>
 	</el-col>
 </template>
 <style lang="scss" scoped>
+	.q-header-layer .q-layers {
+		padding: 0 20px;
+		width: 570px;
+
+
+		.section-title {
+			padding: 8px 0;
+			height: 30px;
+			line-height: 30px;
+
+			.allsection {
+				float: right;
+				font-size: 14px;
+				color: #636363;
+				transition: all .2s ease-in-out;
+			}
+
+			span {
+				float: left;
+				color: #323232;
+				font-size: 16px;
+			}
+		}
+
+		.section-item {
+			border-top: 1px dashed #ededed;
+			padding-left: 90px;
+			line-height: 26px;
+
+			dt {
+				float: left !important;
+				margin-left: -90px;
+				padding-top: 8px;
+				font-size: 16px;
+				color: #323232;
+			}
+
+			dd {
+				padding-top: 5px;
+				padding-bottom: 5px;
+
+				a {
+					display: inline-block;
+					padding: 5px 5px 0;
+					height: 25px;
+					line-height: 25px;
+					border-radius: 3px;
+					font-size: 14px;
+					color: #636363;
+					white-space: nowrap;
+				}
+
+
+			}
+
+		}
+		//section-item
+	}
+	.q-header-layer .q-layers .section-item dd a.hover {
+		background: #3f9f5f;
+	}
 	.q-header-user-wrapper {
 		float: right;
 		margin-top: 10px;
@@ -178,7 +259,7 @@
 		float: left;
 		margin-left: 6px;
 		margin-right: 15px;
-		line-height:38px;
+		line-height: 38px;
 		color: silver;
 	}
 
@@ -199,7 +280,7 @@
 		transition: all .2s ease-in-out;
 	}
 
-	.header .login-wrap li{
+	.header .login-wrap li {
 		margin: 10px !important;
 		font-weight: 700;
 	}
@@ -229,7 +310,7 @@
 
 		.q-header-nav-wrapper {
 
-			
+
 			margin-left: 19px;
 			float: left;
 			width: 60%;
@@ -242,21 +323,25 @@
 					float: left;
 					margin-left: 21px;
 					color: white;
-                           .sba{
-							   margin: 0 !important;
-						   }
+
+					.sba {
+						margin: 0 !important;
+					}
 				}
 			}
 		}
 	}
-.q-header-nav-wrapper .q-header-nav  .nav-list-dandu{
-	color: white !important;
-	margin-top: 17px;
-	span{
-		font-size: 16px;
-		font-weight: 700;
+
+	.q-header-nav-wrapper .q-header-nav .nav-list-dandu {
+		color: white !important;
+		margin-top: 17px;
+
+		span {
+			font-size: 16px;
+			font-weight: 700;
 		}
-}
+	}
+
 	.q-header-nav li>>>.el-dropdown {
 		color: white !important;
 		margin-top: 17px;
@@ -276,7 +361,9 @@
 		name: 'app',
 		data() {
 			return {
-				searchtoggel: false,
+				seen: false,
+				current: 0,
+
 				ruleForm: {
 					searchcontent: ''
 				},
@@ -288,26 +375,25 @@
 					}]
 
 				},
-				index: 0,
-				seen: false,
-				current: 0,
-				seens: false,
-				currents: 0,
-
+				dtdl: [],
 			}
 		},
 		created() {
-
+			this.builddtdl();
 
 
 		},
 
 		methods: {
-
-
-
-
+			builddtdl() {
+				this.axios.get('/api/builddtdl').then(res => {
+					this.dtdl = res.data.data
+				}).catch(function(error) {
+					console.log(orror)
+				})
+			},
 			enter(index) {
+
 				this.seen = true;
 				this.current = index;
 			},
@@ -316,25 +402,7 @@
 				this.seen = false;
 				this.current = index;
 			},
-			enters(index) {
-				this.seens = true;
-				this.currents = index;
-			},
-			leaves() {
 
-				this.seens = false;
-				this.currents = index;
-			},
-			getdown() {
-				// 	document.body.animate({scrollTop:925},500);
-				// 	 document.documentElement.animate({scrollTop:925},500);
-				document.body.scrollTop = 950
-				document.documentElement.scrollTop = 950
-			},
-			toggle() {
-
-				this.searchtoggel = !this.searchtoggel
-			},
 			seachbtn(formName) {
 				this.$refs[formName].validate((valid) => {
 					if (valid) {

@@ -29,7 +29,7 @@ const REMOVE_COUNT = 'REMOVE_COUNT';
 //注册状态管理全局参数
 var store = new Vuex.Store({
   state:{
-    token:'1',
+    token:'',
     userID:'',
   },
 	

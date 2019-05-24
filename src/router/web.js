@@ -69,19 +69,44 @@ export default new Router({
 		// 		require(['../pages/web/Destination/Destination_Continent'], resolve)
 		// 	}
 		// },
-			{
-			path: '/',
-			name: 'Thread',//:id
-			component(resolve) {
-				require(['../pages/web/Thread/Thread'], resolve)
-			},
-		// 	 meta: {
-  //       requireAuth: true,  // 添加该字段，表示进入这个路由是需要登录的
-  //     },
-  //   },
-  //   { path: '*', component: P404 }  //这里是保证错误地址会跳转到404界面进行提示
-		// },
-		}
+		// 	{
+		// 	path: '/',
+		// 	name: 'Thread',//:id
+		// 	component(resolve) {
+		// 		require(['../pages/web/Thread/Thread'], resolve)
+		// 	},
+		// // 	 meta: {
+  // //       requireAuth: true,  // 添加该字段，表示进入这个路由是需要登录的
+  // //     },
+  // //   },
+  // //   { path: '*', component: P404 }  //这里是保证错误地址会跳转到404界面进行提示
+		// // },
+		// }
+			// {
+			// 		path: '/',
+			// 		name: 'Login',//:id
+			// 		component(resolve) {
+			// 			require(['../pages/web/Login'], resolve)
+			// 		},
+			// 
+			// 	},
+				// 	{
+				// 		path: '/',
+				// 		name: 'Register',//:id
+				// 		component(resolve) {
+				// 			require(['../pages/web/Register'], resolve)
+				// 		},
+				// 
+				// 	}
+				
+					{
+						path: '/',
+						name: 'Thread_CompanionsList',//:id
+						component(resolve) {
+							require(['../pages/web/Thread/Thread_CompanionsList'], resolve)
+						},
+				
+					}
 	],
 
 	scrollBehavior(to, from, savedPosition) {
