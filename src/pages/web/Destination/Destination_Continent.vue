@@ -118,7 +118,7 @@
 			<div class="Continent_youji_title">
 				<h2 class="Continent_youji_titleh2">亚洲游记攻略</h2>
 				<router-link to="">更多</router-link>
-				<span id="searchtype" v-for="(value,index) in search_type" :key="index" :class="type_index===index?'active':''"
+				<span id="searchtype" v-for="(value,index) in search_type" v-bind:disabled="item.disabledid" :key="index" :class="type_index===index?'active':''"
 				 @click="typeIndex(index)">{{value}}</span>
 			</div>
 			<router-link to="" class="Continent_youji_list"  v-for="(item,index) in youjilist" :key="index">
