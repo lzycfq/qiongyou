@@ -189,34 +189,43 @@
 			</div>
 		</div>
 		<div class="navwrap_bg" v-if="btnFlags">
-		<div class="navwrap">
-			<div class="navinner">
-				<div class="area j-timepopup">
-                        <span class="txt">出发时间</span>
-                        <span class="split">-</span>
-                        <span class="navinfo">不限</span>
-                        <span class="tria"></span>
-                       
-                    </div>
+			<div class="navwrap">
+				<div class="navinner">
+					<el-popover placement="bottom-start" width="320" trigger="hover">
+						<div class="navinner-tab">
+							<a id="checktime"  v-for="(value,index) in gotimes" :key='index' :class="type_indextime===index?'active':''"
+							 @click="typeIndextime(index)">{{value.gotime}}</a>
+						</div>
+						<div class="area j-timepopup" slot="reference">
+							<span class="txt">出发时间</span>
+							<span class="split">-</span>
+							<span class="navinfo" id="aa">{{gettimecontent}}</span>
+							<span class="tria"></span>
+						</div>
+					</el-popover>
 					<div class="area j-timepopup">
-					        <span class="txt">出发时间</span>
-					        <span class="split">-</span>
-					        <span class="navinfo">不限</span>
-					        <span class="tria"></span>
-					       <span class="lines"></span>
-					    </div>
+						<span class="txt">出发时间</span>
+						<span class="split">-</span>
+						<span class="navinfo">不限</span>
+						<span class="tria"></span>
+						<span class="lines"></span>
+					</div>
+				</div>
+				<div class="pub j-pubmate"><i class="el-icon-edit-outline"></i> 发布结伴</div>
 			</div>
-<div class="pub j-pubmate"><i class="el-icon-edit-outline"></i> 发布结伴</div>
-			</div>
+
 		</div>
+
 	</el-col>
 </template>
 
 <script>
 	import headers from '../../../pages/web/Thread/header.vue'
+	
 	export default {
 		name: 'Thread',
 		data() {
+
 			return {
 				ruleForm: {
 					searchinfo: ''
@@ -239,14 +248,18 @@
 				type_indexnameizhou: -1,
 				type_indexdayangzhou: -1,
 				type_indexfeizhouzhou: -1,
+				type_indextime: -1,
 				type_indexnew: 0,
 				checkbox: [],
 				checkboxtag: ["最新发布", "最近出发"],
 				Comcrad: [],
 				btnFlags: false,
+				gettimecontent:'不限'
+
 
 			}
 		},
+
 		created() {
 			this.buildcoutryCom();
 			this.buildgotimes();
@@ -255,7 +268,7 @@
 			this.buildcheckbox();
 		},
 		mounted() {
-		window.addEventListener('scroll', this.scrollToTops)
+			window.addEventListener('scroll', this.scrollToTops)
 		},
 		destroyed() {
 			window.removeEventListener('scroll', this.scrollToTops)
@@ -283,20 +296,20 @@
 				})
 			},
 			buildComcrad() {
-				this.axios.get('/api/buildComcrad'// , {
-// 						params: {
-// 							gotimes_params: this.gotimes_params,
-// 							gotimehotyazhou_params: this.gotimehotyazhou_params,
-// 							gotimehotouzhou_params: this.gotimehotouzhou_params,
-// 							gotimehotbeimeizhou_params: this.gotimehotbeimeizhou_params,
-// 							gotimehotnanmeizhou_params: this.gotimehotnanmeizhou_params,
-// 							gotimehotdayangzhou_params: this.gotimehotdayangzhou_params,
-// 							gotimehotfeizhou_params: this.gotimehotfeizhou_params,
-// 							checkboxtag_params: this.checkboxtag_params,
-// 							checkbox_params: this.checkbox_params,
-// 
-// 						}
-// 					}
+				this.axios.get('/api/buildComcrad' // , {
+					// 						params: {
+					// 							gotimes_params: this.gotimes_params,
+					// 							gotimehotyazhou_params: this.gotimehotyazhou_params,
+					// 							gotimehotouzhou_params: this.gotimehotouzhou_params,
+					// 							gotimehotbeimeizhou_params: this.gotimehotbeimeizhou_params,
+					// 							gotimehotnanmeizhou_params: this.gotimehotnanmeizhou_params,
+					// 							gotimehotdayangzhou_params: this.gotimehotdayangzhou_params,
+					// 							gotimehotfeizhou_params: this.gotimehotfeizhou_params,
+					// 							checkboxtag_params: this.checkboxtag_params,
+					// 							checkbox_params: this.checkbox_params,
+					// 
+					// 						}
+					// 					}
 
 				).then(res => {
 					this.Comcrad = res.data.data
@@ -381,12 +394,25 @@
 				this.buildComcrad();
 			},
 			checkClick(index) {
-				this.checkbox_params['type'] = this.checkClick[index]
+				this.checkbox_params['type'] = this.checkbox[index]
 				this.buildComcrad();
 			},
+			typeIndextime(index) {
+				this.type_indextime = index
+				// this.gotimes_params['type'] = this.gotimes[index]				
+				//this.$emit("childByValue", this.gotimes[index].gotime)
+				let v1 = this.gotimes[index].gotime;
+				this.gettimecontent = v1;
+				alert(this.gotimes[index].gotime)
+				this.buildComcrad();
+
+			},
+		
+				
+			
 			// 为了计算距离顶部的高度，当高度大于100显示回顶部图标，小于100则隐藏
 			scrollToTops() {
-			
+
 				let that = this
 				let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
 				that.scrollTop = scrollTop
@@ -398,85 +424,106 @@
 			},
 		},
 		components: {
-			headers
+			headers,
+			
+
 		},
 	}
 </script>
 
 <style lang="scss">
-	.navwrap_bg{
-	position:fixed;
-    top: 100px;
-	left: 0;
-    -webkit-transition: all .3s linear;
-    transition: all .3s linear;
-    -webkit-transform: translateY(-100px);
-    -ms-transform: translateY(-100px);
-    transform: translateY(-100px);
-    z-index:1200;
-    width: 100%;
-    background:#f0f0f0;
-    line-height: 60px;
-    border: 1px solid #d7d7d7;
-    border-left: none;
-    border-right: none;
-    color: #323232;
-    font-size: 14px;
-	.navwrap{
-    position: relative;
-    width: 980px;
-    margin: 0 auto;
-	
-	.navinner{
-		    position: relative;
-    float: left;
-    height: 60px;
- .area {
-    position: relative;
-    float: left;
-    cursor: pointer;
-	 .txt {
-    padding-left: 30px;
-    border-left: 1px solid silver;
-}
-.tria {
-    display: inline-block;
-    margin: 0 23px 0 5px;
-    vertical-align: -3px;
-    width: 0;
-    height: 0;
-    border: 5px dashed transparent;
-    border-top: 5px solid #636363;
-}
-.lines{
-	    display: inline-block;
-    margin-left: -2px;
-    height: 14px;
-    border-left: 1px solid silver;
-    vertical-align: -2px;
-}
-.navinfo {
-    font-weight: 700;
-    color: #10b041;
-}
-
-}
-
-
+	#checktime {
+		display: inline-block;
+		margin-right: 15px;
+		color: #323232;
+		margin-top: 15px;
 	}
-	.pub{
-	position: absolute;
-    right: -20px;
-    top: -1px;
-    height: 62px;
-    padding: 0 73px 0 65px;
-    font-size: 18px;
-    background: #10b041;
-    color: #fff;
-    font-weight: 700;
+
+	#checktime.active {
+		color: #10b041;
+	}
+
+	.navwrap_bg {
+		position: fixed;
+		top: 100px;
+		left: 0;
+		-webkit-transition: all .3s linear;
+		transition: all .3s linear;
+		-webkit-transform: translateY(-100px);
+		-ms-transform: translateY(-100px);
+		transform: translateY(-100px);
+		z-index: 1200;
+		width: 100%;
+		background: #f0f0f0;
+		line-height: 60px;
+		border: 1px solid #d7d7d7;
+		border-left: none;
+		border-right: none;
+		color: #323232;
+		font-size: 14px;
+
+		.navwrap {
+			position: relative;
+			width: 980px;
+			margin: 0 auto;
+
+			.navinner {
+				position: relative;
+				float: left;
+				height: 60px;
+
+				.area {
+					position: relative;
+					float: left;
+					cursor: pointer;
+
+					.txt {
+						padding-left: 30px;
+						border-left: 1px solid silver;
+					}
+
+					.tria {
+						display: inline-block;
+						margin: 0 23px 0 5px;
+						vertical-align: -3px;
+						width: 0;
+						height: 0;
+						border: 5px dashed transparent;
+						border-top: 5px solid #636363;
+					}
+
+					.lines {
+						display: inline-block;
+						margin-left: -2px;
+						height: 14px;
+						border-left: 1px solid silver;
+						vertical-align: -2px;
+					}
+
+					.navinfo {
+						font-weight: 700;
+						color: #10b041;
+					}
+
+				}
+
+
+			}
+
+			.pub {
+				position: absolute;
+				right: -20px;
+				top: -1px;
+				height: 62px;
+				padding: 0 73px 0 65px;
+				font-size: 18px;
+				background: #10b041;
+				color: #fff;
+				font-weight: 700;
+			}
 		}
 	}
-	}
+
 	.navinfo {
 		line-height: 50px;
 		background: #f4f4f4;
@@ -802,12 +849,13 @@
 	.itm.hover {
 		color: #10b041;
 	}
+
 	.cardwrap {
-	
+
 		width: 980px;
 		margin: 0px auto;
 		position: relative;
-	
+
 		.Com_container {
 			margin-top: -21px;
 			margin-left: -13px;
@@ -822,22 +870,22 @@
 			-ms-flex-wrap: wrap;
 			-webkit-flex-wrap: wrap;
 			flex-wrap: wrap;
-	
+
 			.Com_card {
 				border-style: dashed;
-	
+
 				display: inline-block;
 				margin-left: 10px;
 				margin-bottom: 30px;
 				cursor: pointer;
 				font-size: 14px;
-	
+
 				.imgwp {
 					position: relative;
 					width: 235px;
 					height: 235px;
 					overflow: hidden;
-	
+
 					.ci {
 						width: 235px;
 						height: 235px;
@@ -846,7 +894,7 @@
 						transition: all .4s linear;
 					}
 				}
-	
+
 				//imgwp
 				.Com_title {
 					position: absolute;
@@ -859,9 +907,9 @@
 					word-wrap: break-word;
 					word-break: break-all;
 				}
-	
+
 			}
-	
+
 			.con {
 				padding: 9px 0 11px;
 				box-sizing: border-box;
@@ -869,22 +917,22 @@
 				padding-left: 8px;
 				border: 1px solid #ececec;
 				border-top: none;
-	
+
 				.user {
 					width: 24px;
 					height: 24px;
 					border-radius: 12px;
 				}
-	
+
 				.txt {
 					margin-left: 6px;
 					color: #323232;
 					font-size: 12px;
 					vertical-align: 6px;
 				}
-	
-	
-	
+
+
+
 				.dinfo {
 					margin-top: 5px;
 					width: 215px;
@@ -897,12 +945,11 @@
 					font-weight: 700;
 				}
 			}
-	
+
 			.Com_card:hover .ci {
 				transform: scale(1.1);
 			}
 		}
-	
+
 	}
-	
 </style>

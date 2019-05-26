@@ -106,7 +106,9 @@ export default new Router({
 							require(['../pages/web/Thread/Thread_CompanionsList'], resolve)
 						},
 				
-					}
+					},
+					
+				
 	],
 
 	scrollBehavior(to, from, savedPosition) {
