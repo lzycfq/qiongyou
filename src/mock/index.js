@@ -8184,7 +8184,7 @@ const buildgotimehot = Mock.mock(
 						{
 							hotcountry: '新几内亚'
 						},
-						
+
 					],
 					gotimehotfeizhou: [{
 							hotcountry: '北非地区'
@@ -8195,7 +8195,7 @@ const buildgotimehot = Mock.mock(
 						{
 							hotcountry: '南非地区'
 						},
-						
+
 					],
 				}
 
@@ -8203,7 +8203,215 @@ const buildgotimehot = Mock.mock(
 			message: '查询成功'
 		}
 	})
+const buildComcrad = Mock.mock(
+	'/api/buildComcrad', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					Comcradimg: '//pics.lvjs.com.cn/pics//uploads/pc/place2/2019-03-05/47357176-69ba-4e16-8517-1b52e4c5ace4_300_200.jpg',
+					Comcradtitle: "六月最后两周都可以，一起share酒店和路上的车，有愿意的人请微信thecity",
+					Comcradavter: 'http://s3.lvjs.com.cn//uploads/pc/place2/2019-04-26/955e2b94-ba2e-4007-a237-5d9ad5a6a44f_480_320.jpg',
+					Comcradname: 'Apple Love',
+					Comcradmudidi: '东京，京都，大阪',
+					Comcradgotime: '2019-6-5',
+					Comcradfanhuitime: '2019-6-15'
+				},
+				{
+					Comcradimg: '//pics.lvjs.com.cn/pics//uploads/pc/place2/2019-03-05/47357176-69ba-4e16-8517-1b52e4c5ace4_300_200.jpg',
+					Comcradtitle: "六月最后两周都可以，一起share酒店和路上的车，有愿意的人请微信thecity",
+					Comcradavter: 'http://s3.lvjs.com.cn//uploads/pc/place2/2019-04-26/955e2b94-ba2e-4007-a237-5d9ad5a6a44f_480_320.jpg',
+					Comcradname: 'Apple Love',
+					Comcradmudidi: '东京，京都，大阪',
+					Comcradgotime: '2019-6-5',
+					Comcradfanhuitime: '2019-6-15'
+				},
+				{
+					Comcradimg: '//pics.lvjs.com.cn/pics//uploads/pc/place2/2019-03-05/47357176-69ba-4e16-8517-1b52e4c5ace4_300_200.jpg',
+					Comcradtitle: "六月最后两周都可以，一起share酒店和路上的车，有愿意的人请微信thecity",
+					Comcradavter: 'http://s3.lvjs.com.cn//uploads/pc/place2/2019-04-26/955e2b94-ba2e-4007-a237-5d9ad5a6a44f_480_320.jpg',
+					Comcradname: 'Apple Love',
+					Comcradmudidi: '东京，京都，大阪',
+					Comcradgotime: '2019-6-5',
+					Comcradfanhuitime: '2019-6-15'
+				},
+				{
+					Comcradimg: '//pics.lvjs.com.cn/pics//uploads/pc/place2/2019-03-05/47357176-69ba-4e16-8517-1b52e4c5ace4_300_200.jpg',
+					Comcradtitle: "六月最后两周都可以，一起share酒店和路上的车，有愿意的人请微信thecity",
+					Comcradavter: 'http://s3.lvjs.com.cn//uploads/pc/place2/2019-04-26/955e2b94-ba2e-4007-a237-5d9ad5a6a44f_480_320.jpg',
+					Comcradname: 'Apple Love',
+					Comcradmudidi: '东京，京都，大阪',
+					Comcradgotime: '2019-6-5',
+					Comcradfanhuitime: '2019-6-15'
+				},
+				{
+					Comcradimg: '//pics.lvjs.com.cn/pics//uploads/pc/place2/2019-03-05/47357176-69ba-4e16-8517-1b52e4c5ace4_300_200.jpg',
+					Comcradtitle: "六月最后两周都可以，一起share酒店和路上的车，有愿意的人请微信thecity",
+					Comcradavter: 'http://s3.lvjs.com.cn//uploads/pc/place2/2019-04-26/955e2b94-ba2e-4007-a237-5d9ad5a6a44f_480_320.jpg',
+					Comcradname: 'Apple Love',
+					Comcradmudidi: '东京，京都，大阪',
+					Comcradgotime: '2019-6-5',
+					Comcradfanhuitime: '2019-6-15'
+				},
+				{
+					Comcradimg: '//pics.lvjs.com.cn/pics//uploads/pc/place2/2019-03-05/47357176-69ba-4e16-8517-1b52e4c5ace4_300_200.jpg',
+					Comcradtitle: "六月最后两周都可以，一起share酒店和路上的车，有愿意的人请微信thecity",
+					Comcradavter: 'http://s3.lvjs.com.cn//uploads/pc/place2/2019-04-26/955e2b94-ba2e-4007-a237-5d9ad5a6a44f_480_320.jpg',
+					Comcradname: 'Apple Love',
+					Comcradmudidi: '东京，京都，大阪',
+					Comcradgotime: '2019-6-5',
+					Comcradfanhuitime: '2019-6-15'
+				},
+				{
+					Comcradimg: '//pics.lvjs.com.cn/pics//uploads/pc/place2/2019-03-05/47357176-69ba-4e16-8517-1b52e4c5ace4_300_200.jpg',
+					Comcradtitle: "六月最后两周都可以，一起share酒店和路上的车，有愿意的人请微信thecity",
+					Comcradavter: 'http://s3.lvjs.com.cn//uploads/pc/place2/2019-04-26/955e2b94-ba2e-4007-a237-5d9ad5a6a44f_480_320.jpg',
+					Comcradname: 'Apple Love',
+					Comcradmudidi: '东京，京都，大阪',
+					Comcradgotime: '2019-6-5',
+					Comcradfanhuitime: '2019-6-15'
+				},
+				{
+					Comcradimg: '//pics.lvjs.com.cn/pics//uploads/pc/place2/2019-03-05/47357176-69ba-4e16-8517-1b52e4c5ace4_300_200.jpg',
+					Comcradtitle: "六月最后两周都可以，一起share酒店和路上的车，有愿意的人请微信thecity",
+					Comcradavter: 'http://s3.lvjs.com.cn//uploads/pc/place2/2019-04-26/955e2b94-ba2e-4007-a237-5d9ad5a6a44f_480_320.jpg',
+					Comcradname: 'Apple Love',
+					Comcradmudidi: '东京，京都，大阪',
+					Comcradgotime: '2019-6-5',
+					Comcradfanhuitime: '2019-6-15'
+				},
+				{
+					Comcradimg: '//pics.lvjs.com.cn/pics//uploads/pc/place2/2019-03-05/47357176-69ba-4e16-8517-1b52e4c5ace4_300_200.jpg',
+					Comcradtitle: "六月最后两周都可以，一起share酒店和路上的车，有愿意的人请微信thecity",
+					Comcradavter: 'http://s3.lvjs.com.cn//uploads/pc/place2/2019-04-26/955e2b94-ba2e-4007-a237-5d9ad5a6a44f_480_320.jpg',
+					Comcradname: 'Apple Love',
+					Comcradmudidi: '东京，京都，大阪',
+					Comcradgotime: '2019-6-5',
+					Comcradfanhuitime: '2019-6-15'
+				},
+				{
+					Comcradimg: '//pics.lvjs.com.cn/pics//uploads/pc/place2/2019-03-05/47357176-69ba-4e16-8517-1b52e4c5ace4_300_200.jpg',
+					Comcradtitle: "六月最后两周都可以，一起share酒店和路上的车，有愿意的人请微信thecity",
+					Comcradavter: 'http://s3.lvjs.com.cn//uploads/pc/place2/2019-04-26/955e2b94-ba2e-4007-a237-5d9ad5a6a44f_480_320.jpg',
+					Comcradname: 'Apple Love',
+					Comcradmudidi: '东京，京都，大阪',
+					Comcradgotime: '2019-6-5',
+					Comcradfanhuitime: '2019-6-15'
+				},
+				{
+					Comcradimg: '//pics.lvjs.com.cn/pics//uploads/pc/place2/2019-03-05/47357176-69ba-4e16-8517-1b52e4c5ace4_300_200.jpg',
+					Comcradtitle: "六月最后两周都可以，一起share酒店和路上的车，有愿意的人请微信thecity",
+					Comcradavter: 'http://s3.lvjs.com.cn//uploads/pc/place2/2019-04-26/955e2b94-ba2e-4007-a237-5d9ad5a6a44f_480_320.jpg',
+					Comcradname: 'Apple Love',
+					Comcradmudidi: '东京，京都，大阪',
+					Comcradgotime: '2019-6-5',
+					Comcradfanhuitime: '2019-6-15'
+				},
+				{
+					Comcradimg: '//pics.lvjs.com.cn/pics//uploads/pc/place2/2019-03-05/47357176-69ba-4e16-8517-1b52e4c5ace4_300_200.jpg',
+					Comcradtitle: "六月最后两周都可以，一起share酒店和路上的车，有愿意的人请微信thecity",
+					Comcradavter: 'http://s3.lvjs.com.cn//uploads/pc/place2/2019-04-26/955e2b94-ba2e-4007-a237-5d9ad5a6a44f_480_320.jpg',
+					Comcradname: 'Apple Love',
+					Comcradmudidi: '东京，京都，大阪',
+					Comcradgotime: '2019-6-5',
+					Comcradfanhuitime: '2019-6-15'
+				},
+				{
+					Comcradimg: '//pics.lvjs.com.cn/pics//uploads/pc/place2/2019-03-05/47357176-69ba-4e16-8517-1b52e4c5ace4_300_200.jpg',
+					Comcradtitle: "六月最后两周都可以，一起share酒店和路上的车，有愿意的人请微信thecity",
+					Comcradavter: 'http://s3.lvjs.com.cn//uploads/pc/place2/2019-04-26/955e2b94-ba2e-4007-a237-5d9ad5a6a44f_480_320.jpg',
+					Comcradname: 'Apple Love',
+					Comcradmudidi: '东京，京都，大阪',
+					Comcradgotime: '2019-6-5',
+					Comcradfanhuitime: '2019-6-15'
+				},
+				{
+					Comcradimg: '//pics.lvjs.com.cn/pics//uploads/pc/place2/2019-03-05/47357176-69ba-4e16-8517-1b52e4c5ace4_300_200.jpg',
+					Comcradtitle: "六月最后两周都可以，一起share酒店和路上的车，有愿意的人请微信thecity",
+					Comcradavter: 'http://s3.lvjs.com.cn//uploads/pc/place2/2019-04-26/955e2b94-ba2e-4007-a237-5d9ad5a6a44f_480_320.jpg',
+					Comcradname: 'Apple Love',
+					Comcradmudidi: '东京，京都，大阪',
+					Comcradgotime: '2019-6-5',
+					Comcradfanhuitime: '2019-6-15'
+				},
+				{
+					Comcradimg: '//pics.lvjs.com.cn/pics//uploads/pc/place2/2019-03-05/47357176-69ba-4e16-8517-1b52e4c5ace4_300_200.jpg',
+					Comcradtitle: "六月最后两周都可以，一起share酒店和路上的车，有愿意的人请微信thecity",
+					Comcradavter: 'http://s3.lvjs.com.cn//uploads/pc/place2/2019-04-26/955e2b94-ba2e-4007-a237-5d9ad5a6a44f_480_320.jpg',
+					Comcradname: 'Apple Love',
+					Comcradmudidi: '东京，京都，大阪',
+					Comcradgotime: '2019-6-5',
+					Comcradfanhuitime: '2019-6-15'
+				},
+				{
+					Comcradimg: '//pics.lvjs.com.cn/pics//uploads/pc/place2/2019-03-05/47357176-69ba-4e16-8517-1b52e4c5ace4_300_200.jpg',
+					Comcradtitle: "六月最后两周都可以，一起share酒店和路上的车，有愿意的人请微信thecity",
+					Comcradavter: 'http://s3.lvjs.com.cn//uploads/pc/place2/2019-04-26/955e2b94-ba2e-4007-a237-5d9ad5a6a44f_480_320.jpg',
+					Comcradname: 'Apple Love',
+					Comcradmudidi: '东京，京都，大阪',
+					Comcradgotime: '2019-6-5',
+					Comcradfanhuitime: '2019-6-15'
+				},
+				{
+					Comcradimg: '//pics.lvjs.com.cn/pics//uploads/pc/place2/2019-03-05/47357176-69ba-4e16-8517-1b52e4c5ace4_300_200.jpg',
+					Comcradtitle: "六月最后两周都可以，一起share酒店和路上的车，有愿意的人请微信thecity",
+					Comcradavter: 'http://s3.lvjs.com.cn//uploads/pc/place2/2019-04-26/955e2b94-ba2e-4007-a237-5d9ad5a6a44f_480_320.jpg',
+					Comcradname: 'Apple Love',
+					Comcradmudidi: '东京，京都，大阪',
+					Comcradgotime: '2019-6-5',
+					Comcradfanhuitime: '2019-6-15'
+				},
+				{
+					Comcradimg: '//pics.lvjs.com.cn/pics//uploads/pc/place2/2019-03-05/47357176-69ba-4e16-8517-1b52e4c5ace4_300_200.jpg',
+					Comcradtitle: "六月最后两周都可以，一起share酒店和路上的车，有愿意的人请微信thecity",
+					Comcradavter: 'http://s3.lvjs.com.cn//uploads/pc/place2/2019-04-26/955e2b94-ba2e-4007-a237-5d9ad5a6a44f_480_320.jpg',
+					Comcradname: 'Apple Love',
+					Comcradmudidi: '东京，京都，大阪',
+					Comcradgotime: '2019-6-5',
+					Comcradfanhuitime: '2019-6-15'
+				},
+				{
+					Comcradimg: '//pics.lvjs.com.cn/pics//uploads/pc/place2/2019-03-05/47357176-69ba-4e16-8517-1b52e4c5ace4_300_200.jpg',
+					Comcradtitle: "六月最后两周都可以，一起share酒店和路上的车，有愿意的人请微信thecity",
+					Comcradavter: 'http://s3.lvjs.com.cn//uploads/pc/place2/2019-04-26/955e2b94-ba2e-4007-a237-5d9ad5a6a44f_480_320.jpg',
+					Comcradname: 'Apple Love',
+					Comcradmudidi: '东京，京都，大阪',
+					Comcradgotime: '2019-6-5',
+					Comcradfanhuitime: '2019-6-15'
+				},
+				{
+					Comcradimg: '//pics.lvjs.com.cn/pics//uploads/pc/place2/2019-03-05/47357176-69ba-4e16-8517-1b52e4c5ace4_300_200.jpg',
+					Comcradtitle: "六月最后两周都可以，一起share酒店和路上的车，有愿意的人请微信thecity",
+					Comcradavter: 'http://s3.lvjs.com.cn//uploads/pc/place2/2019-04-26/955e2b94-ba2e-4007-a237-5d9ad5a6a44f_480_320.jpg',
+					Comcradname: 'Apple Love',
+					Comcradmudidi: '东京，京都，大阪',
+					Comcradgotime: '2019-6-5',
+					Comcradfanhuitime: '2019-6-15'
+				}
+			],
+			message: '查询成功'
+		}
+	})
+	
+	const buildcheckbox = Mock.mock(
+		'/api/buildcheckbox', 'get', (req, res) => {
+			return {
+				code: 200,
+				data: [
+					{
+						value:1,
+						valuename:"我要拼车"
+					},
+					{
+						value:2,
+						valuename:"我要拼房"
+					}
+				],
+				message: '查询成功'
+			}
+		})
 export default {
+	buildcheckbox,
+	buildComcrad,
 	buildgotimehot,
 	buildcoutryCom,
 	builddtdl,

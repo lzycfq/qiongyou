@@ -157,9 +157,12 @@
 		<div style="clear: both;"></div>
 		<div class="navinfo">
 			<div class="checkboxarea">
-				<a class="checkboxitem"><input class="checkbox_input" type="checkbox" name='sex' value="我要拼车" rel="pinche" /> 我要拼车</a>
-				<a class="checkboxitem checkboxitemleft"><input class="checkbox_input" name='sex' type="checkbox" value="我要拼房" rel="pinfang" />
-					我要拼房</a>
+				<!-- 	<a class="checkboxitem"><input class="checkbox_input" type="checkbox" name='sex' value="1" rel="pinche" /> 我要拼车</a>
+				<a class="checkboxitem checkboxitemleft"><input class="checkbox_input" name='sex' type="checkbox" value="2" rel="pinfang" />
+					我要拼房</a> -->
+				<a class="checkboxitem" v-for="(item,index) in checkbox" :key="index"><input class="checkbox_input" type="checkbox"
+					 name='sex' :value="item.value" @click='checkClick()' :rel="item.value" /> {{item.valuename}}</a>
+
 			</div>
 			<div class="checkboxtag">
 				<a class="lastpub" v-for="(value,index) in checkboxtag" :key='index' :class="type_indexnew===index?'active':''"
@@ -173,20 +176,37 @@
 		<br />
 		<div class="cardwrap">
 			<div class="Com_container">
-				<router-link to="" class="Com_card">
-					<div class="imgwp"><img class="ci" src="//pic.qyer.com/album/149/5e/2015637/index/300x300" alt="">
-
-						<p class="Com_title">一起去旅行～一起去旅行一起去旅行一起去旅行一起去旅行一起去旅行一起去旅行</p>
-
-						<div class="travelmated">已成功结伴</div>
+				<router-link to="" class="Com_card" v-for="(item,index) in Comcrad" :key="index">
+					<div class="imgwp"><img class="ci" :src="item.Comcradimg" alt="item.Comcrad_title">
+						<p class="Com_title">{{item.Comcradtitle}}</p>
 					</div>
 					<div class="con">
-						<p class="name"><img class="user" src="https://pic.qyer.com/avatar/011/55/29/74/200?v=1558787329" alt=""><span
-							 class="txt">Katrina999</span><span class="tag">__tag__</span></p>
-						<p class="des dinfo"><i class="el-icon-location-information"></i> 中国<span class="split">,</span>台湾</p>
-						<p class="date dinfo"><i class="el-icon-date"></i> 2019.06.16<span class="join">-</span>2019.06.23</p>
+						<p class="name"><img class="user" :src="item.Comcradavter" alt="item.Comcrad_title"><span class="txt">{{item.Comcradname}}</span></p>
+						<p class="des dinfo"><img src="../../../assets/images/qiongyou/ditu_1.png" /> {{item.Comcradmudidi}}</p>
+						<p class="date dinfo"><img src="../../../assets/images/qiongyou/ditu_2.png" /> {{item.Comcradgotime}}<span class="join">-</span>{{item.Comcradfanhuitime}}</p>
 					</div>
 				</router-link>
+			</div>
+		</div>
+		<div class="navwrap_bg" v-if="btnFlags">
+		<div class="navwrap">
+			<div class="navinner">
+				<div class="area j-timepopup">
+                        <span class="txt">出发时间</span>
+                        <span class="split">-</span>
+                        <span class="navinfo">不限</span>
+                        <span class="tria"></span>
+                       
+                    </div>
+					<div class="area j-timepopup">
+					        <span class="txt">出发时间</span>
+					        <span class="split">-</span>
+					        <span class="navinfo">不限</span>
+					        <span class="tria"></span>
+					       <span class="lines"></span>
+					    </div>
+			</div>
+<div class="pub j-pubmate"><i class="el-icon-edit-outline"></i> 发布结伴</div>
 			</div>
 		</div>
 	</el-col>
@@ -220,7 +240,10 @@
 				type_indexdayangzhou: -1,
 				type_indexfeizhouzhou: -1,
 				type_indexnew: 0,
-				checkboxtag: ["最新发布", "最近出发"]
+				checkbox: [],
+				checkboxtag: ["最新发布", "最近出发"],
+				Comcrad: [],
+				btnFlags: false,
 
 			}
 		},
@@ -228,6 +251,14 @@
 			this.buildcoutryCom();
 			this.buildgotimes();
 			this.buildgotimehot();
+			this.buildComcrad();
+			this.buildcheckbox();
+		},
+		mounted() {
+		window.addEventListener('scroll', this.scrollToTops)
+		},
+		destroyed() {
+			window.removeEventListener('scroll', this.scrollToTops)
 		},
 		methods: {
 			buildcoutryCom() {
@@ -251,6 +282,36 @@
 					console.log(orror)
 				})
 			},
+			buildComcrad() {
+				this.axios.get('/api/buildComcrad'// , {
+// 						params: {
+// 							gotimes_params: this.gotimes_params,
+// 							gotimehotyazhou_params: this.gotimehotyazhou_params,
+// 							gotimehotouzhou_params: this.gotimehotouzhou_params,
+// 							gotimehotbeimeizhou_params: this.gotimehotbeimeizhou_params,
+// 							gotimehotnanmeizhou_params: this.gotimehotnanmeizhou_params,
+// 							gotimehotdayangzhou_params: this.gotimehotdayangzhou_params,
+// 							gotimehotfeizhou_params: this.gotimehotfeizhou_params,
+// 							checkboxtag_params: this.checkboxtag_params,
+// 							checkbox_params: this.checkbox_params,
+// 
+// 						}
+// 					}
+
+				).then(res => {
+					this.Comcrad = res.data.data
+				}).catch(function(error) {
+					console.log(orror)
+				})
+			},
+
+			buildcheckbox() {
+				this.axios.get('/api/buildcheckbox').then(res => {
+					this.checkbox = res.data.data
+				}).catch(function(error) {
+					console.log(orror)
+				})
+			},
 			searchBtn(formName) {
 				this.$refs[formName].validate((valid) => {
 					if (valid) {
@@ -270,38 +331,71 @@
 			},
 			typeIndex(index) {
 				this.type_index = index
+				this.gotimes_params['type'] = this.gotimes[index]
+				this.buildComcrad();
 			},
 			typeIndexhot(index) {
 				this.type_indexhot = index
+				this.gotimehots_params['type'] = this.gotimehots[index]
+				this.buildComcrad();
 			},
 			typeIndexyazhou(index) {
 
 				this.type_indexyazhou = index
+				this.gotimehotyazhou_params['type'] = this.gotimehotyazhou[index]
+				this.buildComcrad();
 			},
 			typeIndexouzhou(index) {
 
 				this.type_indexouzhou = index
+				this.gotimehotouzhou_params['type'] = this.gotimehotouzhou[index]
+				this.buildComcrad();
 			},
 			typeIndexbeimeizhou(index) {
 
 				this.type_indexbeimeizhou = index
+				this.gotimehotbeimeizhou_params['type'] = this.gotimehotbeimeizhou[index]
+				this.buildComcrad();
 			},
 			typeIndexnanmeizhou(index) {
 
 				this.type_indexnanmeizhou = index
+				this.gotimehotnanmeizhou_params['type'] = this.gotimehotnanmeizhou[index]
+				this.buildComcrad();
 			},
 			typeIndexdayangzhou(index) {
 
 				this.type_indexdayangzhou = index
+				this.gotimehotdayangzhou_params['type'] = this.gotimehotdayangzhou[index]
+				this.buildComcrad();
 			},
 			typeIndexfeizhouzhou(index) {
 
 				this.type_indexfeizhou = index
+				this.gotimehotfeizhou_params['type'] = this.gotimehotfeizhou[index]
+				this.buildComcrad();
 			},
 			typeIndexnew(index) {
 				this.type_indexnew = index
+				this.checkboxtag_params['type'] = this.checkboxtag[index]
+				this.buildComcrad();
 			},
-
+			checkClick(index) {
+				this.checkbox_params['type'] = this.checkClick[index]
+				this.buildComcrad();
+			},
+			// 为了计算距离顶部的高度，当高度大于100显示回顶部图标，小于100则隐藏
+			scrollToTops() {
+			
+				let that = this
+				let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+				that.scrollTop = scrollTop
+				if (that.scrollTop > 550) {
+					that.btnFlags = true
+				} else {
+					that.btnFlags = false
+				}
+			},
 		},
 		components: {
 			headers
@@ -310,108 +404,79 @@
 </script>
 
 <style lang="scss">
-	.cardwrap {
+	.navwrap_bg{
+	position:fixed;
+    top: 100px;
+	left: 0;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+    -webkit-transform: translateY(-100px);
+    -ms-transform: translateY(-100px);
+    transform: translateY(-100px);
+    z-index:1200;
+    width: 100%;
+    background:#f0f0f0;
+    line-height: 60px;
+    border: 1px solid #d7d7d7;
+    border-left: none;
+    border-right: none;
+    color: #323232;
+    font-size: 14px;
+	.navwrap{
+    position: relative;
+    width: 980px;
+    margin: 0 auto;
 	
-		width: 980px;
-		margin: 0px auto;
-		position: relative;
-		
-		.Com_container {
-			margin-top: -21px;
-			margin-left: -13px;
-			text-align: justify;
-			-webkit-transition: all .3s linear;
-			transition: all .3s linear;
-			width: 1020px;
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: -webkit-flex;
-			display: flex;
-			-ms-flex-wrap: wrap;
-			-webkit-flex-wrap: wrap;
-			flex-wrap: wrap;
+	.navinner{
+		    position: relative;
+    float: left;
+    height: 60px;
+ .area {
+    position: relative;
+    float: left;
+    cursor: pointer;
+	 .txt {
+    padding-left: 30px;
+    border-left: 1px solid silver;
+}
+.tria {
+    display: inline-block;
+    margin: 0 23px 0 5px;
+    vertical-align: -3px;
+    width: 0;
+    height: 0;
+    border: 5px dashed transparent;
+    border-top: 5px solid #636363;
+}
+.lines{
+	    display: inline-block;
+    margin-left: -2px;
+    height: 14px;
+    border-left: 1px solid silver;
+    vertical-align: -2px;
+}
+.navinfo {
+    font-weight: 700;
+    color: #10b041;
+}
 
-			.Com_card {
-				border-style: dashed;
+}
 
-				display: inline-block;
-				margin-left: 13px;
-				margin-bottom: 30px;
-				cursor: pointer;
-				font-size: 14px;
-
-				.imgwp {
-					position: relative;
-					width: 235px;
-					height: 235px;
-					overflow: hidden;
-
-					.ci {
-						width: 235px;
-						height: 235px;
-						border-radius: 3px 3px 0 0;
-						-webkit-transition: all .4s linear;
-						transition: all .4s linear;
-					}
-				}
-
-				//imgwp
-				.Com_title {
-					position: absolute;
-					padding: 9px;
-					bottom: 16px;
-					margin-left: 5px;
-					text-align: left;
-					font-weight: bold;
-					font-size: 18px;
-					word-wrap: break-word;
-					word-break: break-all;
-				}
-
-			}
-
-			.con {
-				padding: 9px 0 11px;
-				box-sizing: border-box;
-				width: 235px;
-				padding-left: 8px;
-				border: 1px solid #ececec;
-				border-top: none;
-
-				.user {
-					width: 24px;
-					height: 24px;
-					border-radius: 12px;
-				}
-
-				.txt {
-					margin-left: 6px;
-					color: #323232;
-					font-size: 12px;
-					vertical-align: 6px;
-				}
-
-			
-
-				.dinfo {
-					margin-top: 5px;
-					width: 215px;
-					overflow: hidden;
-					text-overflow: ellipsis;
-					white-space: nowrap;
-					padding-left: 5px;
-					color: #323232;
-					font-size: 15px;
-					font-weight: 700;
-				}
-			}
-			.Com_card:hover .ci{
-				 transform: scale(1.1);
-			}
-		}
 
 	}
-
+	.pub{
+	position: absolute;
+    right: -20px;
+    top: -1px;
+    height: 62px;
+    padding: 0 73px 0 65px;
+    font-size: 18px;
+    background: #10b041;
+    color: #fff;
+    font-weight: 700;
+		}
+	}
+	}
 	.navinfo {
 		line-height: 50px;
 		background: #f4f4f4;
@@ -432,7 +497,7 @@
 				}
 			}
 
-			.checkboxitemleft {
+			.checkboxitem+.checkboxitem {
 				margin-left: 15px;
 			}
 		}
@@ -737,4 +802,107 @@
 	.itm.hover {
 		color: #10b041;
 	}
+	.cardwrap {
+	
+		width: 980px;
+		margin: 0px auto;
+		position: relative;
+	
+		.Com_container {
+			margin-top: -21px;
+			margin-left: -13px;
+			text-align: justify;
+			-webkit-transition: all .3s linear;
+			transition: all .3s linear;
+			width: 1020px;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-ms-flex-wrap: wrap;
+			-webkit-flex-wrap: wrap;
+			flex-wrap: wrap;
+	
+			.Com_card {
+				border-style: dashed;
+	
+				display: inline-block;
+				margin-left: 10px;
+				margin-bottom: 30px;
+				cursor: pointer;
+				font-size: 14px;
+	
+				.imgwp {
+					position: relative;
+					width: 235px;
+					height: 235px;
+					overflow: hidden;
+	
+					.ci {
+						width: 235px;
+						height: 235px;
+						border-radius: 3px 3px 0 0;
+						-webkit-transition: all .4s linear;
+						transition: all .4s linear;
+					}
+				}
+	
+				//imgwp
+				.Com_title {
+					position: absolute;
+					padding: 9px;
+					bottom: 16px;
+					margin-left: 5px;
+					text-align: left;
+					font-weight: bold;
+					font-size: 18px;
+					word-wrap: break-word;
+					word-break: break-all;
+				}
+	
+			}
+	
+			.con {
+				padding: 9px 0 11px;
+				box-sizing: border-box;
+				width: 235px;
+				padding-left: 8px;
+				border: 1px solid #ececec;
+				border-top: none;
+	
+				.user {
+					width: 24px;
+					height: 24px;
+					border-radius: 12px;
+				}
+	
+				.txt {
+					margin-left: 6px;
+					color: #323232;
+					font-size: 12px;
+					vertical-align: 6px;
+				}
+	
+	
+	
+				.dinfo {
+					margin-top: 5px;
+					width: 215px;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					padding-left: 5px;
+					color: #323232;
+					font-size: 15px;
+					font-weight: 700;
+				}
+			}
+	
+			.Com_card:hover .ci {
+				transform: scale(1.1);
+			}
+		}
+	
+	}
+	
 </style>
