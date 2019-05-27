@@ -119,7 +119,6 @@
 				slidesPerView: 20,
 				autoplay: true, //等同于以下设置
 				noSwiping: true,
-
 				watchSlidesVisibility: true,
 				watchSlidesProgress: true,
 				direction: 'vertical',
@@ -128,12 +127,9 @@
 				direction: 'vertical',
 				observer: true, //修改swiper自己或子元素时，自动初始化swiper
 				observeParents: true, //修改swiper的父元素时，自动初始化swiper
-
 				autoplay: true, //等同于以下设置
 				effect: 'fade',
-
 				noSwiping: true,
-
 				navigation: {
 					nextEl: '.swiper-button-next',
 					prevEl: '.swiper-button-prev',
