@@ -99,18 +99,33 @@ export default new Router({
 				// 
 				// 	}
 				
-					{
-						path: '/',
-						name: 'Thread_CompanionsList',//:id
-						component(resolve) {
-							require(['../pages/web/Thread/Thread_CompanionsList'], resolve)
-						},
-				
-					},
+				// 	{
+				// 		path: '/',
+				// 		name: 'Thread_CompanionsList',//:id
+				// 		component(resolve) {
+				// 			require(['../pages/web/Thread/Thread_CompanionsList'], resolve)
+				// 		},
+				// 
+				// 	},
 					
-				
+				// {
+				// 	path: '/',
+				// 	name: 'Thread_CompanionsDetail',//:id
+				// 	component(resolve) {
+				// 		require(['../pages/web/Thread/Thread_CompanionsDetail'], resolve)
+				// 	},
+				// 				
+				// },
+				{
+					path: '/',
+					name: 'Thread_Visa',//:id
+					component(resolve) {
+						require(['../pages/web/Thread/Thread_Visa'], resolve)
+					},
+								
+				},
 	],
-
+    
 	scrollBehavior(to, from, savedPosition) {
 		return {
 			x: 0,

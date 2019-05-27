@@ -80,17 +80,15 @@
 		</ul>
 		<!-- 安全检查 -->
 		<div style="clear: both;"></div>
-		<div class="crumnav">
-			<div class="filterimg" style="background: url(//pics.lvjs.com.cn/uploads/pc/place2/2019-05-07/5db6b8b7-6bcb-415c-9e23-bc3166a1798d.jpg);"></div>
+		<div class="crumnav" v-for="(item,index) in crumnav" :key="index">
+			<div class="filterimg" :style="{background:'url('+item.crumnavimg+')'}"></div>
 			<div class="crumnavt">
-				<img src="//pics.lvjs.com.cn/uploads/pc/place2/2019-05-21/9b2b688c-9f62-4b5f-b0e9-d98fda244660.jpg" width="680px"
-				 height="260px" />
-
+				<img :src="item.crumnavimg" height="260px" width="680px"/>
 				<div class="cn-info">
 					<h3 class="cni-tle">结伴同游</h3>
-					<p class="cni-con"><b class="cni-num">1亿</b>靠谱穷游er</p>
-					<p class="cni-con"><b class="cni-num">110394</b>个正在结伴</p>
-					<p class="cni-con"><b class="cni-num">6000</b>个近一个月内出发</p>
+					<p class="cni-con"><b class="cni-num">{{item.crumnavnumber}}</b>靠谱穷游er</p>
+					<p class="cni-con"><b class="cni-num">{{item.crumnavnow}}</b>个正在结伴</p>
+					<p class="cni-con"><b class="cni-num">{{item.crumnavmoth}}</b>个近一个月内出发</p>
 					<div class="cni-btn j-pubmate">发布结伴</div>
 
 				</div>
@@ -103,71 +101,84 @@
 				 :key="index">{{item.gotime}}</a>
 			</div>
 			<br />
-			<div class="dest" v-for="(item,index) in gotimehot" :key="index">
+			
+			<div class="dest">
 				<span class="title">目的地</span>
 
 				<div class="desttab">
 					<el-tabs>
 						<el-tab-pane label="热门">
 							<ul class="desttabul">
-								<li class="gotimeclass" v-for="(item,index) in item.gotimehots" :key="index">
+								<li class="gotimeclass" v-for="(item,index) in gotimehots" :key="index">
 									<a id='com_hotmudi' :class="type_indexhot===index?'active':''" @click="typeIndexhot(index)">{{item.hotcountry}}</a></li>
 							</ul>
 						</el-tab-pane>
 						<el-tab-pane label="亚洲">
 							<ul class="desttabul">
-								<li class="gotimeclass" v-for="(item,index) in item.gotimehotyazhou" :key="index">
+								<li class="gotimeclass" v-for="(item,index) in gotimehotyazhou" :key="index">
 									<a id='com_hotmudi' :class="type_indexyazhou===index?'active':''" @click="typeIndexyazhou(index)">{{item.hotcountry}}</a></li>
 							</ul>
 						</el-tab-pane>
 						<el-tab-pane label="欧洲">
 							<ul class="desttabul">
-								<li class="gotimeclass" v-for="(item,index) in item.gotimehotouzhou" :key="index">
+								<li class="gotimeclass" v-for="(item,index) in gotimehotouzhou" :key="index">
 									<a id='com_hotmudi' :class="type_indexouzhou===index?'active':''" @click="typeIndexouzhou(index)">{{item.hotcountry}}</a></li>
 							</ul>
 						</el-tab-pane>
 						<el-tab-pane label="北美洲">
 							<ul class="desttabul">
-								<li class="gotimeclass" v-for="(item,index) in item.gotimehotbeimeizhou" :key="index">
+								<li class="gotimeclass" v-for="(item,index) in gotimehotbeimeizhou" :key="index">
 									<a id='com_hotmudi' :class="type_indexbeimeizhou===index?'active':''" @click="typeIndexbeimeizhou(index)">{{item.hotcountry}}</a></li>
 							</ul>
 						</el-tab-pane>
 						<el-tab-pane label="南美洲">
 							<ul class="desttabul">
-								<li class="gotimeclass" v-for="(item,index) in item.gotimehotnanmeizhou" :key="index">
+								<li class="gotimeclass" v-for="(item,index) in gotimehotnanmeizhou" :key="index">
 									<a id='com_hotmudi' :class="type_indexnanmeizhou===index?'active':''" @click="typeIndexnameizhou(index)">{{item.hotcountry}}</a></li>
 							</ul>
 						</el-tab-pane>
 						<el-tab-pane label="大洋洲">
 							<ul class="desttabul">
-								<li class="gotimeclass" v-for="(item,index) in item.gotimehotdayangzhou" :key="index">
+								<li class="gotimeclass" v-for="(item,index) in gotimehotdayangzhou" :key="index">
 									<a id='com_hotmudi' :class="type_indexdayangzhou===index?'active':''" @click="typeIndexdayangzhou(index)">{{item.hotcountry}}</a></li>
 							</ul>
 						</el-tab-pane>
 						<el-tab-pane label="非洲">
 							<ul class="desttabul">
-								<li class="gotimeclass" v-for="(item,index) in item.gotimehotfeizhou" :key="index">
+								<li class="gotimeclass" v-for="(item,index) in gotimehotfeizhou" :key="index">
 									<a id='com_hotmudi' :class="type_indexfeizhou===index?'active':''" @click="typeIndexfeizhou(index)">{{item.hotcountry}}</a></li>
 							</ul>
 						</el-tab-pane>
+						
 					</el-tabs>
+					<div class="Com_froms">
+						<el-form :model="ruleForm" :rules="rules" ref="ruleForm" size="mini">
+							<el-form-item prop="searchinfo">
+								<el-input v-model="ruleForm.searchinfo" rel="searchinfo" class="Com_input" placeholder="请输入搜索内容"></el-input>
+								<i class="el-icon-search iconss" @click="searchBtn('ruleForm')"></i>
+							</el-form-item>
+					
+						</el-form>
+					</div>
 				</div><!-- desttab -->
 			</div>
 		</div>
 		<div style="clear: both;"></div>
-		<div class="navinfo">
-			<div class="checkboxarea">
-				<!-- 	<a class="checkboxitem"><input class="checkbox_input" type="checkbox" name='sex' value="1" rel="pinche" /> 我要拼车</a>
+		<div class="navinfos_bg">
+			<div class="navinfos">
+				<div class="checkboxarea">
+					<!-- 	<a class="checkboxitem"><input class="checkbox_input" type="checkbox" name='sex' value="1" rel="pinche" /> 我要拼车</a>
 				<a class="checkboxitem checkboxitemleft"><input class="checkbox_input" name='sex' type="checkbox" value="2" rel="pinfang" />
 					我要拼房</a> -->
-				<a class="checkboxitem" v-for="(item,index) in checkbox" :key="index"><input class="checkbox_input" type="checkbox"
-					 name='sex' :value="item.value" @click='checkClick()' :rel="item.value" /> {{item.valuename}}</a>
+					<a class="checkboxitem" v-for="(item,index) in checkbox" :key="index"><input class="checkbox_input" type="checkbox"
+						 name='sex' :value="item.value" @click='checkClick()' :rel="item.value" /> {{item.valuename}}</a>
 
-			</div>
-			<div class="checkboxtag">
-				<a class="lastpub" v-for="(value,index) in checkboxtag" :key='index' :class="type_indexnew===index?'active':''"
-				 @click="typeIndexnew(index)">
-					{{value,chboxname}}</a>
+				</div>
+				<div class="checkboxtag">
+					<a class="lastpub" v-for="(value,index) in checkboxtag" :key='index' :class="type_indexnew===index?'active':''"
+					 @click="typeIndexnew(index)">
+						{{value,chboxname}}</a>
+				</div>
 			</div>
 		</div>
 		<div style="clear: both;"></div>
@@ -193,7 +204,7 @@
 				<div class="navinner">
 					<el-popover placement="bottom-start" width="320" trigger="hover">
 						<div class="navinner-tab">
-							<a id="checktime"  v-for="(value,index) in gotimes" :key='index' :class="type_indextime===index?'active':''"
+							<a id="checktime" v-for="(value,index) in gotimes" :key='index' :class="type_indextime===index?'active':''"
 							 @click="typeIndextime(index)">{{value.gotime}}</a>
 						</div>
 						<div class="area j-timepopup" slot="reference">
@@ -203,13 +214,90 @@
 							<span class="tria"></span>
 						</div>
 					</el-popover>
-					<div class="area j-timepopup">
-						<span class="txt">出发时间</span>
-						<span class="split">-</span>
-						<span class="navinfo">不限</span>
-						<span class="tria"></span>
-						<span class="lines"></span>
-					</div>
+					<el-popover placement="bottom-start" width="300" trigger="hover">
+						<div class="navinner-tab-two">
+							<el-tabs tab-position='left'>
+								<el-tab-pane label="热门">
+									<div class="navinner-tab-two-content">
+										<ul>
+											<li class="navinner-tab-two-contentli" v-for="(item,index) in gotimehots" :key="index">
+												<a class="navinner-tab-two-contentli-itma" id="sbs" :class="type_indexhots===index?'active':''" @click="typeIndexhots(index)">{{item.hotcountry}}</a>
+											</li>
+										</ul>
+									</div>
+								</el-tab-pane>
+								<el-tab-pane label="亚洲">
+									<div class="navinner-tab-two-content">
+										<ul>
+											<li class="navinner-tab-two-contentli" v-for="(item,index) in gotimehotyazhou" :key="index">
+												<a class="navinner-tab-two-contentli-itma" id="navinner-tab-two-contentli-itma" :class="type_indexyazhous===index?'active':''"
+												 @click="typeIndexyazhous(index)">{{item.hotcountry}}</a>
+											</li>
+										</ul>
+									</div>
+								</el-tab-pane>
+								<el-tab-pane label="欧洲">
+									<div class="navinner-tab-two-content">
+										<ul>
+											<li class="navinner-tab-two-contentli" v-for="(item,index) in gotimehotouzhou" :key="index">
+												<a class="navinner-tab-two-contentli-itma" id="navinner-tab-two-contentli-itma" :class="type_indexouzhous===index?'active':''"
+												 @click="typeIndexyazhous(index)">{{item.hotcountry}}</a>
+											</li>
+										</ul>
+									</div>
+								</el-tab-pane>
+								<el-tab-pane label="北美洲">
+									<div class="navinner-tab-two-content">
+										<ul>
+											<li class="navinner-tab-two-contentli" v-for="(item,index) in gotimehotbeimeizhou" :key="index">
+												<a class="navinner-tab-two-contentli-itma" id="navinner-tab-two-contentli-itma" :class="type_indexbeimeizhous===index?'active':''"
+												 @click="typeIndexbeimeizhous(index)">{{item.hotcountry}}</a>
+											</li>
+										</ul>
+									</div>
+								</el-tab-pane>
+								<el-tab-pane label="南美洲">
+									<div class="navinner-tab-two-content">
+										<ul>
+											<li class="navinner-tab-two-contentli" v-for="(item,index) in gotimehotnanmeizhou" :key="index">
+												<a class="navinner-tab-two-contentli-itma" id="navinner-tab-two-contentli-itma" :class="type_indexnanmeizhous===index?'active':''"
+												 @click="typeIndexnanmeizhous(index)">{{item.hotcountry}}</a>
+											</li>
+										</ul>
+									</div>
+								</el-tab-pane>
+								<el-tab-pane label="大洋洲">
+									<div class="navinner-tab-two-content">
+										<ul>
+											<li class="navinner-tab-two-contentli" v-for="(item,index) in gotimehotdayangzhou" :key="index">
+												<a class="navinner-tab-two-contentli-itma" id="navinner-tab-two-contentli-itma" :class="type_indexdayangzhous===index?'active':''"
+												 @click="typeIndexdayangzhous(index)">{{item.hotcountry}}</a>
+											</li>
+										</ul>
+									</div>
+								</el-tab-pane>
+								<el-tab-pane label="非洲">
+									<div class="navinner-tab-two-content">
+										<ul>
+											<li class="navinner-tab-two-contentli" v-for="(item,index) in gotimehotfeizhou" :key="index">
+												<a class="navinner-tab-two-contentli-itma" id="navinner-tab-two-contentli-itma" :class="type_indexfeizhous===index?'active':''"
+												 @click="typeIndexfeizhous(index)">{{item.hotcountry}}</a>
+											</li>
+										</ul>
+									</div>
+								</el-tab-pane>
+							</el-tabs>
+						</div>
+						<div class="area j-timepopup" slot="reference">
+							<span class="txt">目的地</span>
+							<span class="split">-</span>
+							<span class="navinfo">{{gomudidi}}</span>
+							<span class="tria"></span>
+							<span class="lines"></span>
+						</div>
+
+					</el-popover>
+
 				</div>
 				<div class="pub j-pubmate"><i class="el-icon-edit-outline"></i> 发布结伴</div>
 			</div>
@@ -221,9 +309,9 @@
 
 <script>
 	import headers from '../../../pages/web/Thread/header.vue'
-	
+
 	export default {
-		name: 'Thread',
+		name: 'Thread_CompanionsList',
 		data() {
 
 			return {
@@ -237,25 +325,44 @@
 						trigger: 'blur'
 					}, ]
 				},
+				//   search_params:{
+				//     type: this.$route.query.type,
+				//  
+				// },
 				coutryCom: [],
 				gotimes: [],
-				gotimehot: [],
+				gotimehots: [],
+				gotimehotyazhou: [],
+				gotimehotouzhou: [],
+				gotimehotbeimeizhou: [],
+				gotimehotnanmeizhou: [],
+				gotimehotdayangzhou: [],
+				gotimehotfeizhou: [],
+				crumnav:[],
 				type_index: 0,
 				type_indexhot: -1,
+				type_indexhots: -1,
 				type_indexyazhou: -1,
+				type_indexyazhous: -1,
 				type_indexouzhou: -1,
+				type_indexouzhous: -1,
 				type_indexbeimeizhou: -1,
+				type_indexbeimeizhous: -1,
 				type_indexnameizhou: -1,
+				type_indexnameizhous: -1,
 				type_indexdayangzhou: -1,
-				type_indexfeizhouzhou: -1,
+				type_indexdayangzhous: -1,
+				type_indexfeizhou: -1,
+				type_indexfeizhous: -1,
 				type_indextime: -1,
 				type_indexnew: 0,
 				checkbox: [],
 				checkboxtag: ["最新发布", "最近出发"],
 				Comcrad: [],
 				btnFlags: false,
-				gettimecontent:'不限'
-
+				gettimecontent: '不限',
+				gomudidi: '不限',
+				search_params: {}
 
 			}
 		},
@@ -266,6 +373,13 @@
 			this.buildgotimehot();
 			this.buildComcrad();
 			this.buildcheckbox();
+			this.buildgotimeyazhou();
+			this.buildgotimeouzhou();
+			this.buildgotimebeimeizhou();
+			this.buildgotimenanmeizhou();
+			this.buildgotimedayangzhou();
+			this.buildgotimefeizhou();
+			this.buildcrumnav();
 		},
 		mounted() {
 			window.addEventListener('scroll', this.scrollToTops)
@@ -290,7 +404,56 @@
 			},
 			buildgotimehot() {
 				this.axios.get('/api/buildgotimehot').then(res => {
-					this.gotimehot = res.data.data
+					this.gotimehots = res.data.data
+				}).catch(function(error) {
+					console.log(orror)
+				})
+			},
+			buildgotimeyazhou() {
+				this.axios.get('/api/buildgotimeyazhou').then(res => {
+					this.gotimehotyazhou = res.data.data
+				}).catch(function(error) {
+					console.log(orror)
+				})
+			},
+			buildgotimeouzhou() {
+				this.axios.get('/api/buildgotimeouzhou').then(res => {
+					this.gotimehotouzhou = res.data.data
+				}).catch(function(error) {
+					console.log(orror)
+				})
+			},
+			buildgotimebeimeizhou() {
+				this.axios.get('/api/buildgotimebeimeizhou').then(res => {
+					this.gotimehotbeimeizhou = res.data.data
+				}).catch(function(error) {
+					console.log(orror)
+				})
+			},
+			buildgotimenanmeizhou() {
+				this.axios.get('/api/buildgotimenanmeizhou').then(res => {
+					this.gotimehotnanmeizhou = res.data.data
+				}).catch(function(error) {
+					console.log(orror)
+				})
+			},
+			buildgotimedayangzhou() {
+				this.axios.get('/api/buildgotimedayangzhou').then(res => {
+					this.gotimehotdayangzhou = res.data.data
+				}).catch(function(error) {
+					console.log(orror)
+				})
+			},
+			buildgotimefeizhou() {
+				this.axios.get('/api/buildgotimefeizhou').then(res => {
+					this.gotimehotfeizhou = res.data.data
+				}).catch(function(error) {
+					console.log(orror)
+				})
+			},
+			buildcrumnav(){
+				this.axios.get('/api/buildcrumnav').then(res => {
+					this.crumnav = res.data.data
 				}).catch(function(error) {
 					console.log(orror)
 				})
@@ -298,15 +461,8 @@
 			buildComcrad() {
 				this.axios.get('/api/buildComcrad' // , {
 					// 						params: {
-					// 							gotimes_params: this.gotimes_params,
-					// 							gotimehotyazhou_params: this.gotimehotyazhou_params,
-					// 							gotimehotouzhou_params: this.gotimehotouzhou_params,
-					// 							gotimehotbeimeizhou_params: this.gotimehotbeimeizhou_params,
-					// 							gotimehotnanmeizhou_params: this.gotimehotnanmeizhou_params,
-					// 							gotimehotdayangzhou_params: this.gotimehotdayangzhou_params,
-					// 							gotimehotfeizhou_params: this.gotimehotfeizhou_params,
-					// 							checkboxtag_params: this.checkboxtag_params,
-					// 							checkbox_params: this.checkbox_params,
+					// 							params: this.search_params,
+					// 							
 					// 
 					// 						}
 					// 					}
@@ -344,72 +500,132 @@
 			},
 			typeIndex(index) {
 				this.type_index = index
-				this.gotimes_params['type'] = this.gotimes[index]
+				this.search_params['type'] = this.gotimes[index]
 				this.buildComcrad();
 			},
 			typeIndexhot(index) {
 				this.type_indexhot = index
-				this.gotimehots_params['type'] = this.gotimehots[index]
+				this.search_params['type'] = this.gotimehots[index]
+
+				this.buildComcrad();
+			},
+			typeIndexhots(index) {
+				this.type_indexhots = index
+				this.search_params['type'] = this.gotimehots[index]
+				var v = this.gotimehots[index].hotcountry;
+				this.gomudidi = v;
 				this.buildComcrad();
 			},
 			typeIndexyazhou(index) {
 
 				this.type_indexyazhou = index
-				this.gotimehotyazhou_params['type'] = this.gotimehotyazhou[index]
+				this.search_params['type'] = this.gotimehotyazhou[index]
+				var v = this.gotimehotyazhou[index].hotcountry;
+				this.gomudidi = v;
+				this.buildComcrad();
+			},
+			typeIndexyazhous(index) {
+
+				this.type_indexyazhous = index
+				this.search_params['type'] = this.gotimehotyazhou[index]
+				var v = this.gotimehotyazhou[index].hotcountry;
+				this.gomudidi = v;
 				this.buildComcrad();
 			},
 			typeIndexouzhou(index) {
 
 				this.type_indexouzhou = index
-				this.gotimehotouzhou_params['type'] = this.gotimehotouzhou[index]
+				this.search_params['type'] = this.gotimehotouzhou[index]
+				this.buildComcrad();
+			},
+			typeIndexouzhous(index) {
+
+				this.type_indexouzhous = index
+				this.search_params['type'] = this.gotimehotouzhou[index]
+					var v = this.gotimehotouzhou[index].hotcountry;
+				this.gomudidi = v;
 				this.buildComcrad();
 			},
 			typeIndexbeimeizhou(index) {
 
 				this.type_indexbeimeizhou = index
-				this.gotimehotbeimeizhou_params['type'] = this.gotimehotbeimeizhou[index]
+				this.search_params['type'] = this.gotimehotbeimeizhou[index]
+				this.buildComcrad();
+			},
+			typeIndexbeimeizhous(index) {
+
+				this.type_indexbeimeizhous = index
+				this.search_params['type'] = this.gotimehotbeimeizhou[index]
+					var v = this.gotimehotbeimeizhou[index].hotcountry;
+				this.gomudidi = v;
 				this.buildComcrad();
 			},
 			typeIndexnanmeizhou(index) {
 
 				this.type_indexnanmeizhou = index
-				this.gotimehotnanmeizhou_params['type'] = this.gotimehotnanmeizhou[index]
+				this.search_params['type'] = this.gotimehotnanmeizhou[index]
+				this.buildComcrad();
+			},
+			typeIndexnanmeizhous(index) {
+
+				this.type_indexnanmeizhous = index
+				this.search_params['type'] = this.gotimehotnanmeizhou[index]
+				var v = this.gotimehotnanmeizhou[index].hotcountry;
+				this.gomudidi = v;
 				this.buildComcrad();
 			},
 			typeIndexdayangzhou(index) {
 
 				this.type_indexdayangzhou = index
-				this.gotimehotdayangzhou_params['type'] = this.gotimehotdayangzhou[index]
+				this.search_params['type'] = this.gotimehotdayangzhou[index]
 				this.buildComcrad();
 			},
-			typeIndexfeizhouzhou(index) {
+			typeIndexdayangzhous(index) {
+
+				this.type_indexdayangzhous = index
+				this.search_params['type'] = this.gotimehotdayangzhou[index]
+				var v = this.gotimehotdayangzhou[index].hotcountry;
+				this.gomudidi = v;
+				this.buildComcrad();
+			},
+			typeIndexfeizhou(index) {
 
 				this.type_indexfeizhou = index
-				this.gotimehotfeizhou_params['type'] = this.gotimehotfeizhou[index]
+				this.search_params['type'] = this.gotimehotfeizhou[index]
+				this.buildComcrad();
+			},
+			typeIndexfeizhous(index) {
+
+				this.type_indexfeizhous = index
+				this.search_params['type'] = this.gotimehotfeizhou[index]
+				var v = this.gotimehotfeizhou[index].hotcountry;
+				this.gomudidi = v;
 				this.buildComcrad();
 			},
 			typeIndexnew(index) {
 				this.type_indexnew = index
-				this.checkboxtag_params['type'] = this.checkboxtag[index]
+				this.search_params['type'] = this.checkboxtag[index]
 				this.buildComcrad();
 			},
 			checkClick(index) {
-				this.checkbox_params['type'] = this.checkbox[index]
+				this.search_params['type'] = this.checkbox[index]
 				this.buildComcrad();
 			},
 			typeIndextime(index) {
 				this.type_indextime = index
-				// this.gotimes_params['type'] = this.gotimes[index]				
-				//this.$emit("childByValue", this.gotimes[index].gotime)
+				if (index > 0) {
+					this.search_params['type'] = this.gotimes[index];
+				} else {
+					this.search_params['type'] = '';
+				}
 				let v1 = this.gotimes[index].gotime;
 				this.gettimecontent = v1;
-				alert(this.gotimes[index].gotime)
 				this.buildComcrad();
 
 			},
-		
-				
-			
+
+
+
 			// 为了计算距离顶部的高度，当高度大于100显示回顶部图标，小于100则隐藏
 			scrollToTops() {
 
@@ -425,13 +641,63 @@
 		},
 		components: {
 			headers,
-			
+
 
 		},
 	}
 </script>
 
 <style lang="scss">
+	.navinner-tab-two-content {
+
+		height: 285px;
+		overflow-y: auto;
+		overflow-x: hidden;
+
+		.navinner-tab-two-contentli {
+			list-style: none;
+			text-align: left;
+			min-width: 173px;
+			padding-left: 10px;
+			background: #fff;
+			border: none;
+			line-height: 46px;
+
+			.navinner-tab-two-contentli-itma {
+				display: block;
+				line-height: 46px;
+				width: 167px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				color: #323232;
+				border-top: 1px dashed #ececec;
+			}
+
+
+		}
+	}
+
+	.navinner-tab-two-contentli:first-child .navinner-tab-two-contentli-itma {
+		border-top: none;
+	}
+
+	.navinner-tab-two-content .navinner-tab-two-contentli .navinner-tab-two-contentli-itma.active {
+		color: #10b041 !important;
+	}
+
+	.navinner-tab-two {
+		/deep/ .el-tabs__item.is-active {
+			color: #10b041 !important;
+		}
+	}
+
+	.navinner-tab-two {
+		/deep/ .el-tabs__active-bar {
+			background: #10b041;
+		}
+	}
+
 	#checktime {
 		display: inline-block;
 		margin-right: 15px;
@@ -524,9 +790,14 @@
 		}
 	}
 
-	.navinfo {
-		line-height: 50px;
+	.navinfos_bg {
 		background: #f4f4f4;
+		width: 100%;
+	}
+
+	.navinfos {
+		line-height: 50px;
+
 		width: 980px;
 		margin: 0 auto;
 
@@ -569,13 +840,27 @@
 			color: #10b041;
 		}
 	}
-
+.m-sel .dest{
+	margin-top: 10px;
+}
+.m-sel .dest .desttab{
+/deep/ .el-tabs__nav-wrap::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ececec;
+    z-index: 1;
+}
+}
 	.m-sel .dest .desttab {
-		width: 827px;
+		width: 888px;
 		float: left;
 		position: relative;
 		top: -13px;
-		margin-left: 18px;
+		margin-left: 5px;
 
 		.gotimeclass {
 			width: 84px;
@@ -600,7 +885,11 @@
 			color: #10b041;
 		}
 	}
-
+.m-sel .dest .desttab {
+		/deep/  .el-tabs__item{
+		height: 48px;	
+		}
+		}
 	.m-sel .dest .desttab {
 		/deep/ .el-tabs__item.is-active {
 			color: #10b041;
@@ -620,7 +909,15 @@
 
 		}
 	}
-
+.m-sel .dest .title{
+	padding-right:32px;
+	
+	display: inline-block;
+	font-weight: 700;
+	float: left;
+	
+	border-right: 1px solid #ececec;
+}
 	.m-sel {
 		padding-top: 48px;
 		font-size: 14px;
@@ -793,7 +1090,19 @@
 			left: 15px;
 		}
 	}
-
+.Com_froms {
+			top:5px;
+			width: 200px;
+			z-index: 1000;
+			position: absolute;
+			right: 0;
+			.iconss {
+				position: absolute;
+				top:7px;
+				font-size: 15px;
+				left: 15px;
+			}
+		}
 	.Com_input /deep/ .el-input__inner {
 		padding: 0 40px;
 	}

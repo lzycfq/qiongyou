@@ -163,6 +163,7 @@
 				search_type: ["精华", "最新", "热门"],
 				ison: true,
 				type_index: 2,
+				search_params: {}
 			}
 		},
 		created() {

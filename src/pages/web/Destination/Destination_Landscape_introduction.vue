@@ -257,6 +257,7 @@
 				zlist:[],
 				base_indexc: 0,
 				base_indexx: 0,
+				search_params: {}
 
 			}
 		},

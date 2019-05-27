@@ -296,6 +296,7 @@
 				type_indexl: 0,
 				type_indexz: 0,
 				value: '按综合',
+				search_params: {},
 				search_options: [{
 						value: 1,
 						label: '按综合'

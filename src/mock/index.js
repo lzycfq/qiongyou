@@ -8048,161 +8048,7 @@ const buildgotimes = Mock.mock(
 			message: '查询成功'
 		}
 	})
-const buildgotimehot = Mock.mock(
-	'/api/buildgotimehot', 'get', (req, res) => {
-		return {
-			code: 200,
-			data: [{
-					gotimehots: [{
-							hotcountry: "法国"
-						},
-						{
-							hotcountry: "马来西亚"
-						},
-						{
-							hotcountry: "泰国"
-						},
-						{
-							hotcountry: "韩国"
-						},
-						{
-							hotcountry: "伦敦"
-						},
-						{
-							hotcountry: "新德里"
-						},
-						{
-							hotcountry: "柬埔寨"
-						},
-						{
-							hotcountry: "纽约"
-						},
-						{
-							hotcountry: "华盛顿"
-						},
-						{
-							hotcountry: "巴西"
-						},
-						{
-							hotcountry: "土耳其"
-						},
-						{
-							hotcountry: "阿根廷"
-						},
-						{
-							hotcountry: "俄罗斯"
-						},
-						{
-							hotcountry: "孟加拉"
-						},
-						{
-							hotcountry: "巴基斯坦"
-						},
-						{
-							hotcountry: "迪拜"
-						},
-						{
-							hotcountry: "科威特"
-						},
-						{
-							hotcountry: "伊朗"
-						},
-						{
-							hotcountry: "伊拉克"
-						},
-						{
-							hotcountry: "葡萄牙"
-						},
-						{
-							hotcountry: "西班牙"
-						},
-						{
-							hotcountry: "德国"
-						},
-					],
-					gotimehotyazhou: [{
-							hotcountry: '中国'
-						},
-						{
-							hotcountry: '台湾'
-						},
-						{
-							hotcountry: '香港'
-						},
-						{
-							hotcountry: '菲律宾'
-						},
-						{
-							hotcountry: '日本'
-						}
-					],
-					gotimehotouzhou: [{
-							hotcountry: '英国'
-						},
-						{
-							hotcountry: '芬兰'
-						},
-						{
-							hotcountry: '德国'
-						},
-						{
-							hotcountry: '英国'
-						}
-					],
-					gotimehotbeimeizhou: [{
-							hotcountry: '美国'
-						},
-						{
-							hotcountry: '加拿大'
-						},
-						{
-							hotcountry: '墨西哥'
-						},
-						{
-							hotcountry: '古巴'
-						}
-					],
-					gotimehotnanmeizhou: [{
-							hotcountry: '阿根廷'
-						},
-						{
-							hotcountry: '巴西'
-						},
-						{
-							hotcountry: '上岛'
-						},
-						{
-							hotcountry: '古巴'
-						}
-					],
-					gotimehotdayangzhou: [{
-							hotcountry: '澳大利亚'
-						},
-						{
-							hotcountry: '新西兰'
-						},
-						{
-							hotcountry: '新几内亚'
-						},
 
-					],
-					gotimehotfeizhou: [{
-							hotcountry: '北非地区'
-						},
-						{
-							hotcountry: '中非地区'
-						},
-						{
-							hotcountry: '南非地区'
-						},
-
-					],
-				}
-
-			],
-			message: '查询成功'
-		}
-	})
 const buildComcrad = Mock.mock(
 	'/api/buildComcrad', 'get', (req, res) => {
 		return {
@@ -8391,25 +8237,280 @@ const buildComcrad = Mock.mock(
 			message: '查询成功'
 		}
 	})
-	
-	const buildcheckbox = Mock.mock(
-		'/api/buildcheckbox', 'get', (req, res) => {
-			return {
-				code: 200,
-				data: [
-					{
-						value:1,
-						valuename:"我要拼车"
-					},
-					{
-						value:2,
-						valuename:"我要拼房"
-					}
-				],
-				message: '查询成功'
-			}
-		})
+
+const buildcheckbox = Mock.mock(
+	'/api/buildcheckbox', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					value: 1,
+					valuename: "我要拼车"
+				},
+				{
+					value: 2,
+					valuename: "我要拼房"
+				}
+			],
+			message: '查询成功'
+		}
+	})
+const buildgotimehot = Mock.mock(
+	'/api/buildgotimehot', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					hotcountry: "法国"
+				},
+				{
+					hotcountry: "马来西亚"
+				},
+				{
+					hotcountry: "泰国"
+				},
+				{
+					hotcountry: "韩国"
+				},
+				{
+					hotcountry: "伦敦"
+				},
+				{
+					hotcountry: "新德里"
+				},
+				{
+					hotcountry: "柬埔寨"
+				},
+				{
+					hotcountry: "纽约"
+				},
+				{
+					hotcountry: "华盛顿"
+				},
+				{
+					hotcountry: "巴西"
+				},
+				{
+					hotcountry: "土耳其"
+				},
+				{
+					hotcountry: "阿根廷"
+				},
+				{
+					hotcountry: "俄罗斯"
+				},
+				{
+					hotcountry: "孟加拉"
+				},
+				{
+					hotcountry: "巴基斯坦"
+				},
+				{
+					hotcountry: "迪拜"
+				},
+				{
+					hotcountry: "科威特"
+				},
+				{
+					hotcountry: "伊朗"
+				},
+				{
+					hotcountry: "伊拉克"
+				},
+				{
+					hotcountry: "葡萄牙"
+				},
+				{
+					hotcountry: "西班牙"
+				},
+				{
+					hotcountry: "德国"
+				}
+
+			],
+			message: '查询成功'
+		}
+	})
+const buildgotimeyazhou = Mock.mock(
+	'/api/buildgotimeyazhou', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					hotcountry: '中国'
+				},
+				{
+					hotcountry: '台湾'
+				},
+				{
+					hotcountry: '香港'
+				},
+				{
+					hotcountry: '菲律宾'
+				},
+				{
+					hotcountry: '日本'
+				}
+
+			],
+			message: '查询成功'
+		}
+	})
+const buildgotimeouzhou = Mock.mock(
+	'/api/buildgotimeouzhou', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					hotcountry: '英国'
+				},
+				{
+					hotcountry: '芬兰'
+				},
+				{
+					hotcountry: '德国'
+				},
+				{
+					hotcountry: '英国'
+				}
+
+			],
+			message: '查询成功'
+		}
+	})
+const buildgotimebeimeizhou = Mock.mock(
+	'/api/buildgotimebeimeizhou', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [
+
+				{
+					hotcountry: '美国'
+				},
+				{
+					hotcountry: '加拿大'
+				},
+				{
+					hotcountry: '墨西哥'
+				},
+				{
+					hotcountry: '古巴'
+				}
+
+			],
+			message: '查询成功'
+		}
+	})
+const buildgotimenanmeizhou = Mock.mock(
+	'/api/buildgotimenanmeizhou', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [
+
+				{
+					hotcountry: '阿根廷'
+				},
+				{
+					hotcountry: '巴西'
+				},
+				{
+					hotcountry: '上岛'
+				},
+				{
+					hotcountry: '古巴'
+				}
+			],
+			message: '查询成功'
+		}
+	})
+const buildgotimedayangzhou = Mock.mock(
+	'/api/buildgotimedayangzhou', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					hotcountry: '澳大利亚'
+				},
+				{
+					hotcountry: '新西兰'
+				},
+				{
+					hotcountry: '新几内亚'
+				},
+
+			],
+			message: '查询成功'
+		}
+	})
+const buildgotimefeizhou = Mock.mock(
+	'/api/buildgotimefeizhou', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					hotcountry: '北非地区'
+				},
+				{
+					hotcountry: '中非地区'
+				},
+				{
+					hotcountry: '南非地区'
+				},
+
+			],
+			message: '查询成功'
+		}
+	})
+const buildcrumnav = Mock.mock(
+	'/api/buildcrumnav', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					mohubg: '//pics.lvjs.com.cn/uploads/pc/place2/2019-05-16/eca4ff07-bba6-4cb7-baf7-e478ec3c0a61.jpg',
+					crumnavimg: '//pics.lvjs.com.cn/uploads/pc/place2/2019-05-16/eca4ff07-bba6-4cb7-baf7-e478ec3c0a61.jpg',
+					crumnavnumber: '2亿',
+					crumnavnow: '25026人',
+					crumnavmoth: '363997人'
+				},
+
+			],
+			message: '查询成功'
+		}
+	})
+const buildvbanner = Mock.mock(
+	'/api/buildvbanner', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [
+
+				{
+					vbannerimg: '//pics.lvjs.com.cn//uploads/pc/place2/2019-03-24/b3492b4b-c33f-4e65-a8ba-44b445fc855c_300_200.jpg',
+					vaterimg: '//pics.lvjs.com.cn//uploads/pc/place2/2019-03-24/b3492b4b-c33f-4e65-a8ba-44b445fc855c_300_200.jpg',
+					vbannertitle: '1泰国曼谷三日行',
+					vbannerdsc: '【超详细冰岛签证筹备&递签】（无电调）7个工作日出签！4.25深圳丹麦中心递签分享-完整版（附演练版电调问题清单）',
+
+				},
+				{
+					vbannerimg: '//pics.lvjs.com.cn//uploads/pc/place2/2019-04-30/243009d5-9cf6-41c0-9153-3474d153d93b_300_200.jpg',
+					vaterimg: '//pics.lvjs.com.cn//uploads/pc/place2/2019-03-24/b3492b4b-c33f-4e65-a8ba-44b445fc855c_300_200.jpg',
+					vbannertitle: '2泰国曼谷三日行',
+					vbannerdsc: '【超详细冰岛签证筹备&递签】（无电调）7个工作日出签！4.25深圳丹麦中心递签分享-完整版（附演练版电调问题清单）',
+
+				},
+				{
+					vbannerimg: '//pics.lvjs.com.cn//uploads/pc/place2/2018-03-27/512ee636-16df-4b7b-a6ed-c5ce669d34a1_300_200.jpg',
+					vaterimg: '//pics.lvjs.com.cn//uploads/pc/place2/2019-03-24/b3492b4b-c33f-4e65-a8ba-44b445fc855c_300_200.jpg',
+					vbannertitle: '3泰国曼谷三日行',
+					vbannerdsc: '【超详细冰岛签证筹备&递签】（无电调）7个工作日出签！4.25深圳丹麦中心递签分享-完整版（附演练版电调问题清单）',
+
+				}
+
+			],
+			message: '查询成功'
+		}
+	})
 export default {
+	buildvbanner,
+	buildgotimefeizhou,
+	buildgotimedayangzhou,
+	buildgotimenanmeizhou,
+	buildgotimebeimeizhou,
+	buildgotimeouzhou,
+	buildgotimeyazhou,
 	buildcheckbox,
 	buildComcrad,
 	buildgotimehot,
