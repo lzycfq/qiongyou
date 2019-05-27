@@ -8480,22 +8480,55 @@ const buildvbanner = Mock.mock(
 				{
 					vbannerimg: '//pics.lvjs.com.cn//uploads/pc/place2/2019-03-24/b3492b4b-c33f-4e65-a8ba-44b445fc855c_300_200.jpg',
 					vaterimg: '//pics.lvjs.com.cn//uploads/pc/place2/2019-03-24/b3492b4b-c33f-4e65-a8ba-44b445fc855c_300_200.jpg',
-					vbannertitle: '1泰国曼谷三日行',
-					vbannerdsc: '【超详细冰岛签证筹备&递签】（无电调）7个工作日出签！4.25深圳丹麦中心递签分享-完整版（附演练版电调问题清单）',
+					vbannertitle: '泰国曼谷三日行',
+					Visabannerid: 1,
+					vbannerdsc: '超详细冰岛签证筹备&递签（无电调）7个工作日出签！4.25深圳丹麦中心递签分享-完整版（附演练版电调问题清单）',
 
 				},
 				{
 					vbannerimg: '//pics.lvjs.com.cn//uploads/pc/place2/2019-04-30/243009d5-9cf6-41c0-9153-3474d153d93b_300_200.jpg',
 					vaterimg: '//pics.lvjs.com.cn//uploads/pc/place2/2019-03-24/b3492b4b-c33f-4e65-a8ba-44b445fc855c_300_200.jpg',
-					vbannertitle: '2泰国曼谷三日行',
-					vbannerdsc: '【超详细冰岛签证筹备&递签】（无电调）7个工作日出签！4.25深圳丹麦中心递签分享-完整版（附演练版电调问题清单）',
+					vbannertitle: '泰国曼谷三日行',
+					Visabannerid: 2,
+					vbannerdsc: '超详细冰岛签证筹备&递签（无电调）7个工作日出签！4.25深圳丹麦中心递签分享-完整版（附演练版电调问题清单）',
 
 				},
 				{
 					vbannerimg: '//pics.lvjs.com.cn//uploads/pc/place2/2018-03-27/512ee636-16df-4b7b-a6ed-c5ce669d34a1_300_200.jpg',
 					vaterimg: '//pics.lvjs.com.cn//uploads/pc/place2/2019-03-24/b3492b4b-c33f-4e65-a8ba-44b445fc855c_300_200.jpg',
-					vbannertitle: '3泰国曼谷三日行',
-					vbannerdsc: '【超详细冰岛签证筹备&递签】（无电调）7个工作日出签！4.25深圳丹麦中心递签分享-完整版（附演练版电调问题清单）',
+					vbannertitle: '泰国曼谷三日行',
+					Visabannerid: 3,
+					vbannerdsc: '超详细冰岛签证筹备&递签（无电调）7个工作日出签！4.25深圳丹麦中心递签分享-完整版（附演练版电调问题清单）',
+
+				}
+
+			],
+			message: '查询成功'
+		}
+	})
+const buildqianzheng = Mock.mock(
+	'/api/buildqianzheng', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					qianzhengid: 1,
+					qianzhengimg: '//common1.qyerstatic.com/bbs/old/images/list/Korea.jpg',
+					qianzhengcountry: '韩国',
+					qianzhengjiage: '236'
+
+				},
+				{
+					qianzhengid: 2,
+					qianzhengimg: '//common1.qyerstatic.com/bbs/old/images/list/Australia.jpg',
+					qianzhengcountry: '澳大利亚',
+					qianzhengjiage: '836'
+
+				},
+				{
+					qianzhengid: 3,
+					qianzhengimg: '//common1.qyerstatic.com/bbs/old/images/list/Thailand.jpg',
+					qianzhengcountry: '泰国',
+					qianzhengjiage: '156'
 
 				}
 
@@ -8504,6 +8537,7 @@ const buildvbanner = Mock.mock(
 		}
 	})
 export default {
+	buildqianzheng,
 	buildvbanner,
 	buildgotimefeizhou,
 	buildgotimedayangzhou,
