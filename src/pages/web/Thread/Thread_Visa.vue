@@ -12,23 +12,102 @@
 						<el-input v-model="ruleForm.searchinfo" rel="searchinfo" class="Com_input" placeholder="请输入搜索内容"></el-input>
 						<i class="el-icon-search iconss" @click="searchBtn('ruleForm')"></i>
 					</el-form-item>
-				
+
 				</el-form>
 			</div>
 		</div>
 		<!-- 签证导航 -->
-		<div class="vl-nav">
+		<div class="vl-nav" v-for="(item,index) in qianzhengsb" :key='index'>
 			<ul class="vn-u">
 				<li class="vu-l vua-cur">全部签证</li>
-				<li class="vu-l">亚洲签证</li>
-				<li class="vu-l">欧洲签证</li>
-				<li class="vu-l">北美签证</li>
-				<li class="vu-l">南美签证</li>
-				<li class="vu-l">大洋签证</li>
-				<li class="vu-l">非洲签证</li>
+				<li class="vu-l">
+					<el-dropdown placement="bottom">
+						<span class="vu-l-span">
+							亚洲签证<i class="el-icon-arrow-down el-icon--right"></i>
+						</span>
+						<el-dropdown-menu slot="dropdown">
+							<el-dropdown-item v-for="(item,index) in item.qianzhengsbyz" :key='index'>
+								<router-link style='color: #606266;' :to="{name:'/',params:{yzqianzhengid:item.yzqianzhengid}}">{{item.yzqianzhengname}}签证
+								</router-link>
+							</el-dropdown-item>
+
+						</el-dropdown-menu>
+					</el-dropdown>
+				</li>
+				<li class="vu-l">
+					<el-dropdown placement="bottom">
+						<span class="vu-l-span">
+							欧洲签证<i class="el-icon-arrow-down el-icon--right"></i>
+						</span>
+						<el-dropdown-menu slot="dropdown">
+							<el-dropdown-item v-for="(item,index) in item.qianzhengsboz" :key='index'>
+								<router-link style='color: #606266;' :to="{name:'/',params:{ozqianzhengid:item.ozqianzhengid}}">
+									{{item.ozqianzhengname}}签证</router-link>
+							</el-dropdown-item>
+						</el-dropdown-menu>
+					</el-dropdown>
+				</li>
+				<li class="vu-l">
+					<el-dropdown placement="bottom">
+						<span class="vu-l-span">
+							北美签证<i class="el-icon-arrow-down el-icon--right"></i>
+						</span>
+						<el-dropdown-menu slot="dropdown">
+							<el-dropdown-item v-for="(item,index) in item.qianzhengsbbm" :key='index'>
+								<router-link style='color: #606266;' :to="{name:'/',params:{bmqianzhengid:item.bmqianzhengid}}">
+									{{item.bmqianzhengname}}</router-link>
+							</el-dropdown-item>
+
+						</el-dropdown-menu>
+					</el-dropdown>
+				</li>
+				<li class="vu-l">
+					<el-dropdown placement="bottom">
+						<span class="vu-l-span">
+							南美签证<i class="el-icon-arrow-down el-icon--right"></i>
+						</span>
+						<el-dropdown-menu slot="dropdown">
+							<el-dropdown-item v-for="(item,index) in item.qianzhengsbnm" :key='index'>
+								<router-link style='color: #606266;' :to="{name:'/',params:{nmqianzhengid:item.nmqianzhengid}}">
+									{{item.nmqianzhengname}}</router-link>
+							</el-dropdown-item>
+
+						</el-dropdown-menu>
+					</el-dropdown>
+				</li>
+				<li class="vu-l">
+					<el-dropdown placement="bottom">
+						<span class="vu-l-span">
+							大洋洲签证<i class="el-icon-arrow-down el-icon--right"></i>
+						</span>
+						<el-dropdown-menu slot="dropdown">
+							<el-dropdown-item v-for="(item,index) in item.qianzhengsbdy" :key='index'>
+								<router-link style='color: #606266;' :to="{name:'/',params:{dyqianzhengid:item.dyqianzhengid}}">
+									{{item.dyqianzhengname}}</router-link>
+							</el-dropdown-item>
+
+						</el-dropdown-menu>
+					</el-dropdown>
+				</li>
+				<li class="vu-l">
+					<el-dropdown placement="bottom">
+						<span class="vu-l-span">
+							非洲签证<i class="el-icon-arrow-down el-icon--right"></i>
+						</span>
+						<el-dropdown-menu slot="dropdown">
+							<el-dropdown-item v-for="(item,index) in item.qianzhengsbfz" :key='index'>
+								<router-link style='color: #606266;' :to="{name:'/',params:{fzqianzhengid:item.fzqianzhengid}}">
+									{{item.fzqianzhengname}}</router-link>
+							</el-dropdown-item>
+
+						</el-dropdown-menu>
+					</el-dropdown>
+				</li>
 			</ul>
+			<router-link to="" class="vn-pub"><i class="el-icon-edit-outline"></i>发新帖</router-link>
 		</div>
 		<!-- 签证轮播 -->
+		<div style="clear: both;"></div>
 		<div class="Visa_banner">
 			<div class="Visa_banner_content">
 				<div class="v-banner">
@@ -82,6 +161,89 @@
 				</div>
 			</div>
 		</div>
+		<div style="clear: both;"></div>
+		<div class="vw-nav">
+			<ul class="vwu">
+				<li class="vwl" :class="type_index===index?'active':''" @click="typeIndex(index)" v-for="(value,index) in vwu" :key="index">{{value}}</li>
+			</ul>
+			<div class="vwd">
+				<span class="vwdb">版主</span>
+				<span class="vwd-line">|</span>
+				<ul class="vwdu">
+					<li class="vwdl">
+						<router-link to='' class="vwdl-a"><img src="https://pic.qyer.com/avatar/000/18/08/46/200?v=1427296208" class="vwdli"
+							 alt="牧先生">牧先生</router-link>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="vc-tag">
+			<div class="vcts">
+				<a class="vct" v-for="(item,index) in countryqianzheng" :class="type_indexcountry===index?'active':''" @click="typeIndexcountry(index)"
+				 :key="index">{{item.countryqianzhengname}}</a>
+			</div>
+			<div class="vctfrom">
+				<el-form :model="ruleForm" :rules="rules" ref="ruleForm" size="small">
+					<el-form-item prop="searchinfo">
+						<el-input v-model="ruleForm.searchinfo" rel="searchinfo" class="Com_input" placeholder="请输入搜索内容"></el-input>
+						<i class="el-icon-search iconss" @click="searchBtn('ruleForm')"></i>
+					</el-form-item>
+
+				</el-form>
+			</div>
+			<div class="vcc">
+				<div class="vccw"><input type="checkbox" name="name" value="1" rel="checkvalue" @click="typeIndexcountry(index)"
+					 style="vertical-align: middle;"> 精华帖</div>
+				<span class="vccs">|</span>
+				<div class="zhhf">
+					<el-dropdown>
+						<span class="el-dropdown-link">
+							最后回复排序<i class="el-icon-caret-bottom"></i>
+						</span>
+						<el-dropdown-menu slot="dropdown">
+							<!-- <el-dropdown-item>最后回复排序</el-dropdown-item>
+    <el-dropdown-item>发帖时间排序</el-dropdown-item> -->
+							<el-dropdown-item v-for="(value,index) in huifu" :key='index'>{{value.huifuname}}</el-dropdown-item>
+						</el-dropdown-menu>
+					</el-dropdown>
+				</div>
+
+			</div>
+
+		</div><!-- //vc -->
+		<div class="Visa_lists">
+			<li class="clearfix vwc-l" data-id="3203685">
+				<!--运营管理checkbox-->
+				<!-- 头像 -->
+				<router-link to='' class="face">
+					<img src="https://pic.qyer.com/avatar/011/54/60/03/120?v=" width="48" height="48" alt="南市郭富城">
+				</router-link>
+				<div class="cnt clearfix">
+					<router-link to='' class="cnt_img">
+					<img src="https://pic.qyer.com/album/user/2514/64/Q0xURhwDaUA/index/160x120" width="160" height="120"
+						  alt=""></router-link>
+					<dl class="cntdl clearfix">
+						<!-- 标题类型 -->
+						<dt class="title fontYaHei">
+							<a href="https://bbs.qyer.com/thread-3203685-1.html" class="txt" target="_blank" data-bn-ipg="bbs-board-main-0-title">最近上海德国申根签什么情况</a>
+						</dt>
+
+						<!-- 数据数字 -->
+						<dd class="data"><a href="//www.qyer.com/u/11546003" target="_blank" data-bn-ipg="bbs-board-main-0-writer">南市郭富城</a>
+							<span class="xlistAuthWrap">
+							</span><span class="lbvcd xnum"><i class="lb vcdate"></i>2019-05-24</span><span class="lbvcl xnum"><i class="lb vclook"></i>189</span><span
+							 class="lbvch xnum"><i class="lb vchf"></i>9</span><span class="lbvce xnum"><i class="bicf vclike"></i>0</span><span
+							 class="zdate">最后回复 18分钟前</span></dd>
+						<!-- 内容 -->
+
+						<dd class="textzdate">4月26去按的指纹，到今天整整一个月了，查询状态还是使领馆审理中，电话联系签证中心恢复继续耐心等待，不是传说5天就出的吗？</dd>
+
+
+					</dl>
+				</div>
+				<a class="vwcl-ha" href="https://bbs.qyer.com/thread-3203685-1.html" target="_blank"></a>
+			</li>
+		</div>
 	</el-col>
 </template>
 
@@ -95,6 +257,19 @@
 			return {
 				vbanner: [],
 				qianzheng: [],
+				qianzhengsb: [],
+				countryqianzheng: [],
+				type_index: 0,
+				type_indexcountry: -1,
+				search_params: {},
+				vwu: ['全部签证讨论', '问答'],
+				huifu: [{
+						huifuname: '最后回复排序'
+					},
+					{
+						huifuname: '发帖时间排序'
+					}
+				],
 				ruleForm: {
 					searchinfo: ''
 				},
@@ -110,6 +285,8 @@
 		created() {
 			this.buildvbanner();
 			this.buildqianzheng();
+			this.buildqianzhengsb();
+			this.buildcountryqianzheng();
 		},
 		mounted() {
 			var galleryThumbs = new swiper('.gallery-thumbs', {
@@ -156,7 +333,21 @@
 					console.log(orror)
 				})
 			},
-				searchBtn(formName) {
+			buildqianzhengsb() {
+				this.axios.get('/api/buildqianzhengsb').then(res => {
+					this.qianzhengsb = res.data.data
+				}).catch(function(error) {
+					console.log(orror)
+				})
+			},
+			buildcountryqianzheng() {
+				this.axios.get('/api/buildcountryqianzheng').then(res => {
+					this.countryqianzheng = res.data.data
+				}).catch(function(error) {
+					console.log(orror)
+				})
+			},
+			searchBtn(formName) {
 				this.$refs[formName].validate((valid) => {
 					if (valid) {
 						this.axios.get('', {
@@ -173,6 +364,18 @@
 					}
 				});
 			},
+			typeIndex(index) {
+				this.type_index = index
+				this.search_params['type'] = this.vwu[index]
+				this.buildvwuquestion();
+			},
+			typeIndexcountry(index) {
+				let checkvalue = this.$refs.checkvalue.value //精华帖的值
+				let fatievalue = this.huifu[index].huifuname
+				this.type_indexcountry = index
+				this.search_params['type'] = this.countryqianzheng[index]
+				this.buildvwuquestion();
+			}
 		},
 
 		// watch: {
@@ -189,32 +392,251 @@
 </script>
 
 <style lang="scss">
-	.vl-nav{
+	.Visa_lists {
+		width: 980px;
+		margin: 0 auto;
+	}
+
+	.vwc-l {
+		padding-left: 70px;
+
+		zoom: 1;
+		list-style: none;
+		position: relative;
+
+		.face {
+			position: relative;
+			float: left;
+			margin: 25px 0 0 -70px;
+			z-index: 2;
+
+			img {
+				width: 48px;
+				height: 48px;
+				display: block;
+				border-radius: 50%;
+			}
+		}
+
+		//face
+		.cnt {
+			border-bottom: 1px solid #ececec;
+			padding: 20px 0 30px;
+.cnt_img {
+    float: right;
+    width: 160px;
+    margin-left: 20px;
+}
+			.title {
+				font-size: 16px;
+				line-height: 26px;
+
+				.txt {
+
+					color: #323232;
+					position: relative;
+					z-index: 2;
+					bottom: -1px;
+					font-weight: 600;
+				}
+
+			}
+
+			.data {
+				margin-top: 10px;
+				color: #959595;
+				height: 18px;
+				font-family: Hiragino Sans GB, 宋体, sans-serif;
+
+				a {
+					position: relative;
+					z-index: 2;
+					color: #636363;
+					display: inline-block;
+				}
+			}
+
+			.xnum {
+				color: #636363;
+			}
+
+			.lb.vcdate {
+				width: 13px;
+				height: 13px;
+				margin: 0 6px 0 16px;
+				background-position: 0 -10px;
+				vertical-align: -2px;
+			}
+
+			.lb {
+				display: inline-block;
+				background-image: url(//common1.qyerstatic.com/bbs/old/images/list/lbn.png);
+				background-repeat: no-repeat;
+			}
+
+			.lb.vchf,
+			.lb.vclook {
+				height: 12px;
+				vertical-align: -2px;
+			}
+
+			.lb.vclook {
+				width: 16px;
+				background-position: 0 -23px;
+				margin: 0 6px 0 10px;
+			}
+
+			.lb.vchf {
+				width: 12px;
+				margin: 0 5px 0 8px;
+				background-position: 0 -35px;
+			}
+
+			.bicf.vclike {
+				width: 14px;
+				height: 12px;
+				margin-left: 4px;
+				vertical-align: -5px;
+				font-size: 22px;
+			}
+
+			.zdate {
+				padding-left: 10px;
+				color: #636363;
+			}
+
+			.textzdate {
+				color: #636363;
+				word-break: break-all;
+				margin-top: 10px;
+				font-size: 14px;
+				line-height: 24px;
+				max-height: 48px;
+				overflow: hidden;
+			}
+		}
+	}
+
+	.vw-nav {
+		width: 980px;
+		margin: 0 auto;
+		line-height: 50px;
+		height: 50px;
+		border-bottom: 1px solid #ececec;
+
+		.vwu {
+			float: left;
+			font-size: 18px;
+			color: #959595;
+			list-style: none;
+
+			.vwl {
+				float: left;
+				padding: 0 18px;
+				font-size: 18px;
+				cursor: pointer;
+			}
+
+			.vwl.hover {
+				color: #10b041;
+			}
+
+			.vwl.active {
+				border-bottom: 2px solid #10b041;
+				color: #10b041;
+
+			}
+		}
+
+		.vwd {
+			float: right;
+
+			.vwd-line,
+			.vwdb {
+				float: left;
+				font-size: 14px;
+			}
+
+			.vwd-line {
+				color: silver;
+				margin: 0 15px 0 13px;
+			}
+
+			.vwdl,
+			.vwdu {
+				list-style: none;
+				float: left;
+
+				.vwdl {
+					margin-right: 20px;
+
+					.vwdl-a {
+						color: #959595;
+
+						.vwdli {
+							width: 24px;
+							height: 24px;
+							margin-right: 10px;
+							border-radius: 12px;
+							vertical-align: -7px;
+						}
+					}
+				}
+			}
+		}
+
+		// vc-tag xfix
+		.vc-tag {
+			margin-bottom: 6px;
+		}
+	}
+
+	.vl-nav {
 		width: 980px;
 		margin: 0 auto;
 		position: relative;
 		overflow: inherit;
 		height: 55px;
-		.vn-u{
+
+		.vn-u {
 			list-style: none;
 			float: left;
-			.vu-l{			
-    padding: 0 12px;
-    margin-right: 13px;
-    color: #636363;
-    font-size: 16px;
-	float: left;
-    line-height: 53px;
-    cursor: default;
-	width: 78px;
-    cursor: pointer;
-    text-align: center;
+
+			.vu-l {
+				padding: 0 12px;
+				margin-right: 13px;
+				color: #636363;
+				font-size: 16px;
+				float: left;
+				line-height: 53px;
+				cursor: default;
+
+				cursor: pointer;
+				text-align: center;
+
+				.vu-l-span {
+					font-size: 16px;
+				}
+
 			}
 		}
-		}
-		.vl-nav .vn-u .vu-l.vua-cur {
-    border-bottom: 2px solid #10b041;
-}
+	}
+
+	.vn-pub {
+		float: right;
+		margin: 10px 0;
+		padding: 9px 20px 9px 20px;
+		font-size: 14px;
+		line-height: 14px;
+		color: #fff;
+		background-color: #1995dd;
+		border-radius: 3px;
+	}
+
+	.vl-nav .vn-u .vu-l.vua-cur {
+		border-bottom: 2px solid #10b041;
+	}
+
 	// header
 	.Visa_nav {
 		padding: 20px 0;
@@ -250,31 +672,41 @@
 			line-height: 34px;
 			float: right;
 		}
+
 		.iconss {
 			position: absolute;
-			top:8px;
+			top: 8px;
 			font-size: 15px;
 			left: 15px;
 			color: #10b041;
-            font-weight: bold;
+			font-weight: bold;
 		}
 	}
-.Com_input /deep/ .el-input__inner {
+
+	.Com_input /deep/ .el-input__inner {
 		padding: 0 40px;
 		color: #10b041;
 	}
-	 .Com_input::-webkit-input-placeholder{
-            color:red;
-        }
-        .Com_input::-moz-placeholder{   /* Mozilla Firefox 19+ */
-            color:red;
-        }
-        .Com_input::-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
-            color:red;
-        }
-        .Com_input::-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
-            color:red;
-        }
+
+	.Com_input::-webkit-input-placeholder {
+		color: red;
+	}
+
+	.Com_input::-moz-placeholder {
+		/* Mozilla Firefox 19+ */
+		color: red;
+	}
+
+	.Com_input::-moz-placeholder {
+		/* Mozilla Firefox 4 to 18 */
+		color: red;
+	}
+
+	.Com_input::-ms-input-placeholder {
+		/* Internet Explorer 10-11 */
+		color: red;
+	}
+
 	.Visa_banner {
 		padding: 34px 0;
 		background-color: #f0f0f0;
@@ -460,5 +892,88 @@
 
 	.gallery-thumbsslide.swiper-slide-thumb-active .v-headerimg {
 		display: none !important;
+	}
+
+	.vc-tag {
+		width: 980px;
+		margin: 0 auto;
+		line-height: 50px;
+		height: 50px;
+		position: relative;
+
+		.vcts {
+			max-width: 578px;
+			overflow: hidden;
+			height: 40px;
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			.vct {
+
+				margin: 0 15px 9px 0;
+				padding: 0 13px 0 11px;
+				color: #636363;
+				line-height: 23px;
+				background-color: #f5f5f5;
+				border-radius: 10px;
+			}
+
+			.vct.active {
+				color: #10b041;
+			}
+		}
+
+		.vctfrom {
+			position: relative;
+			width: 200px;
+			float: left;
+			margin-left: 340px;
+			margin-top: 10px;
+			height: 25px;
+			// border: 1px solid #ececec;
+			border-radius: 2px;
+
+			.iconss {
+				position: absolute;
+				top: 8px;
+				font-size: 15px;
+				right: 15px;
+
+				font-weight: bold;
+			}
+		}
+
+		.vcc {
+			line-height: 50px;
+			float: right;
+
+			.vccw {
+				position: relative;
+				float: left;
+				color: #10b041;
+			}
+
+			.zhhf {
+				float: left;
+				line-height: 50px;
+			}
+
+			.vccs {
+				margin: 0 14px 0 15px;
+				color: #ececec;
+			}
+
+			.zhhf {
+				position: relative;
+				cursor: pointer;
+			}
+
+			.vccs {
+				float: left;
+				line-height: 16px;
+			}
+
+		}
 	}
 </style>
