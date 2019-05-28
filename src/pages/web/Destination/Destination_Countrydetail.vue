@@ -27,13 +27,13 @@
 		<div class="plcTopBar clearfix" v-for="(item,index) in CountryplcTopBar" :key="index">
 			<div class="plcTopBarL">
 				<p class="plcTopBarNameEn">
-					<router-link :to="{name:'/Destination_Citydetail',params: { Countryid: item.Countryid }}">
+					<router-link :to="{path:'/Destination_Citydetail',params: { Countryid: item.Countryid }}">
 						{{item.plcTopBarjianxie}}
 					</router-link>
 				</p>
 				<div class="plcTopBarNameCns clearfix">
 					<p class="plcTopBarNameCn fontYaHei">
-						<router-link :to="{name:'/Destination_Citydetail',params: { Countryid: item.Countryid }}">
+						<router-link :to="{path:'/Destination_Citydetail',params: { Countryid: item.Countryid }}">
 							{{item.plcTopBarcity}}
 						</router-link>
 					</p>
@@ -56,7 +56,7 @@
 						<el-popover placement="bottom-start" width="575" trigger="hover" popper-class="chengshi">
 							<ul class="cityList">
 								<li class="cityItem" v-for="(item,index) in item.hotcity" :key="index">
-									<router-link :to="{name:'/Destination_Citydetail',params: { hotcityid: item.hotcityid }}">
+									<router-link :to="{path:'/Destination_Citydetail',params: { hotcityid: item.hotcityid }}">
 										<img class="pic" :src="item.hotcityimg">
 										<span class="cn">
 											{{item.hotcityname}}
@@ -166,7 +166,7 @@
 							</span>
 							<el-dropdown-menu slot="dropdown">
 								<el-dropdown-item v-for="(item,index) in item.hotwan" :key="index">
-									<router-link style="color:#555555" :to="{ name:'/Destination_list_Strategy', params: { hotwanid: item.hotwanid}}">{{item.hotwanname}}({{item.hotwannumber}})</router-link>
+									<router-link style="color:#555555" :to="{ path:'/Destination_list_Strategy', params: { hotwanid: item.hotwanid}}">{{item.hotwanname}}({{item.hotwannumber}})</router-link>
 								</el-dropdown-item>
 							</el-dropdown-menu>
 						</el-dropdown>
@@ -182,7 +182,7 @@
 							</span>
 							<el-dropdown-menu slot="dropdown">
 								<el-dropdown-item v-for="(item,index) in item.lvxingwan" :key="index">
-									<router-link style="color:#555555" :to="{ name:'/', params: { lvxingwanid: item.lvxingwanid}}">{{item.lvxingwanname}}({{item.lvxingwannumber}})</router-link>
+									<router-link style="color:#555555" :to="{ path:'/', params: { lvxingwanid: item.lvxingwanid}}">{{item.lvxingwanname}}({{item.lvxingwannumber}})</router-link>
 								</el-dropdown-item>
 							</el-dropdown-menu>
 						</el-dropdown>
@@ -198,7 +198,7 @@
 							</span>
 							<el-dropdown-menu slot="dropdown">
 								<el-dropdown-item v-for="(item,index) in item.xingcheng" :key="index">
-									<router-link style="color:#555555" :to="{ name:'/', params: { xingchengid: item.xingchengid}}">{{item.xingchengname}}</router-link>
+									<router-link style="color:#555555" :to="{ path:'/', params: { xingchengid: item.xingchengid}}">{{item.xingchengname}}</router-link>
 								</el-dropdown-item>
 							</el-dropdown-menu>
 						</el-dropdown>
@@ -211,7 +211,7 @@
 							</span>
 							<el-dropdown-menu slot="dropdown">
 								<el-dropdown-item v-for="(item,index) in item.shequ" :key="index">
-									<router-link style="color:#555555" :to="{ name:'/', params: { shequid: item.shequid}}">{{item.shequname}}</router-link>
+									<router-link style="color:#555555" :to="{ path:'/', params: { shequid: item.shequid}}">{{item.shequname}}</router-link>
 								</el-dropdown-item>
 							</el-dropdown-menu>
 						</el-dropdown>
@@ -311,23 +311,23 @@
 
 					<el-carousel-item v-for="(item,index) in item.hotcitybanner" :key="index">
 						<div class="hotcitybannercontent" style="width: 980px; margin: 0 auto;">
-							<router-link v-for="(item,index) in item.hotcitybannercontent" :key="index" :to="{ name:'/Destination_Citylist', params: { Citylistid: item.Citylistid}}"
+							<router-link v-for="(item,index) in item.hotcitybannercontent" :key="index" :to="{ path:'/Destination_Citylist', params: { Citylistid: item.Citylistid}}"
 							 class="Citylist">
 								<li>
 									<p class="Citylisttop">
-										<router-link :to="{ name:'/Destination_Citylist', params: { Citylistid: item.Citylistid}}">
+										<router-link :to="{ path:'/Destination_Citylist', params: { Citylistid: item.Citylistid}}">
 											<span class="number">{{index+1}}</span>
 											<img :src="item.citylistimg" alt="item.Citylistname" class="photo lazy" style="width: 100%;">
 										</router-link>
 									</p>
 									<div class="Citylistbottom">
 										<h3 class="title fontYaHei">
-											<router-link :to="{ name:'/Destination_Citydetail', params: { Citylistid: item.Citylistid}}">
+											<router-link :to="{ path:'/Destination_Citydetail', params: { Citylistid: item.Citylistid}}">
 												{{item.citylistname}}
 											</router-link>
 										</h3>
 										<div class="info pois">
-											<router-link v-for="(item,index) in item.Landscape" :key="index" :to="{ name:'/Destination_Landscape_introduction', params: { Landscapeid: item.Landscapeid}}">
+											<router-link v-for="(item,index) in item.Landscape" :key="index" :to="{ path:'/Destination_Landscape_introduction', params: { Landscapeid: item.Landscapeid}}">
 												{{item.Landscapename}} 、
 											</router-link>
 
@@ -352,7 +352,7 @@
 					<el-carousel-item v-for="(item,index) in item.weijnbanner" :key="index">
 						<div class="weijnbanner">
 							<li v-for="(item,index) in item.weijnbannercontent" :key="index">
-								<router-link :to="{ name:'/Destination_mguidedetail', params: { mguidedetailid: item.mguidedetailid}}" title="item.wjtitle">
+								<router-link :to="{ path:'/Destination_mguidedetail', params: { mguidedetailid: item.mguidedetailid}}" title="item.wjtitle">
 									<p class="photo">
 										<img :src="item.wjimg" width="310" height="200" alt="item.wjtitle">
 									</p>

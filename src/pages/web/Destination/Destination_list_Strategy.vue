@@ -13,13 +13,13 @@
 		<div class="plcTopBar clearfix" v-for="(item,index) in plcTopBar" :key="index">
 			<div class="plcTopBarL">
 				<p class="plcTopBarNameEn">
-					<router-link :to="{name:'/Destination_Citydetail',params: { cityid: item.cityid }}">
+					<router-link :to="{path:'/Destination_Citydetail',params: { cityid: item.cityid }}">
 						{{item.plcTopBarjianxie}}
 					</router-link>
 				</p>
 				<div class="plcTopBarNameCns clearfix">
 					<p class="plcTopBarNameCn fontYaHei">
-						<router-link :to="{name:'/Destination_Citydetail',params: { cityid: item.cityid }}">
+						<router-link :to="{path:'/Destination_Citydetail',params: { cityid: item.cityid }}">
 							{{item.plcTopBarcity}}
 						</router-link>
 					</p>
@@ -131,7 +131,7 @@
 							</em>
 							<el-dropdown-menu slot="dropdown">
 								<el-dropdown-item v-for="(item,index) in item.listStrategy" :key="index">
-									<router-link style="color:#555555" :to="{ name:'Destination_list_Strategy', params: { listStrategyid: item.listStrategyid}}">{{item.listStrategycity}}({{item.listnumber}})</router-link>
+									<router-link style="color:#555555" :to="{ path:'Destination_list_Strategy', params: { listStrategyid: item.listStrategyid}}">{{item.listStrategycity}}({{item.listnumber}})</router-link>
 								</el-dropdown-item>
 							</el-dropdown-menu>
 						</el-dropdown>
@@ -161,7 +161,7 @@
 					<div class="plcListMgTitles">
 						<h2 class="title fontYaHei">{{item.mguidedidian}}美食微锦囊</h2>
 						<p class="more">
-							<router-link :to="{ name:'Destination_mguide ', params: { mguideid: item.mguideid}}">更多微锦囊({{item.mguidenumber}})
+							<router-link :to="{ path:'Destination_mguide ', params: { mguideid: item.mguideid}}">更多微锦囊({{item.mguidenumber}})
 								<i class="el-icon-arrow-right" style="vertical-align: middle;"></i></router-link>
 						</p>
 					</div>
@@ -170,7 +170,7 @@
 					<el-carousel-item v-for="(item,index) in item.qyWraps" :key="index">
 						<div style="width: 980px; margin: 0 auto;">
 							<li class="qyWrapslist" v-for="(item,index) in item.qyWrapc" :key="index">
-								<router-link :to="{ name:'Destination_mguidedetail ', params: { Destination_mguidedetailid: item.Destination_mguidedetailid}}"
+								<router-link :to="{ path:'Destination_mguidedetail ', params: { Destination_mguidedetailid: item.Destination_mguidedetailid}}"
 								 title="item.mguidedetailtitle">
 									<p class="photo"><img :src="item.mguidedetailimg " width="227" height="auto" alt="item.mguidedetailtitle"></p>
 									<p class="photoMask"></p>
@@ -228,11 +228,11 @@
 					<li v-for="(item,index) in plcPoiList" :key="index">
 						<div class="cntBox clearfix">
 							<p class="pics">
-								<router-link :to="{ name:'Destination_mguidedetail ', params: { plcPoiListid: item.plcPoiListid}}">
+								<router-link :to="{ path:'Destination_mguidedetail ', params: { plcPoiListid: item.plcPoiListid}}">
 									<img :src="item.plcPoiListidimg" width="227" height="150"><span class="label">用户热推</span></router-link>
 							</p>
 							<h3 class="title fontYaHei">
-								<router-link :to="{ name:'Destination_mguidedetail ', params: { plcPoiListid: item.plcPoiListid}}">{{item.plcPoiListtitle}}&nbsp;&nbsp;<span>Tokyo
+								<router-link :to="{ path:'Destination_mguidedetail ', params: { plcPoiListid: item.plcPoiListid}}">{{item.plcPoiListtitle}}&nbsp;&nbsp;<span>Tokyo
 										{{item.plcPoiListidjianxie}}</span></router-link>
 							</h3>
 							<div class="info">
@@ -240,7 +240,7 @@
 									<el-rate v-model="item.ratevalue" disabled show-score text-color="#3f9f5f" score-template="{value}">
 									</el-rate>
 									<span class="dping">
-										<router-link :to="{ name:'Destination_mguidedetail ', params: { plcPoiListid: item.plcPoiListid}}">{{item.plcPoiListpinglun}}人点评</router-link>
+										<router-link :to="{ path:'Destination_mguidedetail ', params: { plcPoiListid: item.plcPoiListid}}">{{item.plcPoiListpinglun}}人点评</router-link>
 									</span>
 									<span class="zhe">折</span> <span class="infoSide"> 景点观光排名 <em class="rank orange">第{{item.plcPoiListfirat}}位</em>
 									</span>
@@ -257,7 +257,7 @@
 							</div>
 							<br />
 							<dt class="orange bordert">优选折扣:
-								<router-link :to="{ name:'Destination_mguidedetail ', params: { plcPoiListid: item.plcPoiListid}}" style="color: #777777;">
+								<router-link :to="{ path:'Destination_mguidedetail ', params: { plcPoiListid: item.plcPoiListid}}" style="color: #777777;">
 									{{item.plcPoiListyouhui}}</router-link></dt>
 
 						</div>

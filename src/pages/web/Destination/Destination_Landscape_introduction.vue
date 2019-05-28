@@ -9,12 +9,12 @@
 					<el-breadcrumb-item>
 						<el-dropdown placement="bottom-start">
 							<span class="el-dropdown-link">
-								<router-link :to="{ name:'Destination_Citylist', params: { countryid: item.countryid}}">{{item.country}}</router-link><i
+								<router-link :to="{ path:'Destination_Citylist', params: { countryid: item.countryid}}">{{item.country}}</router-link><i
 								 class="el-icon-arrow-down el-icon--right"></i>
 							</span>
 							<el-dropdown-menu slot="dropdown">
 								<el-dropdown-item v-for="(item,index) in item.Landscapecity" :key="index">
-									<router-link style="color: #666666;" :to="{ name:'Destination_Citydetail', params: { cityid: item.cityid}}">{{item.Landscapecityname}}</router-link>
+									<router-link style="color: #666666;" :to="{ path:'Destination_Citydetail', params: { cityid: item.cityid}}">{{item.Landscapecityname}}</router-link>
 								</el-dropdown-item>
 							</el-dropdown-menu>
 						</el-dropdown>
@@ -22,12 +22,12 @@
 					<el-breadcrumb-item>
 						<el-dropdown placement="bottom-start">
 							<span class="el-dropdown-link">
-								<router-link :to="{ name:'Destination_Citydetail', params: { cityid: item.cityid}}">{{item.strategycity}}</router-link><i
+								<router-link :to="{ path:'Destination_Citydetail', params: { cityid: item.cityid}}">{{item.strategycity}}</router-link><i
 								 class="el-icon-arrow-down el-icon--right"></i>
 							</span>
 							<el-dropdown-menu slot="dropdown">
 								<el-dropdown-item v-for="(item,index) in item.strategycitys" :key="index">
-									<router-link style="color: #666666;" :to="{ name:'Destination_list_Strategy', params: { Strategyid: item.Strategyid}}">{{item.strategycityname}}</router-link>
+									<router-link style="color: #666666;" :to="{ path:'Destination_list_Strategy', params: { Strategyid: item.Strategyid}}">{{item.strategycityname}}</router-link>
 								</el-dropdown-item>
 
 							</el-dropdown-menu>
@@ -36,12 +36,12 @@
 					<el-breadcrumb-item>
 						<el-dropdown placement="bottom-start">
 							<span class="el-dropdown-link">
-								<router-link :to="{ name:'Destination_Citydetail', params: { Landscapeid: item.Landscapeid}}">{{item.strategycity}}观光景点</router-link><i
+								<router-link :to="{ path:'Destination_Citydetail', params: { Landscapeid: item.Landscapeid}}">{{item.strategycity}}观光景点</router-link><i
 								 class="el-icon-arrow-down el-icon--right"></i>
 							</span>
 							<el-dropdown-menu slot="dropdown">
 								<el-dropdown-item v-for="(item,index) in item.Landscapec" :key="index">
-									<router-link style="color: #666666;" :to="{ name:'Destination_Landscape_introduction', params: { Landscapeid: item.Landscapeid}}">{{item.Landscapecname}}</router-link>
+									<router-link style="color: #666666;" :to="{ path:'Destination_Landscape_introduction', params: { Landscapeid: item.Landscapeid}}">{{item.Landscapecname}}</router-link>
 								</el-dropdown-item>
 							</el-dropdown-menu>
 						</el-dropdown>
@@ -89,7 +89,7 @@
 				<div class="Landscpae_main">
 					<div class="compo-main-left" v-for="(item,index) in Landscpaemain" :key="index">
 						<div class="poi-placeinfo">
-							<router-link :to="{ name:'Destination_Landscape_photo', params: { photoid: item.photoid}}" class="placeinfoimg">
+							<router-link :to="{ path:'Destination_Landscape_photo', params: { photoid: item.photoid}}" class="placeinfoimg">
 								<img :src="item.photo">
 								<span class="">{{item.photonumber}}张照片</span>
 							</router-link>
@@ -129,7 +129,7 @@
 							<h3 class="poi-h3">去过这里的穷游er还喜欢去</h3>
 							<ul class="hot-poiul">
 								<li class="hot-poili" v-for="(item,index) in item.Landscpaexiangce" :key='index'>
-									<router-link :to="{ name:'Destination_Landscape_introduction', params: { Landscapeid: item.Landscapeid}}">
+									<router-link :to="{ path:'Destination_Landscape_introduction', params: { Landscapeid: item.Landscapeid}}">
 										<img :src="item.Landscpaeimg" style="width: 150px;height: 100px;">
 										<p class="hot-poiname">{{item.Landscpaename}}</p>
 										<p class="level">

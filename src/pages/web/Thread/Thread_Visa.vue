@@ -12,7 +12,6 @@
 						<el-input v-model="ruleForm.searchinfo" rel="searchinfo" class="Com_input" placeholder="请输入搜索内容"></el-input>
 						<i class="el-icon-search iconss" @click="searchBtn('ruleForm')"></i>
 					</el-form-item>
-
 				</el-form>
 			</div>
 		</div>
@@ -27,10 +26,9 @@
 						</span>
 						<el-dropdown-menu slot="dropdown">
 							<el-dropdown-item v-for="(item,index) in item.qianzhengsbyz" :key='index'>
-								<router-link style='color: #606266;' :to="{name:'/',params:{yzqianzhengid:item.yzqianzhengid}}">{{item.yzqianzhengname}}签证
+								<router-link style='color: #606266;' :to="{path:'/',params:{yzqianzhengid:item.yzqianzhengid}}">{{item.yzqianzhengname}}签证
 								</router-link>
 							</el-dropdown-item>
-
 						</el-dropdown-menu>
 					</el-dropdown>
 				</li>
@@ -41,7 +39,7 @@
 						</span>
 						<el-dropdown-menu slot="dropdown">
 							<el-dropdown-item v-for="(item,index) in item.qianzhengsboz" :key='index'>
-								<router-link style='color: #606266;' :to="{name:'/',params:{ozqianzhengid:item.ozqianzhengid}}">
+								<router-link style='color: #606266;' :to="{path:'/',params:{ozqianzhengid:item.ozqianzhengid}}">
 									{{item.ozqianzhengname}}签证</router-link>
 							</el-dropdown-item>
 						</el-dropdown-menu>
@@ -54,10 +52,9 @@
 						</span>
 						<el-dropdown-menu slot="dropdown">
 							<el-dropdown-item v-for="(item,index) in item.qianzhengsbbm" :key='index'>
-								<router-link style='color: #606266;' :to="{name:'/',params:{bmqianzhengid:item.bmqianzhengid}}">
-									{{item.bmqianzhengname}}</router-link>
+								<router-link style='color: #606266;' :to="{path:'/',params:{bmqianzhengid:item.bmqianzhengid}}">
+									{{item.bmqianzhengname}}签证</router-link>
 							</el-dropdown-item>
-
 						</el-dropdown-menu>
 					</el-dropdown>
 				</li>
@@ -68,10 +65,9 @@
 						</span>
 						<el-dropdown-menu slot="dropdown">
 							<el-dropdown-item v-for="(item,index) in item.qianzhengsbnm" :key='index'>
-								<router-link style='color: #606266;' :to="{name:'/',params:{nmqianzhengid:item.nmqianzhengid}}">
-									{{item.nmqianzhengname}}</router-link>
+								<router-link style='color: #606266;' :to="{path:'/',params:{nmqianzhengid:item.nmqianzhengid}}">
+									{{item.nmqianzhengname}}签证</router-link>
 							</el-dropdown-item>
-
 						</el-dropdown-menu>
 					</el-dropdown>
 				</li>
@@ -82,10 +78,9 @@
 						</span>
 						<el-dropdown-menu slot="dropdown">
 							<el-dropdown-item v-for="(item,index) in item.qianzhengsbdy" :key='index'>
-								<router-link style='color: #606266;' :to="{name:'/',params:{dyqianzhengid:item.dyqianzhengid}}">
-									{{item.dyqianzhengname}}</router-link>
+								<router-link style='color: #606266;' :to="{path:'/',params:{dyqianzhengid:item.dyqianzhengid}}">
+									{{item.dyqianzhengname}}签证</router-link>
 							</el-dropdown-item>
-
 						</el-dropdown-menu>
 					</el-dropdown>
 				</li>
@@ -96,10 +91,9 @@
 						</span>
 						<el-dropdown-menu slot="dropdown">
 							<el-dropdown-item v-for="(item,index) in item.qianzhengsbfz" :key='index'>
-								<router-link style='color: #606266;' :to="{name:'/',params:{fzqianzhengid:item.fzqianzhengid}}">
-									{{item.fzqianzhengname}}</router-link>
+								<router-link style='color: #606266;' :to="{path:'/',params:{fzqianzhengid:item.fzqianzhengid}}">
+									{{item.fzqianzhengname}}签证</router-link>
 							</el-dropdown-item>
-
 						</el-dropdown-menu>
 					</el-dropdown>
 				</li>
@@ -114,7 +108,7 @@
 					<div class="swiper-container gallery-top ">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide Visaimg" v-for="(item,index) in vbanner" :key="index">
-								<img :src="item.vbannerimg" />
+								<img :src="item.vbannerimg" width="300px" height="200px" />
 							</div>
 						</div>
 						<div class="swiper-pagination"></div>
@@ -122,7 +116,7 @@
 					<div class="swiper-container gallery-thumbs ">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide gallery-thumbsslide" v-for="(item,index) in vbanner" :key="index">
-								<router-link :to="{name:'/Thread_VisaDetail',params:{Visabannerid:item.Visabannerid}}">
+								<router-link :to="{path:'/Thread_VisaDetail',params:{Visabannerid:item.Visabannerid}}">
 									<img :src="item.vaterimg" class="v-avter" />
 									<div class="gallery-thumbsslidetxt">
 										<p class="vbdl-t">
@@ -148,7 +142,7 @@
 					</p>
 					<ul class="vbsq-u">
 
-						<router-link :to="{name:'/',params:{qianzhengid:item.qianzhengid}}" class="vbsula" v-for="(item,index) in qianzheng"
+						<router-link :to="{path:'/',params:{qianzhengid:item.qianzhengid}}" class="vbsula" v-for="(item,index) in qianzheng"
 						 :key="index">
 							<img :src="item.qianzhengimg" alt="">
 							<span class="vbsuls">{{item.qianzhengcountry}}</span>
@@ -185,7 +179,7 @@
 			<div class="vctfrom">
 				<el-form :model="ruleForm" :rules="rules" ref="ruleForm" size="small">
 					<el-form-item prop="searchinfo">
-						<el-input v-model="ruleForm.searchinfo" rel="searchinfo" class="Com_input" placeholder="请输入搜索内容"></el-input>
+						<el-input v-model="ruleForm.searchinfo" rel="searchinfo" class="Com_inputs" placeholder="请输入搜索内容"></el-input>
 						<i class="el-icon-search iconss" @click="searchBtn('ruleForm')"></i>
 					</el-form-item>
 
@@ -212,37 +206,39 @@
 
 		</div><!-- //vc -->
 		<div class="Visa_lists">
-			<li class="clearfix vwc-l" data-id="3203685">
+			<li class="clearfix vwc-l" v-for="(item,index) in vwuquestion.slice((currentPage-1)*pagesize,currentPage*pagesize)"
+			 :key='index'>
 				<!--运营管理checkbox-->
 				<!-- 头像 -->
-				<router-link to='' class="face">
-					<img src="https://pic.qyer.com/avatar/011/54/60/03/120?v=" width="48" height="48" alt="南市郭富城">
+				<router-link :to="{path:'/Thread_VisaDetail',params: { vwuquestionid: item.vwuquestionid }}" class="face">
+					<img :src="item.vwuquestionavter" width="48" height="48" alt="item.vwuquestionname">
 				</router-link>
 				<div class="cnt clearfix">
-					<router-link to='' class="cnt_img">
-					<img src="https://pic.qyer.com/album/user/2514/64/Q0xURhwDaUA/index/160x120" width="160" height="120"
-						  alt=""></router-link>
+					<router-link :to="{path:'/Thread_VisaDetail',params:{vwuquestionid:item.vwuquestion}}" class="cnt_img" v-if="item.type===1">
+						<img :src="item.vwuquestionimg" width="160" height="120" alt="item.vwuquestionname"></router-link>
 					<dl class="cntdl clearfix">
 						<!-- 标题类型 -->
 						<dt class="title fontYaHei">
-							<a href="https://bbs.qyer.com/thread-3203685-1.html" class="txt" target="_blank" data-bn-ipg="bbs-board-main-0-title">最近上海德国申根签什么情况</a>
+							<router-link :to="{path:'/Thread_VisaDetail',params:{vwuquestionid:item.vwuquestion}}" class="txt" target="_blank">{{item.vwuquestiontitle}}</router-link><span class="titlerate" v-if="item.type===3"><el-rate v-model="item.ratevalue" void-icon-class="weixuanzhong" score-template="{value}">
+								</el-rate>精华
+							</span>
 						</dt>
-
 						<!-- 数据数字 -->
-						<dd class="data"><a href="//www.qyer.com/u/11546003" target="_blank" data-bn-ipg="bbs-board-main-0-writer">南市郭富城</a>
+						<dd class="data"><a>{{item.vwuquestionname}}</a>
 							<span class="xlistAuthWrap">
-							</span><span class="lbvcd xnum"><i class="lb vcdate"></i>2019-05-24</span><span class="lbvcl xnum"><i class="lb vclook"></i>189</span><span
-							 class="lbvch xnum"><i class="lb vchf"></i>9</span><span class="lbvce xnum"><i class="bicf vclike"></i>0</span><span
-							 class="zdate">最后回复 18分钟前</span></dd>
+							</span><span class="lbvcd xnum"><i class="lb vcdate"></i>{{item.vwuquestiontime}}</span><span class="lbvcl xnum"><i
+								 class="lb vclook"></i>{{item.vwuquestionchakan}}</span><span class="lbvch xnum"><i class="lb vchf"></i>{{item.vwuquestionhuifu}}</span>
+							<span class="lbvce xnum"><img src="../../../assets/images/qiongyou/dianzan.png" style="vertical-align: top;" />
+								{{item.vwuquestiondianzan}}</span><span class="zdate">最后回复{{item.vwuquestionhuifitime}}前</span></dd>
 						<!-- 内容 -->
-
-						<dd class="textzdate">4月26去按的指纹，到今天整整一个月了，查询状态还是使领馆审理中，电话联系签证中心恢复继续耐心等待，不是传说5天就出的吗？</dd>
-
-
+						<dd class="textzdate">{{item.vwuquestiontxt}}</dd>
 					</dl>
 				</div>
-				<a class="vwcl-ha" href="https://bbs.qyer.com/thread-3203685-1.html" target="_blank"></a>
 			</li>
+			<el-pagination class="Visa_elpaination" @size-change="handleSizeChange" @current-change="handleCurrentChange"
+			 :current-page="currentPage" prev-text="上一页" next-text="下一页" :page-sizes="[5, 8, 10, 12]" :page-size="pagesize"
+			 layout="total, sizes, prev, pager, next, jumper,slot" background :total="vwuquestion.length">
+			</el-pagination>
 		</div>
 	</el-col>
 </template>
@@ -255,12 +251,16 @@
 		name: 'Thread_Visa',
 		data() {
 			return {
+				
+				currentPage: 1, //初始页
+				pagesize: 12, //每页的数据
 				vbanner: [],
 				qianzheng: [],
 				qianzhengsb: [],
 				countryqianzheng: [],
+				vwuquestion: [],
 				type_index: 0,
-				type_indexcountry: -1,
+				type_indexcountry: 0,
 				search_params: {},
 				vwu: ['全部签证讨论', '问答'],
 				huifu: [{
@@ -287,6 +287,7 @@
 			this.buildqianzheng();
 			this.buildqianzhengsb();
 			this.buildcountryqianzheng();
+			this.buildvwuquestion();
 		},
 		mounted() {
 			var galleryThumbs = new swiper('.gallery-thumbs', {
@@ -347,6 +348,13 @@
 					console.log(orror)
 				})
 			},
+			buildvwuquestion() {
+				this.axios.get('/api/buildvwuquestion').then(res => {
+					this.vwuquestion = res.data.data
+				}).catch(function(error) {
+					console.log(orror)
+				})
+			},
 			searchBtn(formName) {
 				this.$refs[formName].validate((valid) => {
 					if (valid) {
@@ -370,14 +378,23 @@
 				this.buildvwuquestion();
 			},
 			typeIndexcountry(index) {
-				let checkvalue = this.$refs.checkvalue.value //精华帖的值
-				let fatievalue = this.huifu[index].huifuname
+
 				this.type_indexcountry = index
 				this.search_params['type'] = this.countryqianzheng[index]
+				let checkvalue = this.$refs.checkvalue.value //精华帖的值
+				let fatievalue = this.huifu[index].huifuname
 				this.buildvwuquestion();
 			}
 		},
-
+		// 初始页currentPage、初始每页数据数pagesize和数据data
+		handleSizeChange: function(size) {
+			this.pagesize = size;
+			console.log(this.pagesize) //每页下拉显示数据
+		},
+		handleCurrentChange: function(currentPage) {
+			this.currentPage = currentPage;
+			console.log(this.currentPage) //点击第几页
+		},
 		// watch: {
 		// 	vbanner(newValue, oldValue) {
 		// 		this.vb = document.getElementsByClassName('v-banner')
@@ -418,15 +435,41 @@
 			}
 		}
 
+		.vwc-l:hover {
+			background: #f5f5f5;
+			box-shadow: 20px 0 0 #f5f5f5, -20px 0 0 #f5f5f5;
+		}
+.titlerate {
+	    background: #ff8c7d;
+    border: 1px solid #ff8c7d;
+    border-radius: 2px;
+    padding: 0 5px;
+	color:white;
+	font-size:12px;
+.el-rate{
+display:inherit;
+}
+.el-icon-star-on{
+	color:white !important;
+	font-size:11px !important;
+	margin-right:1px !important;
+}
+.weixuanzhong{
+	display:none;
+}
+}
+
 		//face
 		.cnt {
 			border-bottom: 1px solid #ececec;
 			padding: 20px 0 30px;
-.cnt_img {
-    float: right;
-    width: 160px;
-    margin-left: 20px;
-}
+
+			.cnt_img {
+				float: right;
+				width: 160px;
+				margin-left: 20px;
+			}
+
 			.title {
 				font-size: 16px;
 				line-height: 26px;
@@ -465,7 +508,7 @@
 				height: 13px;
 				margin: 0 6px 0 16px;
 				background-position: 0 -10px;
-				vertical-align: -2px;
+				vertical-align: 0px;
 			}
 
 			.lb {
@@ -517,6 +560,19 @@
 		}
 	}
 
+	.Visa_elpaination {
+		margin-top: 25px;
+		margin-bottom: 25px;
+		float: right;
+	}
+
+	.Visa_elpaination.is-background .el-pager li.active {
+		background: #5ea67c !important;
+		border-radius: 3px;
+		font-weight: 700;
+		color: #fff;
+	}
+
 	.vw-nav {
 		width: 980px;
 		margin: 0 auto;
@@ -537,8 +593,10 @@
 				cursor: pointer;
 			}
 
-			.vwl.hover {
+			.vwl:hover {
 				color: #10b041;
+				cursor: pointer;
+
 			}
 
 			.vwl.active {
@@ -688,6 +746,11 @@
 		color: #10b041;
 	}
 
+	.Com_inputs /deep/ .el-input__inner {
+		padding: 0 20px;
+		color: #10b041;
+	}
+
 	.Com_input::-webkit-input-placeholder {
 		color: red;
 	}
@@ -792,8 +855,9 @@
 
 				.Visaimg {
 					width: 300px !important;
-					height: 200px;
+					height: 200px ;
 					z-index: -1;
+					
 				}
 
 				.gallery-thumbs {
@@ -912,7 +976,7 @@
 			.vct {
 
 				margin: 0 15px 9px 0;
-				padding: 0 13px 0 11px;
+				padding: 5px 13px 5px 11px;
 				color: #636363;
 				line-height: 23px;
 				background-color: #f5f5f5;

@@ -14,7 +14,7 @@
 								</span>
 								<el-dropdown-menu slot="dropdown">
 									<el-dropdown-item v-for="(item,index) in item.mianbaoplace" :key="index">
-										<router-link style="color:#555555" :to="{ name:'Destination_Detail_place', params: { id: item.id}}">{{item.place}}</router-link>
+										<router-link style="color:#555555" :to="{ path:'/Destination_Detail_place', params: { id: item.id}}">{{item.place}}</router-link>
 									</el-dropdown-item>
 								</el-dropdown-menu>
 							</el-dropdown>
@@ -26,7 +26,7 @@
 								</span>
 								<el-dropdown-menu slot="dropdown">
 									<el-dropdown-item v-for="(item,index) in item.mianbaocity" :key="index">
-										<router-link style="color:#555555" :to="{ name:'Destination_Detail_place', params: { id: item.id}}">{{item.city}}</router-link>
+										<router-link style="color:#555555" :to="{ path:'/Destination_Detail_place', params: { id: item.id}}">{{item.city}}</router-link>
 									</el-dropdown-item>
 								</el-dropdown-menu>
 							</el-dropdown>
@@ -39,7 +39,7 @@
 								</span>
 								<el-dropdown-menu slot="dropdown">
 									<el-dropdown-item v-for="(item,index) in item.mianbaogonglv" :key="index">
-										<router-link style="color:#555555" :to="{ name:'Destination_Detail_place', params: { id: item.id}}">{{item.gonglv}}</router-link>
+										<router-link style="color:#555555" :to="{ path:'/Destination_Detail_place', params: { id: item.id}}">{{item.gonglv}}</router-link>
 									</el-dropdown-item>
 								</el-dropdown-menu>
 							</el-dropdown>
@@ -450,7 +450,7 @@
 					<br />
 					<h3 data-v-6fde679d="">穷游商城</h3>
 					<div class="main-list">
-						<router-link v-for="(item,index) in qshop" :key="index" :to="{ name:'Destination_Detail_deal', params: { id: item.id}}"
+						<router-link v-for="(item,index) in qshop" :key="index" :to="{ path:'/Destination_Detail_deal', params: { id: item.id}}"
 						 class="commodity-item">
 							<div class="commodity-cover"><img alt="" width="275" height="206" :src="item.qimgs" lazy="loaded"></div>
 							<div class="commodity-info">
@@ -511,7 +511,7 @@
 					<p align="right" @click="qshopclick()"><img src="https://fes.qyerstatic.com/FnJsBwAkUOELx41R6FVhZlrQjTaU" style="vertical-align: sub;" />
 						换一换</p>
 					<div class="list_item">
-						<router-link v-for="(item,index) in cityq" :key="index" :to="{ name:'Destination_Detail_activity', params: { id: item.id}}"
+						<router-link v-for="(item,index) in cityq" :key="index" :to="{ path:'/Destination_Detail_activity', params: { id: item.id}}"
 						 class="item_box">
 							<img alt="" width="275" height="147" :src="item.klimg" lazy="loaded">
 							<div class="commodity-info">
@@ -558,7 +558,7 @@
 							</div>
 							<el-carousel height="338px" style="margin-top: 25px;" class="Strategybanner">
 								<el-carousel-item v-for="(hotelvalue,index) in hotelvalue.Strategybanner" :key="index">
-									<router-link v-for="(hotelvalue,index) in hotelvalue.Strategybannercontent" :key="index" :to="{ name:'hotel', params: { id: hotelvalue.id}}"
+									<router-link v-for="(hotelvalue,index) in hotelvalue.Strategybannercontent" :key="index" :to="{ path:'/hotel', params: { id: hotelvalue.id}}"
 									 class="favor-slider-slide">
 										<div class="card-pic"><img :src="hotelvalue.stimg" alt="hotelvalue.sttitle" width="230" height="144"></div>
 										<div class="card-info"><a></a>
@@ -588,17 +588,17 @@
 								</div>
 							</router-link>
 							<div class="rank-2-3">
-								<router-link :to="{ name:'hotel', params: { id: hotelvalue.id}}" class="rank-2 rank-block"><span><em>{{hotelvalue.stqbaifenzhi_2}}%</em>穷游er选择住在</span>
-									<router-link :to="{ name:'hotel', params: { id: hotelvalue.id}}" class="rank-block-title">{{hotelvalue.stqdianname_2}}</router-link>
+								<router-link :to="{ path:'/hotel', params: { id: hotelvalue.id}}" class="rank-2 rank-block"><span><em>{{hotelvalue.stqbaifenzhi_2}}%</em>穷游er选择住在</span>
+									<router-link :to="{ path:'/hotel', params: { id: hotelvalue.id}}" class="rank-block-title">{{hotelvalue.stqdianname_2}}</router-link>
 								</router-link>
-								<router-link :to="{ name:'hotel', params: { id: hotelvalue.id}}" class="rank-3 rank-block"><span><em>{{hotelvalue.stqbaifenzhi_3}}%</em>穷游er选择住在</span>
-									<router-link :to="{ name:'hotel', params: { id: hotelvalue.id}}" class="rank-block-title">{{hotelvalue.stqdianname_3}}</router-link>
+								<router-link :to="{ path:'/hotel', params: { id: hotelvalue.id}}" class="rank-3 rank-block"><span><em>{{hotelvalue.stqbaifenzhi_3}}%</em>穷游er选择住在</span>
+									<router-link :to="{ path:'/hotel', params: { id: hotelvalue.id}}" class="rank-block-title">{{hotelvalue.stqdianname_3}}</router-link>
 								</router-link>
 							</div>
 						</div><!-- hotel-hot-area -->
 					</div><!-- data-and-recommand -->
 					<div class="more-link-box">
-						<router-link :to="{ name:'hotel', params: { id: hotelvalue.id}}" class="more-link">查看更多{{hotelvalue.stjiudianname}}酒店</router-link>
+						<router-link :to="{ path:'/hotel', params: { id: hotelvalue.id}}" class="more-link">查看更多{{hotelvalue.stjiudianname}}酒店</router-link>
 					</div>
 				</div>
 			</div><!-- hotel-tips-bg -->
@@ -650,7 +650,7 @@
 							</li>
 
 						</ul>
-						<router-link :to="{ name:'question', params: { id: item.id}}" class="btn">查看全部问答</router-link>
+						<router-link :to="{ path:'/question', params: { id: item.id}}" class="btn">查看全部问答</router-link>
 					</div><!-- wenda -->
 					<div class="jieban">
 						<h2>旅行结伴</h2>
@@ -659,7 +659,7 @@
 							<li v-for="(item,index) in item.answer">
 								<div class="title">
 									<div class="avater"><img :src="item.animg"></div>
-									<router-link :to="{ name:'answer', params: { id: item.id}}">{{item.antitle}}</router-link>
+									<router-link :to="{ path:'/answer', params: { id: item.id}}">{{item.antitle}}</router-link>
 								</div>
 								<div class="detail"><span class="td1 td">{{item.anzuozhe}}</span><span class="td2 td" style="color: #333333;">{{item.antime}}</span>
 									<span class="td3 td"><img width="13px" height="9px" src="https://fes.qyerstatic.com/FjQl8dAV6OeqkRdd1YcquIPse9Oa?imageslim"
@@ -672,7 +672,7 @@
 								</div>
 							</li>
 						</ul>
-						<router-link :to="{ name:'answer', params: { id: item.id}}" class="btn">进入论坛查看更多结伴</router-link>
+						<router-link :to="{ path:'/answer', params: { id: item.id}}" class="btn">进入论坛查看更多结伴</router-link>
 					</div>
 
 				</div>
@@ -685,19 +685,19 @@
 						<router-link to="write_youji" class="btn-write-diary"><img src="https://fes.qyerstatic.com/Fu99QEKUJXqT4saloWMxXTIjb_oL"
 							 alt=""><span>写游记</span></router-link>
 					</div>
-					<router-link v-for="(item,index) in youjilist" :key="index" :to="{ name:'thread', params: { id: item.id}}" class="diary-item-container">
+					<router-link v-for="(item,index) in youjilist" :key="index" :to="{ path:'/thread', params: { id: item.id}}" class="diary-item-container">
 						<div class="diary-item-img"><img :src="item.yjimg" alt="item.yjdsc" width="350" height="234"></div>
 						<div class="diary-item-content">
-							<router-link :to="{ name:'thread', params: { id: item.id}}" class="diary-item-title"><span class="diary-link">{{item.yjtitle}}</span>
+							<router-link :to="{ path:'/thread', params: { id: item.id}}" class="diary-item-title"><span class="diary-link">{{item.yjtitle}}</span>
 								<em class="is-essence"><i></i><span>精华</span></em></router-link>
 							<p>{{item.yjdsc}}</p>
 							<div class="post-and-user">
 								<div data-v-4d060ef2="" class="user-info">
-									<router-link :to="{ name:'thread', params: { id: item.id}}" class="user-avatar" style="display: inline-block; position: relative; overflow: visible;"><img
+									<router-link :to="{ path:'/thread', params: { id: item.id}}" class="user-avatar" style="display: inline-block; position: relative; overflow: visible;"><img
 										 :src="item.yjavter" alt="" style="position: relative; width: 30px; height: 30px;">
 
 									</router-link>
-									<router-link :to="{ name:'thread', params: { id: item.id}}" class="user-link">{{item.yjzuozhe}}</router-link><span>{{item.yjtime}}</span>
+									<router-link :to="{ path:'/thread', params: { id: item.id}}" class="user-link">{{item.yjzuozhe}}</router-link><span>{{item.yjtime}}</span>
 								</div>
 								<div class="post-info"><span class="viewed-num">
 										{{item.yjliulan}} 人浏览

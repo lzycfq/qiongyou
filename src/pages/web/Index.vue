@@ -67,7 +67,7 @@
 				<transition name="el-fade-in-linear">
 					<div class="els" v-if="els">
 						<h2 class="history-title">热门城市</h2>
-						<router-link class="poa" :to="{ name:'Detail', params: { id: item.id}}" v-for="(item,index) in popoverdiv" :key="index">{{item.popoverdivcity}}</router-link>
+						<router-link class="poa" :to="{ path:'Detail', params: { id: item.id}}" v-for="(item,index) in popoverdiv" :key="index">{{item.popoverdivcity}}</router-link>
 					</div>
 				</transition>
 				<div class="q-layer q-layer-search-autocomplete" v-if="autocomplete">
@@ -86,7 +86,7 @@
 						</li>
 
 						<li>
-							<div class="search-title search-titles "><router-link :to="{name:'deal',params:{id: item.id}}" class="search-poi">
+							<div class="search-title search-titles "><router-link :to="{path:'deal',params:{id: item.id}}" class="search-poi">
 									查看更多关于<span class="c-green">{{item.didian}}</span>的搜索结果
 								</router-link></div>
 						</li>
@@ -209,7 +209,7 @@
 				<p align="right" class="huan" v-on:click="huans"><i class="el-icon-refresh"> 换一换</i></p>
 				<div class="discount-wrap">
 					<div class="q-card" v-for="(item,index) in qshop" :key="index" :data-index="index" v-if="index<6">
-						<router-link :to="{name:'deal',params:{id: item.id}}">
+						<router-link :to="{path:'deal',params:{id: item.id}}">
 							<div class="q-pic"><img :src="item.qimg" lazy="loaded"><span class="flag" style="" v-if="item.type===1" style="display: block;">距结束{{item.date}}天</span><span
 								 v-else></span></div>
 							<div class="q-desc">
@@ -238,18 +238,18 @@
 								<li class="sb-slide" v-for="(item,index) in item.youjiccontent" :key="index">
 									<div class="thread">
 										<div class="y-pic">
-											<router-link :to="{name:'thread',params:{id: item.id}}"><img width="275" height="185" :src="item.youjipic"
+											<router-link :to="{path:'thread',params:{id: item.id}}"><img width="275" height="185" :src="item.youjipic"
 												 lazy="loaded"></router-link>
 											<div class="like total_replies"><i class="el-icon-document-checked"></i> <span>{{item.pinglun}}</span></div>
 										</div>
 										<div class="inner">
 											<div class="info clearfix"><span class="avatar">
-													<router-link :to="{name:'thread',params:{id: item.id}}"><img :src="item.youjixiang" lazy="loaded"></router-link>
+													<router-link :to="{path:'thread',params:{id: item.id}}"><img :src="item.youjixiang" lazy="loaded"></router-link>
 												</span><span class="txt">
-													<router-link :to="{name:'thread',params:{id: item.id}}">{{item.youjiname}}</router-link>
+													<router-link :to="{path:'thread',params:{id: item.id}}">{{item.youjiname}}</router-link>
 												</span></div>
 											<div class="caption">
-												<router-link :to="{name:'thread',params:{id: item.id}}">{{item.youjidsc}}</router-link>
+												<router-link :to="{path:'thread',params:{id: item.id}}">{{item.youjidsc}}</router-link>
 											</div>
 										</div><em class="tip">精华</em>
 									</div>
@@ -273,17 +273,17 @@
 					<div class="q-advtry-wrap advtry-wray-fl" v-for="(item,index) in item.tryA" :key="index">
 						<div class="advtry-item">
 							<div class="img">
-								<router-link :to="{name:'thread',params:{id: item.id}}"><img class="pic" :src="item.tryimg" lazy="loaded">
+								<router-link :to="{path:'thread',params:{id: item.id}}"><img class="pic" :src="item.tryimg" lazy="loaded">
 									<p class="time">申请已结束</p>
 									<div class="free-counts"><span>免费体验名额 {{item.mianfei}}</span></div>
 								</router-link>
 							</div>
 							<div class="info">
 								<h4 class="title">
-									<router-link :to="{name:'thread',params:{id: item.id}}">{{item.title}}</router-link>
+									<router-link :to="{path:'thread',params:{id: item.id}}">{{item.title}}</router-link>
 								</h4>
 								<div class="desc"><span>价值<em class="price">{{item.jiage}}</em>元</span>
-									<router-link :to="{name:'thread',params:{id: item.id}}" class="link-btn">查看详情</router-link>
+									<router-link :to="{path:'thread',params:{id: item.id}}" class="link-btn">查看详情</router-link>
 								</div>
 							</div>
 							<div class="advtry-user">

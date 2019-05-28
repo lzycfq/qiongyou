@@ -8536,252 +8536,451 @@ const buildqianzheng = Mock.mock(
 			message: '查询成功'
 		}
 	})
-	const buildqianzhengsb = Mock.mock(
-		'/api/buildqianzhengsb', 'get', (req, res) => {
-			return {
-				code: 200,
-				data: [
+const buildqianzhengsb = Mock.mock(
+	'/api/buildqianzhengsb', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+				qianzhengsbyz: [{
+						yzqianzhengid: 1,
+						yzqianzhengname: "朝鲜"
+					},
 					{
-						qianzhengsbyz:[
-							{
-								yzqianzhengid:1,
-								yzqianzhengname:"朝鲜"
-							},
-								{
-								yzqianzhengid:1,
-								yzqianzhengname:"日本"
-							},
-								{
-								yzqianzhengid:1,
-								yzqianzhengname:"泰国"
-							},
-								{
-								yzqianzhengid:1,
-								yzqianzhengname:"印度"
-							},
-								{
-								yzqianzhengid:1,
-								yzqianzhengname:"韩国"
-							},
-								{
-								yzqianzhengid:1,
-								yzqianzhengname:"土耳其"
-							},
-								{
-								yzqianzhengid:1,
-								yzqianzhengname:"科威特"
-							},
-								{
-								yzqianzhengid:1,
-								yzqianzhengname:"巴基斯坦"
-							},
-								{
-								yzqianzhengid:1,
-								yzqianzhengname:"俄罗斯"
-							},
-								{
-								yzqianzhengid:1,
-								yzqianzhengname:"台湾"
-							},
-								{
-								yzqianzhengid:1,
-								yzqianzhengname:"香港"
-							},
-								{
-								yzqianzhengid:1,
-								yzqianzhengname:"澳门"
-							}
-						],
-						qianzhengsboz:[
-							{
-								ozqianzhengid:1,
-								ozqianzhengname:'英国'
-							},
-							{
-								ozqianzhengid:1,
-								ozqianzhengname:'德国'
-							},
-							{
-								ozqianzhengid:1,
-								ozqianzhengname:'法国'
-							},
-							{
-								ozqianzhengid:1,
-								ozqianzhengname:'意大利'
-							},
-							{
-								ozqianzhengid:1,
-								ozqianzhengname:'葡萄牙'
-							},
-							{
-								ozqianzhengid:1,
-								ozqianzhengname:'西班牙'
-							},
-							{
-								ozqianzhengid:1,
-								ozqianzhengname:'芬兰'
-							},
-							{
-								ozqianzhengid:1,
-								ozqianzhengname:'冰岛'
-							},
-							{
-								ozqianzhengid:1,
-								ozqianzhengname:'白俄罗斯'
-							},
-							{
-								ozqianzhengid:1,
-								ozqianzhengname:'乌克兰'
-							},
-							{
-								ozqianzhengid:1,
-								ozqianzhengname:'摩洛哥'
-							}
-						],
-						qianzhengsbbm:[
-							{
-								bmqianzhengid:1,
-								bmqianzhengname:'美国'
-							},
-							{
-								bmqianzhengid:1,
-								bmqianzhengname:'加拿大'
-							},
-							{
-								bmqianzhengid:1,
-								bmqianzhengname:'墨西哥'
-							},
-							{
-								bmqianzhengid:1,
-								bmqianzhengname:'古巴'
-							},
-							{
-								bmqianzhengid:1,
-								bmqianzhengname:'巴拿马'
-							}
-						],
-						qianzhengsbnm:[
-							{
-								nmqianzhengid:1,
-								nmqianzhengname:'巴西'
-							},
-							{
-								nmqianzhengid:1,
-								nmqianzhengname:'阿根廷'
-							},
-							{
-								nmqianzhengid:1,
-								nmqianzhengname:'智利'
-							},
-							{
-								nmqianzhengid:1,
-								nmqianzhengname:'委内瑞拉'
-							},
-							{
-								nmqianzhengid:1,
-								nmqianzhengname:'苏里南'
-							}
-						],
-						qianzhengsbdy:[
-							{
-								dyqianzhengid:1,
-								dyqianzhengname:'澳大利亚'
-							},
-							{
-								dyqianzhengid:1,
-								dyqianzhengname:'新西兰'
-							},
-							{
-								dyqianzhengid:1,
-								dyqianzhengname:'太平洋群岛'
-							}
-						],
-						qianzhengsbfz:[
-							{
-								fzqianzhengid:1,
-								fzqianzhengname:'埃及'
-							},
-							{
-								fzqianzhengid:1,
-								fzqianzhengname:'南非'
-							},
-							{
-								fzqianzhengid:1,
-								fzqianzhengname:'埃塞尔比亚'
-							},
-							{
-								fzqianzhengid:1,
-								fzqianzhengname:'苏丹'
-							},
-							{
-								fzqianzhengid:1,
-								fzqianzhengname:'突尼斯'
-							},
-							{
-								fzqianzhengid:1,
-								fzqianzhengname:'埃塞尔比亚'
-							},
-							{
-								fzqianzhengid:1,
-								fzqianzhengname:'肯尼亚'
-							},
-							{
-								fzqianzhengid:1,
-								fzqianzhengname:'马里'
-							},
-							{
-								fzqianzhengid:1,
-								fzqianzhengname:'中非共和国'
-							},
-							{
-								fzqianzhengid:1,
-								fzqianzhengname:'刚果'
-							},
-							{
-								fzqianzhengid:1,
-								fzqianzhengname:'斯威士兰'
-							},
-							{
-								fzqianzhengid:1,
-								fzqianzhengname:'安哥拉'
-							}
-						]
+						yzqianzhengid: 1,
+						yzqianzhengname: "日本"
+					},
+					{
+						yzqianzhengid: 1,
+						yzqianzhengname: "泰国"
+					},
+					{
+						yzqianzhengid: 1,
+						yzqianzhengname: "印度"
+					},
+					{
+						yzqianzhengid: 1,
+						yzqianzhengname: "韩国"
+					},
+					{
+						yzqianzhengid: 1,
+						yzqianzhengname: "土耳其"
+					},
+					{
+						yzqianzhengid: 1,
+						yzqianzhengname: "科威特"
+					},
+					{
+						yzqianzhengid: 1,
+						yzqianzhengname: "巴基斯坦"
+					},
+					{
+						yzqianzhengid: 1,
+						yzqianzhengname: "俄罗斯"
+					},
+					{
+						yzqianzhengid: 1,
+						yzqianzhengname: "台湾"
+					},
+					{
+						yzqianzhengid: 1,
+						yzqianzhengname: "香港"
+					},
+					{
+						yzqianzhengid: 1,
+						yzqianzhengname: "澳门"
 					}
 				],
-				message: '查询成功'
-			}
-		})
-		const buildcountryqianzheng = Mock.mock(
-			'/api/buildcountryqianzheng', 'get', (req, res) => {
-				return {
-					code: 200,
-					data: [
-						{
-							countryqianzhengname:"日本"
-						},
-						{
-							countryqianzhengname:"德国"
-						},
-						{
-							countryqianzhengname:"澳大利亚"
-						},
-						{
-							countryqianzhengname:"美国"
-						},
-						{
-							countryqianzhengname:"朝鲜"
-						},
-						{
-							countryqianzhengname:"印度"
-						},
-						{
-							countryqianzhengname:"加拿大"
-						}
-					],
-					message: '查询成功'
+				qianzhengsboz: [{
+						ozqianzhengid: 1,
+						ozqianzhengname: '英国'
+					},
+					{
+						ozqianzhengid: 1,
+						ozqianzhengname: '德国'
+					},
+					{
+						ozqianzhengid: 1,
+						ozqianzhengname: '法国'
+					},
+					{
+						ozqianzhengid: 1,
+						ozqianzhengname: '意大利'
+					},
+					{
+						ozqianzhengid: 1,
+						ozqianzhengname: '葡萄牙'
+					},
+					{
+						ozqianzhengid: 1,
+						ozqianzhengname: '西班牙'
+					},
+					{
+						ozqianzhengid: 1,
+						ozqianzhengname: '芬兰'
+					},
+					{
+						ozqianzhengid: 1,
+						ozqianzhengname: '冰岛'
+					},
+					{
+						ozqianzhengid: 1,
+						ozqianzhengname: '白俄罗斯'
+					},
+					{
+						ozqianzhengid: 1,
+						ozqianzhengname: '乌克兰'
+					},
+					{
+						ozqianzhengid: 1,
+						ozqianzhengname: '摩洛哥'
+					}
+				],
+				qianzhengsbbm: [{
+						bmqianzhengid: 1,
+						bmqianzhengname: '美国'
+					},
+					{
+						bmqianzhengid: 1,
+						bmqianzhengname: '加拿大'
+					},
+					{
+						bmqianzhengid: 1,
+						bmqianzhengname: '墨西哥'
+					},
+					{
+						bmqianzhengid: 1,
+						bmqianzhengname: '古巴'
+					},
+					{
+						bmqianzhengid: 1,
+						bmqianzhengname: '巴拿马'
+					}
+				],
+				qianzhengsbnm: [{
+						nmqianzhengid: 1,
+						nmqianzhengname: '巴西'
+					},
+					{
+						nmqianzhengid: 1,
+						nmqianzhengname: '阿根廷'
+					},
+					{
+						nmqianzhengid: 1,
+						nmqianzhengname: '智利'
+					},
+					{
+						nmqianzhengid: 1,
+						nmqianzhengname: '委内瑞拉'
+					},
+					{
+						nmqianzhengid: 1,
+						nmqianzhengname: '苏里南'
+					}
+				],
+				qianzhengsbdy: [{
+						dyqianzhengid: 1,
+						dyqianzhengname: '澳大利亚'
+					},
+					{
+						dyqianzhengid: 1,
+						dyqianzhengname: '新西兰'
+					},
+					{
+						dyqianzhengid: 1,
+						dyqianzhengname: '太平洋群岛'
+					}
+				],
+				qianzhengsbfz: [{
+						fzqianzhengid: 1,
+						fzqianzhengname: '埃及'
+					},
+					{
+						fzqianzhengid: 1,
+						fzqianzhengname: '南非'
+					},
+					{
+						fzqianzhengid: 1,
+						fzqianzhengname: '埃塞尔比亚'
+					},
+					{
+						fzqianzhengid: 1,
+						fzqianzhengname: '苏丹'
+					},
+					{
+						fzqianzhengid: 1,
+						fzqianzhengname: '突尼斯'
+					},
+					{
+						fzqianzhengid: 1,
+						fzqianzhengname: '埃塞尔比亚'
+					},
+					{
+						fzqianzhengid: 1,
+						fzqianzhengname: '肯尼亚'
+					},
+					{
+						fzqianzhengid: 1,
+						fzqianzhengname: '马里'
+					},
+					{
+						fzqianzhengid: 1,
+						fzqianzhengname: '中非共和国'
+					},
+					{
+						fzqianzhengid: 1,
+						fzqianzhengname: '刚果'
+					},
+					{
+						fzqianzhengid: 1,
+						fzqianzhengname: '斯威士兰'
+					},
+					{
+						fzqianzhengid: 1,
+						fzqianzhengname: '安哥拉'
+					}
+				]
+			}],
+			message: '查询成功'
+		}
+	})
+const buildcountryqianzheng = Mock.mock(
+	'/api/buildcountryqianzheng', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					countryqianzhengname: "日本"
+				},
+				{
+					countryqianzhengname: "德国"
+				},
+				{
+					countryqianzhengname: "澳大利亚"
+				},
+				{
+					countryqianzhengname: "美国"
+				},
+				{
+					countryqianzhengname: "朝鲜"
+				},
+				{
+					countryqianzhengname: "印度"
+				},
+				{
+					countryqianzhengname: "加拿大"
 				}
-			})
+			],
+			message: '查询成功'
+		}
+	})
+const buildvwuquestion = Mock.mock(
+	'/api/buildvwuquestion', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					vwuquestionavter: '//pics.lvjs.com.cn//uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_300_200.jpg',
+					vwuquestion: 1,
+					vwuquestionimg: '//pics.lvjs.com.cn//uploads/pc/place2/2017-11-17/29995311-5698-4c8c-b946-08d28eb0d97d_300_200.jpg',
+					vwuquestionname: 'KO LOVE',
+					type: 1,
+					type: 3,
+					ratevalue: 4,
+					vwuquestiontitle: '#报签证# 英国递签统计  （请把新消息和吐槽更新在自己汇报的楼层里；进度查询看1楼链接！）',
+					vwuquestiontime: "2019-6-3",
+					vwuquestionchakan: '2563',
+					vwuquestionhuifu: '363',
+					vwuquestiondianzan: '5693',
+					vwuquestionhuifitime: "3分钟",
+					vwuquestiontxt: '完全可以理解等签证结果的心情，so让我们按照下面格式来报吧~记得有消息要来更新自己的报告帖！递签时间：x月x日 周x 上午/下午签证中心：【选项：北京 / 济南 / 沈阳 / 武汉 / 上海 / 杭州 / 南京 / 广州 / 福州 / 深圳 / 重庆 / 成都 】服务类型：【选项： 普通 （850元） / 黄金时间服务 (+ 500元) / 英速签服务 (+ 1200元) / 24小时超级优先签证服务 (+ 6000元)】护照返回方式：【选项：签证中心自取 / EMS快递】是否已收到使...'
+				},
+				{
+					vwuquestionavter: '//pics.lvjs.com.cn//uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_300_200.jpg',
+					vwuquestion: 1,
+					vwuquestionimg: '//pics.lvjs.com.cn//uploads/pc/place2/2017-11-17/29995311-5698-4c8c-b946-08d28eb0d97d_300_200.jpg',
+					vwuquestionname: 'KO LOVE',
+					type: 1,
+					vwuquestiontitle: '#报签证# 英国递签统计  （请把新消息和吐槽更新在自己汇报的楼层里；进度查询看1楼链接！）',
+					vwuquestiontime: "2019-6-3",
+					vwuquestionchakan: '2563',
+					vwuquestionhuifu: '363',
+					vwuquestiondianzan: '5693',
+					vwuquestionhuifitime: "3分钟",
+					vwuquestiontxt: '完全可以理解等签证结果的心情，so让我们按照下面格式来报吧~记得有消息要来更新自己的报告帖！递签时间：x月x日 周x 上午/下午签证中心：【选项：北京 / 济南 / 沈阳 / 武汉 / 上海 / 杭州 / 南京 / 广州 / 福州 / 深圳 / 重庆 / 成都 】服务类型：【选项： 普通 （850元） / 黄金时间服务 (+ 500元) / 英速签服务 (+ 1200元) / 24小时超级优先签证服务 (+ 6000元)】护照返回方式：【选项：签证中心自取 / EMS快递】是否已收到使...'
+				},
+				{
+					vwuquestionavter: '//pics.lvjs.com.cn//uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_300_200.jpg',
+					vwuquestion: 1,
+					vwuquestionimg: '//pics.lvjs.com.cn//uploads/pc/place2/2017-11-17/29995311-5698-4c8c-b946-08d28eb0d97d_300_200.jpg',
+					vwuquestionname: 'KO LOVE',
+					type: 1,
+					type: 3,
+					ratevalue: 1,
+					vwuquestiontitle: '#报签证# 英国递签统计  （请把新消息和吐槽更新在自己汇报的楼层里；进度查询看1楼链接！）',
+					vwuquestiontime: "2019-6-3",
+					vwuquestionchakan: '2563',
+					vwuquestionhuifu: '363',
+					vwuquestiondianzan: '5693',
+					vwuquestionhuifitime: "3分钟",
+					vwuquestiontxt: '完全可以理解等签证结果的心情，so让我们按照下面格式来报吧~记得有消息要来更新自己的报告帖！递签时间：x月x日 周x 上午/下午签证中心：【选项：北京 / 济南 / 沈阳 / 武汉 / 上海 / 杭州 / 南京 / 广州 / 福州 / 深圳 / 重庆 / 成都 】服务类型：【选项： 普通 （850元） / 黄金时间服务 (+ 500元) / 英速签服务 (+ 1200元) / 24小时超级优先签证服务 (+ 6000元)】护照返回方式：【选项：签证中心自取 / EMS快递】是否已收到使...'
+				},
+				{
+					vwuquestionavter: '//pics.lvjs.com.cn//uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_300_200.jpg',
+					vwuquestion: 1,
+					vwuquestionimg: '//pics.lvjs.com.cn//uploads/pc/place2/2017-11-17/29995311-5698-4c8c-b946-08d28eb0d97d_300_200.jpg',
+					vwuquestionname: 'KO LOVE',
+					type: 1,
+					vwuquestiontitle: '#报签证# 英国递签统计  （请把新消息和吐槽更新在自己汇报的楼层里；进度查询看1楼链接！）',
+					vwuquestiontime: "2019-6-3",
+					vwuquestionchakan: '2563',
+					vwuquestionhuifu: '363',
+					vwuquestiondianzan: '5693',
+					vwuquestionhuifitime: "3分钟",
+					vwuquestiontxt: '完全可以理解等签证结果的心情，so让我们按照下面格式来报吧~记得有消息要来更新自己的报告帖！递签时间：x月x日 周x 上午/下午签证中心：【选项：北京 / 济南 / 沈阳 / 武汉 / 上海 / 杭州 / 南京 / 广州 / 福州 / 深圳 / 重庆 / 成都 】服务类型：【选项： 普通 （850元） / 黄金时间服务 (+ 500元) / 英速签服务 (+ 1200元) / 24小时超级优先签证服务 (+ 6000元)】护照返回方式：【选项：签证中心自取 / EMS快递】是否已收到使...'
+				},
+				{
+					vwuquestionavter: '//pics.lvjs.com.cn//uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_300_200.jpg',
+					vwuquestion: 1,
+					vwuquestionimg: '//pics.lvjs.com.cn//uploads/pc/place2/2017-11-17/29995311-5698-4c8c-b946-08d28eb0d97d_300_200.jpg',
+					vwuquestionname: 'KO LOVE',
+					type: 1,
+					type: 3,
+					ratevalue: 5,
+					vwuquestiontitle: '#报签证# 英国递签统计  （请把新消息和吐槽更新在自己汇报的楼层里；进度查询看1楼链接！）',
+					vwuquestiontime: "2019-6-3",
+					vwuquestionchakan: '2563',
+					vwuquestionhuifu: '363',
+					vwuquestiondianzan: '5693',
+					vwuquestionhuifitime: "3分钟",
+					vwuquestiontxt: '完全可以理解等签证结果的心情，so让我们按照下面格式来报吧~记得有消息要来更新自己的报告帖！递签时间：x月x日 周x 上午/下午签证中心：【选项：北京 / 济南 / 沈阳 / 武汉 / 上海 / 杭州 / 南京 / 广州 / 福州 / 深圳 / 重庆 / 成都 】服务类型：【选项： 普通 （850元） / 黄金时间服务 (+ 500元) / 英速签服务 (+ 1200元) / 24小时超级优先签证服务 (+ 6000元)】护照返回方式：【选项：签证中心自取 / EMS快递】是否已收到使...'
+				},
+				{
+					vwuquestionavter: '//pics.lvjs.com.cn//uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_300_200.jpg',
+					vwuquestion: 1,
+					vwuquestionimg: '//pics.lvjs.com.cn//uploads/pc/place2/2017-11-17/29995311-5698-4c8c-b946-08d28eb0d97d_300_200.jpg',
+					vwuquestionname: 'KO LOVE',
+					type: 1,
+					vwuquestiontitle: '#报签证# 英国递签统计  （请把新消息和吐槽更新在自己汇报的楼层里；进度查询看1楼链接！）',
+					vwuquestiontime: "2019-6-3",
+					vwuquestionchakan: '2563',
+					vwuquestionhuifu: '363',
+					vwuquestiondianzan: '5693',
+					vwuquestionhuifitime: "3分钟",
+					vwuquestiontxt: '完全可以理解等签证结果的心情，so让我们按照下面格式来报吧~记得有消息要来更新自己的报告帖！递签时间：x月x日 周x 上午/下午签证中心：【选项：北京 / 济南 / 沈阳 / 武汉 / 上海 / 杭州 / 南京 / 广州 / 福州 / 深圳 / 重庆 / 成都 】服务类型：【选项： 普通 （850元） / 黄金时间服务 (+ 500元) / 英速签服务 (+ 1200元) / 24小时超级优先签证服务 (+ 6000元)】护照返回方式：【选项：签证中心自取 / EMS快递】是否已收到使...'
+				},
+				{
+					vwuquestionavter: '//pics.lvjs.com.cn//uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_300_200.jpg',
+					vwuquestion: 1,
+					vwuquestionimg: '//pics.lvjs.com.cn//uploads/pc/place2/2017-11-17/29995311-5698-4c8c-b946-08d28eb0d97d_300_200.jpg',
+					vwuquestionname: 'KO LOVE',
+					type: 1,
+					vwuquestiontitle: '#报签证# 英国递签统计  （请把新消息和吐槽更新在自己汇报的楼层里；进度查询看1楼链接！）',
+					vwuquestiontime: "2019-6-3",
+					vwuquestionchakan: '2563',
+					vwuquestionhuifu: '363',
+					vwuquestiondianzan: '5693',
+					vwuquestionhuifitime: "3分钟",
+					vwuquestiontxt: '完全可以理解等签证结果的心情，so让我们按照下面格式来报吧~记得有消息要来更新自己的报告帖！递签时间：x月x日 周x 上午/下午签证中心：【选项：北京 / 济南 / 沈阳 / 武汉 / 上海 / 杭州 / 南京 / 广州 / 福州 / 深圳 / 重庆 / 成都 】服务类型：【选项： 普通 （850元） / 黄金时间服务 (+ 500元) / 英速签服务 (+ 1200元) / 24小时超级优先签证服务 (+ 6000元)】护照返回方式：【选项：签证中心自取 / EMS快递】是否已收到使...'
+				},
+				{
+					vwuquestionavter: '//pics.lvjs.com.cn//uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_300_200.jpg',
+					vwuquestion: 1,
+					vwuquestionimg: '//pics.lvjs.com.cn//uploads/pc/place2/2017-11-17/29995311-5698-4c8c-b946-08d28eb0d97d_300_200.jpg',
+					vwuquestionname: 'KO LOVE',
+					type: 1,
+					vwuquestiontitle: '#报签证# 英国递签统计  （请把新消息和吐槽更新在自己汇报的楼层里；进度查询看1楼链接！）',
+					vwuquestiontime: "2019-6-3",
+					vwuquestionchakan: '2563',
+					vwuquestionhuifu: '363',
+					vwuquestiondianzan: '5693',
+					vwuquestionhuifitime: "3分钟",
+					vwuquestiontxt: '完全可以理解等签证结果的心情，so让我们按照下面格式来报吧~记得有消息要来更新自己的报告帖！递签时间：x月x日 周x 上午/下午签证中心：【选项：北京 / 济南 / 沈阳 / 武汉 / 上海 / 杭州 / 南京 / 广州 / 福州 / 深圳 / 重庆 / 成都 】服务类型：【选项： 普通 （850元） / 黄金时间服务 (+ 500元) / 英速签服务 (+ 1200元) / 24小时超级优先签证服务 (+ 6000元)】护照返回方式：【选项：签证中心自取 / EMS快递】是否已收到使...'
+				},
+				{
+					vwuquestionavter: '//pics.lvjs.com.cn//uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_300_200.jpg',
+					vwuquestion: 1,
+					vwuquestionimg: '//pics.lvjs.com.cn//uploads/pc/place2/2017-11-17/29995311-5698-4c8c-b946-08d28eb0d97d_300_200.jpg',
+					vwuquestionname: 'KO LOVE',
+					type: 1,
+					vwuquestiontitle: '#报签证# 英国递签统计  （请把新消息和吐槽更新在自己汇报的楼层里；进度查询看1楼链接！）',
+					vwuquestiontime: "2019-6-3",
+					vwuquestionchakan: '2563',
+					vwuquestionhuifu: '363',
+					vwuquestiondianzan: '5693',
+					vwuquestionhuifitime: "3分钟",
+					vwuquestiontxt: '完全可以理解等签证结果的心情，so让我们按照下面格式来报吧~记得有消息要来更新自己的报告帖！递签时间：x月x日 周x 上午/下午签证中心：【选项：北京 / 济南 / 沈阳 / 武汉 / 上海 / 杭州 / 南京 / 广州 / 福州 / 深圳 / 重庆 / 成都 】服务类型：【选项： 普通 （850元） / 黄金时间服务 (+ 500元) / 英速签服务 (+ 1200元) / 24小时超级优先签证服务 (+ 6000元)】护照返回方式：【选项：签证中心自取 / EMS快递】是否已收到使...'
+				}
+			],
+			message: '查询成功'
+		}
+	})
+const buildPhobanner = Mock.mock(
+	'/api/buildPhobanner', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [
+
+				{
+					Photographyid: 1,
+					Phobannerimg: 'http://pic.lvmama.com/uploads/pc/place2/2017-03-23/ee690612-66f9-4ff2-a3ec-26c547aa2ec2_480_320.jpg',
+					Phobannertxt: '日本松山4日3晚自由行([赠送五重惊喜大礼包]3晚松山东急REI酒店，东航直飞，',
+					Phobanneravter: 'http://pic.lvmama.com/uploads/pc/place2/2017-03-23/ee690612-66f9-4ff2-a3ec-26c547aa2ec2_480_320.jpg',
+
+				},
+				{
+					Photographyid: 1,
+					Phobannerimg: 'http://pic.lvmama.com/uploads/pc/place2/2017-03-23/f9f1c526-1732-4536-8720-d9fa8cbd5fa3_480_320.jpg',
+					Phobannertxt: '东急酒店，对面即是大街道和三越百货，代购圣地',
+					Phobanneravter: 'http://pic.lvmama.com/uploads/pc/place2/2018-10-24/4ca8d637-ebd4-4fcc-8d30-b6e316fe2abf_480_320.jpg',
+
+				},
+				{
+					Photographyid: 1,
+					Phobannerimg: 'http://pic.lvmama.com/uploads/pc/place2/2017-03-23/5719a5e0-c423-42a2-adee-4f82d4d5ff5d_480_320.jpg',
+					Phobannertxt: '日本松山4日3晚自由行([赠送五重惊喜大礼包]3晚松山东急REI酒店，东航直飞，',
+					Phobanneravter: 'http://pic.lvmama.com/uploads/pc/place2/2019-04-04/cc713fbb-289e-420d-ad3f-ac8824167f84_480_320.jpg',
+
+				},
+				{
+					Photographyid: 1,
+					Phobannerimg: '//pic.lvmama.com/uploads/pc/place2/2017-02-24/58cfd95b-9ef2-4ccd-85b8-44bd5739fab4_480_320.jpg',
+					Phobannertxt: '南航，早去午回无红眼，玩得尽兴',
+					Phobanneravter: 'http://pic.lvmama.com/uploads/pc/place2/2017-03-23/ee690612-66f9-4ff2-a3ec-26c547aa2ec2_480_320.jpg',
+				
+				},
+				{
+					Photographyid: 1,
+					Phobannerimg: 'http://pic.lvmama.com/uploads/pc/place2/2016-12-05/509e009e-fe8c-409f-aa05-c41a470f3353_480_320.jpg',
+					Phobannertxt: '心斋桥公寓酒店4晚连住，预定还有更多惊喜~',
+					Phobanneravter: 'http://pic.lvmama.com/uploads/pc/place2/2018-08-24/6fe6f6a9-c82a-41a6-9586-8a8d87031a6a_480_320.jpg',
+				
+				},
+				{
+					Photographyid: 1,
+					Phobannerimg: 'http://pic.lvmama.com/uploads/pc/place2/2016-09-30/cc4ab0b1-d922-4757-a2b9-4804f3a0b31d_480_320.jpg',
+					Phobannertxt: '加320元代办日本单次旅游签证，可简化~',
+					Phobanneravter: 'http://pic.lvmama.com/uploads/pc/place2/2016-12-05/509e009e-fe8c-409f-aa05-c41a470f3353_480_320.jpg',
+				
+				},
+				{
+					Photographyid: 1,
+					Phobannerimg: '//pic.lvmama.com/uploads/pc/place2/2018-10-24/8af2205c-8f86-4049-845a-19b617b2b4a3_480_320.jpg',
+					Phobannertxt: '畅游城市: 大阪/奈良/富士山/东京',
+					Phobanneravter: 'http://pic.lvmama.com/uploads/pc/place2/2018-10-24/02a20c99-9477-480c-9faa-84c63a4774c0_480_320.jpg',
+				
+				},
+				{
+					Photographyid: 1,
+					Phobannerimg: 'http://pic.lvmama.com/uploads/pc/place2/2016-08-17/7a08a3e4-52ee-486b-a7ca-40f0cbf615e7_480_320.jpg',
+					Phobannertxt: '安排制作日本具代表性的名物──寿司DIY',
+					Phobanneravter: 'http://pic.lvmama.com/uploads/pc/place2/2019-02-28/6a547ea6-a852-416a-932b-af1d3992b32b_480_320.jpg',
+				
+				}
+			],
+			message: '查询成功'
+		}
+	})
 export default {
+	buildPhobanner,
+	buildvwuquestion,
 	buildcountryqianzheng,
 	buildqianzheng,
 	buildvbanner,

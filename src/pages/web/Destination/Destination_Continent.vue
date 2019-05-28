@@ -7,11 +7,11 @@
 				<el-breadcrumb-item :to="{ path: '/Destination' }" class="breadcrumblink">
 					<el-dropdown placement="bottom-start">
 						<span class="el-dropdown-link">
-							<router-link :to="{ name:'Destination', params: { Continentid: item.Continentid}}">目的地</router-link><i class="el-icon-arrow-down el-icon--right"></i>
+							<router-link :to="{ path:'Destination', params: { Continentid: item.Continentid}}">目的地</router-link><i class="el-icon-arrow-down el-icon--right"></i>
 						</span>
 						<el-dropdown-menu slot="dropdown">
 							<el-dropdown-item v-for="(item,index) in item.country" :key="index">
-								<router-link style="color: #666666;" :to="{ name:'Destination_Citydetail', params: { countryid: item.countryid}}">{{item.country}}</router-link>
+								<router-link style="color: #666666;" :to="{ path:'Destination_Citydetail', params: { countryid: item.countryid}}">{{item.country}}</router-link>
 							</el-dropdown-item>
 						</el-dropdown-menu>
 					</el-dropdown>
@@ -23,7 +23,7 @@
 						</span>
 						<el-dropdown-menu slot="dropdown">
 							<el-dropdown-item v-for="(item,index) in item.Landscapecity" :key="index">
-								<router-link style="color: #666666;" :to="{ name:'Destination_Citydetail', params: { countryid: item.countryid}}">{{item.Landscapecityname}}</router-link>
+								<router-link style="color: #666666;" :to="{ path:'Destination_Citydetail', params: { countryid: item.countryid}}">{{item.Landscapecityname}}</router-link>
 							</el-dropdown-item>
 						</el-dropdown-menu>
 					</el-dropdown>
@@ -92,14 +92,14 @@
 			<div class="pla_citypiclistul" v-show="ison">
 				<ul>
 					<li v-for="(item,index) in contryul" :key='index'>
-						<router-link :to="{ name:'Destination_Countrydetail', params: { Countryid: item.Countryid}}" class="pla_citypiclistimg">
+						<router-link :to="{ path:'Destination_Countrydetail', params: { Countryid: item.Countryid}}" class="pla_citypiclistimg">
 							<img :src="item.countryimg" width="300" height="200" alt="item.countryname" data-bn-ipg="place-continents-hotcity-pic">
 							<h3 class="title">{{item.countryname}}</h3>
 						</router-link>
 						<div class="infos">
 
 							<p class="sights"><span>热门城市：</span>
-								<router-link class="sightsa" :to="{ name:'Destination_Citydetail', params: { Cityid: item.Cityid}}" v-for="(item,index) in item.contrycity"
+								<router-link class="sightsa" :to="{ path:'Destination_Citydetail', params: { Cityid: item.Cityid}}" v-for="(item,index) in item.contrycity"
 								 :key='index'>{{item.contrycityname}}、</router-link>
 							</p>
 						</div>
@@ -107,7 +107,7 @@
 				</ul>
 			</div>
 			<div class="pla_citypiclistul" v-show="!ison">
-				<router-link class="pla_citypiclistul_a" v-for="(item,index) in countrylist" :key="index" :to="{ name:'Destination_Countrydetail', params: { Countryid: item.Countryid}}">{{item.coutryname}}
+				<router-link class="pla_citypiclistul_a" v-for="(item,index) in countrylist" :key="index" :to="{ path:'Destination_Countrydetail', params: { Countryid: item.Countryid}}">{{item.coutryname}}
 					<em>{{item.countryenglish}}</em> <span v-if="item.type===1"></span></router-link>
 			</div>
 		</div>
@@ -123,17 +123,17 @@
 			</div>
 			<router-link to="" class="Continent_youji_list"  v-for="(item,index) in youjilist" :key="index">
 				<div class="youji_pic">
-					<router-link :to="{ name:'Thread_Detail', params: { ThreadDetailid: item.ThreadDetailid}}">
+					<router-link :to="{ path:'Thread_Detail', params: { ThreadDetailid: item.ThreadDetailid}}">
 						<img :src="item.thraedimg" width="227" height="151" alt="item.threadtitle" title="item.threadtitle"></router-link>
 				</div>
 				<div class="youji_cnt">
 					<div class="youji_top">
 						<p class="face">
-							<router-link :to="{ name:'Thread_Detail', params: { ThreadDetailid: item.ThreadDetailid}}"><img :src="item.threadavter" alt="item.threadtitle" height="48" width="48">
+							<router-link :to="{ path:'Thread_Detail', params: { ThreadDetailid: item.ThreadDetailid}}"><img :src="item.threadavter" alt="item.threadtitle" height="48" width="48">
 							</router-link>
 						</p>
 						<h3 class="youji_title">
-							<router-link :to="{ name:'Thread_Detail', params: { ThreadDetailid: item.ThreadDetailid}}" alt="item.threadtitle" title="item.threadtitle">{{item.threadtitle}}</router-link>
+							<router-link :to="{ path:'Thread_Detail', params: { ThreadDetailid: item.ThreadDetailid}}" alt="item.threadtitle" title="item.threadtitle">{{item.threadtitle}}</router-link>
 						</h3>
 						<div>
 							<p class="fr"><span class="time">{{item.threadtime}}</span><span class="bbsview" title="浏览">{{item.threadliulan}}</span><span class="bbslike"

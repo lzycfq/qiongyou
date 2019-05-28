@@ -116,14 +116,23 @@ export default new Router({
 				// 	},
 				// 				
 				// },
+				// {
+				// 	path: '/',
+				// 	name: 'Thread_Visa',//:id
+				// 	component(resolve) {
+				// 		require(['../pages/web/Thread/Thread_Visa'], resolve)
+				// 	},
+				// 				
+				// },
 				{
 					path: '/',
-					name: 'Thread_Visa',//:id
+					name: 'Thread_Photography',//:id
 					component(resolve) {
-						require(['../pages/web/Thread/Thread_Visa'], resolve)
+						require(['../pages/web/Thread/Thread_Photography'], resolve)
 					},
 								
 				},
+				
 	],
     
 	scrollBehavior(to, from, savedPosition) {

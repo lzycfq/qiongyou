@@ -26,7 +26,7 @@
 				<el-popover placement="bottom" trigger="hover" popper-class="popoverouzhou">
 					<div class="popoverouzhoucontent">
 			<li v-for="(item,index) in item.ouzhoucoutry" :key='index'>
-				<router-link :to="{ name:'', params: { coutrycountryid: item.coutrycountryid}}">{{item.countryname}}</router-link>
+				<router-link :to="{ path:'', params: { coutrycountryid: item.coutrycountryid}}">{{item.countryname}}</router-link>
 			</li>
 			</div>
 			<a class="itma" slot='reference'>欧洲版块 <i class="el-icon-arrow-down iconsss"></i></a>
@@ -36,7 +36,7 @@
 				<el-popover placement="bottom" trigger="hover" popper-class="popoverouzhou">
 					<div class="popoverouzhoucontent">
 			<li v-for="(item,index) in item.yazhoucoutry" :key='index'>
-				<router-link :to="{ name:'', params: { countryid: item.countryid}}">{{item.countryname}}</router-link>
+				<router-link :to="{ path:'', params: { countryid: item.countryid}}">{{item.countryname}}</router-link>
 			</li>
 			</div>
 			<a class="itma" slot='reference'>亚洲版块 <i class="el-icon-arrow-down iconsss"></i></a>
@@ -48,7 +48,7 @@
 				<el-popover placement="bottom" trigger="hover" popper-class="popoverouzhou">
 					<div class="popoverouzhoucontent">
 			<li v-for="(item,index) in item.meizhoucoutry" :key='index'>
-				<router-link :to="{ name:'', params: { countryid: item.countryid}}">{{item.countryname}}</router-link>
+				<router-link :to="{ path:'', params: { countryid: item.countryid}}">{{item.countryname}}</router-link>
 			</li>
 			</div>
 			<a class="itma" slot='reference'>美洲版块 <i class="el-icon-arrow-down iconsss"></i></a>
@@ -58,7 +58,7 @@
 				<el-popover placement="bottom" trigger="hover" popper-class="popoverouzhou">
 					<div class="popoverouzhoucontent">
 			<li v-for="(item,index) in item.dayangzhoucoutry" :key='index'>
-				<router-link :to="{ name:'', params: { countryid: item.countryid}}">{{item.countryname}}</router-link>
+				<router-link :to="{ path:'', params: { countryid: item.countryid}}">{{item.countryname}}</router-link>
 			</li>
 			</div>
 			<a class="itma" slot='reference'>大洋洲版块 <i class="el-icon-arrow-down iconsss"></i></a>
@@ -68,7 +68,7 @@
 				<el-popover placement="bottom" trigger="hover" popper-class="popoverouzhou">
 					<div class="popoverouzhoucontent">
 			<li v-for="(item,index) in item.feizhoucoutry" :key='index'>
-				<router-link :to="{ name:'', params: { countryid: item.countryid}}">{{item.countryname}}</router-link>
+				<router-link :to="{ path:'', params: { countryid: item.countryid}}">{{item.countryname}}</router-link>
 			</li>
 			</div>
 			<a class="itma" slot='reference'>非洲版块 <i class="el-icon-arrow-down iconsss"></i></a>

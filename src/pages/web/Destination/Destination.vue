@@ -29,7 +29,7 @@
 				</div>
 			</div>
 			<div class="relation">
-				<router-link :to="{ name:'Destination_Detail', params: { id: item.id}}"><img style="vertical-align: middle;" src="../../../assets/images/qiongyou/picabout.png">关于图片</router-link>
+				<router-link :to="{ path:'/Destination_Detail', params: { id: item.id}}"><img style="vertical-align: middle;" src="../../../assets/images/qiongyou/picabout.png">关于图片</router-link>
 			</div>
 		</div>
 		</div>
@@ -59,7 +59,7 @@
 								{{value.citytitle}}
 							</dt>
 							<dd>
-								<router-link v-for="(value,key) in value.descitycontent" :key="key" :to="{ name:'Destination_Detail', params: { id: value.id}}">{{value.cityname}}</router-link>
+								<router-link v-for="(value,key) in value.descitycontent" :key="key" :to="{ path:'/Destination_Detail', params: { id: value.id}}">{{value.cityname}}</router-link>
 							</dd>
 						</dl>
 
@@ -91,7 +91,7 @@
 			<div v-for="(item,key) in desczhu" class="place-home-card2" :class="key === base_indexz?'active':''" :key="key">
 				<ul>
 					<li class="type1" :style="{backgroundImage:'url(' + item.zhubg + ')'}">
-						<router-link :to="{ name:'Destination_Detail', params: { id: item.id}}" class="inner">
+						<router-link :to="{ path:'/Destination_Detail', params: { id: item.id}}" class="inner">
 							<h4>
 								{{item.title}}
 							</h4>
@@ -101,7 +101,7 @@
 						</router-link>
 					</li>
 					<li v-for="(item,key) in item.desmall" :style="{backgroundImage:'url(' + item.zhubgz + ')'}">
-						<router-link :to="{ name:'Destination_Detail', params: { id: item.id}}" class="inner">
+						<router-link :to="{ path:'/Destination_Detail', params: { id: item.id}}" class="inner">
 							<h4>
 								{{item.title}}
 							</h4>
@@ -131,7 +131,7 @@
 			<div v-for="(item,key) in desczhuy" class="place-home-card3" :class="key === base_indexy?'active':''" :key="key">
 				<ul>
 					<li v-for="(item,key) in item.desczhucontent" :style="{backgroundImage:'url(' + item.zhubgy + ')'}">
-						<router-link :to="{ name:'Destination_Detail', params: { id: item.id}}" class="inner">
+						<router-link :to="{ path:'/Destination_Detail', params: { id: item.id}}" class="inner">
 							<h4>
 								{{item.title}}
 							</h4>
@@ -164,7 +164,7 @@
 				<ul>
 					<li v-for="(item,key) in item.desguojiacontent">
 						<span class="item">
-							<router-link :to="{ name:'Destination_Detail', params: { id: item.id}}"><span>{{item.guojia}}</span> <em>{{item.jname}}</em><span
+							<router-link :to="{ path:'/Destination_Detail', params: { id: item.id}}"><span>{{item.guojia}}</span> <em>{{item.jname}}</em><span
 								 class="hot" v-if="item.type===1"> 热门</span></router-link>
 						</span>
 					</li>
