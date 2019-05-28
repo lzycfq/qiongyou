@@ -400,22 +400,22 @@
 					]
 				},
 				country: [{
-					value: '012',
-					label: '中国'
-				}, {
-					value: '052',
-					label: '日本'
-				}, {
-					value: '063',
-					label: '泰国'
-				}, {
-					value: '075',
-					label: '新加坡'
-				}, {
-					value: '045',
-					label: '马来西亚'
-				}],
-				countryvalue: "中国",
+						value: '666',
+						label: '中国'
+					}, {
+						value: '052',
+						label: '日本'
+					}, {
+						value: '063',
+						label: '泰国'
+					}, {
+						value: '075',
+						label: '新加坡'
+					}, {
+						value: '045',
+						label: '马来西亚'
+					}],
+				countryvalue: "666",
 				identifyCodes: '1234567890',
 				identifyCode: '',
 				show: true, // 初始启用按钮
@@ -438,10 +438,12 @@
 				this.$refs[formName].validate((valid) => {
 					if (valid) {
 						this.axios.get('/api/buildlogin', {
-							params: {
-								'phone': this.$refs.phone.value,
-								'verifycode ': this.$refs.verifycode.value,
-								'phonecode ': this.$refs.phonecode.value,
+							params: {					
+								'phone': this.ruleForms.phone,
+								'name': this.ruleForms.name,
+								'pass': this.ruleForms.pass,
+								'verifycode ': this.ruleForms.verifycode,
+								'phonecode ': this.ruleForms.phonecode,
 
 							}
 						}).then(res => {

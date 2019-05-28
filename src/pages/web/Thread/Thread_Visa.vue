@@ -177,7 +177,7 @@
 				 :key="index">{{item.countryqianzhengname}}</a>
 			</div>
 			<div class="vctfrom">
-				<el-form :model="ruleForm" :rules="rules" ref="ruleForm" size="small">
+				<el-form :model="ruleForm" :rules="rules" ref="ruleForm" size="medium">
 					<el-form-item prop="searchinfo">
 						<el-input v-model="ruleForm.searchinfo" rel="searchinfo" class="Com_inputs" placeholder="请输入搜索内容"></el-input>
 						<i class="el-icon-search iconss" @click="searchBtn('ruleForm')"></i>
@@ -186,22 +186,15 @@
 				</el-form>
 			</div>
 			<div class="vcc">
-				<div class="vccw"><input type="checkbox" name="name" value="1" rel="checkvalue" @click="typeIndexcountry(index)"
+				<div class="vccw"><input type="checkbox" name="name" value="1" rel="sb" v-model="checkvalue"  @change="typeIndexcountry(index)"
 					 style="vertical-align: middle;"> 精华帖</div>
 				<span class="vccs">|</span>
 				<div class="zhhf">
-					<el-dropdown>
-						<span class="el-dropdown-link">
-							最后回复排序<i class="el-icon-caret-bottom"></i>
-						</span>
-						<el-dropdown-menu slot="dropdown">
-							<!-- <el-dropdown-item>最后回复排序</el-dropdown-item>
-    <el-dropdown-item>发帖时间排序</el-dropdown-item> -->
-							<el-dropdown-item v-for="(value,index) in huifu" :key='index'>{{value.huifuname}}</el-dropdown-item>
-						</el-dropdown-menu>
-					</el-dropdown>
+						<el-select v-model="sbvalue" placeholder="请选择" @change="typeIndexcountry(index)">
+						<el-option v-for="value in huifu" :key="value.value" :label="value.label" :value="value.value" >
+						</el-option>
+					</el-select>
 				</div>
-
 			</div>
 
 		</div><!-- //vc -->
@@ -264,12 +257,14 @@
 				search_params: {},
 				vwu: ['全部签证讨论', '问答'],
 				huifu: [{
-						huifuname: '最后回复排序'
-					},
-					{
-						huifuname: '发帖时间排序'
-					}
-				],
+					value: '1',
+					label: '最后回复排序'
+				}, {
+					value: '2',
+					label: '发帖时间排序'
+				}],
+				sbvalue:'最后回复排序',
+				checkvalue:[],
 				ruleForm: {
 					searchinfo: ''
 				},
@@ -356,11 +351,12 @@
 				})
 			},
 			searchBtn(formName) {
+				
 				this.$refs[formName].validate((valid) => {
 					if (valid) {
 						this.axios.get('', {
 							params: {
-								'searchinfo': this.$rels.searchinfo.value
+								'searchinfo': this.ruleForm.searchinfo
 							},
 						}).then(res => {}).catch(function(error) {
 							console.log(error);
@@ -381,9 +377,10 @@
 
 				this.type_indexcountry = index
 				this.search_params['type'] = this.countryqianzheng[index]
-				let checkvalue = this.$refs.checkvalue.value //精华帖的值
-				let fatievalue = this.huifu[index].huifuname
-				this.buildvwuquestion();
+				let checkvalue = this.checkvalue //精华帖的值
+				let fatievalue = this.sbvalue
+				alert(checkvalue)
+			 this.buildvwuquestion();
 			}
 		},
 		// 初始页currentPage、初始每页数据数pagesize和数据data
@@ -1020,9 +1017,16 @@ display:inherit;
 
 			.zhhf {
 				float: left;
+				width: 120px;
 				line-height: 50px;
 			}
-
+          .zhhf{
+			  /deep/ .el-input__inner{
+				  border: none;
+				  height: 30px;
+				  font-size: 12px;
+			  }
+		  }
 			.vccs {
 				margin: 0 14px 0 15px;
 				color: #ececec;

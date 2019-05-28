@@ -480,22 +480,22 @@
 					]
 				},
 				country: [{
-					value: '012',
-					label: '中国'
+					value: '中国',
+					label: '012'
 				}, {
-					value: '052',
-					label: '日本'
+					value: '日本',
+					label: '052'
 				}, {
-					value: '063',
-					label: '泰国'
+					value: '泰国',
+					label: '045'
 				}, {
-					value: '075',
-					label: '新加坡'
+					value: '新加坡',
+					label: '032'
 				}, {
-					value: '045',
-					label: '马来西亚'
+					value: '马来西亚',
+					label: '045'
 				}],
-				countryvalue: "中国",
+				countryvalue: "666",
 				identifyCodes: '1234567890',
 				identifyCode: '',
 				show: true, // 初始启用按钮
@@ -518,8 +518,8 @@
 					if (valid) {
 						this.axios.get('/api/buildlogin', {
 							params: {
-								'qzhangname': this.$refs.qzhangname.value,
-								'pass': this.$refs.pass.value,
+								'qzhangname': this.ruleForm.qzhangname,
+								'pass': this.ruleForm.pass,
 							}
 						}).then(res => {
 							var json = res.data
@@ -542,13 +542,15 @@
 				});
 			},
 				submitsForm(formName) {
+					
 				this.$refs[formName].validate((valid) => {
 					if (valid) {
 						this.axios.get('/api/buildlogin', {
 							params: {
-								'phone': this.$refs.phone.value,
-								'verifycode ': this.$refs.verifycode .value,
-								'phonecode ': this.$refs.phonecode .value,
+								'countryphone':this.countryvalue,
+								'phone': this.ruleForm.phone,
+								'verifycode ': this.ruleForm.verifycode,
+								'phonecode ': this.ruleForm.phonecode,
 
 							}
 						}).then(res => {

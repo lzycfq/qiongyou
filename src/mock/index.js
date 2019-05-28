@@ -8978,7 +8978,30 @@ const buildPhobanner = Mock.mock(
 			message: '查询成功'
 		}
 	})
+	const buildrestaurants = Mock.mock(
+		'/api/buildrestaurants', 'get', (req, res) => {
+			return {
+				code: 200,
+				data: [
+	                    {
+							value:"东京一日游"
+						},
+						  {
+							value:"大阪时光"
+						},
+						  {
+							value:"DIY寿司"
+						},
+						  {
+							value:"穷游安全提示"
+						}
+					
+				],
+				message: '查询成功'
+			}
+		})
 export default {
+	buildrestaurants,
 	buildPhobanner,
 	buildvwuquestion,
 	buildcountryqianzheng,

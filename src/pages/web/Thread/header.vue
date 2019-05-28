@@ -102,10 +102,13 @@
 			</div>
 			<div class="q-header-user-wrapper">
 				<div class="q-header-search">
-					<form action="//search.qyer.com/qp/" method="get">
-						<input name="keyword" type="text" autocomplete="off" value="" class="txt-search">
-						<i class="el-icon-search"></i>
-					</form>
+					<el-form :model="ruleForm" :rules="rules" ref="ruleForm">
+						<el-form-item prop="searchinfo">
+							<el-input v-model="ruleForm.searchinfo" rel="searchinfo" class="Com_input" placeholder="请输入搜索内容"></el-input>
+							<i class="el-icon-search iconss" @click="searchBtn('ruleForm')"></i>
+						</el-form-item>
+
+					</el-form>
 				</div>
 				<span class="q-header-cut">|</span>
 				<div class="q-header-user-status">
@@ -365,10 +368,10 @@
 				current: 0,
 
 				ruleForm: {
-					searchcontent: ''
+					searchinfo: ''
 				},
 				rules: {
-					searchcontent: [{
+					searchinfo: [{
 						required: true,
 						message: '请输入搜索内容',
 						trigger: 'blur'
@@ -408,7 +411,7 @@
 					if (valid) {
 						this.axios.get('', {
 							params: {
-								'content': this.$rels.content.value
+								'searchinfo': this.ruleForm.searchinfo
 							},
 						}).then(res => {}).catch(function(error) {
 							console.log(error);

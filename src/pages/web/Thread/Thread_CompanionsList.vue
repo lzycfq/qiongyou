@@ -486,7 +486,7 @@
 					if (valid) {
 						this.axios.get('', {
 							params: {
-								'searchinfo': this.$rels.searchinfo.value
+								'searchinfo': this.ruleForm.searchinfo
 							},
 						}).then(res => {}).catch(function(error) {
 							console.log(error);

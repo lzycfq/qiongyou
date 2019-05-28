@@ -331,7 +331,7 @@
 					<el-form :model="ruleForms" :rules="duanxinrules" ref="ruleForms" class="demo-ruleForm">
 						<div>
 							<div class="login-select">
-								<el-select v-model="countryvalue" placeholder="请选择" rel="countryvalue">
+								<el-select v-model="ruleForms.countryvalue" placeholder="请选择" rel="countryvalue">
 									<el-option v-for="item in country" :key="item.value" :label="item.label" :value="item.value">
 										<span style="float: left">{{ item.label }}</span>
 										<span style="float: right; color: #8492a6; font-size: 13px">({{ item.value }})</span>
@@ -657,9 +657,12 @@
 					if (valid) {
 						this.axios.get('/api/buildlogin', {
 							params: {
-								'phone': this.$refs.phone.value,
-								'verifycode ': this.$refs.verifycode.value,
-								'phonecode ': this.$refs.phonecode.value,
+								'phone': this.ruleForms.phone,
+								'name': this.ruleForms.name,
+								'pass': this.ruleForms.pass,
+								'verifycode ': this.ruleForms.value,
+								'phonecode ': this.ruleForms.value,
+								
 			
 							}
 						}).then(res => {
