@@ -9000,7 +9000,130 @@ const buildPhobanner = Mock.mock(
 				message: '查询成功'
 			}
 		})
+		const buildPhoquestion = Mock.mock(
+			'/api/buildPhoquestion', 'get', (req, res) => {
+				return {
+					code: 200,
+					data: [
+						{
+							Phoquestionlistavter:'//pics.lvjs.com.cn//uploads/pc/place2/2019-04-08/11722ade-49d1-4768-af15-a43281c0f792_300_200.jpg',
+							Phoquestionlisttitle:'[暑 “价”大放送]日本本州6日自由行(赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发，优选深航 ZH、国泰 CX、香港快运 UO)',
+							Phoquestionlistimg:"http://pic.lvmama.com/uploads/pc/place2/2019-05-13/3d94507a-c091-47fd-9591-d488726eeb8b_480_320.jpg",
+							PhotographyDetailid:'1',
+							type:1,
+							typetitle:'讨论',
+							Phoquestionlistzuozhe:"LOVE BID",
+							Phoquestionlistchufa:'2019-6-10',
+							Phoquestionlistchakan:'26635',
+							Phoquestionlistdianzan:'25639',
+							Phoquestionlisthuifu:"253",
+							PhoquestionlastTime:"3分钟前",
+							Phoquestionlisttxt:'东京夜景至佳观赏地 Tokyo Tower 东京塔 （网评 9.0 分，东京景点 No.2 ）一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。 1958 年竣工，此后一直为东京第 1 高建筑物，直至 2012 年东京天空树（634 米）建成而退居第 2 位，一直是东京的标志之一。塔上设有展望台，整个东京都的景色尽收眼底，天气晴好的时候可远眺富士山。塔身照明根据季节不同变换不同的颜色。'
+							
+						},
+						{
+							Phoquestionlistavter:'//pics.lvjs.com.cn//uploads/pc/place2/2019-04-08/11722ade-49d1-4768-af15-a43281c0f792_300_200.jpg',
+							Phoquestionlisttitle:'[暑 “价”大放送]日本本州6日自由行(赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发，优选深航 ZH、国泰 CX、香港快运 UO)',
+							Phoquestionlistimg:"http://pic.lvmama.com/uploads/pc/place2/2019-05-13/3d94507a-c091-47fd-9591-d488726eeb8b_480_320.jpg",
+							PhotographyDetailid:'1',
+							type:2,
+							typetitle:'巴黎',
+							Phoquestionlistzuozhe:"LOVE BID",
+							Phoquestionlistchufa:'2019-6-10',
+							Phoquestionlistchakan:'26635',
+							Phoquestionlistdianzan:'25639',
+							Phoquestionlisthuifu:"253",
+							PhoquestionlastTime:"3分钟前",
+							Phoquestionlisttxt:'东京夜景至佳观赏地 Tokyo Tower 东京塔 （网评 9.0 分，东京景点 No.2 ）一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。 1958 年竣工，此后一直为东京第 1 高建筑物，直至 2012 年东京天空树（634 米）建成而退居第 2 位，一直是东京的标志之一。塔上设有展望台，整个东京都的景色尽收眼底，天气晴好的时候可远眺富士山。塔身照明根据季节不同变换不同的颜色。'
+							
+						},
+						{
+							Phoquestionlistavter:'//pics.lvjs.com.cn//uploads/pc/place2/2019-04-08/11722ade-49d1-4768-af15-a43281c0f792_300_200.jpg',
+							Phoquestionlisttitle:'[暑 “价”大放送]日本本州6日自由行(赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发，优选深航 ZH、国泰 CX、香港快运 UO)',
+							Phoquestionlistimg:"http://pic.lvmama.com/uploads/pc/place2/2019-05-13/3d94507a-c091-47fd-9591-d488726eeb8b_480_320.jpg",
+							PhotographyDetailid:'1',
+							type:3,
+							ratevalue:'3.5',
+							typetitle:'伦敦',
+							Phoquestionlistzuozhe:"LOVE BID",
+							Phoquestionlistchufa:'2019-6-10',
+							Phoquestionlistchakan:'26635',
+							Phoquestionlistdianzan:'25639',
+							Phoquestionlisthuifu:"253",
+							PhoquestionlastTime:"3分钟前",
+							Phoquestionlisttxt:'东京夜景至佳观赏地 Tokyo Tower 东京塔 （网评 9.0 分，东京景点 No.2 ）一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。 1958 年竣工，此后一直为东京第 1 高建筑物，直至 2012 年东京天空树（634 米）建成而退居第 2 位，一直是东京的标志之一。塔上设有展望台，整个东京都的景色尽收眼底，天气晴好的时候可远眺富士山。塔身照明根据季节不同变换不同的颜色。'
+							
+						}
+					],
+					message: '查询成功'
+				}
+			})
+				const buildPhoquestions = Mock.mock(
+				'/api/buildPhoquestions', 'get', (req, res) => {
+					return {
+						code: 200,
+						data: [
+							{
+								Phoquestionlistavters:'//pics.lvjs.com.cn//uploads/pc/place2/2019-04-08/11722ade-49d1-4768-af15-a43281c0f792_300_200.jpg',
+								Phoquestionlisttitles:'[暑 “价”大放送]日本本州6日自由行(赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发，优选深航 ZH、国泰 CX、香港快运 UO)',							
+								PhotographyDetailsid:'1',					
+								Phoquestionlistzuozhes:"LOVE BID",
+								
+								PhoquestionlastTimes:"2019-5-16",
+								Phoquestionlisttxts:'东京夜景至佳观赏地 Tokyo Tower 东京塔 （网评 9.0 分，东京景点 No.2 ）一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。 1958 年竣工，此后一直为东京第 1 高建筑物，直至 2012 年东京天空树（634 米）建成而退居第 2 位，一直是东京的标志之一。塔上设有展望台，整个东京都的景色尽收眼底，天气晴好的时候可远眺富士山。塔身照明根据季节不同变换不同的颜色。'
+								
+							},
+							{
+							Phoquestionlistavters:'//pics.lvjs.com.cn//uploads/pc/place2/2019-04-08/11722ade-49d1-4768-af15-a43281c0f792_300_200.jpg',
+							Phoquestionlisttitles:'[暑 “价”大放送]日本本州6日自由行(赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发，优选深航 ZH、国泰 CX、香港快运 UO)',							
+							PhotographyDetailsid:'1',					
+							Phoquestionlistzuozhes:"LOVE BID",
+							
+							PhoquestionlastTimes:"2019-5-16",
+							Phoquestionlisttxts:'东京夜景至佳观赏地 Tokyo Tower 东京塔 （网评 9.0 分，东京景点 No.2 ）一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。 1958 年竣工，此后一直为东京第 1 高建筑物，直至 2012 年东京天空树（634 米）建成而退居第 2 位，一直是东京的标志之一。塔上设有展望台，整个东京都的景色尽收眼底，天气晴好的时候可远眺富士山。塔身照明根据季节不同变换不同的颜色。'
+							},
+							{
+								Phoquestionlistavters:'//pics.lvjs.com.cn//uploads/pc/place2/2019-04-08/11722ade-49d1-4768-af15-a43281c0f792_300_200.jpg',
+								Phoquestionlisttitles:'[暑 “价”大放送]日本本州6日自由行(赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发，优选深航 ZH、国泰 CX、香港快运 UO)',							
+								PhotographyDetailsid:'1',					
+								Phoquestionlistzuozhes:"LOVE BID",
+								
+								PhoquestionlastTimes:"2019-5-16",
+								Phoquestionlisttxts:'东京夜景至佳观赏地 Tokyo Tower 东京塔 （网评 9.0 分，东京景点 No.2 ）一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。 1958 年竣工，此后一直为东京第 1 高建筑物，直至 2012 年东京天空树（634 米）建成而退居第 2 位，一直是东京的标志之一。塔上设有展望台，整个东京都的景色尽收眼底，天气晴好的时候可远眺富士山。塔身照明根据季节不同变换不同的颜色。'
+								
+							}
+						],
+						message: '查询成功'
+					}
+				})
+					const buildbbsbox = Mock.mock(
+				'/api/buildbbsbox', 'get', (req, res) => {
+					return {
+						code: 200,
+						data: [
+							{
+						bbsboxtitle:'旅行摄影',
+						bbsboxbanzhu:[
+							{
+								bbsboximg:'//pic.lvmama.com//uploads/pc/place2/2017-07-26/3f96e490-9e85-45ea-97bb-49f7ebaea8b3.jpg',
+								bbsboxname:'LOVE'
+							},
+							{
+								bbsboximg:'//pic.lvmama.com//uploads/pc/place2/2016-07-01/cec899fd-2f66-418d-8c70-0d970bd6ed04.jpg',
+								bbsboxname:'肥仔SB'
+							}
+						],
+						bbsboxdsc:"欢迎所有喜爱摄影和旅行的朋友~发帖规则见我们的",
+						bbsboxzhina:'社区指南'
+								
+							}
+						],
+						message: '查询成功'
+					}
+				})
 export default {
+	buildbbsbox,
+	buildPhoquestion,
 	buildrestaurants,
 	buildPhobanner,
 	buildvwuquestion,

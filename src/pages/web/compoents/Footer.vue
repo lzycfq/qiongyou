@@ -77,6 +77,7 @@
 			</div>
 		</div>
 		<!-- 右侧栏 -->
+			 <transition name="el-fade-in-linear">
 		<div class="web_components_sidebar" v-if="btnFlag">
 			<a @click="backTop" class="web_components_sidebar-item"><i class="el-icon-arrow-up fontsize"></i><span
 				 class="title">返回顶部</span></a>
@@ -88,6 +89,7 @@
 			<router-link to="/Feedback" class="web_components_sidebar-item "><i class="el-icon-remove-outline fontsize"></i><span
 				 class="title">意见反馈</span></router-link>
 		</div>
+			 </transition>
 	</el-col>
 
 

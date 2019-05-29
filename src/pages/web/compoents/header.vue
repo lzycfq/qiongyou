@@ -7,9 +7,9 @@
 				<ul class="q-header-nav">
 					<li class="nav-list nav-list-dandu">
 
-							<router-link to="/Destination" class="index_sba"><span>
-							目的地
-						</span>	</router-link>
+						<router-link to="/Destination" class="index_sba"><span>
+								目的地
+							</span> </router-link>
 
 
 					</li>
@@ -28,7 +28,7 @@
 							</span>
 							<el-dropdown-menu slot="dropdown">
 								<el-dropdown-item> <i class="el-icon-tickets"></i> 旅行论坛</el-dropdown-item>
-								<el-dropdown-item>旅行专题</el-dropdown-item>
+							<el-dropdown-item><router-link style="color: #606266;" to="/Thread_Zhuanlan">旅行专栏<em class="tra_flag">NEW</em></router-link></el-dropdown-item>
 								<el-dropdown-item>旅行问答</el-dropdown-item>
 								<el-dropdown-item>JNE旅行生活美学</el-dropdown-item>
 								<el-dropdown-item>Biu伴(结伴而行)</el-dropdown-item>
@@ -106,9 +106,9 @@
 			</div>
 			<div class="q-header-user-wrapper">
 				<div class="q-header-search">
-					<form action="//search.qyer.com/qp/" method="get">
-						<input name="keyword" type="text" autocomplete="off" value="" class="txt-search">
-						<i class="el-icon-search"></i>
+					<form>
+						<input name="keyword" type="text" v-model="searchheader" autocomplete="off" value="" class="txt-search">
+						<i class="el-icon-search" @click="seachbtn()"></i>
 					</form>
 				</div>
 				<span class="q-header-cut">|</span>
@@ -127,6 +127,19 @@
 	</el-col>
 </template>
 <style lang="scss" scoped>
+	.tra_flag{
+		    display: inline-block;
+	margin-left: 4px;
+	padding: 0 4px;
+	height: 20px;
+	line-height: 20px;
+	background: #FF6553;
+	color:white;
+	font-size: 12px;
+	font-weight: 700;
+	vertical-align: 2px;
+	font-weight: normal;
+	}
 	.q-header-user-wrapper {
 		float: right;
 		margin-top: 10px;
@@ -249,21 +262,25 @@
 					float: left;
 					margin-left: 21px;
 					color: white;
-                           index_.sba{
-                          							   margin: 0 !important;
-                          }
+
+					index_.sba {
+						margin: 0 !important;
+					}
 				}
 			}
 		}
 	}
-.q-header-nav-wrapper .q-header-nav  .nav-list-dandu{
-	color: white !important;
-	margin-top: 15px;
-	span{
-		font-size: 16px;
-		font-weight: 700;
+
+	.q-header-nav-wrapper .q-header-nav .nav-list-dandu {
+		color: white !important;
+		margin-top: 15px;
+
+		span {
+			font-size: 16px;
+			font-weight: 700;
 		}
-}
+	}
+
 	.q-header-nav li>>>.el-dropdown {
 		color: white !important;
 		margin-top: 15px;
@@ -283,64 +300,20 @@
 		name: 'app',
 		data() {
 			return {
-				searchtoggel: false,
-				ruleForm: {
-					searchcontent: ''
-				},
-				rules: {
-					searchcontent: [{
-						required: true,
-						message: '请输入搜索内容',
-						trigger: 'blur'
-					}]
-				},
-				index: 0,
-				seen: false,
-				current: 0,
-				seens: false,
-				currents: 0,
+				searchheader:''
 			}
 		},
-		created() {
-		},
 		methods: {
-			enter(index) {
-				this.seen = true;
-				this.current = index;
-			},
-			leave() {
-
-				this.seen = false;
-				this.current = index;
-			},
-			enters(index) {
-				this.seens = true;
-				this.currents = index;
-			},
-			leaves() {
-
-				this.seens = false;
-				this.currents = index;
-			},
-			getdown() {
-				// 	document.body.animate({scrollTop:925},500);
-				// 	 document.documentElement.animate({scrollTop:925},500);
-				document.body.scrollTop = 950
-				document.documentElement.scrollTop = 950
-			},
-			toggle() {
-
-				this.searchtoggel = !this.searchtoggel
-			},
+			
 			seachbtn(formName) {
 				this.$refs[formName].validate((valid) => {
 					if (valid) {
 						this.axios.get('', {
 							params: {
-								'content': this.$rels.content.value
+								'searchheader': this.searchheader
 							},
 						}).then(res => {
-							
+
 						}).catch(function(error) {
 							console.log(error);
 						});

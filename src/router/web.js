@@ -124,11 +124,19 @@ export default new Router({
 				// 	},
 				// 				
 				// },
+				// {
+				// 	path: '/',
+				// 	name: 'Thread_Photography',//:id
+				// 	component(resolve) {
+				// 		require(['../pages/web/Thread/Thread_Photography'], resolve)
+				// 	},
+				// 				
+				// },
 				{
 					path: '/',
-					name: 'Thread_Photography',//:id
+					name: 'Thread_Zhuanlan',//:id
 					component(resolve) {
-						require(['../pages/web/Thread/Thread_Photography'], resolve)
+						require(['../pages/web/Thread/Thread_Zhuanlan'], resolve)
 					},
 								
 				},

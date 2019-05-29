@@ -23,7 +23,7 @@
 							</span>
 							<el-dropdown-menu slot="dropdown">
 								<el-dropdown-item> <i class="el-icon-tickets"></i> 旅行论坛</el-dropdown-item>
-								<el-dropdown-item>旅行专题</el-dropdown-item>
+							<el-dropdown-item><router-link style="color: #606266;" to="/Thread_Zhuanlan">旅行专栏<em class="tra_flag">NEW</em></router-link></el-dropdown-item>
 								<el-dropdown-item>旅行问答</el-dropdown-item>
 								<el-dropdown-item>JNE旅行生活美学</el-dropdown-item>
 								<el-dropdown-item>Biu伴(结伴而行)</el-dropdown-item>
@@ -119,6 +119,19 @@
 	</el-col>
 </template>
 <style lang="scss" scoped>
+	.tra_flag{
+		    display: inline-block;
+	margin-left: 4px;
+	padding: 0 4px;
+	height: 20px;
+	line-height: 20px;
+	background: #FF6553;
+	color:white;
+	font-size: 12px;
+	font-weight: 700;
+	vertical-align: 2px;
+	font-weight: normal;
+	}
 	.q-header-user-wrapper {
 		float: right;
 		margin-top: 10px;
@@ -280,12 +293,20 @@
 		name: 'app',
 		data() {
 			return {
-				searchheader: ''
+				searchheader: '',
+				dtdl:[]
 			}
 		},
-		
+		created(){
+			this.builddtdl;
+		}.
 
 		methods: {
+			builddtdl(){
+				this.axios.get('/api/builddtdl').then(res=>{
+					this.dtdl=res.data.data
+				})
+				},
 			seachbtn(formName) {
 				this.$refs[formName].validate((valid) => {
 					if (valid) {
