@@ -6,10 +6,10 @@
 					 height="36"></a>
 				<ul class="q-header-nav">
 					<li class="nav-list nav-list-dandu">
-						
+
 						<router-link to="/Destination" class="sba"><span style="color:#10b041;">
-							目的地
-						</span></router-link>
+								目的地
+							</span></router-link>
 					</li>
 					<li class="nav-list nav-list-dandu">
 						<span>
@@ -98,9 +98,9 @@
 			</div>
 			<div class="q-header-user-wrapper">
 				<div class="q-header-search">
-					<form action="//search.qyer.com/qp/" method="get">
-						<input name="keyword" type="text" autocomplete="off" value="" class="txt-search">
-						<i class="el-icon-search"></i>
+					<form>
+						<input name="keyword" type="text" v-model="searchheader" autocomplete="off" value="" class="txt-search">
+						<i class="el-icon-search" @click="seachbtn()"></i>
 					</form>
 				</div>
 				<span class="q-header-cut">|</span>
@@ -110,7 +110,7 @@
 						<router-link to=""><img src="../../../assets/images/qiongyou/weibo.png" /></router-link>
 						<router-link to=""><img src="../../../assets/images/qiongyou/weixin.png" /></router-link>
 						<router-link to="/registe" class="login-link">注册</router-link>
-						<router-link to="login" class="login-link">登录</router-link>
+						<router-link to="/login" class="login-link">登录</router-link>
 					</div>
 				</div>
 			</div>
@@ -178,7 +178,7 @@
 		float: left;
 		margin-left: 6px;
 		margin-right: 15px;
-		line-height:38px;
+		line-height: 38px;
 		color: silver;
 	}
 
@@ -199,7 +199,7 @@
 		transition: all .2s ease-in-out;
 	}
 
-	.header .login-wrap li{
+	.header .login-wrap li {
 		margin: 10px !important;
 		font-weight: 700;
 	}
@@ -229,7 +229,7 @@
 
 		.q-header-nav-wrapper {
 
-			
+
 			margin-left: 19px;
 			float: left;
 			width: 60%;
@@ -242,21 +242,25 @@
 					float: left;
 					margin-left: 21px;
 					color: white;
-                           .sba{
-							   margin: 0 !important;
-						   }
+
+					.sba {
+						margin: 0 !important;
+					}
 				}
 			}
 		}
 	}
-.q-header-nav-wrapper .q-header-nav  .nav-list-dandu{
-	color: white !important;
-	margin-top: 17px;
-	span{
-		font-size: 16px;
-		font-weight: 700;
+
+	.q-header-nav-wrapper .q-header-nav .nav-list-dandu {
+		color: white !important;
+		margin-top: 17px;
+
+		span {
+			font-size: 16px;
+			font-weight: 700;
 		}
-}
+	}
+
 	.q-header-nav li>>>.el-dropdown {
 		color: white !important;
 		margin-top: 17px;
@@ -276,71 +280,18 @@
 		name: 'app',
 		data() {
 			return {
-				searchtoggel: false,
-				ruleForm: {
-					searchcontent: ''
-				},
-				rules: {
-					searchcontent: [{
-						required: true,
-						message: '请输入搜索内容',
-						trigger: 'blur'
-					}]
-
-				},
-				index: 0,
-				seen: false,
-				current: 0,
-				seens: false,
-				currents: 0,
-
+				searchheader: ''
 			}
 		},
-		created() {
-
-
-
-		},
+		
 
 		methods: {
-
-
-
-
-			enter(index) {
-				this.seen = true;
-				this.current = index;
-			},
-			leave() {
-
-				this.seen = false;
-				this.current = index;
-			},
-			enters(index) {
-				this.seens = true;
-				this.currents = index;
-			},
-			leaves() {
-
-				this.seens = false;
-				this.currents = index;
-			},
-			getdown() {
-				// 	document.body.animate({scrollTop:925},500);
-				// 	 document.documentElement.animate({scrollTop:925},500);
-				document.body.scrollTop = 950
-				document.documentElement.scrollTop = 950
-			},
-			toggle() {
-
-				this.searchtoggel = !this.searchtoggel
-			},
 			seachbtn(formName) {
 				this.$refs[formName].validate((valid) => {
 					if (valid) {
 						this.axios.get('', {
 							params: {
-								'content': this.$rels.content.value
+								'searchheader': this.searchheader
 							},
 						}).then(res => {}).catch(function(error) {
 							console.log(error);

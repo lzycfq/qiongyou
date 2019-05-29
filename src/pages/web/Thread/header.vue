@@ -102,11 +102,14 @@
 			</div>
 			<div class="q-header-user-wrapper">
 				<div class="q-header-search">
-					<el-form :model="ruleForm" :rules="rules" ref="ruleForm">
-						<el-form-item prop="searchinfo">
-							<el-input v-model="ruleForm.searchinfo" rel="searchinfo" class="Com_input" placeholder="请输入搜索内容"></el-input>
-							<i class="el-icon-search iconss" @click="searchBtn('ruleForm')"></i>
-						</el-form-item>
+					<!-- 
+							<input v-model="ruleForm.searchinfo" rel="searchinfo" class="Com_input" placeholder="请输入搜索内容">
+							<i class="el-icon-search iconss" @click="searchBtn('ruleForm')"></i> -->
+					<form>
+						<input name="keyword" type="text"  v-model="searchheader" autocomplete="off" value="" class="txt-search">
+						<i class="el-icon-search" @click="seachbtn()"></i>
+					</form>
+
 
 					</el-form>
 				</div>
@@ -198,11 +201,14 @@
 			}
 
 		}
+
 		//section-item
 	}
+
 	.q-header-layer .q-layers .section-item dd a.hover {
 		background: #3f9f5f;
 	}
+
 	.q-header-user-wrapper {
 		float: right;
 		margin-top: 10px;
@@ -364,56 +370,27 @@
 		name: 'app',
 		data() {
 			return {
-				seen: false,
-				current: 0,
 
-				ruleForm: {
-					searchinfo: ''
-				},
-				rules: {
-					searchinfo: [{
-						required: true,
-						message: '请输入搜索内容',
-						trigger: 'blur'
-					}]
-
-				},
-				dtdl: [],
+				searchheader: ''
 			}
 		},
-		created() {
-			this.builddtdl();
-
-
-		},
+		
 
 		methods: {
-			builddtdl() {
-				this.axios.get('/api/builddtdl').then(res => {
-					this.dtdl = res.data.data
-				}).catch(function(error) {
-					console.log(orror)
-				})
-			},
-			enter(index) {
-
-				this.seen = true;
-				this.current = index;
-			},
-			leave() {
-
-				this.seen = false;
-				this.current = index;
-			},
+			
+			
 
 			seachbtn(formName) {
 				this.$refs[formName].validate((valid) => {
 					if (valid) {
 						this.axios.get('', {
 							params: {
-								'searchinfo': this.ruleForm.searchinfo
+								'searchinfo': this.ruleForm.searchinfo,
+								'searchheader': this.searchheader,
 							},
-						}).then(res => {}).catch(function(error) {
+						}).then(res => {
+							//搜索成功 返回值or跳转界面
+						}).catch(function(error) {
 							console.log(error);
 						});
 						// 表单提交
