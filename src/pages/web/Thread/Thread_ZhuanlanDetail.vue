@@ -67,26 +67,31 @@
 					</el-dropdown>
 				</div>
 			</div>
-			<div style="clear: both;"></div>
+
 		</div><!-- zhuanlanheader 导航栏以及订阅分享等数据数据 -->
 		<!-- ZD_banner大图 -->
-		<div class="ZD_banner">
-			<div class="cover_mask_2burc" :class="{cover_mask_top__MN40:istabBara}"></div>
-			<div class="cover_img_2jfW" :class="{cover_img_top_2n_Kl:istabBarb}"><img src="../../../assets/images/qiongyou/ZDbanner.jpg"></div>
-			<h1 class="title_h1_3dJwo" :class="{ title_opacity_3neg2:istabBarc}"><p id="title" class="title_1KXfp">泰国有个嬉皮村 | 拜县</p></h1>
-			<div class="next_1uqF3" :class="{ next_1uqF3s:istabBard}"></div>
+		<div class="ZD_bannerbg">
+			<div class="ZD_banner">
+				<div class="cover_mask_2burc" :class="{cover_mask_top__MN40:istabBara}"></div>
+				<div class="cover_img_2jfW" :class="{cover_img_top_2n_Kl:istabBarb}"><img src="../../../assets/images/qiongyou/ZDbanner.jpg"></div>
+				<h1 class="title_h1_3dJwo" :class="{ title_opacity_3neg2:istabBarc}">
+					<p id="title" class="title_1KXfp">泰国有个嬉皮村 | 拜县</p>
+				</h1>
+				<div class="next_1uqF3" :class="{ next_1uqF3s:istabBard}"></div>
+			</div>
 		</div>
+
 		<div class="ZD_content">
 			<div class="ZD_sidebar" v-if="btnFlag">
 				<p class="praise_3pSgm">
-				<span class="praise_bg_2K-tS"></span>
-				<img src="../../../assets/images/qiongyou/dianzan_3.png" class="praise_icon_2dh0o"/></p>
+					<span class="praise_bg_2K-tS"></span>
+					<img src="../../../assets/images/qiongyou/dianzan_3.png" class="praise_icon_2dh0o" /></p>
 				<span class="ZD_dianzan">452赞</span>
 				<p class="collect_tJEtH"><img src="../../../assets/images/qiongyou/love_3_1.png"></p>
 				<p class="collect_tJEtH"><img src="../../../assets/images/qiongyou/liaotian.png"></p>
 				<p class="collect_tJEtH">
 					<el-dropdown placement="bottom">
-						<span  class="el-dropdown-link">
+						<span class="el-dropdown-link">
 							<i class="el-icon-upload2" style="color: #323232;font-size: 35px;"></i>
 						</span>
 						<el-dropdown-menu slot="dropdown">
@@ -99,10 +104,35 @@
 								<img src="../../../assets/images/erweima.png" width="100px" height="100px" />
 							</el-dropdown-item>
 						</el-dropdown-menu>
-					</el-dropdown></p>
-				
+					</el-dropdown>
+				</p>
+
 
 			</div>
+			<div class="content_ZD">
+				<p class="ZD_title">泰国有个嬉皮村 | 拜县</p>
+				<div class="author_info_2UOoD">
+					<router-link to="">
+						<div class="author_portrait_qcJey" style="width:40px;height:40px;left:0px;">
+							<img src="https://pic.qyer.com/avatar/001/11/15/98/200" alt="">
+						</div>
+					</router-link>
+					<div class="author_name_1zhdl">
+						<router-link to="" name_o_R4Y>边是边疆的边</router-link>
+						<span class="time_P2jRU">5月前</span>
+					</div>
+				</div>
+				<div class="txt">拜县
+
+					拜县(泰语:
+					ปาย)是泰国西北部夜丰颂府的一个县(Amphoe)，与缅甸接壤，大概在清迈通往夜丰颂的北部公路80km处。从清迈出发，驱车三个小时就能到达，133公里的车程，路况良好但道路崎岖，一路上共有762个弯道。记得带好晕车药，连从来不晕车的我都觉得微微头疼。
+
+					拜县的英文名是Pai，虽然泰语中的发音是“拜”，外国游客还是习惯叫它“派”。拜县由群山环绕，静谧安逸，有着泰北最淳朴的风情，流连忘返，忘情于山水树林瀑布温泉之间。几十年前，西方的嬉皮士发现了此地，后来每年有嬉皮涌入，同当地嬉皮一起，拜县很快便形成了嬉皮们的后花园。</div>
+			</div>
+			<div class="label_4USLG"><span>#泰国</span><span>#拜县</span></div>
+		</div>
+		<div class="comment_1UzU7">
+			<p class="allcomment_2UHez">全部评论(3)</p>
 		</div>
 	</el-col>
 </template>
@@ -118,10 +148,10 @@
 				dingyue: true,
 				ydingyue: false,
 				zhuanlanheader: [],
-				istabBara:false,
-				istabBarb:false,
-				istabBarc:false,
-				istabBard:false,
+				istabBara: false,
+				istabBarb: false,
+				istabBarc: false,
+				istabBard: false,
 			}
 		},
 		mounted() { //页面初次加载后调用begin()开始动画
@@ -191,14 +221,14 @@
 					console.log(orror)
 				})
 			},
-			
+
 			// 为了计算距离顶部的高度，当高度大于250显示回顶部图标，小于250则隐藏
 			scrollToTop() {
-			
+
 				let that = this
 				let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
 				that.scrollTop = scrollTop
-				if (that.scrollTop > 250) {
+				if (that.scrollTop > 220) {
 					that.btnFlag = true
 				} else {
 					that.btnFlag = false
@@ -213,53 +243,79 @@
 </script>
 
 <style lang="scss">
-.ZD_content{
-	position: relative;
-    width: 100%;
-	.ZD_sidebar{
-	position: fixed;
-    left: 330px;
-    top: 160px;
-    z-index: 100;
-    text-align: center;
-	.praise_3pSgm {
-    width: 59px;
-    height: 59px;
-    border: 1px solid rgba(40, 183, 107, 0);
-	    border-radius: 50%;
-    position: relative;
-    cursor: pointer;
-	.praise_bg_2K-tS {
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: rgba(40, 183, 107, .06);	
-}
-.praise_icon_2dh0o{
-		width: 32px;
-    height: 32px;
-    display: inline-block;
-    position: absolute;
-    top: 22%;
-    left: 25%;
+	.comment_1UzU7 {
+		width: 680px;
+		margin: 30px auto;
+
+		.allcomment_2UHez {
+			line-height: 25px;
+			color: rgba(0, 0, 0, .8);
+			font-size: 18px;
+			font-weight: bold;
+			float: left;
+			height: 25px;
+			margin-bottom: 20px;
+		}
 	}
-}//praise_3pSgm\
-.praise_3pSgm:hover{
-	-moz-box-shadow:0px 0px 20px #48C286; -webkit-box-shadow:0px 0px 20px #48C286; box-shadow:0px 0px 20px #48C286;
-}
-.ZD_dianzan{
-	color: #999999;
-	font-size: 12px;
-	display: inline-block;
-	margin-top: 5px;
-}
-.collect_tJEtH{
-	    margin: 15px auto;
-		
-}
+
+	.ZD_content {
+		position: relative;
+		width: 100%;
+
+		.ZD_sidebar {
+			position: fixed;
+			left: 330px;
+			top: 160px;
+			z-index: 100;
+			text-align: center;
+
+			.praise_3pSgm {
+				width: 59px;
+				height: 59px;
+				border: 1px solid rgba(40, 183, 107, 0);
+				border-radius: 50%;
+				position: relative;
+				cursor: pointer;
+
+				.praise_bg_2K-tS {
+					display: inline-block;
+					width: 60px;
+					height: 60px;
+					border-radius: 50%;
+					background: rgba(40, 183, 107, .06);
+				}
+
+				.praise_icon_2dh0o {
+					width: 32px;
+					height: 32px;
+					display: inline-block;
+					position: absolute;
+					top: 22%;
+					left: 25%;
+				}
+			}
+
+			//praise_3pSgm\
+			.praise_3pSgm:hover {
+				-moz-box-shadow: 0px 0px 20px #48C286;
+				-webkit-box-shadow: 0px 0px 20px #48C286;
+				box-shadow: 0px 0px 20px #48C286;
+			}
+
+			.ZD_dianzan {
+				color: #999999;
+				font-size: 12px;
+				display: inline-block;
+				margin-top: 5px;
+			}
+
+			.collect_tJEtH {
+				margin: 15px auto;
+
+			}
+		}
 	}
-}
+
 	.isFixed {
 		width: 100%;
 		position: fixed;
@@ -437,126 +493,233 @@
 		}
 	}
 
-		.ZD_banner{
-			    height: 100%;
-	    position: relative;
-	    top: 0;
-	    left: 0;
-	    right: 0;
-	    bottom: 0;
-	    margin: 0 auto;
-	    width: 100%;
-	    min-height: 818px;
-	    box-sizing: border-box;
-	    overflow: hidden;
-		.cover_mask_2burc{
-			    width: 100%;
-	    /* height: 100%; */
-	    position: absolute;
-	    top: 0;
-	    left: 0;
-	    right: 0;
-	    bottom: 0;
-	    background: rgba(0, 0, 0, .1);
-	    z-index: 2;
-	    transition-duration: .5s;
-	    transition-timing-function: cubic-bezier(.7, 0, .3, 1);
-		}
-		.cover_img_2jfW{
-	    position: absolute;
-	    overflow: hidden;
-	    top: 0;
-	    left: 0;
-	    right: 0;
-	    bottom: 0;
-	    transition-duration: 0.5s;
-	    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-	    backface-visibility: hidden;
-	    transition-property: transform;
-	    box-sizing: border-box;
-	    background: #514753;
-	    z-index: 1;
-		img {
-	    position: absolute;
-	    top: 50%;
-	    left: 50%;
-	    transform: translate(-50%, -50%);
-	    display: block;
-	    width: 100%;
-	    height: 100%;
-	    box-sizing: border-box;
-	}
-	}
-	.cover_mask_top__MN40 {
-	    /* bottom: 65%; */
-	    transform: translate3d(0, -50%, 0);
-	}
-	.cover_img_top_2n_Kl {
-	    /* bottom: 65%; */
-	    transform: translate3d(0, -50%, 0);
-	}
-	.title_opacity_3neg2 {
-	    opacity: 0;
-	    color: rgba(0, 0, 0, .01);
-	    /* text-shadow: none; */
-	    /* background: none; */
-	}
-		.title_1KXfp {
-	    width: 680px;
-	    color: #fff;
-	    font-size: 42px;
-	    font-weight: bold;
-	    position: absolute;
-	    left: 50%;
-	    top: 45%;
-	    z-index: 99;
-	    transform: translate(-50%, -50%);
-	    line-height: 58px;
-	    transition-property: color, opacity;
-	    transition-duration: .5s;
-	    text-shadow: 0px 5px 10px rgba(0, 0, 0, .2);
-	    text-align: center;
-		
-	}
-	.next_1uqF3{
-		    width:32px;
-	    height: 55px;
-	    position:absolute;
-	    bottom: 20px;
-	    left: 50%;
-	    margin-left: -11px;
-	    cursor: pointer;
-	    animation: next_1uqF3 1s infinite linear;
-	    transition: 1s;
-	    transition-property: translateY;
-	    z-index: 2;
-	}
-	.next_1uqF3s{
-		display: none !important;
-	}
-	@keyframes next_1uqF3{
-	0% {
-	    background: url(http://www.airmate-china.com/cn/images/banner_btn.png) no-repeat;
-	    transform: translateY(-3px);
-	}
-	25% {
-	    background: url(http://www.airmate-china.com/cn/images/banner_btn.png) no-repeat;
-	    transform: translateY(-1px);
-	}
-	50% {
-	    background: url(http://www.airmate-china.com/cn/images/banner_btn.png) no-repeat;
-	    transform: translateY(0px);
-	}
-	85% {
-	    background: url(http://www.airmate-china.com/cn/images/banner_btn.png) no-repeat;
-	    transform: translateY(-1px);
-	}
-	100% {
-	    background: url(http://www.airmate-china.com/cn/images/banner_btn.png) no-repeat;
-	    transform: translateY(-3px);
-	}
-	}
-	
+	.content_ZD {
+		margin: -45vh auto 40px;
+		position: relative;
+		width: 680px;
+		transition-duration: .2s;
+		transition-property: opacity, visibility, transform;
+
+		.ZD_title {
+			width: 680px;
+
+			color: #000;
+			font-size: 42px;
+			font-weight: bold;
+			line-height: 59px;
+			margin-bottom: 35px;
 		}
 
+		.author_info_2UOoD {
+			width: 100%;
+			height: 40px;
+			position: relative;
+
+			.author_portrait_qcJey {
+				border-radius: 50%;
+				position: absolute;
+				cursor: pointer;
+
+				img {
+					width: 100%;
+					height: 100%;
+					border-radius: 50%;
+					cursor: pointer;
+				}
+			}
+
+			.author_name_1zhdl {
+				height: 40px;
+				line-height: 40px;
+				margin-left: 57px;
+
+				a {
+					color: #323232;
+
+				}
+
+				.name_o_R4Y {
+					font-size: 14px;
+					font-weight: bold;
+					color: #323232;
+				}
+
+				.time_P2jRU {
+					font-size: 13px;
+					color: rgba(0, 0, 0, .6);
+					margin-left: 5px;
+				}
+			}
+		}
+
+		.txt {
+			margin-top: 20px;
+			color: #323232
+		}
+	}
+
+	.label_4USLG {
+		width: 680px;
+		margin: 0 auto;
+		margin-top: 20px;
+
+		span {
+			display: inline-block;
+			min-width: 50px;
+			max-width: 120px;
+			font-size: 14px;
+			text-align: center;
+			padding: 5px 12px;
+			margin-right: 16px;
+			border-radius: 4px;
+			color: rgba(0, 0, 0, .6);
+			background: rgba(0, 0, 0, .04);
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			line-height: 20px;
+		}
+	}
+
+	.ZD_bannerbg {
+		height: 100%;
+		min-height: 800px;
+
+	}
+
+	.ZD_banner {
+		height: 100%;
+		position: relative;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: 0 auto;
+		width: 100%;
+		min-height: 800px;
+		box-sizing: border-box;
+		overflow: hidden;
+
+		.cover_mask_2burc {
+			width: 100%;
+			/* height: 100%; */
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: rgba(0, 0, 0, .1);
+			z-index: 2;
+			transition-duration: .5s;
+			transition-timing-function: cubic-bezier(.7, 0, .3, 1);
+		}
+
+		.cover_img_2jfW {
+			position: absolute;
+			overflow: hidden;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			transition-duration: 0.5s;
+			transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+			backface-visibility: hidden;
+			transition-property: transform;
+			box-sizing: border-box;
+			background: #514753;
+			z-index: 1;
+
+			img {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				display: block;
+				width: 100%;
+				height: 100%;
+				box-sizing: border-box;
+			}
+		}
+
+		.cover_mask_top__MN40 {
+			/* bottom: 65%; */
+			transform: translate3d(0, -50%, 0);
+		}
+
+		.cover_img_top_2n_Kl {
+			/* bottom: 65%; */
+			transform: translate3d(0, -50%, 0);
+		}
+
+		.title_opacity_3neg2 {
+			opacity: 0;
+			color: rgba(0, 0, 0, .01);
+			/* text-shadow: none; */
+			/* background: none; */
+		}
+
+		.title_1KXfp {
+			width: 680px;
+			color: #fff;
+			font-size: 42px;
+			font-weight: bold;
+			position: absolute;
+			left: 50%;
+			top: 38%;
+			z-index: 99;
+			transform: translate(-50%, -50%);
+			line-height: 58px;
+			transition-property: color, opacity;
+			transition-duration: .5s;
+			text-shadow: 0px 5px 10px rgba(0, 0, 0, .2);
+			text-align: center;
+
+		}
+
+		.next_1uqF3 {
+			width: 32px;
+			height: 55px;
+			position: fixed;
+			bottom: 20px;
+			left: 50%;
+			margin-left: -11px;
+			cursor: pointer;
+			animation: next_1uqF3 1s infinite linear;
+			transition: 1s;
+			transition-property: translateY;
+			z-index: 2;
+		}
+
+		.next_1uqF3s {
+			display: none !important;
+		}
+
+		@keyframes next_1uqF3 {
+			0% {
+				background: url(http://www.airmate-china.com/cn/images/banner_btn.png) no-repeat;
+				transform: translateY(-3px);
+			}
+
+			25% {
+				background: url(http://www.airmate-china.com/cn/images/banner_btn.png) no-repeat;
+				transform: translateY(-1px);
+			}
+
+			50% {
+				background: url(http://www.airmate-china.com/cn/images/banner_btn.png) no-repeat;
+				transform: translateY(0px);
+			}
+
+			85% {
+				background: url(http://www.airmate-china.com/cn/images/banner_btn.png) no-repeat;
+				transform: translateY(-1px);
+			}
+
+			100% {
+				background: url(http://www.airmate-china.com/cn/images/banner_btn.png) no-repeat;
+				transform: translateY(-3px);
+			}
+		}
+
+	}
 </style>
