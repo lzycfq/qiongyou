@@ -132,11 +132,27 @@ export default new Router({
 				// 	},
 				// 				
 				// },
+				// {
+				// 	path: '/',
+				// 	name: 'Thread_Zhuanlan',//:id
+				// 	component(resolve) {
+				// 		require(['../pages/web/Thread/Thread_Zhuanlan'], resolve)
+				// 	},
+				// 				
+				// },
+				// {
+				// 	path: '/',
+				// 	name: 'Thread_Zhuanlan_PersonalDetail',//:id
+				// 	component(resolve) {
+				// 		require(['../pages/web/Thread/Thread_Zhuanlan_PersonalDetail'], resolve)
+				// 	},
+				// 				
+				// },
 				{
 					path: '/',
-					name: 'Thread_Zhuanlan',//:id
+					name: 'Thread_ZhuanlanDetail',//:id
 					component(resolve) {
-						require(['../pages/web/Thread/Thread_Zhuanlan'], resolve)
+						require(['../pages/web/Thread/Thread_ZhuanlanDetail'], resolve)
 					},
 								
 				},

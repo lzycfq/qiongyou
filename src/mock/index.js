@@ -8944,461 +8944,643 @@ const buildPhobanner = Mock.mock(
 					Phobannerimg: '//pic.lvmama.com/uploads/pc/place2/2017-02-24/58cfd95b-9ef2-4ccd-85b8-44bd5739fab4_480_320.jpg',
 					Phobannertxt: '南航，早去午回无红眼，玩得尽兴',
 					Phobanneravter: 'http://pic.lvmama.com/uploads/pc/place2/2017-03-23/ee690612-66f9-4ff2-a3ec-26c547aa2ec2_480_320.jpg',
-				
+
 				},
 				{
 					Photographyid: 1,
 					Phobannerimg: 'http://pic.lvmama.com/uploads/pc/place2/2016-12-05/509e009e-fe8c-409f-aa05-c41a470f3353_480_320.jpg',
 					Phobannertxt: '心斋桥公寓酒店4晚连住，预定还有更多惊喜~',
 					Phobanneravter: 'http://pic.lvmama.com/uploads/pc/place2/2018-08-24/6fe6f6a9-c82a-41a6-9586-8a8d87031a6a_480_320.jpg',
-				
+
 				},
 				{
 					Photographyid: 1,
 					Phobannerimg: 'http://pic.lvmama.com/uploads/pc/place2/2016-09-30/cc4ab0b1-d922-4757-a2b9-4804f3a0b31d_480_320.jpg',
 					Phobannertxt: '加320元代办日本单次旅游签证，可简化~',
 					Phobanneravter: 'http://pic.lvmama.com/uploads/pc/place2/2016-12-05/509e009e-fe8c-409f-aa05-c41a470f3353_480_320.jpg',
-				
+
 				},
 				{
 					Photographyid: 1,
 					Phobannerimg: '//pic.lvmama.com/uploads/pc/place2/2018-10-24/8af2205c-8f86-4049-845a-19b617b2b4a3_480_320.jpg',
 					Phobannertxt: '畅游城市: 大阪/奈良/富士山/东京',
 					Phobanneravter: 'http://pic.lvmama.com/uploads/pc/place2/2018-10-24/02a20c99-9477-480c-9faa-84c63a4774c0_480_320.jpg',
-				
+
 				},
 				{
 					Photographyid: 1,
 					Phobannerimg: 'http://pic.lvmama.com/uploads/pc/place2/2016-08-17/7a08a3e4-52ee-486b-a7ca-40f0cbf615e7_480_320.jpg',
 					Phobannertxt: '安排制作日本具代表性的名物──寿司DIY',
 					Phobanneravter: 'http://pic.lvmama.com/uploads/pc/place2/2019-02-28/6a547ea6-a852-416a-932b-af1d3992b32b_480_320.jpg',
-				
+
 				}
 			],
 			message: '查询成功'
 		}
 	})
-	const buildrestaurants = Mock.mock(
-		'/api/buildrestaurants', 'get', (req, res) => {
+const buildrestaurants = Mock.mock(
+	'/api/buildrestaurants', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					value: "东京一日游"
+				},
+				{
+					value: "大阪时光"
+				},
+				{
+					value: "DIY寿司"
+				},
+				{
+					value: "穷游安全提示"
+				}
+
+			],
+			message: '查询成功'
+		}
+	})
+const buildPhoquestion = Mock.mock(
+	'/api/buildPhoquestion', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					Phoquestionlistavter: '//pics.lvjs.com.cn//uploads/pc/place2/2019-04-08/11722ade-49d1-4768-af15-a43281c0f792_300_200.jpg',
+					Phoquestionlisttitle: '[暑 “价”大放送]日本本州6日自由行(赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发，优选深航 ZH、国泰 CX、香港快运 UO)',
+					Phoquestionlistimg: "http://pic.lvmama.com/uploads/pc/place2/2019-05-13/3d94507a-c091-47fd-9591-d488726eeb8b_480_320.jpg",
+					PhotographyDetailid: '1',
+					type: 1,
+					typetitle: '讨论',
+					Phoquestionlistzuozhe: "LOVE BID",
+					Phoquestionlistchufa: '2019-6-10',
+					Phoquestionlistchakan: '26635',
+					Phoquestionlistdianzan: '25639',
+					Phoquestionlisthuifu: "253",
+					PhoquestionlastTime: "3分钟前",
+					Phoquestionlisttxt: '东京夜景至佳观赏地 Tokyo Tower 东京塔 （网评 9.0 分，东京景点 No.2 ）一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。 1958 年竣工，此后一直为东京第 1 高建筑物，直至 2012 年东京天空树（634 米）建成而退居第 2 位，一直是东京的标志之一。塔上设有展望台，整个东京都的景色尽收眼底，天气晴好的时候可远眺富士山。塔身照明根据季节不同变换不同的颜色。'
+
+				},
+				{
+					Phoquestionlistavter: '//pics.lvjs.com.cn//uploads/pc/place2/2019-04-08/11722ade-49d1-4768-af15-a43281c0f792_300_200.jpg',
+					Phoquestionlisttitle: '[暑 “价”大放送]日本本州6日自由行(赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发，优选深航 ZH、国泰 CX、香港快运 UO)',
+					Phoquestionlistimg: "http://pic.lvmama.com/uploads/pc/place2/2019-05-13/3d94507a-c091-47fd-9591-d488726eeb8b_480_320.jpg",
+					PhotographyDetailid: '1',
+					type: 2,
+					typetitle: '巴黎',
+					Phoquestionlistzuozhe: "LOVE BID",
+					Phoquestionlistchufa: '2019-6-10',
+					Phoquestionlistchakan: '26635',
+					Phoquestionlistdianzan: '25639',
+					Phoquestionlisthuifu: "253",
+					PhoquestionlastTime: "3分钟前",
+					Phoquestionlisttxt: '东京夜景至佳观赏地 Tokyo Tower 东京塔 （网评 9.0 分，东京景点 No.2 ）一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。 1958 年竣工，此后一直为东京第 1 高建筑物，直至 2012 年东京天空树（634 米）建成而退居第 2 位，一直是东京的标志之一。塔上设有展望台，整个东京都的景色尽收眼底，天气晴好的时候可远眺富士山。塔身照明根据季节不同变换不同的颜色。'
+
+				},
+				{
+					Phoquestionlistavter: '//pics.lvjs.com.cn//uploads/pc/place2/2019-04-08/11722ade-49d1-4768-af15-a43281c0f792_300_200.jpg',
+					Phoquestionlisttitle: '[暑 “价”大放送]日本本州6日自由行(赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发，优选深航 ZH、国泰 CX、香港快运 UO)',
+					Phoquestionlistimg: "http://pic.lvmama.com/uploads/pc/place2/2019-05-13/3d94507a-c091-47fd-9591-d488726eeb8b_480_320.jpg",
+					PhotographyDetailid: '1',
+					type: 3,
+					ratevalue: '3.5',
+					typetitle: '伦敦',
+					Phoquestionlistzuozhe: "LOVE BID",
+					Phoquestionlistchufa: '2019-6-10',
+					Phoquestionlistchakan: '26635',
+					Phoquestionlistdianzan: '25639',
+					Phoquestionlisthuifu: "253",
+					PhoquestionlastTime: "3分钟前",
+					Phoquestionlisttxt: '东京夜景至佳观赏地 Tokyo Tower 东京塔 （网评 9.0 分，东京景点 No.2 ）一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。 1958 年竣工，此后一直为东京第 1 高建筑物，直至 2012 年东京天空树（634 米）建成而退居第 2 位，一直是东京的标志之一。塔上设有展望台，整个东京都的景色尽收眼底，天气晴好的时候可远眺富士山。塔身照明根据季节不同变换不同的颜色。'
+
+				}
+			],
+			message: '查询成功'
+		}
+	})
+const buildPhoquestions = Mock.mock(
+	'/api/buildPhoquestions', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					Phoquestionlistavters: '//pics.lvjs.com.cn//uploads/pc/place2/2019-04-08/11722ade-49d1-4768-af15-a43281c0f792_300_200.jpg',
+					Phoquestionlisttitles: '[暑 “价”大放送]日本本州6日自由行(赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发，优选深航 ZH、国泰 CX、香港快运 UO)',
+					PhotographyDetailsid: '1',
+					Phoquestionlistzuozhes: "LOVE BID",
+
+					PhoquestionlastTimes: "2019-5-16",
+					Phoquestionlisttxts: '东京夜景至佳观赏地 Tokyo Tower 东京塔 （网评 9.0 分，东京景点 No.2 ）一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。 1958 年竣工，此后一直为东京第 1 高建筑物，直至 2012 年东京天空树（634 米）建成而退居第 2 位，一直是东京的标志之一。塔上设有展望台，整个东京都的景色尽收眼底，天气晴好的时候可远眺富士山。塔身照明根据季节不同变换不同的颜色。'
+
+				},
+				{
+					Phoquestionlistavters: '//pics.lvjs.com.cn//uploads/pc/place2/2019-04-08/11722ade-49d1-4768-af15-a43281c0f792_300_200.jpg',
+					Phoquestionlisttitles: '[暑 “价”大放送]日本本州6日自由行(赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发，优选深航 ZH、国泰 CX、香港快运 UO)',
+					PhotographyDetailsid: '1',
+					Phoquestionlistzuozhes: "LOVE BID",
+
+					PhoquestionlastTimes: "2019-5-16",
+					Phoquestionlisttxts: '东京夜景至佳观赏地 Tokyo Tower 东京塔 （网评 9.0 分，东京景点 No.2 ）一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。 1958 年竣工，此后一直为东京第 1 高建筑物，直至 2012 年东京天空树（634 米）建成而退居第 2 位，一直是东京的标志之一。塔上设有展望台，整个东京都的景色尽收眼底，天气晴好的时候可远眺富士山。塔身照明根据季节不同变换不同的颜色。'
+				},
+				{
+					Phoquestionlistavters: '//pics.lvjs.com.cn//uploads/pc/place2/2019-04-08/11722ade-49d1-4768-af15-a43281c0f792_300_200.jpg',
+					Phoquestionlisttitles: '[暑 “价”大放送]日本本州6日自由行(赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发，优选深航 ZH、国泰 CX、香港快运 UO)',
+					PhotographyDetailsid: '1',
+					Phoquestionlistzuozhes: "LOVE BID",
+
+					PhoquestionlastTimes: "2019-5-16",
+					Phoquestionlisttxts: '东京夜景至佳观赏地 Tokyo Tower 东京塔 （网评 9.0 分，东京景点 No.2 ）一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。 1958 年竣工，此后一直为东京第 1 高建筑物，直至 2012 年东京天空树（634 米）建成而退居第 2 位，一直是东京的标志之一。塔上设有展望台，整个东京都的景色尽收眼底，天气晴好的时候可远眺富士山。塔身照明根据季节不同变换不同的颜色。'
+
+				}
+			],
+			message: '查询成功'
+		}
+	})
+const buildbbsbox = Mock.mock(
+	'/api/buildbbsbox', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+				bbsboxtitle: '旅行摄影',
+				bbsboxbanzhu: [{
+						bbsboximg: '//pic.lvmama.com//uploads/pc/place2/2017-07-26/3f96e490-9e85-45ea-97bb-49f7ebaea8b3.jpg',
+						bbsboxname: 'LOVE'
+					},
+					{
+						bbsboximg: '//pic.lvmama.com//uploads/pc/place2/2016-07-01/cec899fd-2f66-418d-8c70-0d970bd6ed04.jpg',
+						bbsboxname: '肥仔SB'
+					}
+				],
+				bbsboxdsc: "欢迎所有喜爱摄影和旅行的朋友~发帖规则见我们的",
+				bbsboxzhina: '社区指南'
+
+			}],
+			message: '查询成功'
+		}
+	})
+const buildZhuanlanbanner = Mock.mock(
+	'/api/buildZhuanlanbanner', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					Zhuanlanbannercontet: [{
+							Zhuanlanbannerid: '1',
+							Zhuanlanbannerimg: "//pics.lvjs.com.cn//uploads/pc/place2/2015-02-03/e8bb6591-1906-4846-9447-7255e6da4d6a_300_200.jpg",
+							Zhuanlanbannertitle: '亚历山大特色海鲜餐',
+							Zhuanlanbannerdesc: '开罗当地特色鸽子餐，体验异国风情的海鲜料理',
+							Zhuanlanbannerdingyue: '152',
+							Zhuanlanbannerwenzhang: '356',
+							can: 1
+						},
+						{
+							Zhuanlanbannerid: '2',
+							Zhuanlanbannerimg: "http://pic.lvmama.com/uploads/pc/place2/2015-01-07/519cd4c9-fedb-4112-88d0-68329b47ba4c_480_320.jpg",
+							Zhuanlanbannertitle: '亚历山大特色海鲜餐',
+							Zhuanlanbannerdesc: '。特别安排乘坐马车巡游古都卢克索，并特别安排乘坐费卢卡',
+							Zhuanlanbannerdingyue: '42',
+							Zhuanlanbannerwenzhang: '756'
+						},
+						{
+							Zhuanlanbannerid: '3',
+							Zhuanlanbannerimg: "http://pic.lvmama.com/uploads/pc/place2/2015-01-07/e9fbb2eb-9530-466b-b850-c9c1d2eefb8d_480_320.jpg",
+							Zhuanlanbannertitle: '神秘的埃及金字塔',
+							Zhuanlanbannerdesc: '参观人类梦寐以求之地---神秘的埃及金字塔（吉萨金字塔群）和馆藏七千年人类文',
+							Zhuanlanbannerdingyue: '752',
+							Zhuanlanbannerwenzhang: '356'
+						},
+						{
+							Zhuanlanbannerid: '4',
+							Zhuanlanbannerimg: "http://pic.lvmama.com/uploads/pc/place2/2014-11-17/54b01cb8-555a-4032-ad17-f47e46ef656e_480_320.jpg",
+							Zhuanlanbannertitle: '开罗、卢克索、红海和亚历山大等经典景区',
+							Zhuanlanbannerdesc: '特别安排红海三晚住宿，充分自由活动时间感受异国风情的度假体验！',
+							Zhuanlanbannerdingyue: '12',
+							Zhuanlanbannerwenzhang: '7556'
+						},
+						{
+							Zhuanlanbannerid: '5',
+							Zhuanlanbannerimg: "http://pic.lvmama.com/uploads/pc/place2/2015-01-07/9b1e313b-cb21-4eaf-9a07-ae0a29e28a39_480_320.jpg",
+							Zhuanlanbannertitle: '亚历山大特色海鲜餐',
+							Zhuanlanbannerdesc: '开罗当地特色鸽子餐，体验异国风情的海鲜料理',
+							Zhuanlanbannerdingyue: '152',
+							Zhuanlanbannerwenzhang: '356'
+						},
+						{
+							Zhuanlanbannerid: '6',
+							Zhuanlanbannerimg: "//pics.lvjs.com.cn//uploads/pc/place2/2015-02-03/e8bb6591-1906-4846-9447-7255e6da4d6a_300_200.jpg",
+							Zhuanlanbannertitle: '埃及-开罗-卢克索-红海-亚历山',
+							Zhuanlanbannerdesc: '乘坐马车巡游古都卢克索，埃及博物馆，乘坐费卢卡小帆船，',
+							Zhuanlanbannerdingyue: '485',
+							Zhuanlanbannerwenzhang: '1452'
+						}
+					],
+				},
+				{
+					Zhuanlanbannercontet: [{
+							Zhuanlanbannerid: '1',
+							Zhuanlanbannerimg: "//pics.lvjs.com.cn//uploads/pc/place2/2015-02-03/e8bb6591-1906-4846-9447-7255e6da4d6a_300_200.jpg",
+							Zhuanlanbannertitle: '亚历山大特色海鲜餐',
+							Zhuanlanbannerdesc: '开罗当地特色鸽子餐，体验异国风情的海鲜料理',
+							Zhuanlanbannerdingyue: '152',
+							Zhuanlanbannerwenzhang: '356',
+							can: 1
+						},
+						{
+							Zhuanlanbannerid: '2',
+							Zhuanlanbannerimg: "http://pic.lvmama.com/uploads/pc/place2/2015-01-07/519cd4c9-fedb-4112-88d0-68329b47ba4c_480_320.jpg",
+							Zhuanlanbannertitle: '亚历山大特色海鲜餐',
+							Zhuanlanbannerdesc: '。特别安排乘坐马车巡游古都卢克索，并特别安排乘坐费卢卡',
+							Zhuanlanbannerdingyue: '42',
+							Zhuanlanbannerwenzhang: '756'
+						},
+						{
+							Zhuanlanbannerid: '3',
+							Zhuanlanbannerimg: "http://pic.lvmama.com/uploads/pc/place2/2015-01-07/e9fbb2eb-9530-466b-b850-c9c1d2eefb8d_480_320.jpg",
+							Zhuanlanbannertitle: '神秘的埃及金字塔',
+							Zhuanlanbannerdesc: '参观人类梦寐以求之地---神秘的埃及金字塔（吉萨金字塔群）和馆藏七千年人类文',
+							Zhuanlanbannerdingyue: '752',
+							Zhuanlanbannerwenzhang: '356'
+						},
+						{
+							Zhuanlanbannerid: '4',
+							Zhuanlanbannerimg: "http://pic.lvmama.com/uploads/pc/place2/2014-11-17/54b01cb8-555a-4032-ad17-f47e46ef656e_480_320.jpg",
+							Zhuanlanbannertitle: '开罗、卢克索、红海和亚历山大等经典景区',
+							Zhuanlanbannerdesc: '特别安排红海三晚住宿，充分自由活动时间感受异国风情的度假体验！',
+							Zhuanlanbannerdingyue: '12',
+							Zhuanlanbannerwenzhang: '7556'
+						},
+						{
+							Zhuanlanbannerid: '5',
+							Zhuanlanbannerimg: "http://pic.lvmama.com/uploads/pc/place2/2015-01-07/9b1e313b-cb21-4eaf-9a07-ae0a29e28a39_480_320.jpg",
+							Zhuanlanbannertitle: '亚历山大特色海鲜餐',
+							Zhuanlanbannerdesc: '开罗当地特色鸽子餐，体验异国风情的海鲜料理',
+							Zhuanlanbannerdingyue: '152',
+							Zhuanlanbannerwenzhang: '356'
+						},
+						{
+							Zhuanlanbannerid: '6',
+							Zhuanlanbannerimg: "//pics.lvjs.com.cn//uploads/pc/place2/2015-02-03/e8bb6591-1906-4846-9447-7255e6da4d6a_300_200.jpg",
+							Zhuanlanbannertitle: '埃及-开罗-卢克索-红海-亚历山',
+							Zhuanlanbannerdesc: '乘坐马车巡游古都卢克索，埃及博物馆，乘坐费卢卡小帆船，',
+							Zhuanlanbannerdingyue: '485',
+							Zhuanlanbannerwenzhang: '1452'
+						}
+					],
+				},
+				{
+					Zhuanlanbannercontet: [{
+							Zhuanlanbannerid: '1',
+							Zhuanlanbannerimg: "//pics.lvjs.com.cn//uploads/pc/place2/2015-02-03/e8bb6591-1906-4846-9447-7255e6da4d6a_300_200.jpg",
+							Zhuanlanbannertitle: '亚历山大特色海鲜餐',
+							Zhuanlanbannerdesc: '开罗当地特色鸽子餐，体验异国风情的海鲜料理',
+							Zhuanlanbannerdingyue: '152',
+							Zhuanlanbannerwenzhang: '356',
+							can: 1
+						},
+						{
+							Zhuanlanbannerid: '2',
+							Zhuanlanbannerimg: "http://pic.lvmama.com/uploads/pc/place2/2015-01-07/519cd4c9-fedb-4112-88d0-68329b47ba4c_480_320.jpg",
+							Zhuanlanbannertitle: '亚历山大特色海鲜餐',
+							Zhuanlanbannerdesc: '。特别安排乘坐马车巡游古都卢克索，并特别安排乘坐费卢卡',
+							Zhuanlanbannerdingyue: '42',
+							Zhuanlanbannerwenzhang: '756'
+						},
+						{
+							Zhuanlanbannerid: '3',
+							Zhuanlanbannerimg: "http://pic.lvmama.com/uploads/pc/place2/2015-01-07/e9fbb2eb-9530-466b-b850-c9c1d2eefb8d_480_320.jpg",
+							Zhuanlanbannertitle: '神秘的埃及金字塔',
+							Zhuanlanbannerdesc: '参观人类梦寐以求之地---神秘的埃及金字塔（吉萨金字塔群）和馆藏七千年人类文',
+							Zhuanlanbannerdingyue: '752',
+							Zhuanlanbannerwenzhang: '356'
+						},
+						{
+							Zhuanlanbannerid: '4',
+							Zhuanlanbannerimg: "http://pic.lvmama.com/uploads/pc/place2/2014-11-17/54b01cb8-555a-4032-ad17-f47e46ef656e_480_320.jpg",
+							Zhuanlanbannertitle: '开罗、卢克索、红海和亚历山大等经典景区',
+							Zhuanlanbannerdesc: '特别安排红海三晚住宿，充分自由活动时间感受异国风情的度假体验！',
+							Zhuanlanbannerdingyue: '12',
+							Zhuanlanbannerwenzhang: '7556'
+						},
+						{
+							Zhuanlanbannerid: '5',
+							Zhuanlanbannerimg: "http://pic.lvmama.com/uploads/pc/place2/2015-01-07/9b1e313b-cb21-4eaf-9a07-ae0a29e28a39_480_320.jpg",
+							Zhuanlanbannertitle: '亚历山大特色海鲜餐',
+							Zhuanlanbannerdesc: '开罗当地特色鸽子餐，体验异国风情的海鲜料理',
+							Zhuanlanbannerdingyue: '152',
+							Zhuanlanbannerwenzhang: '356'
+						},
+						{
+							Zhuanlanbannerid: '6',
+							Zhuanlanbannerimg: "//pics.lvjs.com.cn//uploads/pc/place2/2015-02-03/e8bb6591-1906-4846-9447-7255e6da4d6a_300_200.jpg",
+							Zhuanlanbannertitle: '埃及-开罗-卢克索-红海-亚历山',
+							Zhuanlanbannerdesc: '乘坐马车巡游古都卢克索，埃及博物馆，乘坐费卢卡小帆船，',
+							Zhuanlanbannerdingyue: '485',
+							Zhuanlanbannerwenzhang: '1452'
+						}
+					],
+				},
+				{
+					Zhuanlanbannercontet: [{
+							Zhuanlanbannerid: '1',
+							Zhuanlanbannerimg: "//pics.lvjs.com.cn//uploads/pc/place2/2015-02-03/e8bb6591-1906-4846-9447-7255e6da4d6a_300_200.jpg",
+							Zhuanlanbannertitle: '亚历山大特色海鲜餐',
+							Zhuanlanbannerdesc: '开罗当地特色鸽子餐，体验异国风情的海鲜料理',
+							Zhuanlanbannerdingyue: '152',
+							Zhuanlanbannerwenzhang: '356',
+							can: 1
+						},
+						{
+							Zhuanlanbannerid: '2',
+							Zhuanlanbannerimg: "http://pic.lvmama.com/uploads/pc/place2/2015-01-07/519cd4c9-fedb-4112-88d0-68329b47ba4c_480_320.jpg",
+							Zhuanlanbannertitle: '亚历山大特色海鲜餐',
+							Zhuanlanbannerdesc: '。特别安排乘坐马车巡游古都卢克索，并特别安排乘坐费卢卡',
+							Zhuanlanbannerdingyue: '42',
+							Zhuanlanbannerwenzhang: '756'
+						},
+						{
+							Zhuanlanbannerid: '3',
+							Zhuanlanbannerimg: "http://pic.lvmama.com/uploads/pc/place2/2015-01-07/e9fbb2eb-9530-466b-b850-c9c1d2eefb8d_480_320.jpg",
+							Zhuanlanbannertitle: '神秘的埃及金字塔',
+							Zhuanlanbannerdesc: '参观人类梦寐以求之地---神秘的埃及金字塔（吉萨金字塔群）和馆藏七千年人类文',
+							Zhuanlanbannerdingyue: '752',
+							Zhuanlanbannerwenzhang: '356'
+						},
+						{
+							Zhuanlanbannerid: '4',
+							Zhuanlanbannerimg: "http://pic.lvmama.com/uploads/pc/place2/2014-11-17/54b01cb8-555a-4032-ad17-f47e46ef656e_480_320.jpg",
+							Zhuanlanbannertitle: '开罗、卢克索、红海和亚历山大等经典景区',
+							Zhuanlanbannerdesc: '特别安排红海三晚住宿，充分自由活动时间感受异国风情的度假体验！',
+							Zhuanlanbannerdingyue: '12',
+							Zhuanlanbannerwenzhang: '7556'
+						},
+						{
+							Zhuanlanbannerid: '5',
+							Zhuanlanbannerimg: "http://pic.lvmama.com/uploads/pc/place2/2015-01-07/9b1e313b-cb21-4eaf-9a07-ae0a29e28a39_480_320.jpg",
+							Zhuanlanbannertitle: '亚历山大特色海鲜餐',
+							Zhuanlanbannerdesc: '开罗当地特色鸽子餐，体验异国风情的海鲜料理',
+							Zhuanlanbannerdingyue: '152',
+							Zhuanlanbannerwenzhang: '356'
+						},
+						{
+							Zhuanlanbannerid: '6',
+							Zhuanlanbannerimg: "//pics.lvjs.com.cn//uploads/pc/place2/2015-02-03/e8bb6591-1906-4846-9447-7255e6da4d6a_300_200.jpg",
+							Zhuanlanbannertitle: '埃及-开罗-卢克索-红海-亚历山',
+							Zhuanlanbannerdesc: '乘坐马车巡游古都卢克索，埃及博物馆，乘坐费卢卡小帆船，',
+							Zhuanlanbannerdingyue: '485',
+							Zhuanlanbannerwenzhang: '1452'
+						}
+					],
+				},
+				{
+					Zhuanlanbannercontet: [{
+							Zhuanlanbannerid: '1',
+							Zhuanlanbannerimg: "//pics.lvjs.com.cn//uploads/pc/place2/2015-02-03/e8bb6591-1906-4846-9447-7255e6da4d6a_300_200.jpg",
+							Zhuanlanbannertitle: '亚历山大特色海鲜餐',
+							Zhuanlanbannerdesc: '开罗当地特色鸽子餐，体验异国风情的海鲜料理',
+							Zhuanlanbannerdingyue: '152',
+							Zhuanlanbannerwenzhang: '356',
+							can: 1
+						},
+						{
+							Zhuanlanbannerid: '2',
+							Zhuanlanbannerimg: "http://pic.lvmama.com/uploads/pc/place2/2015-01-07/519cd4c9-fedb-4112-88d0-68329b47ba4c_480_320.jpg",
+							Zhuanlanbannertitle: '亚历山大特色海鲜餐',
+							Zhuanlanbannerdesc: '。特别安排乘坐马车巡游古都卢克索，并特别安排乘坐费卢卡',
+							Zhuanlanbannerdingyue: '42',
+							Zhuanlanbannerwenzhang: '756'
+						},
+						{
+							Zhuanlanbannerid: '3',
+							Zhuanlanbannerimg: "http://pic.lvmama.com/uploads/pc/place2/2015-01-07/e9fbb2eb-9530-466b-b850-c9c1d2eefb8d_480_320.jpg",
+							Zhuanlanbannertitle: '神秘的埃及金字塔',
+							Zhuanlanbannerdesc: '参观人类梦寐以求之地---神秘的埃及金字塔（吉萨金字塔群）和馆藏七千年人类文',
+							Zhuanlanbannerdingyue: '752',
+							Zhuanlanbannerwenzhang: '356'
+						},
+						{
+							Zhuanlanbannerid: '4',
+							Zhuanlanbannerimg: "http://pic.lvmama.com/uploads/pc/place2/2014-11-17/54b01cb8-555a-4032-ad17-f47e46ef656e_480_320.jpg",
+							Zhuanlanbannertitle: '开罗、卢克索、红海和亚历山大等经典景区',
+							Zhuanlanbannerdesc: '特别安排红海三晚住宿，充分自由活动时间感受异国风情的度假体验！',
+							Zhuanlanbannerdingyue: '12',
+							Zhuanlanbannerwenzhang: '7556'
+						},
+						{
+							Zhuanlanbannerid: '5',
+							Zhuanlanbannerimg: "http://pic.lvmama.com/uploads/pc/place2/2015-01-07/9b1e313b-cb21-4eaf-9a07-ae0a29e28a39_480_320.jpg",
+							Zhuanlanbannertitle: '亚历山大特色海鲜餐',
+							Zhuanlanbannerdesc: '开罗当地特色鸽子餐，体验异国风情的海鲜料理',
+							Zhuanlanbannerdingyue: '152',
+							Zhuanlanbannerwenzhang: '356'
+						},
+						{
+							Zhuanlanbannerid: '6',
+							Zhuanlanbannerimg: "//pics.lvjs.com.cn//uploads/pc/place2/2015-02-03/e8bb6591-1906-4846-9447-7255e6da4d6a_300_200.jpg",
+							Zhuanlanbannertitle: '埃及-开罗-卢克索-红海-亚历山',
+							Zhuanlanbannerdesc: '乘坐马车巡游古都卢克索，埃及博物馆，乘坐费卢卡小帆船，',
+							Zhuanlanbannerdingyue: '485',
+							Zhuanlanbannerwenzhang: '1452'
+						}
+					],
+				}
+
+
+
+			],
+			message: '查询成功'
+		}
+	})
+const buildwenzhang = Mock.mock(
+	'/api/buildwenzhang', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [
+				
+				{
+				wenzhangid:'1',
+				wenzhangimg:'http://pic.lvmama.com/uploads/pc/place2/2019-05-13/3d94507a-c091-47fd-9591-d488726eeb8b_480_320.jpg',
+				wenzhangtitle:'赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发',
+				wenzhandsc:"一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。",
+				wenzhangzuozhe:'来自一座城',
+				wenzhangtime:'三分钟',
+				wenzhangfromname:'深爱着你pig',
+				wenzhangdianzan:'2589'
+				},
+				{
+				wenzhangid:'1',
+				wenzhangimg:'http://pic.lvmama.com/uploads/pc/place2/2019-05-13/3d94507a-c091-47fd-9591-d488726eeb8b_480_320.jpg',
+				wenzhangtitle:'赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发',
+				wenzhandsc:"一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。",
+				wenzhangzuozhe:'来自一座城',
+				wenzhangtime:'三分钟',
+				wenzhangfromname:'深爱着你pig',
+				wenzhangdianzan:'2589'
+				},
+				{
+				wenzhangid:'1',
+				wenzhangimg:'http://pic.lvmama.com/uploads/pc/place2/2019-05-13/3d94507a-c091-47fd-9591-d488726eeb8b_480_320.jpg',
+				wenzhangtitle:'赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发',
+				wenzhandsc:"一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。",
+				wenzhangzuozhe:'来自一座城',
+				wenzhangtime:'三分钟',
+				wenzhangfromname:'深爱着你pig',
+				wenzhangdianzan:'2589'
+				},
+				{
+				wenzhangid:'1',
+				wenzhangimg:'http://pic.lvmama.com/uploads/pc/place2/2019-05-13/3d94507a-c091-47fd-9591-d488726eeb8b_480_320.jpg',
+				wenzhangtitle:'赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发',
+				wenzhandsc:"一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。",
+				wenzhangzuozhe:'来自一座城',
+				wenzhangtime:'三分钟',
+				wenzhangfromname:'深爱着你pig',
+				wenzhangdianzan:'2589'
+				},
+				{
+				wenzhangid:'1',
+				wenzhangimg:'http://pic.lvmama.com/uploads/pc/place2/2019-05-13/3d94507a-c091-47fd-9591-d488726eeb8b_480_320.jpg',
+				wenzhangtitle:'赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发',
+				wenzhandsc:"一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。",
+				wenzhangzuozhe:'来自一座城',
+				wenzhangtime:'三分钟',
+				wenzhangfromname:'深爱着你pig',
+				wenzhangdianzan:'2589'
+				},
+				{
+				wenzhangid:'1',
+				wenzhangimg:'http://pic.lvmama.com/uploads/pc/place2/2019-05-13/3d94507a-c091-47fd-9591-d488726eeb8b_480_320.jpg',
+				wenzhangtitle:'赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发',
+				wenzhandsc:"一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。",
+				wenzhangzuozhe:'来自一座城',
+				wenzhangtime:'三分钟',
+				wenzhangfromname:'深爱着你pig',
+				wenzhangdianzan:'2589'
+				},
+				{
+				wenzhangid:'1',
+				wenzhangimg:'http://pic.lvmama.com/uploads/pc/place2/2019-05-13/3d94507a-c091-47fd-9591-d488726eeb8b_480_320.jpg',
+				wenzhangtitle:'赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发',
+				wenzhandsc:"一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。",
+				wenzhangzuozhe:'来自一座城',
+				wenzhangtime:'三分钟',
+				wenzhangfromname:'深爱着你pig',
+				wenzhangdianzan:'2589'
+				}
+				
+			],
+			message: '查询成功'
+		}
+	})
+	const buildzhuanlanheader = Mock.mock(
+		'/api/buildzhuanlanheader', 'get', (req, res) => {
 			return {
 				code: 200,
 				data: [
-	                    {
-							value:"东京一日游"
-						},
-						  {
-							value:"大阪时光"
-						},
-						  {
-							value:"DIY寿司"
-						},
-						  {
-							value:"穷游安全提示"
-						}
+					{
+						zhuanlanheaderavter:'http://pic.lvmama.com/uploads/pc/place2/2016-01-26/d95caa3c-a1ca-4155-a455-01e3740548c4_300_200.jpg',
+						zhuanlanheadername:'LOVE POG',
+					    zhuanlanheaderdsc:'从米其林到街边摊，带你尝遍我旅途中所遇的美味',
+						zhuanlanheadershu:'2019',
+						type:1
+					}
+				
 					
 				],
 				message: '查询成功'
 			}
 		})
-		const buildPhoquestion = Mock.mock(
-			'/api/buildPhoquestion', 'get', (req, res) => {
+		const builddingyuefirst = Mock.mock(
+			'/api/builddingyuefirst', 'get', (req, res) => {
 				return {
 					code: 200,
 					data: [
 						{
-							Phoquestionlistavter:'//pics.lvjs.com.cn//uploads/pc/place2/2019-04-08/11722ade-49d1-4768-af15-a43281c0f792_300_200.jpg',
-							Phoquestionlisttitle:'[暑 “价”大放送]日本本州6日自由行(赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发，优选深航 ZH、国泰 CX、香港快运 UO)',
-							Phoquestionlistimg:"http://pic.lvmama.com/uploads/pc/place2/2019-05-13/3d94507a-c091-47fd-9591-d488726eeb8b_480_320.jpg",
-							PhotographyDetailid:'1',
-							type:1,
-							typetitle:'讨论',
-							Phoquestionlistzuozhe:"LOVE BID",
-							Phoquestionlistchufa:'2019-6-10',
-							Phoquestionlistchakan:'26635',
-							Phoquestionlistdianzan:'25639',
-							Phoquestionlisthuifu:"253",
-							PhoquestionlastTime:"3分钟前",
-							Phoquestionlisttxt:'东京夜景至佳观赏地 Tokyo Tower 东京塔 （网评 9.0 分，东京景点 No.2 ）一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。 1958 年竣工，此后一直为东京第 1 高建筑物，直至 2012 年东京天空树（634 米）建成而退居第 2 位，一直是东京的标志之一。塔上设有展望台，整个东京都的景色尽收眼底，天气晴好的时候可远眺富士山。塔身照明根据季节不同变换不同的颜色。'
-							
-						},
-						{
-							Phoquestionlistavter:'//pics.lvjs.com.cn//uploads/pc/place2/2019-04-08/11722ade-49d1-4768-af15-a43281c0f792_300_200.jpg',
-							Phoquestionlisttitle:'[暑 “价”大放送]日本本州6日自由行(赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发，优选深航 ZH、国泰 CX、香港快运 UO)',
-							Phoquestionlistimg:"http://pic.lvmama.com/uploads/pc/place2/2019-05-13/3d94507a-c091-47fd-9591-d488726eeb8b_480_320.jpg",
-							PhotographyDetailid:'1',
-							type:2,
-							typetitle:'巴黎',
-							Phoquestionlistzuozhe:"LOVE BID",
-							Phoquestionlistchufa:'2019-6-10',
-							Phoquestionlistchakan:'26635',
-							Phoquestionlistdianzan:'25639',
-							Phoquestionlisthuifu:"253",
-							PhoquestionlastTime:"3分钟前",
-							Phoquestionlisttxt:'东京夜景至佳观赏地 Tokyo Tower 东京塔 （网评 9.0 分，东京景点 No.2 ）一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。 1958 年竣工，此后一直为东京第 1 高建筑物，直至 2012 年东京天空树（634 米）建成而退居第 2 位，一直是东京的标志之一。塔上设有展望台，整个东京都的景色尽收眼底，天气晴好的时候可远眺富士山。塔身照明根据季节不同变换不同的颜色。'
-							
-						},
-						{
-							Phoquestionlistavter:'//pics.lvjs.com.cn//uploads/pc/place2/2019-04-08/11722ade-49d1-4768-af15-a43281c0f792_300_200.jpg',
-							Phoquestionlisttitle:'[暑 “价”大放送]日本本州6日自由行(赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发，优选深航 ZH、国泰 CX、香港快运 UO)',
-							Phoquestionlistimg:"http://pic.lvmama.com/uploads/pc/place2/2019-05-13/3d94507a-c091-47fd-9591-d488726eeb8b_480_320.jpg",
-							PhotographyDetailid:'1',
-							type:3,
-							ratevalue:'3.5',
-							typetitle:'伦敦',
-							Phoquestionlistzuozhe:"LOVE BID",
-							Phoquestionlistchufa:'2019-6-10',
-							Phoquestionlistchakan:'26635',
-							Phoquestionlistdianzan:'25639',
-							Phoquestionlisthuifu:"253",
-							PhoquestionlastTime:"3分钟前",
-							Phoquestionlisttxt:'东京夜景至佳观赏地 Tokyo Tower 东京塔 （网评 9.0 分，东京景点 No.2 ）一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。 1958 年竣工，此后一直为东京第 1 高建筑物，直至 2012 年东京天空树（634 米）建成而退居第 2 位，一直是东京的标志之一。塔上设有展望台，整个东京都的景色尽收眼底，天气晴好的时候可远眺富士山。塔身照明根据季节不同变换不同的颜色。'
-							
-						}
+							zhuanlanheaderavter:'http://pic.lvmama.com/uploads/pc/place2/2016-01-26/d95caa3c-a1ca-4155-a455-01e3740548c4_300_200.jpg',
+							zhuanlanheadername:'LOVE POG',
+							zhuanlanheaderdsc:'从米其林到街边摊，带你尝遍我旅途中所遇的美味',
+							zhuanlanheadershu:'2019',
+							type:2
+						}											
 					],
 					message: '查询成功'
 				}
 			})
-				const buildPhoquestions = Mock.mock(
-				'/api/buildPhoquestions', 'get', (req, res) => {
+			const builddingyuetwo = Mock.mock(
+				'/api/builddingyuetwo', 'get', (req, res) => {
 					return {
 						code: 200,
 						data: [
 							{
-								Phoquestionlistavters:'//pics.lvjs.com.cn//uploads/pc/place2/2019-04-08/11722ade-49d1-4768-af15-a43281c0f792_300_200.jpg',
-								Phoquestionlisttitles:'[暑 “价”大放送]日本本州6日自由行(赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发，优选深航 ZH、国泰 CX、香港快运 UO)',							
-								PhotographyDetailsid:'1',					
-								Phoquestionlistzuozhes:"LOVE BID",
-								
-								PhoquestionlastTimes:"2019-5-16",
-								Phoquestionlisttxts:'东京夜景至佳观赏地 Tokyo Tower 东京塔 （网评 9.0 分，东京景点 No.2 ）一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。 1958 年竣工，此后一直为东京第 1 高建筑物，直至 2012 年东京天空树（634 米）建成而退居第 2 位，一直是东京的标志之一。塔上设有展望台，整个东京都的景色尽收眼底，天气晴好的时候可远眺富士山。塔身照明根据季节不同变换不同的颜色。'
-								
-							},
-							{
-							Phoquestionlistavters:'//pics.lvjs.com.cn//uploads/pc/place2/2019-04-08/11722ade-49d1-4768-af15-a43281c0f792_300_200.jpg',
-							Phoquestionlisttitles:'[暑 “价”大放送]日本本州6日自由行(赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发，优选深航 ZH、国泰 CX、香港快运 UO)',							
-							PhotographyDetailsid:'1',					
-							Phoquestionlistzuozhes:"LOVE BID",
-							
-							PhoquestionlastTimes:"2019-5-16",
-							Phoquestionlisttxts:'东京夜景至佳观赏地 Tokyo Tower 东京塔 （网评 9.0 分，东京景点 No.2 ）一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。 1958 年竣工，此后一直为东京第 1 高建筑物，直至 2012 年东京天空树（634 米）建成而退居第 2 位，一直是东京的标志之一。塔上设有展望台，整个东京都的景色尽收眼底，天气晴好的时候可远眺富士山。塔身照明根据季节不同变换不同的颜色。'
-							},
-							{
-								Phoquestionlistavters:'//pics.lvjs.com.cn//uploads/pc/place2/2019-04-08/11722ade-49d1-4768-af15-a43281c0f792_300_200.jpg',
-								Phoquestionlisttitles:'[暑 “价”大放送]日本本州6日自由行(赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发，优选深航 ZH、国泰 CX、香港快运 UO)',							
-								PhotographyDetailsid:'1',					
-								Phoquestionlistzuozhes:"LOVE BID",
-								
-								PhoquestionlastTimes:"2019-5-16",
-								Phoquestionlisttxts:'东京夜景至佳观赏地 Tokyo Tower 东京塔 （网评 9.0 分，东京景点 No.2 ）一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。 1958 年竣工，此后一直为东京第 1 高建筑物，直至 2012 年东京天空树（634 米）建成而退居第 2 位，一直是东京的标志之一。塔上设有展望台，整个东京都的景色尽收眼底，天气晴好的时候可远眺富士山。塔身照明根据季节不同变换不同的颜色。'
-								
-							}
+								zhuanlanheaderavter:'http://pic.lvmama.com/uploads/pc/place2/2016-01-26/d95caa3c-a1ca-4155-a455-01e3740548c4_300_200.jpg',
+								zhuanlanheadername:'LOVE POG',
+								zhuanlanheaderdsc:'从米其林到街边摊，带你尝遍我旅途中所遇的美味',
+								zhuanlanheadershu:'2019',
+								type:1
+							}												
 						],
 						message: '查询成功'
 					}
 				})
-					const buildbbsbox = Mock.mock(
-				'/api/buildbbsbox', 'get', (req, res) => {
-					return {
-						code: 200,
-						data: [
-							{
-						bbsboxtitle:'旅行摄影',
-						bbsboxbanzhu:[
-							{
-								bbsboximg:'//pic.lvmama.com//uploads/pc/place2/2017-07-26/3f96e490-9e85-45ea-97bb-49f7ebaea8b3.jpg',
-								bbsboxname:'LOVE'
-							},
-							{
-								bbsboximg:'//pic.lvmama.com//uploads/pc/place2/2016-07-01/cec899fd-2f66-418d-8c70-0d970bd6ed04.jpg',
-								bbsboxname:'肥仔SB'
-							}
-						],
-						bbsboxdsc:"欢迎所有喜爱摄影和旅行的朋友~发帖规则见我们的",
-						bbsboxzhina:'社区指南'
-								
-							}
-						],
-						message: '查询成功'
-					}
-				})
-				const buildZhuanlanbanner = Mock.mock(
-					'/api/buildZhuanlanbanner', 'get', (req, res) => {
+				const buildPersonalbiaoqiao = Mock.mock(
+					'/api/buildPersonalbiaoqiao', 'get', (req, res) => {
 						return {
 							code: 200,
 							data: [
 								{
-									Zhuanlanbannercontet:[
-										{
-											Zhuanlanbannerid:'1',
-											Zhuanlanbannerimg:"//pics.lvjs.com.cn//uploads/pc/place2/2015-02-03/e8bb6591-1906-4846-9447-7255e6da4d6a_300_200.jpg",
-											Zhuanlanbannertitle:'亚历山大特色海鲜餐',
-											Zhuanlanbannerdesc:'开罗当地特色鸽子餐，体验异国风情的海鲜料理',
-											Zhuanlanbannerdingyue:'152',
-											Zhuanlanbannerwenzhang:'356',
-											can:1
-										},
-										{
-											Zhuanlanbannerid:'2',
-											Zhuanlanbannerimg:"http://pic.lvmama.com/uploads/pc/place2/2015-01-07/519cd4c9-fedb-4112-88d0-68329b47ba4c_480_320.jpg",
-											Zhuanlanbannertitle:'亚历山大特色海鲜餐',
-											Zhuanlanbannerdesc:'。特别安排乘坐马车巡游古都卢克索，并特别安排乘坐费卢卡',
-											Zhuanlanbannerdingyue:'42',
-											Zhuanlanbannerwenzhang:'756'
-										},
-										{
-											Zhuanlanbannerid:'3',
-											Zhuanlanbannerimg:"http://pic.lvmama.com/uploads/pc/place2/2015-01-07/e9fbb2eb-9530-466b-b850-c9c1d2eefb8d_480_320.jpg",
-											Zhuanlanbannertitle:'神秘的埃及金字塔',
-											Zhuanlanbannerdesc:'参观人类梦寐以求之地---神秘的埃及金字塔（吉萨金字塔群）和馆藏七千年人类文',
-											Zhuanlanbannerdingyue:'752',
-											Zhuanlanbannerwenzhang:'356'
-										},
-										{
-											Zhuanlanbannerid:'4',
-											Zhuanlanbannerimg:"http://pic.lvmama.com/uploads/pc/place2/2014-11-17/54b01cb8-555a-4032-ad17-f47e46ef656e_480_320.jpg",
-											Zhuanlanbannertitle:'开罗、卢克索、红海和亚历山大等经典景区',
-											Zhuanlanbannerdesc:'特别安排红海三晚住宿，充分自由活动时间感受异国风情的度假体验！',
-											Zhuanlanbannerdingyue:'12',
-											Zhuanlanbannerwenzhang:'7556'
-										},
-										{
-											Zhuanlanbannerid:'5',
-											Zhuanlanbannerimg:"http://pic.lvmama.com/uploads/pc/place2/2015-01-07/9b1e313b-cb21-4eaf-9a07-ae0a29e28a39_480_320.jpg",
-											Zhuanlanbannertitle:'亚历山大特色海鲜餐',
-											Zhuanlanbannerdesc:'开罗当地特色鸽子餐，体验异国风情的海鲜料理',
-											Zhuanlanbannerdingyue:'152',
-											Zhuanlanbannerwenzhang:'356'
-										},
-										{
-											Zhuanlanbannerid:'6',
-											Zhuanlanbannerimg:"//pics.lvjs.com.cn//uploads/pc/place2/2015-02-03/e8bb6591-1906-4846-9447-7255e6da4d6a_300_200.jpg",
-											Zhuanlanbannertitle:'埃及-开罗-卢克索-红海-亚历山',
-											Zhuanlanbannerdesc:'乘坐马车巡游古都卢克索，埃及博物馆，乘坐费卢卡小帆船，',
-											Zhuanlanbannerdingyue:'485',
-											Zhuanlanbannerwenzhang:'1452'
-										}
-									],
+								Personalbiaoqiaoname:'全部',
+								Personalbiaoqiaoshu:'230'
 								},
-																{
-									Zhuanlanbannercontet:[
-										{
-											Zhuanlanbannerid:'1',
-											Zhuanlanbannerimg:"//pics.lvjs.com.cn//uploads/pc/place2/2015-02-03/e8bb6591-1906-4846-9447-7255e6da4d6a_300_200.jpg",
-											Zhuanlanbannertitle:'亚历山大特色海鲜餐',
-											Zhuanlanbannerdesc:'开罗当地特色鸽子餐，体验异国风情的海鲜料理',
-											Zhuanlanbannerdingyue:'152',
-											Zhuanlanbannerwenzhang:'356',
-											can:1
-										},
-										{
-											Zhuanlanbannerid:'2',
-											Zhuanlanbannerimg:"http://pic.lvmama.com/uploads/pc/place2/2015-01-07/519cd4c9-fedb-4112-88d0-68329b47ba4c_480_320.jpg",
-											Zhuanlanbannertitle:'亚历山大特色海鲜餐',
-											Zhuanlanbannerdesc:'。特别安排乘坐马车巡游古都卢克索，并特别安排乘坐费卢卡',
-											Zhuanlanbannerdingyue:'42',
-											Zhuanlanbannerwenzhang:'756'
-										},
-										{
-											Zhuanlanbannerid:'3',
-											Zhuanlanbannerimg:"http://pic.lvmama.com/uploads/pc/place2/2015-01-07/e9fbb2eb-9530-466b-b850-c9c1d2eefb8d_480_320.jpg",
-											Zhuanlanbannertitle:'神秘的埃及金字塔',
-											Zhuanlanbannerdesc:'参观人类梦寐以求之地---神秘的埃及金字塔（吉萨金字塔群）和馆藏七千年人类文',
-											Zhuanlanbannerdingyue:'752',
-											Zhuanlanbannerwenzhang:'356'
-										},
-										{
-											Zhuanlanbannerid:'4',
-											Zhuanlanbannerimg:"http://pic.lvmama.com/uploads/pc/place2/2014-11-17/54b01cb8-555a-4032-ad17-f47e46ef656e_480_320.jpg",
-											Zhuanlanbannertitle:'开罗、卢克索、红海和亚历山大等经典景区',
-											Zhuanlanbannerdesc:'特别安排红海三晚住宿，充分自由活动时间感受异国风情的度假体验！',
-											Zhuanlanbannerdingyue:'12',
-											Zhuanlanbannerwenzhang:'7556'
-										},
-										{
-											Zhuanlanbannerid:'5',
-											Zhuanlanbannerimg:"http://pic.lvmama.com/uploads/pc/place2/2015-01-07/9b1e313b-cb21-4eaf-9a07-ae0a29e28a39_480_320.jpg",
-											Zhuanlanbannertitle:'亚历山大特色海鲜餐',
-											Zhuanlanbannerdesc:'开罗当地特色鸽子餐，体验异国风情的海鲜料理',
-											Zhuanlanbannerdingyue:'152',
-											Zhuanlanbannerwenzhang:'356'
-										},
-										{
-											Zhuanlanbannerid:'6',
-											Zhuanlanbannerimg:"//pics.lvjs.com.cn//uploads/pc/place2/2015-02-03/e8bb6591-1906-4846-9447-7255e6da4d6a_300_200.jpg",
-											Zhuanlanbannertitle:'埃及-开罗-卢克索-红海-亚历山',
-											Zhuanlanbannerdesc:'乘坐马车巡游古都卢克索，埃及博物馆，乘坐费卢卡小帆船，',
-											Zhuanlanbannerdingyue:'485',
-											Zhuanlanbannerwenzhang:'1452'
-										}
-									],
+								{
+									Personalbiaoqiaoname:'美食之地',
+									Personalbiaoqiaoshu:'12'
 								},
-																{
-									Zhuanlanbannercontet:[
-										{
-											Zhuanlanbannerid:'1',
-											Zhuanlanbannerimg:"//pics.lvjs.com.cn//uploads/pc/place2/2015-02-03/e8bb6591-1906-4846-9447-7255e6da4d6a_300_200.jpg",
-											Zhuanlanbannertitle:'亚历山大特色海鲜餐',
-											Zhuanlanbannerdesc:'开罗当地特色鸽子餐，体验异国风情的海鲜料理',
-											Zhuanlanbannerdingyue:'152',
-											Zhuanlanbannerwenzhang:'356',
-											can:1
-										},
-										{
-											Zhuanlanbannerid:'2',
-											Zhuanlanbannerimg:"http://pic.lvmama.com/uploads/pc/place2/2015-01-07/519cd4c9-fedb-4112-88d0-68329b47ba4c_480_320.jpg",
-											Zhuanlanbannertitle:'亚历山大特色海鲜餐',
-											Zhuanlanbannerdesc:'。特别安排乘坐马车巡游古都卢克索，并特别安排乘坐费卢卡',
-											Zhuanlanbannerdingyue:'42',
-											Zhuanlanbannerwenzhang:'756'
-										},
-										{
-											Zhuanlanbannerid:'3',
-											Zhuanlanbannerimg:"http://pic.lvmama.com/uploads/pc/place2/2015-01-07/e9fbb2eb-9530-466b-b850-c9c1d2eefb8d_480_320.jpg",
-											Zhuanlanbannertitle:'神秘的埃及金字塔',
-											Zhuanlanbannerdesc:'参观人类梦寐以求之地---神秘的埃及金字塔（吉萨金字塔群）和馆藏七千年人类文',
-											Zhuanlanbannerdingyue:'752',
-											Zhuanlanbannerwenzhang:'356'
-										},
-										{
-											Zhuanlanbannerid:'4',
-											Zhuanlanbannerimg:"http://pic.lvmama.com/uploads/pc/place2/2014-11-17/54b01cb8-555a-4032-ad17-f47e46ef656e_480_320.jpg",
-											Zhuanlanbannertitle:'开罗、卢克索、红海和亚历山大等经典景区',
-											Zhuanlanbannerdesc:'特别安排红海三晚住宿，充分自由活动时间感受异国风情的度假体验！',
-											Zhuanlanbannerdingyue:'12',
-											Zhuanlanbannerwenzhang:'7556'
-										},
-										{
-											Zhuanlanbannerid:'5',
-											Zhuanlanbannerimg:"http://pic.lvmama.com/uploads/pc/place2/2015-01-07/9b1e313b-cb21-4eaf-9a07-ae0a29e28a39_480_320.jpg",
-											Zhuanlanbannertitle:'亚历山大特色海鲜餐',
-											Zhuanlanbannerdesc:'开罗当地特色鸽子餐，体验异国风情的海鲜料理',
-											Zhuanlanbannerdingyue:'152',
-											Zhuanlanbannerwenzhang:'356'
-										},
-										{
-											Zhuanlanbannerid:'6',
-											Zhuanlanbannerimg:"//pics.lvjs.com.cn//uploads/pc/place2/2015-02-03/e8bb6591-1906-4846-9447-7255e6da4d6a_300_200.jpg",
-											Zhuanlanbannertitle:'埃及-开罗-卢克索-红海-亚历山',
-											Zhuanlanbannerdesc:'乘坐马车巡游古都卢克索，埃及博物馆，乘坐费卢卡小帆船，',
-											Zhuanlanbannerdingyue:'485',
-											Zhuanlanbannerwenzhang:'1452'
-										}
-									],
+								{
+									Personalbiaoqiaoname:'日本',
+									Personalbiaoqiaoshu:'2'
 								},
-																{
-									Zhuanlanbannercontet:[
-										{
-											Zhuanlanbannerid:'1',
-											Zhuanlanbannerimg:"//pics.lvjs.com.cn//uploads/pc/place2/2015-02-03/e8bb6591-1906-4846-9447-7255e6da4d6a_300_200.jpg",
-											Zhuanlanbannertitle:'亚历山大特色海鲜餐',
-											Zhuanlanbannerdesc:'开罗当地特色鸽子餐，体验异国风情的海鲜料理',
-											Zhuanlanbannerdingyue:'152',
-											Zhuanlanbannerwenzhang:'356',
-											can:1
-										},
-										{
-											Zhuanlanbannerid:'2',
-											Zhuanlanbannerimg:"http://pic.lvmama.com/uploads/pc/place2/2015-01-07/519cd4c9-fedb-4112-88d0-68329b47ba4c_480_320.jpg",
-											Zhuanlanbannertitle:'亚历山大特色海鲜餐',
-											Zhuanlanbannerdesc:'。特别安排乘坐马车巡游古都卢克索，并特别安排乘坐费卢卡',
-											Zhuanlanbannerdingyue:'42',
-											Zhuanlanbannerwenzhang:'756'
-										},
-										{
-											Zhuanlanbannerid:'3',
-											Zhuanlanbannerimg:"http://pic.lvmama.com/uploads/pc/place2/2015-01-07/e9fbb2eb-9530-466b-b850-c9c1d2eefb8d_480_320.jpg",
-											Zhuanlanbannertitle:'神秘的埃及金字塔',
-											Zhuanlanbannerdesc:'参观人类梦寐以求之地---神秘的埃及金字塔（吉萨金字塔群）和馆藏七千年人类文',
-											Zhuanlanbannerdingyue:'752',
-											Zhuanlanbannerwenzhang:'356'
-										},
-										{
-											Zhuanlanbannerid:'4',
-											Zhuanlanbannerimg:"http://pic.lvmama.com/uploads/pc/place2/2014-11-17/54b01cb8-555a-4032-ad17-f47e46ef656e_480_320.jpg",
-											Zhuanlanbannertitle:'开罗、卢克索、红海和亚历山大等经典景区',
-											Zhuanlanbannerdesc:'特别安排红海三晚住宿，充分自由活动时间感受异国风情的度假体验！',
-											Zhuanlanbannerdingyue:'12',
-											Zhuanlanbannerwenzhang:'7556'
-										},
-										{
-											Zhuanlanbannerid:'5',
-											Zhuanlanbannerimg:"http://pic.lvmama.com/uploads/pc/place2/2015-01-07/9b1e313b-cb21-4eaf-9a07-ae0a29e28a39_480_320.jpg",
-											Zhuanlanbannertitle:'亚历山大特色海鲜餐',
-											Zhuanlanbannerdesc:'开罗当地特色鸽子餐，体验异国风情的海鲜料理',
-											Zhuanlanbannerdingyue:'152',
-											Zhuanlanbannerwenzhang:'356'
-										},
-										{
-											Zhuanlanbannerid:'6',
-											Zhuanlanbannerimg:"//pics.lvjs.com.cn//uploads/pc/place2/2015-02-03/e8bb6591-1906-4846-9447-7255e6da4d6a_300_200.jpg",
-											Zhuanlanbannertitle:'埃及-开罗-卢克索-红海-亚历山',
-											Zhuanlanbannerdesc:'乘坐马车巡游古都卢克索，埃及博物馆，乘坐费卢卡小帆船，',
-											Zhuanlanbannerdingyue:'485',
-											Zhuanlanbannerwenzhang:'1452'
-										}
-									],
+								{
+									Personalbiaoqiaoname:'泰国',
+									Personalbiaoqiaoshu:'3'
 								},
-																{
-									Zhuanlanbannercontet:[
-										{
-											Zhuanlanbannerid:'1',
-											Zhuanlanbannerimg:"//pics.lvjs.com.cn//uploads/pc/place2/2015-02-03/e8bb6591-1906-4846-9447-7255e6da4d6a_300_200.jpg",
-											Zhuanlanbannertitle:'亚历山大特色海鲜餐',
-											Zhuanlanbannerdesc:'开罗当地特色鸽子餐，体验异国风情的海鲜料理',
-											Zhuanlanbannerdingyue:'152',
-											Zhuanlanbannerwenzhang:'356',
-											can:1
-										},
-										{
-											Zhuanlanbannerid:'2',
-											Zhuanlanbannerimg:"http://pic.lvmama.com/uploads/pc/place2/2015-01-07/519cd4c9-fedb-4112-88d0-68329b47ba4c_480_320.jpg",
-											Zhuanlanbannertitle:'亚历山大特色海鲜餐',
-											Zhuanlanbannerdesc:'。特别安排乘坐马车巡游古都卢克索，并特别安排乘坐费卢卡',
-											Zhuanlanbannerdingyue:'42',
-											Zhuanlanbannerwenzhang:'756'
-										},
-										{
-											Zhuanlanbannerid:'3',
-											Zhuanlanbannerimg:"http://pic.lvmama.com/uploads/pc/place2/2015-01-07/e9fbb2eb-9530-466b-b850-c9c1d2eefb8d_480_320.jpg",
-											Zhuanlanbannertitle:'神秘的埃及金字塔',
-											Zhuanlanbannerdesc:'参观人类梦寐以求之地---神秘的埃及金字塔（吉萨金字塔群）和馆藏七千年人类文',
-											Zhuanlanbannerdingyue:'752',
-											Zhuanlanbannerwenzhang:'356'
-										},
-										{
-											Zhuanlanbannerid:'4',
-											Zhuanlanbannerimg:"http://pic.lvmama.com/uploads/pc/place2/2014-11-17/54b01cb8-555a-4032-ad17-f47e46ef656e_480_320.jpg",
-											Zhuanlanbannertitle:'开罗、卢克索、红海和亚历山大等经典景区',
-											Zhuanlanbannerdesc:'特别安排红海三晚住宿，充分自由活动时间感受异国风情的度假体验！',
-											Zhuanlanbannerdingyue:'12',
-											Zhuanlanbannerwenzhang:'7556'
-										},
-										{
-											Zhuanlanbannerid:'5',
-											Zhuanlanbannerimg:"http://pic.lvmama.com/uploads/pc/place2/2015-01-07/9b1e313b-cb21-4eaf-9a07-ae0a29e28a39_480_320.jpg",
-											Zhuanlanbannertitle:'亚历山大特色海鲜餐',
-											Zhuanlanbannerdesc:'开罗当地特色鸽子餐，体验异国风情的海鲜料理',
-											Zhuanlanbannerdingyue:'152',
-											Zhuanlanbannerwenzhang:'356'
-										},
-										{
-											Zhuanlanbannerid:'6',
-											Zhuanlanbannerimg:"//pics.lvjs.com.cn//uploads/pc/place2/2015-02-03/e8bb6591-1906-4846-9447-7255e6da4d6a_300_200.jpg",
-											Zhuanlanbannertitle:'埃及-开罗-卢克索-红海-亚历山',
-											Zhuanlanbannerdesc:'乘坐马车巡游古都卢克索，埃及博物馆，乘坐费卢卡小帆船，',
-											Zhuanlanbannerdingyue:'485',
-											Zhuanlanbannerwenzhang:'1452'
-										}
-									],
+								{
+									Personalbiaoqiaoname:'东京',
+									Personalbiaoqiaoshu:'32'
+								},
+								{
+									Personalbiaoqiaoname:'寿司DIV',
+									Personalbiaoqiaoshu:'36'
+								},
+								{
+									Personalbiaoqiaoname:'马来西亚',
+									Personalbiaoqiaoshu:'53'
+								},
+								{
+									Personalbiaoqiaoname:'美食之地',
+									Personalbiaoqiaoshu:'12'
+								},
+								{
+									Personalbiaoqiaoname:'海鲜',
+									Personalbiaoqiaoshu:'7'
+								},
+								{
+									Personalbiaoqiaoname:'富士山',
+									Personalbiaoqiaoshu:'10'
+								},
+								{
+									Personalbiaoqiaoname:'京都',
+									Personalbiaoqiaoshu:'42'
+								},
+								{
+									Personalbiaoqiaoname:'大阪',
+									Personalbiaoqiaoshu:'3'
 								}
-								
-								
 								
 							],
 							message: '查询成功'
 						}
 					})
 export default {
+	buildPersonalbiaoqiao,
+	builddingyuefirst,
+	builddingyuetwo,
+	buildzhuanlanheader,
+	buildwenzhang,
 	buildbbsbox,
 	buildPhoquestion,
 	buildrestaurants,

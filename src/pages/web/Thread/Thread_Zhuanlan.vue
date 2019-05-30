@@ -1,9 +1,9 @@
 <template>
 	<!-- 旅行专栏 -->
 	<el-col :span="24">
-		<headers></headers>
+		<headers id="topPart"></headers>
 		<div style="clear: both;"></div>
-		<div class="zhuanlan_header">
+		<div class="zhuanlan_header" :class="{isFixed:istabBar}">
 			<h1 class="zhuanlan_logo">
 				<router-link to="/"><img src="../../../assets/images/qiongyou/zhuanlan_logo.svg" /></router-link>
 			</h1>
@@ -61,29 +61,42 @@
 				<router-link to="">如何成为专栏作者<i class="el-icon-arrow-right" style="vertical-align: middle;"></i></router-link>
 			</p>
 		</div>
-		<div class="Zhuanlan_banner">
-			<p class="title_ptsmV">推荐专栏</p>
-			<el-carousel :interval="5000" arrow="always" indicator-position="outside" height="630px">
-				<el-carousel-item v-for="(val,index) in Zhuanlanbanner" :key='index'>
-					<ul class="partUL">
-						<li v-for="(val,index) in val.Zhuanlanbannercontet" :key='index' :style="checkbackground(index)">
-							<router-link :to="{path:'/',params:{Zhuanlanbannerid:val.Zhuanlanbannerid}}">
-								<img class="zl_img" :src="val.Zhuanlanbannerimg" lazy="loaded">
-								<p class="zl_title">{{val.Zhuanlanbannertitle}}</p>
-								<p class="zl_desc">{{val.Zhuanlanbannerdesc}}</p>
-								<p class="num_3ym5g">{{val.Zhuanlanbannerdingyue}}&nbsp;订阅<i></i>{{val.Zhuanlanbannerwenzhang}}篇文章
-								</p>
-							</router-link>
-						</li>
-					</ul>
-				</el-carousel-item>
-			</el-carousel>
+		<zhuanlanbanner></zhuanlanbanner>
+		<!-- 推荐文章 -->
+		<div class="Zhuanlan_wenzhang">
+			<p class="Zhuanlan_wenzhang_title">推荐文章</p>
+			<ul class="Zhuanlan_wenzhangul">
+				<li class="Zhuanlan_wenzhangli" v-for="(item,index) in wenzhang" :key="index">
+					<div class="image_3wY22">
+						<router-link :to="{path:'/Thread_ZhuanlanDetail',params:{wenzhangid:item.wenzhangid}}"><img :src="item.wenzhangimg" /></router-link>
+					</div>
+					<div class="Zhuanlan_wenzhang_right">
+						<div style="height:126px;">
+							<p class="Zhuanlan_wenzhang_righttit">
+								<router-link :to="{path:'/',params:{wenzhangid:item.wenzhangid}}">{{item.wenzhangtitle}}</router-link>
+							</p>
+							<p class="Zhuanlan_wenzhang_rightdesc">{{item.wenzhandsc}}</p>
+						</div>
+						<div class="part_bottom_z_8HK">
+							<div class="left_2F88G">
+								<router-link :to="{path:'/Thread_ZhuanlanDetail',params:{wenzhangid:item.wenzhangid}}" class="col_JHMNa">{{item.wenzhangzuozhe}}</router-link>
+								<a class="date_2Wk3g"> · {{item.wenzhangtime}}前</a>
+								<a class="from_2QmrV"> · 来自专栏 </a>
+								<router-link :to="{path:'/Thread_ZhuanlanDetail',params:{wenzhangid:item.wenzhangid}}" class="col_JHMNa">{{item.wenzhangfromname}}</router-link>
+							</div>
+							<div class="right_bnk-a"><img src="../../../assets/images/qiongyou/dianzan.png" style="vertical-align: top;margin-right: 5px;">{{item.wenzhangdianzan}}</div>
+						</div>
+					</div>
+				</li>
+			</ul>
 		</div>
 	</el-col>
 </template>
 
 <script>
 	import headers from '../../../pages/web/Thread/header.vue'
+	import zhuanlanbanner from '../../../pages/web/Thread/compoents/Thread_ZhuanlanBanner.vue'
+
 	export default {
 		name: 'Thread_Zhuanlan',
 		data() {
@@ -93,7 +106,8 @@
 				str: "欢迎 开启穷游专栏之旅", //str初始化
 				letters: [], //str分解后的字母数组
 				order: 1, //表示当前是第几句话
-				Zhuanlanbanner: [],
+				wenzhang: [],
+				istabBar: false,
 				timer: null // 定时器名称          
 
 			}
@@ -109,51 +123,34 @@
 				}
 			}
 		},
-		created() {
-			this.buildZhuanlanbanner();
-		},
-		mounted() { //页面初次加载后调用begin()开始动画
-			this.begin()
 
+		
+		
+		mounted() { //页面初次加载后调用begin()开始动画
+			this.buildbegin();
+			this.buildwenzhang();
+			window.addEventListener('scroll', this.handleScroll); // Dom树加载完毕
+
+		},
+		destroyed() {
+			window.removeEventListener('scroll', this.handleScroll) // 销毁页面时清除
 		},
 		
-		//定时器
-		mounted() {
-			this.timer = setInterval(() => {
-				this.checkbackground();
-			}, 1000)
-		},
-		computed: {
-			checkbackground() {
-				return function(index) {
-					let r, g, b;
-					r = Math.floor(Math.random() * 255);
-					g = Math.floor(Math.random() * 255);
-					b = Math.floor(Math.random() * 255);
-					// return "rgb("+r+","+g+","+b+")"
-					let str = "background:" + "rgb(" + r + "," + g + "," + b + ")";
-					return str;
-				}
-
-			}
-		},
-		//销毁定时器
-		beforeDestroy() {
-			clearInterval(this.timer);
-			this.timer = null;
-		},
 		methods: {
-			buildZhuanlanbanner() {
-				this.axios.get('/api/buildZhuanlanbanner').then(res => {
-					this.Zhuanlanbanner = res.data.data
-				})
-			},
+
 			//开始输入的效果动画
-			begin() {
+			buildbegin() {
 				this.letters = this.str.split("")
 				for (var i = 0; i < this.letters.length; i++) {
 					setTimeout(this.write(i), i * 100);
 				}
+			},
+			buildwenzhang() {
+				this.axios.get('/api/buildwenzhang').then(res => {
+					this.wenzhang = res.data.data
+				}).catch(function(orror) {
+					console.log(orror)
+				})
 			},
 			//开始删除的效果动画
 			back() {
@@ -186,115 +183,172 @@
 						this.order++;
 						let that = this;
 						setTimeout(function() {
-							that.begin();
+							that.buildbegin();
 						}, 700);
 
 					}
 				}
 			},
-
+            //下拉导航栏浮动吸顶
+			handleScroll() {
+				let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+				// 固定导航栏
+				let topBar = document.querySelector("#topPart");
+				if (scrollTop > topBar.offsetHeight) {
+					this.istabBar = true;
+				} else {
+					this.istabBar = false;
+				}
+			},
 		},
-
 		components: {
-			headers
+			headers,
+			zhuanlanbanner
 		},
 	}
 </script>
 
 <style lang="scss">
-	.Zhuanlan_banner {
-		width: 980px;
+	
+	.isFixed {
+		width: 100%;
+		position: fixed ;
+		top:0px;
+		z-index: 1000;
+		transition: ease-in 1s;
+	}
+	
+	.Zhuanlan_wenzhang {
+		width: 680px;
 		margin: 0 auto;
 
-		.title_ptsmV {
-
+		.Zhuanlan_wenzhang_title {
 			width: 100%;
 			text-align: center;
 			font-size: 34px;
 			font-weight: 300;
 			line-height: 48px;
 			color: rgba(0, 0, 0, .8);
+			padding-top: 50px;
 			margin-bottom: 7px;
-
 		}
 
-		.partUL {
-			flex-shrink: 0;
-			width: 705px;
-			margin: 0 auto;
+		.Zhuanlan_wenzhangul {
 			list-style: none;
 
-			li {
-				display: inline-block;
-				width: 210px;
-				height: 276px;
-				background: lightgreen;
-				margin: 25px 0 0 25px;
-				vertical-align: top;
-				box-shadow: 0 2px 12px rgba(0, 0, 0, .06);
+			.Zhuanlan_wenzhangli {
+				width: 680px;
+				height: 145px;
+				padding-bottom: 40px;
+				overflow: hidden;
+				position: relative;
 
-				.zl_img {
-					width: 100px;
-					height: 100px;
-					border-radius: 50%;
+				.image_3wY22 {
+					width: 218px;
+					height: 145px;
 					overflow: hidden;
-					margin: 30px 55px 27px;
-					cursor: pointer;
-				}
+					float: left;
 
-				.zl_title {
-					font-size: 16px;
-					font-weight: bold;
-					line-height: 22px;
-					/* color: rgba(0,0,0,.8); */
-					color: rgb(51, 51, 51);
-					/* width: 100%; */
-					text-align: center;
-					margin-bottom: 5px;
-					overflow: hidden;
-					text-overflow: ellipsis;
-					height: 22px;
-					white-space: nowrap;
-					padding: 0 10px;
-				}
-
-				.zl_desc {
-					font-size: 14px;
-					/* color: rgba(0,0,0,.6); */
-					color: rgb(102, 102, 102);
-					line-height: 22px;
-					text-align: center;
-					padding: 0 14px;
-					margin-bottom: 15px;
-					width: 100%;
-					height: 41px;
-					box-sizing: border-box;
-					overflow: hidden;
-					text-overflow: ellipsis;
-					display: -webkit-box;
-					line-clamp: 2;
-					-webkit-line-clamp: 2;
-					-webkit-box-orient: vertical;
-				}
-
-				.num_3ym5g {
-					text-align: center;
-					font-size: 12px;
-					line-height: 17px;
-					/* color: rgba(0,0,0,.35); */
-					color: rgb(166, 166, 166);
-
-					i {
-						display: inline-block;
-						width: 1px;
-						height: 10px;
-						/* background: rgba(0,0,0,.35); */
-						background: rgb(166, 166, 166);
-						vertical-align: -1px;
-						margin: 0 8px;
+					img {
+						width: 100%;
+						height: 100%;
 					}
 				}
+
+				.Zhuanlan_wenzhang_right {
+					float: right;
+					width: 442px;
+
+					.Zhuanlan_wenzhang_righttit {
+						font-size: 20px;
+						line-height: 28px;
+						color: rgba(0, 0, 0, .8);
+						font-weight: bold;
+						margin-bottom: 10px;
+						/* width: 465px; */
+						/* height: 28px; */
+						overflow: hidden;
+						/* white-space: nowrap; */
+						text-overflow: ellipsis;
+						-moz-box-orient: vertical;
+						-webkit-box-orient: vertical;
+						-webkit-line-clamp: 2;
+						display: -webkit-box;
+						word-break: break-all;
+
+						a {
+							color: rgba(0, 0, 0, .8);
+							font-weight: bold;
+							font-size: 20px;
+						}
+					}
+
+					.Zhuanlan_wenzhang_rightdesc {
+						font-size: 14px;
+						color: rgba(0, 0, 0, .6);
+						line-height: 22px;
+						/* margin-bottom: 43px; */
+						height: 44px;
+						/* margin-bottom: 41px; */
+						overflow: hidden;
+						text-overflow: ellipsis;
+						-moz-box-orient: vertical;
+						-webkit-box-orient: vertical;
+						-webkit-line-clamp: 2;
+						display: -webkit-box;
+						word-break: break-all;
+					}
+
+					.part_bottom_z_8HK {
+						height: 20px;
+						line-height: 20px;
+						font-size: 14px;
+						color: rgba(0, 0, 0, 0.6);
+
+						.left_2F88G {
+							float: left;
+
+							.col_JHMNa {
+								color: rgba(0, 0, 0, .6);
+								display: inline-block;
+								max-width: 120px;
+								height: 20px;
+								overflow: hidden;
+								white-space: nowrap;
+								text-overflow: ellipsis;
+								vertical-align: bottom;
+							}
+
+							.date_2Wk3g {
+								color: rgba(0, 0, 0, 0.35);
+							}
+
+							.from_2QmrV {
+								color: rgba(0, 0, 0, 0.35);
+								margin-right: 6px;
+							}
+						}
+
+						.right_bnk-a {
+							float: right;
+
+							.praise_num_OH_Jc {
+								display: inline-block;
+								box-sizing: border-box;
+								height: 20px;
+								line-height: 20px;
+								padding-left: 20px;
+								font-size: 14px;
+								color: rgba(0, 0, 0, .35);
+							}
+						}
+					}
+
+				}
 			}
+
+
+
 		}
 	}
 
@@ -307,7 +361,6 @@
 		background: #fff;
 		border-bottom: 1px solid #f1f1f1;
 		box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.04);
-		position: absolute;
 		z-index: 9;
 
 		.zhuanlan_logo {
@@ -361,7 +414,9 @@
 
 	.zhuanlan_greeting {
 		width: 980px;
-		margin: 150px auto;
+		margin: 0 auto;
+		margin-top: 150px;
+		margin-bottom: 60px;
 		position: relative;
 		height: 170px;
 
