@@ -142,17 +142,25 @@ export default new Router({
 				// },
 				// {
 				// 	path: '/',
-				// 	name: 'Thread_Zhuanlan_PersonalDetail',//:id
+				// 	name: 'Thread_Zhuanlan_PersonalDetail',//:Zhuanlanbannerid
 				// 	component(resolve) {
 				// 		require(['../pages/web/Thread/Thread_Zhuanlan_PersonalDetail'], resolve)
 				// 	},
 				// 				
 				// },
-				{
+				// {
+				// 	path: '/',
+				// 	name: 'Thread_ZhuanlanDetail',//:wenzhangid
+				// 	component(resolve) {
+				// 		require(['../pages/web/Thread/Thread_ZhuanlanDetail'], resolve)
+				// 	},
+				// 				
+				// },
+					{
 					path: '/',
-					name: 'Thread_ZhuanlanDetail',//:id
+					name: 'Thread_Ask',//:id
 					component(resolve) {
-						require(['../pages/web/Thread/Thread_ZhuanlanDetail'], resolve)
+						require(['../pages/web/Thread/Thread_Ask'], resolve)
 					},
 								
 				},

@@ -24,7 +24,7 @@
 							<el-dropdown-menu slot="dropdown">
 								<el-dropdown-item> <i class="el-icon-tickets"></i> 旅行论坛</el-dropdown-item>
 							<el-dropdown-item><router-link style="color: #606266;" to="/Thread_Zhuanlan">旅行专栏<em class="tra_flag">NEW</em></router-link></el-dropdown-item>
-								<el-dropdown-item>旅行问答</el-dropdown-item>
+								<el-dropdown-item><router-link style="color: #606266;" to="/Thread_Ask">旅行问答</router-link></el-dropdown-item>
 								<el-dropdown-item>JNE旅行生活美学</el-dropdown-item>
 								<el-dropdown-item>Biu伴(结伴而行)</el-dropdown-item>
 								<el-dropdown-item>分责任的旅行</el-dropdown-item>

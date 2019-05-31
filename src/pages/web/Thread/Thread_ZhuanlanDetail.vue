@@ -131,8 +131,40 @@
 			</div>
 			<div class="label_4USLG"><span>#泰国</span><span>#拜县</span></div>
 		</div>
-		<div class="comment_1UzU7">
+		<!-- <div class="comment_1UzU7">
 			<p class="allcomment_2UHez">全部评论(3)</p>
+		</div> -->
+		<br />
+		<br />
+		<br />
+		<br />
+		<!-- 推荐文章 -->
+		<div class="Zhuanlan_wenzhang">
+			<p align="left" style="font-size: 18px;line-height: 25px;color: rgba(0, 0, 0, .8);font-weight: bold;margin-bottom: 20px">全部</p>
+			<ul class="Zhuanlan_wenzhangul">
+				<li class="Zhuanlan_wenzhangli" v-for="(item,index) in wenzhang" :key="index">
+					<div class="image_3wY22">
+						<router-link :to="{path:'/',params:{wenzhangid:item.wenzhangid}}"><img :src="item.wenzhangimg" /></router-link>
+					</div>
+					<div class="Zhuanlan_wenzhang_right">
+						<div style="height:126px;">
+							<p class="Zhuanlan_wenzhang_righttit">
+								<router-link :to="{path:'/',params:{wenzhangid:item.wenzhangid}}">{{item.wenzhangtitle}}</router-link>
+							</p>
+							<p class="Zhuanlan_wenzhang_rightdesc">{{item.wenzhandsc}}</p>
+						</div>
+						<div class="part_bottom_z_8HK">
+							<div class="left_2F88G">
+								<router-link :to="{path:'/',params:{wenzhangid:item.wenzhangid}}" class="col_JHMNa">{{item.wenzhangzuozhe}}</router-link>
+								<a class="date_2Wk3g"> · {{item.wenzhangtime}}前</a>
+								<a class="from_2QmrV"> · 来自专栏 </a>
+								<router-link :to="{path:'/',params:{wenzhangid:item.wenzhangid}}" class="col_JHMNa">{{item.wenzhangfromname}}</router-link>
+							</div>
+							<div class="right_bnk-a"><img src="../../../assets/images/qiongyou/dianzan.png" style="vertical-align: top;margin-right: 5px;">{{item.wenzhangdianzan}}</div>
+						</div>
+					</div>
+				</li>
+			</ul>
 		</div>
 	</el-col>
 </template>
@@ -143,11 +175,13 @@
 		name: 'Thread_ZhuanlanDetail',
 		data() {
 			return {
+				wenzhangid:this.$route.params.wenzhangid,
 				btnFlag: false,
 				istabBar: false,
 				dingyue: true,
 				ydingyue: false,
 				zhuanlanheader: [],
+				wenzhang: [],
 				istabBara: false,
 				istabBarb: false,
 				istabBarc: false,
@@ -156,6 +190,7 @@
 		},
 		mounted() { //页面初次加载后调用begin()开始动画
 			this.buildzhuanlanheader();
+			this.buildwenzhang();
 			window.addEventListener('scroll', this.handleScroll); // Dom树加载完毕
 			window.addEventListener('scroll', this.scrollToTop)
 		},
@@ -164,6 +199,20 @@
 			window.removeEventListener('scroll', this.scrollToTop)
 		},
 		methods: {
+			buildwenzhang() {
+				this.axios.get('/api/buildwenzhang'
+				// ,{
+				// 	params:{
+				// 		'search_params':this.search_params
+				// 	}
+				// }
+				).then(res => {
+					this.wenzhang = res.data.data
+				}).catch(function(orror) {
+					console.log(orror)
+				})
+			},
+			
 			//下拉导航栏浮动吸顶
 			handleScroll() {
 				let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
@@ -243,6 +292,139 @@
 </script>
 
 <style lang="scss">
+	.Zhuanlan_wenzhang {
+		width: 680px;
+		margin: 0 auto;
+	
+		.Zhuanlan_wenzhang_title {
+			width: 100%;
+			text-align: center;
+			font-size: 34px;
+			font-weight: 300;
+			line-height: 48px;
+			color: rgba(0, 0, 0, .8);
+			padding-top: 50px;
+			margin-bottom: 7px;
+		}
+	
+		.Zhuanlan_wenzhangul {
+			list-style: none;
+	
+			.Zhuanlan_wenzhangli {
+				width: 680px;
+				height: 145px;
+				padding-bottom: 40px;
+				overflow: hidden;
+				position: relative;
+	
+				.image_3wY22 {
+					width: 218px;
+					height: 145px;
+					overflow: hidden;
+					float: left;
+	
+					img {
+						width: 100%;
+						height: 100%;
+					}
+				}
+	
+				.Zhuanlan_wenzhang_right {
+					float: right;
+					width: 442px;
+	
+					.Zhuanlan_wenzhang_righttit {
+						font-size: 20px;
+						line-height: 28px;
+						color: rgba(0, 0, 0, .8);
+						font-weight: bold;
+						margin-bottom: 10px;
+						/* width: 465px; */
+						/* height: 28px; */
+						overflow: hidden;
+						/* white-space: nowrap; */
+						text-overflow: ellipsis;
+						-moz-box-orient: vertical;
+						-webkit-box-orient: vertical;
+						-webkit-line-clamp: 2;
+						display: -webkit-box;
+						word-break: break-all;
+	
+						a {
+							color: rgba(0, 0, 0, .8);
+							font-weight: bold;
+							font-size: 20px;
+						}
+					}
+	
+					.Zhuanlan_wenzhang_rightdesc {
+						font-size: 14px;
+						color: rgba(0, 0, 0, .6);
+						line-height: 22px;
+						/* margin-bottom: 43px; */
+						height: 44px;
+						/* margin-bottom: 41px; */
+						overflow: hidden;
+						text-overflow: ellipsis;
+						-moz-box-orient: vertical;
+						-webkit-box-orient: vertical;
+						-webkit-line-clamp: 2;
+						display: -webkit-box;
+						word-break: break-all;
+					}
+	
+					.part_bottom_z_8HK {
+						height: 20px;
+						line-height: 20px;
+						font-size: 14px;
+						color: rgba(0, 0, 0, 0.6);
+	
+						.left_2F88G {
+							float: left;
+	
+							.col_JHMNa {
+								color: rgba(0, 0, 0, .6);
+								display: inline-block;
+								max-width: 120px;
+								height: 20px;
+								overflow: hidden;
+								white-space: nowrap;
+								text-overflow: ellipsis;
+								vertical-align: bottom;
+							}
+	
+							.date_2Wk3g {
+								color: rgba(0, 0, 0, 0.35);
+							}
+	
+							.from_2QmrV {
+								color: rgba(0, 0, 0, 0.35);
+								margin-right: 6px;
+							}
+						}
+	
+						.right_bnk-a {
+							float: right;
+	
+							.praise_num_OH_Jc {
+								display: inline-block;
+								box-sizing: border-box;
+								height: 20px;
+								line-height: 20px;
+								padding-left: 20px;
+								font-size: 14px;
+								color: rgba(0, 0, 0, .35);
+							}
+						}
+					}
+	
+				}
+			}
+	
+	
+	
+		}
+	}
 	.comment_1UzU7 {
 		width: 680px;
 		margin: 30px auto;
@@ -318,7 +500,7 @@
 
 	.isFixed {
 		width: 100%;
-		position: fixed;
+		position: fixed !important;
 		top: 0px;
 		z-index: 1000;
 		transition: ease-in 1s;
@@ -335,6 +517,7 @@
 		border-bottom: 1px solid #f1f1f1;
 		box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.04);
 		z-index: 9;
+		position: absolute;
 
 		.zhuanlan_logo {
 			width: 134px;
@@ -583,8 +766,8 @@
 
 	.ZD_bannerbg {
 		height: 100%;
-		min-height: 800px;
-
+		min-height: 900px;
+        position: relative;
 	}
 
 	.ZD_banner {
@@ -596,7 +779,7 @@
 		bottom: 0;
 		margin: 0 auto;
 		width: 100%;
-		min-height: 800px;
+		min-height:900px;
 		box-sizing: border-box;
 		overflow: hidden;
 

@@ -9391,191 +9391,510 @@ const buildwenzhang = Mock.mock(
 		return {
 			code: 200,
 			data: [
-				
+
 				{
-				wenzhangid:'1',
-				wenzhangimg:'http://pic.lvmama.com/uploads/pc/place2/2019-05-13/3d94507a-c091-47fd-9591-d488726eeb8b_480_320.jpg',
-				wenzhangtitle:'赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发',
-				wenzhandsc:"一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。",
-				wenzhangzuozhe:'来自一座城',
-				wenzhangtime:'三分钟',
-				wenzhangfromname:'深爱着你pig',
-				wenzhangdianzan:'2589'
+					wenzhangid: '1',
+					wenzhangimg: 'http://pic.lvmama.com/uploads/pc/place2/2019-05-13/3d94507a-c091-47fd-9591-d488726eeb8b_480_320.jpg',
+					wenzhangtitle: '赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发',
+					wenzhandsc: "一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。",
+					wenzhangzuozhe: '来自一座城',
+					wenzhangtime: '三分钟',
+					wenzhangfromname: '深爱着你pig',
+					wenzhangdianzan: '2589'
 				},
 				{
-				wenzhangid:'1',
-				wenzhangimg:'http://pic.lvmama.com/uploads/pc/place2/2019-05-13/3d94507a-c091-47fd-9591-d488726eeb8b_480_320.jpg',
-				wenzhangtitle:'赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发',
-				wenzhandsc:"一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。",
-				wenzhangzuozhe:'来自一座城',
-				wenzhangtime:'三分钟',
-				wenzhangfromname:'深爱着你pig',
-				wenzhangdianzan:'2589'
+					wenzhangid: '1',
+					wenzhangimg: 'http://pic.lvmama.com/uploads/pc/place2/2019-05-13/3d94507a-c091-47fd-9591-d488726eeb8b_480_320.jpg',
+					wenzhangtitle: '赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发',
+					wenzhandsc: "一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。",
+					wenzhangzuozhe: '来自一座城',
+					wenzhangtime: '三分钟',
+					wenzhangfromname: '深爱着你pig',
+					wenzhangdianzan: '2589'
 				},
 				{
-				wenzhangid:'1',
-				wenzhangimg:'http://pic.lvmama.com/uploads/pc/place2/2019-05-13/3d94507a-c091-47fd-9591-d488726eeb8b_480_320.jpg',
-				wenzhangtitle:'赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发',
-				wenzhandsc:"一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。",
-				wenzhangzuozhe:'来自一座城',
-				wenzhangtime:'三分钟',
-				wenzhangfromname:'深爱着你pig',
-				wenzhangdianzan:'2589'
+					wenzhangid: '1',
+					wenzhangimg: 'http://pic.lvmama.com/uploads/pc/place2/2019-05-13/3d94507a-c091-47fd-9591-d488726eeb8b_480_320.jpg',
+					wenzhangtitle: '赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发',
+					wenzhandsc: "一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。",
+					wenzhangzuozhe: '来自一座城',
+					wenzhangtime: '三分钟',
+					wenzhangfromname: '深爱着你pig',
+					wenzhangdianzan: '2589'
 				},
 				{
-				wenzhangid:'1',
-				wenzhangimg:'http://pic.lvmama.com/uploads/pc/place2/2019-05-13/3d94507a-c091-47fd-9591-d488726eeb8b_480_320.jpg',
-				wenzhangtitle:'赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发',
-				wenzhandsc:"一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。",
-				wenzhangzuozhe:'来自一座城',
-				wenzhangtime:'三分钟',
-				wenzhangfromname:'深爱着你pig',
-				wenzhangdianzan:'2589'
+					wenzhangid: '1',
+					wenzhangimg: 'http://pic.lvmama.com/uploads/pc/place2/2019-05-13/3d94507a-c091-47fd-9591-d488726eeb8b_480_320.jpg',
+					wenzhangtitle: '赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发',
+					wenzhandsc: "一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。",
+					wenzhangzuozhe: '来自一座城',
+					wenzhangtime: '三分钟',
+					wenzhangfromname: '深爱着你pig',
+					wenzhangdianzan: '2589'
 				},
 				{
-				wenzhangid:'1',
-				wenzhangimg:'http://pic.lvmama.com/uploads/pc/place2/2019-05-13/3d94507a-c091-47fd-9591-d488726eeb8b_480_320.jpg',
-				wenzhangtitle:'赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发',
-				wenzhandsc:"一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。",
-				wenzhangzuozhe:'来自一座城',
-				wenzhangtime:'三分钟',
-				wenzhangfromname:'深爱着你pig',
-				wenzhangdianzan:'2589'
+					wenzhangid: '1',
+					wenzhangimg: 'http://pic.lvmama.com/uploads/pc/place2/2019-05-13/3d94507a-c091-47fd-9591-d488726eeb8b_480_320.jpg',
+					wenzhangtitle: '赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发',
+					wenzhandsc: "一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。",
+					wenzhangzuozhe: '来自一座城',
+					wenzhangtime: '三分钟',
+					wenzhangfromname: '深爱着你pig',
+					wenzhangdianzan: '2589'
 				},
 				{
-				wenzhangid:'1',
-				wenzhangimg:'http://pic.lvmama.com/uploads/pc/place2/2019-05-13/3d94507a-c091-47fd-9591-d488726eeb8b_480_320.jpg',
-				wenzhangtitle:'赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发',
-				wenzhandsc:"一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。",
-				wenzhangzuozhe:'来自一座城',
-				wenzhangtime:'三分钟',
-				wenzhangfromname:'深爱着你pig',
-				wenzhangdianzan:'2589'
+					wenzhangid: '1',
+					wenzhangimg: 'http://pic.lvmama.com/uploads/pc/place2/2019-05-13/3d94507a-c091-47fd-9591-d488726eeb8b_480_320.jpg',
+					wenzhangtitle: '赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发',
+					wenzhandsc: "一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。",
+					wenzhangzuozhe: '来自一座城',
+					wenzhangtime: '三分钟',
+					wenzhangfromname: '深爱着你pig',
+					wenzhangdianzan: '2589'
 				},
 				{
-				wenzhangid:'1',
-				wenzhangimg:'http://pic.lvmama.com/uploads/pc/place2/2019-05-13/3d94507a-c091-47fd-9591-d488726eeb8b_480_320.jpg',
-				wenzhangtitle:'赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发',
-				wenzhandsc:"一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。",
-				wenzhangzuozhe:'来自一座城',
-				wenzhangtime:'三分钟',
-				wenzhangfromname:'深爱着你pig',
-				wenzhangdianzan:'2589'
+					wenzhangid: '1',
+					wenzhangimg: 'http://pic.lvmama.com/uploads/pc/place2/2019-05-13/3d94507a-c091-47fd-9591-d488726eeb8b_480_320.jpg',
+					wenzhangtitle: '赠送2晚东京酒店，东京、大阪双向进出，深港两地可出发',
+					wenzhandsc: "一座是以巴黎埃菲尔铁塔为范本而建造的红白色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。",
+					wenzhangzuozhe: '来自一座城',
+					wenzhangtime: '三分钟',
+					wenzhangfromname: '深爱着你pig',
+					wenzhangdianzan: '2589'
 				}
-				
+
 			],
 			message: '查询成功'
 		}
 	})
-	const buildzhuanlanheader = Mock.mock(
-		'/api/buildzhuanlanheader', 'get', (req, res) => {
-			return {
-				code: 200,
-				data: [
-					{
-						zhuanlanheaderavter:'http://pic.lvmama.com/uploads/pc/place2/2016-01-26/d95caa3c-a1ca-4155-a455-01e3740548c4_300_200.jpg',
-						zhuanlanheadername:'LOVE POG',
-					    zhuanlanheaderdsc:'从米其林到街边摊，带你尝遍我旅途中所遇的美味',
-						zhuanlanheadershu:'2019',
-						type:1
-					}
-				
-					
-				],
-				message: '查询成功'
-			}
-		})
-		const builddingyuefirst = Mock.mock(
-			'/api/builddingyuefirst', 'get', (req, res) => {
-				return {
-					code: 200,
-					data: [
-						{
-							zhuanlanheaderavter:'http://pic.lvmama.com/uploads/pc/place2/2016-01-26/d95caa3c-a1ca-4155-a455-01e3740548c4_300_200.jpg',
-							zhuanlanheadername:'LOVE POG',
-							zhuanlanheaderdsc:'从米其林到街边摊，带你尝遍我旅途中所遇的美味',
-							zhuanlanheadershu:'2019',
-							type:2
-						}											
-					],
-					message: '查询成功'
+const buildzhuanlanheader = Mock.mock(
+	'/api/buildzhuanlanheader', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					zhuanlanheaderavter: 'http://pic.lvmama.com/uploads/pc/place2/2016-01-26/d95caa3c-a1ca-4155-a455-01e3740548c4_300_200.jpg',
+					zhuanlanheadername: 'LOVE POG',
+					zhuanlanheaderdsc: '从米其林到街边摊，带你尝遍我旅途中所遇的美味',
+					zhuanlanheadershu: '2019',
+					type: 1
 				}
-			})
-			const builddingyuetwo = Mock.mock(
-				'/api/builddingyuetwo', 'get', (req, res) => {
-					return {
-						code: 200,
-						data: [
-							{
-								zhuanlanheaderavter:'http://pic.lvmama.com/uploads/pc/place2/2016-01-26/d95caa3c-a1ca-4155-a455-01e3740548c4_300_200.jpg',
-								zhuanlanheadername:'LOVE POG',
-								zhuanlanheaderdsc:'从米其林到街边摊，带你尝遍我旅途中所遇的美味',
-								zhuanlanheadershu:'2019',
-								type:1
-							}												
-						],
-						message: '查询成功'
-					}
-				})
-				const buildPersonalbiaoqiao = Mock.mock(
-					'/api/buildPersonalbiaoqiao', 'get', (req, res) => {
-						return {
-							code: 200,
-							data: [
-								{
-								Personalbiaoqiaoname:'全部',
-								Personalbiaoqiaoshu:'230'
-								},
-								{
-									Personalbiaoqiaoname:'美食之地',
-									Personalbiaoqiaoshu:'12'
-								},
-								{
-									Personalbiaoqiaoname:'日本',
-									Personalbiaoqiaoshu:'2'
-								},
-								{
-									Personalbiaoqiaoname:'泰国',
-									Personalbiaoqiaoshu:'3'
-								},
-								{
-									Personalbiaoqiaoname:'东京',
-									Personalbiaoqiaoshu:'32'
-								},
-								{
-									Personalbiaoqiaoname:'寿司DIV',
-									Personalbiaoqiaoshu:'36'
-								},
-								{
-									Personalbiaoqiaoname:'马来西亚',
-									Personalbiaoqiaoshu:'53'
-								},
-								{
-									Personalbiaoqiaoname:'美食之地',
-									Personalbiaoqiaoshu:'12'
-								},
-								{
-									Personalbiaoqiaoname:'海鲜',
-									Personalbiaoqiaoshu:'7'
-								},
-								{
-									Personalbiaoqiaoname:'富士山',
-									Personalbiaoqiaoshu:'10'
-								},
-								{
-									Personalbiaoqiaoname:'京都',
-									Personalbiaoqiaoshu:'42'
-								},
-								{
-									Personalbiaoqiaoname:'大阪',
-									Personalbiaoqiaoshu:'3'
-								}
-								
-							],
-							message: '查询成功'
+
+
+			],
+			message: '查询成功'
+		}
+	})
+const builddingyuefirst = Mock.mock(
+	'/api/builddingyuefirst', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+				zhuanlanheaderavter: 'http://pic.lvmama.com/uploads/pc/place2/2016-01-26/d95caa3c-a1ca-4155-a455-01e3740548c4_300_200.jpg',
+				zhuanlanheadername: 'LOVE POG',
+				zhuanlanheaderdsc: '从米其林到街边摊，带你尝遍我旅途中所遇的美味',
+				zhuanlanheadershu: '2019',
+				type: 2
+			}],
+			message: '查询成功'
+		}
+	})
+const builddingyuetwo = Mock.mock(
+	'/api/builddingyuetwo', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+				zhuanlanheaderavter: 'http://pic.lvmama.com/uploads/pc/place2/2016-01-26/d95caa3c-a1ca-4155-a455-01e3740548c4_300_200.jpg',
+				zhuanlanheadername: 'LOVE POG',
+				zhuanlanheaderdsc: '从米其林到街边摊，带你尝遍我旅途中所遇的美味',
+				zhuanlanheadershu: '2019',
+				type: 1
+			}],
+			message: '查询成功'
+		}
+	})
+const buildPersonalbiaoqiao = Mock.mock(
+	'/api/buildPersonalbiaoqiao', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					Personalbiaoqiaoname: '全部',
+					Personalbiaoqiaoshu: '230'
+				},
+				{
+					Personalbiaoqiaoname: '美食之地',
+					Personalbiaoqiaoshu: '12'
+				},
+				{
+					Personalbiaoqiaoname: '日本',
+					Personalbiaoqiaoshu: '2'
+				},
+				{
+					Personalbiaoqiaoname: '泰国',
+					Personalbiaoqiaoshu: '3'
+				},
+				{
+					Personalbiaoqiaoname: '东京',
+					Personalbiaoqiaoshu: '32'
+				},
+				{
+					Personalbiaoqiaoname: '寿司DIV',
+					Personalbiaoqiaoshu: '36'
+				},
+				{
+					Personalbiaoqiaoname: '马来西亚',
+					Personalbiaoqiaoshu: '53'
+				},
+				{
+					Personalbiaoqiaoname: '美食之地',
+					Personalbiaoqiaoshu: '12'
+				},
+				{
+					Personalbiaoqiaoname: '海鲜',
+					Personalbiaoqiaoshu: '7'
+				},
+				{
+					Personalbiaoqiaoname: '富士山',
+					Personalbiaoqiaoshu: '10'
+				},
+				{
+					Personalbiaoqiaoname: '京都',
+					Personalbiaoqiaoshu: '42'
+				},
+				{
+					Personalbiaoqiaoname: '大阪',
+					Personalbiaoqiaoshu: '3'
+				}
+
+			],
+			message: '查询成功'
+		}
+	})
+const buildAskbanner = Mock.mock(
+	'/api/buildAskbanner', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					Askbannerlink: '/',
+					Askbannerid: 1,
+					Askbannerimg: '//pics.lvjs.com.cn/uploads/pc/place2/2019-05-16/eca4ff07-bba6-4cb7-baf7-e478ec3c0a61.jpg',
+					type: 1,
+					Askbannertitle: '一道美食，一座城'
+				},
+				{
+					Askbannerlink: '/',
+					Askbannerid: 1,
+					Askbannerimg: '//pics.lvjs.com.cn/uploads/pc/place2/2019-05-21/92d3dd44-f11b-426b-aa78-3f8fa5bc2483.jpg',
+
+				},
+				{
+					Askbannerlink: '/',
+					Askbannerid: 1,
+					Askbannerimg: '//pics.lvjs.com.cn/uploads/pc/place2/2019-05-07/5db6b8b7-6bcb-415c-9e23-bc3166a1798d.jpg',
+					type: 1,
+					Askbannertitle: '大阪，东京，名古屋三日游'
+				},
+				{
+					Askbannerlink: '/',
+					Askbannerid: 1,
+					Askbannerimg: '//pics.lvjs.com.cn/uploads/pc/place2/2019-05-16/79608215-1960-4cd7-8f2a-a38f642827d9.jpg',
+
+				}
+			],
+			message: '查询成功'
+		}
+	})
+const buildaskjingxuan = Mock.mock(
+	'/api/buildaskjingxuan', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					askavatarid: 1,
+					askavatarimg: '//pics.lvjs.com.cn//uploads/pc/place2/2019-03-24/b3492b4b-c33f-4e65-a8ba-44b445fc855c_300_200.jpg',
+					askavatarzuozhe: 'LOVE BIU',
+					askjingxuantitle: '暑 “价”大放送]日本本州6日自由行(赠送2晚东京酒店，东京、大阪)',
+					askjingxuandsc: 'Tokyo Tower 东京塔 （网评 9.0 分，东京景点 No.2 ）一座是以巴黎埃菲尔铁塔为范本而建造的红色铁塔。但其高 332.6 米，比埃菲尔铁塔高出 8.6 米。 1958 年竣工，此后一直为东京第 1 高建筑物，直至 2012 年东京天空树（634 米）建成而退居第 2 位，一直是东京的标志之一。塔上设有展望台，整个东京都的景色尽收眼底，天气晴好的时候可远眺富士山。塔身照明根据季节不同变换不同的颜色。Tokyo Sky Tree 东京天空树 （网评 8.6 分，东京景点排名 No.11 ）东京天空树又名东京晴空塔。高度为 634 米，分别在 350 米和 450 米处设有展望台。届时不仅可以从高处展望东京景色，还有店铺、餐厅、咖啡厅等休闲设施。塔下商场免费，货物齐全。在哪里你几乎可以买到全日本所有地方的特产。',
+					askjingxuanliulan: '256',
+					askjingxuandianzan: '5896',
+					askjingxuantag: [{
+							askjingxuantuijian: '酒店推荐',
+							askjingxuantagid: '1',
+						},
+						{
+							askjingxuantuijian: '美食推荐'
+						},
+						{
+							askjingxuantuijian: '京都'
+						},
+						{
+							askjingxuantuijian: 'DIY寿司'
 						}
-					})
+					]
+				},
+				{
+					askavatarid: 2,
+					askavatarimg: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+					askavatarzuozhe: 'DITNICE',
+					askjingxuantitle: '日本松山4日3晚自由行(松山城门票、道后温泉入场券、WIFI（两人1台',
+					askjingxuandsc: '东方航空直飞往返，2小时即可开启完美旅程东急酒店，对面即是大街道和三越百货，代购圣地，放心买买买赠五重礼包：松山城门票、缆车票，温泉券，电车两日券，Wifi（2人/台）。',
+					askjingxuanliulan: '156',
+					type: 1,
+					askjingxuanimg: 'http://pic.lvmama.com/uploads/pc/place2/2017-03-23/5719a5e0-c423-42a2-adee-4f82d4d5ff5d_480_320.jpg',
+					askjingxuandianzan: '696',
+					askjingxuantag: [{
+							askjingxuantuijian: '购物圣地',
+							askjingxuantagid: '1',
+						},
+						{
+							askjingxuantuijian: '温泉之乡'
+						},
+						{
+							askjingxuantuijian: '京都'
+						},
+						{
+							askjingxuantuijian: 'DIY寿司'
+						}
+					]
+				},
+				{
+					askavatarid: 2,
+					askavatarimg: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+					askavatarzuozhe: 'DITNICE',
+					askjingxuantitle: '日本松山4日3晚自由行(松山城门票、道后温泉入场券、WIFI（两人1台',
+					askjingxuandsc: '东方航空直飞往返，2小时即可开启完美旅程东急酒店，对面即是大街道和三越百货，代购圣地，放心买买买赠五重礼包：松山城门票、缆车票，温泉券，电车两日券，Wifi（2人/台）。',
+					askjingxuanliulan: '156',
+					type: 1,
+					askjingxuanimg: 'http://pic.lvmama.com/uploads/pc/place2/2017-03-23/5719a5e0-c423-42a2-adee-4f82d4d5ff5d_480_320.jpg',
+					askjingxuandianzan: '696',
+					askjingxuantag: [{
+							askjingxuantuijian: '购物圣地',
+							askjingxuantagid: '1',
+						},
+						{
+							askjingxuantuijian: '温泉之乡'
+						},
+						{
+							askjingxuantuijian: '京都'
+						},
+						{
+							askjingxuantuijian: 'DIY寿司'
+						}
+					]
+				},
+				{
+					askavatarid: 2,
+					askavatarimg: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+					askavatarzuozhe: 'DITNICE',
+					askjingxuantitle: '日本松山4日3晚自由行(松山城门票、道后温泉入场券、WIFI（两人1台',
+					askjingxuandsc: '东方航空直飞往返，2小时即可开启完美旅程东急酒店，对面即是大街道和三越百货，代购圣地，放心买买买赠五重礼包：松山城门票、缆车票，温泉券，电车两日券，Wifi（2人/台）。',
+					askjingxuanliulan: '156',
+					type: 1,
+					askjingxuanimg: 'http://pic.lvmama.com/uploads/pc/place2/2017-03-23/5719a5e0-c423-42a2-adee-4f82d4d5ff5d_480_320.jpg',
+					askjingxuandianzan: '696',
+					askjingxuantag: [{
+							askjingxuantuijian: '购物圣地',
+							askjingxuantagid: '1',
+						},
+						{
+							askjingxuantuijian: '温泉之乡'
+						},
+						{
+							askjingxuantuijian: '京都'
+						},
+						{
+							askjingxuantuijian: 'DIY寿司'
+						}
+					]
+				},
+				{
+					askavatarid: 2,
+					askavatarimg: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+					askavatarzuozhe: 'DITNICE',
+					askjingxuantitle: '日本松山4日3晚自由行(松山城门票、道后温泉入场券、WIFI（两人1台',
+					askjingxuandsc: '东方航空直飞往返，2小时即可开启完美旅程东急酒店，对面即是大街道和三越百货，代购圣地，放心买买买赠五重礼包：松山城门票、缆车票，温泉券，电车两日券，Wifi（2人/台）。',
+					askjingxuanliulan: '156',
+					type: 1,
+					askjingxuanimg: 'http://pic.lvmama.com/uploads/pc/place2/2017-03-23/5719a5e0-c423-42a2-adee-4f82d4d5ff5d_480_320.jpg',
+					askjingxuandianzan: '696',
+					askjingxuantag: [{
+							askjingxuantuijian: '购物圣地',
+							askjingxuantagid: '1',
+						},
+						{
+							askjingxuantuijian: '温泉之乡'
+						},
+						{
+							askjingxuantuijian: '京都'
+						},
+						{
+							askjingxuantuijian: 'DIY寿司'
+						}
+					]
+				},
+				{
+					askavatarid: 2,
+					askavatarimg: '//pic.lvmama.com/uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_480_320.jpg',
+					askavatarzuozhe: 'DITNICE',
+					askjingxuantitle: '日本松山4日3晚自由行(松山城门票、道后温泉入场券、WIFI（两人1台',
+					askjingxuandsc: '东方航空直飞往返，2小时即可开启完美旅程东急酒店，对面即是大街道和三越百货，代购圣地，放心买买买赠五重礼包：松山城门票、缆车票，温泉券，电车两日券，Wifi（2人/台）。',
+					askjingxuanliulan: '156',
+					type: 1,
+					askjingxuanimg: 'http://pic.lvmama.com/uploads/pc/place2/2017-03-23/5719a5e0-c423-42a2-adee-4f82d4d5ff5d_480_320.jpg',
+					askjingxuandianzan: '696',
+					askjingxuantag: [{
+							askjingxuantuijian: '购物圣地',
+							askjingxuantagid: '1',
+						},
+						{
+							askjingxuantuijian: '温泉之乡'
+						},
+						{
+							askjingxuantuijian: '京都'
+						},
+						{
+							askjingxuantuijian: 'DIY寿司'
+						}
+					]
+				}
+			],
+			message: '查询成功'
+		}
+	})
+const buildaskzuxin = Mock.mock(
+	'/api/buildaskzuxin', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [
+				{
+					askzuxinid:1,
+					askzuxintitle:'从Fluelen到卢塞恩的轮渡，需要多长时间、最晚几点？',
+					askzuxindsc:'据说国庆期间瑞士要晚上9点多才天黑，那我4点半到了就不在Andermatt住宿了，继续转火车北上到Fluelen，然后轮渡去Luzern，不知道6、7点到了Fluelen火车站，再走去轮渡点，轮渡多久到卢塞恩？最晚船次几点啊？',
+					askavatarid:'1',
+					askavatarzuozhe:'小飞侠',
+					askzuxintime:'3分钟前',
+					askavatarimg:'http://pic.lvmama.com/uploads/pc/place2/2017-03-23/e8c28f78-6963-4a13-b240-e09f2fb51620_480_320.jpg',
+					askzuxinhuidashu:'3'
+				},
+				{
+					askzuxinid:1,
+					askzuxintitle:'从Fluelen到卢塞恩的轮渡，需要多长时间、最晚几点？',
+					askzuxindsc:'据说国庆期间瑞士要晚上9点多才天黑，那我4点半到了就不在Andermatt住宿了，继续转火车北上到Fluelen，然后轮渡去Luzern，不知道6、7点到了Fluelen火车站，再走去轮渡点，轮渡多久到卢塞恩？最晚船次几点啊？',
+					askavatarimg:'http://pic.lvmama.com/uploads/pc/place2/2017-03-23/e8c28f78-6963-4a13-b240-e09f2fb51620_480_320.jpg',
+
+					askavatarid:'1',
+					askavatarzuozhe:'小飞侠',
+					askzuxintime:'3分钟前',
+					askzuxinhuidashu:'3'
+				},
+				{
+					askzuxinid:1,
+					askzuxintitle:'从Fluelen到卢塞恩的轮渡，需要多长时间、最晚几点？',
+					askzuxindsc:'据说国庆期间瑞士要晚上9点多才天黑，那我4点半到了就不在Andermatt住宿了，继续转火车北上到Fluelen，然后轮渡去Luzern，不知道6、7点到了Fluelen火车站，再走去轮渡点，轮渡多久到卢塞恩？最晚船次几点啊？',
+					askavatarimg:'http://pic.lvmama.com/uploads/pc/place2/2017-03-23/e8c28f78-6963-4a13-b240-e09f2fb51620_480_320.jpg',
+
+					askavatarid:'1',
+					askavatarzuozhe:'小飞侠',
+					askzuxintime:'3分钟前',
+					askzuxinhuidashu:'3'
+				},
+				{
+					askzuxinid:1,
+					askzuxintitle:'从Fluelen到卢塞恩的轮渡，需要多长时间、最晚几点？',
+					askzuxindsc:'据说国庆期间瑞士要晚上9点多才天黑，那我4点半到了就不在Andermatt住宿了，继续转火车北上到Fluelen，然后轮渡去Luzern，不知道6、7点到了Fluelen火车站，再走去轮渡点，轮渡多久到卢塞恩？最晚船次几点啊？',
+					askavatarimg:'http://pic.lvmama.com/uploads/pc/place2/2017-03-23/e8c28f78-6963-4a13-b240-e09f2fb51620_480_320.jpg',
+
+					askavatarid:'1',
+					askavatarzuozhe:'小飞侠',
+					askzuxintime:'3分钟前',
+					askzuxinhuidashu:'3'
+				}
+			],
+			message: '查询成功'
+		}
+	})
+const buildaskdaihuida = Mock.mock(
+	'/api/buildaskdaihuida', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [
+				{
+					askdaihuidaid:1,
+					askdaihuidatitle:'从北京经曼彻斯特到贝尔法斯特，如何办理中转手续',
+					askdaihuidadsc:'从北京经曼彻斯特到贝尔法斯特，如何办理中转手续，如何办理入境，再如何从T2去到T3',
+					askavatarid:'1',
+					askavatarimg:'//pic.lvmama.com//uploads/pc/place2/2017-07-26/3f96e490-9e85-45ea-97bb-49f7ebaea8b3.jpg',
+					askavatarzuozhe:'cat miao',
+					askdaihuidatime:'30分钟前',
+					askdaihuidashu:'56'
+				},
+				{
+					askdaihuidaid:1,
+					askdaihuidatitle:'从北京经曼彻斯特到贝尔法斯特，如何办理中转手续',
+					askdaihuidadsc:'从北京经曼彻斯特到贝尔法斯特，如何办理中转手续，如何办理入境，再如何从T2去到T3',
+					askavatarid:'1',
+					askavatarimg:'//pic.lvmama.com//uploads/pc/place2/2017-07-26/3f96e490-9e85-45ea-97bb-49f7ebaea8b3.jpg',
+					askavatarzuozhe:'cat miao',
+					askdaihuidatime:'30分钟前',
+					askdaihuidashu:'56'
+				},
+				{
+					askdaihuidaid:1,
+					askdaihuidatitle:'从北京经曼彻斯特到贝尔法斯特，如何办理中转手续',
+					askdaihuidadsc:'从北京经曼彻斯特到贝尔法斯特，如何办理中转手续，如何办理入境，再如何从T2去到T3',
+					askavatarid:'1',
+					askavatarimg:'//pic.lvmama.com//uploads/pc/place2/2017-07-26/3f96e490-9e85-45ea-97bb-49f7ebaea8b3.jpg',
+					askavatarzuozhe:'cat miao',
+					askdaihuidatime:'30分钟前',
+					askdaihuidashu:'56'
+				},
+				{
+					askdaihuidaid:1,
+					askdaihuidatitle:'从北京经曼彻斯特到贝尔法斯特，如何办理中转手续',
+					askdaihuidadsc:'从北京经曼彻斯特到贝尔法斯特，如何办理中转手续，如何办理入境，再如何从T2去到T3',
+					askavatarid:'1',
+					askavatarimg:'//pic.lvmama.com//uploads/pc/place2/2017-07-26/3f96e490-9e85-45ea-97bb-49f7ebaea8b3.jpg',
+					askavatarzuozhe:'cat miao',
+					askdaihuidatime:'30分钟前',
+					askdaihuidashu:'56'
+				},
+				{
+					askdaihuidaid:1,
+					askdaihuidatitle:'从北京经曼彻斯特到贝尔法斯特，如何办理中转手续',
+					askdaihuidadsc:'从北京经曼彻斯特到贝尔法斯特，如何办理中转手续，如何办理入境，再如何从T2去到T3',
+					askavatarid:'1',
+					askavatarimg:'//pic.lvmama.com//uploads/pc/place2/2017-07-26/3f96e490-9e85-45ea-97bb-49f7ebaea8b3.jpg',
+					askavatarzuozhe:'cat miao',
+					askdaihuidatime:'30分钟前',
+					askdaihuidashu:'56'
+				},
+				{
+					askdaihuidaid:1,
+					askdaihuidatitle:'从北京经曼彻斯特到贝尔法斯特，如何办理中转手续',
+					askdaihuidadsc:'从北京经曼彻斯特到贝尔法斯特，如何办理中转手续，如何办理入境，再如何从T2去到T3',
+					askavatarid:'1',
+					askavatarimg:'//pic.lvmama.com//uploads/pc/place2/2017-07-26/3f96e490-9e85-45ea-97bb-49f7ebaea8b3.jpg',
+					askavatarzuozhe:'cat miao',
+					askdaihuidatime:'30分钟前',
+					askdaihuidashu:'56'
+				},
+				{
+					askdaihuidaid:1,
+					askdaihuidatitle:'从北京经曼彻斯特到贝尔法斯特，如何办理中转手续',
+					askdaihuidadsc:'从北京经曼彻斯特到贝尔法斯特，如何办理中转手续，如何办理入境，再如何从T2去到T3',
+					askavatarid:'1',
+					askavatarimg:'//pic.lvmama.com//uploads/pc/place2/2017-07-26/3f96e490-9e85-45ea-97bb-49f7ebaea8b3.jpg',
+					askavatarzuozhe:'cat miao',
+					askdaihuidatime:'30分钟前',
+					askdaihuidashu:'56'
+				}
+				],
+			message: '查询成功'
+		}
+	})
 export default {
+	buildaskdaihuida,
+	buildaskzuxin,
+	buildaskjingxuan,
+	buildAskbanner,
 	buildPersonalbiaoqiao,
 	builddingyuefirst,
 	builddingyuetwo,

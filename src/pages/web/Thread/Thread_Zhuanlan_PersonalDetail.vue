@@ -130,6 +130,7 @@
 		name: 'Thread_Zhuanlan_PersonalDetail',
 		data() {
 			return {
+				Zhuanlanbannerid: this.$route.params.Zhuanlanbannerid,
 				wenzhang: [],
 				istabBar: false,
 				dingyue: true,
