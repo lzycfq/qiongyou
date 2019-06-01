@@ -29,9 +29,9 @@
 								</el-dropdown-item>
 								<el-dropdown-item><router-link style="color: #606266;" to="/Thread_Zhuanlan">旅行专栏<em class="tra_flag">NEW</em></router-link></el-dropdown-item>
 								<el-dropdown-item><router-link style="color: #606266;" to="/Thread_Ask">旅行问答</router-link></el-dropdown-item>
-								<el-dropdown-item>JNE旅行生活美学</el-dropdown-item>
-								<el-dropdown-item>Biu伴(结伴而行)</el-dropdown-item>
-								<el-dropdown-item>分责任的旅行</el-dropdown-item>
+								<el-dropdown-item>JNE旅行生活美学</el-dropdown-item>								
+								<el-dropdown-item><router-link style="color: #606266;" to="/Thread_CompanionsList">Biu伴(结伴而行)</router-link></el-dropdown-item>														
+								<el-dropdown-item><router-link style="color: #606266;" to="/About">负责任的旅行</router-link></el-dropdown-item>					
 								<el-dropdown-item>特别策划</el-dropdown-item>
 								<el-dropdown-item>旅行精选视频</el-dropdown-item>
 

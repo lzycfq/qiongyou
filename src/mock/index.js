@@ -9890,7 +9890,32 @@ const buildaskdaihuida = Mock.mock(
 			message: '查询成功'
 		}
 	})
+	const buildAboutbanner = Mock.mock(
+		'/api/buildAboutbanner', 'get', (req, res) => {
+			return {
+				code: 200,
+				data: [
+					{
+						Aboutbannerimg:'//static.qyer.com/models/project/rt_travel/img/cover02.png',
+						Aboutbannertitle:'负责任的旅行 - 穷游网',
+						Aboutbannerdscimg:'//static.qyer.com/models/project/rt_travel/img/cover02-slogan.png'
+					},
+					{
+						Aboutbannerimg:'//static.qyer.com/models/project/rt_travel/img/cover03.png',
+						Aboutbannertitle:'负责任的旅行 - 穷游网',
+						Aboutbannerdscimg:'//static.qyer.com/models/project/rt_travel/img/cover03-slogan.png'
+					},
+					{
+						Aboutbannerimg:'//static.qyer.com/models/project/rt_travel/img/cover05.png',
+						Aboutbannertitle:'负责任的旅行 - 穷游网',
+						Aboutbannerdscimg:'//static.qyer.com/models/project/rt_travel/img/cover05-slogan.png'
+					}
+					],
+				message: '查询成功'
+			}
+		})
 export default {
+	buildAboutbanner,
 	buildaskdaihuida,
 	buildaskzuxin,
 	buildaskjingxuan,

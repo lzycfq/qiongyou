@@ -156,11 +156,19 @@ export default new Router({
 				// 	},
 				// 				
 				// },
-					{
+				// 	{
+				// 	path: '/',
+				// 	name: 'Thread_Ask',//:id
+				// 	component(resolve) {
+				// 		require(['../pages/web/Thread/Thread_Ask'], resolve)
+				// 	},
+				// 				
+				// },
+						{
 					path: '/',
-					name: 'Thread_Ask',//:id
+					name: 'About',//:id
 					component(resolve) {
-						require(['../pages/web/Thread/Thread_Ask'], resolve)
+						require(['../pages/web/About'], resolve)
 					},
 								
 				},
