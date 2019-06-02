@@ -10038,8 +10038,31 @@ const buildaskdaihuida = Mock.mock(
 							message: '查询成功'
 						}
 					})
+						const buildVibanner = Mock.mock(
+						'/api/buildVibanner', 'get', (req, res) => {
+							return {
+								code: 200,
+								data: [
+									
+									{
+										Vibannerid:1,
+										Vibannerimg:'http://pic.qyer.com/video_partner/poster/20190520/1558318778120'
+									},
+									{
+										Vibannerid:2,
+										Vibannerimg:'//pics.lvjs.com.cn/uploads/pc/place2/2019-05-21/9b2b688c-9f62-4b5f-b0e9-d98fda244660.jpg'
+									},
+									{
+										Vibannerid:3,
+										Vibannerimg:'//pics.lvjs.com.cn/uploads/pc/place2/2019-05-16/eca4ff07-bba6-4cb7-baf7-e478ec3c0a61.jpg'
+									}
+								],
+								message: '查询成功'
+							}
+						})
 			
 export default {
+	buildVibanner,
 	buildtablist,
 	buildplbanner,
 	buildAboutbanner,

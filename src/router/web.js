@@ -172,11 +172,19 @@ export default new Router({
 				// 	},
 				// 				
 				// },
+				// {
+				// 	path: '/',
+				// 	name: 'Q_Play',//:id
+				// 	component(resolve) {
+				// 		require(['../pages/web/Q_Play'], resolve)
+				// 	},
+				// 				
+				// },
 				{
 					path: '/',
-					name: 'Q_Play',//:id
+					name: 'Q_Video',//:id
 					component(resolve) {
-						require(['../pages/web/Q_Play'], resolve)
+						require(['../pages/web/Q_Video'], resolve)
 					},
 								
 				},

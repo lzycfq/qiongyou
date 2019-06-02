@@ -31,7 +31,8 @@
 
 								<el-dropdown-item><router-link style="color: #606266;" to="/Q_Play">特别策划</router-link></el-dropdown-item>													
 
-								<el-dropdown-item>旅行精选视频</el-dropdown-item>
+							<el-dropdown-item><router-link style="color: #606266;" to="/Q_Video">旅行精选视频</router-link></el-dropdown-item>													
+
 
 							</el-dropdown-menu>
 						</el-dropdown>
