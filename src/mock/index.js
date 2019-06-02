@@ -9914,7 +9914,134 @@ const buildaskdaihuida = Mock.mock(
 				message: '查询成功'
 			}
 		})
+		const buildplbanner = Mock.mock(
+			'/api/buildplbanner', 'get', (req, res) => {
+				return {
+					code: 200,
+					data: [
+						
+						{
+							plbannerid:1,
+							plbannerimg:'//pics.lvjs.com.cn/uploads/pc/place2/2019-05-31/f1c54cbc-fb89-4fe7-a718-f84c872155f2.jpg'
+						},
+						{
+							plbannerid:2,
+							plbannerimg:'//pics.lvjs.com.cn/uploads/pc/place2/2019-05-21/9b2b688c-9f62-4b5f-b0e9-d98fda244660.jpg'
+						},
+						{
+							plbannerid:3,
+							plbannerimg:'//pics.lvjs.com.cn/uploads/pc/place2/2019-05-16/eca4ff07-bba6-4cb7-baf7-e478ec3c0a61.jpg'
+						}
+					],
+					message: '查询成功'
+				}
+			})
+			const buildtablist = Mock.mock(
+				'/api/buildtablist', 'get', (req, res) => {
+					return {
+						code: 200,
+						data: [
+							
+							{
+								tablistname:'全部',
+								
+							},
+							{
+								tablistname:'地球研究社',
+								
+							},
+							
+							{
+								tablistname:'去也',
+								
+							},
+							{
+								tablistname:'榜单',
+								
+							},
+							{
+								tablistname:'上瘾团',
+								
+							},
+							{
+								tablistname:'三天两夜',
+								
+							},
+							
+						],
+						message: '查询成功'
+					}
+				})
+				const buildcardssetlibuildcardssetli = Mock.mock(
+					'/api/buildcardssetli', 'get', (req, res) => {
+						return {
+							code: 200,
+							data: [
+								
+								{
+									cardssetliid:1,
+									cardssetliimg:"//pic.lvmama.com/uploads/pc/place2/2019-05-13/85fd87d1-9803-493e-afd9-0e11bfc021e8_480_320.jpg",
+									cardssetlititle:'《三天两夜》第五期：京圈“漫”生活',
+									cardssetliqude:"//pic.qyer.com/zt/c360/0d9e/c508/85a4/91fc/abb9/a9c3/24ad"
+								},
+								{
+									cardssetliid:1,
+									cardssetliimg:"//pic.lvmama.com/uploads/pc/place2/2019-05-13/85fd87d1-9803-493e-afd9-0e11bfc021e8_480_320.jpg",
+									cardssetlititle:'《三天两夜》第五期：京圈“漫”生活',
+									cardssetliqude:"//pic.qyer.com/zt/c360/0d9e/c508/85a4/91fc/abb9/a9c3/24ad"
+								},
+								{
+									cardssetliid:1,
+									cardssetliimg:"//pic.lvmama.com/uploads/pc/place2/2019-05-13/85fd87d1-9803-493e-afd9-0e11bfc021e8_480_320.jpg",
+									cardssetlititle:'《三天两夜》第五期：京圈“漫”生活',
+									cardssetliqude:"//pic.qyer.com/zt/c360/0d9e/c508/85a4/91fc/abb9/a9c3/24ad"
+								},
+								{
+									cardssetliid:1,
+									cardssetliimg:"//pic.lvmama.com/uploads/pc/place2/2019-05-13/85fd87d1-9803-493e-afd9-0e11bfc021e8_480_320.jpg",
+									cardssetlititle:'《三天两夜》第五期：京圈“漫”生活',
+									cardssetliqude:"//pic.qyer.com/zt/c360/0d9e/c508/85a4/91fc/abb9/a9c3/24ad"
+								},
+								{
+									cardssetliid:1,
+									cardssetliimg:"//pic.lvmama.com/uploads/pc/place2/2019-05-13/85fd87d1-9803-493e-afd9-0e11bfc021e8_480_320.jpg",
+									cardssetlititle:'《三天两夜》第五期：京圈“漫”生活',
+									cardssetliqude:"//pic.qyer.com/zt/c360/0d9e/c508/85a4/91fc/abb9/a9c3/24ad"
+								},
+								{
+									cardssetliid:1,
+									cardssetliimg:"//pic.lvmama.com/uploads/pc/place2/2019-05-13/85fd87d1-9803-493e-afd9-0e11bfc021e8_480_320.jpg",
+									cardssetlititle:'《三天两夜》第五期：京圈“漫”生活',
+									cardssetliqude:"//pic.qyer.com/zt/c360/0d9e/c508/85a4/91fc/abb9/a9c3/24ad"
+								},
+								
+								{
+									cardssetliid:1,
+									cardssetliimg:"//pic.lvmama.com/uploads/pc/place2/2019-05-13/85fd87d1-9803-493e-afd9-0e11bfc021e8_480_320.jpg",
+									cardssetlititle:'《三天两夜》第五期：京圈“漫”生活',
+									cardssetliqude:"//pic.qyer.com/zt/c360/0d9e/c508/85a4/91fc/abb9/a9c3/24ad"
+								},
+								{
+									cardssetliid:1,
+									cardssetliimg:"//pic.lvmama.com/uploads/pc/place2/2019-05-13/85fd87d1-9803-493e-afd9-0e11bfc021e8_480_320.jpg",
+									cardssetlititle:'《三天两夜》第五期：京圈“漫”生活',
+									cardssetliqude:"//pic.qyer.com/zt/c360/0d9e/c508/85a4/91fc/abb9/a9c3/24ad"
+								},
+								{
+									cardssetliid:1,
+									cardssetliimg:"//pic.lvmama.com/uploads/pc/place2/2019-05-13/85fd87d1-9803-493e-afd9-0e11bfc021e8_480_320.jpg",
+									cardssetlititle:'《三天两夜》第五期：京圈“漫”生活',
+									cardssetliqude:"//pic.qyer.com/zt/c360/0d9e/c508/85a4/91fc/abb9/a9c3/24ad"
+								}
+								
+							],
+							message: '查询成功'
+						}
+					})
+			
 export default {
+	buildtablist,
+	buildplbanner,
 	buildAboutbanner,
 	buildaskdaihuida,
 	buildaskzuxin,

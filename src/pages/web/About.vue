@@ -661,6 +661,26 @@
 						</el-tab-pane>
 					</el-tabs>
 				</div>
+				<div class="aboutright">
+					<div class="rt_content_more">
+	<div class="title">更多相关</div>
+    	<div class="pic">
+        <router-link to="">
+		<img src="//pics.lvjs.com.cn//uploads/pc/place2/2019-03-24/b3492b4b-c33f-4e65-a8ba-44b445fc855c_300_200.jpg" alt="">
+        </router-link>
+	</div>
+    	<div class="pic">
+        <router-link to=''>
+		<img src="//pics.lvjs.com.cn//uploads/pc/place2/2019-03-24/b3492b4b-c33f-4e65-a8ba-44b445fc855c_300_200.jpg" alt="">
+        </router-link>
+	</div>
+    	<div class="pic">
+        <router-link to=''>
+		<img src="//pics.lvjs.com.cn//uploads/pc/place2/2019-03-24/b3492b4b-c33f-4e65-a8ba-44b445fc855c_300_200.jpg" alt="">
+        </router-link>
+	</div>
+    </div>
+				</div>
 			</div>
 			<div class="rt_contenttabline"></div>
 		</div>
@@ -701,7 +721,7 @@
 		position: relative;
 
 		.rt_content {
-			width: 1160px;
+			width: 980px;
 			margin: 0 auto;
 			height: auto;
 
@@ -759,47 +779,78 @@
 				.mailto {
 					color: #e31d1a;
 				}
-.art_desc {
-    margin: 25px 0;
-}
-.art_desc, .art_thx {
-    color: #636363;
-    font-size: 14px;
-}
-.art_thx {
-    font-weight: bold;
-    margin: 35px 0;
-}
-.rt_partner_listwrap {
-    background: #F5F5F5;
-    padding: 30px 10px 30px 30px;
-    overflow: hidden;
-    font-size: 0;
- .rt_pat_list {
-    width: 190px;
-    margin-right: 20px;
-    display: inline-block;
-	 img {
-    height: 100px;
-    border: none;
-    background: #fff;
-    border-radius: 4px;
-}
-.rt_pat_list_title {
-    width: 190px;
-    text-align: center;
-    font-size: 13px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    padding: 10px 0 20px;
-    font-weight: bold;
-    overflow: hidden;
-	a {
-    color: #323232;
-}
-}
-}
-}
+
+				.art_desc {
+					margin: 25px 0;
+				}
+
+				.art_desc,
+				.art_thx {
+					color: #636363;
+					font-size: 14px;
+				}
+
+				.art_thx {
+					font-weight: bold;
+					margin: 35px 0;
+				}
+
+				.rt_partner_listwrap {
+					background: #F5F5F5;
+					padding: 30px 10px 30px 30px;
+					overflow: hidden;
+					font-size: 0;
+
+					.rt_pat_list {
+						width: 190px;
+						margin-right: 20px;
+						display: inline-block;
+
+						img {
+							height: 100px;
+							border: none;
+							background: #fff;
+							border-radius: 4px;
+						}
+
+						.rt_pat_list_title {
+							width: 190px;
+							text-align: center;
+							font-size: 13px;
+							text-overflow: ellipsis;
+							white-space: nowrap;
+							padding: 10px 0 20px;
+							font-weight: bold;
+							overflow: hidden;
+
+							a {
+								color: #323232;
+							}
+						}
+					}
+				}
+				
+				}
+				.aboutright{
+					float: right;
+					margin-top: 100px;
+				    width: 270px;
+				    font-size: 14px;
+					margin-bottom: 40px;
+				 .title {
+				    margin-bottom: 30px;
+				    color: #323232;
+				    font-weight: 700;
+				    font-size: 16px;
+				}
+				 .pic {
+				    margin-bottom: 36px;
+				 img {
+				    width: 100%;
+				    cursor: pointer;
+				    height: 160px;
+				}
+				}
 			}
 		}
 

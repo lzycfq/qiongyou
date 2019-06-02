@@ -164,11 +164,19 @@ export default new Router({
 				// 	},
 				// 				
 				// },
-						{
+				// 		{
+				// 	path: '/',
+				// 	name: 'About',//:id
+				// 	component(resolve) {
+				// 		require(['../pages/web/About'], resolve)
+				// 	},
+				// 				
+				// },
+				{
 					path: '/',
-					name: 'About',//:id
+					name: 'Q_Play',//:id
 					component(resolve) {
-						require(['../pages/web/About'], resolve)
+						require(['../pages/web/Q_Play'], resolve)
 					},
 								
 				},

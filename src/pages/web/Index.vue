@@ -639,7 +639,9 @@ import headers from '../../pages/web/compoents/header.vue'
 			}
 		},
 		components: {
-			headers
+			headers,
+			 swiper,
+    swiperSlide
 		},
 
 	}
