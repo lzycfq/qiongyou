@@ -80,24 +80,26 @@
 				cardssetli:[],
 				search_params:{},
 				sbs: {
-					observer: true, //修改swiper自己或子元素时，自动初始化swiper
-					observeParents: true, //修改swiper的父元素时，自动初始化swiper
-					loop: true,
-					autoplay: {
-						delay: 3000,
-						stopOnLastSlide: false,
-						disableOnInteraction: false,
-					},
-					navigation: {
-						nextEl: '.swiper-button-next',
-						prevEl: '.swiper-button-prev',
-					},
-					pagination: {
-						el: '.swiper-pagination',
-					},
-					autoplayDisableOnInteraction: false,
-					slidesPerView: "auto", //设置slider容器能够同时显示的slides数量(carousel模式)。可以设置为数字（可为小数，小数不可loop），或者 'auto'则自动根据slides的宽度来设定数量。loop模式下如果设置为'auto'还需要设置另外一个参数loopedSlides。
-					centeredSlides: true, //<span style="color:rgb(68,68,68);font-family:'microsoft yahei';font-size:13px;">设定为true时，活动块会居中，而不是默认状态下的居左。</span>
+				initialSlide: 1,
+				watchSlidesProgress: true,
+				loop: true,
+				preloadImages: false, //不加载所有图片
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+				lazy: {
+					loadPrevNext: true,
+				},
+				lazyLoading: true, //懒加载开启
+				autoplay: {
+					delay: 3000,
+					stopOnLastSlide: false,
+					disableOnInteraction: false,
+				},
+				autoplayDisableOnInteraction: true,
+				slidesPerView: "auto", //设置slider容器能够同时显示的slides数量(carousel模式)。可以设置为数字（可为小数，小数不可loop），或者 'auto'则自动根据slides的宽度来设定数量。loop模式下如果设置为'auto'还需要设置另外一个参数loopedSlides。
+				centeredSlides: true //<span style="color:rgb(68,68,68);font-family:'microsoft yahei';font-size:13px;">设定为true时，活动块会居中，而不是默认状态下的居左。</span>
 
 				}
 			}

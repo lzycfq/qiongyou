@@ -9763,49 +9763,48 @@ const buildaskzuxin = Mock.mock(
 	'/api/buildaskzuxin', 'get', (req, res) => {
 		return {
 			code: 200,
-			data: [
-				{
-					askzuxinid:1,
-					askzuxintitle:'从Fluelen到卢塞恩的轮渡，需要多长时间、最晚几点？',
-					askzuxindsc:'据说国庆期间瑞士要晚上9点多才天黑，那我4点半到了就不在Andermatt住宿了，继续转火车北上到Fluelen，然后轮渡去Luzern，不知道6、7点到了Fluelen火车站，再走去轮渡点，轮渡多久到卢塞恩？最晚船次几点啊？',
-					askavatarid:'1',
-					askavatarzuozhe:'小飞侠',
-					askzuxintime:'3分钟前',
-					askavatarimg:'http://pic.lvmama.com/uploads/pc/place2/2017-03-23/e8c28f78-6963-4a13-b240-e09f2fb51620_480_320.jpg',
-					askzuxinhuidashu:'3'
+			data: [{
+					askzuxinid: 1,
+					askzuxintitle: '从Fluelen到卢塞恩的轮渡，需要多长时间、最晚几点？',
+					askzuxindsc: '据说国庆期间瑞士要晚上9点多才天黑，那我4点半到了就不在Andermatt住宿了，继续转火车北上到Fluelen，然后轮渡去Luzern，不知道6、7点到了Fluelen火车站，再走去轮渡点，轮渡多久到卢塞恩？最晚船次几点啊？',
+					askavatarid: '1',
+					askavatarzuozhe: '小飞侠',
+					askzuxintime: '3分钟前',
+					askavatarimg: 'http://pic.lvmama.com/uploads/pc/place2/2017-03-23/e8c28f78-6963-4a13-b240-e09f2fb51620_480_320.jpg',
+					askzuxinhuidashu: '3'
 				},
 				{
-					askzuxinid:1,
-					askzuxintitle:'从Fluelen到卢塞恩的轮渡，需要多长时间、最晚几点？',
-					askzuxindsc:'据说国庆期间瑞士要晚上9点多才天黑，那我4点半到了就不在Andermatt住宿了，继续转火车北上到Fluelen，然后轮渡去Luzern，不知道6、7点到了Fluelen火车站，再走去轮渡点，轮渡多久到卢塞恩？最晚船次几点啊？',
-					askavatarimg:'http://pic.lvmama.com/uploads/pc/place2/2017-03-23/e8c28f78-6963-4a13-b240-e09f2fb51620_480_320.jpg',
+					askzuxinid: 1,
+					askzuxintitle: '从Fluelen到卢塞恩的轮渡，需要多长时间、最晚几点？',
+					askzuxindsc: '据说国庆期间瑞士要晚上9点多才天黑，那我4点半到了就不在Andermatt住宿了，继续转火车北上到Fluelen，然后轮渡去Luzern，不知道6、7点到了Fluelen火车站，再走去轮渡点，轮渡多久到卢塞恩？最晚船次几点啊？',
+					askavatarimg: 'http://pic.lvmama.com/uploads/pc/place2/2017-03-23/e8c28f78-6963-4a13-b240-e09f2fb51620_480_320.jpg',
 
-					askavatarid:'1',
-					askavatarzuozhe:'小飞侠',
-					askzuxintime:'3分钟前',
-					askzuxinhuidashu:'3'
+					askavatarid: '1',
+					askavatarzuozhe: '小飞侠',
+					askzuxintime: '3分钟前',
+					askzuxinhuidashu: '3'
 				},
 				{
-					askzuxinid:1,
-					askzuxintitle:'从Fluelen到卢塞恩的轮渡，需要多长时间、最晚几点？',
-					askzuxindsc:'据说国庆期间瑞士要晚上9点多才天黑，那我4点半到了就不在Andermatt住宿了，继续转火车北上到Fluelen，然后轮渡去Luzern，不知道6、7点到了Fluelen火车站，再走去轮渡点，轮渡多久到卢塞恩？最晚船次几点啊？',
-					askavatarimg:'http://pic.lvmama.com/uploads/pc/place2/2017-03-23/e8c28f78-6963-4a13-b240-e09f2fb51620_480_320.jpg',
+					askzuxinid: 1,
+					askzuxintitle: '从Fluelen到卢塞恩的轮渡，需要多长时间、最晚几点？',
+					askzuxindsc: '据说国庆期间瑞士要晚上9点多才天黑，那我4点半到了就不在Andermatt住宿了，继续转火车北上到Fluelen，然后轮渡去Luzern，不知道6、7点到了Fluelen火车站，再走去轮渡点，轮渡多久到卢塞恩？最晚船次几点啊？',
+					askavatarimg: 'http://pic.lvmama.com/uploads/pc/place2/2017-03-23/e8c28f78-6963-4a13-b240-e09f2fb51620_480_320.jpg',
 
-					askavatarid:'1',
-					askavatarzuozhe:'小飞侠',
-					askzuxintime:'3分钟前',
-					askzuxinhuidashu:'3'
+					askavatarid: '1',
+					askavatarzuozhe: '小飞侠',
+					askzuxintime: '3分钟前',
+					askzuxinhuidashu: '3'
 				},
 				{
-					askzuxinid:1,
-					askzuxintitle:'从Fluelen到卢塞恩的轮渡，需要多长时间、最晚几点？',
-					askzuxindsc:'据说国庆期间瑞士要晚上9点多才天黑，那我4点半到了就不在Andermatt住宿了，继续转火车北上到Fluelen，然后轮渡去Luzern，不知道6、7点到了Fluelen火车站，再走去轮渡点，轮渡多久到卢塞恩？最晚船次几点啊？',
-					askavatarimg:'http://pic.lvmama.com/uploads/pc/place2/2017-03-23/e8c28f78-6963-4a13-b240-e09f2fb51620_480_320.jpg',
+					askzuxinid: 1,
+					askzuxintitle: '从Fluelen到卢塞恩的轮渡，需要多长时间、最晚几点？',
+					askzuxindsc: '据说国庆期间瑞士要晚上9点多才天黑，那我4点半到了就不在Andermatt住宿了，继续转火车北上到Fluelen，然后轮渡去Luzern，不知道6、7点到了Fluelen火车站，再走去轮渡点，轮渡多久到卢塞恩？最晚船次几点啊？',
+					askavatarimg: 'http://pic.lvmama.com/uploads/pc/place2/2017-03-23/e8c28f78-6963-4a13-b240-e09f2fb51620_480_320.jpg',
 
-					askavatarid:'1',
-					askavatarzuozhe:'小飞侠',
-					askzuxintime:'3分钟前',
-					askzuxinhuidashu:'3'
+					askavatarid: '1',
+					askavatarzuozhe: '小飞侠',
+					askzuxintime: '3分钟前',
+					askzuxinhuidashu: '3'
 				}
 			],
 			message: '查询成功'
@@ -9815,253 +9814,681 @@ const buildaskdaihuida = Mock.mock(
 	'/api/buildaskdaihuida', 'get', (req, res) => {
 		return {
 			code: 200,
-			data: [
-				{
-					askdaihuidaid:1,
-					askdaihuidatitle:'从北京经曼彻斯特到贝尔法斯特，如何办理中转手续',
-					askdaihuidadsc:'从北京经曼彻斯特到贝尔法斯特，如何办理中转手续，如何办理入境，再如何从T2去到T3',
-					askavatarid:'1',
-					askavatarimg:'//pic.lvmama.com//uploads/pc/place2/2017-07-26/3f96e490-9e85-45ea-97bb-49f7ebaea8b3.jpg',
-					askavatarzuozhe:'cat miao',
-					askdaihuidatime:'30分钟前',
-					askdaihuidashu:'56'
+			data: [{
+					askdaihuidaid: 1,
+					askdaihuidatitle: '从北京经曼彻斯特到贝尔法斯特，如何办理中转手续',
+					askdaihuidadsc: '从北京经曼彻斯特到贝尔法斯特，如何办理中转手续，如何办理入境，再如何从T2去到T3',
+					askavatarid: '1',
+					askavatarimg: '//pic.lvmama.com//uploads/pc/place2/2017-07-26/3f96e490-9e85-45ea-97bb-49f7ebaea8b3.jpg',
+					askavatarzuozhe: 'cat miao',
+					askdaihuidatime: '30分钟前',
+					askdaihuidashu: '56'
 				},
 				{
-					askdaihuidaid:1,
-					askdaihuidatitle:'从北京经曼彻斯特到贝尔法斯特，如何办理中转手续',
-					askdaihuidadsc:'从北京经曼彻斯特到贝尔法斯特，如何办理中转手续，如何办理入境，再如何从T2去到T3',
-					askavatarid:'1',
-					askavatarimg:'//pic.lvmama.com//uploads/pc/place2/2017-07-26/3f96e490-9e85-45ea-97bb-49f7ebaea8b3.jpg',
-					askavatarzuozhe:'cat miao',
-					askdaihuidatime:'30分钟前',
-					askdaihuidashu:'56'
+					askdaihuidaid: 1,
+					askdaihuidatitle: '从北京经曼彻斯特到贝尔法斯特，如何办理中转手续',
+					askdaihuidadsc: '从北京经曼彻斯特到贝尔法斯特，如何办理中转手续，如何办理入境，再如何从T2去到T3',
+					askavatarid: '1',
+					askavatarimg: '//pic.lvmama.com//uploads/pc/place2/2017-07-26/3f96e490-9e85-45ea-97bb-49f7ebaea8b3.jpg',
+					askavatarzuozhe: 'cat miao',
+					askdaihuidatime: '30分钟前',
+					askdaihuidashu: '56'
 				},
 				{
-					askdaihuidaid:1,
-					askdaihuidatitle:'从北京经曼彻斯特到贝尔法斯特，如何办理中转手续',
-					askdaihuidadsc:'从北京经曼彻斯特到贝尔法斯特，如何办理中转手续，如何办理入境，再如何从T2去到T3',
-					askavatarid:'1',
-					askavatarimg:'//pic.lvmama.com//uploads/pc/place2/2017-07-26/3f96e490-9e85-45ea-97bb-49f7ebaea8b3.jpg',
-					askavatarzuozhe:'cat miao',
-					askdaihuidatime:'30分钟前',
-					askdaihuidashu:'56'
+					askdaihuidaid: 1,
+					askdaihuidatitle: '从北京经曼彻斯特到贝尔法斯特，如何办理中转手续',
+					askdaihuidadsc: '从北京经曼彻斯特到贝尔法斯特，如何办理中转手续，如何办理入境，再如何从T2去到T3',
+					askavatarid: '1',
+					askavatarimg: '//pic.lvmama.com//uploads/pc/place2/2017-07-26/3f96e490-9e85-45ea-97bb-49f7ebaea8b3.jpg',
+					askavatarzuozhe: 'cat miao',
+					askdaihuidatime: '30分钟前',
+					askdaihuidashu: '56'
 				},
 				{
-					askdaihuidaid:1,
-					askdaihuidatitle:'从北京经曼彻斯特到贝尔法斯特，如何办理中转手续',
-					askdaihuidadsc:'从北京经曼彻斯特到贝尔法斯特，如何办理中转手续，如何办理入境，再如何从T2去到T3',
-					askavatarid:'1',
-					askavatarimg:'//pic.lvmama.com//uploads/pc/place2/2017-07-26/3f96e490-9e85-45ea-97bb-49f7ebaea8b3.jpg',
-					askavatarzuozhe:'cat miao',
-					askdaihuidatime:'30分钟前',
-					askdaihuidashu:'56'
+					askdaihuidaid: 1,
+					askdaihuidatitle: '从北京经曼彻斯特到贝尔法斯特，如何办理中转手续',
+					askdaihuidadsc: '从北京经曼彻斯特到贝尔法斯特，如何办理中转手续，如何办理入境，再如何从T2去到T3',
+					askavatarid: '1',
+					askavatarimg: '//pic.lvmama.com//uploads/pc/place2/2017-07-26/3f96e490-9e85-45ea-97bb-49f7ebaea8b3.jpg',
+					askavatarzuozhe: 'cat miao',
+					askdaihuidatime: '30分钟前',
+					askdaihuidashu: '56'
 				},
 				{
-					askdaihuidaid:1,
-					askdaihuidatitle:'从北京经曼彻斯特到贝尔法斯特，如何办理中转手续',
-					askdaihuidadsc:'从北京经曼彻斯特到贝尔法斯特，如何办理中转手续，如何办理入境，再如何从T2去到T3',
-					askavatarid:'1',
-					askavatarimg:'//pic.lvmama.com//uploads/pc/place2/2017-07-26/3f96e490-9e85-45ea-97bb-49f7ebaea8b3.jpg',
-					askavatarzuozhe:'cat miao',
-					askdaihuidatime:'30分钟前',
-					askdaihuidashu:'56'
+					askdaihuidaid: 1,
+					askdaihuidatitle: '从北京经曼彻斯特到贝尔法斯特，如何办理中转手续',
+					askdaihuidadsc: '从北京经曼彻斯特到贝尔法斯特，如何办理中转手续，如何办理入境，再如何从T2去到T3',
+					askavatarid: '1',
+					askavatarimg: '//pic.lvmama.com//uploads/pc/place2/2017-07-26/3f96e490-9e85-45ea-97bb-49f7ebaea8b3.jpg',
+					askavatarzuozhe: 'cat miao',
+					askdaihuidatime: '30分钟前',
+					askdaihuidashu: '56'
 				},
 				{
-					askdaihuidaid:1,
-					askdaihuidatitle:'从北京经曼彻斯特到贝尔法斯特，如何办理中转手续',
-					askdaihuidadsc:'从北京经曼彻斯特到贝尔法斯特，如何办理中转手续，如何办理入境，再如何从T2去到T3',
-					askavatarid:'1',
-					askavatarimg:'//pic.lvmama.com//uploads/pc/place2/2017-07-26/3f96e490-9e85-45ea-97bb-49f7ebaea8b3.jpg',
-					askavatarzuozhe:'cat miao',
-					askdaihuidatime:'30分钟前',
-					askdaihuidashu:'56'
+					askdaihuidaid: 1,
+					askdaihuidatitle: '从北京经曼彻斯特到贝尔法斯特，如何办理中转手续',
+					askdaihuidadsc: '从北京经曼彻斯特到贝尔法斯特，如何办理中转手续，如何办理入境，再如何从T2去到T3',
+					askavatarid: '1',
+					askavatarimg: '//pic.lvmama.com//uploads/pc/place2/2017-07-26/3f96e490-9e85-45ea-97bb-49f7ebaea8b3.jpg',
+					askavatarzuozhe: 'cat miao',
+					askdaihuidatime: '30分钟前',
+					askdaihuidashu: '56'
 				},
 				{
-					askdaihuidaid:1,
-					askdaihuidatitle:'从北京经曼彻斯特到贝尔法斯特，如何办理中转手续',
-					askdaihuidadsc:'从北京经曼彻斯特到贝尔法斯特，如何办理中转手续，如何办理入境，再如何从T2去到T3',
-					askavatarid:'1',
-					askavatarimg:'//pic.lvmama.com//uploads/pc/place2/2017-07-26/3f96e490-9e85-45ea-97bb-49f7ebaea8b3.jpg',
-					askavatarzuozhe:'cat miao',
-					askdaihuidatime:'30分钟前',
-					askdaihuidashu:'56'
+					askdaihuidaid: 1,
+					askdaihuidatitle: '从北京经曼彻斯特到贝尔法斯特，如何办理中转手续',
+					askdaihuidadsc: '从北京经曼彻斯特到贝尔法斯特，如何办理中转手续，如何办理入境，再如何从T2去到T3',
+					askavatarid: '1',
+					askavatarimg: '//pic.lvmama.com//uploads/pc/place2/2017-07-26/3f96e490-9e85-45ea-97bb-49f7ebaea8b3.jpg',
+					askavatarzuozhe: 'cat miao',
+					askdaihuidatime: '30分钟前',
+					askdaihuidashu: '56'
 				}
-				],
+			],
 			message: '查询成功'
 		}
 	})
-	const buildAboutbanner = Mock.mock(
-		'/api/buildAboutbanner', 'get', (req, res) => {
+const buildAboutbanner = Mock.mock(
+	'/api/buildAboutbanner', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					Aboutbannerimg: '//static.qyer.com/models/project/rt_travel/img/cover02.png',
+					Aboutbannertitle: '负责任的旅行 - 穷游网',
+					Aboutbannerdscimg: '//static.qyer.com/models/project/rt_travel/img/cover02-slogan.png'
+				},
+				{
+					Aboutbannerimg: '//static.qyer.com/models/project/rt_travel/img/cover03.png',
+					Aboutbannertitle: '负责任的旅行 - 穷游网',
+					Aboutbannerdscimg: '//static.qyer.com/models/project/rt_travel/img/cover03-slogan.png'
+				},
+				{
+					Aboutbannerimg: '//static.qyer.com/models/project/rt_travel/img/cover05.png',
+					Aboutbannertitle: '负责任的旅行 - 穷游网',
+					Aboutbannerdscimg: '//static.qyer.com/models/project/rt_travel/img/cover05-slogan.png'
+				}
+			],
+			message: '查询成功'
+		}
+	})
+const buildplbanner = Mock.mock(
+	'/api/buildplbanner', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [
+
+				{
+					plbannerid: 1,
+					plbannerimg: '//pics.lvjs.com.cn/uploads/pc/place2/2019-05-31/f1c54cbc-fb89-4fe7-a718-f84c872155f2.jpg'
+				},
+				{
+					plbannerid: 2,
+					plbannerimg: '//pics.lvjs.com.cn/uploads/pc/place2/2019-05-21/9b2b688c-9f62-4b5f-b0e9-d98fda244660.jpg'
+				},
+				{
+					plbannerid: 3,
+					plbannerimg: '//pics.lvjs.com.cn/uploads/pc/place2/2019-05-16/eca4ff07-bba6-4cb7-baf7-e478ec3c0a61.jpg'
+				}
+			],
+			message: '查询成功'
+		}
+	})
+const buildtablist = Mock.mock(
+	'/api/buildtablist', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [
+
+				{
+					tablistname: '全部',
+
+				},
+				{
+					tablistname: '地球研究社',
+
+				},
+
+				{
+					tablistname: '去也',
+
+				},
+				{
+					tablistname: '榜单',
+
+				},
+				{
+					tablistname: '上瘾团',
+
+				},
+				{
+					tablistname: '三天两夜',
+
+				},
+
+			],
+			message: '查询成功'
+		}
+	})
+const buildcardssetlibuildcardssetli = Mock.mock(
+	'/api/buildcardssetli', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [
+
+				{
+					cardssetliid: 1,
+					cardssetliimg: "//pic.lvmama.com/uploads/pc/place2/2019-05-13/85fd87d1-9803-493e-afd9-0e11bfc021e8_480_320.jpg",
+					cardssetlititle: '《三天两夜》第五期：京圈“漫”生活',
+					cardssetliqude: "//pic.qyer.com/zt/c360/0d9e/c508/85a4/91fc/abb9/a9c3/24ad"
+				},
+				{
+					cardssetliid: 1,
+					cardssetliimg: "//pic.lvmama.com/uploads/pc/place2/2019-05-13/85fd87d1-9803-493e-afd9-0e11bfc021e8_480_320.jpg",
+					cardssetlititle: '《三天两夜》第五期：京圈“漫”生活',
+					cardssetliqude: "//pic.qyer.com/zt/c360/0d9e/c508/85a4/91fc/abb9/a9c3/24ad"
+				},
+				{
+					cardssetliid: 1,
+					cardssetliimg: "//pic.lvmama.com/uploads/pc/place2/2019-05-13/85fd87d1-9803-493e-afd9-0e11bfc021e8_480_320.jpg",
+					cardssetlititle: '《三天两夜》第五期：京圈“漫”生活',
+					cardssetliqude: "//pic.qyer.com/zt/c360/0d9e/c508/85a4/91fc/abb9/a9c3/24ad"
+				},
+				{
+					cardssetliid: 1,
+					cardssetliimg: "//pic.lvmama.com/uploads/pc/place2/2019-05-13/85fd87d1-9803-493e-afd9-0e11bfc021e8_480_320.jpg",
+					cardssetlititle: '《三天两夜》第五期：京圈“漫”生活',
+					cardssetliqude: "//pic.qyer.com/zt/c360/0d9e/c508/85a4/91fc/abb9/a9c3/24ad"
+				},
+				{
+					cardssetliid: 1,
+					cardssetliimg: "//pic.lvmama.com/uploads/pc/place2/2019-05-13/85fd87d1-9803-493e-afd9-0e11bfc021e8_480_320.jpg",
+					cardssetlititle: '《三天两夜》第五期：京圈“漫”生活',
+					cardssetliqude: "//pic.qyer.com/zt/c360/0d9e/c508/85a4/91fc/abb9/a9c3/24ad"
+				},
+				{
+					cardssetliid: 1,
+					cardssetliimg: "//pic.lvmama.com/uploads/pc/place2/2019-05-13/85fd87d1-9803-493e-afd9-0e11bfc021e8_480_320.jpg",
+					cardssetlititle: '《三天两夜》第五期：京圈“漫”生活',
+					cardssetliqude: "//pic.qyer.com/zt/c360/0d9e/c508/85a4/91fc/abb9/a9c3/24ad"
+				},
+
+				{
+					cardssetliid: 1,
+					cardssetliimg: "//pic.lvmama.com/uploads/pc/place2/2019-05-13/85fd87d1-9803-493e-afd9-0e11bfc021e8_480_320.jpg",
+					cardssetlititle: '《三天两夜》第五期：京圈“漫”生活',
+					cardssetliqude: "//pic.qyer.com/zt/c360/0d9e/c508/85a4/91fc/abb9/a9c3/24ad"
+				},
+				{
+					cardssetliid: 1,
+					cardssetliimg: "//pic.lvmama.com/uploads/pc/place2/2019-05-13/85fd87d1-9803-493e-afd9-0e11bfc021e8_480_320.jpg",
+					cardssetlititle: '《三天两夜》第五期：京圈“漫”生活',
+					cardssetliqude: "//pic.qyer.com/zt/c360/0d9e/c508/85a4/91fc/abb9/a9c3/24ad"
+				},
+				{
+					cardssetliid: 1,
+					cardssetliimg: "//pic.lvmama.com/uploads/pc/place2/2019-05-13/85fd87d1-9803-493e-afd9-0e11bfc021e8_480_320.jpg",
+					cardssetlititle: '《三天两夜》第五期：京圈“漫”生活',
+					cardssetliqude: "//pic.qyer.com/zt/c360/0d9e/c508/85a4/91fc/abb9/a9c3/24ad"
+				}
+
+			],
+			message: '查询成功'
+		}
+	})
+const buildVibanner = Mock.mock(
+	'/api/buildVibanner', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [
+
+				{
+					Vibannerid: 1,
+					Vibannerimg: '//pics.lvjs.com.cn/uploads/pc/place2/2019-05-21/92d3dd44-f11b-426b-aa78-3f8fa5bc2483.jpg'
+				},
+				{
+					Vibannerid: 2,
+					Vibannerimg: '//pics.lvjs.com.cn/uploads/pc/place2/2019-05-21/9b2b688c-9f62-4b5f-b0e9-d98fda244660.jpg'
+				},
+				{
+					Vibannerid: 3,
+					Vibannerimg: '//pics.lvjs.com.cn/uploads/pc/place2/2019-05-16/eca4ff07-bba6-4cb7-baf7-e478ec3c0a61.jpg'
+				}
+			],
+			message: '查询成功'
+		}
+	})
+const buildQvideohotli = Mock.mock(
+	'/api/buildQvideohotli', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [
+
+				{
+					Q_VideoDetailid: 1,
+					Q_Videoimg: '//pics.lvjs.com.cn/pics//uploads/pc/place2/2017-09-19/0f509447-40e3-4e69-b5ca-f1ccd3fc4e50_300_200.jpg',
+					Q_Videotitle: '南京菜馆（下）梅花糕牛肉锅贴十三香小龙虾',
+					Q_Videopingdao: '了不起频道'
+				},
+				{
+					Q_VideoDetailid: 1,
+					Q_Videoimg: '//pics.lvjs.com.cn/pics//uploads/pc/place2/2019-05-20/a8f9e58e-6637-4eac-956b-19a13c00ffbe_300_200.jpg',
+					Q_Videotitle: '爱的里程第五站：童话般的捷克之旅',
+					Q_Videopingdao: '爱的世界'
+				},
+				{
+					Q_VideoDetailid: 1,
+					Q_Videoimg: '//pics.lvjs.com.cn/pics//uploads/pc/place2/2019-05-15/aec6bc8c-ad51-410f-a944-df8a9cda95f1_300_200.jpg',
+					Q_Videotitle: '雪山小筑：这里有北上广找不到的诗和远方',
+					Q_Videopingdao: '家和远方'
+				},
+
+			],
+			message: '查询成功'
+		}
+	})
+
+const buildQvideolist = Mock.mock(
+	'/api/buildQvideolist', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [
+
+				{
+					Qvideolistcon: [
+
+
+						{
+							Qvideolisttitle: '摄影',
+							Qvideolistconqy: [{
+								Qvideolistcontitle: '爱城全世界',
+								Q_VideoDetailid: 1,
+								Qvideolistconavter: '//pics.lvjs.com.cn//uploads/pc/place2/2017-03-21/7edfb19e-73db-4dd9-9588-da93901bc124_300_200.jpg',
+								Qvideolistcondsc: '旅行拍照入门级宝典',
+								Qvideolistconli: [{
+										Q_VideoDetailid: 1,
+
+										Qvideolistconliimg: '//pics.lvjs.com.cn//uploads/pc/place2/2016-01-06/43fcb163-e1a9-4a68-9b4b-afacd7b1d315_300_200.jpg',
+										Qvideolistconlilong: '15:03',
+										Qvideolistconlidsc: '只要五步，教你选出既能装又好看的摄影包 '
+									},
+									{
+										Q_VideoDetailid: 1,
+
+										Qvideolistconliimg: '//pics.lvjs.com.cn//uploads/pc/place2/2017-12-06/01fbfd74-7de6-4386-bdbd-9c2b9fd9e14d_300_200.jpg',
+										Qvideolistconlilong: '15:03',
+										Qvideolistconlidsc: '又是一年毕业季，教你如何用小视频记录这段难忘时光 '
+									},
+									{
+										Q_VideoDetailid: 1,
+
+										Qvideolistconliimg: '//pics.lvjs.com.cn//uploads/pc/place2/2017-11-07/ae34cfaf-8443-4c64-bba5-54d167a0ad27_300_200.jpg',
+										Qvideolistconlilong: '15:03',
+										Qvideolistconlidsc: '手把手教会，旅行短片转场特效的小秘密 '
+									},
+									{
+										Q_VideoDetailid: 1,
+
+										Qvideolistconliimg: '//pics.lvjs.com.cn//uploads/pc/place2/2019-05-29/153a3db2-b2c1-4074-96ba-6b04a0417fc4_300_200.jpg',
+										Qvideolistconlilong: '15:03',
+										Qvideolistconlidsc: '如何在人山人海中把自己拍美——日本关西篇 '
+									}
+								]
+
+
+							}],
+						}
+					],
+				},
+				{
+					
+					Qvideolistcon: [{
+						Qvideolisttitle: '美食',
+						Qvideolistconqy: [{
+							Qvideolistcontitle: '旅行囧记【美食篇】 ',
+							Q_VideoDetailid: 1,
+							Qvideolistconavter: '//pics.lvjs.com.cn//uploads/pc/place2/2016-09-21/a3c1bf27-eb60-49ec-b1c4-3ce19c9351c7_300_200.jpg',
+							Qvideolistcondsc: '打开美食次元的新世界',
+							Qvideolistconli: [{
+									Q_VideoDetailid: 1,
+
+									Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2019-01-02/5e75292a-66a8-4be5-89e0-dc8504160bda_480_320.jpg',
+									Qvideolistconlilong: '5:03',
+									Qvideolistconlidsc: '槟城囧记（五）面朝大海的小清新民宿'
+								},
+								{
+									Q_VideoDetailid: 1,
+
+									Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2019-01-02/a829d034-86b5-4ba0-aa72-4b25050b0e80_480_320.jpg',
+									Qvideolistconlilong: '2:03',
+									Qvideolistconlidsc: '槟城囧记（四）：爱情巷、姓氏桥，最浪漫的地方在这里'
+								},
+								{
+									Q_VideoDetailid: 1,
+
+									Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2019-01-02/2ec92c01-bd2d-4d12-8202-bc2de097371e_480_320.jpg',
+									Qvideolistconlilong: '6:03',
+									Qvideolistconlidsc: '槟城囧记（三）：在全球第一家食物博物馆玩转美食'
+								},
+								{
+									Q_VideoDetailid: 1,
+
+									Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2019-01-02/aecb9440-00b4-4466-b0f4-da3fa478e7f6_480_320.jpg',
+									Qvideolistconlilong: '8:03',
+									Qvideolistconlidsc: '槟城囧记（二）：槟城的街头美食实在是太炸了'
+								},
+
+							]
+						}]
+					}]
+				},
+				{
+					
+					Qvideolistcon: [
+						{
+						Qvideolisttitle: '美食',
+						Qvideolistconqy: [
+							{
+								Qvideolistcontitle: '爱程全世界 ',
+								Q_VideoDetailid: 1,
+								Qvideolistconavter: '//pics.lvjs.com.cn//uploads/pc/place2/2017-11-17/29995311-5698-4c8c-b946-08d28eb0d97d_300_200.jpg',
+								Qvideolistcondsc: '用爱丈量世界',
+								Qvideolistconli: [{
+										Q_VideoDetailid: 1,
+											
+										Qvideolistconliimg: 'http://s3.lvjs.com.cn//uploads/pc/place2/2019-03-22/30219c7d-94d4-428a-a177-b0514036dab6.jpg',
+										Qvideolistconlilong: '2:03',
+										Qvideolistconlidsc: '爱的里程第五站：童话般的捷克之旅'
+									},
+									{
+										Q_VideoDetailid: 1,
+											
+										Qvideolistconliimg: 'http://s1.lvjs.com.cn//uploads/pc/place2/2019-03-22/8651d258-3549-43a2-ac5f-c5d5240c97da.jpg',
+										Qvideolistconlilong: '2:03',
+										Qvideolistconlidsc: '槟城囧记（四）：爱情巷、姓氏桥，最浪漫的地方在这里'
+									},
+									{
+										Q_VideoDetailid: 1,
+											
+										Qvideolistconliimg: 'http://s2.lvjs.com.cn//uploads/pc/place2/2019-03-22/21e76257-f8af-40aa-b2bf-0a8e692b9f65.jpg',
+										Qvideolistconlilong: '6:03',
+										Qvideolistconlidsc: '槟城囧记（三）：在全球第一家食物博物馆玩转美食'
+									},
+									{
+										Q_VideoDetailid: 1,
+											
+										Qvideolistconliimg: 'http://s3.lvjs.com.cn//uploads/pc/place2/2019-03-22/50f3c9cf-ac25-4a66-aeec-d0be7fe4e126.jpg',
+										Qvideolistconlilong: '8:03',
+										Qvideolistconlidsc: '槟城囧记（二）：槟城的街头美食实在是太炸了'
+									},
+											
+								]
+							},
+							{
+							Qvideolistcontitle: '游神集 ',
+							Q_VideoDetailid: 1,
+							Qvideolistconavter: '//pics.lvjs.com.cn//uploads/pc/place2/2019-02-28/f7989391-b51f-46c4-8678-0f925f6c373b_300_200.jpg',
+							Qvideolistcondsc: '开箱测好物，让你的旅行BIGGER满满',
+							Qvideolistconli: [{
+									Q_VideoDetailid: 1,
+				
+									Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2019-01-02/5e75292a-66a8-4be5-89e0-dc8504160bda_480_320.jpg',
+									Qvideolistconlilong: '5:03',
+									Qvideolistconlidsc: '旅途中陪伴你不仅有新风景，可能还会有新款的泡面'
+								},
+								{
+									Q_VideoDetailid: 1,
+				
+									Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2019-01-02/a829d034-86b5-4ba0-aa72-4b25050b0e80_480_320.jpg',
+									Qvideolistconlilong: '2:03',
+									Qvideolistconlidsc: '快来看旅行中的安全神器，为你的旅行保驾护航'
+								},
+								{
+									Q_VideoDetailid: 1,
+				
+									Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2019-01-02/2ec92c01-bd2d-4d12-8202-bc2de097371e_480_320.jpg',
+									Qvideolistconlilong: '6:03',
+									Qvideolistconlidsc: '从来都是你拖行李箱，有没有想过让行旅箱驮你？'
+								},
+								{
+									Q_VideoDetailid: 1,
+				
+									Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2019-01-02/aecb9440-00b4-4466-b0f4-da3fa478e7f6_480_320.jpg',
+									Qvideolistconlilong: '8:03',
+									Qvideolistconlidsc: '好看的照片背后总有几款功能强大的神器'
+								},
+				
+							]
+						},
+						{
+							Qvideolistcontitle: 'Hi走啦 ',
+							Q_VideoDetailid: 1,
+							Qvideolistconavter: '//pics.lvjs.com.cn//uploads/pc/place2/2019-05-29/153a3db2-b2c1-4074-96ba-6b04a0417fc4_300_200.jpg',
+							Qvideolistcondsc: '环球旅行视频攻略',
+							Qvideolistconli: [{
+									Q_VideoDetailid: 1,
+										
+									Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2017-07-14/e3e9e63d-64e0-4260-89c3-17084666db1f_480_320.jpg',
+									Qvideolistconlilong: '3:03',
+									Qvideolistconlidsc: '一起去二次元的圣地，宅男天堂秋叶原买手办吧'
+								},
+								{
+									Q_VideoDetailid: 1,
+										
+									Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2017-07-26/1777203a-2395-461e-8353-894d690233bf_480_320.jpg',
+									Qvideolistconlilong: '2:30',
+									Qvideolistconlidsc: '东京最新概念餐厅和人气爆棚的网红舒芙蕾'
+								},
+								{
+									Q_VideoDetailid: 1,
+										
+									Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2017-02-09/71c29785-377e-405c-97bb-21e3ab23aee6_480_320.jpg',
+									Qvideolistconlilong: '6:42',
+									Qvideolistconlidsc: '东京买买买攻略，古着小物应有尽有'
+								},
+								{
+									Q_VideoDetailid: 1,
+										
+									Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2017-03-21/7edfb19e-73db-4dd9-9588-da93901bc124_480_320.jpg',
+									Qvideolistconlilong: '7:23',
+									Qvideolistconlidsc: '在东京体验最具未来感的胶囊酒店'
+								},
+										
+							]
+						},
+						{
+							Qvideolistcontitle: 'Roy和Sue的奇妙旅行 ',
+							Q_VideoDetailid: 1,
+							Qvideolistconavter: '//pics.lvjs.com.cn//uploads/pc/place2/2017-11-07/ae34cfaf-8443-4c64-bba5-54d167a0ad27_300_200.jpg',
+							Qvideolistcondsc: '拥抱世界上的千百种生活',
+							Qvideolistconli: [{
+									Q_VideoDetailid: 1,
+										
+									Qvideolistconliimg: '//pic.lvmama.com/uploads/pc/place2/2019-05-29/153a3db2-b2c1-4074-96ba-6b04a0417fc4_480_320.jpg',
+									Qvideolistconlilong: '3:08',
+									Qvideolistconlidsc: 'Tips|出国旅行，如何定住宿才不会被坑'
+								},
+								{
+									Q_VideoDetailid: 1,
+										
+									Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2017-11-17/29995311-5698-4c8c-b946-08d28eb0d97d_480_320.jpg',
+									Qvideolistconlilong: '2:03',
+									Qvideolistconlidsc: 'Tips|出国不用怕，机场通关指南奉上'
+								},
+								{
+									Q_VideoDetailid: 1,
+										
+									Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2017-07-13/0abfc532-b813-4b01-b662-68cfc409b479_480_320.jpg',
+									Qvideolistconlilong: '7:08',
+									Qvideolistconlidsc: 'Tips|现场演示日本入关全流程，第一次去也不怕'
+								},
+								{
+									Q_VideoDetailid: 1,
+										
+									Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2019-05-29/ecdcd45f-7d91-4a89-a036-b5e694335b64_480_320.jpg',
+									Qvideolistconlilong: '10:05',
+									Qvideolistconlidsc: 'Tips|科普旅行中如何防晒，让你从小黑变小白'
+								},
+										
+							]
+						},
+						
+						{
+							Qvideolistcontitle: '元气大暴走 ',
+							Q_VideoDetailid: 1,
+							Qvideolistconavter: '//pics.lvjs.com.cn//uploads/pc/place2/2016-01-06/43fcb163-e1a9-4a68-9b4b-afacd7b1d315_300_200.jpg',
+							Qvideolistcondsc: '元气CP带你攻略全世界',
+							Qvideolistconli: [{
+									Q_VideoDetailid: 1,
+										
+									Qvideolistconliimg: '//pic.lvmama.com/uploads/pc/place2/2017-03-14/64fe3c91-f69c-4e53-a254-30a640dc3325_480_320.jpg',
+									Qvideolistconlilong: '5:03',
+									Qvideolistconlidsc: '胶片复古香港游，这是最港味的回忆杀'
+								},
+								{
+									Q_VideoDetailid: 1,
+										
+									Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2014-11-13/a89e8bfc-60b5-4e28-9a29-0ec9178e1fca_480_320.jpg',
+									Qvideolistconlilong: '2:03',
+									Qvideolistconlidsc: '遇见世界尽头的蓝色，阿根廷冰川巡游'
+								},
+								{
+									Q_VideoDetailid: 1,
+										
+									Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2018-03-29/13d91996-bd63-4528-8d81-e6d3863d9e8f_480_320.jpg',
+									Qvideolistconlilong: '6:03',
+									Qvideolistconlidsc: '2分钟飞跃荷兰，温柔与狂野，颠覆你的想象'
+								},
+								{
+									Q_VideoDetailid: 1,
+										
+									Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2018-03-29/ce2d86a4-bad2-4c49-988f-e331d1d39f73_480_320.jpg',
+									Qvideolistconlilong: '8:03',
+									Qvideolistconlidsc: '从沙滩到雪山，1分钟带你飞跃巴塞罗那！'
+								},
+										
+							]
+						}]
+					}]
+				},
+				{
+					Qvideolistcon: [
+				
+				
+						{
+							Qvideolisttitle: '人文',
+							Qvideolistconqy: [{
+								Qvideolistcontitle: '二更 ',
+								Q_VideoDetailid: 1,
+								Qvideolistconavter: '//pics.lvjs.com.cn//uploads/pc/place2/2014-10-17/1413537591527_300_200.jpg',
+								Qvideolistcondsc: '发现旅行中的人文故事',
+								Qvideolistconli: [{
+										Q_VideoDetailid: 1,
+				
+										Qvideolistconliimg: '//pic.lvmama.com/uploads/pc/place2/2018-11-15/e67e3502-b708-4e85-84c9-f9e7270c637c_480_320.jpg',
+										Qvideolistconlilong: '15:03',
+										Qvideolistconlidsc: '更新疆|他和老伴在天山四十年，只为守望死去的战友们'
+									},
+									{
+										Q_VideoDetailid: 1,
+				
+										Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2018-11-15/e83e864a-fece-419a-9811-37d0c13a2b79_480_320.jpg',
+										Qvideolistconlilong: '15:03',
+										Qvideolistconlidsc: '这位武汉姑娘，用英国艺术演绎中国文化'
+									},
+									{
+										Q_VideoDetailid: 1,
+				
+										Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2018-11-15/df7329ad-c975-4871-ae1a-aea66d5ded5e_480_320.jpg',
+										Qvideolistconlilong: '15:03',
+										Qvideolistconlidsc: '她用一根线，画出顶级中国风'
+									},
+									{
+										Q_VideoDetailid: 1,
+				
+										Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2018-05-24/a1916b8b-4598-4c1d-b026-514d93f6efea_480_320.jpg',
+										Qvideolistconlilong: '15:03',
+										Qvideolistconlidsc: '中国的动漫“手办”传承者'
+									}
+								]
+				
+				
+							}],
+						}
+					],
+				},
+			],
+			message: '查询成功'
+		}
+	})
+	const buildQVideolistdetail = Mock.mock(
+		'/api/buildQVideolistdetail', 'get', (req, res) => {
 			return {
 				code: 200,
 				data: [
+					
 					{
-						Aboutbannerimg:'//static.qyer.com/models/project/rt_travel/img/cover02.png',
-						Aboutbannertitle:'负责任的旅行 - 穷游网',
-						Aboutbannerdscimg:'//static.qyer.com/models/project/rt_travel/img/cover02-slogan.png'
-					},
-					{
-						Aboutbannerimg:'//static.qyer.com/models/project/rt_travel/img/cover03.png',
-						Aboutbannertitle:'负责任的旅行 - 穷游网',
-						Aboutbannerdscimg:'//static.qyer.com/models/project/rt_travel/img/cover03-slogan.png'
-					},
-					{
-						Aboutbannerimg:'//static.qyer.com/models/project/rt_travel/img/cover05.png',
-						Aboutbannertitle:'负责任的旅行 - 穷游网',
-						Aboutbannerdscimg:'//static.qyer.com/models/project/rt_travel/img/cover05-slogan.png'
+						QVideo:'//media.qyer.com/video/source/20190516/1558001025447',
+						QVideolistjishu:'15',
+						QVideolists:[
+							{
+								QVideoid:1,
+								QVideolistimg:'//pic.lvmama.com/uploads/pc/place2/2017-03-20/add23d7a-a33e-481c-9961-f5a582195e57_480_320.jpg',
+								QVideolisttime:'6:03',
+								QVideolisttitle:'手把手教会，旅行短片转场特效的小秘密',
+								QVideolistdate:'2019-6-1'
+							},
+							{
+								QVideoid:1,
+								QVideolistimg:'http://pic.lvmama.com/uploads/pc/place2/2018-09-26/7bfeb25f-e8e7-4513-96a8-47fab126bc1c_480_320.jpg',
+								QVideolisttime:'15:03',
+								QVideolisttitle:'如何在人山人海中把自己拍美——日本关西篇',
+								QVideolistdate:'2019-3-16'
+							},
+							{
+								QVideoid:1,
+								QVideolistimg:'http://pic.lvmama.com/uploads/pc/place2/2018-11-29/fd8394a7-1686-4939-8f63-8637887afef4_480_320.jpg',
+								QVideolisttime:'14:63',
+								QVideolisttitle:'在东京旅游，如何拍出不那么游客照的照片？',
+								QVideolistdate:'2018-12-15'
+							},
+							{
+								QVideoid:1,
+								QVideolistimg:'http://pic.lvmama.com/uploads/pc/place2/2018-09-25/f178fb9e-1ccf-46fb-af0c-a22f23921156_480_320.jpg',
+								QVideolisttime:'3:13',
+								QVideolisttitle:'摄影课：新手如何玩转航拍',
+								QVideolistdate:'2018-2-1'
+							}
+						]
 					}
-					],
+				],
 				message: '查询成功'
 			}
 		})
-		const buildplbanner = Mock.mock(
-			'/api/buildplbanner', 'get', (req, res) => {
+		const buildQvideoDetailwarp = Mock.mock(
+			'/api/buildQvideoDetailwarp', 'get', (req, res) => {
 				return {
 					code: 200,
 					data: [
+						{
+							Q_videoDetailwarptitle:'又是一年毕业季，教你如何用小视频记录这段难忘时光',
+							Q_videoDetailwarpdsc:'夏天快到了，随之而来的是新一批同学们的毕业季。校园里的每个角落都充满了几年来的回忆，真想把这些深深记住……那就用手中的',
+							Q_videoDetailwarpzuozheavter:'//pics.lvjs.com.cn//uploads/pc/place2/2017-02-24/58cfd95b-9ef2-4ccd-85b8-44bd5739fab4_300_200.jpg',
+							Q_videoDetailwarpzuozhename:'小邪门拍照',
+							Q_videoDetailwarpzuozhedsc:'旅行拍摄入门宝典 ',
+							Q_videoDetailwarpxuanyu:'模特与摄影师带你旅行种草、拍出绝美大片。'
 						
-						{
-							plbannerid:1,
-							plbannerimg:'//pics.lvjs.com.cn/uploads/pc/place2/2019-05-31/f1c54cbc-fb89-4fe7-a718-f84c872155f2.jpg'
-						},
-						{
-							plbannerid:2,
-							plbannerimg:'//pics.lvjs.com.cn/uploads/pc/place2/2019-05-21/9b2b688c-9f62-4b5f-b0e9-d98fda244660.jpg'
-						},
-						{
-							plbannerid:3,
-							plbannerimg:'//pics.lvjs.com.cn/uploads/pc/place2/2019-05-16/eca4ff07-bba6-4cb7-baf7-e478ec3c0a61.jpg'
+						
+					
+							
 						}
 					],
 					message: '查询成功'
 				}
 			})
-			const buildtablist = Mock.mock(
-				'/api/buildtablist', 'get', (req, res) => {
-					return {
-						code: 200,
-						data: [
-							
-							{
-								tablistname:'全部',
-								
-							},
-							{
-								tablistname:'地球研究社',
-								
-							},
-							
-							{
-								tablistname:'去也',
-								
-							},
-							{
-								tablistname:'榜单',
-								
-							},
-							{
-								tablistname:'上瘾团',
-								
-							},
-							{
-								tablistname:'三天两夜',
-								
-							},
-							
-						],
-						message: '查询成功'
-					}
-				})
-				const buildcardssetlibuildcardssetli = Mock.mock(
-					'/api/buildcardssetli', 'get', (req, res) => {
-						return {
-							code: 200,
-							data: [
-								
-								{
-									cardssetliid:1,
-									cardssetliimg:"//pic.lvmama.com/uploads/pc/place2/2019-05-13/85fd87d1-9803-493e-afd9-0e11bfc021e8_480_320.jpg",
-									cardssetlititle:'《三天两夜》第五期：京圈“漫”生活',
-									cardssetliqude:"//pic.qyer.com/zt/c360/0d9e/c508/85a4/91fc/abb9/a9c3/24ad"
-								},
-								{
-									cardssetliid:1,
-									cardssetliimg:"//pic.lvmama.com/uploads/pc/place2/2019-05-13/85fd87d1-9803-493e-afd9-0e11bfc021e8_480_320.jpg",
-									cardssetlititle:'《三天两夜》第五期：京圈“漫”生活',
-									cardssetliqude:"//pic.qyer.com/zt/c360/0d9e/c508/85a4/91fc/abb9/a9c3/24ad"
-								},
-								{
-									cardssetliid:1,
-									cardssetliimg:"//pic.lvmama.com/uploads/pc/place2/2019-05-13/85fd87d1-9803-493e-afd9-0e11bfc021e8_480_320.jpg",
-									cardssetlititle:'《三天两夜》第五期：京圈“漫”生活',
-									cardssetliqude:"//pic.qyer.com/zt/c360/0d9e/c508/85a4/91fc/abb9/a9c3/24ad"
-								},
-								{
-									cardssetliid:1,
-									cardssetliimg:"//pic.lvmama.com/uploads/pc/place2/2019-05-13/85fd87d1-9803-493e-afd9-0e11bfc021e8_480_320.jpg",
-									cardssetlititle:'《三天两夜》第五期：京圈“漫”生活',
-									cardssetliqude:"//pic.qyer.com/zt/c360/0d9e/c508/85a4/91fc/abb9/a9c3/24ad"
-								},
-								{
-									cardssetliid:1,
-									cardssetliimg:"//pic.lvmama.com/uploads/pc/place2/2019-05-13/85fd87d1-9803-493e-afd9-0e11bfc021e8_480_320.jpg",
-									cardssetlititle:'《三天两夜》第五期：京圈“漫”生活',
-									cardssetliqude:"//pic.qyer.com/zt/c360/0d9e/c508/85a4/91fc/abb9/a9c3/24ad"
-								},
-								{
-									cardssetliid:1,
-									cardssetliimg:"//pic.lvmama.com/uploads/pc/place2/2019-05-13/85fd87d1-9803-493e-afd9-0e11bfc021e8_480_320.jpg",
-									cardssetlititle:'《三天两夜》第五期：京圈“漫”生活',
-									cardssetliqude:"//pic.qyer.com/zt/c360/0d9e/c508/85a4/91fc/abb9/a9c3/24ad"
-								},
-								
-								{
-									cardssetliid:1,
-									cardssetliimg:"//pic.lvmama.com/uploads/pc/place2/2019-05-13/85fd87d1-9803-493e-afd9-0e11bfc021e8_480_320.jpg",
-									cardssetlititle:'《三天两夜》第五期：京圈“漫”生活',
-									cardssetliqude:"//pic.qyer.com/zt/c360/0d9e/c508/85a4/91fc/abb9/a9c3/24ad"
-								},
-								{
-									cardssetliid:1,
-									cardssetliimg:"//pic.lvmama.com/uploads/pc/place2/2019-05-13/85fd87d1-9803-493e-afd9-0e11bfc021e8_480_320.jpg",
-									cardssetlititle:'《三天两夜》第五期：京圈“漫”生活',
-									cardssetliqude:"//pic.qyer.com/zt/c360/0d9e/c508/85a4/91fc/abb9/a9c3/24ad"
-								},
-								{
-									cardssetliid:1,
-									cardssetliimg:"//pic.lvmama.com/uploads/pc/place2/2019-05-13/85fd87d1-9803-493e-afd9-0e11bfc021e8_480_320.jpg",
-									cardssetlititle:'《三天两夜》第五期：京圈“漫”生活',
-									cardssetliqude:"//pic.qyer.com/zt/c360/0d9e/c508/85a4/91fc/abb9/a9c3/24ad"
-								}
-								
-							],
-							message: '查询成功'
-						}
-					})
-						const buildVibanner = Mock.mock(
-						'/api/buildVibanner', 'get', (req, res) => {
-							return {
-								code: 200,
-								data: [
-									
-									{
-										Vibannerid:1,
-										Vibannerimg:'http://pic.qyer.com/video_partner/poster/20190520/1558318778120'
-									},
-									{
-										Vibannerid:2,
-										Vibannerimg:'//pics.lvjs.com.cn/uploads/pc/place2/2019-05-21/9b2b688c-9f62-4b5f-b0e9-d98fda244660.jpg'
-									},
-									{
-										Vibannerid:3,
-										Vibannerimg:'//pics.lvjs.com.cn/uploads/pc/place2/2019-05-16/eca4ff07-bba6-4cb7-baf7-e478ec3c0a61.jpg'
-									}
-								],
-								message: '查询成功'
-							}
-						})
-			
 export default {
+	buildQvideoDetailwarp,
+	buildQVideolistdetail,
+	buildQvideolist,
 	buildVibanner,
 	buildtablist,
 	buildplbanner,

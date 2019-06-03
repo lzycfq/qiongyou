@@ -25,15 +25,44 @@
 			<h3 class="Q_videohottitile">
 				<img src="//fes.qyerstatic.com/Fv20dWYafts8TYoKIQTUUvQ2ZZe7" width="24">热门精选</h3>
 			<ul class="Q_videohotul">
-				<li class="Q_videohotli">
-					<router-link to='' class='Q_videohota'>
-						<img class="Q_videohotimg" src="http://pic.lvmama.com/uploads/pc/place2/2019-02-26/d89840b8-1b12-4ea7-854c-69f089781454_300_200.jpg">
-						<p class="Q_videohottitle">又是一年毕业季，教你如何用小视频记录这段难忘时光</p>
-						<p class="Q_videohottag">摄影养成邪会</p>
+				<li class="Q_videohotli" v-for="(item,index) in Qvideohotli" :key='index'>
+					<router-link :to="{path:'Q_VideoDetail',params:{Q_VideoDetailid:item.Q_VideoDetailid}}" class='Q_videohota'>
+						<img class="Q_videohotimg" :src="item.Q_Videoimg" alt='item.Q_Videotitle'>
+						<p class="Q_videohottitle">{{item.Q_Videotitle}}</p>
+						<p class="Q_videohottag">{{item.Q_Videopingdao}}</p>
 					</router-link>
 				</li>
 
 			</ul>
+			<div class="Q_videohotulline"></div>
+		</div>
+		<!-- 视频列表 美食 精选 摄影等 -->
+		<div class="Q_videolist" v-for="(item,index) in Qvideolist" :key='index'>
+			<div class="Q_videolistcontent" v-for="(item,index) in item.Qvideolistcon" :key='index'>
+				<h4 class="Q_videolistcontent_title"><span></span>{{item.Qvideolisttitle}}</h4>
+				<div v-for="(item,index) in item.Qvideolistconqy" :key='index'>
+				<div class="Q_videolistcontent_qy">
+					<router-link to="" class="content_qyfr">全部 <i class="el-icon-arrow-right"></i></router-link>
+					<router-link :to="{path:'Q_VideoDetail',params:{Q_VideoDetailid:item.Q_VideoDetailid}}">
+						<img :src="item.Qvideolistconavter" width="48" height="48"></router-link>
+					<div>
+						<router-link :to="{path:'Q_VideoDetail',params:{Q_VideoDetailid:item.Q_VideoDetailid}}" class="Q_videolistcontenta">
+							<span class="Q_videolistcontent_qtitle">{{item.Qvideolistcontitle}}</span><span class="Q_videolistcontent_qtext">{{item.Qvideolistcondsc}}</span></router-link>
+					</div>
+				</div>
+				<ul class="Q_videolistcontent_qyul">
+					<li v-for="(item,index) in item.Qvideolistconli" :key='index'>
+						<router-link :to="{path:'Q_VideoDetail',params:{Q_VideoDetailid:item.Q_VideoDetailid}}">
+							<div class="hotimg_oTePe">
+								<img :src="item.Qvideolistconliimg">
+								<span class="datetime">{{item.Qvideolistconlilong}}</span></div>
+							<span class="text">{{item.Qvideolistconlidsc}}</span>
+						</router-link>
+					</li>
+				</ul>
+			</div>
+			
+			</div>
 		</div>
 	</el-col>
 </template>
@@ -50,31 +79,37 @@
 		data() {
 			return {
 				Vibanner: [],
+				Qvideohotli: [],
+				Qvideolist:[],
 				sbs: {
-					observer: true, //修改swiper自己或子元素时，自动初始化swiper
-					observeParents: true, //修改swiper的父元素时，自动初始化swiper
+					initialSlide: 1,
+					watchSlidesProgress: true,
 					loop: true,
-					autoplay: {
-						delay: 3000,
-						stopOnLastSlide: false,
-						disableOnInteraction: false,
-					},
+					preloadImages: false, //不加载所有图片
 					navigation: {
 						nextEl: '.swiper-button-next',
 						prevEl: '.swiper-button-prev',
 					},
-					pagination: {
-						el: '.swiper-pagination',
+					lazy: {
+						loadPrevNext: true,
 					},
-					autoplayDisableOnInteraction: false,
+					lazyLoading: true, //懒加载开启
+					// autoplay: {
+					// 	delay: 3000,
+					// 	stopOnLastSlide: false,
+					// 	disableOnInteraction: false,
+					// },
+					autoplayDisableOnInteraction: true,
 					slidesPerView: "auto", //设置slider容器能够同时显示的slides数量(carousel模式)。可以设置为数字（可为小数，小数不可loop），或者 'auto'则自动根据slides的宽度来设定数量。loop模式下如果设置为'auto'还需要设置另外一个参数loopedSlides。
-					centeredSlides: true, //<span style="color:rgb(68,68,68);font-family:'microsoft yahei';font-size:13px;">设定为true时，活动块会居中，而不是默认状态下的居左。</span>
+					centeredSlides: true //<span style="color:rgb(68,68,68);font-family:'microsoft yahei';font-size:13px;">设定为true时，活动块会居中，而不是默认状态下的居左。</span>
 
 				}
 			}
 		},
 		created() {
 			this.buildVibanner();
+			this.buildQvideohotli();
+			this.buildQvideolist();
 
 		},
 
@@ -86,7 +121,20 @@
 					console.log(error);
 				})
 			},
-
+			buildQvideohotli() {
+				this.axios.get('/api/buildQvideohotli').then(res => {
+					this.Qvideohotli = res.data.data
+				}).catch(function(error) {
+					console.log(error);
+				})
+			},
+			buildQvideolist(){
+					this.axios.get('/api/buildQvideolist').then(res => {
+					this.Qvideolist = res.data.data
+				}).catch(function(error) {
+					console.log(error);
+				})
+			}
 		},
 		components: {
 			headers,
@@ -97,68 +145,127 @@
 </script>
 
 <style lang="scss">
-	.Q_video_wrapper {
+	.Q_videolist {
 		width: 980px;
-		height: auto;
-		overflow: hidden;
-		margin: 0 auto;
+		margin: 25px auto;
 
-		.Q_videohottitile {
-			font-size: 22px;
-			padding: 50px 0 20px 0;
-			font-weight: 500;
-			color: #323232;
-
-			img {
-				vertical-align: -4px;
-				margin-right: 10px;
-			}
-		}
-
-		.Q_videohotul {
-			margin-left: -19px;
+		.Q_videolistcontent {
+			border-bottom: solid 1px rgba(0, 0, 0, 0.1);
 			overflow: hidden;
-			padding-bottom: 23px;
-			list-style: none;
-			li{
-				float: left;
-    width: 314px;
-    overflow: hidden;
-    margin-left: 19px;
-    font-size: 16px;
-	.Q_videohotimg {
-    height: 176px;
-    overflow: hidden;
-	width: 100%;
-    margin-bottom: 8px;
-    position: relative;
-}
-.Q_videohottitle{
-  color: rgba(0,0,0,0.9);
-font-size: 15px;
-    height: 48px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-}
- .Q_videohottag {
-    padding-top: 12px;
-    color: rgba(0,0,0,0.5);
-    overflow: hidden;
-    text-overflow: ellipsis;
-   
-    white-space: nowrap;
-    height: 22px;
-}
 
+			.Q_videolistcontent_title {
+				font-size: 22px;
+				padding: 28px 0 25px;
+				font-weight: 500;
+				color: #323232;
+
+				span {
+					display: inline-block;
+					width: 6px;
+					background: #09C78D;
+					height: 22px;
+					vertical-align: -3px;
+					margin-right: 10px;
+				}
 			}
-			.Q_videohota:hover .Q_videohottitle{
-						color: #09C78D;
+
+			.Q_videolistcontent_qy {
+				font-size: 14px;
+				margin-bottom: 20px;
+				overflow: hidden;
+				padding-top: 10px;
+
+				.content_qyfr {
+					float: right;
+					color: rgba(0, 0, 0, 0.6);
+					padding-top: 26px;
+				}
+
+				img {
+					float: left;
+					margin-right: 16px;
+					border-radius: 50%;
+				}
+
+				.Q_videolistcontenta.Q_videolistcontent_qtitle {
+					color: #333;
+					font-weight: bold;
+				}
+
+				.Q_videolistcontent_qtitle {
+					display: block;
+					font-size: 18px;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					line-height: 25px;
+					margin-bottom: 5px;
+					color: #323232;
+				}
+
+				.Q_videolistcontent_qtext {
+					color: rgba(0, 0, 0, 0.5);
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					line-height: 18px;
+					width: 870px;
+				}
+			}
+
+			.Q_videolistcontent_qyul {
+
+				overflow: hidden;
+				margin-left: -20px;
+				padding-bottom: 16px;
+
+				li {
+					float: left;
+					width: 230px;
+					overflow: hidden;
+					margin-left: 20px;
+
+					.hotimg_oTePe {
+						height: 130px;
+						overflow: hidden;
+						width: 100%;
+						margin-bottom: 8px;
+						position: relative;
+
+						img {
+							width: 100%;
+							height: 100%;
+						}
+
+						.datetime {
+							position: absolute;
+							bottom: 10px;
+							right: 10px;
+							background: rgba(0, 0, 0, .7);
+							color: rgba(255, 255, 255, .8);
+							padding: 0 5px;
+							font-size: 14px;
+						}
 					}
+
+					.text {
+						color: #323232;
+						height: 48px;
+						font-size: 16px;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						display: -webkit-box;
+						-webkit-box-orient: vertical;
+						-webkit-line-clamp: 2;
+					}
+				}
+			}
+
+			.Q_videolistcontent_qyul li:hover .text {
+				color: #09C78D;
+			}
 		}
-		
+
 	}
 
 	.Q_video_top_nav {
@@ -180,7 +287,7 @@ font-size: 15px;
 		position: relative;
 
 		.swiper-slide {
-			width: 62%;
+			width: 980px;
 			height: 320px;
 			overflow: hidden;
 		}
@@ -217,7 +324,7 @@ font-size: 15px;
 			height: 44px;
 			margin-top: -22px;
 			z-index: 10;
-			right: 310px;
+			right: 25%;
 			cursor: pointer;
 			background-size: 20px 30px;
 			background-position: center;
@@ -231,7 +338,8 @@ font-size: 15px;
 			height: 44px;
 			margin-top: -22px;
 			z-index: 10;
-			left: 310px;
+			left: 25%;
+
 			cursor: pointer;
 			background-size: 20px 30px;
 			background-position: center;
@@ -248,15 +356,16 @@ font-size: 15px;
 		}
 
 		.Qvbanner_leftbg {
-
 			position: absolute;
 			left: 0;
 			top: 0;
-			width: 19%;
+			width: 100%;
 			z-index: 100;
 			height: 320px;
 			background: #000;
-			opacity: 0.3
+			opacity: 0.3;
+			left: -50%;
+			margin-left: -490px;
 		}
 
 		.Qvbanner_rightbg {
@@ -264,11 +373,90 @@ font-size: 15px;
 			position: absolute;
 			right: 0;
 			top: 0;
-			width: 19%;
+			width: 100%;
 			z-index: 100;
 			height: 320px;
 			background: #000;
-			opacity: 0.3
+			opacity: 0.3;
+			left: 50%;
+			margin-left: 490px;
 		}
+	}
+
+	.Q_video_wrapper {
+		width: 980px;
+		height: auto;
+		overflow: hidden;
+		margin: 0 auto;
+
+		.Q_videohottitile {
+			font-size: 22px;
+			padding: 50px 0 20px 0;
+			font-weight: 500;
+			color: #323232;
+
+			img {
+				vertical-align: -4px;
+				margin-right: 10px;
+			}
+		}
+
+		.Q_videohotul {
+			margin-left: -19px;
+			overflow: hidden;
+			padding-bottom: 23px;
+			list-style: none;
+
+			li {
+				float: left;
+				width: 314px;
+				overflow: hidden;
+				margin-left: 19px;
+				font-size: 16px;
+
+				.Q_videohotimg {
+					height: 176px;
+					overflow: hidden;
+					width: 100%;
+					margin-bottom: 8px;
+					position: relative;
+				}
+
+				.Q_videohottitle {
+					color: rgba(0, 0, 0, 0.9);
+					font-size: 15px;
+					height: 48px;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					display: -webkit-box;
+					-webkit-box-orient: vertical;
+					-webkit-line-clamp: 2;
+				}
+
+				.Q_videohottag {
+					padding-top: 12px;
+					color: rgba(0, 0, 0, 0.5);
+					overflow: hidden;
+					text-overflow: ellipsis;
+
+					white-space: nowrap;
+					height: 22px;
+				}
+
+			}
+
+			.Q_videohota:hover .Q_videohottitle {
+				color: #09C78D;
+			}
+		}
+
+		.Q_videohotulline {
+			height: 1px;
+			font-size: 1px;
+			width: 980px;
+			background: rgba(0, 0, 0, 0.1);
+			clear: both;
+		}
+
 	}
 </style>

@@ -5,28 +5,28 @@ Vue.use(Router);
 
 export default new Router({
 	mode: 'history',
- 	routes: [
-	// {
-	// 	path: '/',
-	// 	name: 'Index',
-	// 	component(resolve) {
-	// 		require(['../pages/web/Index.vue'], resolve)
-	// 	}
-	// },
-	// {
-	// 	path: '/',
-	// 	name: 'Destination',
-	// 	component(resolve) {
-	// 		require(['../pages/web/Destination/Destination.vue'], resolve)
-	// 	}
-	// },
-	// {
-	// 	path: '/',
-	// 	name: 'Destination_Citydetail',
-	// 	component(resolve) {
-	// 		require(['../pages/web/Destination/Destination_Citydetail.vue'], resolve)
-	// 	}
-	// },
+	routes: [
+		// {
+		// 	path: '/',
+		// 	name: 'Index',
+		// 	component(resolve) {
+		// 		require(['../pages/web/Index.vue'], resolve)
+		// 	}
+		// },
+		// {
+		// 	path: '/',
+		// 	name: 'Destination',
+		// 	component(resolve) {
+		// 		require(['../pages/web/Destination/Destination.vue'], resolve)
+		// 	}
+		// },
+		// {
+		// 	path: '/',
+		// 	name: 'Destination_Citydetail',
+		// 	component(resolve) {
+		// 		require(['../pages/web/Destination/Destination_Citydetail.vue'], resolve)
+		// 	}
+		// },
 		// {
 		// 	path: '/',
 		// 	name: 'Destination_list_Strategy',//:id
@@ -76,121 +76,134 @@ export default new Router({
 		// 		require(['../pages/web/Thread/Thread'], resolve)
 		// 	},
 		// // 	 meta: {
-  // //       requireAuth: true,  // 添加该字段，表示进入这个路由是需要登录的
-  // //     },
-  // //   },
-  // //   { path: '*', component: P404 }  //这里是保证错误地址会跳转到404界面进行提示
+		// //       requireAuth: true,  // 添加该字段，表示进入这个路由是需要登录的
+		// //     },
+		// //   },
+		// //   { path: '*', component: P404 }  //这里是保证错误地址会跳转到404界面进行提示
 		// // },
 		// }
-			// {
-			// 		path: '/',
-			// 		name: 'Login',//:id
-			// 		component(resolve) {
-			// 			require(['../pages/web/Login'], resolve)
-			// 		},
-			// 
-			// 	},
-				// 	{
-				// 		path: '/',
-				// 		name: 'Register',//:id
-				// 		component(resolve) {
-				// 			require(['../pages/web/Register'], resolve)
-				// 		},
-				// 
-				// 	}
-				
-				// 	{
-				// 		path: '/',
-				// 		name: 'Thread_CompanionsList',//:id
-				// 		component(resolve) {
-				// 			require(['../pages/web/Thread/Thread_CompanionsList'], resolve)
-				// 		},
-				// 
-				// 	},
-					
-				// {
-				// 	path: '/',
-				// 	name: 'Thread_CompanionsDetail',//:id
-				// 	component(resolve) {
-				// 		require(['../pages/web/Thread/Thread_CompanionsDetail'], resolve)
-				// 	},
-				// 				
-				// },
-				// {
-				// 	path: '/',
-				// 	name: 'Thread_Visa',//:id
-				// 	component(resolve) {
-				// 		require(['../pages/web/Thread/Thread_Visa'], resolve)
-				// 	},
-				// 				
-				// },
-				// {
-				// 	path: '/',
-				// 	name: 'Thread_Photography',//:id
-				// 	component(resolve) {
-				// 		require(['../pages/web/Thread/Thread_Photography'], resolve)
-				// 	},
-				// 				
-				// },
-				// {
-				// 	path: '/',
-				// 	name: 'Thread_Zhuanlan',//:id
-				// 	component(resolve) {
-				// 		require(['../pages/web/Thread/Thread_Zhuanlan'], resolve)
-				// 	},
-				// 				
-				// },
-				// {
-				// 	path: '/',
-				// 	name: 'Thread_Zhuanlan_PersonalDetail',//:Zhuanlanbannerid
-				// 	component(resolve) {
-				// 		require(['../pages/web/Thread/Thread_Zhuanlan_PersonalDetail'], resolve)
-				// 	},
-				// 				
-				// },
-				// {
-				// 	path: '/',
-				// 	name: 'Thread_ZhuanlanDetail',//:wenzhangid
-				// 	component(resolve) {
-				// 		require(['../pages/web/Thread/Thread_ZhuanlanDetail'], resolve)
-				// 	},
-				// 				
-				// },
-				// 	{
-				// 	path: '/',
-				// 	name: 'Thread_Ask',//:id
-				// 	component(resolve) {
-				// 		require(['../pages/web/Thread/Thread_Ask'], resolve)
-				// 	},
-				// 				
-				// },
-				// 		{
-				// 	path: '/',
-				// 	name: 'About',//:id
-				// 	component(resolve) {
-				// 		require(['../pages/web/About'], resolve)
-				// 	},
-				// 				
-				// },
-				// {
-				// 	path: '/',
-				// 	name: 'Q_Play',//:id
-				// 	component(resolve) {
-				// 		require(['../pages/web/Q_Play'], resolve)
-				// 	},
-				// 				
-				// },
-				{
-					path: '/',
-					name: 'Q_Video',//:id
-					component(resolve) {
-						require(['../pages/web/Q_Video'], resolve)
-					},
-								
-				},
-				
+		// {
+		// 		path: '/',
+		// 		name: 'Login',//:id
+		// 		component(resolve) {
+		// 			require(['../pages/web/Login'], resolve)
+		// 		},
+		// 
+		// 	},
+		// 	{
+		// 		path: '/',
+		// 		name: 'Register',//:id
+		// 		component(resolve) {
+		// 			require(['../pages/web/Register'], resolve)
+		// 		},
+		// 
+		// 	}
+
+		// 	{
+		// 		path: '/',
+		// 		name: 'Thread_CompanionsList',//:id
+		// 		component(resolve) {
+		// 			require(['../pages/web/Thread/Thread_CompanionsList'], resolve)
+		// 		},
+		// 
+		// 	},
+
+		// {
+		// 	path: '/',
+		// 	name: 'Thread_CompanionsDetail',//:id
+		// 	component(resolve) {
+		// 		require(['../pages/web/Thread/Thread_CompanionsDetail'], resolve)
+		// 	},
+		// 				
+		// },
+		// {
+		// 	path: '/',
+		// 	name: 'Thread_Visa',//:id
+		// 	component(resolve) {
+		// 		require(['../pages/web/Thread/Thread_Visa'], resolve)
+		// 	},
+		// 				
+		// },
+		// {
+		// 	path: '/',
+		// 	name: 'Thread_Photography',//:id
+		// 	component(resolve) {
+		// 		require(['../pages/web/Thread/Thread_Photography'], resolve)
+		// 	},
+		// 				
+		// },
+		// {
+		// 	path: '/',
+		// 	name: 'Thread_Zhuanlan',//:id
+		// 	component(resolve) {
+		// 		require(['../pages/web/Thread/Thread_Zhuanlan'], resolve)
+		// 	},
+		// 				
+		// },
+		// {
+		// 	path: '/',
+		// 	name: 'Thread_Zhuanlan_PersonalDetail',//:Zhuanlanbannerid
+		// 	component(resolve) {
+		// 		require(['../pages/web/Thread/Thread_Zhuanlan_PersonalDetail'], resolve)
+		// 	},
+		// 				
+		// },
+		// {
+		// 	path: '/',
+		// 	name: 'Thread_ZhuanlanDetail',//:wenzhangid
+		// 	component(resolve) {
+		// 		require(['../pages/web/Thread/Thread_ZhuanlanDetail'], resolve)
+		// 	},
+		// 				
+		// },
+		// 	{
+		// 	path: '/',
+		// 	name: 'Thread_Ask',//:id
+		// 	component(resolve) {
+		// 		require(['../pages/web/Thread/Thread_Ask'], resolve)
+		// 	},
+		// 				
+		// },
+		// 		{
+		// 	path: '/',
+		// 	name: 'About',//:id
+		// 	component(resolve) {
+		// 		require(['../pages/web/About'], resolve)
+		// 	},
+		// 				
+		// },
+		// {
+		// 	path: '/',
+		// 	name: 'Q_Play',//:id
+		// 	component(resolve) {
+		// 		require(['../pages/web/Q_Play'], resolve)
+		// 	},
+		// 				
+		// },
+		// {
+		// 	path: '/',
+		// 	name: 'Q_Video',//:Q_VideoDetailid
+		// 	component(resolve) {
+		// 		require(['../pages/web/Q_Video'], resolve)
+		// 	},
+		// 				
+		// },
+		{
+			path: '/',
+			name: 'Q_VideoDetail', //
+			component(resolve) {
+				require(['../pages/web/Q_VideoDetail'], resolve)
+			},
+			// 	 meta: {
+			//       requireAuth: true,  // 添加该字段，表示进入这个路由是需要登录的
+			//     },
+			//   },
+			//   { path: '*', component: P404 }  //这里是保证错误地址会跳转到404界面进行提示
+			// },		
+		},
+
 	],
-    
+
 	scrollBehavior(to, from, savedPosition) {
 		return {
 			x: 0,

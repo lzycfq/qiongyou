@@ -521,16 +521,16 @@
 								'qzhangname': this.ruleForm.qzhangname,
 								'pass': this.ruleForm.pass,
 							}
-						}).then(res => {
-							var json = res.data
-							console.log(json.data);
-							this.$Message.success('success!');
-							this.$store.commit('ADD_COUNT', json.data.token);
+						}).then(res => {						
+							console.log(res);						
+							this.$store.commit('ADD_COUNT', res.data.token);
+							this.$store.commit('handleUserName',res.data.username);
+							this.$store.commit('handleUserpic',res.data.userpic);
 							let clock = window.setInterval(() => {
 								this.totalTime--;
 								if (this.totalTime < 0) {
 									window.clearInterval(clock);
-									this.$Loading.finish();
+								
 									this.$router.push('/');
 								}
 							}, 1000)
@@ -551,18 +551,17 @@
 								'phone': this.ruleForm.phone,
 								'verifycode ': this.ruleForm.verifycode,
 								'phonecode ': this.ruleForm.phonecode,
-
 							}
 						}).then(res => {
-							var json = res.data
-							console.log(json.data);
-							this.$Message.success('success!');
-							this.$store.commit('ADD_COUNT', json.data.token);
+						console.log(res);												
+						this.$store.commit('ADD_COUNT', res.data.token);
+						this.$store.commit('handleUserName',res.data.username);
+						this.$store.commit('handleUserpic',res.data.userpic);
 							let clock = window.setInterval(() => {
 								this.totalTime--;
 								if (this.totalTime < 0) {
 									window.clearInterval(clock);
-									this.$Loading.finish();
+									
 									this.$router.push('/');
 								}
 							}, 1000)
