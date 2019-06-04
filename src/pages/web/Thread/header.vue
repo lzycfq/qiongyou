@@ -41,9 +41,8 @@
 						</el-dropdown>
 					</li>
 					<li class="nav-list nav-list-dandu">
-						<span>
-							行程助手
-						</span>
+						<span><router-link class="sba"  to="/TravelAssistant" style="color:#10b041;font-size: 16px;">行程助手</router-link></span>
+
 					</li>
 					<li class="nav-list">
 						<el-dropdown placement="bottom-start">

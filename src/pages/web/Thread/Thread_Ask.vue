@@ -144,7 +144,6 @@
 </template>
 
 <script>
-	import headers from '../../../pages/web/Thread/header.vue'
 	export default {
 		name: 'Thread_Ask',
 		data() {

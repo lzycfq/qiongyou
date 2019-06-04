@@ -188,20 +188,28 @@ export default new Router({
 		// 	},
 		// 				
 		// },
-		{
+// 		{
+// 			path: '/',
+// 			name: 'Q_VideoDetail', //
+// 			component(resolve) {
+// 				require(['../pages/web/Q_VideoDetail'], resolve)
+// 			},
+// 			// 	 meta: {
+// 			//       requireAuth: true,  // 添加该字段，表示进入这个路由是需要登录的
+// 			//     },
+// 			//   },
+// 			//   { path: '*', component: P404 }  //这里是保证错误地址会跳转到404界面进行提示
+// 			// },		
+// 		},
+// 
+{
 			path: '/',
-			name: 'Q_VideoDetail', //
+			name: 'TravelAssistant', //
 			component(resolve) {
-				require(['../pages/web/Q_VideoDetail'], resolve)
+				require(['../pages/web/TravelAssistant/TravelAssistant'], resolve)
 			},
-			// 	 meta: {
-			//       requireAuth: true,  // 添加该字段，表示进入这个路由是需要登录的
-			//     },
-			//   },
-			//   { path: '*', component: P404 }  //这里是保证错误地址会跳转到404界面进行提示
-			// },		
+				
 		},
-
 	],
 
 	scrollBehavior(to, from, savedPosition) {
