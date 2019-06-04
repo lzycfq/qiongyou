@@ -276,181 +276,7 @@
 </script>
 
 <style lang="scss">
-	.ind_list{
-		zoom: 1;
-		margin-top: 20px;
-		margin-left: -24px;
-
-		.ind_listcontent{
 	
-    float: left;
-	 .ind_items {
-    margin: 24px 0 0 22.5px;
-    float: left;
-    width: 310px;
-    position: relative;
-    border-radius: 8px;
-    border: 1px solid #d7d7d7;
-    overflow: hidden;
-    background: #fff;
- .link {
-    display: block;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height:325px;
-	 .img {
-    height: 202px;
-    position: relative;
-    
-	img {
-   
-    width:100%;
-    height: 100%;
-    transition: all 3.6s;
-    -webkit-transition: all 3.6s;
-}
-} //.img
-.title {
-    position: absolute;
-    left: 10px;
-    right: 10px;
-    top: 150px;
-    color: #fff;
-	.day {
-    float: left;
-    padding-right: 10px;
-    margin-right: 10px;
-    height: 42px;
-    border-right: 1px solid #b1b1b1;
-    border-right: 1px solid rgba(255,255,255,0.5);
-	strong {
-    font-size: 50px;
-    font-family: HelveticaNeue-Light;
-    padding-right: 5px;
-    height: 42px;
-    display: inline-block;
-    line-height: 42px;
-    font-weight: 400;
-    -webkit-font-smoothing: antialiased;
-    box-shadow: 0 0 black;
-}
-}
-dl {
-    overflow: hidden;
-    zoom: 1;
-    font-size: 12px;
-	dd {
-	    line-height: 24px;
-	    font-size: 16px;
-	    width: 100%;
-	    overflow: hidden;
-	    white-space: nowrap;
-	    text-overflow: ellipsis;
-	}
-}
-
-}//title
-.content{
-    width: 90%;
-	margin: 0 auto;
-	margin-top: 10px;
-    height: 115px;
-    border-top: 0;
-	 .tag {
-    height: 24px;
-    max-height: 24px;
-    overflow: hidden;
-	 span {
-    float: left;
-    margin-right: 10px;
-    
-	
-    padding: 0 12px;
-    line-height: 24px;
-    background: #f2f2f2;
-    color: #959595;
-}
-}
-.plan {
-    height: 48px;
-    overflow: hidden;
-    color: #636363;
-    line-height: 24px;
-    font-size: 14px;
-    margin-top: 8px;
-    font-family: \5b8b\4f53,sans-serif;
-    word-wrap: break-word;
-    -webkit-line-clamp: 2;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-
-}
- .number {
-margin-top: 7px;
-  .name {
- 
-    font-family: tahoma;
-  
- float: left;
-	color: #959595;
-    padding-left: 18px;
-    background: url(//common3.qyerstatic.com/plan/desktop/home/img/icon_names.png) 0 center no-repeat;
-}
-.numberright{
-	float: right;
-	color: #959595;
-	span:first-child{
-	margin-right: 5px;
-    color: #959595;
-	font-size: 12px;
-	
-	}
-	span:last-child{
-		margin-left: 5px;
-	}
-}
-	
-}
-
-}//content
-
-}//link
-
- 
-}
-
-		}//ind_listcontent
-		
-		.ind_paination{
-			float: right;
-			margin-top: 20px;
-			margin-bottom: 20px;
-		}
-		.ind_paination.is-background .el-pager li.active {
-        background: #5ea67c;
-    border-radius: 3px;
-    font-weight: 700;
-    color: #fff;
-}
-	}
-	.ind_list .ind_items:hover .copy {
-	    display: inline-block;
-	}
-	
-	.ind_list .ind_items .copy {
-	    display: none;
-	    box-shadow: 0 1px 1px rgba(0,0,0,.3);
-	    line-height: 28px;
-	    border-radius: 5px;
-	    color: #fff;
-	    position: absolute;
-	    left: 10px;
-	    top: 10px;
-	    padding: 0 10px 0 26px;
-	    background: url(//common3.qyerstatic.com/plan/desktop/home/img/icons_copy.png) 10px center no-repeat #499f6b;
-	}
 	.Tr_content {
 		margin: 0 auto;
 		width: 980px;
@@ -603,6 +429,181 @@ margin-top: 7px;
 				}
 			}
 		}
+		.ind_list{
+				zoom: 1;
+				margin-top: 20px;
+				margin-left: -24px;
+		
+				.ind_listcontent{
+			
+		    float: left;
+			 .ind_items {
+		    margin: 24px 0 0 22.5px;
+		    float: left;
+		    width: 310px;
+		    position: relative;
+		    border-radius: 8px;
+		    border: 1px solid #d7d7d7;
+		    overflow: hidden;
+		    background: #fff;
+		 .link {
+		    display: block;
+		    position: relative;
+		    overflow: hidden;
+		    width: 100%;
+		    height:325px;
+			 .img {
+		    height: 202px;
+		    position: relative;
+		    
+			img {
+		   
+		    width:100%;
+		    height: 100%;
+		    transition: all 3.6s;
+		    -webkit-transition: all 3.6s;
+		}
+		} //.img
+		.title {
+		    position: absolute;
+		    left: 10px;
+		    right: 10px;
+		    top: 150px;
+		    color: #fff;
+			.day {
+		    float: left;
+		    padding-right: 10px;
+		    margin-right: 10px;
+		    height: 42px;
+		    border-right: 1px solid #b1b1b1;
+		    border-right: 1px solid rgba(255,255,255,0.5);
+			strong {
+		    font-size: 50px;
+		    font-family: HelveticaNeue-Light;
+		    padding-right: 5px;
+		    height: 42px;
+		    display: inline-block;
+		    line-height: 42px;
+		    font-weight: 400;
+		    -webkit-font-smoothing: antialiased;
+		    box-shadow: 0 0 black;
+		}
+		}
+		dl {
+		    overflow: hidden;
+		    zoom: 1;
+		    font-size: 12px;
+			dd {
+			    line-height: 24px;
+			    font-size: 16px;
+			    width: 100%;
+			    overflow: hidden;
+			    white-space: nowrap;
+			    text-overflow: ellipsis;
+			}
+		}
+		
+		}//title
+		.content{
+		    width: 90%;
+			margin: 0 auto;
+			margin-top: 10px;
+		    height: 115px;
+		    border-top: 0;
+			 .tag {
+		    height: 24px;
+		    max-height: 24px;
+		    overflow: hidden;
+			 span {
+		    float: left;
+		    margin-right: 10px;
+		    
+			
+		    padding: 0 12px;
+		    line-height: 24px;
+		    background: #f2f2f2;
+		    color: #959595;
+		}
+		}
+		.plan {
+		    height: 48px;
+		    overflow: hidden;
+		    color: #636363;
+		    line-height: 24px;
+		    font-size: 14px;
+		    margin-top: 8px;
+		    font-family: \5b8b\4f53,sans-serif;
+		    word-wrap: break-word;
+		    -webkit-line-clamp: 2;
+		    display: -webkit-box;
+		    -webkit-box-orient: vertical;
+		    text-overflow: ellipsis;
+		
+		}
+		 .number {
+		margin-top: 7px;
+		  .name {
+		 
+		    font-family: tahoma;
+		  
+		 float: left;
+			color: #959595;
+		    padding-left: 18px;
+		    background: url(//common3.qyerstatic.com/plan/desktop/home/img/icon_names.png) 0 center no-repeat;
+		}
+		.numberright{
+			float: right;
+			color: #959595;
+			span:first-child{
+			margin-right: 5px;
+		    color: #959595;
+			font-size: 12px;
+			
+			}
+			span:last-child{
+				margin-left: 5px;
+			}
+		}
+			
+		}
+		
+		}//content
+		
+		}//link
+		
+		 
+		}
+		
+				}//ind_listcontent
+				
+				.ind_paination{
+					float: right;
+					margin-top: 20px;
+					margin-bottom: 20px;
+				}
+				.ind_paination.is-background .el-pager li.active {
+		        background: #5ea67c;
+		    border-radius: 3px;
+		    font-weight: 700;
+		    color: #fff;
+		}
+			}
+			.ind_list .ind_items:hover .copy {
+			    display: inline-block;
+			}
+			
+			.ind_list .ind_items .copy {
+			    display: none;
+			    box-shadow: 0 1px 1px rgba(0,0,0,.3);
+			    line-height: 28px;
+			    border-radius: 5px;
+			    color: #fff;
+			    position: absolute;
+			    left: 10px;
+			    top: 10px;
+			    padding: 0 10px 0 26px;
+			    background: url(//common3.qyerstatic.com/plan/desktop/home/img/icons_copy.png) 10px center no-repeat #499f6b;
+			}
 	}
 
 	.Tr_banner {
