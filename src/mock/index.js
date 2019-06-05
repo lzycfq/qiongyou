@@ -10827,7 +10827,203 @@ const buildQvideolist = Mock.mock(
 					}
 					
 				})
+				const buildTr_yazhou = Mock.mock(
+					'/api/buildTr_yazhou', 'get', (req, res) => {
+						return {
+							code: 200,
+							data: [
+								{
+									typeindexyz:'中国'
+								},
+								{
+									typeindexyz:'朝鲜'
+								},
+								{
+									typeindexyz:'韩国'
+								},
+								{
+									typeindexyz:'日本'
+								},
+								{
+									typeindexyz:'俄罗斯'
+								},
+								{
+									typeindexyz:'越南'
+								},
+								{
+									typeindexyz:'孟加拉'
+								},
+								{
+									typeindexyz:'柬埔寨'
+								},
+								{
+									typeindexyz:'缅甸'
+								},
+								{
+									typeindexyz:'印度'
+								},
+								{
+									typeindexyz:'巴基斯坦'
+								},
+								{
+									typeindexyz:'哈萨克斯坦'
+								},
+								{
+									typeindexyz:'吉尔吉斯坦'
+								},
+								{
+									typeindexyz:'伊拉克'
+								},
+								{
+									typeindexyz:'不丹'
+								},
+								{
+									typeindexyz:'科威特'
+								},
+								{
+									typeindexyz:'土耳其'
+								},
+								{
+									typeindexyz:'迪拜'
+								},
+								{
+									typeindexyz:'老挝'
+								},
+								{
+									typeindexyz:'以色列'
+								},
+								{
+									typeindexyz:'马尔代夫'
+								},
+								{
+									typeindexyz:'沙特阿拉伯'
+								},
+								{
+									typeindexyz:'也门'
+								},
+								{
+									typeindexyz:'东焚帝'
+								},
+								{
+									typeindexyz:'阿富汗'
+								},
+								{
+									typeindexyz:'叙利亚'
+								},
+								{
+									typeindexyz:'菲律宾'
+								},
+								{
+									typeindexyz:'马来西亚'
+								},
+								
+								{
+									typeindexyz:'印度尼西亚'
+								},
+								{
+									typeindexyz:'新加坡'
+								},
+								{
+									typeindexyz:'黎巴嫩'
+								},
+								{
+									typeindexyz:'蒙古'
+								},
+								{
+									typeindexyz:'阿曼'
+								},
+								{
+									typeindexyz:'乌兹别克斯坦'
+								},
+								{
+									typeindexyz:'巴休'
+								},
+								{
+									typeindexyz:'尼泊尔'
+								}
+									
+							],
+							message: '查询成功'
+						}
+						
+					})
+						const buildTr_ouzhou = Mock.mock(
+						'/api/buildTr_ouzhou', 'get', (req, res) => {
+							return {
+								code: 200,
+								data: [
+									{
+										typeindexoz:'英国'
+									},
+									{
+										typeindexoz:'爱尔兰'
+									},
+									{
+										typeindexoz:'冰岛'
+									},
+									{
+										typeindexoz:'挪威'
+									},
+									{
+										typeindexoz:'芬兰'
+									},
+									{
+										typeindexoz:'西班牙'
+									},
+									{
+										typeindexoz:'葡萄牙'
+									},
+									{
+										typeindexoz:'德国'
+									},
+									{
+										typeindexoz:'白俄罗斯'
+									},
+									{
+										typeindexoz:'俄罗斯'
+									},
+									{
+										typeindexoz:'乌克兰'
+									},
+									{
+										typeindexoz:'希腊'
+									},
+									{
+										typeindexoz:'意大利'
+									},
+									{
+										typeindexoz:'瑞士'
+									},
+									{
+										typeindexoz:'奥地利'
+									},
+									{
+										typeindexoz:'丹麦'
+									},
+									{
+										typeindexoz:'摩洛哥'
+									},
+									{
+										typeindexoz:'波兰'
+									},
+									{
+										typeindexoz:'卢森堡'
+									},
+									{
+										typeindexoz:'保加利亚'
+									},
+									{
+										typeindexoz:'比利时'
+									},
+									
+										
+								],
+								message: '查询成功'
+							}
+							
+						})
 export default {
+	buildTr_yazhou,
 	buildinditems,
 	buildQvideoDetailwarp,
 	buildQVideolistdetail,
