@@ -64,7 +64,7 @@
 					<li class="nav-list" placement="bottom-start">
 						<el-dropdown>
 							<span class="el-dropdown-link">
-								酒店.民宿<i class="el-icon-arrow-down el-icon--right"></i>
+										<router-link class="sba"  to="/Hotel" style="font-size: 16px;font-weight: 700;">酒店·民宿<i class="el-icon-arrow-down el-icon--right" style="font-weight: 700;font-size: 16px;"></i></router-link>
 							</span>
 							<el-dropdown-menu slot="dropdown">
 								<el-dropdown-item>酒店</el-dropdown-item>

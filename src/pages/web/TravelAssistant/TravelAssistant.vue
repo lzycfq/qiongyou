@@ -48,6 +48,7 @@
 					<strong class="title">
 						目的地：
 					</strong>
+
 					<el-collapse accordion>
 						<el-collapse-item>
 							<template slot="title">
@@ -176,7 +177,19 @@
 			</div>
 
 		</div>
-
+		<transition name="el-fade-in-linear" v-if="Trtongzhi">
+			<div class="Tr_tongzhi">
+				<ul>
+					<li v-for="(item,index) in Trtongzhidata" :key='index'>
+						<p align="right" style="margin-bottom: 5px;"><i class="el-icon-circle-close"></i></p>
+						<div style="clear: both;"></div>
+						<img src="//pics.lvjs.com.cn//uploads/pc/place2/2015-05-06/2bf90d8d-79c3-4c97-bee6-402d7db80dbb_300_200.jpg"
+						 width="42" height="42" />
+						<p class="Tr_ps">{{item.Trtongzhidsc}}</p>
+					</li>
+				</ul>
+			</div>
+		</transition>
 	</el-col>
 </template>
 
@@ -190,6 +203,7 @@
 		},
 		data() {
 			return {
+				Trtongzhi: false,
 				activeName: 'first',
 				currentPage: 1, //初始页
 				pagesize: 12, //每页的数据
@@ -236,6 +250,8 @@
 				Tr_nanmeizhou: [],
 				Tr_dayangzhou: [],
 				Tr_feizhou: [],
+				Trtongzhidata:[],
+				TrtongzhiTime:''
 
 			}
 		},
@@ -246,10 +262,13 @@
 			this.buildTr_beimeizhou();
 			this.buildTr_nanmeizhou();
 			this.buildTr_feizhou();
+			
+			
 		},
 		//定时器更新指定计划数值
 		mounted() {
 			this.numbertime = setInterval(this.numbertimeData, 100000);
+			this.Trtongzhitime = setInterval(this.buildTrtongzhidata, 10000);
 			// this.$nextTick(function() {
 			// 	var wrap = document.getElementById('doodle');
 			// 	var hoverDir = function(e) {
@@ -274,9 +293,23 @@
 		},
 		//销毁定时器更新指定计划数值
 		destroyed() {
-			clearInterval(this.numbertime)
+			clearInterval(this.numbertime);
+			clearInterval(this.Trtongzhitime);		
 		},
 		methods: {
+			buildTrtongzhidata() {
+				this.axios.get('/api/buildTrtongzhidata').then(res => {
+					if(this.Trtongzhidata.length!=null){
+						this.Trtongzhidata=res.data.data
+						this.Trtongzhi = true	
+						setInterval(this.buildTrtongzhghide, 10000);
+					}    	
+						
+				})
+			},
+			buildTrtongzhghide(){
+				this.Trtongzhi=false
+			},
 			// 鼠标进入
 			mouseenterimg() {
 				var e = e || window.event;
@@ -341,6 +374,7 @@
 					this.Tr_feizhou = res.data.data
 				})
 			},
+			
 			searchBtn(formName) {
 				this.$refs[formName].validate((valid) => {
 					if (valid) {
@@ -449,6 +483,42 @@
 </script>
 
 <style lang="scss">
+	.Tr_tongzhi {
+		width: 250px;
+		height: auto;
+		position: fixed;
+		top: 125px;
+		right: 35px;
+
+		ul {
+			list-style: none;
+
+			li {
+				width: 250px;
+				padding: 12px;
+				background: rgba(0, 0, 0, 0.6);
+				overflow: hidden;
+				box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.4);
+				transition: opacity 0.3s, transform 0.3s, left 0.3s, right 0.3s, top 0.4s, bottom 0.3s;
+				border-radius: 5px;
+
+				img {
+					border-radius: 10px;
+					position: absolute;
+					left: 13px;
+					top: 28%;
+				}
+
+				.Tr_ps {
+					width: 200px;
+					float: right;
+					color: white;
+					margin-bottom: 15px;
+				}
+			}
+		}
+	}
+
 	.Tr_mudi {
 		/deep/ .el-tabs__item.is-active {
 			color: #3f9f5f;

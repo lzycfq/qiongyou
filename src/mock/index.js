@@ -11022,7 +11022,21 @@ const buildQvideolist = Mock.mock(
 							}
 							
 						})
+						const buildTrtongzhidata = Mock.mock(
+						'/api/buildTrtongzhidata', 'get', (req, res) => {
+							return {
+								code: 200,
+								data: [
+								
+									{Trtongzhidsc:'78人在10分钟内制定了新的行程'}
+										
+								],
+								message: '查询成功'
+							}
+							
+						})
 export default {
+	buildTrtongzhidata,
 	buildTr_yazhou,
 	buildinditems,
 	buildQvideoDetailwarp,

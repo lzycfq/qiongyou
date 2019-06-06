@@ -202,11 +202,19 @@ export default new Router({
 // 			// },		
 // 		},
 // 
+// {
+// 			path: '/',
+// 			name: 'TravelAssistant', //
+// 			component(resolve) {
+// 				require(['../pages/web/TravelAssistant/TravelAssistant'], resolve)
+// 			},
+// 				
+// 		},
 {
 			path: '/',
-			name: 'TravelAssistant', //
+			name: 'Hotel', //
 			component(resolve) {
-				require(['../pages/web/TravelAssistant/TravelAssistant'], resolve)
+				require(['../pages/web/Hotel/Hotel'], resolve)
 			},
 				
 		},
