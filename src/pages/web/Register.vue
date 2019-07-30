@@ -22,7 +22,7 @@
 										</div>
 										<el-form-item prop="phone">
 											<div class="login-phone">
-												<el-input type="password" placeholder="请输入手机号码" v-model.number="ruleForms.phone" autocomplete="off" rel="phone"></el-input>
+												<el-input  placeholder="请输入手机号码" v-model.number="ruleForms.phone" autocomplete="off" rel="phone"></el-input>
 											</div>
 										</el-form-item>
 									</div>
@@ -51,7 +51,7 @@
 										<div class="identify">
 											<el-button @click="send" style="width:100%;position: relative;top:-16px;" type="success" :disabled="disabled=!show">
 												<span v-show="show">获取验证码</span>
-												<span v-show="!show" class="count">{{count}} s</span>
+												<span v-show="!show" class="count">{{count}}</span>
 											</el-button>
 										</div>
 									</div>
@@ -77,6 +77,7 @@
 				</div>
 			</div>
 		</div>
+		
 	</el-col>
 </template>
 <style lang="scss">
@@ -308,6 +309,8 @@
 </style>
 <script>
 	import SIdentify from '../../pages/web/compoents/identify.vue'
+	import {isvalidPhone} from '../../../static/js/isvalidPhone'
+
 	export default {
 		name: 'login',
 

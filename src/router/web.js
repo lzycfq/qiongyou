@@ -90,15 +90,15 @@ export default new Router({
 		// 		},
 		// 
 		// 	},
-		// 	{
-		// 		path: '/',
-		// 		name: 'Register',//:id
-		// 		component(resolve) {
-		// 			require(['../pages/web/Register'], resolve)
-		// 		},
-		// 
-		// 	}
-
+// 			{
+// 				path: '/',
+// 				name: 'Register',//:id
+// 				component(resolve) {
+// 					require(['../pages/web/Register'], resolve)
+// 				},
+// 		
+// 			}
+// 
 		// 	{
 		// 		path: '/',
 		// 		name: 'Thread_CompanionsList',//:id
@@ -148,14 +148,14 @@ export default new Router({
 		// 	},
 		// 				
 		// },
-		// {
-		// 	path: '/',
-		// 	name: 'Thread_ZhuanlanDetail',//:wenzhangid
-		// 	component(resolve) {
-		// 		require(['../pages/web/Thread/Thread_ZhuanlanDetail'], resolve)
-		// 	},
-		// 				
-		// },
+		{
+			path: '/',
+			name: 'Thread_ZhuanlanDetail',//:wenzhangid
+			component(resolve) {
+				require(['../pages/web/Thread/Thread_ZhuanlanDetail'], resolve)
+			},
+						
+		},
 		// 	{
 		// 	path: '/',
 		// 	name: 'Thread_Ask',//:id
@@ -210,14 +210,7 @@ export default new Router({
 // 			},
 // 				
 // 		},
-{
-			path: '/',
-			name: 'Hotel', //
-			component(resolve) {
-				require(['../pages/web/Hotel/Hotel'], resolve)
-			},
-				
-		},
+
 	],
 
 	scrollBehavior(to, from, savedPosition) {

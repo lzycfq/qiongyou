@@ -3,6 +3,7 @@
 	<el-col :span="24">
 		<headers></headers>
 		<div style="clear: both;"></div>
+		
 		<div class="we_head" @mouseover='mouseoverimg()'>
 			<ul>
 				<li>
@@ -203,6 +204,8 @@
 		},
 		data() {
 			return {
+				dax:[],
+				goodsId:'',
 				Trtongzhi: false,
 				activeName: 'first',
 				currentPage: 1, //初始页
@@ -297,6 +300,7 @@
 			clearInterval(this.Trtongzhitime);		
 		},
 		methods: {
+			
 			buildTrtongzhidata() {
 				this.axios.get('/api/buildTrtongzhidata').then(res => {
 					if(this.Trtongzhidata.length!=null){

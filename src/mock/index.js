@@ -10,7 +10,8 @@ const buildwebswiper = Mock.mock(
 			data: [{
 					tweenimg: img1,
 					swipertitle: "【意大利游记攻略】“意”惹情牵，沐浴在艳阳下的旧时光",
-					swiperdsc: "Da-image"
+					swiperdsc: "Da-image",
+					
 				},
 				{
 					tweenimg: img2,

@@ -11,7 +11,7 @@ module.exports = {
         assetsPublicPath: '/',
         proxyTable: {
             '/admin': {
-                target: '',//设置你调用的接口域名和端口号 别忘了加http
+                target: 'http://app.zhonyou.cn/nsgoods',//设置你调用的接口域名和端口号 别忘了加http
                 changeOrigin: true,
                 pathRewrite: {
                     '^/admin': ''

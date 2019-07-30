@@ -28,8 +28,8 @@
 		<div class="Ask_banner">
 			<el-carousel :interval="5000" height="295" arrow="always">
 				<el-carousel-item v-for="(item,index) in Askbanner" :key="index">
-					<router-link :to="{path:item.Askbannerlink,params:{Askbannerid:item.Askbannerid}}" <img :src="item.Askbannerimg"
-					 width="100%" height="100%" />
+					<router-link :to="{path:item.Askbannerlink,params:{Askbannerid:item.Askbannerid}}">
+					 <img :src="item.Askbannerimg"width="100%" height="100%" />
 					<div class="Ask_banner_title" v-if="item.type===1">
 						<h3>{{item.Askbannertitle}}</h3>
 						<router-link to="">问题合集</router-link>

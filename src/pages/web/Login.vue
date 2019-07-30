@@ -14,7 +14,7 @@
 								<div class="q-login-form">
 									<el-form :model="ruleForm" :rules="rules" ref="ruleForm" class="demo-ruleForm">
 										<el-form-item prop="qzhangname">
-											<el-input type="password" placeholder="请输入手机/账号/又想" v-model="ruleForm.qzhangname" autocomplete="off" rel="qzhangname"></el-input>
+											<el-input  placeholder="请输入手机/账号" v-model="ruleForm.qzhangname" autocomplete="off" rel="qzhangname"></el-input>
 										</el-form-item>
 										<el-form-item prop="pass">
 											<el-input type="password" placeholder="请输入密码" v-model="ruleForm.pass" autocomplete="off" rel='pass'></el-input>
@@ -57,7 +57,7 @@
 												</div>
 												<el-form-item prop="phone">
 													<div class="login-phone">
-														<el-input type="password" placeholder="请输入手机号码" v-model.number="ruleForms.phone" autocomplete="off" rel="phone"></el-input>
+														<el-input  placeholder="请输入手机号码" v-model.number="ruleForms.phone" autocomplete="off" rel="phone"></el-input>
 													</div>
 												</el-form-item>
 											</div>
@@ -365,6 +365,7 @@
 </style>
 <script>
 	import SIdentify from '../../pages/web/compoents/identify.vue'
+	import {isvalidPhone} from '../../../static/js/isvalidPhone'
 	export default {
 		name: 'login',
 
