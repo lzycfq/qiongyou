@@ -2,14 +2,14 @@
 	<el-col :span="24">
 		<headers></headers>
 		<div style="clear: both;"></div>
-		<div class="hotel_searchbg">
+		<div class="hotel_searchbg" v-bind:class="{ active: isActive }">
 			<div class="hotel_search">
 				<div class="hotel_link">
 					<router-link to=''>特价酒店</router-link><span class="sep">|</span>
 					<router-link to="">华人旅馆</router-link>
 				</div>
 				<div class="hotel_title" title="旅途可以多一种可能。">旅途可以多一种可能</div>
-				<el-tabs v-model="activeName">
+				<el-tabs v-model="activeName" @tab-click="Hotelclick">
 					<el-tab-pane label="酒店" name="first">
 						<div class="hotel_searchcontent hotel">
 							<el-form :model="ruleForm" :rules="rules" ref="ruleForm">
@@ -17,15 +17,12 @@
 									<el-input v-model="ruleForm.searchcity" class="hotel_search_city" placeholder="想去哪里？"></el-input>
 								</el-form-item>
 								<el-form-item prop="searchhoteldata" class="el-form-itemtwo">
-									<el-date-picker v-model="ruleForm.searchhoteldata" type="daterange" range-separator="-" start-placeholder="开始日期"
+									<el-date-picker v-model="ruleForm.searchhoteldata" type="daterange" range-separator="-" start-placeholder="入住日期"
 									 end-placeholder="结束日期">
 									</el-date-picker>
 								</el-form-item>
 								<el-button class="hotel_searchbtn" @click="searchBtn('ruleForm')"><i class="el-icon-search"></i> 搜索酒店</el-button>
-								<!-- <el-form-item prop="searchinfo">
-								<el-input v-model="ruleForm.searchinfo" rel="searchinfo" class="Com_input" placeholder="请输入搜索内容"></el-input>
-								<i class="el-icon-search iconss" @click="searchBtn('ruleForm')"></i>
-							</el-form-item> -->
+
 							</el-form>
 							<div style="clear: both;"></div>
 							<div class="quick_search">
@@ -45,10 +42,10 @@
 						<div class="hotel_searchcontent hotel">
 							<el-form :model="ruleForm" :rules="rules" ref="ruleForm">
 								<el-form-item prop="searchcity" class="el-form-itemfirst">
-									<el-input v-model="ruleForm.searchMingsu" class="hotel_search_city" placeholder="想去哪里？"></el-input>
+									<el-input v-model="ruleForm.searchcity" class="hotel_search_city" placeholder="想去哪里？"></el-input>
 								</el-form-item>
 								<el-form-item prop="searchhoteldata" class="el-form-itemtwo">
-									<el-date-picker v-model="ruleForm.searchMingsudata" type="daterange" range-separator="-" start-placeholder="开始日期"
+									<el-date-picker v-model="ruleForm.searchhoteldata" type="daterange" range-separator="-" start-placeholder="入住日期"
 									 end-placeholder="结束日期">
 									</el-date-picker>
 								</el-form-item>
@@ -66,7 +63,7 @@
 									</li>
 									<li>
 										<router-link to="">洛杉矶</router-link>
-									</li>								
+									</li>
 								</ul>
 							</div>
 						</div>
@@ -75,10 +72,65 @@
 			</div>
 		</div>
 		<div class="Ho_searchjilu">
-			<!-- 返回整个组件 -->
-			
+			<span align="left" class="hot_jinxuan">精选</span>
+			<br />
+			<el-tabs v-model="activeName" @tab-click="handleClick">
+				<el-tab-pane v-for="(item, index) in Hosearchjilu" :label="item.title" >
+					<div class="hotel_summary">
+						<div class="hotel_summary_average summary_average">
+							<div class="title">
+								<img src="//common3.qyerstatic.com/hotel/desktop/hotel_home/img/area.svg">&nbsp;<span>{{item.title}}平均数据</span></div>
+							<div class="flex_cen_bet flex">
+								<div class="item">
+									<div class="num"><span>{{item.hotcityprice}}</span><small>元</small></div><small>价格</small>
+								</div>
+								<div class="item">
+									<div class="num"><span>{{item.hotcitydengji}}</span></div><small>星级</small>
+								</div>
+								<div class="item">
+									<div class="num"><span>{{item.hotcityorder}}</span></div><small>评分</small>
+								</div>
+							</div>
+						</div>
+						<div class="qyer_summary_average summary_average">
+							<div class="title "><img src="//common3.qyerstatic.com/hotel/desktop/hotel_home/img/qyer.svg">
+								穷游用户主流数据
+							</div>
+							<div class="flex_cen_bet flex">
+								<div class="item">
+									<div class="num"><span>{{item.hotcityQprice}}</span><small>元</small></div><small>价格</small>
+								</div>
+								<div class="item">
+									<div class="num"><span>{{item.hotcityQdengji}}</span></div><small>星级</small>
+								</div>
+								<div class="item">
+									<div class="num"><span>{{item.hotcityQorder}}</span></div><small>评分</small>
+								</div>
+							</div>
+						</div>
+					</div>
+					</el-tab-pane>
+			</el-tabs>
 		</div>
-		
+		<div style="clear: both;"></div>
+        <div class="ho_list">
+			<p>数据结论：在曼谷酒店选择上，穷游用户更偏爱星级高、评分高的住宿体验。</p>
+			<div class="ho_list_content">
+				<div class="ho_list_contentlist">
+					<router-link to="" class="hotel_item">
+						<img src="http://pic.qyer.com/partner/567960/18741569/1413392864" class="hote_item_img"/>
+						<p class="hotel_item_name">今日旅馆</p>
+						<p class="hotel_item_rate"><el-rate v-model="hotelitemvalue" disabled show-score disabled-void-icon-class="disabledicon" text-color="#323232" score-template="{value}"></el-rate>
+						</p>
+						<div class="hotel_item_price"><span class="left_price">89</span><span class="right_price">元起</span></div>
+					</router-link>
+				</div>
+				
+			</div>
+			<div style="clear: both;">
+			</div>
+			<router-link to="" class="morehotel">查看更多曼谷酒店&nbsp;<i class="el-icon-arrow-right "></i></router-link>
+		</div>
 	</el-col>
 </template>
 <script>
@@ -87,10 +139,10 @@
 		name: 'Hotel',
 		data() {
 			return {
-				activeName: 'second',
+				hotelitemvalue:4,
 				ruleForm: {
 					searchinfo: '',
-					searchhoteldata: '',
+
 					searchMingsu: '',
 					searchMingsudata: ''
 				},
@@ -100,11 +152,7 @@
 						message: '请输入搜索内容',
 						trigger: 'blur'
 					}, ],
-					searchhoteldata: [{
-						required: true,
-						message: '请输入住日期',
-						trigger: 'blur'
-					}, ],
+
 					searchMingsu: [{
 						required: true,
 						message: '请输入搜索内容',
@@ -115,14 +163,37 @@
 						message: '请输入住日期',
 						trigger: 'blur'
 					}, ],
-					
+
 				},
-				toutiaoID:'ID2563696585'
+				toutiaoID: 'ID2563696585',
+				
+				isActive: true,
+				Hosearchjilu: [{
+					title: '曼谷',
+				
+					hotcityprice: '1536',
+					hotcitydengji: '2.8',
+					hotcityorder: '7.8',
+					hotcityQprice: '1116',
+					hotcityQdengji: '2.9',
+					hotcityQorder: '8'
+
+
+				}, {
+					title: '洛杉矶',
+					hotcityprice: '936',
+					hotcitydengji: '2.8',
+					hotcityorder: '6.8',
+					hotcityQprice: '1006',
+					hotcityQdengji: '3.3',
+					hotcityQorder: '7'
+
+
+				}]
 			}
 		},
-		created() {
-		},
-		
+		created() {},
+
 		methods: {
 			// // 拼装头条接口
 			// //测试条用接口是否返回数据？自行匹配相关数据源
@@ -135,19 +206,24 @@
 			// 		
 			// 	})
 			// },
+			Hotelclick() {
+				this.isActive = !this.isActive
+			},
 			//搜索提交
 			searchBtn(formName) {
-				this.$refs[formName].validate((valid) => {				
+				alert(this.ruleForm.searchcity)
+				alert(this.ruleForm.searchhoteldata)
+
+				this.$refs[formName].validate((valid) => {
 					if (valid) {
 						this.axios.get('', {
 							params: {
-								'searchinfo': this.ruleForm.searchinfo,
+								'searchcity': this.ruleForm.searchcity,
 								'searchhoteldata': this.ruleForm.searchhoteldata,
-								'searchMingsu': this.ruleForm.searchMingsu,
-								'searchMingsudata': this.ruleForm.searchMingsudata,								
+
 							},
 						}).then(res => {
-							
+
 						}).catch(function(error) {
 							console.log(error);
 						});
@@ -158,7 +234,7 @@
 					}
 				});
 			},
-			
+
 		},
 
 		components: {
@@ -168,14 +244,174 @@
 </script>
 
 <style lang="scss">
-	.Ho_searchjilu{
-		
+	.ho_list{
+		margin-top: 40px;
+		width: 980px;
+		height: auto;
+		margin: 0 auto;
+		text-align: center;
+		p{
+			color: #525252;
+			text-align: left;
+		}
+		.morehotel{
+		display: inline-block;
+		margin:0 auto;
+		color: #000;
+		padding: 16px 20px;
+		border: 1px solid #e5e5e5;
+		font-size: 18px;
+		font-weight: 400;
+		cursor: pointer;
+				}
+		.ho_list_content{
+			display: grid;
+    grid-template-columns: repeat(4,234px); // 网格列
+    grid-column-gap: 15px;//个字简写
+			margin-top: 40px;
+			
+			.hotel_item{
+	width: 234px;
+    height: 285px;
+	display: block;
+	.hotel_item_name{
+		font-size: 16px;
+    font-weight: 400;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-top: 12px;
+	margin-bottom: 5px;
 	}
+	.hote_item_img{
+		width: 234px;
+		height: 156px;
+	}
+	.hotel_item_price{
+		text-align: left;
+	}
+		.hotel_item_price .left_price {
+    font-size: 18px;
+    font-weight: 800;
+	color: #323232;
+}
+.hotel_item_price .right_price {
+    font-size: 12px;
+    margin-left: 5px;
+	color: #666666;
+}
+		
+			}
+			.hotel_item>>>.disabledicon{
+				display: none;
+			}
+		}
+	}
+	.Ho_searchjilu {
+		margin: 0 auto;
+		width: 980px;
+		height: 320px;
+
+
+		.hot_jinxuan {
+			font-size: 18px;
+			line-height: 14px;
+			padding: 0;
+			font-weight: 400;
+			cursor: default;
+			color: #323232;
+			display: block;
+			margin-top: 50px;
+		}
+
+		.hotel_summary {
+
+			margin-top: 30px;
+		}
+
+
+		.hotel_summary .summary_average {
+			width: 482px;
+			height: 163px;
+			box-sizing: border-box;
+			float: left;
+			border: 1px solid #eaeaea;
+		}
+
+		.hotel_summary .qyer_summary_average {
+			float: right;
+		}
+
+		.hotel_summary .summary_average .title {
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+		}
+
+		.hotel_summary .hotel_summary_average .title {
+			color: #4b96de;
+			font-weight: 700;
+			background-image: linear-gradient(-90deg, rgba(208, 243, 252, .4), rgba(164, 226, 247, .4) 97%, rgba(163, 226, 247, .4) 0);
+		}
+
+		.hotel_summary .qyer_summary_average .title {
+			color: #41c074;
+			font-weight: 700;
+			background-image: linear-gradient(-90deg, rgba(240, 248, 227, .3), rgba(65, 192, 116, .072));
+		}
+
+		.hotel_summary .qyer_summary_average .title {
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+		}
+
+		.hotel_summary .summary_average .title img {
+
+			position: relative;
+			top: 2px;
+		}
+
+		.hotel_summary .summary_average .flex {
+			display: flex;
+
+		}
+
+		.hotel_summary .summary_average .item {
+			-webkit-flex: 1;
+			flex: 1;
+
+			text-align: center;
+		}
+
+		.hotel_summary .summary_average .item .num {
+			font-size: 34px;
+			line-height: 48px;
+			font-weight: 100;
+			margin: 27px 0 0;
+
+			span {
+				font-size: 34px;
+				color: #323232;
+			}
+		}
+	}
+
+	.hotel_searchbg.active {
+		background-image: linear-gradient(-90deg, transparent, hsla(0, 0%, 100%, .4));
+		-webkit-transition: background .4s ease;
+		transition: background .4s ease;
+		background-color: #50b8ea;
+	}
+
 	.hotel_searchbg {
 		width: 100%;
 		height: 550px;
 		overflow: hidden;
-		background: #000066;
+		background-image: linear-gradient(-90deg, transparent, hsla(0, 0%, 100%, .4));
+		-webkit-transition: background .4s ease;
+		transition: background .4s ease;
+		background-color: #ffa7b6;
 
 		.hotel_search {
 			width: 980px;
@@ -278,27 +514,28 @@
 
 					}
 				}
-				.hotel_searchbtns{
-				background: linear-gradient(to right,#fe965f 0,#fd7c77 100%);
+
+				.hotel_searchbtns {
+					background: linear-gradient(to right, #fe965f 0, #fd7c77 100%);
 					width: 175px;
 					color: #fff;
 					cursor: pointer;
 					position: absolute;
 					float: left;
-					
+
 					height: 70px;
 					margin-left: -2px;
 					z-index: 10;
 					border-radius: 0 2px 2px 0;
 					border: 1px solid rgba(253, 127, 116, 0.1);
-					
+
 					/deep/ span {
 						font-size: 18px;
 					}
-					
+
 					/deep/ .el-icon-search {
 						font-size: 18px;
-					
+
 					}
 				}
 			}

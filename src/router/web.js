@@ -148,14 +148,14 @@ export default new Router({
 		// 	},
 		// 				
 		// },
-		{
-			path: '/',
-			name: 'Thread_ZhuanlanDetail',//:wenzhangid
-			component(resolve) {
-				require(['../pages/web/Thread/Thread_ZhuanlanDetail'], resolve)
-			},
-						
-		},
+		// {
+		// 	path: '/',
+		// 	name: 'Thread_ZhuanlanDetail',//:wenzhangid
+		// 	component(resolve) {
+		// 		require(['../pages/web/Thread/Thread_ZhuanlanDetail'], resolve)
+		// 	},
+		// 				
+		// },
 		// 	{
 		// 	path: '/',
 		// 	name: 'Thread_Ask',//:id
@@ -210,7 +210,14 @@ export default new Router({
 // 			},
 // 				
 // 		},
-
+{
+			path: '/',
+			name: 'hotel', //
+			component(resolve) {
+				require(['../pages/web/Hotel/hotel'], resolve)
+			},
+				
+		},
 	],
 
 	scrollBehavior(to, from, savedPosition) {
