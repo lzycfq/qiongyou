@@ -6,13 +6,13 @@ Vue.use(Router);
 export default new Router({
 	mode: 'history',
 	routes: [
-		// {
-		// 	path: '/',
-		// 	name: 'Index',
-		// 	component(resolve) {
-		// 		require(['../pages/web/Index.vue'], resolve)
-		// 	}
-		// },
+		{
+			path: '/',
+			name: 'Index',
+			component(resolve) {
+				require(['../pages/web/Index.vue'], resolve)
+			}
+		},
 		// {
 		// 	path: '/',
 		// 	name: 'Destination',
@@ -210,14 +210,14 @@ export default new Router({
 // 			},
 // 				
 // 		},
-{
-			path: '/',
-			name: 'hotel', //
-			component(resolve) {
-				require(['../pages/web/Hotel/hotel'], resolve)
-			},
-				
-		},
+// {
+// 			path: '/',
+// 			name: 'hotel', //
+// 			component(resolve) {
+// 				require(['../pages/web/Hotel/hotel'], resolve)
+// 			},
+// 				
+// 		},
 	],
 
 	scrollBehavior(to, from, savedPosition) {

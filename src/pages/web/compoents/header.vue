@@ -2,8 +2,7 @@
 	<el-col :span="24">
 		<div class="header">
 			<div class="q-header-nav-wrapper">
-				<a href="//www.qyer.com" data-bn-ipg="head-logo"><img src="../../../assets/images/qiongyou/logo.png" width="76"
-					 height="36"></a>
+				<router-link to=''><img src="../../../assets/images/qiongyou/logo.png" width="76" height="36" class="qlogo"></router-link>
 				<ul class="q-header-nav">
 					<li class="nav-list nav-list-dandu">
 
@@ -33,19 +32,13 @@
 								<el-dropdown-item>JNE旅行生活美学</el-dropdown-item>
 								<el-dropdown-item><router-link style="color: #606266;" to="/Thread_CompanionsList">Biu伴(结伴而行)</router-link></el-dropdown-item>														
 								<el-dropdown-item><router-link style="color: #606266;" to="/About">负责任的旅行</router-link></el-dropdown-item>					
-								<el-dropdown-item><router-link style="color: #606266;" to="/Q_Play">特别策划</router-link></el-dropdown-item>																				
-								<el-dropdown-item><router-link style="color: #606266;" to="/Q_Video">旅行精选视频</router-link></el-dropdown-item>													
-
-
+								<el-dropdown-item><router-link style="color: #606266;" to="/Q_Play">特别策划</router-link></el-dropdown-item>																		
+								<el-dropdown-item><router-link style="color: #606266;" to="/Q_Video">旅行精选视频</router-link></el-dropdown-item>											
 							</el-dropdown-menu>
 						</el-dropdown>
 					</li>
 					<li class="nav-list nav-list-dandu">
-
-						<span><router-link class="sba"  to="/TravelAssistant" style="color:#10b041;font-size: 16px;">行程助手</router-link></span>
-
-
-
+						<span><router-link class="sba"  to="/TravelAssistant" style="font-size: 16px;">行程助手</router-link></span>
 					</li>
 					<li class="nav-list">
 						<el-dropdown placement="bottom-start">
@@ -244,7 +237,11 @@
 		a {
 			display: inline-block;
 			float: left;
-			margin: 11px;
+			
+		}
+		.qlogo{
+			position: relative;
+			top: 8px;
 		}
 
 		.q-header-nav-wrapper {

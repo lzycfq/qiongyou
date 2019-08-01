@@ -2,19 +2,22 @@
 	<el-col :span="24">
 		<headers></headers>
 		<div class="q-banner">
-		<!-- 	<swiper :options="sb" ref="mySwiper" v-if="webswiper.length>0">
-				<swiper-slide v-for="(item,index) in webswiper" class="webswiper" :key="index" style="max-height: 640px;">
-					<img :src="item.tweenimg" width="100%" height="100%" />
-					<div class="swipertext">
-						<P>{{item.swipertitle}}</p>
-						<P>{{item.swiperdsc}}</p>
+			<div class="swiper-container indexswiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide webswiper" v-for="(item,index) in webswiper" :key="index" style="max-height: 640px;">
+						<img :src="item.tweenimg" width="100%" height="100%" />
+						<div class="swipertext">
+							<P>{{item.swipertitle}}</p>
+							<P>{{item.swiperdsc}}</p>
+						</div>
 
 					</div>
-				</swiper-slide>
-			</swiper> -->
-			<div class="swiper-pagination sbpagination" slot="pagination"></div>
-			<div class="swiper-button-prev swiper-button-white" slot="button-prev" style="left: 50px;"></div>
-			<div class="swiper-button-next swiper-button-white" slot="button-next" style="right: 50px;"></div>
+					<div class="swiper-pagination sbpagination" slot="pagination"></div>
+					<div class="swiper-button-prev swiper-button-white" slot="button-prev" style="left: 50px;"></div>
+					<div class="swiper-button-next swiper-button-white" slot="button-next" style="right: 50px;"></div>
+				</div>
+
+			</div>
 			<div class="q-search">
 				<!-- <i class="icon iconfont  icon-tubiaozhizuomoban"></i> -->
 				<el-tabs class="card" type="border-card">
@@ -73,22 +76,31 @@
 				<div class="q-layer q-layer-search-autocomplete" v-if="autocomplete">
 					<ul v-for="(item,index) in searchhotCity" :key="index">
 						<li v-for="(item,index) in item.searchhotCitys" :key="index">
-							<div class="search-title search-city-title"><a class="search-name"><span class="cGreen">{{item.guojia}}</span> </em><em class="en">{{item.jname}}</em></a></div>
+							<div class="search-title search-city-title"><a class="search-name"><span class="cGreen">{{item.guojia}}</span>
+									</em><em class="en">{{item.jname}}</em></a></div>
 							<div class="search-info">
-								<router-link :to="{path:item.qlink,params: { id: item.id }}" class="search-info-block"><i class="iconfont-home"><img src="../../assets/images/qiongyou/q1.png"></i><span>签证</span></router-link>
-								<router-link :to="{path:item.clink,params: { id: item.id }}" class="search-info-block"><i class="iconfont-home"><img src="../../assets/images/qiongyou/q2.png"></i><span>城市</span></router-link>
-								<router-link :to="{path:item.jlink,params: { id: item.id }}" class="search-info-block"><i class="iconfont-home"><img src="../../assets/images/qiongyou/q3.png"></i><span>景点</span></router-link>
-								<router-link :to="{path:item.tlink,params: { id: item.id }}" class="search-info-block"><i class="iconfont-home"><img src="../../assets/images/qiongyou/q4.png"></i><span>餐厅</span></router-link>
-								<router-link :to="{path:item.ylink,params: { id: item.id }}" class="search-info-block"><i class="iconfont-home"><img src="../../assets/images/qiongyou/q5.png"></i><span>游记</span></router-link>
-								<router-link :to="{path:item.glink,params: { id: item.id }}" class="search-info-block"><i class="iconfont-home"><img src="../../assets/images/qiongyou/q6.png"></i><span>计划行程</span></router-link>
+								<router-link :to="{path:item.qlink,params: { id: item.id }}" class="search-info-block"><i class="iconfont-home"><img
+										 src="../../assets/images/qiongyou/q1.png"></i><span>签证</span></router-link>
+								<router-link :to="{path:item.clink,params: { id: item.id }}" class="search-info-block"><i class="iconfont-home"><img
+										 src="../../assets/images/qiongyou/q2.png"></i><span>城市</span></router-link>
+								<router-link :to="{path:item.jlink,params: { id: item.id }}" class="search-info-block"><i class="iconfont-home"><img
+										 src="../../assets/images/qiongyou/q3.png"></i><span>景点</span></router-link>
+								<router-link :to="{path:item.tlink,params: { id: item.id }}" class="search-info-block"><i class="iconfont-home"><img
+										 src="../../assets/images/qiongyou/q4.png"></i><span>餐厅</span></router-link>
+								<router-link :to="{path:item.ylink,params: { id: item.id }}" class="search-info-block"><i class="iconfont-home"><img
+										 src="../../assets/images/qiongyou/q5.png"></i><span>游记</span></router-link>
+								<router-link :to="{path:item.glink,params: { id: item.id }}" class="search-info-block"><i class="iconfont-home"><img
+										 src="../../assets/images/qiongyou/q6.png"></i><span>计划行程</span></router-link>
 
 							</div>
 						</li>
 
 						<li>
-							<div class="search-title search-titles "><router-link :to="{path:'deal',params:{id: item.id}}" class="search-poi">
+							<div class="search-title search-titles ">
+								<router-link :to="{path:'deal',params:{id: item.id}}" class="search-poi">
 									查看更多关于<span class="c-green">{{item.didian}}</span>的搜索结果
-								</router-link></div>
+								</router-link>
+							</div>
 						</li>
 					</ul>
 				</div>
@@ -232,33 +244,36 @@
 			<div class="wrapper wrapper_youji">
 				<h2 class="title">热门游记与话题</h2>
 				<div class="hotthread ">
-					<swiper :options="sbs" ref="mySwiper" v-if="youjic.length>0">
-						<swiper-slide v-for="(item,index) in youjic" :key="index">
-							<ul>
-								<li class="sb-slide" v-for="(item,index) in item.youjiccontent" :key="index">
-									<div class="thread">
-										<div class="y-pic">
-											<router-link :to="{path:'thread',params:{id: item.id}}"><img width="275" height="185" :src="item.youjipic"
-												 lazy="loaded"></router-link>
-											<div class="like total_replies"><i class="el-icon-document-checked"></i> <span>{{item.pinglun}}</span></div>
-										</div>
-										<div class="inner">
-											<div class="info clearfix"><span class="avatar">
-													<router-link :to="{path:'thread',params:{id: item.id}}"><img :src="item.youjixiang" lazy="loaded"></router-link>
-												</span><span class="txt">
-													<router-link :to="{path:'thread',params:{id: item.id}}">{{item.youjiname}}</router-link>
-												</span></div>
-											<div class="caption">
-												<router-link :to="{path:'thread',params:{id: item.id}}">{{item.youjidsc}}</router-link>
-											</div>
-										</div><em class="tip">精华</em>
-									</div>
-								</li>
-							</ul>
-						</swiper-slide>
+					<div class="swiper-container indexswipers">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide" v-for="(item,index) in youjic" :key="index">
 
-					</swiper>
-					<div class="swiper-pagination paginations" slot="pagination"></div>
+								<ul>
+									<li class="sb-slide" v-for="(item,index) in item.youjiccontent" :key="index">
+										<div class="thread">
+											<div class="y-pic">
+												<router-link :to="{path:'thread',params:{id: item.id}}"><img width="275" height="185" :src="item.youjipic"
+													 lazy="loaded"></router-link>
+												<div class="like total_replies"><i class="el-icon-document-checked"></i> <span>{{item.pinglun}}</span></div>
+											</div>
+											<div class="inner">
+												<div class="info clearfix"><span class="avatar">
+														<router-link :to="{path:'thread',params:{id: item.id}}"><img :src="item.youjixiang" lazy="loaded"></router-link>
+													</span><span class="txt">
+														<router-link :to="{path:'thread',params:{id: item.id}}">{{item.youjiname}}</router-link>
+													</span></div>
+												<div class="caption">
+													<router-link :to="{path:'thread',params:{id: item.id}}">{{item.youjidsc}}</router-link>
+												</div>
+											</div><em class="tip">精华</em>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="swiper-pagination paginations" slot="pagination"></div>
+						</div>
+					</div>
+
 				</div>
 				<div class="more-youji">
 					<router-link to="/bbs">查看更多游记</router-link>
@@ -367,11 +382,13 @@
 				</div>
 			</div><span class="q-fb-close"><i class="el-icon-close" @click="close"></i></span>
 		</div>
-		
+
 	</el-col>
 </template>
 <script>
-import headers from '../../pages/web/compoents/header.vue'
+	import headers from '../../pages/web/compoents/header.vue'
+	import Swiper from 'swiper';
+	import 'swiper/dist/css/swiper.css'
 	export default {
 		name: 'index',
 		data() {
@@ -386,34 +403,9 @@ import headers from '../../pages/web/compoents/header.vue'
 				layoutuijian: [],
 				qshop: [],
 				trys: [],
-				searchhotCity:[],
+				searchhotCity: [],
 				count: 0,
 				footer: true,
-			
-				sb: {
-					speed: 4000,
-					effect: 'fade',
-					autoplay: true,
-					parallax: true,
-					loop: false,
-					paginationClickable: true,
-					pagination: '.sbpagination',
-					paginationType: 'fraction',
-					paginationFractionRender: function(swiper, currentClassName, totalClassName) {
-						return '<span class="' + currentClassName + '"></span>' +
-							' <span class="xiexian">/</span>' +
-							'<span class="' + totalClassName + '"></span>';
-					},
-					nextButton: '.swiper-button-next',
-					prevButton: '.swiper-button-prev'
-
-				},
-				sbs: {
-					pagination: '.swiper-pagination',
-					paginationClickable: true,
-					loop: false,
-
-				},
 				// 表单验证
 				cityform: {
 					cityname: ''
@@ -459,7 +451,39 @@ import headers from '../../pages/web/compoents/header.vue'
 			this.buildsearchhotCity();
 		},
 
-	
+		mounted() {
+			new Swiper('.indexswiper', {
+				observer: true, //修改swiper自己或子元素时，自动初始化swiper
+				observeParents: true, //修改swiper的父元素时，自动初始化swiper	
+				effect: 'fade',
+				autoplay: true,
+
+				paginationClickable: true,
+				pagination: {
+					el: '.sbpagination',
+					type: 'fraction',
+					paginationFractionRender: function(swiper, currentClassName, totalClassName) {
+						return '<span class="' + currentClassName + '"></span>' +
+							' <span class="xiexian">/</span>' +
+							'<span class="' + totalClassName + '"></span>';
+					},
+				},
+				nextButton: '.swiper-button-next',
+				prevButton: '.swiper-button-prev'
+			});
+
+
+		},
+		mounted() {
+			new Swiper('.indexswipers', {
+				observer: true, //修改swiper自己或子元素时，自动初始化swiper
+				observeParents: true, //修改swiper的父元素时，自动初始化swiper	
+				pagination: '.paginations',
+				paginationClickable: true,
+				loop: true,
+				autoplay:true,
+			});
+		},
 
 		methods: {
 			// 模糊搜索下拉框数据
@@ -480,7 +504,7 @@ import headers from '../../pages/web/compoents/header.vue'
 				}
 				//调取接口axios
 			},
-			
+
 
 
 			buildwebswiper() {
@@ -525,7 +549,7 @@ import headers from '../../pages/web/compoents/header.vue'
 					console.log(error);
 				})
 			},
-			buildsearchhotCity(){
+			buildsearchhotCity() {
 				this.axios.get('/api/buildsearchhotCity').then(res => {
 					this.searchhotCity = res.data.data
 				}).catch(function(error) {
@@ -640,8 +664,7 @@ import headers from '../../pages/web/compoents/header.vue'
 		},
 		components: {
 			headers,
-			 swiper,
-    swiperSlide
+
 		},
 
 	}
@@ -744,15 +767,17 @@ import headers from '../../pages/web/compoents/header.vue'
 
 	.q-search .q-layer-search-autocomplete ul li.current .search-info {
 		display: block;
-	
+
 
 	}
-.q-search .q-layer-search-autocomplete ul li:hover {
-    background-color: #e3fae1;
-}
+
+	.q-search .q-layer-search-autocomplete ul li:hover {
+		background-color: #e3fae1;
+	}
+
 	.q-search .q-layer-search-autocomplete ul li:hover .search-info {
 		display: block;
-         background: #e3fae1;
+		background: #e3fae1;
 	}
 
 	.q-search .q-layer-search-autocomplete .search-info {
@@ -788,24 +813,48 @@ import headers from '../../pages/web/compoents/header.vue'
 		clear: both;
 		height: 0;
 	}
-.q-search .q-layer-search-autocomplete .search-titles {
-    padding: 10px 0;
-    line-height: 24px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-size: 16px;
-	color: #666666;
-	margin-left: 8px;
-	a{
-		color: #666666
+
+	.q-search .q-layer-search-autocomplete .search-titles {
+		padding: 10px 0;
+		line-height: 24px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		font-size: 16px;
+		color: #666666;
+		margin-left: 8px;
+
+		a {
+			color: #666666
+		}
+
 	}
-	
-}
-.q-search .q-layer-search-autocomplete .search-title .c-green {
-    color: #10b042;
-}
-	
+
+	.q-search .q-layer-search-autocomplete .search-title .c-green {
+		color: #10b042;
+	}
+
+	@-webkit-keyframes fadeIn {
+		0% {
+			opacity: 0;
+			/*初始状态 透明度为0*/
+
+
+		}
+
+		50% {
+			opacity: 0;
+			/*中间状态 透明度为0*/
+		}
+
+		100% {
+			opacity: 1;
+			/*结尾状态 透明度为1*/
+
+
+		}
+	}
+
 	.q-footer-banner {
 		position: fixed;
 		z-index: 9999;
@@ -816,6 +865,22 @@ import headers from '../../pages/web/compoents/header.vue'
 		height: 70px;
 		color: #fff;
 		background-color: rgba(0, 0, 0, .8);
+		-webkit-animation-name: fadeIn;
+		-moz-animation-name: fadeIn;
+		-ms-animation-name: fadeIn;
+		-o-animation-name: fadeIn;
+		animation-name: fadeIn;
+		/*动画名称*/
+		-webkit-animation-duration: 5.5s;
+		/*动画持续时间*/
+		-webkit-animation-iteration-count: 1;
+		/*动画次数*/
+		-webkit-animation-delay: 0s;
+		/*延迟时间*/
+
+
+
+
 
 		.q-fb-main {
 			position: relative;
