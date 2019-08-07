@@ -252,13 +252,13 @@
 				</div>
 				<div class="plcFocusOperate" v-for="(item,index) in plcFocusOperate" :key="index">
 					<ul class="place-userbehavior">
-						<li><img src="../../../assets/images/qiongyou/go_2 (3).png" width="43px" height="40px" />
+						<li><img src="../../../assets/images/qiongyou/go_1.png" width="43px" height="40px" />
 							<span>想去</span>
 						</li>
-						<li><img src="../../../assets/images/qiongyou/go_2 (2).png" />
+						<li><img src="../../../assets/images/qiongyou/go_2.png" />
 							<span>去过</span>
 						</li>
-						<li><img src="../../../assets/images/qiongyou/go_2 (1).png" />
+						<li><img src="../../../assets/images/qiongyou/go_3.png" />
 							<span>生活过</span>
 						</li>
 					</ul>

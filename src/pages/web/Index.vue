@@ -4,7 +4,7 @@
 		<div class="q-banner">
 			<div class="swiper-container indexswiper">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide webswiper" v-for="(item,index) in webswiper" :key="index" style="max-height: 640px;">
+					<div class="swiper-slide" v-for="(item,index) in webswiper" :key="index" style="max-height: 640px;">
 						<img :src="item.tweenimg" width="100%" height="100%" />
 						<div class="swipertext">
 							<P>{{item.swipertitle}}</p>
@@ -270,8 +270,9 @@
 									</li>
 								</ul>
 							</div>
-							<div class="swiper-pagination paginations" slot="pagination"></div>
+
 						</div>
+						<div class="swiper-pagination paginations" slot="pagination"></div>
 					</div>
 
 				</div>
@@ -471,19 +472,18 @@
 				nextButton: '.swiper-button-next',
 				prevButton: '.swiper-button-prev'
 			});
-
-
-		},
-		mounted() {
 			new Swiper('.indexswipers', {
 				observer: true, //修改swiper自己或子元素时，自动初始化swiper
-				observeParents: true, //修改swiper的父元素时，自动初始化swiper	
-				pagination: '.paginations',
-				paginationClickable: true,
-				loop: true,
-				autoplay:true,
+				observeParents: true, //修改swiper的父元素时，自动初始化swiper
+				pagination: {
+					el: '.paginations',
+				},
+			
+				autoplay: true,
 			});
+
 		},
+
 
 		methods: {
 			// 模糊搜索下拉框数据
@@ -980,7 +980,7 @@
 	.q-banner {
 		/deep/ .swiper-pagination-fraction {
 			bottom: 80px;
-
+			color: white;
 			left: 45%;
 			width: 100%;
 		}
@@ -1000,12 +1000,7 @@
 		}
 	}
 
-	.q-banner {
-		/deep/ .xiexian {
-			font-size: 28px;
-			color: white;
-		}
-	}
+
 
 	.q-banner .swipertext {
 		position: absolute;

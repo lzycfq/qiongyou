@@ -222,7 +222,7 @@
 						</ul>
 					</div>
 					<div class="navbar-search">
-						<el-form ref="detailform" rules="detailform" :model="detailform">
+						<el-form ref="detailform" rules="detailformRous" :model="detailform">
 							<el-form-item>
 								<el-input autocomplete="off" class="searchinput" placeholder="搜索国家/城市/景点" rel="searchgcj" v-model="detailform.searchgcj">
 								</el-input> <i class="el-icon-search eliconsearch" @click="searchdetailclick"></i>
@@ -231,7 +231,13 @@
 					</div>
 				</div>
 				<div style="clear: both;"></div>
-				<div class="impression-container">
+			
+				</div>
+			</div>
+			<!-- 轮播 -->
+			<div style="width: 100%;background: #fafafa;">
+				<div style="width: 1160px; margin: 0 auto; overflow: hidden; padding: 20px 0;">
+					<div class="impression-container">
 					<div class="city-focus-photo-container" v-for="(item,index) in detailswiper">
 						<el-carousel height="424px">
 							<el-carousel-item v-for="(item,index) in item.detailswipers" :key="item">
@@ -254,7 +260,7 @@
 									<div class="impression-item-top">
 										<div class="user-info">
 											<div class="avater"><img :src="item.avater" alt="avater">
-
+				
 											</div><span class="name">{{item.name}}</span>
 										</div>
 										<div class="value"><img src="https://fes.qyerstatic.com/Fhjpp-Y8rsQOSdbuUkTlajHbmTDl?imageslim" alt="赞">
@@ -269,9 +275,8 @@
 						<p class="slide-bar-footer">
 							<router-link to="/moreCity">查看更多城市印象</router-link>
 						</p>
-
-					</div>
-				</div>
+				
+					</div></div></div>
 			</div>
 			<div style="clear: both;"></div>
 			<!-- 	穷游锦囊 -->
@@ -328,7 +333,8 @@
 					</div>
 
 					<ul class="destination-tabs">
-						<li id="remenidg" v-for="(value,key) in desbase" :key="key" :class="key === base_indexh?'active':''" v-on:click="changeBaseIndexh(key)">
+						<li id="remenidg" v-for="(value,key) in desbase" :key="key" :class="key === base_indexh?'active':''"
+						 v-on:mouseenter="changeBaseIndexh(key)">
 							{{value.hotdi}}
 						</li>
 					</ul>
@@ -528,9 +534,12 @@
 			<div class="hotel-tips-bg" v-for="(hotelvalue,index) in Strategy" :key="index">
 				<div class="hotel-tips">
 					<h3>{{hotelvalue.stname}}攻略</h3>
-					<el-form :model="detailforms" rules="detailforms" ref="detailforms">
-						<el-form-item>
-							<el-input v-model="detailforms.cityname" placeholder="请输入入住地点" align="center" class="hotel-input" rel="cityname"></el-input>
+					<el-form :model="detailforms" rules="detailformRous" ref="detailforms">
+
+						<el-form-item prop="cityname" class='ruzhucity'>
+							<el-input v-model="detailforms.cityname" placeholder="请输入酒店城市" class="hotel-input"></el-input>
+						</el-form-item>
+						<el-form-item prop="citydate" class='ruzhudate'>
 							<el-date-picker size="large" v-model="detailforms.citydate" rel="citydate" type="daterange" align="right"
 							 unlink-panels range-separator="-" start-placeholder="入住日期" end-placeholder="退房日期" :picker-options="pickerOptions">
 							</el-date-picker>
@@ -611,7 +620,7 @@
 					<div class="characteristic-lodge-header">
 						<h2>Airbnb爱彼迎特色住宿</h2>
 					</div>
-					<ul class="destination-tabs">
+					<ul class="destination-tabs_tese">
 						<li id="remenidg" v-for="(value,key) in aibase" :key="key" :class="key === base_indexai?'active':''" v-on:click="changeBaseIndexai(key)">
 							{{value.aitese}}
 						</li>
@@ -740,7 +749,7 @@
 				detailform: {
 					searchgcj: ''
 				},
-				detailform: {
+				detailformRous: {
 					searchgcj: [{
 						required: true,
 						message: '请输入搜索国家/城市/景点',
@@ -750,7 +759,7 @@
 				detailforms: {
 					cityname: ''
 				},
-				detailforms: {
+				detailformRous: {
 					cityname: [{
 						required: true,
 						message: '请输入搜索入住地点',
@@ -908,7 +917,7 @@
 					if (valid) {
 						this.axios.get('', {
 							params: {
-								'searchgcj': this.$rels.searchgcj.value
+								'searchgcj': this.detailform.searchgcj
 							},
 						}).then(res => {}).catch(function(error) {
 							console.log(error);
@@ -926,8 +935,8 @@
 					if (valid) {
 						this.axios.get('', {
 							params: {
-								'cityname': this.$rels.cityname.value,
-								'citydate': this.$rels.citydate.value,
+								'cityname': this.detailforms.cityname,
+								'citydate': this.detailforms.citydate,
 
 							},
 						}).then(res => {}).catch(function(error) {
@@ -1644,7 +1653,6 @@
 
 	.navbar-menu .plc-nav .plc-menu a:hover {
 		color: #28b76c;
-
 	}
 
 	.navbar-menu .plc-nav .plc-menu .navdropdown:hover {
@@ -1653,7 +1661,6 @@
 
 	.navbar-menu .plc-nav.plc-menu .hoverzhinan span:focus {
 		color: #28b76c;
-
 		background-color: white;
 	}
 
@@ -1746,7 +1753,7 @@
 
 		.eliconsearch {
 			position: absolute;
-			top: 9px;
+			top: 12px;
 			font-size: 20px;
 			right: 8px;
 		}
@@ -2338,25 +2345,29 @@
 	}
 
 	.destination-tabs {
-		margin: 0 auto;
-		padding: 0;
 
-		margin-top: 41px;
-		margin-bottom: 50px;
-		display: inline-block;
-		border-bottom: 1px solid rgba(0, 0, 0, .1);
+		overflow: hidden;
 		position: relative;
+		font-size: 0;
+		width: fit-content;
+		margin: 55px auto 15px;
+		border-bottom: #E9E9E9 1px solid;
 
 		li {
+			font-size: 17px;
+			margin: 0 10px 0px 0px;
 			display: inline-block;
-			vertical-align: text-bottom;
-			height: 43px;
-			font-size: 18px;
-			color: #878787;
-			line-height: 37px;
-			position: relative;
-			top: 3px;
+			height: 30px;
+			text-align: left;
+			line-height: 20px;
+			color: #929292;
+			border-bottom: 0px solid #e5e5e5;
+			overflow: visible;
+			cursor: pointer;
+		}
 
+		li:last-child {
+			margin: 0 0 0 0;
 		}
 
 	}
@@ -2439,7 +2450,7 @@
 	.destination-tabs #remenidg.active {
 		color: #000;
 		position: relative;
-		line-height: 46px;
+
 		top: 0px;
 		border-bottom: #28b76c 2px solid;
 	}
@@ -3413,19 +3424,26 @@
 		}
 	}
 
-	.hotel-tips .hotel-input {
-		width: 23%;
-
-		margin-right: 20px;
+	.hotel-tips {
+		/deep/ .hotel-input .el-input__inner{
+		width: 100%;
+		height: 50px;
+	}
 	}
 
 	.hotel-tips {
-		/deep/ .el-input__inner {
+		/deep/ .ruzhucity {
+			width: 23%;
+			float: left;
 			height: 50px;
 
-			line-height: 50px;
-			border: 1px #21BF6A solid;
+			margin-right: 20px;
+		}
+	}
 
+	.hoter-tips {
+		/deep/ .el-input__inner {
+			height: 50px;
 		}
 	}
 
@@ -3437,8 +3455,10 @@
 	}
 
 	.hotel-tips {
-		/deep/ .el-range-editor.el-input__inner {
-			width: 57%;
+		/deep/ .ruzhudate {
+			width: 74%;
+			float: right;
+			
 		}
 	}
 
@@ -3447,7 +3467,12 @@
 			border: 1px #21BF6A solid;
 		}
 	}
-
+	.hotel-tips  {
+		/deep/ .el-date-editor--daterange.el-input__inner{
+	 width: 654.5px;
+	 height:50px;
+	 }
+ }
 	.hotel-tips .desclick {
 		width: 180px;
 		height: 50px;
@@ -3858,6 +3883,34 @@
 		}
 	}
 
+	.destination-tabs_tese {
+		overflow: hidden;
+		position: relative;
+		font-size: 0;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
+		width: fit-content;
+		margin: 55px auto 35px;
+		border-bottom: #E9E9E9 1px solid;
+
+		li {
+			font-size: 17px;
+			margin: 0 40px 0px 0px;
+			display: inline-block;
+			height: 30px;
+			text-align: left;
+			line-height: 20px;
+			color: #929292;
+			border-bottom: 0px solid #e5e5e5;
+			overflow: visible;
+			cursor: pointer;
+		}
+
+		li:last-child {
+			margin: 0 0 0 0;
+		}
+	}
+
 	.characteristicdltab {
 		display: none;
 	}
@@ -3866,10 +3919,10 @@
 		display: block;
 	}
 
-	.characteristic-lodge-container .destination-tabs #remenidg.active {
+	.characteristic-lodge-container .destination-tabs_tese #remenidg.active {
 		color: #000;
 		position: relative;
-		line-height: 46px;
+
 		top: 0px;
 		border-bottom: #28b76c 2px solid;
 	}

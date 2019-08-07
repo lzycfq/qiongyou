@@ -38,7 +38,7 @@
 						</el-dropdown>
 					</li>
 					<li class="nav-list nav-list-dandu">
-						<span><router-link class="sba"  to="/TravelAssistant" style="color:#10b041;font-size: 16px;">行程助手</router-link></span>
+						<span><router-link class="sba"  to="/TravelAssistant" style="font-size: 16px;">行程助手</router-link></span>
 
 					</li>
 					<li class="nav-list">
@@ -300,8 +300,8 @@
 			}
 		},
 		created(){
-			this.builddtdl;
-		}.
+			this.builddtdl();
+		},
 
 		methods: {
 			builddtdl(){

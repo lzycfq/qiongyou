@@ -7,7 +7,8 @@ import MApp from './Mobile'
 import WApp from './Web'
 import VueAxios from 'vue-axios'
 import Global from '../src/pages/web/compoents/Global.vue'
-
+import waterfall from 'vue-waterfall2'
+Vue.use(waterfall)
 Vue.prototype.Global = Global //挂载到Vue实例上面
 //判断PC或mobile
 let role =

@@ -41,10 +41,10 @@
 				</span>
 			</h3>
 			<div class="place-home-tab">
-				<ul class="tab">
+				<ul class="tabs">
 
 					<li id="remenid" class="on" v-for="(value,key) in base" :key="key" :class="key === base_index?'active':''"
-					 v-on:click="changeBaseIndex(key)">
+					 v-on:mouseenter="changeBaseIndex(key)">
 						{{value}}
 					</li>
 
@@ -83,7 +83,7 @@
 			</h3>
 			<div class="place-home-tabz">
 				<ul class="tab">
-					<li id="remenidz" v-for="(value,key) in zbase" :key="key" :class="key === base_indexz?'active':''" v-on:click="changeBaseIndexz(key)">
+					<li id="remenidz" v-for="(value,key) in zbase" :key="key" :class="key === base_indexz?'active':''" v-on:mouseenter="changeBaseIndexz(key)">
 						{{value}}
 					</li>
 				</ul>
@@ -123,7 +123,7 @@
 			</h3>
 			<div class="place-home-taby place-home-month  ">
 				<ul class="tab">
-					<li id="remenidy" v-for="(value,key) in ybase" :key="key" :class="key === base_indexy?'active':''" v-on:click="changeBaseIndexy(key)">
+					<li id="remenidy" v-for="(value,key) in ybase" :key="key" :class="key === base_indexy?'active':''" v-on:mouseenter="changeBaseIndexy(key)">
 						{{value}}
 					</li>
 				</ul>
@@ -152,12 +152,12 @@
 			</h3>
 			<div class="place-home-tabg">
 				<ul class="tab">
-					<li id="remenidg" v-for="(value,key) in gbase" :key="key" :class="key === base_indexg?'active':''" v-on:click="changeBaseIndexg(key)">
+					<li id="remenidg" v-for="(value,key) in gbase" :key="key" :class="key === base_indexg?'active':''" v-on:mouseenter="changeBaseIndexg(key)">
 						{{value}}
 					</li>
 				</ul>
 			</div>
-			<div class="place-home-card4-tip" >
+			<div class="place-home-card4-tip">
 				拼音首字母顺序
 			</div>
 			<div class="place-home-card4" v-for="(item,key) in desguojia" :class="key === base_indexg?'active':''" :key="key">
@@ -173,9 +173,9 @@
 			<div style="clear: both;"></div>
 			<br />
 			<br /><br />
-			</div>
-			
-			
+		</div>
+
+
 	</el-col>
 </template>
 <style lang="scss">
@@ -186,80 +186,85 @@
 		position: relative;
 
 		.tab {
-			overflow: hidden;
+			 overflow: hidden;
 			position: relative;
-			text-align: center;
 			font-size: 0;
-
-			li {
-				font-size: 18px;
-				margin: 0 25px;
-				display: inline-block;
-				height: 30px;
-				line-height: 20px;
-				color: #929292;
-				border-bottom: 0px solid black;
-				overflow: visible;
-				cursor: pointer;
-				// #e5e5e5;
-			}
+			width: fit-content; 
+			margin: 0 auto;
+			border-bottom: #E9E9E9 1px solid;
+			
+					li {
+						font-size: 18px;
+						margin: 0 50px 0px 0px;
+						display: inline-block;
+						height: 30px;
+						 text-align: left;
+						line-height: 20px;
+						color: #929292;
+						border-bottom: 0px solid #e5e5e5;
+						overflow: visible;
+						cursor: pointer;
+					}
+					li:last-child{
+						margin: 0 0 0 0;
+					}
 		}
 	}
-	.place-home-card4{
+
+	.place-home-card4 {
 		display: none;
 	}
-	.place-home-card4.active{
+
+	.place-home-card4.active {
 		display: block;
 	}
-.place-home-card4 li {
-    float: left;
-    width: 33.33%;
-    overflow: visible;
-    white-space: nowrap;
-    height: 30px;
-}
-.place-home-card4 li:nth-child(3n+0) .item, .place-home-card4 li:nth-child(3n-1) .item {
-    margin-left: 30px;
-}
-.place-home-card4 li .item {
-    display: block;
-    line-height: 16px;
-    margin-bottom: 14px;
-}
-.place-home-card4 li .item a {
-    color: #000;
-    font-size: 14px;
-    text-decoration: none;
-}
-.place-home-card4 li .item a span {
-    margin-right: 3px;
-}
-.place-home-card4 li .item a em {
-    color: #959595;
-    font-weight: 100;
-}
-.place-home-card4 li .item .hot{
-	 display: inline-block;
-    background-color: rgb(255, 131, 35);
-  
-    color: rgb(255, 255, 255);
-    font-size: 12px;
-    line-height: 16px;
-padding: 1px;
-    margin: 0px 0px 0px 5px;
-}
-	.place-home-tabg .tab::after {
-		content: " ";
-		position: absolute;
-		height: 2px;
-		right: 0;
-		bottom: -1px;
-		left: 211px;
 
-		width: 581px;
-		background-color: #E9E9E9;
-
+	.place-home-card4 li {
+		float: left;
+		width: 33.33%;
+		overflow: visible;
+		white-space: nowrap;
+		height: 30px;
 	}
+
+	.place-home-card4 li:nth-child(3n+0) .item,
+	.place-home-card4 li:nth-child(3n-1) .item {
+		margin-left: 30px;
+	}
+
+	.place-home-card4 li .item {
+		display: block;
+		line-height: 16px;
+		margin-bottom: 14px;
+	}
+
+	.place-home-card4 li .item a {
+		color: #000;
+		font-size: 14px;
+		text-decoration: none;
+	}
+
+	.place-home-card4 li .item a span {
+		margin-right: 3px;
+	}
+
+	.place-home-card4 li .item a em {
+		color: #959595;
+		font-weight: 100;
+	}
+
+	.place-home-card4 li .item .hot {
+		display: inline-block;
+		background-color: rgb(255, 131, 35);
+
+		color: rgb(255, 255, 255);
+		font-size: 12px;
+		line-height: 16px;
+		padding: 1px;
+		margin: 0px 0px 0px 5px;
+	}
+
+	
 
 	.place-home-tabg #remenidg.active {
 		color: #000;
@@ -269,7 +274,7 @@ padding: 1px;
 
 	}
 
- .place-home-card4-tip {
+	.place-home-card4-tip {
 		padding-bottom: 20px;
 		color: #959595;
 	}
@@ -407,28 +412,35 @@ padding: 1px;
 		height: 32px;
 		margin: 0 0 40px;
 		position: relative;
+
+
+		.tabs {
+    overflow: hidden;
+    position: relative;
+    font-size: 0;
+    width: fit-content; 
+    margin: 0 auto;
+    border-bottom: #E9E9E9 1px solid;
+
+			li {
+				font-size: 18px;
+				margin: 0 50px 0px 0px;
+				display: inline-block;
+				height: 30px;
+				 text-align: left;
+				line-height: 20px;
+				color: #929292;
+				border-bottom: 0px solid #e5e5e5;
+				overflow: visible;
+				cursor: pointer;
+			}
+			li:last-child{
+				margin: 0 0 0 0;
+			}
+		}
 	}
 
-	.place-home-tab .tab {
-		overflow: hidden;
-		position: relative;
-		text-align: center;
-		font-size: 0;
-		width: 980px;
-	}
-
-	.place-home-tab .tab li {
-		font-size: 18px;
-		width: 163.33px;
-		display: inline-block;
-		height: 30px;
-		text-align: center;
-		line-height: 20px;
-		color: #929292;
-		border-bottom: 1px solid #e5e5e5;
-		overflow: visible;
-		cursor: pointer;
-	}
+	
 
 	.place-home-tab .tab li.on span,
 	.place-home-tab .tab li:hover span {
@@ -557,37 +569,31 @@ padding: 1px;
 		position: relative;
 
 		.tab {
-			overflow: hidden;
-			position: relative;
-			text-align: center;
-			font-size: 0;
+ overflow: hidden;
+    position: relative;
+    font-size: 0;
+    width: fit-content; 
+    margin: 0 auto;
+    border-bottom: #E9E9E9 1px solid;
 
 			li {
 				font-size: 18px;
-				margin: 0 25px;
+				margin: 0 50px 0px 0px;
 				display: inline-block;
 				height: 30px;
+				 text-align: left;
 				line-height: 20px;
 				color: #929292;
 				border-bottom: 0px solid #e5e5e5;
 				overflow: visible;
 				cursor: pointer;
 			}
+			li:last-child{
+				margin: 0 0 0 0;
+			}
 		}
 	}
 
-	.place-home-tabz .tab::after {
-		content: " ";
-		position: absolute;
-		height: 2px;
-		right: 0;
-		bottom: -1px;
-		left: 211px;
-
-		width: 560px;
-		background-color: #E9E9E9;
-		border: 1rpx solid lightgray;
-	}
 
 	.place-home-tabz #remenidz.active {
 		color: #000;
@@ -867,7 +873,7 @@ padding: 1px;
 				descity: [],
 				desczhu: [],
 				desczhuy: [],
-				desguojia:[],
+				desguojia: [],
 				base: ["热门推荐", "日韩 港澳台", "东南亚及亚洲其他", "欧洲", "大洋洲 北美", "非洲 南美洲"],
 				zbase: ["俯瞰城市", "怀旧时光", "魅力夜色", "神秘遗址", "最爱小镇"],
 				ybase: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
@@ -945,10 +951,10 @@ padding: 1px;
 					console.log(error);
 				})
 			},
-			
+
 			builddesguojia() {
 				this.axios.get('/api/builddesguojia').then(res => {
-			
+
 					this.desguojia = res.data.data
 				}).catch(function(error) {
 					console.log(error);
@@ -968,7 +974,7 @@ padding: 1px;
 			},
 			changeBaseIndexg(index) {
 				this.base_indexg = index;
-			
+
 			},
 		},
 		components: {

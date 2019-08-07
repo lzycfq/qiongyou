@@ -154,7 +154,7 @@ const buildlayoutuijian = Mock.mock(
 					layout: [{
 						video: videos,
 						icon: "视频",
-						link: "video",
+						link: "Q_Video",
 						id: 1,
 						title: "探访峇峇娘惹华人隐藏的豪宅",
 						fr: "旅行囧记",
@@ -11036,7 +11036,226 @@ const buildQvideolist = Mock.mock(
 							}
 							
 						})
+						const buildmbanner = Mock.mock(
+							'/api/buildmbanner', 'get', (req, res) => {
+								return {
+									code: 200,
+									data: [{
+										    bannerlinkid:1,
+											bannerlink:1,
+											bannertitle:"【意大利游记攻略】“意”惹情牵，沐浴在艳阳下的旧时光",
+											mbannerimg:'https://picb2b.qyer.com/FivOIcLyYdtOvgj_WjpbyjhjgSdD',
+											
+										},
+										{
+											bannerlinkid:2,
+											bannerlink:1,
+											bannertitle:"穷游锦囊 | 越南",
+											mbannerimg:'https://picb2b.qyer.com/Fvg4eufY5Gh-jS6i2lkb8P_EQBRh',
+										},
+										
+									],
+									message: '查询成功'
+								}
+							})
+							const buildmnav = Mock.mock(
+								'/api/buildmnav', 'get', (req, res) => {
+									return {
+										code: 200,
+										data: [
+											{
+											    navlink:1,
+												navlinkid:1,
+												navspan:"锦囊",
+												navicon:'//fes.qyerstatic.com/FjiWdzANqPB2Nm0wtDTvrr8HDrsg?imageslim',
+												
+											},
+											
+											{
+											    navlink:1,
+												navlinkid:1,
+												navspan:"行程助手",
+												navicon:'https://fes.qyerstatic.com/Fgg0Tsbl5u7zvbNnmVhjDJd-3I-_?imageslim',
+												
+											},
+											{
+											    navlink:1,
+												navlinkid:1,
+												navspan:"游记",
+												navicon:'https://fes.qyerstatic.com/FoRfPUtUloa5MqNwOv5iIcqQ4rHv?imageslim',
+												
+											},
+											{
+											    navlink:1,
+												navlinkid:1,
+												navspan:"Biu",
+												navicon:'https://fes.qyerstatic.com/FkMxtgHBTCKsjaLBZ1B7xHGg08QT?imageslim',
+												
+											},
+											{
+											    navlink:1,
+												navlinkid:1,
+												navspan:"问答",
+												navicon:'https://fes.qyerstatic.com/FsqBlRsF2hnYNrfR9YhCWQqD2j_P?imageslim',
+												
+											},
+											{
+											    navlink:1,
+												navlinkid:1,
+												navspan:"目的地",
+												navicon:'https://fes.qyerstatic.com/Fgh5NStqSlSjuK7vtLSwOXg4RwNz?imageslim',
+												
+											},
+											{
+											    navlink:1,
+												navlinkid:1,
+												navspan:"酒店",
+												navicon:'https://fes.qyerstatic.com/Fvv-TfNa_RKqKW0sTcp2BqwgVJNZ?imageslim',
+												
+											},
+											{
+											    navlink:1,
+												navlinkid:1,
+												navspan:"商城",
+												navicon:'https://fes.qyerstatic.com/FmZQUj73tzL9QixhyTBUtpxbxBqt?imageslim',
+												
+											},
+											{
+											    navlink:1,
+												navlinkid:1,
+												navspan:"约伴",
+												navicon:'https://fes.qyerstatic.com/Ft-_BNtwDwbLCwNbk8a6JKMx_OME?imageslim',
+												
+											},
+											{
+											    navlink:1,
+												navlinkid:1,
+												navspan:"专栏",
+												navicon:'https://fes.qyerstatic.com/Fibzv7V9e1eoPD7XT4C0uC-hZIf7?imageslim',
+												
+											},
+										],
+										message: '查询成功'
+									}
+								})
+								const buildmzhekou = Mock.mock(
+									'/api/buildmzhekou', 'get', (req, res) => {
+										return {
+											code: 200,
+											data: [
+											{
+												zhekouimg:'https://pic.qyer.com/lastminute/library/2015/04/20/5534c0783a591.jpg/300x200',
+												zhekouid:1,
+												zhekoudsc:'澳门直飞长滩岛5天往返含税机票（赠送行李托运）',
+												zhekouprice:'99'
+											},
+											{
+												zhekouimg:'https://pic.qyer.com/public/lastmin/supproduct/2017/08/01/15015789281685/300x200',
+												zhekouid:1,
+												zhekoudsc:'[早鸟特惠]北京直飞塞班岛6-7天自由行（免税直飞+赠北部观光环岛游+中文接送机+可升级指定酒店+可预定敞篷野马/大黄蜂自驾用车）',
+												zhekouprice:'4999'
+											},
+											{
+												zhekouimg:'https://pic.qyer.com/FtJrgVPn62RRmzAFzSccB9w0ht6r/300x200',
+												zhekouid:1,
+												zhekoudsc:'上海直飞澳大利亚8天6晚跟团游（菲利普岛+黄金海岸+华纳电影世界+天堂农庄+墨尔本大学+悉尼大学+蓝山国家公园+悉尼歌剧院 赠送考拉合影一张）',
+												zhekouprice:'5699'
+											},
+											{
+												zhekouimg:'https://pic.qyer.com/lastminute/library/2015/04/20/5534c0783a591.jpg/300x200',
+												zhekouid:1,
+												zhekoudsc:'北京直飞巴厘岛6-7天往返含税机票（东航/鹰航+多班期可选）',
+												zhekouprice:'3999'
+											}
+											],
+											message: '查询成功'
+										}
+									})
+									const buildmjingxuan = Mock.mock(
+										'/api/buildmjingxuan', 'get', (req, res) => {
+											return {
+												code: 200,
+												data: [
+												{
+													jingxuanlinkid:'1',
+													jingxuanlink:1,
+													jingxuanicon:'https://fes.qyerstatic.com/FjhPw2CAsHhvxjAuUQvT0EjTfOTF?imageslim',
+													jingxuandsc:'特价机票'
+												},
+												{
+													jingxuanlinkid:'1',
+													jingxuanlink:1,
+													jingxuanicon:'https://fes.qyerstatic.com/Fh9eg1ZGwLp8GHrTbKSfjwMgUqz8?imageslim',
+													jingxuandsc:'机场自由行'
+												},
+												{
+													jingxuanlinkid:'1',
+													jingxuanlink:1,
+													jingxuanicon:'https://fes.qyerstatic.com/FrnlnoQrQLokB6xx4mGmJhuz9eCf?imageslim',
+													jingxuandsc:'当地玩乐'
+												},
+												{
+													jingxuanlinkid:'1',
+													jingxuanlink:1,
+													jingxuanicon:'//fes.qyerstatic.com/Fv-WDaw3GtUH1_8rcId7Bny4bwYV?imageslim',
+													jingxuandsc:'门票/票卷'
+												},
+												{
+													jingxuanlinkid:'1',
+													jingxuanlink:1,
+													jingxuanicon:'https://fes.qyerstatic.com/FuFMfHPUrw-ms3echc2_SAd1EXoP?imageslim',
+													jingxuandsc:'高铁出行'
+												},
+												{
+													jingxuanlinkid:'1',
+													jingxuanlink:1,
+													jingxuanicon:'https://fes.qyerstatic.com/FgxEv9eVMgiTxXvVg4-h5GjE7muR?imageslim',
+													jingxuandsc:'WIFI电话卡'
+												},
+												{
+													jingxuanlinkid:'1',
+													jingxuanlink:1,
+													jingxuanicon:'https://fes.qyerstatic.com/Fu9r87vH7j46Gtafrd8ohKHQEoBm?imageslim',
+													jingxuandsc:'欧铁频道'
+												},
+												{
+													jingxuanlinkid:'1',
+													jingxuanlink:1,
+													jingxuanicon:'https://fes.qyerstatic.com/Fnf6W8mmlmHqGnzGvu-NnM_zK-1p?imageslim',
+													jingxuandsc:'保险频道'
+												},
+												{
+													jingxuanlinkid:'1',
+													jingxuanlink:1,
+													jingxuanicon:'https://fes.qyerstatic.com/FnI5stm2aLT-icX075jIpjXIjKT4?imageslim',
+													jingxuandsc:'机场包接送'
+												},
+												],
+												message: '查询成功'
+											}
+										})
+										const buildmgonglue = Mock.mock(
+											'/api/buildmgonglue', 'get', (req, res) => {
+												return {
+													code: 200,
+													data: [
+													{
+														mgonglueimg:'https://p.qyer.com/fugc/aa88cf58a486780b0887ece6f7568211?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/0/w/348|imageslim/format/jpg'
+													},
+													{
+														mgonglueimg:'https://p.qyer.com/fugc/aa88cf58a486780b0887ece6f7568211?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/0/w/348|imageslim/format/jpg'
+													}
+													],
+													message: '查询成功'
+												}
+											})
+							
 export default {
+	buildmgonglue,
+	buildmjingxuan,
+	buildmzhekou,
+	buildmnav,
+	buildmbanner,
 	buildTrtongzhidata,
 	buildTr_yazhou,
 	buildinditems,
