@@ -11240,17 +11240,169 @@ const buildQvideolist = Mock.mock(
 													code: 200,
 													data: [
 													{
-														mgonglueimg:'https://p.qyer.com/fugc/aa88cf58a486780b0887ece6f7568211?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/0/w/348|imageslim/format/jpg'
+														mgonglueimg:'https://p.qyer.com/fugc/aa88cf58a486780b0887ece6f7568211?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/0/w/348|imageslim/format/jpg',
+														mgongluedsc:'慕尼黑啤酒节开幕大赏！两只眼里只有重金属，酒精和黑暗反应的化学博士去德国会干什么',
+														mgonglueavater:'https://p.qyer.com/fugc/aa88cf58a486780b0887ece6f7568211?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/0/w/348|imageslim/format/jpg',
+														mgongluename:'猪蹄子',
+														mgongluepinglun:'2002',
+														mgonglueyouji:1
 													},
 													{
-														mgonglueimg:'https://p.qyer.com/fugc/aa88cf58a486780b0887ece6f7568211?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/0/w/348|imageslim/format/jpg'
+														mgonglueimg:'https://p.qyer.com/fugc/7cca86d2e6a0e72b5cf8b188275d6407?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/0/w/348|imageslim/format/jpg',
+														mgongluedsc:'上海迪斯尼最强攻略 首刷上海迪斯尼，便幸运的将几款热门项目都玩儿了个遍。 🏰 🏰',
+														mgonglueavater:'https://p.qyer.com/fugc/7cca86d2e6a0e72b5cf8b188275d6407?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/0/w/348|imageslim/format/jpg',
+														mgongluename:'Christine玥yue加油',
+														mgongluepinglun:'502'
+													},
+													{
+														mgonglueimg:'https://pic.qyer.com/album/user/3333/47/QkpWQR4AZkE/index?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/348/h/348|imageslim/format/jpg',
+														mgongluedsc:'退休阿姨镌刻在记忆里的第一次国外自驾游（英伦篇）',
+														mgonglueavater:'https://pic.qyer.com/album/user/3333/47/QkpWQR4AZkE/index?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/348/h/348|imageslim/format/jpg',
+														mgongluename:'抱衾听雪',
+														mgongluepinglun:'62'
+													},
+													{
+														mgonglueimg:'https://p.qyer.com/fugc/0df3001cdf34860016fb0e8162d24c34/360w.gif?imageMogr2/auto-orient/thumbnail/!180x120r/gravity/Center/crop/180x270',
+														mgongluedsc:'据说今年会有25000发烟花照亮整个泉南海滩，到时肯定超美的～小伙伴们赶紧制定出',
+														mgonglueavater:'https://p.qyer.com/fugc/0df3001cdf34860016fb0e8162d24c34/360w.gif?imageMogr2/auto-orient/thumbnail/!180x120r/gravity/Center/crop/180x270',
+														mgongluename:'apple',
+														mgongluepinglun:'1023'
+													},
+													{
+														mgonglueimg:'https://p.qyer.com/fugc/ba86852b1c005b5582aa306abab87bfc?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/0/w/348|imageslim/format/jpg',
+														mgongluedsc:'在我们国家倡议一带一路的今天，丝绸之路也逐渐成为一个热门词，乌兹别克斯坦也许就是',
+														mgonglueavater:'https://p.qyer.com/fugc/ba86852b1c005b5582aa306abab87bfc?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/0/w/348|imageslim/format/jpg',
+														mgongluename:'雪梅',
+														mgongluepinglun:'5896'
 													}
 													],
 													message: '查询成功'
 												}
 											})
-							
+												const buildmsearchlistdata = Mock.mock(
+												'/api/buildmsearchlistdata', 'get', (req, res) => {
+													return {
+														code: 200,
+														data: [
+															
+																	{
+																		value:'三全鲜食（北新泾店）'
+																	},
+																	{
+																		value:'Hot honey 首尔炸鸡（仙霞路）'
+																	},
+																	{
+																		value:'新旺角茶餐厅'
+																	},
+																	{
+																		value:'贡茶'
+																	}
+																
+															
+														
+														],
+														message: '查询成功'
+													}
+												})
+												const buildhotthread = Mock.mock(
+												'/api/buildhotthread', 'get', (req, res) => {
+													return {
+														code: 200,
+														data: [
+															
+																{
+																	hotname:'穷游相遇2019七夕',
+																	hotindex:1,
+																	hotthreadimg:[
+																		{
+																			hotlink:1,
+																			hotlinkid:1,
+																			hotimg:'https://p.qyer.com/fugc/514a14843a363d142d3ff43f92fc846f?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/216/h/216|imageslim/format/jpg'
+																		},
+																		{
+																			hotlink:1,
+																			hotlinkid:1,
+																			hotimg:'https://p.qyer.com/fugc/412a4dd13b386431fae251ec8f5996e8?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/216/h/216|imageslim/format/jpg'
+																		},
+																		{
+																			hotlink:1,
+																			hotlinkid:1,
+																			hotimg:'https://p.qyer.com/fugc/2a85482a1478bee3ead12c4fb1f3d036?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/216/h/216|imageslim/format/jpg'
+																		}
+																	]
+																},
+																{
+																	hotname:'送你浪漫全世界',
+																	hotindex:1,
+																	hotthreadimg:[
+																		{
+																			hotlink:1,
+																			hotlinkid:1,
+																			hotimg:'https://p.qyer.com/fugc/1a47ed818174a9a4219c1083d29a9a45?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/216/h/216|imageslim/format/jpg'
+																		},
+																		{
+																			hotlink:1,
+																			hotlinkid:1,
+																			hotimg:'https://p.qyer.com/fugc/fa029a1b2b81b26f072f1154d1a1ddf1?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/216/h/216|imageslim/format/jpg'
+																		},
+																		{
+																			hotlink:1,
+																			hotlinkid:1,
+																			hotimg:'https://p.qyer.com/fugc/3b806e0b54554b1bb90fe975afb965d8?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/216/h/216|imageslim/format/jpg'
+																		}
+																	]
+																},
+																	{
+																	hotname:'情侣拍照指南',
+																	hotindex:0,
+																	hotthreadimg:[
+																		{
+																			hotlink:1,
+																			hotlinkid:1,
+																			hotimg:'https://p.qyer.com/fugc/e59179159c518b201cf0cc07b8481957?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/216/h/216|imageslim/format/jpg'
+																		},
+																		{
+																			hotlink:1,
+																			hotlinkid:1,
+																			hotimg:'https://p.qyer.com/fugc/59d4185a9281edf65189b0364699a90a?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/216/h/216|imageslim/format/jpg'
+																		},
+																		{
+																			hotlink:1,
+																			hotlinkid:1,
+																			hotimg:'https://p.qyer.com/fugc/006a17044cac2de1675d767f12f92b1f?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/216/h/216|imageslim/format/jpg'
+																		}
+																	]
+																}
+																
+															
+														
+														],
+														message: '查询成功'
+													}
+												})
+								const buildsearchhistory = Mock.mock(
+							'/api/buildsearchhistory', 'get', (req, res) => {
+								return {
+									code: 200,
+									data: [
+										
+										{
+										historytitle:'我爱你',
+											historylink:1,
+											historylinkid:1,
+										}
+											
+										
+									
+									],
+									message: '查询成功'
+								}
+							})
+														
 export default {
+	buildsearchhistory,
+	buildhotthread,
+    buildmsearchlistdata,
 	buildmgonglue,
 	buildmjingxuan,
 	buildmzhekou,
