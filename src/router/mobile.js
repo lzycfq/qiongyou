@@ -12,11 +12,18 @@ export default new Router({
 		}
 	},
 	routes: [
+		// {
+		// 	path: '/',
+		// 	name: 'Index',
+		// 	component(resolve) {
+		// 		require(['../pages/mobile/Index.vue'], resolve)
+		// 	}
+		// },
 		{
 			path: '/',
-			name: 'Index',
+			name: 'zhuanlan',
 			component(resolve) {
-				require(['../pages/mobile/Index.vue'], resolve)
+				require(['../pages/mobile/zhuanlan/zhuanlan.vue'], resolve)
 			}
 		},
 	],

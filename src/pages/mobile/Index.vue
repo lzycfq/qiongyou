@@ -75,6 +75,7 @@
 		</div>
 		<div class="m-zhekou">
 			<div class="m-zhekouhead">主打折扣</div>
+			<div style="overflow: hidden;">
 			<ul class="m-zhekouProduct-list">
 				<li v-for="(item,index) in mzhekou">
 					<router-link :to="{path:'',parame:{zhekouid:item.zhekouid}}">
@@ -92,6 +93,7 @@
 					</router-link to="">
 				</li>
 			</ul>
+			</div>
 		</div>
 		<div class="m-jingxuan">
 			<div class="m-jingxuanhead">精选玩乐</div>
@@ -106,7 +108,7 @@
 		</div>
 		<div class="m-gonglue">
 			<div class="m-gongluehead">精选攻略</div>
-			<waterfall :col='col' :data="mgonglue">
+			<waterfall :col='col' :mgonglue="mgonglue" @loadmore="loadmore" >
 				<div class="cell-item" v-for="(item,index) in mgonglue" :key='index'>
 					<img :lazy-src='item.mgonglueimg' alt="加载错误" class="gonglueimg" />
 					<img src="../../assets/images/qiongyou/mgonglue.svg" class="gonglue_svg">
@@ -126,11 +128,13 @@
 				</div>
 				<!-- @click="loadmore" -->
 			</waterfall>
-			<div class="load-more"><span>加载更多内容</span></div>
+			<div class="load-more" @click="loadmore"><span>加载更多内容</span></div>
 		</div>
+	    <footers></footers>
 	</el-col>
 </template>
 <script>
+	import footers from '../../pages/mobile/compoents/footer';
 	export default {
 		name: 'index',
 		data() {
@@ -249,17 +253,7 @@
 					this.mjingxuan = res.data.data
 				})
 			},
-			buildmgonglue() {
-				this.axios.get('/api/buildmgonglue'
-					//,{
-					// 		 params:{
-					// 		 newnumber:'12'
-					// 	 },
-
-				).then(res => {
-					this.mgonglue = res.data.data
-				})
-			},
+			
 			buildhotthread(){
 				this.axios.get('/api/buildhotthread'
 					//,{
@@ -281,19 +275,27 @@
 				).then(res => {
 					this.searchhistory = res.data.data
 				})
-			}
-			//  loadmore(){
-			// 	 this.axios.get('/api/buildmgonglue',{
-			// 		 params:{
-			// 		 concatnumber:this.mgongluenumber
-			// 	 },
-			// 	 }).then(res => {
-			// 	 	this.mgonglue = res.data.data
-			// 		 this.mgonglue = this.mgonglue.concat(this.data)
-			// 	 })
-			//      
-			// },
+			},
+			buildmgonglue() {
+				
+				this.axios.get('/api/buildmgonglue'
+					//,{
+					// 		 params:{
+					// 		 newnumber:'12'
+					// 	 },		
+				).then(res => {
+					this.mgonglue = res.data.data
+				})
+			},
+			 loadmore(index){	
+				
+					 this.mgonglue = this.mgonglue.concat(this.mgonglue)
+				}
+
 		},
+		components:{
+		 footers,
+		}
 
 	}
 </script>
@@ -642,6 +644,7 @@
 	.m-zhekou {
 		margin-top: 25px;
 		overflow: hidden;
+		position: relative;
 
 		.m-zhekouhead {
 			position: relative;
@@ -782,7 +785,7 @@
 			li {
 				flex: 0 0 33.33%;
 				width: 33.33%;
-				height: 55px;
+				height: 1.5rem;
 				box-sizing: border-box;
 				display: flex;
 
@@ -794,7 +797,7 @@
 					display: block;
 					position: relative;
 					width: 95%;
-					height: 45px;
+					height: 1.1rem;
 					padding: 5px;
 					border: 1px solid rgba(0, 0, 0, 0.1);
 					box-sizing: border-box;
@@ -802,7 +805,7 @@
 					border-radius: 6px;
 					font-size: 16px;
 
-					line-height: 30px;
+					line-height:0.55rem;
 					color: rgba(0, 0, 0, 0.8);
 					overflow: hidden;
 					white-space: nowrap;

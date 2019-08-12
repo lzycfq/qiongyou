@@ -3,12 +3,12 @@
 		<el-container>
 			<router-view />
 		</el-container>
-		<app-footer></app-footer>
+	
 	</div>
 </template>
 <script>
 	
-	import Footer from './pages/mobile/compoents/footer';
+	
 
 	export default {
 		name: 'App',
@@ -31,9 +31,7 @@
 		// 			}
 		// 		
 		// 		},
-		components: {
-			'app-footer': Footer
-		},
+		
 	}
 </script>
 
@@ -48,6 +46,7 @@
 		max-width: 640px;
 		margin: 0 auto;
 		width: 100%;
+		
 	}
 
 	.el-header {

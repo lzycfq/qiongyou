@@ -11,7 +11,7 @@ const buildwebswiper = Mock.mock(
 					tweenimg: img1,
 					swipertitle: "【意大利游记攻略】“意”惹情牵，沐浴在艳阳下的旧时光",
 					swiperdsc: "Da-image",
-					
+
 				},
 				{
 					tweenimg: img2,
@@ -10141,7 +10141,7 @@ const buildQvideolist = Mock.mock(
 					],
 				},
 				{
-					
+
 					Qvideolistcon: [{
 						Qvideolisttitle: '美食',
 						Qvideolistconqy: [{
@@ -10183,198 +10183,197 @@ const buildQvideolist = Mock.mock(
 					}]
 				},
 				{
-					
-					Qvideolistcon: [
-						{
+
+					Qvideolistcon: [{
 						Qvideolisttitle: '美食',
-						Qvideolistconqy: [
-							{
+						Qvideolistconqy: [{
 								Qvideolistcontitle: '爱程全世界 ',
 								Q_VideoDetailid: 1,
 								Qvideolistconavter: '//pics.lvjs.com.cn//uploads/pc/place2/2017-11-17/29995311-5698-4c8c-b946-08d28eb0d97d_300_200.jpg',
 								Qvideolistcondsc: '用爱丈量世界',
 								Qvideolistconli: [{
 										Q_VideoDetailid: 1,
-											
+
 										Qvideolistconliimg: 'http://s3.lvjs.com.cn//uploads/pc/place2/2019-03-22/30219c7d-94d4-428a-a177-b0514036dab6.jpg',
 										Qvideolistconlilong: '2:03',
 										Qvideolistconlidsc: '爱的里程第五站：童话般的捷克之旅'
 									},
 									{
 										Q_VideoDetailid: 1,
-											
+
 										Qvideolistconliimg: 'http://s1.lvjs.com.cn//uploads/pc/place2/2019-03-22/8651d258-3549-43a2-ac5f-c5d5240c97da.jpg',
 										Qvideolistconlilong: '2:03',
 										Qvideolistconlidsc: '槟城囧记（四）：爱情巷、姓氏桥，最浪漫的地方在这里'
 									},
 									{
 										Q_VideoDetailid: 1,
-											
+
 										Qvideolistconliimg: 'http://s2.lvjs.com.cn//uploads/pc/place2/2019-03-22/21e76257-f8af-40aa-b2bf-0a8e692b9f65.jpg',
 										Qvideolistconlilong: '6:03',
 										Qvideolistconlidsc: '槟城囧记（三）：在全球第一家食物博物馆玩转美食'
 									},
 									{
 										Q_VideoDetailid: 1,
-											
+
 										Qvideolistconliimg: 'http://s3.lvjs.com.cn//uploads/pc/place2/2019-03-22/50f3c9cf-ac25-4a66-aeec-d0be7fe4e126.jpg',
 										Qvideolistconlilong: '8:03',
 										Qvideolistconlidsc: '槟城囧记（二）：槟城的街头美食实在是太炸了'
 									},
-											
+
 								]
 							},
 							{
-							Qvideolistcontitle: '游神集 ',
-							Q_VideoDetailid: 1,
-							Qvideolistconavter: '//pics.lvjs.com.cn//uploads/pc/place2/2019-02-28/f7989391-b51f-46c4-8678-0f925f6c373b_300_200.jpg',
-							Qvideolistcondsc: '开箱测好物，让你的旅行BIGGER满满',
-							Qvideolistconli: [{
-									Q_VideoDetailid: 1,
-				
-									Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2019-01-02/5e75292a-66a8-4be5-89e0-dc8504160bda_480_320.jpg',
-									Qvideolistconlilong: '5:03',
-									Qvideolistconlidsc: '旅途中陪伴你不仅有新风景，可能还会有新款的泡面'
-								},
-								{
-									Q_VideoDetailid: 1,
-				
-									Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2019-01-02/a829d034-86b5-4ba0-aa72-4b25050b0e80_480_320.jpg',
-									Qvideolistconlilong: '2:03',
-									Qvideolistconlidsc: '快来看旅行中的安全神器，为你的旅行保驾护航'
-								},
-								{
-									Q_VideoDetailid: 1,
-				
-									Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2019-01-02/2ec92c01-bd2d-4d12-8202-bc2de097371e_480_320.jpg',
-									Qvideolistconlilong: '6:03',
-									Qvideolistconlidsc: '从来都是你拖行李箱，有没有想过让行旅箱驮你？'
-								},
-								{
-									Q_VideoDetailid: 1,
-				
-									Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2019-01-02/aecb9440-00b4-4466-b0f4-da3fa478e7f6_480_320.jpg',
-									Qvideolistconlilong: '8:03',
-									Qvideolistconlidsc: '好看的照片背后总有几款功能强大的神器'
-								},
-				
-							]
-						},
-						{
-							Qvideolistcontitle: 'Hi走啦 ',
-							Q_VideoDetailid: 1,
-							Qvideolistconavter: '//pics.lvjs.com.cn//uploads/pc/place2/2019-05-29/153a3db2-b2c1-4074-96ba-6b04a0417fc4_300_200.jpg',
-							Qvideolistcondsc: '环球旅行视频攻略',
-							Qvideolistconli: [{
-									Q_VideoDetailid: 1,
-										
-									Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2017-07-14/e3e9e63d-64e0-4260-89c3-17084666db1f_480_320.jpg',
-									Qvideolistconlilong: '3:03',
-									Qvideolistconlidsc: '一起去二次元的圣地，宅男天堂秋叶原买手办吧'
-								},
-								{
-									Q_VideoDetailid: 1,
-										
-									Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2017-07-26/1777203a-2395-461e-8353-894d690233bf_480_320.jpg',
-									Qvideolistconlilong: '2:30',
-									Qvideolistconlidsc: '东京最新概念餐厅和人气爆棚的网红舒芙蕾'
-								},
-								{
-									Q_VideoDetailid: 1,
-										
-									Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2017-02-09/71c29785-377e-405c-97bb-21e3ab23aee6_480_320.jpg',
-									Qvideolistconlilong: '6:42',
-									Qvideolistconlidsc: '东京买买买攻略，古着小物应有尽有'
-								},
-								{
-									Q_VideoDetailid: 1,
-										
-									Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2017-03-21/7edfb19e-73db-4dd9-9588-da93901bc124_480_320.jpg',
-									Qvideolistconlilong: '7:23',
-									Qvideolistconlidsc: '在东京体验最具未来感的胶囊酒店'
-								},
-										
-							]
-						},
-						{
-							Qvideolistcontitle: 'Roy和Sue的奇妙旅行 ',
-							Q_VideoDetailid: 1,
-							Qvideolistconavter: '//pics.lvjs.com.cn//uploads/pc/place2/2017-11-07/ae34cfaf-8443-4c64-bba5-54d167a0ad27_300_200.jpg',
-							Qvideolistcondsc: '拥抱世界上的千百种生活',
-							Qvideolistconli: [{
-									Q_VideoDetailid: 1,
-										
-									Qvideolistconliimg: '//pic.lvmama.com/uploads/pc/place2/2019-05-29/153a3db2-b2c1-4074-96ba-6b04a0417fc4_480_320.jpg',
-									Qvideolistconlilong: '3:08',
-									Qvideolistconlidsc: 'Tips|出国旅行，如何定住宿才不会被坑'
-								},
-								{
-									Q_VideoDetailid: 1,
-										
-									Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2017-11-17/29995311-5698-4c8c-b946-08d28eb0d97d_480_320.jpg',
-									Qvideolistconlilong: '2:03',
-									Qvideolistconlidsc: 'Tips|出国不用怕，机场通关指南奉上'
-								},
-								{
-									Q_VideoDetailid: 1,
-										
-									Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2017-07-13/0abfc532-b813-4b01-b662-68cfc409b479_480_320.jpg',
-									Qvideolistconlilong: '7:08',
-									Qvideolistconlidsc: 'Tips|现场演示日本入关全流程，第一次去也不怕'
-								},
-								{
-									Q_VideoDetailid: 1,
-										
-									Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2019-05-29/ecdcd45f-7d91-4a89-a036-b5e694335b64_480_320.jpg',
-									Qvideolistconlilong: '10:05',
-									Qvideolistconlidsc: 'Tips|科普旅行中如何防晒，让你从小黑变小白'
-								},
-										
-							]
-						},
-						
-						{
-							Qvideolistcontitle: '元气大暴走 ',
-							Q_VideoDetailid: 1,
-							Qvideolistconavter: '//pics.lvjs.com.cn//uploads/pc/place2/2016-01-06/43fcb163-e1a9-4a68-9b4b-afacd7b1d315_300_200.jpg',
-							Qvideolistcondsc: '元气CP带你攻略全世界',
-							Qvideolistconli: [{
-									Q_VideoDetailid: 1,
-										
-									Qvideolistconliimg: '//pic.lvmama.com/uploads/pc/place2/2017-03-14/64fe3c91-f69c-4e53-a254-30a640dc3325_480_320.jpg',
-									Qvideolistconlilong: '5:03',
-									Qvideolistconlidsc: '胶片复古香港游，这是最港味的回忆杀'
-								},
-								{
-									Q_VideoDetailid: 1,
-										
-									Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2014-11-13/a89e8bfc-60b5-4e28-9a29-0ec9178e1fca_480_320.jpg',
-									Qvideolistconlilong: '2:03',
-									Qvideolistconlidsc: '遇见世界尽头的蓝色，阿根廷冰川巡游'
-								},
-								{
-									Q_VideoDetailid: 1,
-										
-									Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2018-03-29/13d91996-bd63-4528-8d81-e6d3863d9e8f_480_320.jpg',
-									Qvideolistconlilong: '6:03',
-									Qvideolistconlidsc: '2分钟飞跃荷兰，温柔与狂野，颠覆你的想象'
-								},
-								{
-									Q_VideoDetailid: 1,
-										
-									Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2018-03-29/ce2d86a4-bad2-4c49-988f-e331d1d39f73_480_320.jpg',
-									Qvideolistconlilong: '8:03',
-									Qvideolistconlidsc: '从沙滩到雪山，1分钟带你飞跃巴塞罗那！'
-								},
-										
-							]
-						}]
+								Qvideolistcontitle: '游神集 ',
+								Q_VideoDetailid: 1,
+								Qvideolistconavter: '//pics.lvjs.com.cn//uploads/pc/place2/2019-02-28/f7989391-b51f-46c4-8678-0f925f6c373b_300_200.jpg',
+								Qvideolistcondsc: '开箱测好物，让你的旅行BIGGER满满',
+								Qvideolistconli: [{
+										Q_VideoDetailid: 1,
+
+										Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2019-01-02/5e75292a-66a8-4be5-89e0-dc8504160bda_480_320.jpg',
+										Qvideolistconlilong: '5:03',
+										Qvideolistconlidsc: '旅途中陪伴你不仅有新风景，可能还会有新款的泡面'
+									},
+									{
+										Q_VideoDetailid: 1,
+
+										Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2019-01-02/a829d034-86b5-4ba0-aa72-4b25050b0e80_480_320.jpg',
+										Qvideolistconlilong: '2:03',
+										Qvideolistconlidsc: '快来看旅行中的安全神器，为你的旅行保驾护航'
+									},
+									{
+										Q_VideoDetailid: 1,
+
+										Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2019-01-02/2ec92c01-bd2d-4d12-8202-bc2de097371e_480_320.jpg',
+										Qvideolistconlilong: '6:03',
+										Qvideolistconlidsc: '从来都是你拖行李箱，有没有想过让行旅箱驮你？'
+									},
+									{
+										Q_VideoDetailid: 1,
+
+										Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2019-01-02/aecb9440-00b4-4466-b0f4-da3fa478e7f6_480_320.jpg',
+										Qvideolistconlilong: '8:03',
+										Qvideolistconlidsc: '好看的照片背后总有几款功能强大的神器'
+									},
+
+								]
+							},
+							{
+								Qvideolistcontitle: 'Hi走啦 ',
+								Q_VideoDetailid: 1,
+								Qvideolistconavter: '//pics.lvjs.com.cn//uploads/pc/place2/2019-05-29/153a3db2-b2c1-4074-96ba-6b04a0417fc4_300_200.jpg',
+								Qvideolistcondsc: '环球旅行视频攻略',
+								Qvideolistconli: [{
+										Q_VideoDetailid: 1,
+
+										Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2017-07-14/e3e9e63d-64e0-4260-89c3-17084666db1f_480_320.jpg',
+										Qvideolistconlilong: '3:03',
+										Qvideolistconlidsc: '一起去二次元的圣地，宅男天堂秋叶原买手办吧'
+									},
+									{
+										Q_VideoDetailid: 1,
+
+										Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2017-07-26/1777203a-2395-461e-8353-894d690233bf_480_320.jpg',
+										Qvideolistconlilong: '2:30',
+										Qvideolistconlidsc: '东京最新概念餐厅和人气爆棚的网红舒芙蕾'
+									},
+									{
+										Q_VideoDetailid: 1,
+
+										Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2017-02-09/71c29785-377e-405c-97bb-21e3ab23aee6_480_320.jpg',
+										Qvideolistconlilong: '6:42',
+										Qvideolistconlidsc: '东京买买买攻略，古着小物应有尽有'
+									},
+									{
+										Q_VideoDetailid: 1,
+
+										Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2017-03-21/7edfb19e-73db-4dd9-9588-da93901bc124_480_320.jpg',
+										Qvideolistconlilong: '7:23',
+										Qvideolistconlidsc: '在东京体验最具未来感的胶囊酒店'
+									},
+
+								]
+							},
+							{
+								Qvideolistcontitle: 'Roy和Sue的奇妙旅行 ',
+								Q_VideoDetailid: 1,
+								Qvideolistconavter: '//pics.lvjs.com.cn//uploads/pc/place2/2017-11-07/ae34cfaf-8443-4c64-bba5-54d167a0ad27_300_200.jpg',
+								Qvideolistcondsc: '拥抱世界上的千百种生活',
+								Qvideolistconli: [{
+										Q_VideoDetailid: 1,
+
+										Qvideolistconliimg: '//pic.lvmama.com/uploads/pc/place2/2019-05-29/153a3db2-b2c1-4074-96ba-6b04a0417fc4_480_320.jpg',
+										Qvideolistconlilong: '3:08',
+										Qvideolistconlidsc: 'Tips|出国旅行，如何定住宿才不会被坑'
+									},
+									{
+										Q_VideoDetailid: 1,
+
+										Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2017-11-17/29995311-5698-4c8c-b946-08d28eb0d97d_480_320.jpg',
+										Qvideolistconlilong: '2:03',
+										Qvideolistconlidsc: 'Tips|出国不用怕，机场通关指南奉上'
+									},
+									{
+										Q_VideoDetailid: 1,
+
+										Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2017-07-13/0abfc532-b813-4b01-b662-68cfc409b479_480_320.jpg',
+										Qvideolistconlilong: '7:08',
+										Qvideolistconlidsc: 'Tips|现场演示日本入关全流程，第一次去也不怕'
+									},
+									{
+										Q_VideoDetailid: 1,
+
+										Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2019-05-29/ecdcd45f-7d91-4a89-a036-b5e694335b64_480_320.jpg',
+										Qvideolistconlilong: '10:05',
+										Qvideolistconlidsc: 'Tips|科普旅行中如何防晒，让你从小黑变小白'
+									},
+
+								]
+							},
+
+							{
+								Qvideolistcontitle: '元气大暴走 ',
+								Q_VideoDetailid: 1,
+								Qvideolistconavter: '//pics.lvjs.com.cn//uploads/pc/place2/2016-01-06/43fcb163-e1a9-4a68-9b4b-afacd7b1d315_300_200.jpg',
+								Qvideolistcondsc: '元气CP带你攻略全世界',
+								Qvideolistconli: [{
+										Q_VideoDetailid: 1,
+
+										Qvideolistconliimg: '//pic.lvmama.com/uploads/pc/place2/2017-03-14/64fe3c91-f69c-4e53-a254-30a640dc3325_480_320.jpg',
+										Qvideolistconlilong: '5:03',
+										Qvideolistconlidsc: '胶片复古香港游，这是最港味的回忆杀'
+									},
+									{
+										Q_VideoDetailid: 1,
+
+										Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2014-11-13/a89e8bfc-60b5-4e28-9a29-0ec9178e1fca_480_320.jpg',
+										Qvideolistconlilong: '2:03',
+										Qvideolistconlidsc: '遇见世界尽头的蓝色，阿根廷冰川巡游'
+									},
+									{
+										Q_VideoDetailid: 1,
+
+										Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2018-03-29/13d91996-bd63-4528-8d81-e6d3863d9e8f_480_320.jpg',
+										Qvideolistconlilong: '6:03',
+										Qvideolistconlidsc: '2分钟飞跃荷兰，温柔与狂野，颠覆你的想象'
+									},
+									{
+										Q_VideoDetailid: 1,
+
+										Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2018-03-29/ce2d86a4-bad2-4c49-988f-e331d1d39f73_480_320.jpg',
+										Qvideolistconlilong: '8:03',
+										Qvideolistconlidsc: '从沙滩到雪山，1分钟带你飞跃巴塞罗那！'
+									},
+
+								]
+							}
+						]
 					}]
 				},
 				{
 					Qvideolistcon: [
-				
-				
+
+
 						{
 							Qvideolisttitle: '人文',
 							Qvideolistconqy: [{
@@ -10384,35 +10383,35 @@ const buildQvideolist = Mock.mock(
 								Qvideolistcondsc: '发现旅行中的人文故事',
 								Qvideolistconli: [{
 										Q_VideoDetailid: 1,
-				
+
 										Qvideolistconliimg: '//pic.lvmama.com/uploads/pc/place2/2018-11-15/e67e3502-b708-4e85-84c9-f9e7270c637c_480_320.jpg',
 										Qvideolistconlilong: '15:03',
 										Qvideolistconlidsc: '更新疆|他和老伴在天山四十年，只为守望死去的战友们'
 									},
 									{
 										Q_VideoDetailid: 1,
-				
+
 										Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2018-11-15/e83e864a-fece-419a-9811-37d0c13a2b79_480_320.jpg',
 										Qvideolistconlilong: '15:03',
 										Qvideolistconlidsc: '这位武汉姑娘，用英国艺术演绎中国文化'
 									},
 									{
 										Q_VideoDetailid: 1,
-				
+
 										Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2018-11-15/df7329ad-c975-4871-ae1a-aea66d5ded5e_480_320.jpg',
 										Qvideolistconlilong: '15:03',
 										Qvideolistconlidsc: '她用一根线，画出顶级中国风'
 									},
 									{
 										Q_VideoDetailid: 1,
-				
+
 										Qvideolistconliimg: 'http://pic.lvmama.com/uploads/pc/place2/2018-05-24/a1916b8b-4598-4c1d-b026-514d93f6efea_480_320.jpg',
 										Qvideolistconlilong: '15:03',
 										Qvideolistconlidsc: '中国的动漫“手办”传承者'
 									}
 								]
-				
-				
+
+
 							}],
 						}
 					],
@@ -10421,988 +10420,1002 @@ const buildQvideolist = Mock.mock(
 			message: '查询成功'
 		}
 	})
-	const buildQVideolistdetail = Mock.mock(
-		'/api/buildQVideolistdetail', 'get', (req, res) => {
-			return {
-				code: 200,
-				data: [
-					
-					{
-						QVideo:'//media.qyer.com/video/source/20190516/1558001025447',
-						QVideolistjishu:'15',
-						QVideolists:[
-							{
-								QVideoid:1,
-								QVideolistimg:'//pic.lvmama.com/uploads/pc/place2/2017-03-20/add23d7a-a33e-481c-9961-f5a582195e57_480_320.jpg',
-								QVideolisttime:'6:03',
-								QVideolisttitle:'手把手教会，旅行短片转场特效的小秘密',
-								QVideolistdate:'2019-6-1'
-							},
-							{
-								QVideoid:1,
-								QVideolistimg:'http://pic.lvmama.com/uploads/pc/place2/2018-09-26/7bfeb25f-e8e7-4513-96a8-47fab126bc1c_480_320.jpg',
-								QVideolisttime:'15:03',
-								QVideolisttitle:'如何在人山人海中把自己拍美——日本关西篇',
-								QVideolistdate:'2019-3-16'
-							},
-							{
-								QVideoid:1,
-								QVideolistimg:'http://pic.lvmama.com/uploads/pc/place2/2018-11-29/fd8394a7-1686-4939-8f63-8637887afef4_480_320.jpg',
-								QVideolisttime:'14:63',
-								QVideolisttitle:'在东京旅游，如何拍出不那么游客照的照片？',
-								QVideolistdate:'2018-12-15'
-							},
-							{
-								QVideoid:1,
-								QVideolistimg:'http://pic.lvmama.com/uploads/pc/place2/2018-09-25/f178fb9e-1ccf-46fb-af0c-a22f23921156_480_320.jpg',
-								QVideolisttime:'3:13',
-								QVideolisttitle:'摄影课：新手如何玩转航拍',
-								QVideolistdate:'2018-2-1'
-							}
-						]
-					}
-				],
-				message: '查询成功'
-			}
-		})
-		const buildQvideoDetailwarp = Mock.mock(
-			'/api/buildQvideoDetailwarp', 'get', (req, res) => {
-				return {
-					code: 200,
-					data: [
+const buildQVideolistdetail = Mock.mock(
+	'/api/buildQVideolistdetail', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [
+
+				{
+					QVideo: '//media.qyer.com/video/source/20190516/1558001025447',
+					QVideolistjishu: '15',
+					QVideolists: [{
+							QVideoid: 1,
+							QVideolistimg: '//pic.lvmama.com/uploads/pc/place2/2017-03-20/add23d7a-a33e-481c-9961-f5a582195e57_480_320.jpg',
+							QVideolisttime: '6:03',
+							QVideolisttitle: '手把手教会，旅行短片转场特效的小秘密',
+							QVideolistdate: '2019-6-1'
+						},
 						{
-							Q_videoDetailwarptitle:'又是一年毕业季，教你如何用小视频记录这段难忘时光',
-							Q_videoDetailwarpdsc:'夏天快到了，随之而来的是新一批同学们的毕业季。校园里的每个角落都充满了几年来的回忆，真想把这些深深记住……那就用手中的',
-							Q_videoDetailwarpzuozheavter:'//pics.lvjs.com.cn//uploads/pc/place2/2017-02-24/58cfd95b-9ef2-4ccd-85b8-44bd5739fab4_300_200.jpg',
-							Q_videoDetailwarpzuozhename:'小邪门拍照',
-							Q_videoDetailwarpzuozhedsc:'旅行拍摄入门宝典 ',
-							Q_videoDetailwarpxuanyu:'模特与摄影师带你旅行种草、拍出绝美大片。'
-						
-						
-					
-							
+							QVideoid: 1,
+							QVideolistimg: 'http://pic.lvmama.com/uploads/pc/place2/2018-09-26/7bfeb25f-e8e7-4513-96a8-47fab126bc1c_480_320.jpg',
+							QVideolisttime: '15:03',
+							QVideolisttitle: '如何在人山人海中把自己拍美——日本关西篇',
+							QVideolistdate: '2019-3-16'
+						},
+						{
+							QVideoid: 1,
+							QVideolistimg: 'http://pic.lvmama.com/uploads/pc/place2/2018-11-29/fd8394a7-1686-4939-8f63-8637887afef4_480_320.jpg',
+							QVideolisttime: '14:63',
+							QVideolisttitle: '在东京旅游，如何拍出不那么游客照的照片？',
+							QVideolistdate: '2018-12-15'
+						},
+						{
+							QVideoid: 1,
+							QVideolistimg: 'http://pic.lvmama.com/uploads/pc/place2/2018-09-25/f178fb9e-1ccf-46fb-af0c-a22f23921156_480_320.jpg',
+							QVideolisttime: '3:13',
+							QVideolisttitle: '摄影课：新手如何玩转航拍',
+							QVideolistdate: '2018-2-1'
+						}
+					]
+				}
+			],
+			message: '查询成功'
+		}
+	})
+const buildQvideoDetailwarp = Mock.mock(
+	'/api/buildQvideoDetailwarp', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+				Q_videoDetailwarptitle: '又是一年毕业季，教你如何用小视频记录这段难忘时光',
+				Q_videoDetailwarpdsc: '夏天快到了，随之而来的是新一批同学们的毕业季。校园里的每个角落都充满了几年来的回忆，真想把这些深深记住……那就用手中的',
+				Q_videoDetailwarpzuozheavter: '//pics.lvjs.com.cn//uploads/pc/place2/2017-02-24/58cfd95b-9ef2-4ccd-85b8-44bd5739fab4_300_200.jpg',
+				Q_videoDetailwarpzuozhename: '小邪门拍照',
+				Q_videoDetailwarpzuozhedsc: '旅行拍摄入门宝典 ',
+				Q_videoDetailwarpxuanyu: '模特与摄影师带你旅行种草、拍出绝美大片。'
+
+
+
+
+			}],
+			message: '查询成功'
+		}
+	})
+const buildinditems = Mock.mock(
+	'/api/buildinditems', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [
+
+				{
+					inditemsid: 1,
+					inditemstitle: '魔芋菌的奥捷行程',
+					inditemsimg: '//pics.lvjs.com.cn//uploads/pc/place2/2015-05-06/2bf90d8d-79c3-4c97-bee6-402d7db80dbb_300_200.jpg',
+					inditemsdate: '8',
+					inditemsreqi: '2019-6-10',
+					inditemstag: [{
+							inditemstagname: '购物'
+						},
+						{
+							inditemstagname: '景观'
+						},
+						{
+							inditemstagname: '自然风光'
 						}
 					],
-					message: '查询成功'
-				}
-			})
-			const buildinditems = Mock.mock(
-				'/api/buildinditems', 'get', (req, res) => {
-					return {
-						code: 200,
-						data: [
-							
-							{
-								inditemsid:1,
-								inditemstitle:'魔芋菌的奥捷行程',
-								inditemsimg:'//pics.lvjs.com.cn//uploads/pc/place2/2015-05-06/2bf90d8d-79c3-4c97-bee6-402d7db80dbb_300_200.jpg',
-								inditemsdate:'8',
-								inditemsreqi:'2019-6-10',
-								inditemstag:[
-									{
-										inditemstagname:'购物'
-									},
-									{
-										inditemstagname:'景观'
-									},
-									{
-										inditemstagname:'自然风光'
-									}
-								],
-								inditemsdsc:'北京·布拉格·库特纳霍拉·捷克克鲁姆洛夫·萨尔茨堡·哈尔施塔特·维也纳',
-								inditemszuozhe:'魔芋菌',
-								inditemschakan:'3526',
-								inditemsconment:'52363'
-							},
-							{
-								inditemsid:1,
-								inditemstitle:'魔芋菌的奥捷行程',
-								inditemsimg:'//pics.lvjs.com.cn//uploads/pc/place2/2015-05-06/2bf90d8d-79c3-4c97-bee6-402d7db80dbb_300_200.jpg',
-								inditemsdate:'8',
-								inditemsreqi:'2019-6-10',
-								inditemstag:[
-									{
-										inditemstagname:'购物'
-									},
-									{
-										inditemstagname:'景观'
-									},
-									{
-										inditemstagname:'自然风光'
-									}
-								],
-								inditemsdsc:'北京·布拉格·库特纳霍拉·捷克克鲁姆洛夫·萨尔茨堡·哈尔施塔特·维也纳',
-								inditemszuozhe:'魔芋菌',
-								inditemschakan:'3526',
-								inditemsconment:'52363'
-							},
-							{
-								inditemsid:1,
-								inditemstitle:'魔芋菌的奥捷行程',
-								inditemsimg:'//pics.lvjs.com.cn//uploads/pc/place2/2015-05-06/2bf90d8d-79c3-4c97-bee6-402d7db80dbb_300_200.jpg',
-								inditemsdate:'8',
-								inditemsreqi:'2019-6-10',
-								inditemstag:[
-									{
-										inditemstagname:'购物'
-									},
-									{
-										inditemstagname:'景观'
-									},
-									{
-										inditemstagname:'自然风光'
-									}
-								],
-								inditemsdsc:'北京·布拉格·库特纳霍拉·捷克克鲁姆洛夫·萨尔茨堡·哈尔施塔特·维也纳',
-								inditemszuozhe:'魔芋菌',
-								inditemschakan:'3526',
-								inditemsconment:'52363'
-							},
-							{
-								inditemsid:1,
-								inditemstitle:'魔芋菌的奥捷行程',
-								inditemsimg:'//pics.lvjs.com.cn//uploads/pc/place2/2015-05-06/2bf90d8d-79c3-4c97-bee6-402d7db80dbb_300_200.jpg',
-								inditemsdate:'8',
-								inditemsreqi:'2019-6-10',
-								inditemstag:[
-									{
-										inditemstagname:'购物'
-									},
-									{
-										inditemstagname:'景观'
-									},
-									{
-										inditemstagname:'自然风光'
-									}
-								],
-								inditemsdsc:'北京·布拉格·库特纳霍拉·捷克克鲁姆洛夫·萨尔茨堡·哈尔施塔特·维也纳',
-								inditemszuozhe:'魔芋菌',
-								inditemschakan:'3526',
-								inditemsconment:'52363'
-							},
-							{
-								inditemsid:1,
-								inditemstitle:'魔芋菌的奥捷行程',
-								inditemsimg:'//pics.lvjs.com.cn//uploads/pc/place2/2015-05-06/2bf90d8d-79c3-4c97-bee6-402d7db80dbb_300_200.jpg',
-								inditemsdate:'8',
-								inditemsreqi:'2019-6-10',
-								inditemstag:[
-									{
-										inditemstagname:'购物'
-									},
-									{
-										inditemstagname:'景观'
-									},
-									{
-										inditemstagname:'自然风光'
-									}
-								],
-								inditemsdsc:'北京·布拉格·库特纳霍拉·捷克克鲁姆洛夫·萨尔茨堡·哈尔施塔特·维也纳',
-								inditemszuozhe:'魔芋菌',
-								inditemschakan:'3526',
-								inditemsconment:'52363'
-							},
-							{
-								inditemsid:1,
-								inditemstitle:'魔芋菌的奥捷行程',
-								inditemsimg:'//pics.lvjs.com.cn//uploads/pc/place2/2015-05-06/2bf90d8d-79c3-4c97-bee6-402d7db80dbb_300_200.jpg',
-								inditemsdate:'8',
-								inditemsreqi:'2019-6-10',
-								inditemstag:[
-									{
-										inditemstagname:'购物'
-									},
-									{
-										inditemstagname:'景观'
-									},
-									{
-										inditemstagname:'自然风光'
-									}
-								],
-								inditemsdsc:'北京·布拉格·库特纳霍拉·捷克克鲁姆洛夫·萨尔茨堡·哈尔施塔特·维也纳',
-								inditemszuozhe:'魔芋菌',
-								inditemschakan:'3526',
-								inditemsconment:'52363'
-							},
-							{
-								inditemsid:1,
-								inditemstitle:'魔芋菌的奥捷行程',
-								inditemsimg:'//pics.lvjs.com.cn//uploads/pc/place2/2015-05-06/2bf90d8d-79c3-4c97-bee6-402d7db80dbb_300_200.jpg',
-								inditemsdate:'8',
-								inditemsreqi:'2019-6-10',
-								inditemstag:[
-									{
-										inditemstagname:'购物'
-									},
-									{
-										inditemstagname:'景观'
-									},
-									{
-										inditemstagname:'自然风光'
-									}
-								],
-								inditemsdsc:'北京·布拉格·库特纳霍拉·捷克克鲁姆洛夫·萨尔茨堡·哈尔施塔特·维也纳',
-								inditemszuozhe:'魔芋菌',
-								inditemschakan:'3526',
-								inditemsconment:'52363'
-							},
-							{
-								inditemsid:1,
-								inditemstitle:'魔芋菌的奥捷行程',
-								inditemsimg:'//pics.lvjs.com.cn//uploads/pc/place2/2015-05-06/2bf90d8d-79c3-4c97-bee6-402d7db80dbb_300_200.jpg',
-								inditemsdate:'8',
-								inditemsreqi:'2019-6-10',
-								inditemstag:[
-									{
-										inditemstagname:'购物'
-									},
-									{
-										inditemstagname:'景观'
-									},
-									{
-										inditemstagname:'自然风光'
-									}
-								],
-								inditemsdsc:'北京·布拉格·库特纳霍拉·捷克克鲁姆洛夫·萨尔茨堡·哈尔施塔特·维也纳',
-								inditemszuozhe:'魔芋菌',
-								inditemschakan:'3526',
-								inditemsconment:'52363'
-							},
-							{
-								inditemsid:1,
-								inditemstitle:'魔芋菌的奥捷行程',
-								inditemsimg:'//pics.lvjs.com.cn//uploads/pc/place2/2015-05-06/2bf90d8d-79c3-4c97-bee6-402d7db80dbb_300_200.jpg',
-								inditemsdate:'8',
-								inditemsreqi:'2019-6-10',
-								inditemstag:[
-									{
-										inditemstagname:'购物'
-									},
-									{
-										inditemstagname:'景观'
-									},
-									{
-										inditemstagname:'自然风光'
-									}
-								],
-								inditemsdsc:'北京·布拉格·库特纳霍拉·捷克克鲁姆洛夫·萨尔茨堡·哈尔施塔特·维也纳',
-								inditemszuozhe:'魔芋菌',
-								inditemschakan:'3526',
-								inditemsconment:'52363'
-							},
-							{
-								inditemsid:1,
-								inditemstitle:'魔芋菌的奥捷行程',
-								inditemsimg:'//pics.lvjs.com.cn//uploads/pc/place2/2015-05-06/2bf90d8d-79c3-4c97-bee6-402d7db80dbb_300_200.jpg',
-								inditemsdate:'8',
-								inditemsreqi:'2019-6-10',
-								inditemstag:[
-									{
-										inditemstagname:'购物'
-									},
-									{
-										inditemstagname:'景观'
-									},
-									{
-										inditemstagname:'自然风光'
-									}
-								],
-								inditemsdsc:'北京·布拉格·库特纳霍拉·捷克克鲁姆洛夫·萨尔茨堡·哈尔施塔特·维也纳',
-								inditemszuozhe:'魔芋菌',
-								inditemschakan:'3526',
-								inditemsconment:'52363'
-							},
-							{
-								inditemsid:1,
-								inditemstitle:'魔芋菌的奥捷行程',
-								inditemsimg:'//pics.lvjs.com.cn//uploads/pc/place2/2015-05-06/2bf90d8d-79c3-4c97-bee6-402d7db80dbb_300_200.jpg',
-								inditemsdate:'8',
-								inditemsreqi:'2019-6-10',
-								inditemstag:[
-									{
-										inditemstagname:'购物'
-									},
-									{
-										inditemstagname:'景观'
-									},
-									{
-										inditemstagname:'自然风光'
-									}
-								],
-								inditemsdsc:'北京·布拉格·库特纳霍拉·捷克克鲁姆洛夫·萨尔茨堡·哈尔施塔特·维也纳',
-								inditemszuozhe:'魔芋菌',
-								inditemschakan:'3526',
-								inditemsconment:'52363'
-							},
-							{
-								inditemsid:1,
-								inditemstitle:'魔芋菌的奥捷行程',
-								inditemsimg:'//pics.lvjs.com.cn//uploads/pc/place2/2015-05-06/2bf90d8d-79c3-4c97-bee6-402d7db80dbb_300_200.jpg',
-								inditemsdate:'8',
-								inditemsreqi:'2019-6-10',
-								inditemstag:[
-									{
-										inditemstagname:'购物'
-									},
-									{
-										inditemstagname:'景观'
-									},
-									{
-										inditemstagname:'自然风光'
-									}
-								],
-								inditemsdsc:'北京·布拉格·库特纳霍拉·捷克克鲁姆洛夫·萨尔茨堡·哈尔施塔特·维也纳',
-								inditemszuozhe:'魔芋菌',
-								inditemschakan:'3526',
-								inditemsconment:'52363'
-							},
-							{
-								inditemsid:1,
-								inditemstitle:'魔芋菌的奥捷行程',
-								inditemsimg:'//pics.lvjs.com.cn//uploads/pc/place2/2015-05-06/2bf90d8d-79c3-4c97-bee6-402d7db80dbb_300_200.jpg',
-								inditemsdate:'8',
-								inditemsreqi:'2019-6-10',
-								inditemstag:[
-									{
-										inditemstagname:'购物'
-									},
-									{
-										inditemstagname:'景观'
-									},
-									{
-										inditemstagname:'自然风光'
-									}
-								],
-								inditemsdsc:'北京·布拉格·库特纳霍拉·捷克克鲁姆洛夫·萨尔茨堡·哈尔施塔特·维也纳',
-								inditemszuozhe:'魔芋菌',
-								inditemschakan:'3526',
-								inditemsconment:'52363'
-							},
-							
-							{
-								inditemsid:1,
-								inditemstitle:'魔芋菌的奥捷行程',
-								inditemsimg:'//pics.lvjs.com.cn//uploads/pc/place2/2015-05-06/2bf90d8d-79c3-4c97-bee6-402d7db80dbb_300_200.jpg',
-								inditemsdate:'8',
-								inditemsreqi:'2019-6-10',
-								inditemstag:[
-									{
-										inditemstagname:'购物'
-									},
-									{
-										inditemstagname:'景观'
-									},
-									{
-										inditemstagname:'自然风光'
-									}
-								],
-								inditemsdsc:'北京·布拉格·库特纳霍拉·捷克克鲁姆洛夫·萨尔茨堡·哈尔施塔特·维也纳',
-								inditemszuozhe:'魔芋菌',
-								inditemschakan:'3526',
-								inditemsconment:'52363'
-							},
-							{
-								inditemsid:1,
-								inditemstitle:'魔芋菌的奥捷行程',
-								inditemsimg:'//pics.lvjs.com.cn//uploads/pc/place2/2015-05-06/2bf90d8d-79c3-4c97-bee6-402d7db80dbb_300_200.jpg',
-								inditemsdate:'8',
-								inditemsreqi:'2019-6-10',
-								inditemstag:[
-									{
-										inditemstagname:'购物'
-									},
-									{
-										inditemstagname:'景观'
-									},
-									{
-										inditemstagname:'自然风光'
-									}
-								],
-								inditemsdsc:'北京·布拉格·库特纳霍拉·捷克克鲁姆洛夫·萨尔茨堡·哈尔施塔特·维也纳',
-								inditemszuozhe:'魔芋菌',
-								inditemschakan:'3526',
-								inditemsconment:'52363'
-							}
-						],
-						message: '查询成功'
-					}
-					
-				})
-				const buildTr_yazhou = Mock.mock(
-					'/api/buildTr_yazhou', 'get', (req, res) => {
-						return {
-							code: 200,
-							data: [
-								{
-									typeindexyz:'中国'
-								},
-								{
-									typeindexyz:'朝鲜'
-								},
-								{
-									typeindexyz:'韩国'
-								},
-								{
-									typeindexyz:'日本'
-								},
-								{
-									typeindexyz:'俄罗斯'
-								},
-								{
-									typeindexyz:'越南'
-								},
-								{
-									typeindexyz:'孟加拉'
-								},
-								{
-									typeindexyz:'柬埔寨'
-								},
-								{
-									typeindexyz:'缅甸'
-								},
-								{
-									typeindexyz:'印度'
-								},
-								{
-									typeindexyz:'巴基斯坦'
-								},
-								{
-									typeindexyz:'哈萨克斯坦'
-								},
-								{
-									typeindexyz:'吉尔吉斯坦'
-								},
-								{
-									typeindexyz:'伊拉克'
-								},
-								{
-									typeindexyz:'不丹'
-								},
-								{
-									typeindexyz:'科威特'
-								},
-								{
-									typeindexyz:'土耳其'
-								},
-								{
-									typeindexyz:'迪拜'
-								},
-								{
-									typeindexyz:'老挝'
-								},
-								{
-									typeindexyz:'以色列'
-								},
-								{
-									typeindexyz:'马尔代夫'
-								},
-								{
-									typeindexyz:'沙特阿拉伯'
-								},
-								{
-									typeindexyz:'也门'
-								},
-								{
-									typeindexyz:'东焚帝'
-								},
-								{
-									typeindexyz:'阿富汗'
-								},
-								{
-									typeindexyz:'叙利亚'
-								},
-								{
-									typeindexyz:'菲律宾'
-								},
-								{
-									typeindexyz:'马来西亚'
-								},
-								
-								{
-									typeindexyz:'印度尼西亚'
-								},
-								{
-									typeindexyz:'新加坡'
-								},
-								{
-									typeindexyz:'黎巴嫩'
-								},
-								{
-									typeindexyz:'蒙古'
-								},
-								{
-									typeindexyz:'阿曼'
-								},
-								{
-									typeindexyz:'乌兹别克斯坦'
-								},
-								{
-									typeindexyz:'巴休'
-								},
-								{
-									typeindexyz:'尼泊尔'
-								}
-									
-							],
-							message: '查询成功'
+					inditemsdsc: '北京·布拉格·库特纳霍拉·捷克克鲁姆洛夫·萨尔茨堡·哈尔施塔特·维也纳',
+					inditemszuozhe: '魔芋菌',
+					inditemschakan: '3526',
+					inditemsconment: '52363'
+				},
+				{
+					inditemsid: 1,
+					inditemstitle: '魔芋菌的奥捷行程',
+					inditemsimg: '//pics.lvjs.com.cn//uploads/pc/place2/2015-05-06/2bf90d8d-79c3-4c97-bee6-402d7db80dbb_300_200.jpg',
+					inditemsdate: '8',
+					inditemsreqi: '2019-6-10',
+					inditemstag: [{
+							inditemstagname: '购物'
+						},
+						{
+							inditemstagname: '景观'
+						},
+						{
+							inditemstagname: '自然风光'
 						}
-						
-					})
-						const buildTr_ouzhou = Mock.mock(
-						'/api/buildTr_ouzhou', 'get', (req, res) => {
-							return {
-								code: 200,
-								data: [
-									{
-										typeindexoz:'英国'
-									},
-									{
-										typeindexoz:'爱尔兰'
-									},
-									{
-										typeindexoz:'冰岛'
-									},
-									{
-										typeindexoz:'挪威'
-									},
-									{
-										typeindexoz:'芬兰'
-									},
-									{
-										typeindexoz:'西班牙'
-									},
-									{
-										typeindexoz:'葡萄牙'
-									},
-									{
-										typeindexoz:'德国'
-									},
-									{
-										typeindexoz:'白俄罗斯'
-									},
-									{
-										typeindexoz:'俄罗斯'
-									},
-									{
-										typeindexoz:'乌克兰'
-									},
-									{
-										typeindexoz:'希腊'
-									},
-									{
-										typeindexoz:'意大利'
-									},
-									{
-										typeindexoz:'瑞士'
-									},
-									{
-										typeindexoz:'奥地利'
-									},
-									{
-										typeindexoz:'丹麦'
-									},
-									{
-										typeindexoz:'摩洛哥'
-									},
-									{
-										typeindexoz:'波兰'
-									},
-									{
-										typeindexoz:'卢森堡'
-									},
-									{
-										typeindexoz:'保加利亚'
-									},
-									{
-										typeindexoz:'比利时'
-									},
-									
-										
-								],
-								message: '查询成功'
-							}
-							
-						})
-						const buildTrtongzhidata = Mock.mock(
-						'/api/buildTrtongzhidata', 'get', (req, res) => {
-							return {
-								code: 200,
-								data: [
-								
-									{Trtongzhidsc:'78人在10分钟内制定了新的行程'}
-										
-								],
-								message: '查询成功'
-							}
-							
-						})
-						const buildmbanner = Mock.mock(
-							'/api/buildmbanner', 'get', (req, res) => {
-								return {
-									code: 200,
-									data: [{
-										    bannerlinkid:1,
-											bannerlink:1,
-											bannertitle:"【意大利游记攻略】“意”惹情牵，沐浴在艳阳下的旧时光",
-											mbannerimg:'https://picb2b.qyer.com/FivOIcLyYdtOvgj_WjpbyjhjgSdD',
-											
-										},
-										{
-											bannerlinkid:2,
-											bannerlink:1,
-											bannertitle:"穷游锦囊 | 越南",
-											mbannerimg:'https://picb2b.qyer.com/Fvg4eufY5Gh-jS6i2lkb8P_EQBRh',
-										},
-										
-									],
-									message: '查询成功'
-								}
-							})
-							const buildmnav = Mock.mock(
-								'/api/buildmnav', 'get', (req, res) => {
-									return {
-										code: 200,
-										data: [
-											{
-											    navlink:1,
-												navlinkid:1,
-												navspan:"锦囊",
-												navicon:'//fes.qyerstatic.com/FjiWdzANqPB2Nm0wtDTvrr8HDrsg?imageslim',
-												
-											},
-											
-											{
-											    navlink:1,
-												navlinkid:1,
-												navspan:"行程助手",
-												navicon:'https://fes.qyerstatic.com/Fgg0Tsbl5u7zvbNnmVhjDJd-3I-_?imageslim',
-												
-											},
-											{
-											    navlink:1,
-												navlinkid:1,
-												navspan:"游记",
-												navicon:'https://fes.qyerstatic.com/FoRfPUtUloa5MqNwOv5iIcqQ4rHv?imageslim',
-												
-											},
-											{
-											    navlink:1,
-												navlinkid:1,
-												navspan:"Biu",
-												navicon:'https://fes.qyerstatic.com/FkMxtgHBTCKsjaLBZ1B7xHGg08QT?imageslim',
-												
-											},
-											{
-											    navlink:1,
-												navlinkid:1,
-												navspan:"问答",
-												navicon:'https://fes.qyerstatic.com/FsqBlRsF2hnYNrfR9YhCWQqD2j_P?imageslim',
-												
-											},
-											{
-											    navlink:1,
-												navlinkid:1,
-												navspan:"目的地",
-												navicon:'https://fes.qyerstatic.com/Fgh5NStqSlSjuK7vtLSwOXg4RwNz?imageslim',
-												
-											},
-											{
-											    navlink:1,
-												navlinkid:1,
-												navspan:"酒店",
-												navicon:'https://fes.qyerstatic.com/Fvv-TfNa_RKqKW0sTcp2BqwgVJNZ?imageslim',
-												
-											},
-											{
-											    navlink:1,
-												navlinkid:1,
-												navspan:"商城",
-												navicon:'https://fes.qyerstatic.com/FmZQUj73tzL9QixhyTBUtpxbxBqt?imageslim',
-												
-											},
-											{
-											    navlink:1,
-												navlinkid:1,
-												navspan:"约伴",
-												navicon:'https://fes.qyerstatic.com/Ft-_BNtwDwbLCwNbk8a6JKMx_OME?imageslim',
-												
-											},
-											{
-											    navlink:1,
-												navlinkid:1,
-												navspan:"专栏",
-												navicon:'https://fes.qyerstatic.com/Fibzv7V9e1eoPD7XT4C0uC-hZIf7?imageslim',
-												
-											},
-										],
-										message: '查询成功'
-									}
-								})
-								const buildmzhekou = Mock.mock(
-									'/api/buildmzhekou', 'get', (req, res) => {
-										return {
-											code: 200,
-											data: [
-											{
-												zhekouimg:'https://pic.qyer.com/lastminute/library/2015/04/20/5534c0783a591.jpg/300x200',
-												zhekouid:1,
-												zhekoudsc:'澳门直飞长滩岛5天往返含税机票（赠送行李托运）',
-												zhekouprice:'99'
-											},
-											{
-												zhekouimg:'https://pic.qyer.com/public/lastmin/supproduct/2017/08/01/15015789281685/300x200',
-												zhekouid:1,
-												zhekoudsc:'[早鸟特惠]北京直飞塞班岛6-7天自由行（免税直飞+赠北部观光环岛游+中文接送机+可升级指定酒店+可预定敞篷野马/大黄蜂自驾用车）',
-												zhekouprice:'4999'
-											},
-											{
-												zhekouimg:'https://pic.qyer.com/FtJrgVPn62RRmzAFzSccB9w0ht6r/300x200',
-												zhekouid:1,
-												zhekoudsc:'上海直飞澳大利亚8天6晚跟团游（菲利普岛+黄金海岸+华纳电影世界+天堂农庄+墨尔本大学+悉尼大学+蓝山国家公园+悉尼歌剧院 赠送考拉合影一张）',
-												zhekouprice:'5699'
-											},
-											{
-												zhekouimg:'https://pic.qyer.com/lastminute/library/2015/04/20/5534c0783a591.jpg/300x200',
-												zhekouid:1,
-												zhekoudsc:'北京直飞巴厘岛6-7天往返含税机票（东航/鹰航+多班期可选）',
-												zhekouprice:'3999'
-											}
-											],
-											message: '查询成功'
-										}
-									})
-									const buildmjingxuan = Mock.mock(
-										'/api/buildmjingxuan', 'get', (req, res) => {
-											return {
-												code: 200,
-												data: [
-												{
-													jingxuanlinkid:'1',
-													jingxuanlink:1,
-													jingxuanicon:'https://fes.qyerstatic.com/FjhPw2CAsHhvxjAuUQvT0EjTfOTF?imageslim',
-													jingxuandsc:'特价机票'
-												},
-												{
-													jingxuanlinkid:'1',
-													jingxuanlink:1,
-													jingxuanicon:'https://fes.qyerstatic.com/Fh9eg1ZGwLp8GHrTbKSfjwMgUqz8?imageslim',
-													jingxuandsc:'机场自由行'
-												},
-												{
-													jingxuanlinkid:'1',
-													jingxuanlink:1,
-													jingxuanicon:'https://fes.qyerstatic.com/FrnlnoQrQLokB6xx4mGmJhuz9eCf?imageslim',
-													jingxuandsc:'当地玩乐'
-												},
-												{
-													jingxuanlinkid:'1',
-													jingxuanlink:1,
-													jingxuanicon:'//fes.qyerstatic.com/Fv-WDaw3GtUH1_8rcId7Bny4bwYV?imageslim',
-													jingxuandsc:'门票/票卷'
-												},
-												{
-													jingxuanlinkid:'1',
-													jingxuanlink:1,
-													jingxuanicon:'https://fes.qyerstatic.com/FuFMfHPUrw-ms3echc2_SAd1EXoP?imageslim',
-													jingxuandsc:'高铁出行'
-												},
-												{
-													jingxuanlinkid:'1',
-													jingxuanlink:1,
-													jingxuanicon:'https://fes.qyerstatic.com/FgxEv9eVMgiTxXvVg4-h5GjE7muR?imageslim',
-													jingxuandsc:'WIFI电话卡'
-												},
-												{
-													jingxuanlinkid:'1',
-													jingxuanlink:1,
-													jingxuanicon:'https://fes.qyerstatic.com/Fu9r87vH7j46Gtafrd8ohKHQEoBm?imageslim',
-													jingxuandsc:'欧铁频道'
-												},
-												{
-													jingxuanlinkid:'1',
-													jingxuanlink:1,
-													jingxuanicon:'https://fes.qyerstatic.com/Fnf6W8mmlmHqGnzGvu-NnM_zK-1p?imageslim',
-													jingxuandsc:'保险频道'
-												},
-												{
-													jingxuanlinkid:'1',
-													jingxuanlink:1,
-													jingxuanicon:'https://fes.qyerstatic.com/FnI5stm2aLT-icX075jIpjXIjKT4?imageslim',
-													jingxuandsc:'机场包接送'
-												},
-												],
-												message: '查询成功'
-											}
-										})
-										const buildmgonglue = Mock.mock(
-											'/api/buildmgonglue', 'get', (req, res) => {
-												return {
-													code: 200,
-													data: [
-													{
-														mgonglueimg:'https://p.qyer.com/fugc/aa88cf58a486780b0887ece6f7568211?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/0/w/348|imageslim/format/jpg',
-														mgongluedsc:'慕尼黑啤酒节开幕大赏！两只眼里只有重金属，酒精和黑暗反应的化学博士去德国会干什么',
-														mgonglueavater:'https://p.qyer.com/fugc/aa88cf58a486780b0887ece6f7568211?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/0/w/348|imageslim/format/jpg',
-														mgongluename:'猪蹄子',
-														mgongluepinglun:'2002',
-														mgonglueyouji:1
-													},
-													{
-														mgonglueimg:'https://p.qyer.com/fugc/7cca86d2e6a0e72b5cf8b188275d6407?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/0/w/348|imageslim/format/jpg',
-														mgongluedsc:'上海迪斯尼最强攻略 首刷上海迪斯尼，便幸运的将几款热门项目都玩儿了个遍。 🏰 🏰',
-														mgonglueavater:'https://p.qyer.com/fugc/7cca86d2e6a0e72b5cf8b188275d6407?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/0/w/348|imageslim/format/jpg',
-														mgongluename:'Christine玥yue加油',
-														mgongluepinglun:'502'
-													},
-													{
-														mgonglueimg:'https://pic.qyer.com/album/user/3333/47/QkpWQR4AZkE/index?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/348/h/348|imageslim/format/jpg',
-														mgongluedsc:'退休阿姨镌刻在记忆里的第一次国外自驾游（英伦篇）',
-														mgonglueavater:'https://pic.qyer.com/album/user/3333/47/QkpWQR4AZkE/index?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/348/h/348|imageslim/format/jpg',
-														mgongluename:'抱衾听雪',
-														mgongluepinglun:'62'
-													},
-													{
-														mgonglueimg:'https://p.qyer.com/fugc/0df3001cdf34860016fb0e8162d24c34/360w.gif?imageMogr2/auto-orient/thumbnail/!180x120r/gravity/Center/crop/180x270',
-														mgongluedsc:'据说今年会有25000发烟花照亮整个泉南海滩，到时肯定超美的～小伙伴们赶紧制定出',
-														mgonglueavater:'https://p.qyer.com/fugc/0df3001cdf34860016fb0e8162d24c34/360w.gif?imageMogr2/auto-orient/thumbnail/!180x120r/gravity/Center/crop/180x270',
-														mgongluename:'apple',
-														mgongluepinglun:'1023'
-													},
-													{
-														mgonglueimg:'https://p.qyer.com/fugc/ba86852b1c005b5582aa306abab87bfc?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/0/w/348|imageslim/format/jpg',
-														mgongluedsc:'在我们国家倡议一带一路的今天，丝绸之路也逐渐成为一个热门词，乌兹别克斯坦也许就是',
-														mgonglueavater:'https://p.qyer.com/fugc/ba86852b1c005b5582aa306abab87bfc?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/0/w/348|imageslim/format/jpg',
-														mgongluename:'雪梅',
-														mgongluepinglun:'5896'
-													}
-													],
-													message: '查询成功'
-												}
-											})
-												const buildmsearchlistdata = Mock.mock(
-												'/api/buildmsearchlistdata', 'get', (req, res) => {
-													return {
-														code: 200,
-														data: [
-															
-																	{
-																		value:'三全鲜食（北新泾店）'
-																	},
-																	{
-																		value:'Hot honey 首尔炸鸡（仙霞路）'
-																	},
-																	{
-																		value:'新旺角茶餐厅'
-																	},
-																	{
-																		value:'贡茶'
-																	}
-																
-															
-														
-														],
-														message: '查询成功'
-													}
-												})
-												const buildhotthread = Mock.mock(
-												'/api/buildhotthread', 'get', (req, res) => {
-													return {
-														code: 200,
-														data: [
-															
-																{
-																	hotname:'穷游相遇2019七夕',
-																	hotindex:1,
-																	hotthreadimg:[
-																		{
-																			hotlink:1,
-																			hotlinkid:1,
-																			hotimg:'https://p.qyer.com/fugc/514a14843a363d142d3ff43f92fc846f?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/216/h/216|imageslim/format/jpg'
-																		},
-																		{
-																			hotlink:1,
-																			hotlinkid:1,
-																			hotimg:'https://p.qyer.com/fugc/412a4dd13b386431fae251ec8f5996e8?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/216/h/216|imageslim/format/jpg'
-																		},
-																		{
-																			hotlink:1,
-																			hotlinkid:1,
-																			hotimg:'https://p.qyer.com/fugc/2a85482a1478bee3ead12c4fb1f3d036?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/216/h/216|imageslim/format/jpg'
-																		}
-																	]
-																},
-																{
-																	hotname:'送你浪漫全世界',
-																	hotindex:1,
-																	hotthreadimg:[
-																		{
-																			hotlink:1,
-																			hotlinkid:1,
-																			hotimg:'https://p.qyer.com/fugc/1a47ed818174a9a4219c1083d29a9a45?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/216/h/216|imageslim/format/jpg'
-																		},
-																		{
-																			hotlink:1,
-																			hotlinkid:1,
-																			hotimg:'https://p.qyer.com/fugc/fa029a1b2b81b26f072f1154d1a1ddf1?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/216/h/216|imageslim/format/jpg'
-																		},
-																		{
-																			hotlink:1,
-																			hotlinkid:1,
-																			hotimg:'https://p.qyer.com/fugc/3b806e0b54554b1bb90fe975afb965d8?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/216/h/216|imageslim/format/jpg'
-																		}
-																	]
-																},
-																	{
-																	hotname:'情侣拍照指南',
-																	hotindex:0,
-																	hotthreadimg:[
-																		{
-																			hotlink:1,
-																			hotlinkid:1,
-																			hotimg:'https://p.qyer.com/fugc/e59179159c518b201cf0cc07b8481957?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/216/h/216|imageslim/format/jpg'
-																		},
-																		{
-																			hotlink:1,
-																			hotlinkid:1,
-																			hotimg:'https://p.qyer.com/fugc/59d4185a9281edf65189b0364699a90a?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/216/h/216|imageslim/format/jpg'
-																		},
-																		{
-																			hotlink:1,
-																			hotlinkid:1,
-																			hotimg:'https://p.qyer.com/fugc/006a17044cac2de1675d767f12f92b1f?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/216/h/216|imageslim/format/jpg'
-																		}
-																	]
-																}
-																
-															
-														
-														],
-														message: '查询成功'
-													}
-												})
-								const buildsearchhistory = Mock.mock(
-							'/api/buildsearchhistory', 'get', (req, res) => {
-								return {
-									code: 200,
-									data: [
-										
-										{
-										historytitle:'我爱你',
-											historylink:1,
-											historylinkid:1,
-										}
-											
-										
-									
-									],
-									message: '查询成功'
-								}
-							})
-														
+					],
+					inditemsdsc: '北京·布拉格·库特纳霍拉·捷克克鲁姆洛夫·萨尔茨堡·哈尔施塔特·维也纳',
+					inditemszuozhe: '魔芋菌',
+					inditemschakan: '3526',
+					inditemsconment: '52363'
+				},
+				{
+					inditemsid: 1,
+					inditemstitle: '魔芋菌的奥捷行程',
+					inditemsimg: '//pics.lvjs.com.cn//uploads/pc/place2/2015-05-06/2bf90d8d-79c3-4c97-bee6-402d7db80dbb_300_200.jpg',
+					inditemsdate: '8',
+					inditemsreqi: '2019-6-10',
+					inditemstag: [{
+							inditemstagname: '购物'
+						},
+						{
+							inditemstagname: '景观'
+						},
+						{
+							inditemstagname: '自然风光'
+						}
+					],
+					inditemsdsc: '北京·布拉格·库特纳霍拉·捷克克鲁姆洛夫·萨尔茨堡·哈尔施塔特·维也纳',
+					inditemszuozhe: '魔芋菌',
+					inditemschakan: '3526',
+					inditemsconment: '52363'
+				},
+				{
+					inditemsid: 1,
+					inditemstitle: '魔芋菌的奥捷行程',
+					inditemsimg: '//pics.lvjs.com.cn//uploads/pc/place2/2015-05-06/2bf90d8d-79c3-4c97-bee6-402d7db80dbb_300_200.jpg',
+					inditemsdate: '8',
+					inditemsreqi: '2019-6-10',
+					inditemstag: [{
+							inditemstagname: '购物'
+						},
+						{
+							inditemstagname: '景观'
+						},
+						{
+							inditemstagname: '自然风光'
+						}
+					],
+					inditemsdsc: '北京·布拉格·库特纳霍拉·捷克克鲁姆洛夫·萨尔茨堡·哈尔施塔特·维也纳',
+					inditemszuozhe: '魔芋菌',
+					inditemschakan: '3526',
+					inditemsconment: '52363'
+				},
+				{
+					inditemsid: 1,
+					inditemstitle: '魔芋菌的奥捷行程',
+					inditemsimg: '//pics.lvjs.com.cn//uploads/pc/place2/2015-05-06/2bf90d8d-79c3-4c97-bee6-402d7db80dbb_300_200.jpg',
+					inditemsdate: '8',
+					inditemsreqi: '2019-6-10',
+					inditemstag: [{
+							inditemstagname: '购物'
+						},
+						{
+							inditemstagname: '景观'
+						},
+						{
+							inditemstagname: '自然风光'
+						}
+					],
+					inditemsdsc: '北京·布拉格·库特纳霍拉·捷克克鲁姆洛夫·萨尔茨堡·哈尔施塔特·维也纳',
+					inditemszuozhe: '魔芋菌',
+					inditemschakan: '3526',
+					inditemsconment: '52363'
+				},
+				{
+					inditemsid: 1,
+					inditemstitle: '魔芋菌的奥捷行程',
+					inditemsimg: '//pics.lvjs.com.cn//uploads/pc/place2/2015-05-06/2bf90d8d-79c3-4c97-bee6-402d7db80dbb_300_200.jpg',
+					inditemsdate: '8',
+					inditemsreqi: '2019-6-10',
+					inditemstag: [{
+							inditemstagname: '购物'
+						},
+						{
+							inditemstagname: '景观'
+						},
+						{
+							inditemstagname: '自然风光'
+						}
+					],
+					inditemsdsc: '北京·布拉格·库特纳霍拉·捷克克鲁姆洛夫·萨尔茨堡·哈尔施塔特·维也纳',
+					inditemszuozhe: '魔芋菌',
+					inditemschakan: '3526',
+					inditemsconment: '52363'
+				},
+				{
+					inditemsid: 1,
+					inditemstitle: '魔芋菌的奥捷行程',
+					inditemsimg: '//pics.lvjs.com.cn//uploads/pc/place2/2015-05-06/2bf90d8d-79c3-4c97-bee6-402d7db80dbb_300_200.jpg',
+					inditemsdate: '8',
+					inditemsreqi: '2019-6-10',
+					inditemstag: [{
+							inditemstagname: '购物'
+						},
+						{
+							inditemstagname: '景观'
+						},
+						{
+							inditemstagname: '自然风光'
+						}
+					],
+					inditemsdsc: '北京·布拉格·库特纳霍拉·捷克克鲁姆洛夫·萨尔茨堡·哈尔施塔特·维也纳',
+					inditemszuozhe: '魔芋菌',
+					inditemschakan: '3526',
+					inditemsconment: '52363'
+				},
+				{
+					inditemsid: 1,
+					inditemstitle: '魔芋菌的奥捷行程',
+					inditemsimg: '//pics.lvjs.com.cn//uploads/pc/place2/2015-05-06/2bf90d8d-79c3-4c97-bee6-402d7db80dbb_300_200.jpg',
+					inditemsdate: '8',
+					inditemsreqi: '2019-6-10',
+					inditemstag: [{
+							inditemstagname: '购物'
+						},
+						{
+							inditemstagname: '景观'
+						},
+						{
+							inditemstagname: '自然风光'
+						}
+					],
+					inditemsdsc: '北京·布拉格·库特纳霍拉·捷克克鲁姆洛夫·萨尔茨堡·哈尔施塔特·维也纳',
+					inditemszuozhe: '魔芋菌',
+					inditemschakan: '3526',
+					inditemsconment: '52363'
+				},
+				{
+					inditemsid: 1,
+					inditemstitle: '魔芋菌的奥捷行程',
+					inditemsimg: '//pics.lvjs.com.cn//uploads/pc/place2/2015-05-06/2bf90d8d-79c3-4c97-bee6-402d7db80dbb_300_200.jpg',
+					inditemsdate: '8',
+					inditemsreqi: '2019-6-10',
+					inditemstag: [{
+							inditemstagname: '购物'
+						},
+						{
+							inditemstagname: '景观'
+						},
+						{
+							inditemstagname: '自然风光'
+						}
+					],
+					inditemsdsc: '北京·布拉格·库特纳霍拉·捷克克鲁姆洛夫·萨尔茨堡·哈尔施塔特·维也纳',
+					inditemszuozhe: '魔芋菌',
+					inditemschakan: '3526',
+					inditemsconment: '52363'
+				},
+				{
+					inditemsid: 1,
+					inditemstitle: '魔芋菌的奥捷行程',
+					inditemsimg: '//pics.lvjs.com.cn//uploads/pc/place2/2015-05-06/2bf90d8d-79c3-4c97-bee6-402d7db80dbb_300_200.jpg',
+					inditemsdate: '8',
+					inditemsreqi: '2019-6-10',
+					inditemstag: [{
+							inditemstagname: '购物'
+						},
+						{
+							inditemstagname: '景观'
+						},
+						{
+							inditemstagname: '自然风光'
+						}
+					],
+					inditemsdsc: '北京·布拉格·库特纳霍拉·捷克克鲁姆洛夫·萨尔茨堡·哈尔施塔特·维也纳',
+					inditemszuozhe: '魔芋菌',
+					inditemschakan: '3526',
+					inditemsconment: '52363'
+				},
+				{
+					inditemsid: 1,
+					inditemstitle: '魔芋菌的奥捷行程',
+					inditemsimg: '//pics.lvjs.com.cn//uploads/pc/place2/2015-05-06/2bf90d8d-79c3-4c97-bee6-402d7db80dbb_300_200.jpg',
+					inditemsdate: '8',
+					inditemsreqi: '2019-6-10',
+					inditemstag: [{
+							inditemstagname: '购物'
+						},
+						{
+							inditemstagname: '景观'
+						},
+						{
+							inditemstagname: '自然风光'
+						}
+					],
+					inditemsdsc: '北京·布拉格·库特纳霍拉·捷克克鲁姆洛夫·萨尔茨堡·哈尔施塔特·维也纳',
+					inditemszuozhe: '魔芋菌',
+					inditemschakan: '3526',
+					inditemsconment: '52363'
+				},
+				{
+					inditemsid: 1,
+					inditemstitle: '魔芋菌的奥捷行程',
+					inditemsimg: '//pics.lvjs.com.cn//uploads/pc/place2/2015-05-06/2bf90d8d-79c3-4c97-bee6-402d7db80dbb_300_200.jpg',
+					inditemsdate: '8',
+					inditemsreqi: '2019-6-10',
+					inditemstag: [{
+							inditemstagname: '购物'
+						},
+						{
+							inditemstagname: '景观'
+						},
+						{
+							inditemstagname: '自然风光'
+						}
+					],
+					inditemsdsc: '北京·布拉格·库特纳霍拉·捷克克鲁姆洛夫·萨尔茨堡·哈尔施塔特·维也纳',
+					inditemszuozhe: '魔芋菌',
+					inditemschakan: '3526',
+					inditemsconment: '52363'
+				},
+				{
+					inditemsid: 1,
+					inditemstitle: '魔芋菌的奥捷行程',
+					inditemsimg: '//pics.lvjs.com.cn//uploads/pc/place2/2015-05-06/2bf90d8d-79c3-4c97-bee6-402d7db80dbb_300_200.jpg',
+					inditemsdate: '8',
+					inditemsreqi: '2019-6-10',
+					inditemstag: [{
+							inditemstagname: '购物'
+						},
+						{
+							inditemstagname: '景观'
+						},
+						{
+							inditemstagname: '自然风光'
+						}
+					],
+					inditemsdsc: '北京·布拉格·库特纳霍拉·捷克克鲁姆洛夫·萨尔茨堡·哈尔施塔特·维也纳',
+					inditemszuozhe: '魔芋菌',
+					inditemschakan: '3526',
+					inditemsconment: '52363'
+				},
+
+				{
+					inditemsid: 1,
+					inditemstitle: '魔芋菌的奥捷行程',
+					inditemsimg: '//pics.lvjs.com.cn//uploads/pc/place2/2015-05-06/2bf90d8d-79c3-4c97-bee6-402d7db80dbb_300_200.jpg',
+					inditemsdate: '8',
+					inditemsreqi: '2019-6-10',
+					inditemstag: [{
+							inditemstagname: '购物'
+						},
+						{
+							inditemstagname: '景观'
+						},
+						{
+							inditemstagname: '自然风光'
+						}
+					],
+					inditemsdsc: '北京·布拉格·库特纳霍拉·捷克克鲁姆洛夫·萨尔茨堡·哈尔施塔特·维也纳',
+					inditemszuozhe: '魔芋菌',
+					inditemschakan: '3526',
+					inditemsconment: '52363'
+				},
+				{
+					inditemsid: 1,
+					inditemstitle: '魔芋菌的奥捷行程',
+					inditemsimg: '//pics.lvjs.com.cn//uploads/pc/place2/2015-05-06/2bf90d8d-79c3-4c97-bee6-402d7db80dbb_300_200.jpg',
+					inditemsdate: '8',
+					inditemsreqi: '2019-6-10',
+					inditemstag: [{
+							inditemstagname: '购物'
+						},
+						{
+							inditemstagname: '景观'
+						},
+						{
+							inditemstagname: '自然风光'
+						}
+					],
+					inditemsdsc: '北京·布拉格·库特纳霍拉·捷克克鲁姆洛夫·萨尔茨堡·哈尔施塔特·维也纳',
+					inditemszuozhe: '魔芋菌',
+					inditemschakan: '3526',
+					inditemsconment: '52363'
+				}
+			],
+			message: '查询成功'
+		}
+
+	})
+const buildTr_yazhou = Mock.mock(
+	'/api/buildTr_yazhou', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					typeindexyz: '中国'
+				},
+				{
+					typeindexyz: '朝鲜'
+				},
+				{
+					typeindexyz: '韩国'
+				},
+				{
+					typeindexyz: '日本'
+				},
+				{
+					typeindexyz: '俄罗斯'
+				},
+				{
+					typeindexyz: '越南'
+				},
+				{
+					typeindexyz: '孟加拉'
+				},
+				{
+					typeindexyz: '柬埔寨'
+				},
+				{
+					typeindexyz: '缅甸'
+				},
+				{
+					typeindexyz: '印度'
+				},
+				{
+					typeindexyz: '巴基斯坦'
+				},
+				{
+					typeindexyz: '哈萨克斯坦'
+				},
+				{
+					typeindexyz: '吉尔吉斯坦'
+				},
+				{
+					typeindexyz: '伊拉克'
+				},
+				{
+					typeindexyz: '不丹'
+				},
+				{
+					typeindexyz: '科威特'
+				},
+				{
+					typeindexyz: '土耳其'
+				},
+				{
+					typeindexyz: '迪拜'
+				},
+				{
+					typeindexyz: '老挝'
+				},
+				{
+					typeindexyz: '以色列'
+				},
+				{
+					typeindexyz: '马尔代夫'
+				},
+				{
+					typeindexyz: '沙特阿拉伯'
+				},
+				{
+					typeindexyz: '也门'
+				},
+				{
+					typeindexyz: '东焚帝'
+				},
+				{
+					typeindexyz: '阿富汗'
+				},
+				{
+					typeindexyz: '叙利亚'
+				},
+				{
+					typeindexyz: '菲律宾'
+				},
+				{
+					typeindexyz: '马来西亚'
+				},
+
+				{
+					typeindexyz: '印度尼西亚'
+				},
+				{
+					typeindexyz: '新加坡'
+				},
+				{
+					typeindexyz: '黎巴嫩'
+				},
+				{
+					typeindexyz: '蒙古'
+				},
+				{
+					typeindexyz: '阿曼'
+				},
+				{
+					typeindexyz: '乌兹别克斯坦'
+				},
+				{
+					typeindexyz: '巴休'
+				},
+				{
+					typeindexyz: '尼泊尔'
+				}
+
+			],
+			message: '查询成功'
+		}
+
+	})
+const buildTr_ouzhou = Mock.mock(
+	'/api/buildTr_ouzhou', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					typeindexoz: '英国'
+				},
+				{
+					typeindexoz: '爱尔兰'
+				},
+				{
+					typeindexoz: '冰岛'
+				},
+				{
+					typeindexoz: '挪威'
+				},
+				{
+					typeindexoz: '芬兰'
+				},
+				{
+					typeindexoz: '西班牙'
+				},
+				{
+					typeindexoz: '葡萄牙'
+				},
+				{
+					typeindexoz: '德国'
+				},
+				{
+					typeindexoz: '白俄罗斯'
+				},
+				{
+					typeindexoz: '俄罗斯'
+				},
+				{
+					typeindexoz: '乌克兰'
+				},
+				{
+					typeindexoz: '希腊'
+				},
+				{
+					typeindexoz: '意大利'
+				},
+				{
+					typeindexoz: '瑞士'
+				},
+				{
+					typeindexoz: '奥地利'
+				},
+				{
+					typeindexoz: '丹麦'
+				},
+				{
+					typeindexoz: '摩洛哥'
+				},
+				{
+					typeindexoz: '波兰'
+				},
+				{
+					typeindexoz: '卢森堡'
+				},
+				{
+					typeindexoz: '保加利亚'
+				},
+				{
+					typeindexoz: '比利时'
+				},
+
+
+			],
+			message: '查询成功'
+		}
+
+	})
+const buildTrtongzhidata = Mock.mock(
+	'/api/buildTrtongzhidata', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [
+
+				{
+					Trtongzhidsc: '78人在10分钟内制定了新的行程'
+				}
+
+			],
+			message: '查询成功'
+		}
+
+	})
+const buildmbanner = Mock.mock(
+	'/api/buildmbanner', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					bannerlinkid: 1,
+					bannerlink: 1,
+					bannertitle: "【意大利游记攻略】“意”惹情牵，沐浴在艳阳下的旧时光",
+					mbannerimg: 'https://picb2b.qyer.com/FivOIcLyYdtOvgj_WjpbyjhjgSdD',
+
+				},
+				{
+					bannerlinkid: 2,
+					bannerlink: 1,
+					bannertitle: "穷游锦囊 | 越南",
+					mbannerimg: 'https://picb2b.qyer.com/Fvg4eufY5Gh-jS6i2lkb8P_EQBRh',
+				},
+
+			],
+			message: '查询成功'
+		}
+	})
+const buildmnav = Mock.mock(
+	'/api/buildmnav', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					navlink: 1,
+					navlinkid: 1,
+					navspan: "锦囊",
+					navicon: '//fes.qyerstatic.com/FjiWdzANqPB2Nm0wtDTvrr8HDrsg?imageslim',
+
+				},
+
+				{
+					navlink: 1,
+					navlinkid: 1,
+					navspan: "行程助手",
+					navicon: 'https://fes.qyerstatic.com/Fgg0Tsbl5u7zvbNnmVhjDJd-3I-_?imageslim',
+
+				},
+				{
+					navlink: 1,
+					navlinkid: 1,
+					navspan: "游记",
+					navicon: 'https://fes.qyerstatic.com/FoRfPUtUloa5MqNwOv5iIcqQ4rHv?imageslim',
+
+				},
+				{
+					navlink: 1,
+					navlinkid: 1,
+					navspan: "Biu",
+					navicon: 'https://fes.qyerstatic.com/FkMxtgHBTCKsjaLBZ1B7xHGg08QT?imageslim',
+
+				},
+				{
+					navlink: 1,
+					navlinkid: 1,
+					navspan: "问答",
+					navicon: 'https://fes.qyerstatic.com/FsqBlRsF2hnYNrfR9YhCWQqD2j_P?imageslim',
+
+				},
+				{
+					navlink: 1,
+					navlinkid: 1,
+					navspan: "目的地",
+					navicon: 'https://fes.qyerstatic.com/Fgh5NStqSlSjuK7vtLSwOXg4RwNz?imageslim',
+
+				},
+				{
+					navlink: 1,
+					navlinkid: 1,
+					navspan: "酒店",
+					navicon: 'https://fes.qyerstatic.com/Fvv-TfNa_RKqKW0sTcp2BqwgVJNZ?imageslim',
+
+				},
+				{
+					navlink: 1,
+					navlinkid: 1,
+					navspan: "商城",
+					navicon: 'https://fes.qyerstatic.com/FmZQUj73tzL9QixhyTBUtpxbxBqt?imageslim',
+
+				},
+				{
+					navlink: 1,
+					navlinkid: 1,
+					navspan: "约伴",
+					navicon: 'https://fes.qyerstatic.com/Ft-_BNtwDwbLCwNbk8a6JKMx_OME?imageslim',
+
+				},
+				{
+					navlink: 'zhuanlan',
+					navlinkid: 1,
+					navspan: "专栏",
+					navicon: 'https://fes.qyerstatic.com/Fibzv7V9e1eoPD7XT4C0uC-hZIf7?imageslim',
+
+				},
+			],
+			message: '查询成功'
+		}
+	})
+const buildmzhekou = Mock.mock(
+	'/api/buildmzhekou', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					zhekouimg: 'https://pic.qyer.com/lastminute/library/2015/04/20/5534c0783a591.jpg/300x200',
+					zhekouid: 1,
+					zhekoudsc: '澳门直飞长滩岛5天往返含税机票（赠送行李托运）',
+					zhekouprice: '99'
+				},
+				{
+					zhekouimg: 'https://pic.qyer.com/public/lastmin/supproduct/2017/08/01/15015789281685/300x200',
+					zhekouid: 1,
+					zhekoudsc: '[早鸟特惠]北京直飞塞班岛6-7天自由行（免税直飞+赠北部观光环岛游+中文接送机+可升级指定酒店+可预定敞篷野马/大黄蜂自驾用车）',
+					zhekouprice: '4999'
+				},
+				{
+					zhekouimg: 'https://pic.qyer.com/FtJrgVPn62RRmzAFzSccB9w0ht6r/300x200',
+					zhekouid: 1,
+					zhekoudsc: '上海直飞澳大利亚8天6晚跟团游（菲利普岛+黄金海岸+华纳电影世界+天堂农庄+墨尔本大学+悉尼大学+蓝山国家公园+悉尼歌剧院 赠送考拉合影一张）',
+					zhekouprice: '5699'
+				},
+				{
+					zhekouimg: 'https://pic.qyer.com/lastminute/library/2015/04/20/5534c0783a591.jpg/300x200',
+					zhekouid: 1,
+					zhekoudsc: '北京直飞巴厘岛6-7天往返含税机票（东航/鹰航+多班期可选）',
+					zhekouprice: '3999'
+				}
+			],
+			message: '查询成功'
+		}
+	})
+const buildmjingxuan = Mock.mock(
+	'/api/buildmjingxuan', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					jingxuanlinkid: '1',
+					jingxuanlink: 1,
+					jingxuanicon: 'https://fes.qyerstatic.com/FjhPw2CAsHhvxjAuUQvT0EjTfOTF?imageslim',
+					jingxuandsc: '特价机票'
+				},
+				{
+					jingxuanlinkid: '1',
+					jingxuanlink: 1,
+					jingxuanicon: 'https://fes.qyerstatic.com/Fh9eg1ZGwLp8GHrTbKSfjwMgUqz8?imageslim',
+					jingxuandsc: '机场自由行'
+				},
+				{
+					jingxuanlinkid: '1',
+					jingxuanlink: 1,
+					jingxuanicon: 'https://fes.qyerstatic.com/FrnlnoQrQLokB6xx4mGmJhuz9eCf?imageslim',
+					jingxuandsc: '当地玩乐'
+				},
+				{
+					jingxuanlinkid: '1',
+					jingxuanlink: 1,
+					jingxuanicon: '//fes.qyerstatic.com/Fv-WDaw3GtUH1_8rcId7Bny4bwYV?imageslim',
+					jingxuandsc: '门票/票卷'
+				},
+				{
+					jingxuanlinkid: '1',
+					jingxuanlink: 1,
+					jingxuanicon: 'https://fes.qyerstatic.com/FuFMfHPUrw-ms3echc2_SAd1EXoP?imageslim',
+					jingxuandsc: '高铁出行'
+				},
+				{
+					jingxuanlinkid: '1',
+					jingxuanlink: 1,
+					jingxuanicon: 'https://fes.qyerstatic.com/FgxEv9eVMgiTxXvVg4-h5GjE7muR?imageslim',
+					jingxuandsc: 'WIFI电话卡'
+				},
+				{
+					jingxuanlinkid: '1',
+					jingxuanlink: 1,
+					jingxuanicon: 'https://fes.qyerstatic.com/Fu9r87vH7j46Gtafrd8ohKHQEoBm?imageslim',
+					jingxuandsc: '欧铁频道'
+				},
+				{
+					jingxuanlinkid: '1',
+					jingxuanlink: 1,
+					jingxuanicon: 'https://fes.qyerstatic.com/Fnf6W8mmlmHqGnzGvu-NnM_zK-1p?imageslim',
+					jingxuandsc: '保险频道'
+				},
+				{
+					jingxuanlinkid: '1',
+					jingxuanlink: 1,
+					jingxuanicon: 'https://fes.qyerstatic.com/FnI5stm2aLT-icX075jIpjXIjKT4?imageslim',
+					jingxuandsc: '机场包接送'
+				},
+			],
+			message: '查询成功'
+		}
+	})
+const buildmgonglue = Mock.mock(
+	'/api/buildmgonglue', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					mgonglueimg: 'https://p.qyer.com/fugc/aa88cf58a486780b0887ece6f7568211?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/0/w/348|imageslim/format/jpg',
+					mgongluedsc: '慕尼黑啤酒节开幕大赏！两只眼里只有重金属，酒精和黑暗反应的化学博士去德国会干什么',
+					mgonglueavater: 'https://p.qyer.com/fugc/aa88cf58a486780b0887ece6f7568211?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/0/w/348|imageslim/format/jpg',
+					mgongluename: '猪蹄子',
+					mgongluepinglun: '2002',
+					mgonglueyouji: 1
+				},
+				{
+					mgonglueimg: 'https://p.qyer.com/fugc/7cca86d2e6a0e72b5cf8b188275d6407?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/0/w/348|imageslim/format/jpg',
+					mgongluedsc: '上海迪斯尼最强攻略 首刷上海迪斯尼，便幸运的将几款热门项目都玩儿了个遍。 🏰 🏰',
+					mgonglueavater: 'https://p.qyer.com/fugc/7cca86d2e6a0e72b5cf8b188275d6407?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/0/w/348|imageslim/format/jpg',
+					mgongluename: 'Christine玥yue加油',
+					mgongluepinglun: '502'
+				},
+				{
+					mgonglueimg: 'https://pic.qyer.com/album/user/3333/47/QkpWQR4AZkE/index?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/348/h/348|imageslim/format/jpg',
+					mgongluedsc: '退休阿姨镌刻在记忆里的第一次国外自驾游（英伦篇）',
+					mgonglueavater: 'https://pic.qyer.com/album/user/3333/47/QkpWQR4AZkE/index?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/348/h/348|imageslim/format/jpg',
+					mgongluename: '抱衾听雪',
+					mgongluepinglun: '62'
+				},
+				{
+					mgonglueimg: 'https://p.qyer.com/fugc/0df3001cdf34860016fb0e8162d24c34/360w.gif?imageMogr2/auto-orient/thumbnail/!180x120r/gravity/Center/crop/180x270',
+					mgongluedsc: '据说今年会有25000发烟花照亮整个泉南海滩，到时肯定超美的～小伙伴们赶紧制定出',
+					mgonglueavater: 'https://p.qyer.com/fugc/0df3001cdf34860016fb0e8162d24c34/360w.gif?imageMogr2/auto-orient/thumbnail/!180x120r/gravity/Center/crop/180x270',
+					mgongluename: 'apple',
+					mgongluepinglun: '1023'
+				},
+				{
+					mgonglueimg: 'https://p.qyer.com/fugc/ba86852b1c005b5582aa306abab87bfc?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/0/w/348|imageslim/format/jpg',
+					mgongluedsc: '在我们国家倡议一带一路的今天，丝绸之路也逐渐成为一个热门词，乌兹别克斯坦也许就是',
+					mgonglueavater: 'https://p.qyer.com/fugc/ba86852b1c005b5582aa306abab87bfc?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/0/w/348|imageslim/format/jpg',
+					mgongluename: '雪梅',
+					mgongluepinglun: '5896'
+				}
+			],
+			message: '查询成功'
+		}
+	})
+const buildmsearchlistdata = Mock.mock(
+	'/api/buildmsearchlistdata', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [
+
+				{
+					value: '三全鲜食（北新泾店）'
+				},
+				{
+					value: 'Hot honey 首尔炸鸡（仙霞路）'
+				},
+				{
+					value: '新旺角茶餐厅'
+				},
+				{
+					value: '贡茶'
+				}
+
+
+
+			],
+			message: '查询成功'
+		}
+	})
+const buildhotthread = Mock.mock(
+	'/api/buildhotthread', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [
+
+				{
+					hotname: '穷游相遇2019七夕',
+					hotindex: 1,
+					hotthreadimg: [{
+							hotlink: 1,
+							hotlinkid: 1,
+							hotimg: 'https://p.qyer.com/fugc/514a14843a363d142d3ff43f92fc846f?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/216/h/216|imageslim/format/jpg'
+						},
+						{
+							hotlink: 1,
+							hotlinkid: 1,
+							hotimg: 'https://p.qyer.com/fugc/412a4dd13b386431fae251ec8f5996e8?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/216/h/216|imageslim/format/jpg'
+						},
+						{
+							hotlink: 1,
+							hotlinkid: 1,
+							hotimg: 'https://p.qyer.com/fugc/2a85482a1478bee3ead12c4fb1f3d036?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/216/h/216|imageslim/format/jpg'
+						}
+					]
+				},
+				{
+					hotname: '送你浪漫全世界',
+					hotindex: 1,
+					hotthreadimg: [{
+							hotlink: 1,
+							hotlinkid: 1,
+							hotimg: 'https://p.qyer.com/fugc/1a47ed818174a9a4219c1083d29a9a45?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/216/h/216|imageslim/format/jpg'
+						},
+						{
+							hotlink: 1,
+							hotlinkid: 1,
+							hotimg: 'https://p.qyer.com/fugc/fa029a1b2b81b26f072f1154d1a1ddf1?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/216/h/216|imageslim/format/jpg'
+						},
+						{
+							hotlink: 1,
+							hotlinkid: 1,
+							hotimg: 'https://p.qyer.com/fugc/3b806e0b54554b1bb90fe975afb965d8?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/216/h/216|imageslim/format/jpg'
+						}
+					]
+				},
+				{
+					hotname: '情侣拍照指南',
+					hotindex: 0,
+					hotthreadimg: [{
+							hotlink: 1,
+							hotlinkid: 1,
+							hotimg: 'https://p.qyer.com/fugc/e59179159c518b201cf0cc07b8481957?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/216/h/216|imageslim/format/jpg'
+						},
+						{
+							hotlink: 1,
+							hotlinkid: 1,
+							hotimg: 'https://p.qyer.com/fugc/59d4185a9281edf65189b0364699a90a?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/216/h/216|imageslim/format/jpg'
+						},
+						{
+							hotlink: 1,
+							hotlinkid: 1,
+							hotimg: 'https://p.qyer.com/fugc/006a17044cac2de1675d767f12f92b1f?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/216/h/216|imageslim/format/jpg'
+						}
+					]
+				}
+
+
+
+			],
+			message: '查询成功'
+		}
+	})
+const buildsearchhistory = Mock.mock(
+	'/api/buildsearchhistory', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [
+
+				{
+					historytitle: '我爱你',
+					historylink: 1,
+					historylinkid: 1,
+				}
+
+
+
+			],
+			message: '查询成功'
+		}
+	})
+const buildmzllist = Mock.mock(
+	'/api/buildmzllist', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [
+
+				{
+					mzllistid: '1',
+					mtjimg: 'https://pic.qyer.com/public/zhuanlan/zhuanlan/2018/10/22/15402024953790?imageMogr2/auto-orient/thumbnail/!200x200r/gravity/Center/crop/200x200/format/jpg|imageslim',
+					mtjtitle: '野有蔓草',
+					mtjdsc: '顺着山走，沿着水走，跟着国道省道县道铁道古道一站一站走，带着听过的传奇读过的故事开过的脑洞，用脚去问候地图上那些好听的名字。'
+				},
+				{
+					mzllistid: '1',
+					mtjimg: 'http://s2.lvjs.com.cn/pics//uploads/pc/place2/2019-08-05/396ae072-b39e-4867-b8d2-068e634e2f8f_300_200.jpg',
+					mtjtitle: '斯里兰卡小妞',
+					mtjdsc: '嗨，我是斯里兰卡小妞，“最懂兰卡旅行的人”。出版6部著作，超过10家网站签约作者。欢迎你和我一起成为岛民'
+				},
+				{
+					mzllistid: '1',
+					mtjimg: 'http://s3.lvjs.com.cn/pics//uploads/pc/place2/2019-07-18/039326fa-d673-4f8d-9fea-c2ea9bd0008c_300_200.jpg',
+					mtjtitle: '小城大爱',
+					mtjdsc: '世界上每个角落头，都大有看头。'
+				},
+				{
+					mzllistid: '1',
+					mtjimg: 'http://s1.lvjs.com.cn/pics//uploads/pc/place2/2019-07-30/1ff94d25-6296-4b2e-9447-29aa4b6d5b2a_300_200.jpg',
+					mtjtitle: '大橘小狸环游记',
+					mtjdsc: '大橘与小狸是一对儿热爱旅行的情侣CP，一个是永远充满好奇心的摄影控，一个是间歇性搞怪的插画控。相识12年，梦想着一起环游世界，想把我们的故事与经历分享给大家。	'
+				}
+
+
+
+
+			],
+			message: '查询成功'
+		}
+	})
+
 export default {
+	buildmzllist,
 	buildsearchhistory,
 	buildhotthread,
-    buildmsearchlistdata,
+	buildmsearchlistdata,
 	buildmgonglue,
 	buildmjingxuan,
 	buildmzhekou,

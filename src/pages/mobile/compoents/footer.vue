@@ -1,12 +1,12 @@
 <template>
-	<footer class="m-index-footer">
+	<div class="m-index-footer">
 		<p class="links">
 			<router-link to="">手机版</router-link>
 			<router-link to="">电脑版</router-link>
 			<router-link to="">APP</router-link>
 			<router-link to="">意见反馈</router-link></p>
 			<p class="copy-right">2004-2019 ©北京穷游天下科技发展有限公司™<br>京ICP备12003524号&nbsp;|&nbsp;电话 010 64554669</p>
-			</footer>
+			</div>
 </template>
 
 <script>
@@ -33,8 +33,8 @@
 }
 .m-index-footer .links a{
 	display: inline-block;
-    padding: 12px;
-	font-size: 18px;
+    padding: 0.2rem;
+	font-size: 0.45rem;
 
     color: #9ea3ab;
 
