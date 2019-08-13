@@ -19,11 +19,18 @@ export default new Router({
 		// 		require(['../pages/mobile/Index.vue'], resolve)
 		// 	}
 		// },
+		// {
+		// 	path: '/',
+		// 	name: 'zhuanlan',
+		// 	component(resolve) {
+		// 		require(['../pages/mobile/Zhuanlan/Zhuanlan.vue'], resolve)
+		// 	}
+		// },
 		{
 			path: '/',
-			name: 'zhuanlan',
+			name: 'Biuban',
 			component(resolve) {
-				require(['../pages/mobile/zhuanlan/zhuanlan.vue'], resolve)
+				require(['../pages/mobile/Biuban/Biuban.vue'], resolve)
 			}
 		},
 	],

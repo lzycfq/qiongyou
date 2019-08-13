@@ -26,6 +26,7 @@ const buildwebswiper = Mock.mock(
 			],
 			message: '查询成功'
 		}
+		
 	})
 const buildpopoverdiv = Mock.mock(
 	'/api/buildpopoverdiv', 'get', (req, res) => {
@@ -11410,8 +11411,114 @@ const buildmzllist = Mock.mock(
 			message: '查询成功'
 		}
 	})
-
+const buildtheme = Mock.mock(
+	'/api/buildtheme', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+				themed: '全部'
+			},
+			{
+				themed: '一起去旅行'
+			},
+			{
+				themed: '陪我看电影'
+			},
+			{
+				themed: '走！去探店'
+			},
+			{
+				themed: '过节需要仪式感'
+			},
+		
+			{
+				themed: '约个饭吧'
+			},
+			{
+				themed: '看漫展'
+			}
+			],
+			message: '查询成功'
+		}
+		
+	})
+	const buildtimedata = Mock.mock(
+		'/api/buildtimedata', 'get', (req, res) => {
+			return {
+				code: 200,
+				data: [{
+						timed: '全部'
+					},
+					{
+						timed: '本周末'
+					},
+					{
+						timed: '一周内'
+					},
+					{
+						timed: '一个月内'
+					},
+				],
+				message: '查询成功'
+			}
+			
+		})
+		const buildbiubanlist = Mock.mock(
+			'/api/buildbiubanlist', 'get', (req, res) => {
+				return {
+					code: 200,
+					data: [
+						{
+							biubanlistbg:"https://pic.qyer.com/public/mobileapp/config/2019/04/03/15542888307713?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/348/h/464|imageslim/format/jpg",
+							biubanlistavter:"https://pic.qyer.com/avatar/011/82/00/65/200?v=1563153183",
+							biubanlistplace:'冰岛',
+							biubanlisttime:'9月12日-9月25日',
+							biubanlistdsc:'2020年春节的去冰岛旅行，现在已有两个女生，需要会开车的老司机1到2个，冰岛的'
+						},
+						{
+							biubanlistbg:"https://pic.qyer.com/public/mobileapp/config/2019/04/03/15542888307713?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/348/h/464|imageslim/format/jpg",
+							biubanlistavter:"https://pic.qyer.com/avatar/011/82/00/65/200?v=1563153183",
+							biubanlistplace:'冰岛',
+							biubanlisttime:'9月12日-9月25日',
+							biubanlistdsc:'2020年春节的去冰岛旅行，现在已有两个女生，需要会开车的老司机1到2个，冰岛的'
+						},
+						{
+							biubanlistbg:"https://pic.qyer.com/public/mobileapp/config/2019/04/03/15542888307713?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/348/h/464|imageslim/format/jpg",
+							biubanlistavter:"https://pic.qyer.com/avatar/011/82/00/65/200?v=1563153183",
+							biubanlistplace:'冰岛',
+							biubanlisttime:'9月12日-9月25日',
+							biubanlistdsc:'2020年春节的去冰岛旅行，现在已有两个女生，需要会开车的老司机1到2个，冰岛的'
+						},
+						{
+							biubanlistbg:"https://pic.qyer.com/public/mobileapp/config/2019/04/03/15542888307713?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/348/h/464|imageslim/format/jpg",
+							biubanlistavter:"https://pic.qyer.com/avatar/011/82/00/65/200?v=1563153183",
+							biubanlistplace:'冰岛',
+							biubanlisttime:'9月12日-9月25日',
+							biubanlistdsc:'2020年春节的去冰岛旅行，现在已有两个女生，需要会开车的老司机1到2个，冰岛的'
+						},
+						{
+							biubanlistbg:"https://pic.qyer.com/public/mobileapp/config/2019/04/03/15542888307713?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/348/h/464|imageslim/format/jpg",
+							biubanlistavter:"https://pic.qyer.com/avatar/011/82/00/65/200?v=1563153183",
+							biubanlistplace:'冰岛',
+							biubanlisttime:'9月12日-9月25日',
+							biubanlistdsc:'2020年春节的去冰岛旅行，现在已有两个女生，需要会开车的老司机1到2个，冰岛的'
+						},
+						{
+							biubanlistbg:"https://pic.qyer.com/public/mobileapp/config/2019/04/03/15542888307713?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/348/h/464|imageslim/format/jpg",
+							biubanlistavter:"https://pic.qyer.com/avatar/011/82/00/65/200?v=1563153183",
+							biubanlistplace:'冰岛',
+							biubanlisttime:'9月12日-9月25日',
+							biubanlistdsc:'2020年春节的去冰岛旅行，现在已有两个女生，需要会开车的老司机1到2个，冰岛的'
+						}
+					],
+					message: '查询成功'
+				}
+				
+			})
 export default {
+	buildbiubanlist,
+	buildtimedata,
+	buildtheme,
 	buildmzllist,
 	buildsearchhistory,
 	buildhotthread,
