@@ -11081,7 +11081,7 @@ const buildmnav = Mock.mock(
 
 				},
 				{
-					navlink: 1,
+					navlink: "Place",
 					navlinkid: 1,
 					navspan: "目的地",
 					navicon: 'https://fes.qyerstatic.com/Fgh5NStqSlSjuK7vtLSwOXg4RwNz?imageslim',

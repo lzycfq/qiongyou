@@ -26,11 +26,18 @@ export default new Router({
 		// 		require(['../pages/mobile/Zhuanlan/Zhuanlan.vue'], resolve)
 		// 	}
 		// },
+		// {
+		// 	path: '/',
+		// 	name: 'Biuban',
+		// 	component(resolve) {
+		// 		require(['../pages/mobile/Biuban/Biuban.vue'], resolve)
+		// 	}
+		// },
 		{
 			path: '/',
-			name: 'Biuban',
+			name: 'Place',
 			component(resolve) {
-				require(['../pages/mobile/Biuban/Biuban.vue'], resolve)
+				require(['../pages/mobile/Place/Place.vue'], resolve)
 			}
 		},
 	],
