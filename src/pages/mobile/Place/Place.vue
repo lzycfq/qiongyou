@@ -13,8 +13,16 @@
 			</div>
 		</div>
 		<div class="compo-hot-month">
-		 <div class="m-title">
-			 <span class="l-tit">当季热门</span><router-link to="" class="s-tit"><i class="el-icon-warning"></i>&nbsp;还没有护照?</router-link></div>	
+			<div class="m-title"><span class="l-tit">当季热门</span>
+				<router-link to="" class="s-tit"><i class="el-icon-warning"></i>&nbsp;还没有护照?</router-link>
+			</div>
+			<div style="clear: both;"></div>
+			<div style="overflow:hidden">
+				<div class="compo-hot-month-list">
+					<span class="compo-list" v-on:load="scrollleft" v-bind:class="{active:isactive}" style="width:65px;" v-for="(month,index) in monthdata">{{month}}</span>
+				</div>
+			</div>
+
 		</div>
 	</el-col>
 </template>
@@ -40,21 +48,32 @@
 						}
 					],
 				},
-
+				
+				monthdata: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月']
 			}
+		},
+		computed: {
+			scrollleft(){
+				var date=new Date;
+				var m=date.getMonth()+1;
+				console.log(m)
+
+				// this.isactive[m]=true
+			},
+			
 		},
 		methods: {
 			composearch(formName) {
 				this.$refs[formName].validate((valid) => {
-                  this.axios.get('', {
-                  	params: {
-                  		'compovalue': this.ruleForm.compovalue,
-                  	},
-                  }).then(res => {
-                  	//搜索成功 
-                  }).catch(function(error) {
-                  	console.log(error);
-                  });
+					this.axios.get('', {
+						params: {
+							'compovalue': this.ruleForm.compovalue,
+						},
+					}).then(res => {
+						//搜索成功 
+					}).catch(function(error) {
+						console.log(error);
+					});
 				});
 			},
 		},
@@ -72,7 +91,7 @@
 		position: relative;
 
 		.logo {
-			
+
 			float: left;
 
 			img {
@@ -92,7 +111,8 @@
 				border: none;
 				background-color: rgba(0, 0, 0, 0.05);
 			}
-			/deep/ .el-form-item{
+
+			/deep/ .el-form-item {
 				margin-bottom: 0;
 			}
 		}
@@ -104,33 +124,69 @@
 			top: 0.25rem;
 		}
 	}
-    .compo-hot-month{
+
+	.compo-hot-month {
 		width: 100%;
 		height: auto;
 		overflow: hidden;
 		background-color: rgba(0, 0, 0, 0.05);
 
 		.m-title {
-	padding: 0 0.40rem;
-    font-size: 0.2rem;
-    color: #000;
-	margin-top: 0.7rem;
-    position: relative;
- 
-	 .l-tit {
-    font-weight: 700;
-	float: left;
-	font-size: 0.5rem;
+			padding: 0 0.40rem;
+			font-size: 0.2rem;
+			color: #000;
+			margin-top: 0.7rem;
+			position: relative;
+			overflow: hidden;
 
-}
- .s-tit {
-    font-size: 0.12rem;
-    color: #11bf79;
-    float: right;
-	position: relative;
-	top: 0.2rem;
-    text-decoration: none;
-}
-}
+			.l-tit {
+				font-weight: 700;
+				float: left;
+				font-size: 0.6rem;
+
+			}
+
+			.s-tit {
+				font-size: 0.12rem;
+				color: #11bf79;
+				float: right;
+				position: relative;
+				top: 0.2rem;
+				text-decoration: none;
+			}
+		}
+
+		.compo-hot-month-list {
+			margin-top: 0.5rem;
+			overflow-x: scroll;
+			overflow-y: hidden;
+			padding: 0 15px 30px;
+			white-space: nowrap;
+
+			.compo-list {
+				display: inline-block;
+				background-color: #fff;
+				border: 1px solid #dedede;
+				font-size: 13px;
+				color: #000;
+				height: 32px;
+				line-height: 32px;
+				text-align: center;
+				border-radius: 4px;
+				margin-right: 12px;
+				box-sizing: border-box;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				padding: 0 5px;
+			}
+
+			.compo-list.active {
+				background-color: #11bf79;
+				border-color: #11bf79;
+				color: #fff;
+			}
+
+		}
 	}
 </style>
