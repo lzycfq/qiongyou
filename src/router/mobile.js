@@ -33,11 +33,18 @@ export default new Router({
 		// 		require(['../pages/mobile/Biuban/Biuban.vue'], resolve)
 		// 	}
 		// },
+		// {
+		// 	path: '/',
+		// 	name: 'Place',
+		// 	component(resolve) {
+		// 		require(['../pages/mobile/Place/Place.vue'], resolve)
+		// 	}
+		// },
 		{
 			path: '/',
-			name: 'Place',
+			name: 'Plan',
 			component(resolve) {
-				require(['../pages/mobile/Place/Place.vue'], resolve)
+				require(['../pages/mobile/Plan/Plan.vue'], resolve)
 			}
 		},
 	],

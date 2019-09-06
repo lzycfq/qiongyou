@@ -10,11 +10,11 @@ module.exports = {
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',
         proxyTable: {
-            '/admin': {
-                target: 'http://app.zhonyou.cn/nsgoods',//设置你调用的接口域名和端口号 别忘了加http
+            '/api': {
+                target: '',
                 changeOrigin: true,
                 pathRewrite: {
-                    '^/admin': ''
+                    '^/api': ''
                 }
             }
         },

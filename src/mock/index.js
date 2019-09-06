@@ -26,7 +26,7 @@ const buildwebswiper = Mock.mock(
 			],
 			message: '查询成功'
 		}
-		
+
 	})
 const buildpopoverdiv = Mock.mock(
 	'/api/buildpopoverdiv', 'get', (req, res) => {
@@ -11416,106 +11416,327 @@ const buildtheme = Mock.mock(
 		return {
 			code: 200,
 			data: [{
-				themed: '全部'
-			},
-			{
-				themed: '一起去旅行'
-			},
-			{
-				themed: '陪我看电影'
-			},
-			{
-				themed: '走！去探店'
-			},
-			{
-				themed: '过节需要仪式感'
-			},
-		
-			{
-				themed: '约个饭吧'
-			},
-			{
-				themed: '看漫展'
-			}
+					themed: '全部'
+				},
+				{
+					themed: '一起去旅行'
+				},
+				{
+					themed: '陪我看电影'
+				},
+				{
+					themed: '走！去探店'
+				},
+				{
+					themed: '过节需要仪式感'
+				},
+
+				{
+					themed: '约个饭吧'
+				},
+				{
+					themed: '看漫展'
+				}
 			],
 			message: '查询成功'
 		}
-		
+
 	})
-	const buildtimedata = Mock.mock(
-		'/api/buildtimedata', 'get', (req, res) => {
+const buildtimedata = Mock.mock(
+	'/api/buildtimedata', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					timed: '全部'
+				},
+				{
+					timed: '本周末'
+				},
+				{
+					timed: '一周内'
+				},
+				{
+					timed: '一个月内'
+				},
+			],
+			message: '查询成功'
+		}
+
+	})
+const buildbiubanlist = Mock.mock(
+	'/api/buildbiubanlist', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					biubanlistbg: "https://pic.qyer.com/public/mobileapp/config/2019/04/03/15542888307713?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/348/h/464|imageslim/format/jpg",
+					biubanlistavter: "https://pic.qyer.com/avatar/011/82/00/65/200?v=1563153183",
+					biubanlistplace: '冰岛',
+					biubanlisttime: '9月12日-9月25日',
+					biubanlistdsc: '2020年春节的去冰岛旅行，现在已有两个女生，需要会开车的老司机1到2个，冰岛的'
+				},
+				{
+					biubanlistbg: "https://pic.qyer.com/public/mobileapp/config/2019/04/03/15542888307713?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/348/h/464|imageslim/format/jpg",
+					biubanlistavter: "https://pic.qyer.com/avatar/011/82/00/65/200?v=1563153183",
+					biubanlistplace: '冰岛',
+					biubanlisttime: '9月12日-9月25日',
+					biubanlistdsc: '2020年春节的去冰岛旅行，现在已有两个女生，需要会开车的老司机1到2个，冰岛的'
+				},
+				{
+					biubanlistbg: "https://pic.qyer.com/public/mobileapp/config/2019/04/03/15542888307713?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/348/h/464|imageslim/format/jpg",
+					biubanlistavter: "https://pic.qyer.com/avatar/011/82/00/65/200?v=1563153183",
+					biubanlistplace: '冰岛',
+					biubanlisttime: '9月12日-9月25日',
+					biubanlistdsc: '2020年春节的去冰岛旅行，现在已有两个女生，需要会开车的老司机1到2个，冰岛的'
+				},
+				{
+					biubanlistbg: "https://pic.qyer.com/public/mobileapp/config/2019/04/03/15542888307713?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/348/h/464|imageslim/format/jpg",
+					biubanlistavter: "https://pic.qyer.com/avatar/011/82/00/65/200?v=1563153183",
+					biubanlistplace: '冰岛',
+					biubanlisttime: '9月12日-9月25日',
+					biubanlistdsc: '2020年春节的去冰岛旅行，现在已有两个女生，需要会开车的老司机1到2个，冰岛的'
+				},
+				{
+					biubanlistbg: "https://pic.qyer.com/public/mobileapp/config/2019/04/03/15542888307713?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/348/h/464|imageslim/format/jpg",
+					biubanlistavter: "https://pic.qyer.com/avatar/011/82/00/65/200?v=1563153183",
+					biubanlistplace: '冰岛',
+					biubanlisttime: '9月12日-9月25日',
+					biubanlistdsc: '2020年春节的去冰岛旅行，现在已有两个女生，需要会开车的老司机1到2个，冰岛的'
+				},
+				{
+					biubanlistbg: "https://pic.qyer.com/public/mobileapp/config/2019/04/03/15542888307713?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/348/h/464|imageslim/format/jpg",
+					biubanlistavter: "https://pic.qyer.com/avatar/011/82/00/65/200?v=1563153183",
+					biubanlistplace: '冰岛',
+					biubanlisttime: '9月12日-9月25日',
+					biubanlistdsc: '2020年春节的去冰岛旅行，现在已有两个女生，需要会开车的老司机1到2个，冰岛的'
+				}
+			],
+			message: '查询成功'
+		}
+
+	})
+const buildhotlist = Mock.mock(
+	'/api/buildhotlist', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					hotlistcontent: [{
+							hotimg: 'http://s3.lvjs.com.cn//uploads/pc/place2/2019-01-09/3f838351-231b-4339-be0e-3e1c6efb11c7_300_200.jpg',
+							hotdongwu: '1非洲·马赛马拉'
+						},
+						{
+							hotimg: 'http://s3.lvjs.com.cn//uploads/pc/place2/2018-04-26/e31272b9-6533-414a-9fca-1141229f606e_300_200.jpg',
+							hotdongwu: '俄罗斯.贝加尔湖'
+						},
+						{
+							hotimg: 'http://s2.lvjs.com.cn//uploads/pc/place2/2016-07-20/26091e53-ccb6-4483-8bf9-2fd30487db76_300_200.jpg',
+							hotdongwu: '韩国.斐济'
+						}
+					]
+
+				},
+				{
+					hotlistcontent: [{
+						hotimg: 'https://pic.qyer.com/public/place/themeinfo/2017/09/25/15063183149792/300x300',
+						hotdongwu: '2非洲·马赛马拉'
+					}]
+
+				},
+				{
+					hotlistcontent: [{
+						hotimg: 'https://pic.qyer.com/public/place/themeinfo/2017/09/25/15063182097782/300x300',
+						hotdongwu: '3非洲·马赛马拉'
+					}]
+
+				},
+				{
+					hotlistcontent: [{
+						hotimg: 'https://pic.qyer.com/public/place/themeinfo/2017/09/25/15063182097782/300x300',
+						hotdongwu: '4非洲·马赛马拉'
+					}]
+
+				},
+				{
+					hotlistcontent: [{
+						hotimg: 'https://pic.qyer.com/public/place/themeinfo/2017/09/25/15063182097782/300x300',
+						hotdongwu: '5非洲·马赛马拉'
+					}]
+
+				},
+				{
+					hotlistcontent: [{
+						hotimg: 'https://pic.qyer.com/public/place/themeinfo/2017/09/25/15063182097782/300x300',
+						hotdongwu: '6非洲·马赛马拉'
+					}]
+
+				},
+				{
+					hotlistcontent: [{
+						hotimg: 'https://pic.qyer.com/public/place/themeinfo/2017/09/25/15063182097782/300x300',
+						hotdongwu: '7非洲·马赛马拉'
+					}]
+
+				},
+				{
+					hotlistcontent: [{
+						hotimg: 'https://pic.qyer.com/public/place/themeinfo/2017/09/25/15063182097782/300x300',
+						hotdongwu: '8非洲·马赛马拉'
+					}]
+
+				},
+				{
+					hotlistcontent: [{
+							hotimg: 'https://pic.qyer.com/public/place/themeinfo/2017/09/25/15063182097782/300x300',
+							hotdongwu: '9非洲·马赛马拉'
+						}
+
+					]
+
+				},
+				{
+					hotlistcontent: [{
+						hotimg: 'https://pic.qyer.com/public/place/themeinfo/2017/09/25/15063182097782/300x300',
+						hotdongwu: '10非洲·马赛马拉'
+					}]
+
+				},
+				{
+					hotlistcontent: [{
+						hotimg: 'https://pic.qyer.com/public/place/themeinfo/2017/09/25/15063182097782/300x300',
+						hotdongwu: '11非洲·马赛马拉'
+					}]
+
+				},
+				{
+					hotlistcontent: [{
+						hotimg: 'https://pic.qyer.com/public/place/themeinfo/2017/09/25/15063182097782/300x300',
+						hotdongwu: '12非洲·马赛马拉'
+					}]
+
+				}
+			],
+			message: '查询成功'
+		}
+
+	})
+const buildvisadata = Mock.mock(
+	'/api/buildvisadata', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					visaimg: 'https://pic.qyer.com/album/145/eb/952664/index/300x300',
+					visacn: '济州岛',
+					visaen: 'Jejudo',
+					visalinkid:1
+				},
+				{
+					visaimg: 'http://s2.lvjs.com.cn/pics//uploads/pc/place2/2017-09-21/cc19f1ef-1513-4a5d-afd5-a386f539159f_300_200.jpg',
+					visacn: '印度尼西亚',
+					visaen: 'Indonesia',
+					visalinkid:1
+
+				},
+				{
+					visaimg: 'http://s3.lvjs.com.cn/pics//uploads/pc/place2/2019-03-05/47357176-69ba-4e16-8517-1b52e4c5ace4_300_200.jpg',
+					visacn: '泰国',
+					visaen: 'Tailand',
+					visalinkid:1
+
+				}
+			],
+			message: '查询成功'
+		}
+
+	})
+const buildthemerec = Mock.mock(
+	'/api/buildthemerec', 'get', (req, res) => {
+		return {
+			code: 200,
+			data: [{
+					themename: '俯瞰城市'
+				},
+				{
+					themename: '怀旧时光'
+				},
+				{
+					themename: '魅力夜色'
+				},
+				{
+					themename: '神秘遗址'
+				},
+				{
+					themename: '最爱小镇'
+				},
+
+
+			],
+			message: '查询成功'
+		}
+
+	})
+	const buildthemelist = Mock.mock(
+		'/api/buildthemelist', 'get', (req, res) => {
 			return {
 				code: 200,
-				data: [{
-						timed: '全部'
+				data: [
+					{
+						themelistcontent:[
+							{
+								themelinkid:1,
+								themeimg:'http://s1.lvjs.com.cn//uploads/pc/place2/2016-11-29/0d4084aa-5d67-4726-918a-5df8361893ef_300_200.jpg',
+								themename:'碎米大厦'
+							},
+							{
+								themelinkid:2,
+								themeimg:'http://s1.lvjs.com.cn//uploads/pc/place2/2017-12-04/4acbc8c5-d93f-4b86-9c4c-f827b4590c42_300_200.jpg',
+								themename:'太平山'
+							},
+							{
+								themelinkid:3,
+								themeimg:'http://s2.lvjs.com.cn//uploads/pc/place2/2016-07-20/26091e53-ccb6-4483-8bf9-2fd30487db76_300_200.jpg',
+								themename:'六本木新城'
+							},
+							{
+								themelinkid:4,
+								themeimg:'http://s1.lvjs.com.cn//uploads/pc/place2/2018-05-02/ca4ab0f8-5ecb-40ff-86fe-0404d31b85ac_300_200.jpg',
+								themename:'米开朗琪罗广场'
+							},
+							{
+								themelinkid:5,
+								themeimg:'http://s2.lvjs.com.cn//uploads/pc/place2/2015-12-10/d940e490-be9b-4f04-8230-3b1728e4fe98_300_200.jpg',
+								themename:'象山'
+							},
+							{
+								themelinkid:6,
+								themeimg:'http://s3.lvjs.com.cn//uploads/pc/place2/2017-01-18/25a31533-1774-4d8b-994b-75b9bea0defd_300_200.jpg',
+								themename:'孟盼纳斯大厦'
+							},
+							
+						]
 					},
 					{
-						timed: '本周末'
+						themename: '怀旧时光'
 					},
 					{
-						timed: '一周内'
+						themename: '魅力夜色'
 					},
 					{
-						timed: '一个月内'
+						themename: '神秘遗址'
 					},
+					{
+						themename: '最爱小镇'
+					},
+	
+	
 				],
 				message: '查询成功'
 			}
-			
+	
 		})
-		const buildbiubanlist = Mock.mock(
-			'/api/buildbiubanlist', 'get', (req, res) => {
-				return {
-					code: 200,
-					data: [
-						{
-							biubanlistbg:"https://pic.qyer.com/public/mobileapp/config/2019/04/03/15542888307713?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/348/h/464|imageslim/format/jpg",
-							biubanlistavter:"https://pic.qyer.com/avatar/011/82/00/65/200?v=1563153183",
-							biubanlistplace:'冰岛',
-							biubanlisttime:'9月12日-9月25日',
-							biubanlistdsc:'2020年春节的去冰岛旅行，现在已有两个女生，需要会开车的老司机1到2个，冰岛的'
-						},
-						{
-							biubanlistbg:"https://pic.qyer.com/public/mobileapp/config/2019/04/03/15542888307713?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/348/h/464|imageslim/format/jpg",
-							biubanlistavter:"https://pic.qyer.com/avatar/011/82/00/65/200?v=1563153183",
-							biubanlistplace:'冰岛',
-							biubanlisttime:'9月12日-9月25日',
-							biubanlistdsc:'2020年春节的去冰岛旅行，现在已有两个女生，需要会开车的老司机1到2个，冰岛的'
-						},
-						{
-							biubanlistbg:"https://pic.qyer.com/public/mobileapp/config/2019/04/03/15542888307713?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/348/h/464|imageslim/format/jpg",
-							biubanlistavter:"https://pic.qyer.com/avatar/011/82/00/65/200?v=1563153183",
-							biubanlistplace:'冰岛',
-							biubanlisttime:'9月12日-9月25日',
-							biubanlistdsc:'2020年春节的去冰岛旅行，现在已有两个女生，需要会开车的老司机1到2个，冰岛的'
-						},
-						{
-							biubanlistbg:"https://pic.qyer.com/public/mobileapp/config/2019/04/03/15542888307713?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/348/h/464|imageslim/format/jpg",
-							biubanlistavter:"https://pic.qyer.com/avatar/011/82/00/65/200?v=1563153183",
-							biubanlistplace:'冰岛',
-							biubanlisttime:'9月12日-9月25日',
-							biubanlistdsc:'2020年春节的去冰岛旅行，现在已有两个女生，需要会开车的老司机1到2个，冰岛的'
-						},
-						{
-							biubanlistbg:"https://pic.qyer.com/public/mobileapp/config/2019/04/03/15542888307713?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/348/h/464|imageslim/format/jpg",
-							biubanlistavter:"https://pic.qyer.com/avatar/011/82/00/65/200?v=1563153183",
-							biubanlistplace:'冰岛',
-							biubanlisttime:'9月12日-9月25日',
-							biubanlistdsc:'2020年春节的去冰岛旅行，现在已有两个女生，需要会开车的老司机1到2个，冰岛的'
-						},
-						{
-							biubanlistbg:"https://pic.qyer.com/public/mobileapp/config/2019/04/03/15542888307713?imageMogr2/auto-orient/thumbnail/800x/quality/90|imageView2/1/w/348/h/464|imageslim/format/jpg",
-							biubanlistavter:"https://pic.qyer.com/avatar/011/82/00/65/200?v=1563153183",
-							biubanlistplace:'冰岛',
-							biubanlisttime:'9月12日-9月25日',
-							biubanlistdsc:'2020年春节的去冰岛旅行，现在已有两个女生，需要会开车的老司机1到2个，冰岛的'
-						}
-					],
-					message: '查询成功'
-				}
-				
-			})
 export default {
+	buildthemelist,
+	buildthemerec,
+	buildvisadata,
+	buildhotlist,
 	buildbiubanlist,
 	buildtimedata,
 	buildtheme,
