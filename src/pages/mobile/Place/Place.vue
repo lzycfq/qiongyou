@@ -25,7 +25,7 @@
 				</div>
 				<div class="compo-tab" v-for="(value,index) in hotlist" :class="index === base_index?'active':''" :key="index">
 					<div class="wrap">
-						<router-link to="" class="item" v-for="(value,index) in value.hotlistcontent">
+						<router-link to="" class="item" v-for="(value,index) in value.hotlistcontent"   :key='index'>
 							<img :src="value.hotimg" />
 							<span>{{value.hotdongwu}}</span>
 						</router-link>
@@ -43,7 +43,7 @@
 			</div>
 			<div class="compo-slide-content assist slide-content" style="height:140px;">
 				<div class="wrap">
-					<router-link v-for="(item,index) in visadata" :to="{path:'/',parame:{visalinkid:item.visalinkid}}" class="item">
+					<router-link v-for="(item,index) in visadata" :to="{path:'/',parame:{visalinkid:item.visalinkid}}" class="item"  :key='index'>
 						<img :src="item.visaimg">
 						<span class="cn-name">{{item.visacn}}</span>
 						<span class="en-name">{{item.visaen}}</span>
@@ -60,20 +60,19 @@
 				 v-for="(item,index) in themerec">{{item.themename}}</span>
 			</div>
 			<div class="themelist" :class="index ===Theme_index?'active':''" v-for="(item,index) in themelist">
-				<router-link :to="{path:'/',parame:{themelinkid:item.themelinkid}}" class='themeitem' v-for="(item,index) in item.themelistcontent">
+				<router-link :to="{path:'/',parame:{themelinkid:item.themelinkid}}" class='themeitem' v-for="(item,index) in item.themelistcontent"  :key='index'>
 					<img :src="item.themeimg" />
 					<span>{{item.themename}}</span>
 				</router-link>
 			</div>
 		</div>
-	
 	</el-col>
 </template>
 
 <script>
 	import Swiper from 'swiper';
 	import 'swiper/dist/css/swiper.css'
-	
+
 	export default {
 		data() {
 			return {
@@ -111,7 +110,7 @@
 			this.buildthemerec();
 			this.buildthemelist();
 		},
-		
+
 		computed: {
 			scrollleft() {
 				var date = new Date;
@@ -203,7 +202,7 @@
 							'compovalue': this.ruleForm.compovalue,
 						},
 					}).then(res => {
-						//搜索成功 
+						//搜索成功
 					}).catch(function(error) {
 						console.log(error);
 					});
@@ -214,10 +213,10 @@
 			},
 			changeThemeIndex(index) {
 				this.Theme_index = index;
-				
+
 			},
 		},
-		
+
 	}
 </script>
 
@@ -319,9 +318,9 @@
 		bottom:0;
 		z-index:5;
 	}
-	
-	
-	
+
+
+
 	.compo-search-bar {
 		padding: 0.06rem 0.40rem;
 		background-color: #fff;

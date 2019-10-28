@@ -16,7 +16,7 @@
 					{{theme | themelength}}<i class="el-icon-arrow-down el-icon-caret-bottom"></i>
 				</span>
 				<el-dropdown-menu slot="dropdown">
-					<el-dropdown-item v-for="(item,index) in themedata" id="theme" :class="index === base_index?'active':''"
+					<el-dropdown-item v-for="(item,index) in themedata" id="theme" :key="index" :class="index === base_index?'active':''"
 					 @click.native="changeThemeIndex(index)">{{item.themed}}</el-dropdown-item>
 				</el-dropdown-menu>
 			</el-dropdown>
@@ -25,7 +25,7 @@
 					{{time | timelength}}<i class="el-icon-arrow-down el-icon-caret-bottom"></i>
 				</span>
 				<el-dropdown-menu slot="dropdown">
-					<el-dropdown-item v-for="(item,index) in timedata" :class="index === base_indextime?'active':''" @click.native="changeTimeIndex(index)">{{item.timed}}</el-dropdown-item>
+					<el-dropdown-item v-for="(item,index) in timedata" :key='index' :class="index === base_indextime?'active':''" @click.native="changeTimeIndex(index)">{{item.timed}}</el-dropdown-item>
 				</el-dropdown-menu>
 			</el-dropdown>
 		</div>
@@ -112,7 +112,7 @@
 			},
 			buildbiubanlist(){
 				this.axios.get('/api/buildbiubanlist'
-					
+
 				).then(res => {
 					this.biubanlist = res.data.data
 				})
@@ -124,7 +124,7 @@
 				this.isActiveTheme = true //控制theme的字体颜色
 				//this.buildtheme()
 			},
-			
+
 			changeTimeIndex(index) {
 
 				this.base_indextime = index
@@ -143,7 +143,7 @@
 </script>
 
 <style lang="scss">
-	
+
 	.Biuban_header {
 		height: 0.7rem;
 		padding: 0.4rem 0.35rem;
@@ -238,7 +238,7 @@
 		width: 95%;
 		margin: 15px auto;
 		height: auto;
-		
+
 
 		.cell-item {
 			position: relative;

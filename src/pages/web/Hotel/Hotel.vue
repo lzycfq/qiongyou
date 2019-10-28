@@ -75,7 +75,7 @@
 			<span align="left" class="hot_jinxuan">精选</span>
 			<br />
 			<el-tabs @tab-click="handleClick">
-				<el-tab-pane v-for="(item, index) in Hosearchjilu" :label="item.title">
+				<el-tab-pane v-for="(item, index) in Hosearchjilu" :label="item.title" key='index'>
 					<div class="hotel_summary">
 						<div class="hotel_summary_average summary_average">
 							<div class="title">

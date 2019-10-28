@@ -240,7 +240,7 @@
 						<p class="rf-login">已有账号？立即<router-link to="/Login" class="rfl-lg">登录</router-link>
 						</p>
 						<p class="rf-oth">或通过第三方登录<img class="rf-icon" src="../../../assets/images/qiongyou/weibo.png"> <img class="rf-icon"
-							 src="../../../assets/images/qiongyou/qq.png"> <img class="rf-icon" src="../../../assets/images/qiongyou/weixin.png"></p>
+							 src="../../../assets/images/qiongyou/QQ.png"> <img class="rf-icon" src="../../../assets/images/qiongyou/weixin.png"></p>
 					</div><!-- reg-fir -->
 					<div style="clear: both;"></div>
 					<div class="reg-sec">
