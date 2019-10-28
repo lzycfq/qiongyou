@@ -9,6 +9,9 @@ import VueAxios from 'vue-axios'
 import Global from '../src/pages/web/compoents/Global.vue'
 import waterfall from 'vue-waterfall2'
 import DrawerLayout from 'vue-drawer-layout'
+import Vant from 'vant';
+import 'vant/lib/index.css';
+Vue.use(Vant);
 Vue.use(DrawerLayout)
 Vue.use(waterfall)
 Vue.prototype.Global = Global //挂载到Vue实例上面

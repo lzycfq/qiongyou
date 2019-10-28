@@ -149,7 +149,7 @@ export default new Router({
 						
 		},
 		{
-			path: '/',
+			path: '/Thread_ZhuanlanDetail',
 			name: 'Thread_ZhuanlanDetail',//:wenzhangid
 			component(resolve) {
 				require(['../pages/web/Thread/Thread_ZhuanlanDetail'], resolve)

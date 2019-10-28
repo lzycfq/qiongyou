@@ -12,34 +12,34 @@ export default new Router({
 		}
 	},
 	routes: [
-		// {
-		// 	path: '/',
-		// 	name: 'Index',
-		// 	component(resolve) {
-		// 		require(['../pages/mobile/Index.vue'], resolve)
-		// 	}
-		// },
-		// {
-		// 	path: '/',
-		// 	name: 'zhuanlan',
-		// 	component(resolve) {
-		// 		require(['../pages/mobile/Zhuanlan/Zhuanlan.vue'], resolve)
-		// 	}
-		// },
-		// {
-		// 	path: '/',
-		// 	name: 'Biuban',
-		// 	component(resolve) {
-		// 		require(['../pages/mobile/Biuban/Biuban.vue'], resolve)
-		// 	}
-		// },
-		// {
-		// 	path: '/',
-		// 	name: 'Place',
-		// 	component(resolve) {
-		// 		require(['../pages/mobile/Place/Place.vue'], resolve)
-		// 	}
-		// },
+     {
+			path: '/',
+			name: 'index',
+			component(resolve) {
+				require(['../pages/mobile/index.vue'], resolve)
+			}
+		},
+		{
+			path: '/',
+			name: 'zhuanlan',
+			component(resolve) {
+				require(['../pages/mobile/Zhuanlan/Zhuanlan.vue'], resolve)
+			}
+		},
+		{
+			path: '/',
+			name: 'Biuban',
+			component(resolve) {
+				require(['../pages/mobile/Biuban/Biuban.vue'], resolve)
+			}
+		},
+		{
+			path: '/',
+			name: 'Place',
+			component(resolve) {
+				require(['../pages/mobile/Place/Place.vue'], resolve)
+			}
+		},
 		{
 			path: '/',
 			name: 'Plan',
